@@ -1,4 +1,0 @@
-lappend pragmaStatus0 {pragma "INTERFACE" source "/home/tarafdar/thesis/gitStuff/hlsIP_8k5/../hlsSources/srcs/packetMaker.cpp" location "packetMaker" found 1 funcFound 1 applied 1 ambiguous 0 reason "null"}
-lappend pragmaStatus1 {pragma "INTERFACE" source "/home/tarafdar/thesis/gitStuff/hlsIP_8k5/../hlsSources/srcs/packetMaker.cpp" location "packetMaker" found 1 funcFound 1 applied 1 ambiguous 0 reason "null"}
-lappend pragmaStatus2 {pragma "PIPELINE" source "/home/tarafdar/thesis/gitStuff/hlsIP_8k5/../hlsSources/srcs/packetMaker.cpp" location "packetMaker/packetMaker_label3" found 1 funcFound 1 applied 1 ambiguous 0 reason "null"}
-lappend pragmaStatus3 {pragma "INTERFACE" source "/home/tarafdar/thesis/gitStuff/hlsIP_8k5/../hlsSources/srcs/packetMaker.cpp" location "packetMaker" found 1 funcFound 1 applied 1 ambiguous 0 reason "null"}
