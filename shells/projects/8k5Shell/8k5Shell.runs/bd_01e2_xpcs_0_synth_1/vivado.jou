@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:19 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Mon Jul  3 18:01:57 2017
+# Process ID: 52851
+# Current directory: /home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.runs/bd_01e2_xpcs_0_synth_1
+# Command line: vivado -log bd_01e2_xpcs_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source bd_01e2_xpcs_0.tcl
+# Log file: /home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.runs/bd_01e2_xpcs_0_synth_1/bd_01e2_xpcs_0.vds
+# Journal file: /home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.runs/bd_01e2_xpcs_0_synth_1/vivado.jou
+#-----------------------------------------------------------
+source bd_01e2_xpcs_0.tcl -notrace

@@ -1,0 +1,49 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:19 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Mon Jul  3 18:04:53 2017
+# Process ID: 55023
+# Current directory: /home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.runs/shell_ilmb_bram_if_cntlr_0_synth_1
+# Command line: vivado -log shell_ilmb_bram_if_cntlr_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source shell_ilmb_bram_if_cntlr_0.tcl
+# Log file: /home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.runs/shell_ilmb_bram_if_cntlr_0_synth_1/shell_ilmb_bram_if_cntlr_0.vds
+# Journal file: /home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.runs/shell_ilmb_bram_if_cntlr_0_synth_1/vivado.jou
+#-----------------------------------------------------------
+source shell_ilmb_bram_if_cntlr_0.tcl -notrace
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1214.422 ; gain = 283.957 ; free physical = 20724 ; free virtual = 57704
+INFO: [Synth 8-638] synthesizing module 'shell_ilmb_bram_if_cntlr_0' [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ip/shell_ilmb_bram_if_cntlr_0/synth/shell_ilmb_bram_if_cntlr_0.vhd:84]
+INFO: [Synth 8-638] synthesizing module 'lmb_bram_if_cntlr' [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/f4d9/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:3106]
+INFO: [Synth 8-638] synthesizing module 'lmb_mux' [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/f4d9/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2601]
+INFO: [Synth 8-638] synthesizing module 'pselect_mask' [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/f4d9/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2121]
+INFO: [Synth 8-256] done synthesizing module 'pselect_mask' (1#1) [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/f4d9/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2121]
+INFO: [Synth 8-256] done synthesizing module 'lmb_mux' (2#1) [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/f4d9/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2601]
+INFO: [Synth 8-256] done synthesizing module 'lmb_bram_if_cntlr' (3#1) [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/f4d9/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:3106]
+INFO: [Synth 8-256] done synthesizing module 'shell_ilmb_bram_if_cntlr_0' (4#1) [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ip/shell_ilmb_bram_if_cntlr_0/synth/shell_ilmb_bram_if_cntlr_0.vhd:84]
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1255.891 ; gain = 325.426 ; free physical = 20641 ; free virtual = 57622
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1255.891 ; gain = 325.426 ; free physical = 20640 ; free virtual = 57620
+INFO: [Device 21-403] Loading part xcku115-flva1517-2-e
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1888.727 ; gain = 0.000 ; free physical = 19137 ; free virtual = 56118
+Finished Constraint Validation : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1888.727 ; gain = 958.262 ; free physical = 19068 ; free virtual = 56049
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1888.727 ; gain = 958.262 ; free physical = 19068 ; free virtual = 56049
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1888.727 ; gain = 958.262 ; free physical = 19067 ; free virtual = 56048
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1888.727 ; gain = 958.262 ; free physical = 19060 ; free virtual = 56041
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1888.727 ; gain = 958.262 ; free physical = 19042 ; free virtual = 56023
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 2030.242 ; gain = 1099.777 ; free physical = 18648 ; free virtual = 55629
+Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 2030.242 ; gain = 1099.777 ; free physical = 18648 ; free virtual = 55629
+Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 2040.258 ; gain = 1109.793 ; free physical = 18639 ; free virtual = 55620
+Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 2040.258 ; gain = 1109.793 ; free physical = 18623 ; free virtual = 55604
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 2040.258 ; gain = 1109.793 ; free physical = 18623 ; free virtual = 55604
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 2040.258 ; gain = 1109.793 ; free physical = 18623 ; free virtual = 55604
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 2040.258 ; gain = 1109.793 ; free physical = 18623 ; free virtual = 55604
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 2040.258 ; gain = 1109.793 ; free physical = 18621 ; free virtual = 55601
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 2040.258 ; gain = 1109.793 ; free physical = 18621 ; free virtual = 55601
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT2 |     5|
+|2     |FDRE |     2|
++------+-----+------+
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 2040.258 ; gain = 1109.793 ; free physical = 18620 ; free virtual = 55601
+synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 2152.164 ; gain = 1066.172 ; free physical = 18369 ; free virtual = 55350

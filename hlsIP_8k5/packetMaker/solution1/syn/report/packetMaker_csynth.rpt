@@ -1,0 +1,179 @@
+
+
+================================================================
+== Vivado HLS Report for 'packetMaker'
+================================================================
+* Date:           Fri Jun 30 19:10:42 2017
+
+* Version:        2016.4 (Build 1756540 on Mon Jan 23 19:31:01 MST 2017)
+* Project:        packetMaker
+* Solution:       solution1
+* Product family: kintexu
+* Target device:  xcku115-flva1517-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   5.00|      2.39|        0.62|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    ?|    ?|    ?|    ?|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------------------+-----+-----+----------+-----------+-----------+------+----------+
+        |                       |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        |       Loop Name       | min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +-----------------------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Loop 1               |    ?|    ?|        29|          -|          -|  inf |    no    |
+        | + packetMaker_label3  |   26|   26|         3|          1|          1|    25|    yes   |
+        +-----------------------+-----+-----+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+-------+---------+--------+
+|         Name        | BRAM_18K| DSP48E|    FF   |   LUT  |
++---------------------+---------+-------+---------+--------+
+|DSP                  |        -|      -|        -|       -|
+|Expression           |        -|      -|        0|      15|
+|FIFO                 |        -|      -|        -|       -|
+|Instance             |        -|      -|        -|       -|
+|Memory               |        0|      -|       32|      13|
+|Multiplexer          |        -|      -|        -|      79|
+|Register             |        -|      -|      156|       -|
++---------------------+---------+-------+---------+--------+
+|Total                |        0|      0|      188|     107|
++---------------------+---------+-------+---------+--------+
+|Available SLR        |     2160|   2760|   663360|  331680|
++---------------------+---------+-------+---------+--------+
+|Utilization SLR (%)  |        0|      0|    ~0   |   ~0   |
++---------------------+---------+-------+---------+--------+
+|Available            |     4320|   5520|  1326720|  663360|
++---------------------+---------+-------+---------+--------+
+|Utilization (%)      |        0|      0|    ~0   |   ~0   |
++---------------------+---------+-------+---------+--------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    +-----------+---------------------+---------+----+----+------+-----+------+-------------+
+    |   Memory  |        Module       | BRAM_18K| FF | LUT| Words| Bits| Banks| W*Bits*Banks|
+    +-----------+---------------------+---------+----+----+------+-----+------+-------------+
+    |packet1_U  |packetMaker_packet1  |        0|  32|  13|    25|   32|     1|          800|
+    +-----------+---------------------+---------+----+----+------+-----+------+-------------+
+    |Total      |                     |        0|  32|  13|    25|   32|     1|          800|
+    +-----------+---------------------+---------+----+----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------------------------+----------+-------+---+----+------------+------------+
+    |             Variable Name             | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------------------+----------+-------+---+----+------------+------------+
+    |i_1_fu_107_p2                          |     +    |      0|  0|   5|           5|           1|
+    |packetOut_V_last_V_1_load_A            |    and   |      0|  0|   1|           1|           1|
+    |packetOut_V_last_V_1_load_B            |    and   |      0|  0|   1|           1|           1|
+    |packetOut_V_packet_V_1_load_A          |    and   |      0|  0|   1|           1|           1|
+    |packetOut_V_packet_V_1_load_B          |    and   |      0|  0|   1|           1|           1|
+    |exitcond_fu_101_p2                     |   icmp   |      0|  0|   2|           5|           4|
+    |packetOut_V_last_V_1_state_cmp_full    |   icmp   |      0|  0|   1|           2|           1|
+    |packetOut_V_packet_V_1_state_cmp_full  |   icmp   |      0|  0|   1|           2|           1|
+    |tmp_last_V_fu_118_p2                   |   icmp   |      0|  0|   2|           5|           5|
+    +---------------------------------------+----------+-------+---+----+------------+------------+
+    |Total                                  |          |      0|  0|  15|          23|          16|
+    +---------------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +---------------------------------+----+-----------+-----+-----------+
+    |               Name              | LUT| Input Size| Bits| Total Bits|
+    +---------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                        |   1|          5|    1|          5|
+    |ap_enable_reg_pp0_iter2          |   1|          2|    1|          2|
+    |i_reg_90                         |   5|          2|    5|         10|
+    |packetOut_TDATA_blk_n            |   1|          2|    1|          2|
+    |packetOut_V_dest_V_1_state       |   2|          3|    2|          6|
+    |packetOut_V_last_V_1_data_out    |   1|          2|    1|          2|
+    |packetOut_V_last_V_1_state       |   2|          3|    2|          6|
+    |packetOut_V_packet_V_1_data_out  |  64|          2|   64|        128|
+    |packetOut_V_packet_V_1_state     |   2|          3|    2|          6|
+    +---------------------------------+----+-----------+-----+-----------+
+    |Total                            |  79|         24|   79|        167|
+    +---------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------------------------------+----+----+-----+-----------+
+    |                    Name                    | FF | LUT| Bits| Const Bits|
+    +--------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                   |   4|   0|    4|          0|
+    |ap_enable_reg_pp0_iter0                     |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1                     |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2                     |   1|   0|    1|          0|
+    |ap_pipeline_reg_pp0_iter1_exitcond_reg_129  |   1|   0|    1|          0|
+    |exitcond_reg_129                            |   1|   0|    1|          0|
+    |i_reg_90                                    |   5|   0|    5|          0|
+    |packetOut_V_dest_V_1_sel_rd                 |   1|   0|    1|          0|
+    |packetOut_V_dest_V_1_state                  |   2|   0|    2|          0|
+    |packetOut_V_last_V_1_payload_A              |   1|   0|    1|          0|
+    |packetOut_V_last_V_1_payload_B              |   1|   0|    1|          0|
+    |packetOut_V_last_V_1_sel_rd                 |   1|   0|    1|          0|
+    |packetOut_V_last_V_1_sel_wr                 |   1|   0|    1|          0|
+    |packetOut_V_last_V_1_state                  |   2|   0|    2|          0|
+    |packetOut_V_packet_V_1_payload_A            |  64|   0|   64|          0|
+    |packetOut_V_packet_V_1_payload_B            |  64|   0|   64|          0|
+    |packetOut_V_packet_V_1_sel_rd               |   1|   0|    1|          0|
+    |packetOut_V_packet_V_1_sel_wr               |   1|   0|    1|          0|
+    |packetOut_V_packet_V_1_state                |   2|   0|    2|          0|
+    |tmp_last_V_reg_143                          |   1|   0|    1|          0|
+    +--------------------------------------------+----+----+-----+-----------+
+    |Total                                       | 156|   0|  156|          0|
+    +--------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------+-----+-----+------------+----------------------+--------------+
+|     RTL Ports    | Dir | Bits|  Protocol  |     Source Object    |    C Type    |
++------------------+-----+-----+------------+----------------------+--------------+
+|ap_clk            |  in |    1| ap_ctrl_hs |      packetMaker     | return value |
+|ap_rst_n          |  in |    1| ap_ctrl_hs |      packetMaker     | return value |
+|ap_start          |  in |    1| ap_ctrl_hs |      packetMaker     | return value |
+|ap_done           | out |    1| ap_ctrl_hs |      packetMaker     | return value |
+|ap_idle           | out |    1| ap_ctrl_hs |      packetMaker     | return value |
+|ap_ready          | out |    1| ap_ctrl_hs |      packetMaker     | return value |
+|packetOut_TDATA   | out |   64|    axis    | packetOut_V_packet_V |    pointer   |
+|packetOut_TVALID  | out |    1|    axis    |  packetOut_V_dest_V  |    pointer   |
+|packetOut_TREADY  |  in |    1|    axis    |  packetOut_V_dest_V  |    pointer   |
+|packetOut_TDEST   | out |    8|    axis    |  packetOut_V_dest_V  |    pointer   |
+|packetOut_TLAST   | out |    1|    axis    |  packetOut_V_last_V  |    pointer   |
+|id_V              |  in |   32|   ap_none  |         id_V         |    pointer   |
++------------------+-----+-----+------------+----------------------+--------------+
+

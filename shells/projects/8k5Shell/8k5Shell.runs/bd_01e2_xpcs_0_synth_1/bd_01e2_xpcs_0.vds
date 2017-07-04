@@ -1,0 +1,121 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:19 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Mon Jul  3 18:01:57 2017
+# Process ID: 52851
+# Current directory: /home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.runs/bd_01e2_xpcs_0_synth_1
+# Command line: vivado -log bd_01e2_xpcs_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source bd_01e2_xpcs_0.tcl
+# Log file: /home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.runs/bd_01e2_xpcs_0_synth_1/bd_01e2_xpcs_0.vds
+# Journal file: /home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.runs/bd_01e2_xpcs_0_synth_1/vivado.jou
+#-----------------------------------------------------------
+source bd_01e2_xpcs_0.tcl -notrace
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1242.688 ; gain = 312.223 ; free physical = 18913 ; free virtual = 55856
+INFO: [Synth 8-638] synthesizing module 'bd_01e2_xpcs_0' [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/synth/bd_01e2_xpcs_0.v:60]
+INFO: [Synth 8-638] synthesizing module 'bd_01e2_xpcs_0_support' [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/synth/bd_01e2_xpcs_0_support.v:61]
+INFO: [Synth 8-638] synthesizing module 'bd_01e2_xpcs_0_gt_common' [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/synth/bd_01e2_xpcs_0_gt_common.v:58]
+INFO: [Synth 8-638] synthesizing module 'bd_01e2_xpcs_0_gt_common_wrapper' [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/synth/bd_01e2_xpcs_0_gt_common_wrapper.v:4]
+INFO: [Synth 8-638] synthesizing module 'gtwizard_ultrascale_v1_6_5_gthe3_common' [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/synth/gtwizard_ultrascale_v1_6_gthe3_common.v:55]
+INFO: [Synth 8-638] synthesizing module 'GTHE3_COMMON' [/opt/Xilinx/Vivado/2016.4/scripts/rt/data/unisim_comp.v:6827]
+INFO: [Synth 8-256] done synthesizing module 'GTHE3_COMMON' (1#1) [/opt/Xilinx/Vivado/2016.4/scripts/rt/data/unisim_comp.v:6827]
+INFO: [Synth 8-256] done synthesizing module 'gtwizard_ultrascale_v1_6_5_gthe3_common' (2#1) [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/synth/gtwizard_ultrascale_v1_6_gthe3_common.v:55]
+INFO: [Synth 8-256] done synthesizing module 'bd_01e2_xpcs_0_gt_common_wrapper' (3#1) [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/synth/bd_01e2_xpcs_0_gt_common_wrapper.v:4]
+INFO: [Synth 8-256] done synthesizing module 'bd_01e2_xpcs_0_gt_common' (4#1) [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/synth/bd_01e2_xpcs_0_gt_common.v:58]
+INFO: [Synth 8-638] synthesizing module 'bd_01e2_xpcs_0_shared_clock_and_reset' [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/synth/bd_01e2_xpcs_0_shared_clock_and_reset.v:59]
+INFO: [Synth 8-638] synthesizing module 'IBUFDS_GTE3' [/opt/Xilinx/Vivado/2016.4/scripts/rt/data/unisim_comp.v:14317]
+INFO: [Synth 8-256] done synthesizing module 'IBUFDS_GTE3' (5#1) [/opt/Xilinx/Vivado/2016.4/scripts/rt/data/unisim_comp.v:14317]
+INFO: [Synth 8-638] synthesizing module 'BUFG_GT' [/opt/Xilinx/Vivado/2016.4/scripts/rt/data/unisim_comp.v:760]
+INFO: [Synth 8-256] done synthesizing module 'BUFG_GT' (6#1) [/opt/Xilinx/Vivado/2016.4/scripts/rt/data/unisim_comp.v:760]
+INFO: [Synth 8-638] synthesizing module 'bd_01e2_xpcs_0_ff_synchronizer_rst' [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/synth/bd_01e2_xpcs_0_ff_synchronizer_rst.v:61]
+INFO: [Synth 8-256] done synthesizing module 'bd_01e2_xpcs_0_ff_synchronizer_rst' (7#1) [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/synth/bd_01e2_xpcs_0_ff_synchronizer_rst.v:61]
+INFO: [Synth 8-638] synthesizing module 'bd_01e2_xpcs_0_ff_synchronizer_rst__parameterized0' [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/synth/bd_01e2_xpcs_0_ff_synchronizer_rst.v:61]
+INFO: [Synth 8-256] done synthesizing module 'bd_01e2_xpcs_0_ff_synchronizer_rst__parameterized0' (7#1) [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/synth/bd_01e2_xpcs_0_ff_synchronizer_rst.v:61]
+INFO: [Synth 8-256] done synthesizing module 'bd_01e2_xpcs_0_shared_clock_and_reset' (8#1) [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/synth/bd_01e2_xpcs_0_shared_clock_and_reset.v:59]
+INFO: [Synth 8-638] synthesizing module 'bd_01e2_xpcs_0_block' [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/synth/bd_01e2_xpcs_0_block.v:59]
+INFO: [Synth 8-638] synthesizing module 'bd_01e2_xpcs_0_local_clock_and_reset' [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/synth/bd_01e2_xpcs_0_local_clock_and_reset.v:58]
+INFO: [Synth 8-638] synthesizing module 'bd_01e2_xpcs_0_sim_speedup_controller' [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/synth/bd_01e2_xpcs_0_sim_speedup_controller.v:61]
+INFO: [Synth 8-638] synthesizing module 'LUT1' [/opt/Xilinx/Vivado/2016.4/scripts/rt/data/unisim_comp.v:20134]
+INFO: [Synth 8-256] done synthesizing module 'LUT1' (9#1) [/opt/Xilinx/Vivado/2016.4/scripts/rt/data/unisim_comp.v:20134]
+INFO: [Synth 8-638] synthesizing module 'LDCE' [/opt/Xilinx/Vivado/2016.4/scripts/rt/data/unisim_comp.v:19915]
+INFO: [Synth 8-256] done synthesizing module 'LDCE' (10#1) [/opt/Xilinx/Vivado/2016.4/scripts/rt/data/unisim_comp.v:19915]
+INFO: [Synth 8-256] done synthesizing module 'bd_01e2_xpcs_0_sim_speedup_controller' (11#1) [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/synth/bd_01e2_xpcs_0_sim_speedup_controller.v:61]
+INFO: [Synth 8-638] synthesizing module 'bd_01e2_xpcs_0_ff_synchronizer' [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/synth/bd_01e2_xpcs_0_ff_synchronizer.v:59]
+INFO: [Synth 8-256] done synthesizing module 'bd_01e2_xpcs_0_ff_synchronizer' (12#1) [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/synth/bd_01e2_xpcs_0_ff_synchronizer.v:59]
+INFO: [Synth 8-256] done synthesizing module 'bd_01e2_xpcs_0_local_clock_and_reset' (13#1) [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/synth/bd_01e2_xpcs_0_local_clock_and_reset.v:58]
+INFO: [Synth 8-638] synthesizing module 'MUXCY_L' [/opt/Xilinx/Vivado/2016.4/scripts/rt/data/unisim_comp.v:21293]
+INFO: [Synth 8-256] done synthesizing module 'MUXCY_L' (15#1) [/opt/Xilinx/Vivado/2016.4/scripts/rt/data/unisim_comp.v:21293]
+INFO: [Synth 8-638] synthesizing module 'bd_01e2_xpcs_0_ff_synchronizer_rst__parameterized1' [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/synth/bd_01e2_xpcs_0_ff_synchronizer_rst.v:61]
+INFO: [Synth 8-256] done synthesizing module 'bd_01e2_xpcs_0_ff_synchronizer_rst__parameterized1' (56#1) [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/synth/bd_01e2_xpcs_0_ff_synchronizer_rst.v:61]
+INFO: [Synth 8-638] synthesizing module 'bd_01e2_xpcs_0_ff_synchronizer_rst__parameterized2' [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/synth/bd_01e2_xpcs_0_ff_synchronizer_rst.v:61]
+INFO: [Synth 8-256] done synthesizing module 'bd_01e2_xpcs_0_ff_synchronizer_rst__parameterized2' (56#1) [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/synth/bd_01e2_xpcs_0_ff_synchronizer_rst.v:61]
+INFO: [Synth 8-638] synthesizing module 'bd_01e2_xpcs_0_ff_synchronizer_rst__parameterized3' [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/synth/bd_01e2_xpcs_0_ff_synchronizer_rst.v:61]
+INFO: [Synth 8-256] done synthesizing module 'bd_01e2_xpcs_0_ff_synchronizer_rst__parameterized3' (56#1) [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/synth/bd_01e2_xpcs_0_ff_synchronizer_rst.v:61]
+INFO: [Synth 8-638] synthesizing module 'bd_01e2_xpcs_0_cable_pull_logic' [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/synth/bd_01e2_xpcs_0_cable_pull_logic.v:59]
+INFO: [Synth 8-256] done synthesizing module 'bd_01e2_xpcs_0_cable_pull_logic' (57#1) [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/synth/bd_01e2_xpcs_0_cable_pull_logic.v:59]
+INFO: [Synth 8-638] synthesizing module 'bd_01e2_xpcs_0_gt' [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/ip_0/synth/bd_01e2_xpcs_0_gt.v:62]
+INFO: [Synth 8-638] synthesizing module 'bd_01e2_xpcs_0_gt_gtwizard_top' [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/ip_0/synth/bd_01e2_xpcs_0_gt_gtwizard_top.v:170]
+INFO: [Synth 8-638] synthesizing module 'bd_01e2_xpcs_0_gt_gtwizard_gthe3' [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/ip_0/synth/bd_01e2_xpcs_0_gt_gtwizard_gthe3.v:138]
+INFO: [Synth 8-638] synthesizing module 'bd_01e2_xpcs_0_gt_gthe3_channel_wrapper' [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/ip_0/synth/bd_01e2_xpcs_0_gt_gthe3_channel_wrapper.v:56]
+INFO: [Synth 8-638] synthesizing module 'gtwizard_ultrascale_v1_6_5_gthe3_channel' [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/ip_0/synth/gtwizard_ultrascale_v1_6_gthe3_channel.v:55]
+INFO: [Synth 8-638] synthesizing module 'GTHE3_CHANNEL' [/opt/Xilinx/Vivado/2016.4/scripts/rt/data/unisim_comp.v:5775]
+INFO: [Synth 8-256] done synthesizing module 'GTHE3_CHANNEL' (58#1) [/opt/Xilinx/Vivado/2016.4/scripts/rt/data/unisim_comp.v:5775]
+INFO: [Synth 8-256] done synthesizing module 'gtwizard_ultrascale_v1_6_5_gthe3_channel' (59#1) [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/ip_0/synth/gtwizard_ultrascale_v1_6_gthe3_channel.v:55]
+INFO: [Synth 8-256] done synthesizing module 'bd_01e2_xpcs_0_gt_gthe3_channel_wrapper' (60#1) [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/ip_0/synth/bd_01e2_xpcs_0_gt_gthe3_channel_wrapper.v:56]
+INFO: [Synth 8-638] synthesizing module 'gtwizard_ultrascale_v1_6_5_bit_synchronizer' [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/5fe7/hdl/gtwizard_ultrascale_v1_6_bit_sync.v:55]
+INFO: [Synth 8-256] done synthesizing module 'gtwizard_ultrascale_v1_6_5_bit_synchronizer' (61#1) [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/5fe7/hdl/gtwizard_ultrascale_v1_6_bit_sync.v:55]
+INFO: [Synth 8-638] synthesizing module 'gtwizard_ultrascale_v1_6_5_gtwiz_reset' [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/5fe7/hdl/gtwizard_ultrascale_v1_6_gtwiz_reset.v:55]
+INFO: [Synth 8-638] synthesizing module 'gtwizard_ultrascale_v1_6_5_reset_synchronizer' [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/5fe7/hdl/gtwizard_ultrascale_v1_6_reset_sync.v:55]
+INFO: [Synth 8-256] done synthesizing module 'gtwizard_ultrascale_v1_6_5_reset_synchronizer' (62#1) [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/5fe7/hdl/gtwizard_ultrascale_v1_6_reset_sync.v:55]
+INFO: [Synth 8-638] synthesizing module 'gtwizard_ultrascale_v1_6_5_reset_inv_synchronizer' [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/5fe7/hdl/gtwizard_ultrascale_v1_6_reset_inv_sync.v:55]
+INFO: [Synth 8-256] done synthesizing module 'gtwizard_ultrascale_v1_6_5_reset_inv_synchronizer' (63#1) [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/5fe7/hdl/gtwizard_ultrascale_v1_6_reset_inv_sync.v:55]
+INFO: [Synth 8-256] done synthesizing module 'gtwizard_ultrascale_v1_6_5_gtwiz_reset' (64#1) [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/5fe7/hdl/gtwizard_ultrascale_v1_6_gtwiz_reset.v:55]
+INFO: [Synth 8-256] done synthesizing module 'bd_01e2_xpcs_0_gt_gtwizard_gthe3' (65#1) [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/ip_0/synth/bd_01e2_xpcs_0_gt_gtwizard_gthe3.v:138]
+INFO: [Synth 8-256] done synthesizing module 'bd_01e2_xpcs_0_gt_gtwizard_top' (66#1) [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/ip_0/synth/bd_01e2_xpcs_0_gt_gtwizard_top.v:170]
+INFO: [Synth 8-256] done synthesizing module 'bd_01e2_xpcs_0_gt' (67#1) [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/ip_0/synth/bd_01e2_xpcs_0_gt.v:62]
+INFO: [Synth 8-256] done synthesizing module 'bd_01e2_xpcs_0_block' (68#1) [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/synth/bd_01e2_xpcs_0_block.v:59]
+INFO: [Synth 8-256] done synthesizing module 'bd_01e2_xpcs_0_support' (69#1) [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/synth/bd_01e2_xpcs_0_support.v:61]
+INFO: [Synth 8-256] done synthesizing module 'bd_01e2_xpcs_0' (70#1) [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/synth/bd_01e2_xpcs_0.v:60]
+Finished RTL Elaboration : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 1806.281 ; gain = 875.816 ; free physical = 18896 ; free virtual = 55840
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 1806.281 ; gain = 875.816 ; free physical = 18886 ; free virtual = 55831
+INFO: [Device 21-403] Loading part xcku115-flva1517-2-e
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.50 ; elapsed = 00:00:00.51 . Memory (MB): peak = 2012.812 ; gain = 1.000 ; free physical = 18154 ; free virtual = 55099
+Finished Constraint Validation : Time (s): cpu = 00:00:46 ; elapsed = 00:00:46 . Memory (MB): peak = 2012.812 ; gain = 1082.348 ; free physical = 18834 ; free virtual = 55780
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:46 ; elapsed = 00:00:46 . Memory (MB): peak = 2012.812 ; gain = 1082.348 ; free physical = 18834 ; free virtual = 55780
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:46 ; elapsed = 00:00:46 . Memory (MB): peak = 2012.812 ; gain = 1082.348 ; free physical = 18834 ; free virtual = 55780
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:49 ; elapsed = 00:00:50 . Memory (MB): peak = 2012.812 ; gain = 1082.348 ; free physical = 18672 ; free virtual = 55618
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:04 ; elapsed = 00:01:05 . Memory (MB): peak = 2012.812 ; gain = 1082.348 ; free physical = 18577 ; free virtual = 55523
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:12 ; elapsed = 00:01:13 . Memory (MB): peak = 2153.328 ; gain = 1222.863 ; free physical = 17680 ; free virtual = 54627
+Finished Timing Optimization : Time (s): cpu = 00:01:13 ; elapsed = 00:01:14 . Memory (MB): peak = 2171.336 ; gain = 1240.871 ; free physical = 17597 ; free virtual = 54543
+Finished Technology Mapping : Time (s): cpu = 00:01:15 ; elapsed = 00:01:16 . Memory (MB): peak = 2214.016 ; gain = 1283.551 ; free physical = 17323 ; free virtual = 54270
+Finished IO Insertion : Time (s): cpu = 00:01:16 ; elapsed = 00:01:17 . Memory (MB): peak = 2214.016 ; gain = 1283.551 ; free physical = 17319 ; free virtual = 54266
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:16 ; elapsed = 00:01:17 . Memory (MB): peak = 2214.016 ; gain = 1283.551 ; free physical = 17320 ; free virtual = 54267
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:17 ; elapsed = 00:01:18 . Memory (MB): peak = 2214.016 ; gain = 1283.551 ; free physical = 17310 ; free virtual = 54256
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:17 ; elapsed = 00:01:18 . Memory (MB): peak = 2214.016 ; gain = 1283.551 ; free physical = 17310 ; free virtual = 54256
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:17 ; elapsed = 00:01:18 . Memory (MB): peak = 2214.016 ; gain = 1283.551 ; free physical = 17311 ; free virtual = 54257
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:17 ; elapsed = 00:01:18 . Memory (MB): peak = 2214.016 ; gain = 1283.551 ; free physical = 17311 ; free virtual = 54257
+
+Report Cell Usage: 
++------+--------------+------+
+|      |Cell          |Count |
++------+--------------+------+
+|1     |BUFG_GT       |     5|
+|2     |CARRY8        |    22|
+|3     |GTHE3_CHANNEL |     1|
+|4     |GTHE3_COMMON  |     1|
+|5     |IBUFDS_GTE3   |     1|
+|6     |LUT1          |   148|
+|7     |LUT2          |   193|
+|8     |LUT3          |   378|
+|9     |LUT4          |   471|
+|10    |LUT5          |   272|
+|11    |LUT6          |   759|
+|12    |MUXCY_L       |    34|
+|13    |MUXF7         |     4|
+|14    |RAM32M16      |     6|
+|15    |FDCE          |    31|
+|16    |FDPE          |   135|
+|17    |FDRE          |  2540|
+|18    |FDSE          |   200|
++------+--------------+------+
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:17 ; elapsed = 00:01:18 . Memory (MB): peak = 2214.016 ; gain = 1283.551 ; free physical = 17311 ; free virtual = 54257
+synth_design: Time (s): cpu = 00:01:21 ; elapsed = 00:01:21 . Memory (MB): peak = 2481.266 ; gain = 1328.574 ; free physical = 16814 ; free virtual = 53762

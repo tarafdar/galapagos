@@ -1,0 +1,251 @@
+
+
+================================================================
+== Vivado HLS Report for 'axiStreamGate'
+================================================================
+* Date:           Fri Jun 30 19:06:44 2017
+
+* Version:        2016.4 (Build 1756540 on Mon Jan 23 19:31:01 MST 2017)
+* Project:        axiStreamGate
+* Solution:       solution1
+* Product family: kintexu
+* Target device:  xcku115-flva1517-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   5.00|      2.50|        0.62|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    ?|    ?|    ?|    ?|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------+-----+-----+----------+-----------+-----------+------+----------+
+        |             |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        |  Loop Name  | min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Loop 1     |    ?|    ?|         ?|          -|          -|  inf |    no    |
+        | + Loop 1.1  |    ?|    ?|         2|          -|          -|     ?|    no    |
+        +-------------+-----+-----+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 0
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states: 5
+* Pipeline: 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	4  / (!tmp) | (!tmp_1)
+	3  / (tmp & tmp_1)
+3 --> 
+	4  / true
+4 --> 
+	3  / (tmp & tmp_1 & !tmp_last_V)
+	5  / (!tmp) | (!tmp_1) | (tmp_last_V)
+5 --> 
+	2  / true
+* FSM state operations: 
+
+ <State 1>: 0.00ns
+ST_1: StgValue_6 (9)  [1/1] 0.00ns
+:0  call void (...)* @_ssdm_op_SpecBitsMap(i64* %packetIn_V_data_V), !map !51
+
+ST_1: StgValue_7 (10)  [1/1] 0.00ns
+:1  call void (...)* @_ssdm_op_SpecBitsMap(i1* %packetIn_V_last_V), !map !55
+
+ST_1: StgValue_8 (11)  [1/1] 0.00ns
+:2  call void (...)* @_ssdm_op_SpecBitsMap(i8* %packetIn_V_keep_V), !map !59
+
+ST_1: StgValue_9 (12)  [1/1] 0.00ns
+:3  call void (...)* @_ssdm_op_SpecBitsMap(i32* %programming), !map !63
+
+ST_1: StgValue_10 (13)  [1/1] 0.00ns
+:4  call void (...)* @_ssdm_op_SpecBitsMap(i64* %packetOut_V_data_V), !map !67
+
+ST_1: StgValue_11 (14)  [1/1] 0.00ns
+:5  call void (...)* @_ssdm_op_SpecBitsMap(i1* %packetOut_V_last_V), !map !71
+
+ST_1: StgValue_12 (15)  [1/1] 0.00ns
+:6  call void (...)* @_ssdm_op_SpecBitsMap(i8* %packetOut_V_keep_V), !map !75
+
+ST_1: StgValue_13 (16)  [1/1] 0.00ns
+:7  call void (...)* @_ssdm_op_SpecBitsMap(i32* %programSafe), !map !79
+
+ST_1: StgValue_14 (17)  [1/1] 0.00ns
+:8  call void (...)* @_ssdm_op_SpecTopModule([14 x i8]* @axiStreamGate_str) nounwind
+
+ST_1: StgValue_15 (18)  [1/1] 0.00ns  loc: ../hlsSources/srcs/axiStreamGate.cpp:21
+:9  call void (...)* @_ssdm_op_SpecInterface(i32* %programSafe, [10 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_1: StgValue_16 (19)  [1/1] 0.00ns  loc: ../hlsSources/srcs/axiStreamGate.cpp:21
+:10  call void (...)* @_ssdm_op_SpecInterface(i32 0, [13 x i8]* @p_str2, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_1: StgValue_17 (20)  [1/1] 0.00ns  loc: ../hlsSources/srcs/axiStreamGate.cpp:21
+:11  call void (...)* @_ssdm_op_SpecInterface(i32* %programming, [10 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_1: StgValue_18 (21)  [1/1] 0.00ns  loc: ../hlsSources/srcs/axiStreamGate.cpp:21
+:12  call void (...)* @_ssdm_op_SpecInterface(i64* %packetIn_V_data_V, i1* %packetIn_V_last_V, i8* %packetIn_V_keep_V, [5 x i8]* @p_str3, i32 1, i32 1, [5 x i8]* @p_str4, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_1: StgValue_19 (22)  [1/1] 0.00ns  loc: ../hlsSources/srcs/axiStreamGate.cpp:21
+:13  call void (...)* @_ssdm_op_SpecInterface(i64* %packetOut_V_data_V, i1* %packetOut_V_last_V, i8* %packetOut_V_keep_V, [5 x i8]* @p_str3, i32 1, i32 1, [5 x i8]* @p_str4, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind
+
+ST_1: StgValue_20 (23)  [1/1] 0.00ns  loc: ../hlsSources/srcs/axiStreamGate.cpp:27
+:14  br label %1
+
+
+ <State 2>: 2.50ns
+ST_2: loop_begin (25)  [1/1] 0.00ns
+:0  %loop_begin = call i32 (...)* @_ssdm_op_SpecLoopBegin() nounwind
+
+ST_2: StgValue_22 (26)  [1/1] 1.00ns  loc: ../hlsSources/srcs/axiStreamGate.cpp:28
+:1  call void @_ssdm_op_Write.s_axilite.volatile.i32P(i32* %programSafe, i32 0)
+
+ST_2: programming_read (27)  [1/1] 1.00ns  loc: ../hlsSources/srcs/axiStreamGate.cpp:29
+:2  %programming_read = call i32 @_ssdm_op_Read.s_axilite.volatile.i32P(i32* %programming)
+
+ST_2: tmp (28)  [1/1] 1.50ns  loc: ../hlsSources/srcs/axiStreamGate.cpp:29
+:3  %tmp = icmp eq i32 %programming_read, 0
+
+ST_2: StgValue_25 (29)  [1/1] 0.00ns  loc: ../hlsSources/srcs/axiStreamGate.cpp:29
+:4  br i1 %tmp, label %2, label %._crit_edge
+
+ST_2: tmp_1 (31)  [1/1] 0.00ns  loc: ../hlsSources/srcs/axiStreamGate.cpp:31
+:0  %tmp_1 = call i1 @_ssdm_op_NbReadReq.axis.i64P.i1P.i8P(i64* %packetIn_V_data_V, i1* %packetIn_V_last_V, i8* %packetIn_V_keep_V, i32 1)
+
+ST_2: StgValue_27 (32)  [1/1] 0.00ns  loc: ../hlsSources/srcs/axiStreamGate.cpp:31
+:1  br i1 %tmp_1, label %.preheader.preheader, label %.loopexit
+
+ST_2: StgValue_28 (34)  [1/1] 0.00ns  loc: ../hlsSources/srcs/axiStreamGate.cpp:33
+.preheader.preheader:0  br label %.preheader
+
+
+ <State 3>: 0.00ns
+ST_3: empty (36)  [1/1] 0.00ns  loc: ../hlsSources/srcs/axiStreamGate.cpp:33
+.preheader:0  %empty = call { i64, i1, i8 } @_ssdm_op_Read.axis.volatile.i64P.i1P.i8P(i64* %packetIn_V_data_V, i1* %packetIn_V_last_V, i8* %packetIn_V_keep_V)
+
+ST_3: tmp_data_V (37)  [1/1] 0.00ns  loc: ../hlsSources/srcs/axiStreamGate.cpp:33
+.preheader:1  %tmp_data_V = extractvalue { i64, i1, i8 } %empty, 0
+
+ST_3: tmp_last_V (38)  [1/1] 0.00ns  loc: ../hlsSources/srcs/axiStreamGate.cpp:33
+.preheader:2  %tmp_last_V = extractvalue { i64, i1, i8 } %empty, 1
+
+ST_3: tmp_keep_V (39)  [1/1] 0.00ns  loc: ../hlsSources/srcs/axiStreamGate.cpp:33
+.preheader:3  %tmp_keep_V = extractvalue { i64, i1, i8 } %empty, 2
+
+ST_3: StgValue_33 (40)  [2/2] 0.00ns  loc: ../hlsSources/srcs/axiStreamGate.cpp:35
+.preheader:4  call void @_ssdm_op_Write.axis.volatile.i64P.i1P.i8P(i64* %packetOut_V_data_V, i1* %packetOut_V_last_V, i8* %packetOut_V_keep_V, i64 %tmp_data_V, i1 %tmp_last_V, i8 %tmp_keep_V)
+
+
+ <State 4>: 1.00ns
+ST_4: StgValue_34 (40)  [1/2] 0.00ns  loc: ../hlsSources/srcs/axiStreamGate.cpp:35
+.preheader:4  call void @_ssdm_op_Write.axis.volatile.i64P.i1P.i8P(i64* %packetOut_V_data_V, i1* %packetOut_V_last_V, i8* %packetOut_V_keep_V, i64 %tmp_data_V, i1 %tmp_last_V, i8 %tmp_keep_V)
+
+ST_4: StgValue_35 (41)  [1/1] 0.00ns  loc: ../hlsSources/srcs/axiStreamGate.cpp:36
+.preheader:5  br i1 %tmp_last_V, label %.loopexit.loopexit, label %.preheader
+
+ST_4: StgValue_36 (43)  [1/1] 0.00ns
+.loopexit.loopexit:0  br label %.loopexit
+
+ST_4: StgValue_37 (45)  [1/1] 0.00ns  loc: ../hlsSources/srcs/axiStreamGate.cpp:39
+.loopexit:0  br label %._crit_edge
+
+ST_4: StgValue_38 (47)  [1/1] 1.00ns  loc: ../hlsSources/srcs/axiStreamGate.cpp:40
+._crit_edge:0  call void @_ssdm_op_Write.s_axilite.volatile.i32P(i32* %programSafe, i32 1)
+
+
+ <State 5>: 0.00ns
+ST_5: StgValue_39 (48)  [1/1] 0.00ns  loc: ../hlsSources/srcs/axiStreamGate.cpp:41
+._crit_edge:1  call void (...)* @_ssdm_op_Wait(i32 1) nounwind
+
+ST_5: StgValue_40 (49)  [1/1] 0.00ns  loc: ../hlsSources/srcs/axiStreamGate.cpp:42
+._crit_edge:2  br label %1
+
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5ns, clock uncertainty: 0.625ns.
+
+ <State 1>: 0ns
+The critical path consists of the following:
+
+ <State 2>: 2.5ns
+The critical path consists of the following:
+	s_axi read on port 'programming' (../hlsSources/srcs/axiStreamGate.cpp:29) [27]  (1 ns)
+	'icmp' operation ('tmp', ../hlsSources/srcs/axiStreamGate.cpp:29) [28]  (1.5 ns)
+
+ <State 3>: 0ns
+The critical path consists of the following:
+
+ <State 4>: 1ns
+The critical path consists of the following:
+	s_axi write on port 'programSafe' (../hlsSources/srcs/axiStreamGate.cpp:40) [47]  (1 ns)
+
+ <State 5>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,123 @@
+
+*** Running vivado
+    with args -log shell_mdm_1_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source shell_mdm_1_0.tcl
+
+
+****** Vivado v2016.4 (64-bit)
+  **** SW Build 1756540 on Mon Jan 23 19:11:19 MST 2017
+  **** IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source shell_mdm_1_0.tcl -notrace
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1223.430 ; gain = 292.957 ; free physical = 18682 ; free virtual = 55629
+INFO: [Synth 8-638] synthesizing module 'shell_mdm_1_0' [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ip/shell_mdm_1_0/synth/shell_mdm_1_0.vhd:94]
+INFO: [Synth 8-638] synthesizing module 'MDM' [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/71de/hdl/mdm_v3_2_vh_rfs.vhd:13311]
+INFO: [Synth 8-638] synthesizing module 'MB_BSCANE2' [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/71de/hdl/mdm_v3_2_vh_rfs.vhd:277]
+INFO: [Synth 8-256] done synthesizing module 'MB_BSCANE2' (1#1) [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/71de/hdl/mdm_v3_2_vh_rfs.vhd:277]
+INFO: [Synth 8-638] synthesizing module 'MB_BUFG' [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/71de/hdl/mdm_v3_2_vh_rfs.vhd:328]
+INFO: [Synth 8-256] done synthesizing module 'MB_BUFG' (2#1) [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/71de/hdl/mdm_v3_2_vh_rfs.vhd:328]
+INFO: [Synth 8-638] synthesizing module 'MDM_Core' [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/71de/hdl/mdm_v3_2_vh_rfs.vhd:6525]
+INFO: [Synth 8-638] synthesizing module 'MB_FDRE' [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/71de/hdl/mdm_v3_2_vh_rfs.vhd:450]
+INFO: [Synth 8-256] done synthesizing module 'MB_FDRE' (3#1) [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/71de/hdl/mdm_v3_2_vh_rfs.vhd:450]
+INFO: [Synth 8-638] synthesizing module 'JTAG_CONTROL' [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/71de/hdl/mdm_v3_2_vh_rfs.vhd:3101]
+INFO: [Synth 8-638] synthesizing module 'MB_FDC_1' [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/71de/hdl/mdm_v3_2_vh_rfs.vhd:630]
+INFO: [Synth 8-256] done synthesizing module 'MB_FDC_1' (4#1) [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/71de/hdl/mdm_v3_2_vh_rfs.vhd:630]
+INFO: [Synth 8-638] synthesizing module 'MB_FDRE_1' [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/71de/hdl/mdm_v3_2_vh_rfs.vhd:690]
+INFO: [Synth 8-256] done synthesizing module 'MB_FDRE_1' (5#1) [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/71de/hdl/mdm_v3_2_vh_rfs.vhd:690]
+INFO: [Synth 8-638] synthesizing module 'MB_SRL16E' [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/71de/hdl/mdm_v3_2_vh_rfs.vhd:758]
+INFO: [Synth 8-256] done synthesizing module 'MB_SRL16E' (6#1) [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/71de/hdl/mdm_v3_2_vh_rfs.vhd:758]
+INFO: [Synth 8-638] synthesizing module 'MB_SRL16E__parameterized1' [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/71de/hdl/mdm_v3_2_vh_rfs.vhd:758]
+INFO: [Synth 8-256] done synthesizing module 'MB_SRL16E__parameterized1' (6#1) [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/71de/hdl/mdm_v3_2_vh_rfs.vhd:758]
+INFO: [Synth 8-638] synthesizing module 'MB_SRL16E__parameterized3' [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/71de/hdl/mdm_v3_2_vh_rfs.vhd:758]
+INFO: [Synth 8-256] done synthesizing module 'MB_SRL16E__parameterized3' (6#1) [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/71de/hdl/mdm_v3_2_vh_rfs.vhd:758]
+INFO: [Synth 8-638] synthesizing module 'MB_SRL16E__parameterized5' [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/71de/hdl/mdm_v3_2_vh_rfs.vhd:758]
+INFO: [Synth 8-256] done synthesizing module 'MB_SRL16E__parameterized5' (6#1) [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/71de/hdl/mdm_v3_2_vh_rfs.vhd:758]
+INFO: [Synth 8-638] synthesizing module 'MB_FDRSE' [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/71de/hdl/mdm_v3_2_vh_rfs.vhd:841]
+INFO: [Synth 8-256] done synthesizing module 'MB_FDRSE' (7#1) [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/71de/hdl/mdm_v3_2_vh_rfs.vhd:841]
+INFO: [Synth 8-638] synthesizing module 'SRL_FIFO' [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/71de/hdl/mdm_v3_2_vh_rfs.vhd:1768]
+INFO: [Synth 8-638] synthesizing module 'MB_MUXCY_XORCY' [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/71de/hdl/mdm_v3_2_vh_rfs.vhd:942]
+INFO: [Synth 8-256] done synthesizing module 'MB_MUXCY_XORCY' (8#1) [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/71de/hdl/mdm_v3_2_vh_rfs.vhd:942]
+INFO: [Synth 8-638] synthesizing module 'MB_XORCY' [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/71de/hdl/mdm_v3_2_vh_rfs.vhd:1036]
+INFO: [Synth 8-256] done synthesizing module 'MB_XORCY' (9#1) [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/71de/hdl/mdm_v3_2_vh_rfs.vhd:1036]
+INFO: [Synth 8-638] synthesizing module 'MB_SRL16E__parameterized7' [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/71de/hdl/mdm_v3_2_vh_rfs.vhd:758]
+INFO: [Synth 8-256] done synthesizing module 'MB_SRL16E__parameterized7' (9#1) [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/71de/hdl/mdm_v3_2_vh_rfs.vhd:758]
+INFO: [Synth 8-638] synthesizing module 'MB_SRL16E__parameterized9' [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/71de/hdl/mdm_v3_2_vh_rfs.vhd:758]
+INFO: [Synth 8-256] done synthesizing module 'MB_SRL16E__parameterized9' (9#1) [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/71de/hdl/mdm_v3_2_vh_rfs.vhd:758]
+INFO: [Synth 8-638] synthesizing module 'MB_SRL16E__parameterized11' [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/71de/hdl/mdm_v3_2_vh_rfs.vhd:758]
+INFO: [Synth 8-256] done synthesizing module 'MB_SRL16E__parameterized11' (9#1) [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/71de/hdl/mdm_v3_2_vh_rfs.vhd:758]
+INFO: [Synth 8-638] synthesizing module 'MB_SRL16E__parameterized13' [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/71de/hdl/mdm_v3_2_vh_rfs.vhd:758]
+INFO: [Synth 8-256] done synthesizing module 'MB_SRL16E__parameterized13' (9#1) [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/71de/hdl/mdm_v3_2_vh_rfs.vhd:758]
+INFO: [Synth 8-638] synthesizing module 'MB_SRL16E__parameterized15' [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/71de/hdl/mdm_v3_2_vh_rfs.vhd:758]
+INFO: [Synth 8-256] done synthesizing module 'MB_SRL16E__parameterized15' (9#1) [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/71de/hdl/mdm_v3_2_vh_rfs.vhd:758]
+INFO: [Synth 8-638] synthesizing module 'MB_SRL16E__parameterized17' [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/71de/hdl/mdm_v3_2_vh_rfs.vhd:758]
+INFO: [Synth 8-256] done synthesizing module 'MB_SRL16E__parameterized17' (9#1) [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/71de/hdl/mdm_v3_2_vh_rfs.vhd:758]
+INFO: [Synth 8-638] synthesizing module 'MB_SRL16E__parameterized19' [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/71de/hdl/mdm_v3_2_vh_rfs.vhd:758]
+INFO: [Synth 8-256] done synthesizing module 'MB_SRL16E__parameterized19' (9#1) [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/71de/hdl/mdm_v3_2_vh_rfs.vhd:758]
+INFO: [Synth 8-638] synthesizing module 'MB_SRL16E__parameterized21' [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/71de/hdl/mdm_v3_2_vh_rfs.vhd:758]
+INFO: [Synth 8-256] done synthesizing module 'MB_SRL16E__parameterized21' (9#1) [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/71de/hdl/mdm_v3_2_vh_rfs.vhd:758]
+INFO: [Synth 8-256] done synthesizing module 'SRL_FIFO' (10#1) [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/71de/hdl/mdm_v3_2_vh_rfs.vhd:1768]
+INFO: [Synth 8-256] done synthesizing module 'JTAG_CONTROL' (11#1) [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/71de/hdl/mdm_v3_2_vh_rfs.vhd:3101]
+INFO: [Synth 8-256] done synthesizing module 'MDM_Core' (12#1) [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/71de/hdl/mdm_v3_2_vh_rfs.vhd:6525]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif' [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
+INFO: [Synth 8-638] synthesizing module 'slave_attachment' [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
+INFO: [Synth 8-638] synthesizing module 'address_decoder' [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
+INFO: [Synth 8-638] synthesizing module 'pselect_f' [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f' (13#1) [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized0' [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized0' (13#1) [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized1' [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized1' (13#1) [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized2' [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized2' (13#1) [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'address_decoder' (14#1) [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
+INFO: [Synth 8-256] done synthesizing module 'slave_attachment' (15#1) [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif' (16#1) [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/0ba0/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
+INFO: [Synth 8-256] done synthesizing module 'MDM' (17#1) [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/71de/hdl/mdm_v3_2_vh_rfs.vhd:13311]
+INFO: [Synth 8-256] done synthesizing module 'shell_mdm_1_0' (18#1) [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ip/shell_mdm_1_0/synth/shell_mdm_1_0.vhd:94]
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1276.898 ; gain = 346.426 ; free physical = 18556 ; free virtual = 55503
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1276.898 ; gain = 346.426 ; free physical = 18555 ; free virtual = 55502
+INFO: [Device 21-403] Loading part xcku115-flva1517-2-e
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1929.688 ; gain = 0.000 ; free physical = 17324 ; free virtual = 54271
+Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 1929.688 ; gain = 999.215 ; free physical = 17226 ; free virtual = 54173
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 1929.688 ; gain = 999.215 ; free physical = 17226 ; free virtual = 54173
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1929.688 ; gain = 999.215 ; free physical = 17226 ; free virtual = 54173
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 1929.688 ; gain = 999.215 ; free physical = 17157 ; free virtual = 54104
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 1929.688 ; gain = 999.215 ; free physical = 17157 ; free virtual = 54104
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:33 ; elapsed = 00:00:33 . Memory (MB): peak = 2046.203 ; gain = 1115.730 ; free physical = 17854 ; free virtual = 54811
+Finished Timing Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 2064.219 ; gain = 1133.746 ; free physical = 17857 ; free virtual = 54813
+Finished Technology Mapping : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 2074.547 ; gain = 1144.074 ; free physical = 19269 ; free virtual = 56225
+Finished IO Insertion : Time (s): cpu = 00:00:34 ; elapsed = 00:00:34 . Memory (MB): peak = 2074.547 ; gain = 1144.074 ; free physical = 19284 ; free virtual = 56240
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:34 ; elapsed = 00:00:34 . Memory (MB): peak = 2074.547 ; gain = 1144.074 ; free physical = 19284 ; free virtual = 56240
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:34 ; elapsed = 00:00:34 . Memory (MB): peak = 2074.547 ; gain = 1144.074 ; free physical = 19284 ; free virtual = 56239
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:34 ; elapsed = 00:00:34 . Memory (MB): peak = 2074.547 ; gain = 1144.074 ; free physical = 19284 ; free virtual = 56239
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:34 ; elapsed = 00:00:34 . Memory (MB): peak = 2074.547 ; gain = 1144.074 ; free physical = 19284 ; free virtual = 56239
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:34 ; elapsed = 00:00:34 . Memory (MB): peak = 2074.547 ; gain = 1144.074 ; free physical = 19284 ; free virtual = 56239
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BSCANE2  |     1|
+|2     |BUFG     |     1|
+|3     |LUT1     |     5|
+|4     |LUT2     |    20|
+|5     |LUT3     |    36|
+|6     |LUT4     |    28|
+|7     |LUT5     |    38|
+|8     |LUT6     |    51|
+|9     |MUXCY_L  |     6|
+|10    |SRL16E   |     1|
+|11    |SRL16E_2 |     1|
+|12    |SRL16E_3 |     1|
+|13    |SRL16E_4 |     1|
+|14    |SRL16E_5 |    19|
+|15    |XORCY    |     8|
+|16    |FDCE     |   119|
+|17    |FDC_1    |     1|
+|18    |FDPE     |     7|
+|19    |FDRE     |    48|
+|20    |FDRE_1   |     1|
+|21    |FDSE     |     2|
++------+---------+------+
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:34 ; elapsed = 00:00:34 . Memory (MB): peak = 2074.547 ; gain = 1144.074 ; free physical = 19284 ; free virtual = 56239
+synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:36 . Memory (MB): peak = 2359.039 ; gain = 1262.039 ; free physical = 18757 ; free virtual = 55712

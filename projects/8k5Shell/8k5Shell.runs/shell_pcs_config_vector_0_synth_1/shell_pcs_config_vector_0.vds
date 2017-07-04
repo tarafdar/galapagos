@@ -1,0 +1,43 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:19 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Sun Jul  2 17:28:12 2017
+# Process ID: 93845
+# Current directory: /home/tarafdar/thesis/gitStuff/projects/8k5Shell/8k5Shell.runs/shell_pcs_config_vector_0_synth_1
+# Command line: vivado -log shell_pcs_config_vector_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source shell_pcs_config_vector_0.tcl
+# Log file: /home/tarafdar/thesis/gitStuff/projects/8k5Shell/8k5Shell.runs/shell_pcs_config_vector_0_synth_1/shell_pcs_config_vector_0.vds
+# Journal file: /home/tarafdar/thesis/gitStuff/projects/8k5Shell/8k5Shell.runs/shell_pcs_config_vector_0_synth_1/vivado.jou
+#-----------------------------------------------------------
+source shell_pcs_config_vector_0.tcl -notrace
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1213.426 ; gain = 282.957 ; free physical = 23370 ; free virtual = 58459
+INFO: [Synth 8-638] synthesizing module 'shell_pcs_config_vector_0' [/home/tarafdar/thesis/gitStuff/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ip/shell_pcs_config_vector_0/sim/shell_pcs_config_vector_0.v:56]
+INFO: [Synth 8-638] synthesizing module 'xlconstant' [/home/tarafdar/thesis/gitStuff/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/e147/xlconstant.v:23]
+INFO: [Synth 8-256] done synthesizing module 'xlconstant' (1#1) [/home/tarafdar/thesis/gitStuff/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/e147/xlconstant.v:23]
+INFO: [Synth 8-256] done synthesizing module 'shell_pcs_config_vector_0' (2#1) [/home/tarafdar/thesis/gitStuff/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ip/shell_pcs_config_vector_0/sim/shell_pcs_config_vector_0.v:56]
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1254.895 ; gain = 324.426 ; free physical = 23325 ; free virtual = 58415
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1254.895 ; gain = 324.426 ; free physical = 23325 ; free virtual = 58415
+INFO: [Device 21-403] Loading part xcku115-flva1517-2-e
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:00.11 . Memory (MB): peak = 1810.496 ; gain = 0.000 ; free physical = 21929 ; free virtual = 57019
+Finished Constraint Validation : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1810.496 ; gain = 880.027 ; free physical = 21729 ; free virtual = 56819
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1810.496 ; gain = 880.027 ; free physical = 21728 ; free virtual = 56818
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1810.496 ; gain = 880.027 ; free physical = 21735 ; free virtual = 56825
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1810.496 ; gain = 880.027 ; free physical = 21735 ; free virtual = 56825
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1810.496 ; gain = 880.027 ; free physical = 21732 ; free virtual = 56823
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 2011.113 ; gain = 1080.645 ; free physical = 21522 ; free virtual = 56612
+Finished Timing Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 2011.113 ; gain = 1080.645 ; free physical = 21522 ; free virtual = 56612
+Finished Technology Mapping : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 2021.129 ; gain = 1090.660 ; free physical = 21511 ; free virtual = 56601
+Finished IO Insertion : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 2021.129 ; gain = 1090.660 ; free physical = 21429 ; free virtual = 56519
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 2021.129 ; gain = 1090.660 ; free physical = 21429 ; free virtual = 56519
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 2021.129 ; gain = 1090.660 ; free physical = 21426 ; free virtual = 56516
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 2021.129 ; gain = 1090.660 ; free physical = 21426 ; free virtual = 56516
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 2021.129 ; gain = 1090.660 ; free physical = 21417 ; free virtual = 56507
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 2021.129 ; gain = 1090.660 ; free physical = 21416 ; free virtual = 56507
+
+Report Cell Usage: 
++-+-----+------+
+| |Cell |Count |
++-+-----+------+
++-+-----+------+
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 2021.129 ; gain = 1090.660 ; free physical = 21416 ; free virtual = 56506
+synth_design: Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 2094.832 ; gain = 1008.836 ; free physical = 19758 ; free virtual = 54848

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:19 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Mon Jul  3 18:45:09 2017
+# Process ID: 89046
+# Current directory: /home/tarafdar/thesis/MIXcoatl/projects/bro/0/0.runs/pr_synth_1
+# Command line: vivado -log pr.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source pr.tcl
+# Log file: /home/tarafdar/thesis/MIXcoatl/projects/bro/0/0.runs/pr_synth_1/pr.vds
+# Journal file: /home/tarafdar/thesis/MIXcoatl/projects/bro/0/0.runs/pr_synth_1/vivado.jou
+#-----------------------------------------------------------
+source pr.tcl -notrace

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cluster>
+    <fpga>
+        <kernel> 1 </kernel>
+        <kernel> 2 </kernel>
+    </fpga>
+    <fpga>
+        <kernel> 3 </kernel>
+    </fpga>
+</cluster>

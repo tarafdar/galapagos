@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Product Version: Vivado v2016.4 (64-bit)              -->
+<!--                                                         -->
+<!-- Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.   -->
+
+<Project Version="7" Minor="17" Path="/home/tarafdar/thesis/MIXcoatl/projects/bro/1/1.xpr">
+  <DefaultLaunch Dir="$PRUNDIR"/>
+  <Configuration>
+    <Option Name="Id" Val="fddd11b9aa0f4f688d0d04862011bb52"/>
+    <Option Name="Part" Val="xcku115-flva1517-2-e"/>
+    <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
+    <Option Name="CompiledLibDirXSim" Val=""/>
+    <Option Name="CompiledLibDirModelSim" Val="$PCACHEDIR/compile_simlib/modelsim"/>
+    <Option Name="CompiledLibDirQuesta" Val="$PCACHEDIR/compile_simlib/questa"/>
+    <Option Name="CompiledLibDirIES" Val="$PCACHEDIR/compile_simlib/ies"/>
+    <Option Name="CompiledLibDirVCS" Val="$PCACHEDIR/compile_simlib/vcs"/>
+    <Option Name="CompiledLibDirRiviera" Val="$PCACHEDIR/compile_simlib/riviera"/>
+    <Option Name="CompiledLibDirActivehdl" Val="$PCACHEDIR/compile_simlib/activehdl"/>
+    <Option Name="BoardPart" Val=""/>
+    <Option Name="ActiveSimSet" Val="sim_1"/>
+    <Option Name="DefaultLib" Val="xil_defaultlib"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../../hlsIP_8k5"/>
+    <Option Name="IPOutputRepo" Val="$PCACHEDIR/ip"/>
+    <Option Name="IPCachePermission" Val="read"/>
+    <Option Name="IPCachePermission" Val="write"/>
+    <Option Name="EnableCoreContainer" Val="TRUE"/>
+    <Option Name="XPMLibraries" Val="XPM_CDC"/>
+    <Option Name="XPMLibraries" Val="XPM_MEMORY"/>
+    <Option Name="CreateRefXciForCoreContainers" Val="FALSE"/>
+    <Option Name="IPUserFilesDir" Val="$PPRDIR/1.ip_user_files"/>
+    <Option Name="IPStaticSourceDir" Val="$PPRDIR/1.ip_user_files/ipstatic"/>
+    <Option Name="EnableBDX" Val="FALSE"/>
+    <Option Name="DSANumComputeUnits" Val="16"/>
+    <Option Name="WTXSimLaunchSim" Val="0"/>
+    <Option Name="WTModelSimLaunchSim" Val="0"/>
+    <Option Name="WTQuestaLaunchSim" Val="0"/>
+    <Option Name="WTIesLaunchSim" Val="0"/>
+    <Option Name="WTVcsLaunchSim" Val="0"/>
+    <Option Name="WTRivieraLaunchSim" Val="0"/>
+    <Option Name="WTActivehdlLaunchSim" Val="0"/>
+    <Option Name="WTXSimExportSim" Val="0"/>
+    <Option Name="WTModelSimExportSim" Val="0"/>
+    <Option Name="WTQuestaExportSim" Val="0"/>
+    <Option Name="WTIesExportSim" Val="0"/>
+    <Option Name="WTVcsExportSim" Val="0"/>
+    <Option Name="WTRivieraExportSim" Val="0"/>
+    <Option Name="WTActivehdlExportSim" Val="0"/>
+    <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
+    <Option Name="XSimRadix" Val="hex"/>
+    <Option Name="XSimTimeUnit" Val="ns"/>
+    <Option Name="XSimArrayDisplayLimit" Val="64"/>
+    <Option Name="XSimTraceLimit" Val="65536"/>
+  </Configuration>
+  <FileSets Version="1" Minor="31">
+    <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+      <Filter Type="Srcs"/>
+      <Config>
+        <Option Name="DesignMode" Val="RTL"/>
+        <Option Name="TopAutoSet" Val="TRUE"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+      <Filter Type="Constrs"/>
+      <Config>
+        <Option Name="ConstrsType" Val="XDC"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1">
+      <Config>
+        <Option Name="DesignMode" Val="RTL"/>
+        <Option Name="TopAutoSet" Val="TRUE"/>
+        <Option Name="TransportPathDelay" Val="0"/>
+        <Option Name="TransportIntDelay" Val="0"/>
+        <Option Name="SrcSet" Val="sources_1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="pr" Type="BlockSrcs" RelSrcDir="$PSRCDIR/pr">
+      <File Path="$PSRCDIR/sources_1/bd/pr/pr.bd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+        <CompFileExtendedInfo CompFileName="pr.bd" FileRelPathName="ip/pr_axi_bram_ctrl_0_0/pr_axi_bram_ctrl_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="pr.bd" FileRelPathName="ip/pr_pf_dst_inst_5_0/pr_pf_dst_inst_5_0.xci"/>
+        <CompFileExtendedInfo CompFileName="pr.bd" FileRelPathName="ip/pr_inputSwitch_inst_0/pr_inputSwitch_inst_0.xci"/>
+        <CompFileExtendedInfo CompFileName="pr.bd" FileRelPathName="ip/pr_src_inst_0/pr_src_inst_0.xci"/>
+        <CompFileExtendedInfo CompFileName="pr.bd" FileRelPathName="ip/pr_logic_1_0/pr_logic_1_0.xci"/>
+        <CompFileExtendedInfo CompFileName="pr.bd" FileRelPathName="ip/pr_id_4_0/pr_id_4_0.xci"/>
+        <CompFileExtendedInfo CompFileName="pr.bd" FileRelPathName="ip/pr_id_12_0/pr_id_12_0.xci"/>
+        <CompFileExtendedInfo CompFileName="pr.bd" FileRelPathName="ip/pr_id_6_0/pr_id_6_0.xci"/>
+        <CompFileExtendedInfo CompFileName="pr.bd" FileRelPathName="ip/pr_packetMask_inst_0_0/pr_packetMask_inst_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="pr.bd" FileRelPathName="ip/pr_packetMaker_inst_0_0/pr_packetMaker_inst_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="pr.bd" FileRelPathName="ip/pr_outputSwitch_inst_0/pr_outputSwitch_inst_0.xci"/>
+        <CompFileExtendedInfo CompFileName="pr.bd" FileRelPathName="ip/pr_receiveFifo_inst_0/pr_receiveFifo_inst_0.xci"/>
+        <CompFileExtendedInfo CompFileName="pr.bd" FileRelPathName="ip/pr_fireWall_inst_0/pr_fireWall_inst_0.xci"/>
+        <CompFileExtendedInfo CompFileName="pr.bd" FileRelPathName="ip/pr_heartBeat_inst_0/pr_heartBeat_inst_0.xci"/>
+        <CompFileExtendedInfo CompFileName="pr.bd" FileRelPathName="ip/pr_packetMask_inst_2_0/pr_packetMask_inst_2_0.xci"/>
+        <CompFileExtendedInfo CompFileName="pr.bd" FileRelPathName="ip/pr_packetMask_inst_1_0/pr_packetMask_inst_1_0.xci"/>
+        <CompFileExtendedInfo CompFileName="pr.bd" FileRelPathName="ip/pr_id_5_0/pr_id_5_0.xci"/>
+        <CompFileExtendedInfo CompFileName="pr.bd" FileRelPathName="ip/pr_packetMaker_inst_1_0/pr_packetMaker_inst_1_0.xci"/>
+        <CompFileExtendedInfo CompFileName="pr.bd" FileRelPathName="ip/pr_id_16_0/pr_id_16_0.xci"/>
+        <CompFileExtendedInfo CompFileName="pr.bd" FileRelPathName="ip/pr_sendFifo_inst_0/pr_sendFifo_inst_0.xci"/>
+        <CompFileExtendedInfo CompFileName="pr.bd" FileRelPathName="ip/pr_fireWall2_inst_0/pr_fireWall2_inst_0.xci"/>
+        <CompFileExtendedInfo CompFileName="pr.bd" FileRelPathName="ip/pr_pf_dst_inst_0_0/pr_pf_dst_inst_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="pr.bd" FileRelPathName="ip/pr_packetFormatter_inst_0_0/pr_packetFormatter_inst_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="pr.bd" FileRelPathName="ip/pr_packetFormatter_inst_6_0/pr_packetFormatter_inst_6_0.xci"/>
+        <CompFileExtendedInfo CompFileName="pr.bd" FileRelPathName="ip/pr_id_15_0/pr_id_15_0.xci"/>
+        <CompFileExtendedInfo CompFileName="pr.bd" FileRelPathName="ip/pr_packetMaker_inst_2_0/pr_packetMaker_inst_2_0.xci"/>
+        <CompFileExtendedInfo CompFileName="pr.bd" FileRelPathName="ip/pr_packetFormatter_inst_1_0/pr_packetFormatter_inst_1_0.xci"/>
+        <CompFileExtendedInfo CompFileName="pr.bd" FileRelPathName="ip/pr_pf_dst_inst_1_0/pr_pf_dst_inst_1_0.xci"/>
+        <CompFileExtendedInfo CompFileName="pr.bd" FileRelPathName="ip/pr_pf_dst_inst_2_0/pr_pf_dst_inst_2_0.xci"/>
+        <CompFileExtendedInfo CompFileName="pr.bd" FileRelPathName="ip/pr_packetFormatter_inst_2_0/pr_packetFormatter_inst_2_0.xci"/>
+        <CompFileExtendedInfo CompFileName="pr.bd" FileRelPathName="ip/pr_pf_dst_inst_3_0/pr_pf_dst_inst_3_0.xci"/>
+        <CompFileExtendedInfo CompFileName="pr.bd" FileRelPathName="ip/pr_packetFormatter_inst_3_0/pr_packetFormatter_inst_3_0.xci"/>
+        <CompFileExtendedInfo CompFileName="pr.bd" FileRelPathName="ip/pr_packetFormatter_inst_4_0/pr_packetFormatter_inst_4_0.xci"/>
+        <CompFileExtendedInfo CompFileName="pr.bd" FileRelPathName="ip/pr_pf_dst_inst_4_0/pr_pf_dst_inst_4_0.xci"/>
+        <CompFileExtendedInfo CompFileName="pr.bd" FileRelPathName="ip/pr_packetFormatter_inst_5_0/pr_packetFormatter_inst_5_0.xci"/>
+        <CompFileExtendedInfo CompFileName="pr.bd" FileRelPathName="ip/pr_pf_dst_inst_6_0/pr_pf_dst_inst_6_0.xci"/>
+        <CompFileExtendedInfo CompFileName="pr.bd" FileRelPathName="ip/pr_blk_mem_gen_0_0/pr_blk_mem_gen_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="pr.bd" FileRelPathName="hdl/pr.hwdef"/>
+        <CompFileExtendedInfo CompFileName="pr.bd" FileRelPathName="hw_handoff/pr_bd.tcl"/>
+        <CompFileExtendedInfo CompFileName="pr.bd" FileRelPathName="pr_ooc.xdc"/>
+        <CompFileExtendedInfo CompFileName="pr.bd" FileRelPathName="hdl/pr.v"/>
+        <CompFileExtendedInfo CompFileName="pr.bd" FileRelPathName="hw_handoff/pr.hwh"/>
+      </File>
+      <Config>
+        <Option Name="TopModule" Val="pr"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+  </FileSets>
+  <Simulators>
+    <Simulator Name="XSim">
+      <Option Name="Description" Val="Vivado Simulator"/>
+      <Option Name="CompiledLib" Val="0"/>
+    </Simulator>
+    <Simulator Name="ModelSim">
+      <Option Name="Description" Val="ModelSim Simulator"/>
+    </Simulator>
+    <Simulator Name="Questa">
+      <Option Name="Description" Val="Questa Advanced Simulator"/>
+    </Simulator>
+    <Simulator Name="IES">
+      <Option Name="Description" Val="Incisive Enterprise Simulator (IES)"/>
+    </Simulator>
+    <Simulator Name="VCS">
+      <Option Name="Description" Val="Verilog Compiler Simulator (VCS)"/>
+    </Simulator>
+    <Simulator Name="Riviera">
+      <Option Name="Description" Val="Riviera-PRO Simulator"/>
+    </Simulator>
+  </Simulators>
+  <Runs Version="1" Minor="10">
+    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xcku115-flva1517-2-e" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" State="current" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="pr_synth_1" Type="Ft3:Synth" SrcSet="pr" Part="xcku115-flva1517-2-e" ConstrsSet="pr" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/pr_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xcku115-flva1517-2-e" ConstrsSet="constrs_1" Description="Default settings for Implementation." State="current" SynthRun="synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="pr_impl_1" Type="Ft2:EntireDesign" Part="xcku115-flva1517-2-e" ConstrsSet="pr" Description="Default settings for Implementation." SynthRun="pr_synth_1" IncludeInArchive="false">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+  </Runs>
+  <MsgRule>
+    <MsgAttr Name="RuleType" Val="0"/>
+    <MsgAttr Name="Limit" Val="-1"/>
+    <MsgAttr Name="NewSeverity" Val="ANY"/>
+    <MsgAttr Name="Id" Val="[BD 41-1306]"/>
+    <MsgAttr Name="Severity" Val="ANY"/>
+    <MsgAttr Name="ShowRule" Val="1"/>
+    <MsgAttr Name="RuleSource" Val="2"/>
+    <MsgAttr Name="StringIsRegExp" Val="0"/>
+    <MsgAttr Name="RuleId" Val="7"/>
+    <MsgAttr Name="Note" Val=""/>
+    <MsgAttr Name="Author" Val=""/>
+    <MsgAttr Name="CreatedTimestamp" Val=""/>
+  </MsgRule>
+  <MsgRule>
+    <MsgAttr Name="RuleType" Val="0"/>
+    <MsgAttr Name="Limit" Val="-1"/>
+    <MsgAttr Name="NewSeverity" Val="ANY"/>
+    <MsgAttr Name="Id" Val="[BD 41-1271]"/>
+    <MsgAttr Name="Severity" Val="ANY"/>
+    <MsgAttr Name="ShowRule" Val="1"/>
+    <MsgAttr Name="RuleSource" Val="2"/>
+    <MsgAttr Name="StringIsRegExp" Val="0"/>
+    <MsgAttr Name="RuleId" Val="8"/>
+    <MsgAttr Name="Note" Val=""/>
+    <MsgAttr Name="Author" Val=""/>
+    <MsgAttr Name="CreatedTimestamp" Val=""/>
+  </MsgRule>
+</Project>

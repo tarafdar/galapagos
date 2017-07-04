@@ -1,0 +1,378 @@
+
+*** Running vivado
+    with args -log shell_axiStreamGate_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source shell_axiStreamGate_0_0.tcl
+
+
+****** Vivado v2016.4 (64-bit)
+  **** SW Build 1756540 on Mon Jan 23 19:11:19 MST 2017
+  **** IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source shell_axiStreamGate_0_0.tcl -notrace
+Command: synth_design -top shell_axiStreamGate_0_0 -part xcku115-flva1517-2-e -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xcku115'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcku115'
+INFO: [Common 17-1223] The version limit for your license is '2016.12' and will expire in -184 days. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 53666 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1212.426 ; gain = 281.957 ; free physical = 19333 ; free virtual = 56279
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'shell_axiStreamGate_0_0' [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ip/shell_axiStreamGate_0_0/synth/shell_axiStreamGate_0_0.v:57]
+INFO: [Synth 8-638] synthesizing module 'axiStreamGate' [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/fff1/hdl/verilog/axiStreamGate.v:12]
+	Parameter ap_ST_fsm_state1 bound to: 5'b00001 
+	Parameter ap_ST_fsm_state2 bound to: 5'b00010 
+	Parameter ap_ST_fsm_state3 bound to: 5'b00100 
+	Parameter ap_ST_fsm_state4 bound to: 5'b01000 
+	Parameter ap_ST_fsm_state5 bound to: 5'b10000 
+	Parameter ap_const_lv2_0 bound to: 2'b00 
+	Parameter ap_const_lv2_2 bound to: 2'b10 
+	Parameter ap_const_lv2_3 bound to: 2'b11 
+	Parameter ap_const_lv2_1 bound to: 2'b01 
+	Parameter ap_const_lv32_2 bound to: 2 - type: integer 
+	Parameter ap_const_lv32_3 bound to: 3 - type: integer 
+	Parameter C_S_AXI_AXILITES_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ap_const_int64_8 bound to: 8 - type: integer 
+	Parameter C_S_AXI_AXILITES_ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ap_const_lv32_1 bound to: 1 - type: integer 
+	Parameter ap_const_lv32_0 bound to: 0 - type: integer 
+	Parameter C_S_AXI_AXILITES_WSTRB_WIDTH bound to: 4 - type: integer 
+	Parameter C_S_AXI_WSTRB_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/fff1/hdl/verilog/axiStreamGate.v:144]
+INFO: [Synth 8-638] synthesizing module 'axiStreamGate_AXILiteS_s_axi' [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/fff1/hdl/verilog/axiStreamGate_AXILiteS_s_axi.v:9]
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ADDR_PROGRAMMING_DATA_0 bound to: 5'b10000 
+	Parameter ADDR_PROGRAMMING_CTRL bound to: 5'b10100 
+	Parameter ADDR_PROGRAMSAFE_DATA_0 bound to: 5'b11000 
+	Parameter ADDR_PROGRAMSAFE_CTRL bound to: 5'b11100 
+	Parameter WRIDLE bound to: 2'b00 
+	Parameter WRDATA bound to: 2'b01 
+	Parameter WRRESP bound to: 2'b10 
+	Parameter RDIDLE bound to: 2'b00 
+	Parameter RDDATA bound to: 2'b01 
+	Parameter ADDR_BITS bound to: 5 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/fff1/hdl/verilog/axiStreamGate_AXILiteS_s_axi.v:174]
+INFO: [Synth 8-256] done synthesizing module 'axiStreamGate_AXILiteS_s_axi' (1#1) [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/fff1/hdl/verilog/axiStreamGate_AXILiteS_s_axi.v:9]
+INFO: [Synth 8-256] done synthesizing module 'axiStreamGate' (2#1) [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/fff1/hdl/verilog/axiStreamGate.v:12]
+INFO: [Synth 8-256] done synthesizing module 'shell_axiStreamGate_0_0' (3#1) [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ip/shell_axiStreamGate_0_0/synth/shell_axiStreamGate_0_0.v:57]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1253.895 ; gain = 323.426 ; free physical = 19289 ; free virtual = 56236
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1253.895 ; gain = 323.426 ; free physical = 19289 ; free virtual = 56235
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xcku115-flva1517-2-e
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ip/shell_axiStreamGate_0_0/constraints/axiStreamGate_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ip/shell_axiStreamGate_0_0/constraints/axiStreamGate_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.runs/shell_axiStreamGate_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.runs/shell_axiStreamGate_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1910.738 ; gain = 0.000 ; free physical = 18243 ; free virtual = 55190
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1910.738 ; gain = 980.270 ; free physical = 17861 ; free virtual = 54808
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xcku115-flva1517-2-e
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1910.738 ; gain = 980.270 ; free physical = 17861 ; free virtual = 54808
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for inst. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1910.738 ; gain = 980.270 ; free physical = 17861 ; free virtual = 54808
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5545] ROM "tmp_fu_102_p2" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1910.738 ; gain = 980.270 ; free physical = 17858 ; free virtual = 54805
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	               64 Bit    Registers := 2     
+	               32 Bit    Registers := 3     
+	                8 Bit    Registers := 2     
+	                5 Bit    Registers := 2     
+	                2 Bit    Registers := 4     
+	                1 Bit    Registers := 14    
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 3     
+	   6 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 3     
+	   4 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 8     
+	   5 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module axiStreamGate_AXILiteS_s_axi 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 3     
+	                5 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   6 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+	   5 Input      1 Bit        Muxes := 1     
+Module axiStreamGate 
+Detailed RTL Component Info : 
++---Registers : 
+	               64 Bit    Registers := 2     
+	                8 Bit    Registers := 2     
+	                5 Bit    Registers := 1     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 12    
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 3     
+	   2 Input      2 Bit        Muxes := 3     
+	   4 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 6     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 5520 (col length:120)
+BRAMs: 4320 (col length: RAMB18 240 RAMB36 120)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "tmp_fu_102_p2" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-3886] merging instance 'inst/axiStreamGate_AXILiteS_s_axi_U/int_programSafe_reg[1]' (FDRE) to 'inst/axiStreamGate_AXILiteS_s_axi_U/int_programSafe_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/axiStreamGate_AXILiteS_s_axi_U/int_programSafe_reg[2]' (FDRE) to 'inst/axiStreamGate_AXILiteS_s_axi_U/int_programSafe_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/axiStreamGate_AXILiteS_s_axi_U/int_programSafe_reg[3]' (FDRE) to 'inst/axiStreamGate_AXILiteS_s_axi_U/int_programSafe_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/axiStreamGate_AXILiteS_s_axi_U/int_programSafe_reg[4]' (FDRE) to 'inst/axiStreamGate_AXILiteS_s_axi_U/int_programSafe_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/axiStreamGate_AXILiteS_s_axi_U/int_programSafe_reg[5]' (FDRE) to 'inst/axiStreamGate_AXILiteS_s_axi_U/int_programSafe_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/axiStreamGate_AXILiteS_s_axi_U/int_programSafe_reg[6]' (FDRE) to 'inst/axiStreamGate_AXILiteS_s_axi_U/int_programSafe_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/axiStreamGate_AXILiteS_s_axi_U/int_programSafe_reg[7]' (FDRE) to 'inst/axiStreamGate_AXILiteS_s_axi_U/int_programSafe_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/axiStreamGate_AXILiteS_s_axi_U/int_programSafe_reg[8]' (FDRE) to 'inst/axiStreamGate_AXILiteS_s_axi_U/int_programSafe_reg[9]'
+INFO: [Synth 8-3886] merging instance 'inst/axiStreamGate_AXILiteS_s_axi_U/int_programSafe_reg[9]' (FDRE) to 'inst/axiStreamGate_AXILiteS_s_axi_U/int_programSafe_reg[10]'
+INFO: [Synth 8-3886] merging instance 'inst/axiStreamGate_AXILiteS_s_axi_U/int_programSafe_reg[10]' (FDRE) to 'inst/axiStreamGate_AXILiteS_s_axi_U/int_programSafe_reg[11]'
+INFO: [Synth 8-3886] merging instance 'inst/axiStreamGate_AXILiteS_s_axi_U/int_programSafe_reg[11]' (FDRE) to 'inst/axiStreamGate_AXILiteS_s_axi_U/int_programSafe_reg[12]'
+INFO: [Synth 8-3886] merging instance 'inst/axiStreamGate_AXILiteS_s_axi_U/int_programSafe_reg[12]' (FDRE) to 'inst/axiStreamGate_AXILiteS_s_axi_U/int_programSafe_reg[13]'
+INFO: [Synth 8-3886] merging instance 'inst/axiStreamGate_AXILiteS_s_axi_U/int_programSafe_reg[13]' (FDRE) to 'inst/axiStreamGate_AXILiteS_s_axi_U/int_programSafe_reg[14]'
+INFO: [Synth 8-3886] merging instance 'inst/axiStreamGate_AXILiteS_s_axi_U/int_programSafe_reg[14]' (FDRE) to 'inst/axiStreamGate_AXILiteS_s_axi_U/int_programSafe_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst/axiStreamGate_AXILiteS_s_axi_U/int_programSafe_reg[15]' (FDRE) to 'inst/axiStreamGate_AXILiteS_s_axi_U/int_programSafe_reg[16]'
+INFO: [Synth 8-3886] merging instance 'inst/axiStreamGate_AXILiteS_s_axi_U/int_programSafe_reg[16]' (FDRE) to 'inst/axiStreamGate_AXILiteS_s_axi_U/int_programSafe_reg[17]'
+INFO: [Synth 8-3886] merging instance 'inst/axiStreamGate_AXILiteS_s_axi_U/int_programSafe_reg[17]' (FDRE) to 'inst/axiStreamGate_AXILiteS_s_axi_U/int_programSafe_reg[18]'
+INFO: [Synth 8-3886] merging instance 'inst/axiStreamGate_AXILiteS_s_axi_U/int_programSafe_reg[18]' (FDRE) to 'inst/axiStreamGate_AXILiteS_s_axi_U/int_programSafe_reg[19]'
+INFO: [Synth 8-3886] merging instance 'inst/axiStreamGate_AXILiteS_s_axi_U/int_programSafe_reg[19]' (FDRE) to 'inst/axiStreamGate_AXILiteS_s_axi_U/int_programSafe_reg[20]'
+INFO: [Synth 8-3886] merging instance 'inst/axiStreamGate_AXILiteS_s_axi_U/int_programSafe_reg[20]' (FDRE) to 'inst/axiStreamGate_AXILiteS_s_axi_U/int_programSafe_reg[21]'
+INFO: [Synth 8-3886] merging instance 'inst/axiStreamGate_AXILiteS_s_axi_U/int_programSafe_reg[21]' (FDRE) to 'inst/axiStreamGate_AXILiteS_s_axi_U/int_programSafe_reg[22]'
+INFO: [Synth 8-3886] merging instance 'inst/axiStreamGate_AXILiteS_s_axi_U/int_programSafe_reg[22]' (FDRE) to 'inst/axiStreamGate_AXILiteS_s_axi_U/int_programSafe_reg[23]'
+INFO: [Synth 8-3886] merging instance 'inst/axiStreamGate_AXILiteS_s_axi_U/int_programSafe_reg[23]' (FDRE) to 'inst/axiStreamGate_AXILiteS_s_axi_U/int_programSafe_reg[24]'
+INFO: [Synth 8-3886] merging instance 'inst/axiStreamGate_AXILiteS_s_axi_U/int_programSafe_reg[24]' (FDRE) to 'inst/axiStreamGate_AXILiteS_s_axi_U/int_programSafe_reg[25]'
+INFO: [Synth 8-3886] merging instance 'inst/axiStreamGate_AXILiteS_s_axi_U/int_programSafe_reg[25]' (FDRE) to 'inst/axiStreamGate_AXILiteS_s_axi_U/int_programSafe_reg[26]'
+INFO: [Synth 8-3886] merging instance 'inst/axiStreamGate_AXILiteS_s_axi_U/int_programSafe_reg[26]' (FDRE) to 'inst/axiStreamGate_AXILiteS_s_axi_U/int_programSafe_reg[27]'
+INFO: [Synth 8-3886] merging instance 'inst/axiStreamGate_AXILiteS_s_axi_U/int_programSafe_reg[27]' (FDRE) to 'inst/axiStreamGate_AXILiteS_s_axi_U/int_programSafe_reg[28]'
+INFO: [Synth 8-3886] merging instance 'inst/axiStreamGate_AXILiteS_s_axi_U/int_programSafe_reg[28]' (FDRE) to 'inst/axiStreamGate_AXILiteS_s_axi_U/int_programSafe_reg[29]'
+INFO: [Synth 8-3886] merging instance 'inst/axiStreamGate_AXILiteS_s_axi_U/int_programSafe_reg[29]' (FDRE) to 'inst/axiStreamGate_AXILiteS_s_axi_U/int_programSafe_reg[30]'
+INFO: [Synth 8-3886] merging instance 'inst/axiStreamGate_AXILiteS_s_axi_U/int_programSafe_reg[30]' (FDRE) to 'inst/axiStreamGate_AXILiteS_s_axi_U/int_programSafe_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\axiStreamGate_AXILiteS_s_axi_U/int_programSafe_reg[31] )
+WARNING: [Synth 8-3332] Sequential element (axiStreamGate_AXILiteS_s_axi_U/int_programSafe_reg[31]) is unused and will be removed from module axiStreamGate.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1910.738 ; gain = 980.270 ; free physical = 17785 ; free virtual = 54732
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 2032.254 ; gain = 1101.785 ; free physical = 17178 ; free virtual = 54125
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 2046.270 ; gain = 1115.801 ; free physical = 17166 ; free virtual = 54113
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 2055.285 ; gain = 1124.816 ; free physical = 17157 ; free virtual = 54104
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 2055.285 ; gain = 1124.816 ; free physical = 17157 ; free virtual = 54104
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 2055.285 ; gain = 1124.816 ; free physical = 17157 ; free virtual = 54104
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 2055.285 ; gain = 1124.816 ; free physical = 17157 ; free virtual = 54104
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 2055.285 ; gain = 1124.816 ; free physical = 17157 ; free virtual = 54104
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 2055.285 ; gain = 1124.816 ; free physical = 17157 ; free virtual = 54104
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 2055.285 ; gain = 1124.816 ; free physical = 17157 ; free virtual = 54104
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT1 |     1|
+|2     |LUT2 |     7|
+|3     |LUT3 |   118|
+|4     |LUT4 |    11|
+|5     |LUT5 |    16|
+|6     |LUT6 |    14|
+|7     |FDRE |   240|
+|8     |FDSE |     1|
++------+-----+------+
+
+Report Instance Areas: 
++------+-----------------------------------+-----------------------------+------+
+|      |Instance                           |Module                       |Cells |
++------+-----------------------------------+-----------------------------+------+
+|1     |top                                |                             |   408|
+|2     |  inst                             |axiStreamGate                |   408|
+|3     |    axiStreamGate_AXILiteS_s_axi_U |axiStreamGate_AXILiteS_s_axi |   141|
++------+-----------------------------------+-----------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 2055.285 ; gain = 1124.816 ; free physical = 17157 ; free virtual = 54104
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2055.285 ; gain = 255.016 ; free physical = 17157 ; free virtual = 54104
+Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 2055.293 ; gain = 1124.824 ; free physical = 17157 ; free virtual = 54104
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ip/shell_axiStreamGate_0_0/constraints/axiStreamGate_ooc.xdc] for cell 'inst'
+INFO: [Vivado 12-4761] HD.CLK_SRC property is set on port ap_clk. The net connecting to the port drives either clock PIN or hierarchical black box. Use the create_clock constraint to create a clock on this port prior to setting HD.CLK_SRC.  [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ip/shell_axiStreamGate_0_0/constraints/axiStreamGate_ooc.xdc:6]
+Finished Parsing XDC File [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ip/shell_axiStreamGate_0_0/constraints/axiStreamGate_ooc.xdc] for cell 'inst'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+53 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:31 . Memory (MB): peak = 2157.207 ; gain = 1072.211 ; free physical = 16829 ; free virtual = 53775
+INFO: [Common 17-1381] The checkpoint '/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.runs/shell_axiStreamGate_0_0_synth_1/shell_axiStreamGate_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP /home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ip/shell_axiStreamGate_0_0/shell_axiStreamGate_0_0.xci
+INFO: [Coretcl 2-1174] Renamed 2 cell refs.
+INFO: [Common 17-1381] The checkpoint '/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.runs/shell_axiStreamGate_0_0_synth_1/shell_axiStreamGate_0_0.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.18 . Memory (MB): peak = 2181.219 ; gain = 0.000 ; free physical = 16804 ; free virtual = 53758
+INFO: [Common 17-206] Exiting Vivado at Mon Jul  3 18:03:28 2017...

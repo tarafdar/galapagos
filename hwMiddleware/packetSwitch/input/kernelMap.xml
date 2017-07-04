@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cluster>
+    <fpga>
+        <kernel> 1 </kernel>
+        <kernel> 2 </kernel>
+        <kernel> 3 </kernel>
+        <kernel> 9 </kernel>
+        <kernel> 10 </kernel>
+        <kernel> 11 </kernel>
+        <kernel> 13 </kernel>
+        <kernel> 14 </kernel>
+    </fpga>
+    <fpga>
+        <kernel> 4 </kernel>
+        <kernel> 5 </kernel>
+        <kernel> 6 </kernel>
+        <kernel> 7 </kernel>
+        <kernel> 8 </kernel>
+        <kernel> 12 </kernel>
+        <kernel> 15 </kernel>
+        <kernel> 16 </kernel>
+    </fpga>
+</cluster>

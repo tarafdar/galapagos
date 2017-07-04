@@ -1,0 +1,6 @@
+lappend pragmaStatus0 {pragma "INTERFACE" source "/home/tarafdar/thesis/gitStuff/hlsIP_8k5/../hlsSources/srcs/roundRobin.cpp" location "roundRobin" found 1 funcFound 1 applied 1 ambiguous 0 reason "null"}
+lappend pragmaStatus1 {pragma "INTERFACE" source "/home/tarafdar/thesis/gitStuff/hlsIP_8k5/../hlsSources/srcs/roundRobin.cpp" location "roundRobin" found 1 funcFound 1 applied 1 ambiguous 0 reason "null"}
+lappend pragmaStatus2 {pragma "INTERFACE" source "/home/tarafdar/thesis/gitStuff/hlsIP_8k5/../hlsSources/srcs/roundRobin.cpp" location "roundRobin" found 1 funcFound 1 applied 1 ambiguous 0 reason "null"}
+lappend pragmaStatus3 {pragma "INTERFACE" source "/home/tarafdar/thesis/gitStuff/hlsIP_8k5/../hlsSources/srcs/roundRobin.cpp" location "roundRobin" found 0 funcFound 0 applied 0 ambiguous 0 reason "Directive 'INTERFACE' cannot be applied: Variable 'num' is not declared in 'roundRobin'."}
+lappend pragmaStatus4 {pragma "INTERFACE" source "/home/tarafdar/thesis/gitStuff/hlsIP_8k5/../hlsSources/srcs/roundRobin.cpp" location "roundRobin" found 1 funcFound 1 applied 1 ambiguous 0 reason "null"}
+lappend pragmaStatus5 {pragma "INTERFACE" source "/home/tarafdar/thesis/gitStuff/hlsIP_8k5/../hlsSources/srcs/roundRobin.cpp" location "roundRobin" found 1 funcFound 1 applied 1 ambiguous 0 reason "null"}

@@ -1,0 +1,53 @@
+
+*** Running vivado
+    with args -log shell_tx_register_slice_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source shell_tx_register_slice_0_0.tcl
+
+
+****** Vivado v2016.4 (64-bit)
+  **** SW Build 1756540 on Mon Jan 23 19:11:19 MST 2017
+  **** IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source shell_tx_register_slice_0_0.tcl -notrace
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1216.426 ; gain = 285.957 ; free physical = 23829 ; free virtual = 58907
+INFO: [Synth 8-638] synthesizing module 'shell_tx_register_slice_0_0' [/home/tarafdar/thesis/gitStuff/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ip/shell_tx_register_slice_0_0/synth/shell_tx_register_slice_0_0.v:57]
+INFO: [Synth 8-638] synthesizing module 'axis_register_slice_v1_1_11_axis_register_slice' [/home/tarafdar/thesis/gitStuff/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/09aa/hdl/axis_register_slice_v1_1_vl_rfs.v:770]
+INFO: [Synth 8-638] synthesizing module 'axis_infrastructure_v1_1_0_util_axis2vector' [/home/tarafdar/thesis/gitStuff/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/fe67/hdl/axis_infrastructure_v1_1_vl_rfs.v:810]
+INFO: [Synth 8-256] done synthesizing module 'axis_infrastructure_v1_1_0_util_axis2vector' (1#1) [/home/tarafdar/thesis/gitStuff/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/fe67/hdl/axis_infrastructure_v1_1_vl_rfs.v:810]
+INFO: [Synth 8-638] synthesizing module 'axis_register_slice_v1_1_11_axisc_register_slice' [/home/tarafdar/thesis/gitStuff/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/09aa/hdl/axis_register_slice_v1_1_vl_rfs.v:62]
+INFO: [Synth 8-256] done synthesizing module 'axis_register_slice_v1_1_11_axisc_register_slice' (2#1) [/home/tarafdar/thesis/gitStuff/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/09aa/hdl/axis_register_slice_v1_1_vl_rfs.v:62]
+INFO: [Synth 8-638] synthesizing module 'axis_infrastructure_v1_1_0_util_vector2axis' [/home/tarafdar/thesis/gitStuff/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/fe67/hdl/axis_infrastructure_v1_1_vl_rfs.v:992]
+INFO: [Synth 8-256] done synthesizing module 'axis_infrastructure_v1_1_0_util_vector2axis' (3#1) [/home/tarafdar/thesis/gitStuff/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/fe67/hdl/axis_infrastructure_v1_1_vl_rfs.v:992]
+INFO: [Synth 8-256] done synthesizing module 'axis_register_slice_v1_1_11_axis_register_slice' (4#1) [/home/tarafdar/thesis/gitStuff/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/09aa/hdl/axis_register_slice_v1_1_vl_rfs.v:770]
+INFO: [Synth 8-256] done synthesizing module 'shell_tx_register_slice_0_0' (5#1) [/home/tarafdar/thesis/gitStuff/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ip/shell_tx_register_slice_0_0/synth/shell_tx_register_slice_0_0.v:57]
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1256.895 ; gain = 326.426 ; free physical = 23787 ; free virtual = 58865
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1256.895 ; gain = 326.426 ; free physical = 23787 ; free virtual = 58865
+INFO: [Device 21-403] Loading part xcku115-flva1517-2-e
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1911.746 ; gain = 0.000 ; free physical = 23403 ; free virtual = 58482
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1911.746 ; gain = 981.277 ; free physical = 23132 ; free virtual = 58211
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1911.746 ; gain = 981.277 ; free physical = 23132 ; free virtual = 58211
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1911.746 ; gain = 981.277 ; free physical = 23130 ; free virtual = 58210
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1911.746 ; gain = 981.277 ; free physical = 23119 ; free virtual = 58198
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1911.746 ; gain = 981.277 ; free physical = 23040 ; free virtual = 58119
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 2033.262 ; gain = 1102.793 ; free physical = 23253 ; free virtual = 58332
+Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 2042.277 ; gain = 1111.809 ; free physical = 23244 ; free virtual = 58323
+Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 2052.293 ; gain = 1121.824 ; free physical = 23234 ; free virtual = 58313
+Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 2052.293 ; gain = 1121.824 ; free physical = 23196 ; free virtual = 58275
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 2052.293 ; gain = 1121.824 ; free physical = 23196 ; free virtual = 58275
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 2052.293 ; gain = 1121.824 ; free physical = 23185 ; free virtual = 58264
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 2052.293 ; gain = 1121.824 ; free physical = 23185 ; free virtual = 58264
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 2052.293 ; gain = 1121.824 ; free physical = 23201 ; free virtual = 58280
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 2052.293 ; gain = 1121.824 ; free physical = 23201 ; free virtual = 58280
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT1 |     1|
+|2     |LUT3 |    73|
+|3     |LUT4 |     6|
+|4     |LUT5 |     1|
+|5     |FDRE |   151|
++------+-----+------+
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 2052.293 ; gain = 1121.824 ; free physical = 23201 ; free virtual = 58280
+synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:31 . Memory (MB): peak = 2153.754 ; gain = 1067.758 ; free physical = 22506 ; free virtual = 57595

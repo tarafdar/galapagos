@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cluster>
+    <kernel> kernelA
+        <num> 1 </num>
+        <rep> 1 </rep>
+        <interface>
+            <direction> in </direction>
+            <name> packetIn </name>
+        </interface>
+        <interface>
+            <direction> out </direction>
+            <name> packetOut </name>
+        </interface>
+    </kernel>
+    <kernel> kernelB
+        <num> 2 </num>
+        <rep> 1 </rep>
+        <interface>
+            <direction> in </direction>
+            <name> packetIn </name>
+        </interface>
+        <interface>
+            <direction> out </direction>
+            <name> packetOut </name>
+        </interface>
+    </kernel>
+    <kernel> kernelC
+        <num> 3 </num>
+        <rep> 1 </rep>
+        <interface>
+            <direction> in </direction>
+            <name> packetIn </name>
+        </interface>
+        <interface>
+            <direction> out </direction>
+            <name> packetOut </name>
+        </interface>
+    </kernel>
+</cluster>

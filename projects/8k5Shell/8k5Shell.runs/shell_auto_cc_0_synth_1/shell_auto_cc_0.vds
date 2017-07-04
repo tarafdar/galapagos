@@ -1,0 +1,72 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:19 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Sun Jul  2 17:29:09 2017
+# Process ID: 94624
+# Current directory: /home/tarafdar/thesis/gitStuff/projects/8k5Shell/8k5Shell.runs/shell_auto_cc_0_synth_1
+# Command line: vivado -log shell_auto_cc_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source shell_auto_cc_0.tcl
+# Log file: /home/tarafdar/thesis/gitStuff/projects/8k5Shell/8k5Shell.runs/shell_auto_cc_0_synth_1/shell_auto_cc_0.vds
+# Journal file: /home/tarafdar/thesis/gitStuff/projects/8k5Shell/8k5Shell.runs/shell_auto_cc_0_synth_1/vivado.jou
+#-----------------------------------------------------------
+source shell_auto_cc_0.tcl -notrace
+Starting RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1218.430 ; gain = 287.957 ; free physical = 19739 ; free virtual = 54902
+INFO: [Synth 8-638] synthesizing module 'shell_auto_cc_0' [/home/tarafdar/thesis/gitStuff/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ip/shell_auto_cc_0/synth/shell_auto_cc_0.v:58]
+INFO: [Synth 8-638] synthesizing module 'axi_clock_converter_v2_1_10_axi_clock_converter' [/home/tarafdar/thesis/gitStuff/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/8479/hdl/axi_clock_converter_v2_1_vl_rfs.v:642]
+INFO: [Synth 8-638] synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' [/home/tarafdar/thesis/gitStuff/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/7e3a/hdl/axi_infrastructure_v1_1_vl_rfs.v:60]
+INFO: [Synth 8-256] done synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' (1#1) [/home/tarafdar/thesis/gitStuff/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/7e3a/hdl/axi_infrastructure_v1_1_vl_rfs.v:60]
+INFO: [Synth 8-638] synthesizing module 'axi_clock_converter_v2_1_10_lite_async' [/home/tarafdar/thesis/gitStuff/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/8479/hdl/axi_clock_converter_v2_1_vl_rfs.v:514]
+INFO: [Synth 8-638] synthesizing module 'xpm_cdc_handshake' [/opt/Xilinx/Vivado/2016.4/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:352]
+INFO: [Synth 8-638] synthesizing module 'xpm_cdc_single' [/opt/Xilinx/Vivado/2016.4/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:99]
+INFO: [Synth 8-256] done synthesizing module 'xpm_cdc_single' (2#1) [/opt/Xilinx/Vivado/2016.4/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:99]
+INFO: [Synth 8-256] done synthesizing module 'xpm_cdc_handshake' (3#1) [/opt/Xilinx/Vivado/2016.4/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:352]
+INFO: [Synth 8-256] done synthesizing module 'axi_clock_converter_v2_1_10_lite_async' (4#1) [/home/tarafdar/thesis/gitStuff/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/8479/hdl/axi_clock_converter_v2_1_vl_rfs.v:514]
+INFO: [Synth 8-638] synthesizing module 'axi_clock_converter_v2_1_10_lite_async__parameterized0' [/home/tarafdar/thesis/gitStuff/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/8479/hdl/axi_clock_converter_v2_1_vl_rfs.v:514]
+INFO: [Synth 8-638] synthesizing module 'xpm_cdc_handshake__parameterized0' [/opt/Xilinx/Vivado/2016.4/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:352]
+INFO: [Synth 8-256] done synthesizing module 'xpm_cdc_handshake__parameterized0' (4#1) [/opt/Xilinx/Vivado/2016.4/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:352]
+INFO: [Synth 8-256] done synthesizing module 'axi_clock_converter_v2_1_10_lite_async__parameterized0' (4#1) [/home/tarafdar/thesis/gitStuff/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/8479/hdl/axi_clock_converter_v2_1_vl_rfs.v:514]
+INFO: [Synth 8-638] synthesizing module 'axi_clock_converter_v2_1_10_lite_async__parameterized1' [/home/tarafdar/thesis/gitStuff/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/8479/hdl/axi_clock_converter_v2_1_vl_rfs.v:514]
+INFO: [Synth 8-638] synthesizing module 'xpm_cdc_handshake__parameterized1' [/opt/Xilinx/Vivado/2016.4/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:352]
+INFO: [Synth 8-256] done synthesizing module 'xpm_cdc_handshake__parameterized1' (4#1) [/opt/Xilinx/Vivado/2016.4/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:352]
+INFO: [Synth 8-256] done synthesizing module 'axi_clock_converter_v2_1_10_lite_async__parameterized1' (4#1) [/home/tarafdar/thesis/gitStuff/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/8479/hdl/axi_clock_converter_v2_1_vl_rfs.v:514]
+INFO: [Synth 8-638] synthesizing module 'axi_clock_converter_v2_1_10_lite_async__parameterized2' [/home/tarafdar/thesis/gitStuff/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/8479/hdl/axi_clock_converter_v2_1_vl_rfs.v:514]
+INFO: [Synth 8-638] synthesizing module 'xpm_cdc_handshake__parameterized2' [/opt/Xilinx/Vivado/2016.4/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:352]
+INFO: [Synth 8-256] done synthesizing module 'xpm_cdc_handshake__parameterized2' (4#1) [/opt/Xilinx/Vivado/2016.4/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:352]
+INFO: [Synth 8-256] done synthesizing module 'axi_clock_converter_v2_1_10_lite_async__parameterized2' (4#1) [/home/tarafdar/thesis/gitStuff/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/8479/hdl/axi_clock_converter_v2_1_vl_rfs.v:514]
+INFO: [Synth 8-638] synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' [/home/tarafdar/thesis/gitStuff/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/7e3a/hdl/axi_infrastructure_v1_1_vl_rfs.v:474]
+INFO: [Synth 8-256] done synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' (5#1) [/home/tarafdar/thesis/gitStuff/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/7e3a/hdl/axi_infrastructure_v1_1_vl_rfs.v:474]
+INFO: [Synth 8-256] done synthesizing module 'axi_clock_converter_v2_1_10_axi_clock_converter' (6#1) [/home/tarafdar/thesis/gitStuff/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/8479/hdl/axi_clock_converter_v2_1_vl_rfs.v:642]
+INFO: [Synth 8-256] done synthesizing module 'shell_auto_cc_0' (7#1) [/home/tarafdar/thesis/gitStuff/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ip/shell_auto_cc_0/synth/shell_auto_cc_0.v:58]
+Finished RTL Elaboration : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1339.898 ; gain = 409.426 ; free physical = 19377 ; free virtual = 54551
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1339.898 ; gain = 409.426 ; free physical = 19377 ; free virtual = 54551
+INFO: [Device 21-403] Loading part xcku115-flva1517-2-e
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1919.859 ; gain = 0.000 ; free physical = 18903 ; free virtual = 54008
+Finished Constraint Validation : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 1919.859 ; gain = 989.387 ; free physical = 18900 ; free virtual = 54003
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 1919.859 ; gain = 989.387 ; free physical = 18900 ; free virtual = 54003
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 1919.859 ; gain = 989.387 ; free physical = 18900 ; free virtual = 54003
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 1919.859 ; gain = 989.387 ; free physical = 18900 ; free virtual = 54002
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:39 ; elapsed = 00:00:43 . Memory (MB): peak = 1919.859 ; gain = 989.387 ; free physical = 18886 ; free virtual = 53988
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:51 ; elapsed = 00:00:56 . Memory (MB): peak = 2039.375 ; gain = 1108.902 ; free physical = 18295 ; free virtual = 53392
+Finished Timing Optimization : Time (s): cpu = 00:00:51 ; elapsed = 00:00:56 . Memory (MB): peak = 2039.375 ; gain = 1108.902 ; free physical = 18293 ; free virtual = 53390
+Finished Technology Mapping : Time (s): cpu = 00:00:51 ; elapsed = 00:00:56 . Memory (MB): peak = 2059.406 ; gain = 1128.934 ; free physical = 18267 ; free virtual = 53363
+Finished IO Insertion : Time (s): cpu = 00:00:52 ; elapsed = 00:00:56 . Memory (MB): peak = 2059.406 ; gain = 1128.934 ; free physical = 18249 ; free virtual = 53346
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:52 ; elapsed = 00:00:56 . Memory (MB): peak = 2059.406 ; gain = 1128.934 ; free physical = 18248 ; free virtual = 53345
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:52 ; elapsed = 00:00:56 . Memory (MB): peak = 2059.406 ; gain = 1128.934 ; free physical = 18244 ; free virtual = 53341
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:52 ; elapsed = 00:00:56 . Memory (MB): peak = 2059.406 ; gain = 1128.934 ; free physical = 18244 ; free virtual = 53341
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:52 ; elapsed = 00:00:56 . Memory (MB): peak = 2059.406 ; gain = 1128.934 ; free physical = 18244 ; free virtual = 53341
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:52 ; elapsed = 00:00:56 . Memory (MB): peak = 2059.406 ; gain = 1128.934 ; free physical = 18244 ; free virtual = 53341
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT1 |     7|
+|2     |LUT2 |     5|
+|3     |LUT3 |    15|
+|4     |LUT4 |    15|
+|5     |LUT5 |    15|
+|6     |LUT6 |     5|
+|7     |FDRE |   246|
++------+-----+------+
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:52 ; elapsed = 00:00:56 . Memory (MB): peak = 2059.406 ; gain = 1128.934 ; free physical = 18244 ; free virtual = 53341
+synth_design: Time (s): cpu = 00:00:52 ; elapsed = 00:00:56 . Memory (MB): peak = 2288.340 ; gain = 1201.340 ; free physical = 18010 ; free virtual = 53107

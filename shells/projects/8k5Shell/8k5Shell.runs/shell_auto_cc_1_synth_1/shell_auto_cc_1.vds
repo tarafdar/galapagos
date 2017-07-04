@@ -1,0 +1,72 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:19 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Mon Jul  3 18:16:26 2017
+# Process ID: 61413
+# Current directory: /home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.runs/shell_auto_cc_1_synth_1
+# Command line: vivado -log shell_auto_cc_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source shell_auto_cc_1.tcl
+# Log file: /home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.runs/shell_auto_cc_1_synth_1/shell_auto_cc_1.vds
+# Journal file: /home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.runs/shell_auto_cc_1_synth_1/vivado.jou
+#-----------------------------------------------------------
+source shell_auto_cc_1.tcl -notrace
+Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1219.434 ; gain = 288.957 ; free physical = 18259 ; free virtual = 55464
+INFO: [Synth 8-638] synthesizing module 'shell_auto_cc_1' [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ip/shell_auto_cc_1/synth/shell_auto_cc_1.v:58]
+INFO: [Synth 8-638] synthesizing module 'axi_clock_converter_v2_1_10_axi_clock_converter' [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/8479/hdl/axi_clock_converter_v2_1_vl_rfs.v:642]
+INFO: [Synth 8-256] done synthesizing module 'axi_clock_converter_v2_1_10_axi_clock_converter' (20#1) [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/8479/hdl/axi_clock_converter_v2_1_vl_rfs.v:642]
+INFO: [Synth 8-256] done synthesizing module 'shell_auto_cc_1' (21#1) [/home/tarafdar/thesis/MIXcoatl/shells/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ip/shell_auto_cc_1/synth/shell_auto_cc_1.v:58]
+Finished RTL Elaboration : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1344.902 ; gain = 414.426 ; free physical = 19358 ; free virtual = 56564
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1344.902 ; gain = 414.426 ; free physical = 19382 ; free virtual = 56588
+INFO: [Device 21-403] Loading part xcku115-flva1517-2-e
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.09 . Memory (MB): peak = 1934.395 ; gain = 0.000 ; free physical = 19784 ; free virtual = 56989
+Finished Constraint Validation : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 1934.395 ; gain = 1003.918 ; free physical = 19586 ; free virtual = 56792
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 1934.395 ; gain = 1003.918 ; free physical = 19586 ; free virtual = 56792
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 1934.395 ; gain = 1003.918 ; free physical = 19585 ; free virtual = 56792
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1934.395 ; gain = 1003.918 ; free physical = 19542 ; free virtual = 56748
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1934.395 ; gain = 1003.918 ; free physical = 19308 ; free virtual = 56514
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping  Report (see note below)
++-----------------------+-----------------------------------------------------------------------------------------------------------+----------------+----------------------+------------+
+|Module Name            | RTL Object                                                                                                | Inference      | Size (Depth x Width) | Primitives | 
++-----------------------+-----------------------------------------------------------------------------------------------------------+----------------+----------------------+------------+
+|fifo_generator_v13_1_3 | inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg | User Attribute | 16 x 289             |            | 
+|fifo_generator_v13_1_3 | inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwrch2.axi_wrch/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg | User Attribute | 16 x 7               |            | 
+|fifo_generator_v13_1_3 | inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg  | User Attribute | 16 x 98              |            | 
+|fifo_generator_v13_1_3 | inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg  | User Attribute | 16 x 264             |            | 
+|fifo_generator_v13_1_3 | inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.mem/gdm.dm_gen.dm/RAM_reg | User Attribute | 16 x 98              |            | 
++-----------------------+-----------------------------------------------------------------------------------------------------------+----------------+----------------------+------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 2048.910 ; gain = 1118.434 ; free physical = 18573 ; free virtual = 55779
+Finished Timing Optimization : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 2051.910 ; gain = 1121.434 ; free physical = 18575 ; free virtual = 55782
+Finished Technology Mapping : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 2078.191 ; gain = 1147.715 ; free physical = 18551 ; free virtual = 55758
+Finished IO Insertion : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 2078.191 ; gain = 1147.715 ; free physical = 18544 ; free virtual = 55750
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 2078.191 ; gain = 1147.715 ; free physical = 18544 ; free virtual = 55750
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 2078.191 ; gain = 1147.715 ; free physical = 18543 ; free virtual = 55749
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 2078.191 ; gain = 1147.715 ; free physical = 18543 ; free virtual = 55749
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 2078.191 ; gain = 1147.715 ; free physical = 18543 ; free virtual = 55749
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 2078.191 ; gain = 1147.715 ; free physical = 18543 ; free virtual = 55749
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |LUT1     |    21|
+|2     |LUT2     |    66|
+|3     |LUT3     |    25|
+|4     |LUT4     |    65|
+|5     |LUT5     |     5|
+|6     |LUT6     |    25|
+|7     |RAM32M16 |    55|
+|8     |FDCE     |   300|
+|9     |FDPE     |   135|
+|10    |FDRE     |  1542|
++------+---------+------+
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 2078.191 ; gain = 1147.715 ; free physical = 18543 ; free virtual = 55749
+synth_design: Time (s): cpu = 00:00:40 ; elapsed = 00:00:41 . Memory (MB): peak = 2376.926 ; gain = 1289.922 ; free physical = 18335 ; free virtual = 55541

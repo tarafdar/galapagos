@@ -1,0 +1,16 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:19 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Fri Jun 30 19:07:17 2017
+# Process ID: 134114
+# Current directory: /home/tarafdar/thesis/gitStuff/hlsIP_8k5/reverseEndian64/solution1/impl/ip
+# Command line: vivado -notrace -mode batch -source run_ippack.tcl
+# Log file: /home/tarafdar/thesis/gitStuff/hlsIP_8k5/reverseEndian64/solution1/impl/ip/vivado.log
+# Journal file: /home/tarafdar/thesis/gitStuff/hlsIP_8k5/reverseEndian64/solution1/impl/ip/vivado.jou
+#-----------------------------------------------------------
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2016.4/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Fri Jun 30 19:07:24 2017...

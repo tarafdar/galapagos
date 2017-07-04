@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="shell_util_vector_logic_2_0_synth_1" LaunchPart="xcku115-flva1517-2-e" LaunchTime="1499119247">
+  <File Type="VDS-TIMING-PB" Name="shell_util_vector_logic_2_0_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="shell_util_vector_logic_2_0_timing_summary_synth.rpt"/>
+  <File Type="RDS-RDS" Name="shell_util_vector_logic_2_0.vds"/>
+  <File Type="PA-TCL" Name="shell_util_vector_logic_2_0.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="shell_util_vector_logic_2_0_drc_synth.rpt"/>
+  <File Type="RDS-UTIL" Name="shell_util_vector_logic_2_0_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="shell_util_vector_logic_2_0_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="shell_util_vector_logic_2_0.dcp"/>
+  <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/shell_util_vector_logic_2_0">
+    <File Path="$PSRCDIR/sources_1/bd/srcs/ip/shell_util_vector_logic_2_0/shell_util_vector_logic_2_0.xci">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../8k5_shell/srcs/ip/shell_util_vector_logic_2_0/shell_util_vector_logic_2_0.xci"/>
+        <Attr Name="ImportTime" Val="0"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="shell_util_vector_logic_2_0"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="BlockSrcs" RelSrcDir="$PSRCDIR/shell_util_vector_logic_2_0">
+    <File Path="$PSRCDIR/sources_1/bd/srcs/ip/shell_util_vector_logic_2_0/shell_util_vector_logic_2_0.xci">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../8k5_shell/srcs/ip/shell_util_vector_logic_2_0/shell_util_vector_logic_2_0.xci"/>
+        <Attr Name="ImportTime" Val="0"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="shell_util_vector_logic_2_0"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:19 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Mon Jul  3 19:26:37 2017
+# Process ID: 111581
+# Current directory: /home/tarafdar/thesis/MIXcoatl/projects/bro/0
+# Command line: vivado 0.xpr
+# Log file: /home/tarafdar/thesis/MIXcoatl/projects/bro/0/vivado.log
+# Journal file: /home/tarafdar/thesis/MIXcoatl/projects/bro/0/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project 0.xpr
+open_bd_design {/home/tarafdar/thesis/MIXcoatl/projects/bro/0/0.srcs/sources_1/bd/pr/pr.bd}

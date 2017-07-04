@@ -1,0 +1,71 @@
+
+*** Running vivado
+    with args -log bd_01e2_xpcs_0_gt.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source bd_01e2_xpcs_0_gt.tcl
+
+
+****** Vivado v2016.4 (64-bit)
+  **** SW Build 1756540 on Mon Jan 23 19:11:19 MST 2017
+  **** IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source bd_01e2_xpcs_0_gt.tcl -notrace
+Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1232.422 ; gain = 301.957 ; free physical = 24363 ; free virtual = 59393
+INFO: [Synth 8-638] synthesizing module 'bd_01e2_xpcs_0_gt' [/home/tarafdar/thesis/gitStuff/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/ip_0/synth/bd_01e2_xpcs_0_gt.v:62]
+INFO: [Synth 8-638] synthesizing module 'bd_01e2_xpcs_0_gt_gtwizard_top' [/home/tarafdar/thesis/gitStuff/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/ip_0/synth/bd_01e2_xpcs_0_gt_gtwizard_top.v:170]
+INFO: [Synth 8-638] synthesizing module 'bd_01e2_xpcs_0_gt_gtwizard_gthe3' [/home/tarafdar/thesis/gitStuff/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/ip_0/synth/bd_01e2_xpcs_0_gt_gtwizard_gthe3.v:138]
+INFO: [Synth 8-638] synthesizing module 'bd_01e2_xpcs_0_gt_gthe3_channel_wrapper' [/home/tarafdar/thesis/gitStuff/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/ip_0/synth/bd_01e2_xpcs_0_gt_gthe3_channel_wrapper.v:56]
+INFO: [Synth 8-638] synthesizing module 'gtwizard_ultrascale_v1_6_5_gthe3_channel' [/home/tarafdar/thesis/gitStuff/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/ip_0/synth/gtwizard_ultrascale_v1_6_gthe3_channel.v:55]
+INFO: [Synth 8-638] synthesizing module 'GTHE3_CHANNEL' [/opt/Xilinx/Vivado/2016.4/scripts/rt/data/unisim_comp.v:5775]
+INFO: [Synth 8-256] done synthesizing module 'GTHE3_CHANNEL' (1#1) [/opt/Xilinx/Vivado/2016.4/scripts/rt/data/unisim_comp.v:5775]
+INFO: [Synth 8-256] done synthesizing module 'gtwizard_ultrascale_v1_6_5_gthe3_channel' (2#1) [/home/tarafdar/thesis/gitStuff/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/ip_0/synth/gtwizard_ultrascale_v1_6_gthe3_channel.v:55]
+INFO: [Synth 8-256] done synthesizing module 'bd_01e2_xpcs_0_gt_gthe3_channel_wrapper' (3#1) [/home/tarafdar/thesis/gitStuff/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/ip_0/synth/bd_01e2_xpcs_0_gt_gthe3_channel_wrapper.v:56]
+INFO: [Synth 8-638] synthesizing module 'gtwizard_ultrascale_v1_6_5_bit_synchronizer' [/home/tarafdar/thesis/gitStuff/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/5fe7/hdl/gtwizard_ultrascale_v1_6_bit_sync.v:55]
+INFO: [Synth 8-256] done synthesizing module 'gtwizard_ultrascale_v1_6_5_bit_synchronizer' (4#1) [/home/tarafdar/thesis/gitStuff/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/5fe7/hdl/gtwizard_ultrascale_v1_6_bit_sync.v:55]
+INFO: [Synth 8-638] synthesizing module 'gtwizard_ultrascale_v1_6_5_gtwiz_reset' [/home/tarafdar/thesis/gitStuff/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/5fe7/hdl/gtwizard_ultrascale_v1_6_gtwiz_reset.v:55]
+INFO: [Synth 8-638] synthesizing module 'gtwizard_ultrascale_v1_6_5_reset_synchronizer' [/home/tarafdar/thesis/gitStuff/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/5fe7/hdl/gtwizard_ultrascale_v1_6_reset_sync.v:55]
+INFO: [Synth 8-256] done synthesizing module 'gtwizard_ultrascale_v1_6_5_reset_synchronizer' (5#1) [/home/tarafdar/thesis/gitStuff/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/5fe7/hdl/gtwizard_ultrascale_v1_6_reset_sync.v:55]
+INFO: [Synth 8-638] synthesizing module 'gtwizard_ultrascale_v1_6_5_reset_inv_synchronizer' [/home/tarafdar/thesis/gitStuff/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/5fe7/hdl/gtwizard_ultrascale_v1_6_reset_inv_sync.v:55]
+INFO: [Synth 8-256] done synthesizing module 'gtwizard_ultrascale_v1_6_5_reset_inv_synchronizer' (6#1) [/home/tarafdar/thesis/gitStuff/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/5fe7/hdl/gtwizard_ultrascale_v1_6_reset_inv_sync.v:55]
+INFO: [Synth 8-256] done synthesizing module 'gtwizard_ultrascale_v1_6_5_gtwiz_reset' (7#1) [/home/tarafdar/thesis/gitStuff/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ipshared/5fe7/hdl/gtwizard_ultrascale_v1_6_gtwiz_reset.v:55]
+INFO: [Synth 8-256] done synthesizing module 'bd_01e2_xpcs_0_gt_gtwizard_gthe3' (8#1) [/home/tarafdar/thesis/gitStuff/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/ip_0/synth/bd_01e2_xpcs_0_gt_gtwizard_gthe3.v:138]
+INFO: [Synth 8-256] done synthesizing module 'bd_01e2_xpcs_0_gt_gtwizard_top' (9#1) [/home/tarafdar/thesis/gitStuff/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/ip_0/synth/bd_01e2_xpcs_0_gt_gtwizard_top.v:170]
+INFO: [Synth 8-256] done synthesizing module 'bd_01e2_xpcs_0_gt' (10#1) [/home/tarafdar/thesis/gitStuff/projects/8k5Shell/8k5Shell.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/ip_0/synth/bd_01e2_xpcs_0_gt.v:62]
+Finished RTL Elaboration : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1765.016 ; gain = 834.551 ; free physical = 21560 ; free virtual = 56593
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1765.016 ; gain = 834.551 ; free physical = 21559 ; free virtual = 56592
+INFO: [Device 21-403] Loading part xcku115-flva1517-2-e
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 1960.602 ; gain = 0.000 ; free physical = 24683 ; free virtual = 59717
+Finished Constraint Validation : Time (s): cpu = 00:00:46 ; elapsed = 00:00:46 . Memory (MB): peak = 1960.602 ; gain = 1030.137 ; free physical = 24412 ; free virtual = 59446
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:46 ; elapsed = 00:00:46 . Memory (MB): peak = 1960.602 ; gain = 1030.137 ; free physical = 24412 ; free virtual = 59446
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:46 ; elapsed = 00:00:46 . Memory (MB): peak = 1960.602 ; gain = 1030.137 ; free physical = 24409 ; free virtual = 59443
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:46 ; elapsed = 00:00:47 . Memory (MB): peak = 1960.602 ; gain = 1030.137 ; free physical = 24403 ; free virtual = 59437
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:47 ; elapsed = 00:00:48 . Memory (MB): peak = 1960.602 ; gain = 1030.137 ; free physical = 24393 ; free virtual = 59427
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:55 ; elapsed = 00:00:56 . Memory (MB): peak = 2071.117 ; gain = 1140.652 ; free physical = 23272 ; free virtual = 58307
+Finished Timing Optimization : Time (s): cpu = 00:00:55 ; elapsed = 00:00:56 . Memory (MB): peak = 2072.117 ; gain = 1141.652 ; free physical = 23263 ; free virtual = 58298
+Finished Technology Mapping : Time (s): cpu = 00:00:55 ; elapsed = 00:00:56 . Memory (MB): peak = 2092.148 ; gain = 1161.684 ; free physical = 23229 ; free virtual = 58264
+Finished IO Insertion : Time (s): cpu = 00:00:56 ; elapsed = 00:00:56 . Memory (MB): peak = 2092.148 ; gain = 1161.684 ; free physical = 23127 ; free virtual = 58162
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:56 ; elapsed = 00:00:56 . Memory (MB): peak = 2092.148 ; gain = 1161.684 ; free physical = 23125 ; free virtual = 58160
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:56 ; elapsed = 00:00:56 . Memory (MB): peak = 2092.148 ; gain = 1161.684 ; free physical = 23095 ; free virtual = 58129
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:56 ; elapsed = 00:00:56 . Memory (MB): peak = 2092.148 ; gain = 1161.684 ; free physical = 23095 ; free virtual = 58129
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:56 ; elapsed = 00:00:56 . Memory (MB): peak = 2092.148 ; gain = 1161.684 ; free physical = 23087 ; free virtual = 58121
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:56 ; elapsed = 00:00:56 . Memory (MB): peak = 2092.148 ; gain = 1161.684 ; free physical = 23086 ; free virtual = 58121
+
+Report Cell Usage: 
++------+--------------+------+
+|      |Cell          |Count |
++------+--------------+------+
+|1     |CARRY8        |     4|
+|2     |GTHE3_CHANNEL |     1|
+|3     |LUT1          |    34|
+|4     |LUT2          |    15|
+|5     |LUT3          |    24|
+|6     |LUT4          |    14|
+|7     |LUT5          |    18|
+|8     |LUT6          |    29|
+|9     |MUXF7         |     2|
+|10    |FDCE          |    10|
+|11    |FDPE          |    40|
+|12    |FDRE          |   142|
+|13    |FDSE          |     6|
++------+--------------+------+
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:56 ; elapsed = 00:00:56 . Memory (MB): peak = 2092.148 ; gain = 1161.684 ; free physical = 23086 ; free virtual = 58120
+synth_design: Time (s): cpu = 00:00:56 ; elapsed = 00:00:57 . Memory (MB): peak = 2193.609 ; gain = 1102.617 ; free physical = 22471 ; free virtual = 57505
