@@ -3,7 +3,7 @@
 ## Please DO NOT edit it.
 ## Copyright (C) 1986-2017 Xilinx, Inc. All Rights Reserved.
 ############################################################
-cd ../hlsIP_8k5
+cd hlsIP_8k5
 
 
 open_project heartBeat 
