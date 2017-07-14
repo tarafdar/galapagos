@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2016.3 (64-bit)
+# SW Build 1682563 on Mon Oct 10 19:07:26 MDT 2016
+# IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
+# Start of session at: Sat Apr  1 17:26:48 2017
+# Process ID: 27154
+# Current directory: /home/nariman/Desktop/HLS_Project_tests/smartCam_ip_package/test0/project_1/project_1.runs/impl_1
+# Command line: vivado -log SmartCamCtl_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source SmartCamCtl_wrapper.tcl -notrace
+# Log file: /home/nariman/Desktop/HLS_Project_tests/smartCam_ip_package/test0/project_1/project_1.runs/impl_1/SmartCamCtl_wrapper.vdi
+# Journal file: /home/nariman/Desktop/HLS_Project_tests/smartCam_ip_package/test0/project_1/project_1.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source SmartCamCtl_wrapper.tcl -notrace

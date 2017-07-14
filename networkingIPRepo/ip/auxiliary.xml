@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="udpAppMux" xd:componentRef="udpAppMux" xd:initiationInterval="1" xd:clockPeriod="6.660000" xd:sequential="true" xd:hostMachine="64" xd:reset="all">
+  <xd:arg xd:name="rxDataIn.data" xd:originalName="rxDataIn" xd:direction="in" xd:interfaceRef="rxDataIn" xd:busTypeRef="axis" xd:dataWidth="64"/>
+  <xd:arg xd:name="rxDataIn.keep" xd:originalName="rxDataIn" xd:direction="in" xd:interfaceRef="rxDataIn" xd:busTypeRef="axis" xd:dataWidth="8"/>
+  <xd:arg xd:name="rxDataIn.last" xd:originalName="rxDataIn" xd:direction="in" xd:interfaceRef="rxDataIn" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="rxMetadataIn.sourceSocket.port" xd:originalName="rxMetadataIn" xd:direction="in" xd:interfaceRef="rxMetadataIn" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="15:0" xd:dataWidth="16"/>
+  <xd:arg xd:name="rxMetadataIn.sourceSocket.addr" xd:originalName="rxMetadataIn" xd:direction="in" xd:interfaceRef="rxMetadataIn" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="47:16" xd:dataWidth="32"/>
+  <xd:arg xd:name="rxMetadataIn.destinationSocket.port" xd:originalName="rxMetadataIn" xd:direction="in" xd:interfaceRef="rxMetadataIn" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="63:48" xd:dataWidth="16"/>
+  <xd:arg xd:name="rxMetadataIn.destinationSocket.addr" xd:originalName="rxMetadataIn" xd:direction="in" xd:interfaceRef="rxMetadataIn" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="95:64" xd:dataWidth="32"/>
+  <xd:arg xd:name="rxDataOutDhcp.data" xd:originalName="rxDataOutDhcp" xd:direction="out" xd:interfaceRef="rxDataOutDhcp" xd:busTypeRef="axis" xd:dataWidth="64"/>
+  <xd:arg xd:name="rxDataOutDhcp.keep" xd:originalName="rxDataOutDhcp" xd:direction="out" xd:interfaceRef="rxDataOutDhcp" xd:busTypeRef="axis" xd:dataWidth="8"/>
+  <xd:arg xd:name="rxDataOutDhcp.last" xd:originalName="rxDataOutDhcp" xd:direction="out" xd:interfaceRef="rxDataOutDhcp" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="rxMetadataOutDhcp.sourceSocket.port" xd:originalName="rxMetadataOutDhcp" xd:direction="out" xd:interfaceRef="rxMetadataOutDhcp" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="15:0" xd:dataWidth="16"/>
+  <xd:arg xd:name="rxMetadataOutDhcp.sourceSocket.addr" xd:originalName="rxMetadataOutDhcp" xd:direction="out" xd:interfaceRef="rxMetadataOutDhcp" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="47:16" xd:dataWidth="32"/>
+  <xd:arg xd:name="rxMetadataOutDhcp.destinationSocket.port" xd:originalName="rxMetadataOutDhcp" xd:direction="out" xd:interfaceRef="rxMetadataOutDhcp" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="63:48" xd:dataWidth="16"/>
+  <xd:arg xd:name="rxMetadataOutDhcp.destinationSocket.addr" xd:originalName="rxMetadataOutDhcp" xd:direction="out" xd:interfaceRef="rxMetadataOutDhcp" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="95:64" xd:dataWidth="32"/>
+  <xd:arg xd:name="rxDataOutApp.data" xd:originalName="rxDataOutApp" xd:direction="out" xd:interfaceRef="rxDataOutApp" xd:busTypeRef="axis" xd:dataWidth="64"/>
+  <xd:arg xd:name="rxDataOutApp.keep" xd:originalName="rxDataOutApp" xd:direction="out" xd:interfaceRef="rxDataOutApp" xd:busTypeRef="axis" xd:dataWidth="8"/>
+  <xd:arg xd:name="rxDataOutApp.last" xd:originalName="rxDataOutApp" xd:direction="out" xd:interfaceRef="rxDataOutApp" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="rxMetadataOutApp.sourceSocket.port" xd:originalName="rxMetadataOutApp" xd:direction="out" xd:interfaceRef="rxMetadataOutApp" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="15:0" xd:dataWidth="16"/>
+  <xd:arg xd:name="rxMetadataOutApp.sourceSocket.addr" xd:originalName="rxMetadataOutApp" xd:direction="out" xd:interfaceRef="rxMetadataOutApp" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="47:16" xd:dataWidth="32"/>
+  <xd:arg xd:name="rxMetadataOutApp.destinationSocket.port" xd:originalName="rxMetadataOutApp" xd:direction="out" xd:interfaceRef="rxMetadataOutApp" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="63:48" xd:dataWidth="16"/>
+  <xd:arg xd:name="rxMetadataOutApp.destinationSocket.addr" xd:originalName="rxMetadataOutApp" xd:direction="out" xd:interfaceRef="rxMetadataOutApp" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="95:64" xd:dataWidth="32"/>
+  <xd:arg xd:name="requestPortOpenOut" xd:originalName="requestPortOpenOut" xd:direction="out" xd:interfaceRef="requestPortOpenOut" xd:busTypeRef="axis" xd:dataWidth="16"/>
+  <xd:arg xd:name="portOpenReplyIn" xd:originalName="portOpenReplyIn" xd:direction="in" xd:interfaceRef="portOpenReplyIn" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="requestPortOpenInDhcp" xd:originalName="requestPortOpenInDhcp" xd:direction="in" xd:interfaceRef="requestPortOpenInDhcp" xd:busTypeRef="axis" xd:dataWidth="16"/>
+  <xd:arg xd:name="portOpenReplyOutDhcp" xd:originalName="portOpenReplyOutDhcp" xd:direction="out" xd:interfaceRef="portOpenReplyOutDhcp" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="requestPortOpenInApp" xd:originalName="requestPortOpenInApp" xd:direction="in" xd:interfaceRef="requestPortOpenInApp" xd:busTypeRef="axis" xd:dataWidth="16"/>
+  <xd:arg xd:name="portOpenReplyOutApp" xd:originalName="portOpenReplyOutApp" xd:direction="out" xd:interfaceRef="portOpenReplyOutApp" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="txDataInDhcp.data" xd:originalName="txDataInDhcp" xd:direction="in" xd:interfaceRef="txDataInDhcp" xd:busTypeRef="axis" xd:dataWidth="64"/>
+  <xd:arg xd:name="txDataInDhcp.keep" xd:originalName="txDataInDhcp" xd:direction="in" xd:interfaceRef="txDataInDhcp" xd:busTypeRef="axis" xd:dataWidth="8"/>
+  <xd:arg xd:name="txDataInDhcp.last" xd:originalName="txDataInDhcp" xd:direction="in" xd:interfaceRef="txDataInDhcp" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="txMetadataInDhcp.sourceSocket.port" xd:originalName="txMetadataInDhcp" xd:direction="in" xd:interfaceRef="txMetadataInDhcp" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="15:0" xd:dataWidth="16"/>
+  <xd:arg xd:name="txMetadataInDhcp.sourceSocket.addr" xd:originalName="txMetadataInDhcp" xd:direction="in" xd:interfaceRef="txMetadataInDhcp" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="47:16" xd:dataWidth="32"/>
+  <xd:arg xd:name="txMetadataInDhcp.destinationSocket.port" xd:originalName="txMetadataInDhcp" xd:direction="in" xd:interfaceRef="txMetadataInDhcp" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="63:48" xd:dataWidth="16"/>
+  <xd:arg xd:name="txMetadataInDhcp.destinationSocket.addr" xd:originalName="txMetadataInDhcp" xd:direction="in" xd:interfaceRef="txMetadataInDhcp" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="95:64" xd:dataWidth="32"/>
+  <xd:arg xd:name="txLengthInDhcp" xd:originalName="txLengthInDhcp" xd:direction="in" xd:interfaceRef="txLengthInDhcp" xd:busTypeRef="axis" xd:dataWidth="16"/>
+  <xd:arg xd:name="txDataInApp.data" xd:originalName="txDataInApp" xd:direction="in" xd:interfaceRef="txDataInApp" xd:busTypeRef="axis" xd:dataWidth="64"/>
+  <xd:arg xd:name="txDataInApp.keep" xd:originalName="txDataInApp" xd:direction="in" xd:interfaceRef="txDataInApp" xd:busTypeRef="axis" xd:dataWidth="8"/>
+  <xd:arg xd:name="txDataInApp.last" xd:originalName="txDataInApp" xd:direction="in" xd:interfaceRef="txDataInApp" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="txMetadataInApp.sourceSocket.port" xd:originalName="txMetadataInApp" xd:direction="in" xd:interfaceRef="txMetadataInApp" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="15:0" xd:dataWidth="16"/>
+  <xd:arg xd:name="txMetadataInApp.sourceSocket.addr" xd:originalName="txMetadataInApp" xd:direction="in" xd:interfaceRef="txMetadataInApp" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="47:16" xd:dataWidth="32"/>
+  <xd:arg xd:name="txMetadataInApp.destinationSocket.port" xd:originalName="txMetadataInApp" xd:direction="in" xd:interfaceRef="txMetadataInApp" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="63:48" xd:dataWidth="16"/>
+  <xd:arg xd:name="txMetadataInApp.destinationSocket.addr" xd:originalName="txMetadataInApp" xd:direction="in" xd:interfaceRef="txMetadataInApp" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="95:64" xd:dataWidth="32"/>
+  <xd:arg xd:name="txLengthInApp" xd:originalName="txLengthInApp" xd:direction="in" xd:interfaceRef="txLengthInApp" xd:busTypeRef="axis" xd:dataWidth="16"/>
+  <xd:arg xd:name="txDataOut.data" xd:originalName="txDataOut" xd:direction="out" xd:interfaceRef="txDataOut" xd:busTypeRef="axis" xd:dataWidth="64"/>
+  <xd:arg xd:name="txDataOut.keep" xd:originalName="txDataOut" xd:direction="out" xd:interfaceRef="txDataOut" xd:busTypeRef="axis" xd:dataWidth="8"/>
+  <xd:arg xd:name="txDataOut.last" xd:originalName="txDataOut" xd:direction="out" xd:interfaceRef="txDataOut" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="txMetadataOut.sourceSocket.port" xd:originalName="txMetadataOut" xd:direction="out" xd:interfaceRef="txMetadataOut" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="15:0" xd:dataWidth="16"/>
+  <xd:arg xd:name="txMetadataOut.sourceSocket.addr" xd:originalName="txMetadataOut" xd:direction="out" xd:interfaceRef="txMetadataOut" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="47:16" xd:dataWidth="32"/>
+  <xd:arg xd:name="txMetadataOut.destinationSocket.port" xd:originalName="txMetadataOut" xd:direction="out" xd:interfaceRef="txMetadataOut" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="63:48" xd:dataWidth="16"/>
+  <xd:arg xd:name="txMetadataOut.destinationSocket.addr" xd:originalName="txMetadataOut" xd:direction="out" xd:interfaceRef="txMetadataOut" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="95:64" xd:dataWidth="32"/>
+  <xd:arg xd:name="txLengthOut" xd:originalName="txLengthOut" xd:direction="out" xd:interfaceRef="txLengthOut" xd:busTypeRef="axis" xd:dataWidth="16"/>
+  <xd:latencyEstimates xd:best-case="0" xd:worst-case="0" xd:average-case="0"/>
+  <xd:resourceEstimates xd:LUT="228" xd:FF="20" xd:BRAM="0" xd:DSP="0"/>
+</xd:acceleratorMap>

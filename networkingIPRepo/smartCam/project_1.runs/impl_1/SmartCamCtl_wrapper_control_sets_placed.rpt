@@ -1,0 +1,96 @@
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.3 (lin64) Build 1682563 Mon Oct 10 19:07:26 MDT 2016
+| Date         : Sat Apr  1 17:27:52 2017
+| Host         : nariman running 64-bit Ubuntu 16.04.1 LTS
+| Command      : report_control_sets -verbose -file SmartCamCtl_wrapper_control_sets_placed.rpt
+| Design       : SmartCamCtl_wrapper
+| Device       : xcku115
+------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    28 |
+| Unused register locations in slices containing registers |    33 |
++----------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             676 |          108 |
+| No           | No                    | Yes                    |               8 |            4 |
+| No           | Yes                   | No                     |              61 |           22 |
+| Yes          | No                    | No                     |             145 |           19 |
+| Yes          | No                    | Yes                    |             217 |           34 |
+| Yes          | Yes                   | No                     |             672 |          161 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++----------------------------------------------------+-------------------------------------------------------------------------+----------------------------------------------------------------------+------------------+----------------+
+|                    Clock Signal                    |                              Enable Signal                              |                           Set/Reset Signal                           | Slice Load Count | Bel Load Count |
++----------------------------------------------------+-------------------------------------------------------------------------+----------------------------------------------------------------------+------------------+----------------+
+|  SmartCamCtl_inst/clk_IBUF_BUFG                    |                                                                         | SmartCamCtl_inst/uut/SmartCamUpdate/InitEnb_reg_P                    |                1 |              1 |
+|  SmartCamCtl_inst/clk_IBUF_BUFG                    |                                                                         | SmartCamCtl_inst/uut/SmartCamUpdate/InitEnb_reg_C_0                  |                1 |              1 |
+|  SmartCamCtl_inst/uut/SmartCamUpdate/InitEnb_reg_P |                                                                         | SmartCamCtl_inst/uut/SmartCamUpdate/InitEnb_reg_C_0                  |                1 |              1 |
+|  SmartCamCtl_inst/clk_IBUF_BUFG                    |                                                                         | SmartCamCtl_inst/lup_req_ready_OBUF                                  |                2 |              4 |
+|  SmartCamCtl_inst/clk_IBUF_BUFG                    | SmartCamCtl_inst/uut/SmartCamUpdate/FSM_sequential_UpdateFSM[3]_i_1_n_0 | aresetn_IBUF_inst/O                                                  |                2 |              4 |
+|  SmartCamCtl_inst/clk_IBUF_BUFG                    | SmartCamCtl_inst/uut/SmartCamUpdate/Count_G                             | aresetn_IBUF_inst/O                                                  |                2 |              6 |
+|  SmartCamCtl_inst/clk_IBUF_BUFG                    | SmartCamCtl_inst/uut/SmartCamUpdate/ctl_fsm_reg[0][0]                   | aresetn_IBUF_inst/O                                                  |                3 |              8 |
+|  SmartCamCtl_inst/clk_IBUF_BUFG                    | SmartCamCtl_inst/uut/SmartCamUpdate/CamPtrBck_WE                        |                                                                      |                1 |              8 |
+|  SmartCamCtl_inst/clk_IBUF_BUFG                    | SmartCamCtl_inst/uut/SmartCamUpdate/Used[9]_i_1_n_0                     | aresetn_IBUF_inst/O                                                  |                4 |             10 |
+|  SmartCamCtl_inst/clk_IBUF_BUFG                    | SmartCamCtl_inst/uut/SmartCamUpdate/AgingTimestamp[9]_i_2_n_0           | SmartCamCtl_inst/uut/SmartCamUpdate/AgingRequest1                    |                2 |             10 |
+|  SmartCamCtl_inst/clk_IBUF_BUFG                    | SmartCamCtl_inst/uut/SmartCamUpdate/AgingPtr                            | SmartCamCtl_inst/uut/SmartCamUpdate/AgingPtr[13]_i_1_n_0             |                2 |             12 |
+|  SmartCamCtl_inst/clk_IBUF_BUFG                    | SmartCamCtl_inst/uut/SmartCamUpdate/CamPtrFwd_WE                        |                                                                      |                1 |             12 |
+|  SmartCamCtl_inst/clk_IBUF_BUFG                    |                                                                         | SmartCamCtl_inst/uut/SmartCamUpdate/Data_r1_reg[110]                 |                9 |             14 |
+|  SmartCamCtl_inst/clk_IBUF_BUFG                    | SmartCamCtl_inst/uut/SmartCamUpdate/Addr_G                              | aresetn_IBUF_inst/O                                                  |               11 |             15 |
+|  SmartCamCtl_inst/clk_IBUF_BUFG                    | SmartCamCtl_inst/uut/SmartCamLookup/lup_rsp_dout_reg[1]                 |                                                                      |                6 |             15 |
+|  SmartCamCtl_inst/clk_IBUF_BUFG                    | SmartCamCtl_inst/uut/SmartCamLookup/E[0]                                |                                                                      |                3 |             15 |
+|  SmartCamCtl_inst/clk_IBUF_BUFG                    | SmartCamCtl_inst/uut/SmartCamUpdate/upd_rsp_dout_reg[1]                 | SmartCamCtl_inst/uut/SmartCamUpdate/upd_rsp_dout_reg[15]             |                3 |             15 |
+|  SmartCamCtl_inst/clk_IBUF_BUFG                    | SmartCamCtl_inst/uut/SmartCamUpdate/AgingTimer[0]_i_1_n_0               | SmartCamCtl_inst/uut/SmartCamUpdate/AgingRequest1                    |                4 |             32 |
+|  SmartCamCtl_inst/clk_IBUF_BUFG                    |                                                                         | aresetn_IBUF_inst/O                                                  |               12 |             48 |
+|  SmartCamCtl_inst/clk_IBUF_BUFG                    | SmartCamCtl_inst/uut/SmartCamUpdate/E[0]                                | aresetn_IBUF_inst/O                                                  |               10 |             97 |
+|  SmartCamCtl_inst/clk_IBUF_BUFG                    | SmartCamCtl_inst/uut/SmartCamUpdate/Entry[114]_i_1_n_0                  | aresetn_IBUF_inst/O                                                  |               32 |            112 |
+|  SmartCamCtl_inst/clk_IBUF_BUFG                    | SmartCamCtl_inst/uut/SmartCamUpdate/UpdateOp_reg[0]                     | aresetn_IBUF_inst/O                                                  |               21 |            112 |
+|  SmartCamCtl_inst/clk_IBUF_BUFG                    | SmartCamCtl_inst/uut/SmartCamUpdate/RndMod_3_inst/CamReg                | SmartCamCtl_inst/uut/SmartCamUpdate/RndMod_3_inst/CamReg_reg[3][114] |                8 |            114 |
+|  SmartCamCtl_inst/clk_IBUF_BUFG                    | SmartCamCtl_inst/uut/SmartCamUpdate/RndMod_3_inst/CamReg_reg[1][0]      | SmartCamCtl_inst/uut/SmartCamUpdate/RndMod_3_inst/CamReg_reg[1][114] |               31 |            114 |
+|  SmartCamCtl_inst/clk_IBUF_BUFG                    | SmartCamCtl_inst/uut/SmartCamUpdate/RndMod_3_inst/CamReg_reg[0][0]      | SmartCamCtl_inst/uut/SmartCamUpdate/RndMod_3_inst/CamReg_reg[0][114] |               37 |            114 |
+|  SmartCamCtl_inst/clk_IBUF_BUFG                    | SmartCamCtl_inst/uut/SmartCamUpdate/RndMod_3_inst/CamReg_reg[2][0]      | SmartCamCtl_inst/uut/SmartCamUpdate/RndMod_3_inst/CamReg_reg[2][114] |               23 |            114 |
+|  SmartCamCtl_inst/clk_IBUF_BUFG                    | SmartCamCtl_inst/uut/SmartCamUpdate/RamDataOut_reg[114][0]              |                                                                      |               10 |            115 |
+|  SmartCamCtl_inst/clk_IBUF_BUFG                    |                                                                         |                                                                      |              108 |            676 |
++----------------------------------------------------+-------------------------------------------------------------------------+----------------------------------------------------------------------+------------------+----------------+
+
+
++--------+-----------------------+
+| Fanout | Number of ControlSets |
++--------+-----------------------+
+| 1      |                     3 |
+| 4      |                     2 |
+| 6      |                     1 |
+| 8      |                     2 |
+| 10     |                     2 |
+| 12     |                     2 |
+| 14     |                     1 |
+| 15     |                     4 |
+| 16+    |                    11 |
++--------+-----------------------+
+
+

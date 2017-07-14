@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2016.3 (64-bit)
+# SW Build 1682563 on Mon Oct 10 19:07:26 MDT 2016
+# IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
+# Start of session at: Fri Apr  7 11:23:54 2017
+# Process ID: 24804
+# Current directory: /home/nariman/Desktop/HLS_Project_tests/stream_tg/stream_tg/stream_tg.runs/synth_1
+# Command line: vivado -log stream_tg.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source stream_tg.tcl
+# Log file: /home/nariman/Desktop/HLS_Project_tests/stream_tg/stream_tg/stream_tg.runs/synth_1/stream_tg.vds
+# Journal file: /home/nariman/Desktop/HLS_Project_tests/stream_tg/stream_tg/stream_tg.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source stream_tg.tcl -notrace

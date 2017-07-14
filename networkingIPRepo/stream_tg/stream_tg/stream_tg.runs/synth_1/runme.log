@@ -1,0 +1,632 @@
+
+*** Running vivado
+    with args -log stream_tg.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source stream_tg.tcl
+
+
+****** Vivado v2016.3 (64-bit)
+  **** SW Build 1682563 on Mon Oct 10 19:07:26 MDT 2016
+  **** IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source stream_tg.tcl -notrace
+Command: synth_design -top stream_tg -part xcku115-flva1517-2-e
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xcku115'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcku115'
+INFO: [Common 17-1223] The version limit for your license is '2016.12' and will expire in -97 days. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 24812 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 1133.977 ; gain = 223.148 ; free physical = 1482 ; free virtual = 14832
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'stream_tg' [/home/nariman/Desktop/HLS_Project_tests/stream_tg/stream_tg/stream_tg.srcs/sources_1/imports/rtl/stream_tg.v:23]
+	Parameter DATA_WIDTH bound to: 64 - type: integer 
+	Parameter KEEP_WIDTH bound to: 8 - type: integer 
+	Parameter START_ADDR bound to: 0 - type: integer 
+	Parameter START_DATA bound to: 0 - type: integer 
+	Parameter BTT bound to: 23'b00000000000000000001000 
+	Parameter DRR bound to: 1'b0 
+	Parameter DSA bound to: 6'b000000 
+	Parameter ITERATIONS bound to: 1 - type: integer 
+	Parameter IDLE bound to: 3'b000 
+	Parameter START bound to: 3'b001 
+	Parameter WRITE_CMD bound to: 3'b010 
+	Parameter WRITE_DATA bound to: 3'b011 
+	Parameter READ_CMD bound to: 3'b100 
+	Parameter READ_DATA bound to: 3'b101 
+	Parameter COMPARE bound to: 3'b110 
+	Parameter FINISH bound to: 3'b111 
+	Parameter TYPE bound to: 1'b1 
+	Parameter EOF bound to: 1'b1 
+	Parameter TAG bound to: 4'b0000 
+	Parameter RSVD bound to: 4'b0000 
+INFO: [Synth 8-256] done synthesizing module 'stream_tg' (1#1) [/home/nariman/Desktop/HLS_Project_tests/stream_tg/stream_tg/stream_tg.srcs/sources_1/imports/rtl/stream_tg.v:23]
+WARNING: [Synth 8-3917] design stream_tg has port read_data_ready driven by constant 1
+WARNING: [Synth 8-3917] design stream_tg has port read_sts_ready driven by constant 1
+WARNING: [Synth 8-3917] design stream_tg has port write_sts_ready driven by constant 1
+WARNING: [Synth 8-3331] design stream_tg has unconnected port read_sts_data[6]
+WARNING: [Synth 8-3331] design stream_tg has unconnected port read_sts_data[5]
+WARNING: [Synth 8-3331] design stream_tg has unconnected port read_sts_data[4]
+WARNING: [Synth 8-3331] design stream_tg has unconnected port read_sts_data[3]
+WARNING: [Synth 8-3331] design stream_tg has unconnected port read_sts_data[2]
+WARNING: [Synth 8-3331] design stream_tg has unconnected port read_sts_data[1]
+WARNING: [Synth 8-3331] design stream_tg has unconnected port read_sts_data[0]
+WARNING: [Synth 8-3331] design stream_tg has unconnected port write_sts_data[31]
+WARNING: [Synth 8-3331] design stream_tg has unconnected port write_sts_data[30]
+WARNING: [Synth 8-3331] design stream_tg has unconnected port write_sts_data[29]
+WARNING: [Synth 8-3331] design stream_tg has unconnected port write_sts_data[28]
+WARNING: [Synth 8-3331] design stream_tg has unconnected port write_sts_data[27]
+WARNING: [Synth 8-3331] design stream_tg has unconnected port write_sts_data[26]
+WARNING: [Synth 8-3331] design stream_tg has unconnected port write_sts_data[25]
+WARNING: [Synth 8-3331] design stream_tg has unconnected port write_sts_data[24]
+WARNING: [Synth 8-3331] design stream_tg has unconnected port write_sts_data[23]
+WARNING: [Synth 8-3331] design stream_tg has unconnected port write_sts_data[22]
+WARNING: [Synth 8-3331] design stream_tg has unconnected port write_sts_data[21]
+WARNING: [Synth 8-3331] design stream_tg has unconnected port write_sts_data[20]
+WARNING: [Synth 8-3331] design stream_tg has unconnected port write_sts_data[19]
+WARNING: [Synth 8-3331] design stream_tg has unconnected port write_sts_data[18]
+WARNING: [Synth 8-3331] design stream_tg has unconnected port write_sts_data[17]
+WARNING: [Synth 8-3331] design stream_tg has unconnected port write_sts_data[16]
+WARNING: [Synth 8-3331] design stream_tg has unconnected port write_sts_data[15]
+WARNING: [Synth 8-3331] design stream_tg has unconnected port write_sts_data[14]
+WARNING: [Synth 8-3331] design stream_tg has unconnected port write_sts_data[13]
+WARNING: [Synth 8-3331] design stream_tg has unconnected port write_sts_data[12]
+WARNING: [Synth 8-3331] design stream_tg has unconnected port write_sts_data[11]
+WARNING: [Synth 8-3331] design stream_tg has unconnected port write_sts_data[10]
+WARNING: [Synth 8-3331] design stream_tg has unconnected port write_sts_data[9]
+WARNING: [Synth 8-3331] design stream_tg has unconnected port write_sts_data[8]
+WARNING: [Synth 8-3331] design stream_tg has unconnected port write_sts_data[6]
+WARNING: [Synth 8-3331] design stream_tg has unconnected port write_sts_data[5]
+WARNING: [Synth 8-3331] design stream_tg has unconnected port write_sts_data[4]
+WARNING: [Synth 8-3331] design stream_tg has unconnected port write_sts_data[3]
+WARNING: [Synth 8-3331] design stream_tg has unconnected port write_sts_data[2]
+WARNING: [Synth 8-3331] design stream_tg has unconnected port write_sts_data[1]
+WARNING: [Synth 8-3331] design stream_tg has unconnected port write_sts_data[0]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 1174.445 ; gain = 263.617 ; free physical = 1438 ; free virtual = 14791
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 1174.445 ; gain = 263.617 ; free physical = 1438 ; free virtual = 14790
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xcku115-flva1517-2-e
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 1182.449 ; gain = 271.621 ; free physical = 1438 ; free virtual = 14790
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4471] merging register 'write_data_last_r_reg' into 'write_data_valid_r_reg' [/home/nariman/Desktop/HLS_Project_tests/stream_tg/stream_tg/stream_tg.srcs/sources_1/imports/rtl/stream_tg.v:109]
+INFO: [Synth 8-802] inferred FSM for state register 'test_state_r_reg' in module 'stream_tg'
+INFO: [Synth 8-5544] ROM "test_state_r" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Device 21-403] Loading part xcku115-flva1517-2-e
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                              000 |                              000
+                   START |                              001 |                              001
+               WRITE_CMD |                              010 |                              010
+              WRITE_DATA |                              011 |                              011
+                READ_CMD |                              100 |                              100
+               READ_DATA |                              101 |                              101
+                 COMPARE |                              110 |                              110
+                  FINISH |                              111 |                              111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'test_state_r_reg' using encoding 'sequential' in module 'stream_tg'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 1198.465 ; gain = 287.637 ; free physical = 1418 ; free virtual = 14775
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
++---Registers : 
+	               72 Bit    Registers := 2     
+	               64 Bit    Registers := 4     
+	                8 Bit    Registers := 4     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   8 Input     32 Bit        Muxes := 2     
+	   8 Input      3 Bit        Muxes := 1     
+	   8 Input      1 Bit        Muxes := 11    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module stream_tg 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
++---Registers : 
+	               72 Bit    Registers := 2     
+	               64 Bit    Registers := 4     
+	                8 Bit    Registers := 4     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   8 Input     32 Bit        Muxes := 2     
+	   8 Input      3 Bit        Muxes := 1     
+	   8 Input      1 Bit        Muxes := 11    
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 5520 (col length:120)
+BRAMs: 4320 (col length: RAMB18 240 RAMB36 120)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3917] design stream_tg has port read_data_ready driven by constant 1
+WARNING: [Synth 8-3917] design stream_tg has port read_sts_ready driven by constant 1
+WARNING: [Synth 8-3917] design stream_tg has port write_sts_ready driven by constant 1
+WARNING: [Synth 8-3331] design stream_tg has unconnected port read_sts_data[6]
+WARNING: [Synth 8-3331] design stream_tg has unconnected port read_sts_data[5]
+WARNING: [Synth 8-3331] design stream_tg has unconnected port read_sts_data[4]
+WARNING: [Synth 8-3331] design stream_tg has unconnected port read_sts_data[3]
+WARNING: [Synth 8-3331] design stream_tg has unconnected port read_sts_data[2]
+WARNING: [Synth 8-3331] design stream_tg has unconnected port read_sts_data[1]
+WARNING: [Synth 8-3331] design stream_tg has unconnected port read_sts_data[0]
+WARNING: [Synth 8-3331] design stream_tg has unconnected port write_sts_data[31]
+WARNING: [Synth 8-3331] design stream_tg has unconnected port write_sts_data[30]
+WARNING: [Synth 8-3331] design stream_tg has unconnected port write_sts_data[29]
+WARNING: [Synth 8-3331] design stream_tg has unconnected port write_sts_data[28]
+WARNING: [Synth 8-3331] design stream_tg has unconnected port write_sts_data[27]
+WARNING: [Synth 8-3331] design stream_tg has unconnected port write_sts_data[26]
+WARNING: [Synth 8-3331] design stream_tg has unconnected port write_sts_data[25]
+WARNING: [Synth 8-3331] design stream_tg has unconnected port write_sts_data[24]
+WARNING: [Synth 8-3331] design stream_tg has unconnected port write_sts_data[23]
+WARNING: [Synth 8-3331] design stream_tg has unconnected port write_sts_data[22]
+WARNING: [Synth 8-3331] design stream_tg has unconnected port write_sts_data[21]
+WARNING: [Synth 8-3331] design stream_tg has unconnected port write_sts_data[20]
+WARNING: [Synth 8-3331] design stream_tg has unconnected port write_sts_data[19]
+WARNING: [Synth 8-3331] design stream_tg has unconnected port write_sts_data[18]
+WARNING: [Synth 8-3331] design stream_tg has unconnected port write_sts_data[17]
+WARNING: [Synth 8-3331] design stream_tg has unconnected port write_sts_data[16]
+WARNING: [Synth 8-3331] design stream_tg has unconnected port write_sts_data[15]
+WARNING: [Synth 8-3331] design stream_tg has unconnected port write_sts_data[14]
+WARNING: [Synth 8-3331] design stream_tg has unconnected port write_sts_data[13]
+WARNING: [Synth 8-3331] design stream_tg has unconnected port write_sts_data[12]
+WARNING: [Synth 8-3331] design stream_tg has unconnected port write_sts_data[11]
+WARNING: [Synth 8-3331] design stream_tg has unconnected port write_sts_data[10]
+WARNING: [Synth 8-3331] design stream_tg has unconnected port write_sts_data[9]
+WARNING: [Synth 8-3331] design stream_tg has unconnected port write_sts_data[8]
+WARNING: [Synth 8-3331] design stream_tg has unconnected port write_sts_data[6]
+WARNING: [Synth 8-3331] design stream_tg has unconnected port write_sts_data[5]
+WARNING: [Synth 8-3331] design stream_tg has unconnected port write_sts_data[4]
+WARNING: [Synth 8-3331] design stream_tg has unconnected port write_sts_data[3]
+WARNING: [Synth 8-3331] design stream_tg has unconnected port write_sts_data[2]
+WARNING: [Synth 8-3331] design stream_tg has unconnected port write_sts_data[1]
+WARNING: [Synth 8-3331] design stream_tg has unconnected port write_sts_data[0]
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\read_cmd_r_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\read_cmd_r_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\read_cmd_r_reg[2] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\read_cmd_r_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\read_cmd_r_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\read_cmd_r_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\read_cmd_r_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\read_cmd_r_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\read_cmd_r_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\read_cmd_r_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\read_cmd_r_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\read_cmd_r_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\read_cmd_r_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\read_cmd_r_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\read_cmd_r_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\read_cmd_r_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\read_cmd_r_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\read_cmd_r_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\read_cmd_r_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\read_cmd_r_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\read_cmd_r_reg[20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\read_cmd_r_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\read_cmd_r_reg[22] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\read_cmd_r_reg[23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\read_cmd_r_reg[24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\read_cmd_r_reg[25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\read_cmd_r_reg[26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\read_cmd_r_reg[27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\read_cmd_r_reg[28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\read_cmd_r_reg[29] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\read_cmd_r_reg[30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\read_cmd_r_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\read_cmd_r_reg[64] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\read_cmd_r_reg[65] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\read_cmd_r_reg[66] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\read_cmd_r_reg[67] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\read_cmd_r_reg[68] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\read_cmd_r_reg[69] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\read_cmd_r_reg[70] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\read_cmd_r_reg[71] )
+INFO: [Synth 8-3886] merging instance 'write_data_keep_r_reg[0]' (FDRE) to 'write_data_keep_r_reg[1]'
+INFO: [Synth 8-3886] merging instance 'write_data_keep_r_reg[1]' (FDRE) to 'write_data_keep_r_reg[2]'
+INFO: [Synth 8-3886] merging instance 'write_data_keep_r_reg[2]' (FDRE) to 'write_data_keep_r_reg[3]'
+INFO: [Synth 8-3886] merging instance 'write_data_keep_r_reg[3]' (FDRE) to 'write_data_keep_r_reg[4]'
+INFO: [Synth 8-3886] merging instance 'write_data_keep_r_reg[4]' (FDRE) to 'write_data_keep_r_reg[5]'
+INFO: [Synth 8-3886] merging instance 'write_data_keep_r_reg[5]' (FDRE) to 'write_data_keep_r_reg[6]'
+INFO: [Synth 8-3886] merging instance 'write_data_keep_r_reg[6]' (FDRE) to 'write_data_keep_r_reg[7]'
+INFO: [Synth 8-3886] merging instance 'write_data_r_reg[0]' (FDRE) to 'write_data_r_reg[1]'
+INFO: [Synth 8-3886] merging instance 'write_data_r_reg[1]' (FDRE) to 'write_data_r_reg[2]'
+INFO: [Synth 8-3886] merging instance 'write_data_r_reg[2]' (FDRE) to 'write_data_r_reg[3]'
+INFO: [Synth 8-3886] merging instance 'write_data_r_reg[3]' (FDRE) to 'write_data_r_reg[4]'
+INFO: [Synth 8-3886] merging instance 'write_data_r_reg[4]' (FDRE) to 'write_data_r_reg[5]'
+INFO: [Synth 8-3886] merging instance 'write_data_r_reg[5]' (FDRE) to 'write_data_r_reg[6]'
+INFO: [Synth 8-3886] merging instance 'write_data_r_reg[6]' (FDRE) to 'write_data_r_reg[7]'
+INFO: [Synth 8-3886] merging instance 'write_data_r_reg[7]' (FDRE) to 'write_data_r_reg[8]'
+INFO: [Synth 8-3886] merging instance 'write_data_r_reg[8]' (FDRE) to 'write_data_r_reg[9]'
+INFO: [Synth 8-3886] merging instance 'write_data_r_reg[9]' (FDRE) to 'write_data_r_reg[10]'
+INFO: [Synth 8-3886] merging instance 'write_data_r_reg[10]' (FDRE) to 'write_data_r_reg[11]'
+INFO: [Synth 8-3886] merging instance 'write_data_r_reg[11]' (FDRE) to 'write_data_r_reg[12]'
+INFO: [Synth 8-3886] merging instance 'write_data_r_reg[12]' (FDRE) to 'write_data_r_reg[13]'
+INFO: [Synth 8-3886] merging instance 'write_data_r_reg[13]' (FDRE) to 'write_data_r_reg[14]'
+INFO: [Synth 8-3886] merging instance 'write_data_r_reg[14]' (FDRE) to 'write_data_r_reg[15]'
+INFO: [Synth 8-3886] merging instance 'write_data_r_reg[15]' (FDRE) to 'write_data_r_reg[16]'
+INFO: [Synth 8-3886] merging instance 'write_data_r_reg[16]' (FDRE) to 'write_data_r_reg[17]'
+INFO: [Synth 8-3886] merging instance 'write_data_r_reg[17]' (FDRE) to 'write_data_r_reg[18]'
+INFO: [Synth 8-3886] merging instance 'write_data_r_reg[18]' (FDRE) to 'write_data_r_reg[19]'
+INFO: [Synth 8-3886] merging instance 'write_data_r_reg[19]' (FDRE) to 'write_data_r_reg[20]'
+INFO: [Synth 8-3886] merging instance 'write_data_r_reg[20]' (FDRE) to 'write_data_r_reg[21]'
+INFO: [Synth 8-3886] merging instance 'write_data_r_reg[21]' (FDRE) to 'write_data_r_reg[22]'
+INFO: [Synth 8-3886] merging instance 'write_data_r_reg[22]' (FDRE) to 'write_data_r_reg[23]'
+INFO: [Synth 8-3886] merging instance 'write_data_r_reg[23]' (FDRE) to 'write_data_r_reg[24]'
+INFO: [Synth 8-3886] merging instance 'write_data_r_reg[24]' (FDRE) to 'write_data_r_reg[25]'
+INFO: [Synth 8-3886] merging instance 'write_data_r_reg[25]' (FDRE) to 'write_data_r_reg[26]'
+INFO: [Synth 8-3886] merging instance 'write_data_r_reg[26]' (FDRE) to 'write_data_r_reg[27]'
+INFO: [Synth 8-3886] merging instance 'write_data_r_reg[27]' (FDRE) to 'write_data_r_reg[28]'
+INFO: [Synth 8-3886] merging instance 'write_data_r_reg[28]' (FDRE) to 'write_data_r_reg[29]'
+INFO: [Synth 8-3886] merging instance 'write_data_r_reg[29]' (FDRE) to 'write_data_r_reg[30]'
+INFO: [Synth 8-3886] merging instance 'write_data_r_reg[30]' (FDRE) to 'write_data_r_reg[31]'
+INFO: [Synth 8-3886] merging instance 'write_data_r_reg[31]' (FDRE) to 'write_data_r_reg[32]'
+INFO: [Synth 8-3886] merging instance 'write_data_r_reg[32]' (FDRE) to 'write_data_r_reg[33]'
+INFO: [Synth 8-3886] merging instance 'write_data_r_reg[33]' (FDRE) to 'write_data_r_reg[34]'
+INFO: [Synth 8-3886] merging instance 'write_data_r_reg[34]' (FDRE) to 'write_data_r_reg[35]'
+INFO: [Synth 8-3886] merging instance 'write_data_r_reg[35]' (FDRE) to 'write_data_r_reg[36]'
+INFO: [Synth 8-3886] merging instance 'write_data_r_reg[36]' (FDRE) to 'write_data_r_reg[37]'
+INFO: [Synth 8-3886] merging instance 'write_data_r_reg[37]' (FDRE) to 'write_data_r_reg[38]'
+INFO: [Synth 8-3886] merging instance 'write_data_r_reg[38]' (FDRE) to 'write_data_r_reg[39]'
+INFO: [Synth 8-3886] merging instance 'write_data_r_reg[39]' (FDRE) to 'write_data_r_reg[40]'
+INFO: [Synth 8-3886] merging instance 'write_data_r_reg[40]' (FDRE) to 'write_data_r_reg[41]'
+INFO: [Synth 8-3886] merging instance 'write_data_r_reg[41]' (FDRE) to 'write_data_r_reg[42]'
+INFO: [Synth 8-3886] merging instance 'write_data_r_reg[42]' (FDRE) to 'write_data_r_reg[43]'
+INFO: [Synth 8-3886] merging instance 'write_data_r_reg[43]' (FDRE) to 'write_data_r_reg[44]'
+INFO: [Synth 8-3886] merging instance 'write_data_r_reg[44]' (FDRE) to 'write_data_r_reg[45]'
+INFO: [Synth 8-3886] merging instance 'write_data_r_reg[45]' (FDRE) to 'write_data_r_reg[46]'
+INFO: [Synth 8-3886] merging instance 'write_data_r_reg[46]' (FDRE) to 'write_data_r_reg[47]'
+INFO: [Synth 8-3886] merging instance 'write_data_r_reg[47]' (FDRE) to 'write_data_r_reg[48]'
+INFO: [Synth 8-3886] merging instance 'write_data_r_reg[48]' (FDRE) to 'write_data_r_reg[49]'
+INFO: [Synth 8-3886] merging instance 'write_data_r_reg[49]' (FDRE) to 'write_data_r_reg[50]'
+INFO: [Synth 8-3886] merging instance 'write_data_r_reg[50]' (FDRE) to 'write_data_r_reg[51]'
+INFO: [Synth 8-3886] merging instance 'write_data_r_reg[51]' (FDRE) to 'write_data_r_reg[52]'
+INFO: [Synth 8-3886] merging instance 'write_data_r_reg[52]' (FDRE) to 'write_data_r_reg[53]'
+INFO: [Synth 8-3886] merging instance 'write_data_r_reg[53]' (FDRE) to 'write_data_r_reg[54]'
+INFO: [Synth 8-3886] merging instance 'write_data_r_reg[54]' (FDRE) to 'write_data_r_reg[55]'
+INFO: [Synth 8-3886] merging instance 'write_data_r_reg[55]' (FDRE) to 'write_data_r_reg[56]'
+INFO: [Synth 8-3886] merging instance 'write_data_r_reg[56]' (FDRE) to 'write_data_r_reg[57]'
+INFO: [Synth 8-3886] merging instance 'write_data_r_reg[57]' (FDRE) to 'write_data_r_reg[58]'
+INFO: [Synth 8-3886] merging instance 'write_data_r_reg[58]' (FDRE) to 'write_data_r_reg[59]'
+INFO: [Synth 8-3886] merging instance 'write_data_r_reg[59]' (FDRE) to 'write_data_r_reg[60]'
+INFO: [Synth 8-3886] merging instance 'write_data_r_reg[60]' (FDRE) to 'write_data_r_reg[61]'
+INFO: [Synth 8-3886] merging instance 'write_data_r_reg[61]' (FDRE) to 'write_data_r_reg[62]'
+INFO: [Synth 8-3886] merging instance 'write_data_r_reg[62]' (FDRE) to 'write_data_r_reg[63]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\write_data_r_reg[63] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\write_cmd_r_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\write_cmd_r_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\write_cmd_r_reg[2] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\write_cmd_r_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\write_cmd_r_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\write_cmd_r_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\write_cmd_r_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\write_cmd_r_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\write_cmd_r_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\write_cmd_r_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\write_cmd_r_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\write_cmd_r_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\write_cmd_r_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\write_cmd_r_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\write_cmd_r_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\write_cmd_r_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\write_cmd_r_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\write_cmd_r_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\write_cmd_r_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\write_cmd_r_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\write_cmd_r_reg[20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\write_cmd_r_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\write_cmd_r_reg[22] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\write_cmd_r_reg[23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\write_cmd_r_reg[24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\write_cmd_r_reg[25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\write_cmd_r_reg[26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\write_cmd_r_reg[27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\write_cmd_r_reg[28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\write_cmd_r_reg[29] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\write_cmd_r_reg[30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\write_cmd_r_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\write_cmd_r_reg[64] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\write_cmd_r_reg[65] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\write_cmd_r_reg[66] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\write_cmd_r_reg[67] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\write_cmd_r_reg[68] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\write_cmd_r_reg[69] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\write_cmd_r_reg[70] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\write_cmd_r_reg[71] )
+INFO: [Synth 8-3886] merging instance 'write_data_r1_reg[0]' (FD) to 'write_data_r1_reg[1]'
+INFO: [Synth 8-3886] merging instance 'write_data_r1_reg[1]' (FD) to 'write_data_r1_reg[2]'
+INFO: [Synth 8-3886] merging instance 'write_data_r1_reg[2]' (FD) to 'write_data_r1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'write_data_keep_r1_reg[6]' (FD) to 'write_data_keep_r1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'write_data_keep_r1_reg[7]' (FD) to 'write_data_keep_r1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'write_data_keep_r1_reg[0]' (FD) to 'write_data_keep_r1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'write_data_keep_r1_reg[1]' (FD) to 'write_data_keep_r1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'write_data_keep_r1_reg[2]' (FD) to 'write_data_keep_r1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'write_data_keep_r1_reg[3]' (FD) to 'write_data_keep_r1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'write_data_keep_r1_reg[4]' (FD) to 'write_data_keep_r1_reg[5]'
+INFO: [Synth 8-3886] merging instance 'write_data_r1_reg[3]' (FD) to 'write_data_r1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'write_data_r1_reg[4]' (FD) to 'write_data_r1_reg[5]'
+INFO: [Synth 8-3886] merging instance 'write_data_r1_reg[5]' (FD) to 'write_data_r1_reg[6]'
+INFO: [Synth 8-3886] merging instance 'write_data_r1_reg[6]' (FD) to 'write_data_r1_reg[7]'
+INFO: [Synth 8-3886] merging instance 'write_data_r1_reg[7]' (FD) to 'write_data_r1_reg[8]'
+INFO: [Synth 8-3886] merging instance 'write_data_r1_reg[8]' (FD) to 'write_data_r1_reg[9]'
+INFO: [Synth 8-3886] merging instance 'write_data_r1_reg[9]' (FD) to 'write_data_r1_reg[10]'
+INFO: [Synth 8-3886] merging instance 'write_data_r1_reg[10]' (FD) to 'write_data_r1_reg[11]'
+INFO: [Synth 8-3886] merging instance 'write_data_r1_reg[11]' (FD) to 'write_data_r1_reg[12]'
+INFO: [Synth 8-3886] merging instance 'write_data_r1_reg[12]' (FD) to 'write_data_r1_reg[13]'
+INFO: [Synth 8-3886] merging instance 'write_data_r1_reg[13]' (FD) to 'write_data_r1_reg[14]'
+INFO: [Synth 8-3886] merging instance 'write_data_r1_reg[14]' (FD) to 'write_data_r1_reg[15]'
+INFO: [Synth 8-3886] merging instance 'write_data_r1_reg[15]' (FD) to 'write_data_r1_reg[16]'
+INFO: [Synth 8-3886] merging instance 'write_data_r1_reg[16]' (FD) to 'write_data_r1_reg[17]'
+INFO: [Synth 8-3886] merging instance 'write_data_r1_reg[17]' (FD) to 'write_data_r1_reg[18]'
+INFO: [Synth 8-3886] merging instance 'write_data_r1_reg[18]' (FD) to 'write_data_r1_reg[19]'
+INFO: [Synth 8-3886] merging instance 'write_data_r1_reg[19]' (FD) to 'write_data_r1_reg[20]'
+INFO: [Synth 8-3886] merging instance 'write_data_r1_reg[20]' (FD) to 'write_data_r1_reg[21]'
+INFO: [Synth 8-3886] merging instance 'write_data_r1_reg[21]' (FD) to 'write_data_r1_reg[22]'
+INFO: [Synth 8-3886] merging instance 'write_data_r1_reg[22]' (FD) to 'write_data_r1_reg[23]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\write_data_r1_reg[63] )
+WARNING: [Synth 8-3332] Sequential element (write_data_r_reg[63]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (write_data_r1_reg[63]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (write_cmd_r_reg[71]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (write_cmd_r_reg[70]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (write_cmd_r_reg[69]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (write_cmd_r_reg[68]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (write_cmd_r_reg[67]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (write_cmd_r_reg[66]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (write_cmd_r_reg[65]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (write_cmd_r_reg[64]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (write_cmd_r_reg[31]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (write_cmd_r_reg[30]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (write_cmd_r_reg[29]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (write_cmd_r_reg[28]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (write_cmd_r_reg[27]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (write_cmd_r_reg[26]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (write_cmd_r_reg[25]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (write_cmd_r_reg[24]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (write_cmd_r_reg[23]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (write_cmd_r_reg[22]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (write_cmd_r_reg[21]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (write_cmd_r_reg[20]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (write_cmd_r_reg[19]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (write_cmd_r_reg[18]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (write_cmd_r_reg[17]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (write_cmd_r_reg[16]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (write_cmd_r_reg[15]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (write_cmd_r_reg[14]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (write_cmd_r_reg[13]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (write_cmd_r_reg[12]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (write_cmd_r_reg[11]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (write_cmd_r_reg[10]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (write_cmd_r_reg[9]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (write_cmd_r_reg[8]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (write_cmd_r_reg[7]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (write_cmd_r_reg[6]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (write_cmd_r_reg[5]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (write_cmd_r_reg[4]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (write_cmd_r_reg[3]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (write_cmd_r_reg[2]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (write_cmd_r_reg[1]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (write_cmd_r_reg[0]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (read_cmd_r_reg[71]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (read_cmd_r_reg[70]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (read_cmd_r_reg[69]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (read_cmd_r_reg[68]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (read_cmd_r_reg[67]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (read_cmd_r_reg[66]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (read_cmd_r_reg[65]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (read_cmd_r_reg[64]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (read_cmd_r_reg[31]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (read_cmd_r_reg[30]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (read_cmd_r_reg[29]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (read_cmd_r_reg[28]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (read_cmd_r_reg[27]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (read_cmd_r_reg[26]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (read_cmd_r_reg[25]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (read_cmd_r_reg[24]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (read_cmd_r_reg[23]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (read_cmd_r_reg[22]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (read_cmd_r_reg[21]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (read_cmd_r_reg[20]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (read_cmd_r_reg[19]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (read_cmd_r_reg[18]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (read_cmd_r_reg[17]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (read_cmd_r_reg[16]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (read_cmd_r_reg[15]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (read_cmd_r_reg[14]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (read_cmd_r_reg[13]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (read_cmd_r_reg[12]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (read_cmd_r_reg[11]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (read_cmd_r_reg[10]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (read_cmd_r_reg[9]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (read_cmd_r_reg[8]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (read_cmd_r_reg[7]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (read_cmd_r_reg[6]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (read_cmd_r_reg[5]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (read_cmd_r_reg[4]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (read_cmd_r_reg[3]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (read_cmd_r_reg[2]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (read_cmd_r_reg[1]) is unused and will be removed from module stream_tg.
+WARNING: [Synth 8-3332] Sequential element (read_cmd_r_reg[0]) is unused and will be removed from module stream_tg.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 1614.512 ; gain = 703.684 ; free physical = 840 ; free virtual = 14356
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 1614.512 ; gain = 703.684 ; free physical = 840 ; free virtual = 14356
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 1614.512 ; gain = 703.684 ; free physical = 840 ; free virtual = 14356
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 1614.512 ; gain = 703.684 ; free physical = 840 ; free virtual = 14356
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 1614.512 ; gain = 703.684 ; free physical = 840 ; free virtual = 14356
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 1614.512 ; gain = 703.684 ; free physical = 840 ; free virtual = 14356
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 1614.512 ; gain = 703.684 ; free physical = 840 ; free virtual = 14356
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 1614.512 ; gain = 703.684 ; free physical = 840 ; free virtual = 14356
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 1614.512 ; gain = 703.684 ; free physical = 840 ; free virtual = 14356
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY8 |    11|
+|3     |LUT1   |    67|
+|4     |LUT2   |     6|
+|5     |LUT3   |    25|
+|6     |LUT4   |     5|
+|7     |LUT5   |     2|
+|8     |LUT6   |     5|
+|9     |FDRE   |   218|
+|10    |IBUF   |    83|
+|11    |OBUF   |   224|
++------+-------+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |   647|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 1614.512 ; gain = 703.684 ; free physical = 840 ; free virtual = 14356
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 164 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1614.512 ; gain = 551.535 ; free physical = 840 ; free virtual = 14356
+Synthesis Optimization Complete : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 1614.520 ; gain = 703.691 ; free physical = 840 ; free virtual = 14356
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 84 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 84 instances were transformed.
+  BUFG => BUFGCE: 1 instances
+  IBUF => IBUF (IBUFCTRL, INBUF): 83 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+200 Infos, 164 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1720.742 ; gain = 721.195 ; free physical = 754 ; free virtual = 14278
+INFO: [Common 17-1381] The checkpoint '/home/nariman/Desktop/HLS_Project_tests/stream_tg/stream_tg/stream_tg.runs/synth_1/stream_tg.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.14 . Memory (MB): peak = 1744.754 ; gain = 0.000 ; free physical = 753 ; free virtual = 14277
+INFO: [Common 17-206] Exiting Vivado at Fri Apr  7 11:24:24 2017...

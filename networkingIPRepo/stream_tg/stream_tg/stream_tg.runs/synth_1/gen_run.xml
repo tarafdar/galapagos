@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xcku115-flva1517-2-e" LaunchTime="1491578633">
+  <File Type="VDS-TIMING-PB" Name="stream_tg_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="stream_tg_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="stream_tg.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="stream_tg_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="stream_tg_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="stream_tg_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="stream_tg.vds"/>
+  <File Type="PA-TCL" Name="stream_tg.tcl"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/rtl/stream_tg.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../xilinx_naive_7v3/HLx_Examples/Acceleration/tcp_ip/rtl/stream_tg.v"/>
+        <Attr Name="ImportTime" Val="1490630682"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/component.xml">
+      <FileInfo SFType="IPXACT"/>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="stream_tg"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

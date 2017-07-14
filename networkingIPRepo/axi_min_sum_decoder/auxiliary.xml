@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="min_sum_dec" xd:componentRef="min_sum_dec" xd:initiationInterval="61889" xd:clockPeriod="10.000000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:controlReg xd:name="control" xd:interfaceRef="ap_ctrl" xd:busTypeRef="acc_handshake" xd:type="acc_handshake"/>
+  <xd:arg xd:name="variance" xd:originalName="variance" xd:direction="in" xd:interfaceRef="variance" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="noisy_input[][]" xd:originalName="noisy_input" xd:direction="inout" xd:interfaceRef="m_axi_noisy_input" xd:busTypeRef="aximm" xd:arraySize="1002" xd:dataWidth="32" xd:bufferDirection="in"/>
+  <xd:arg xd:name="soft_dec_out[][]" xd:originalName="soft_dec_out" xd:direction="inout" xd:interfaceRef="m_axi_soft_dec_out" xd:busTypeRef="aximm" xd:arraySize="1002" xd:dataWidth="32" xd:bufferDirection="out"/>
+  <xd:arg xd:name="hard_dec_out[][]" xd:originalName="hard_dec_out" xd:direction="inout" xd:interfaceRef="m_axi_hard_dec_out" xd:busTypeRef="aximm" xd:arraySize="1002" xd:dataWidth="32" xd:bufferDirection="out"/>
+  <xd:latencyEstimates xd:best-case="13884" xd:worst-case="61888" xd:average-case="36624"/>
+  <xd:resourceEstimates xd:LUT="40193" xd:FF="20336" xd:BRAM="60" xd:DSP="90"/>
+</xd:acceleratorMap>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<document>
+<!--The data in this file is primarily intended for consumption by Xilinx tools.
+The structure and the elements are likely to change over the next few releases.
+This means code written to parse this file will need to be revisited each subsequent release.-->
+<application name="pa" timeStamp="Fri Jul 14 18:26:48 2017">
+<section name="Project Information" visible="false">
+<property name="ProjectID" value="751e9100d5154ec8819902a192249c89" type="ProjectID"/>
+<property name="ProjectIteration" value="1" type="ProjectIteration"/>
+</section>
+<section name="PlanAhead Usage" visible="true">
+<item name="Project Data">
+<property name="SrcSetCount" value="1" type="SrcSetCount"/>
+<property name="ConstraintSetCount" value="1" type="ConstraintSetCount"/>
+<property name="DesignMode" value="RTL" type="DesignMode"/>
+<property name="SynthesisStrategy" value="Vivado Synthesis Defaults" type="SynthesisStrategy"/>
+<property name="ImplStrategy" value="Vivado Implementation Defaults" type="ImplStrategy"/>
+</item>
+<item name="Java Command Handlers">
+<property name="AddBusInterfaceHandler" value="8" type="JavaHandler"/>
+<property name="AddSources" value="7" type="JavaHandler"/>
+<property name="AutoInferInterfaceHandler" value="4" type="JavaHandler"/>
+<property name="EditDelete" value="3" type="JavaHandler"/>
+<property name="IPPackagerHandler" value="1" type="JavaHandler"/>
+<property name="IPPackagerWizardHandler" value="5" type="JavaHandler"/>
+<property name="NewProject" value="1" type="JavaHandler"/>
+<property name="RunImplementation" value="5" type="JavaHandler"/>
+<property name="RunSynthesis" value="10" type="JavaHandler"/>
+<property name="SetTopNode" value="2" type="JavaHandler"/>
+<property name="ShowView" value="5" type="JavaHandler"/>
+</item>
+<item name="Gui Resources Info">
+<property name="AddSrcWizard_SPECIFY_HDL_AND_NETLIST_FILES_OR_DIRECTORIES" value="1" type="GuiResourceData"/>
+<property name="AddSrcWizard_SPECIFY_OR_CREATE_CONSTRAINT_FILES" value="2" type="GuiResourceData"/>
+<property name="BaseDialog_CANCEL" value="24" type="GuiResourceData"/>
+<property name="BaseDialog_OK" value="43" type="GuiResourceData"/>
+<property name="BaseDialog_YES" value="2" type="GuiResourceData"/>
+<property name="BusParameterFacetTable_ADD_RECOMMENDED_PARAMETER" value="3" type="GuiResourceData"/>
+<property name="BusParameterFacetTable_BUS_PARAMETER_FACET_TABLE" value="12" type="GuiResourceData"/>
+<property name="BusParameterFacetTable_NAME" value="1" type="GuiResourceData"/>
+<property name="CmdMsgDialog_OK" value="1" type="GuiResourceData"/>
+<property name="CreateSrcFileDialog_FILE_NAME" value="1" type="GuiResourceData"/>
+<property name="EditInterfaceDialog_TABBED_PANE" value="46" type="GuiResourceData"/>
+<property name="FileSetPanel_FILE_SET_PANEL_TREE" value="120" type="GuiResourceData"/>
+<property name="FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE" value="15" type="GuiResourceData"/>
+<property name="GettingStartedView_CREATE_NEW_PROJECT" value="1" type="GuiResourceData"/>
+<property name="InterfaceConfigurationPanel_MODE" value="3" type="GuiResourceData"/>
+<property name="InterfaceConfigurationPanel_NAME" value="12" type="GuiResourceData"/>
+<property name="InterfaceDefinitionChooserDialog_INTERFACE_DEFINITION_CHOOSER_LIST" value="5" type="GuiResourceData"/>
+<property name="InterfaceDefinitionChooser_INTERFACE_DEFINITION_CHOOSER" value="7" type="GuiResourceData"/>
+<property name="InterfaceDefinitionTreeTable_INTERFACES_TREE_TABLE" value="37" type="GuiResourceData"/>
+<property name="InterfacePortMappingPanel_FILTER_INCOMPATIBLE_PHYSICAL_PORTS" value="7" type="GuiResourceData"/>
+<property name="InterfacePortMappingPanel_HIDE_MAPPED_PORTS" value="3" type="GuiResourceData"/>
+<property name="InterfacePortMappingPanel_INTERFACES_LOGICAL_PORTS" value="32" type="GuiResourceData"/>
+<property name="InterfacePortMappingPanel_IPS_PHYSICAL_PORTS" value="26" type="GuiResourceData"/>
+<property name="InterfacePortMappingPanel_MAP_PORTS" value="13" type="GuiResourceData"/>
+<property name="MainMenuMgr_FILE" value="6" type="GuiResourceData"/>
+<property name="MainMenuMgr_OPEN_RECENT_PROJECT" value="6" type="GuiResourceData"/>
+<property name="MainMenuMgr_REPORT" value="5" type="GuiResourceData"/>
+<property name="MainMenuMgr_TOOLS" value="12" type="GuiResourceData"/>
+<property name="MainMenuMgr_WINDOW" value="2" type="GuiResourceData"/>
+<property name="MessageBanner_CHANGES_DETECTED_IN_VIVADO_PROJECT_THAT" value="2" type="GuiResourceData"/>
+<property name="MessageBanner_SEE_LIST_OF_WARNING_MESSAGES" value="5" type="GuiResourceData"/>
+<property name="MsgTreePanel_MESSAGE_VIEW_TREE" value="37" type="GuiResourceData"/>
+<property name="NewIpWizard_IP_DEFINITION_SOURCE_LOCATION" value="1" type="GuiResourceData"/>
+<property name="NewIpWizard_PACKAGE_YOUR_CURRENT_PROJECT_USE" value="1" type="GuiResourceData"/>
+<property name="PACommandNames_ADD_SOURCES" value="7" type="GuiResourceData"/>
+<property name="PACommandNames_AUTO_UPDATE_HIER" value="10" type="GuiResourceData"/>
+<property name="PACommandNames_IP_PACKAGER_WIZARD" value="5" type="GuiResourceData"/>
+<property name="PACommandNames_PACKAGER_ADD_BUS_INTERFACE" value="8" type="GuiResourceData"/>
+<property name="PACommandNames_PACKAGER_AUTO_INFER_INTERFACE" value="4" type="GuiResourceData"/>
+<property name="PACommandNames_SET_AS_TOP" value="2" type="GuiResourceData"/>
+<property name="PAViews_CODE" value="3" type="GuiResourceData"/>
+<property name="PAViews_PROJECT_SUMMARY" value="1" type="GuiResourceData"/>
+<property name="PackagerStepsPanel_PACKAGER_STEPS_LIST" value="30" type="GuiResourceData"/>
+<property name="ParameterFacetTable_PARAMETER_FACET_TABLE" value="3" type="GuiResourceData"/>
+<property name="ParameterFacetTable_REFRESH" value="1" type="GuiResourceData"/>
+<property name="PartChooser_PARTS" value="3" type="GuiResourceData"/>
+<property name="PortAndInterfaceFacetTable_CREATE_INTERFACE_DEFINITION" value="1" type="GuiResourceData"/>
+<property name="PortAndInterfaceFacetTable_EDIT_INTERFACE" value="1" type="GuiResourceData"/>
+<property name="PortAndInterfaceFacetTable_EDIT_PORT" value="4" type="GuiResourceData"/>
+<property name="PortAndInterfaceFacetTable_PORT_AND_INTERFACE_FACET_TABLE" value="142" type="GuiResourceData"/>
+<property name="PortAndInterfaceFacetTable_REMOVE_INTERFACE" value="1" type="GuiResourceData"/>
+<property name="ProgressDialog_CANCEL" value="1" type="GuiResourceData"/>
+<property name="ProjectNameChooser_CHOOSE_PROJECT_LOCATION" value="1" type="GuiResourceData"/>
+<property name="RDICommands_DELETE" value="3" type="GuiResourceData"/>
+<property name="ReviewContentPanel_PACKAGE_IP" value="1" type="GuiResourceData"/>
+<property name="SaveProjectUtils_SAVE" value="1" type="GuiResourceData"/>
+<property name="SrcChooserPanel_ADD_DIRECTORIES" value="1" type="GuiResourceData"/>
+<property name="SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT" value="6" type="GuiResourceData"/>
+<property name="SrcChooserPanel_ADD_OR_CREATE_SOURCE_FILE" value="2" type="GuiResourceData"/>
+<property name="SrcChooserPanel_CREATE_FILE" value="1" type="GuiResourceData"/>
+<property name="SrcChooserTable_SRC_CHOOSER_TABLE" value="1" type="GuiResourceData"/>
+<property name="SrcMenu_IP_HIERARCHY" value="7" type="GuiResourceData"/>
+<property name="SrcMenu_REFRESH_HIERARCHY" value="1" type="GuiResourceData"/>
+<property name="StateMonitor_CANCEL" value="1" type="GuiResourceData"/>
+</item>
+<item name="Other">
+<property name="GuiMode" value="43" type="GuiMode"/>
+<property name="BatchMode" value="0" type="BatchMode"/>
+<property name="TclMode" value="34" type="TclMode"/>
+</item>
+</section>
+</application>
+</document>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="minitor" xd:componentRef="minitor" xd:initiationInterval="x" xd:clockPeriod="10.000000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:controlReg xd:name="control" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:type="generic_axi_lite" xd:offset="0x0"/>
+  <xd:arg xd:name="Tvalid" xd:originalName="Tvalid" xd:direction="in" xd:interfaceRef="Tvalid_V" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="1"/>
+  <xd:arg xd:name="num_packets_out" xd:originalName="num_packets_out" xd:direction="out" xd:interfaceRef="num_packets_out" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="axi_num_packets_out" xd:originalName="axi_num_packets_out" xd:direction="out" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:dataWidth="32" xd:offset="0x10" xd:statusOffset="0x14" xd:handshakeRef="ap_vld"/>
+  <xd:arg xd:name="reset_counter" xd:originalName="reset_counter" xd:direction="in" xd:interfaceRef="reset_counter_V" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="1"/>
+  <xd:latencyEstimates xd:best-case="undef" xd:worst-case="undef" xd:average-case="undef"/>
+  <xd:resourceEstimates xd:LUT="331" xd:FF="208" xd:BRAM="0" xd:DSP="0"/>
+</xd:acceleratorMap>

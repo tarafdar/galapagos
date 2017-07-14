@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xcku115-flva1517-2-e" LaunchTime="1491081981">
+  <File Type="VDS-TIMING-PB" Name="SmartCamCtl_wrapper_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="SmartCamCtl_wrapper_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="SmartCamCtl_wrapper.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="SmartCamCtl_wrapper_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="SmartCamCtl_wrapper_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="SmartCamCtl_wrapper_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="SmartCamCtl_wrapper.vds"/>
+  <File Type="PA-TCL" Name="SmartCamCtl_wrapper.tcl"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/SmartCamCtl.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/smartCam_ip_package/SmartCamCtl.edn">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../SmartCamCtl.edn"/>
+        <Attr Name="ImportTime" Val="1490893029"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/smartCam_ip_package/SmartCamCtl_wrapper.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../SmartCamCtl_wrapper.v"/>
+        <Attr Name="ImportTime" Val="1490896306"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/component.xml">
+      <FileInfo SFType="IPXACT"/>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="SmartCamCtl_wrapper"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>
