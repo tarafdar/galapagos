@@ -286,7 +286,14 @@
         <spirit:name>S_AXI</spirit:name>
         <spirit:range>64K</spirit:range>
         <spirit:width>32</spirit:width>
-        <spirit:segments/>
+        <spirit:segments>
+          <spirit:segment>
+            <spirit:name>SEG_axi_bram_ctrl_0_Mem0</spirit:name>
+            <spirit:displayName>/axi_bram_ctrl_0/S_AXI/Mem0</spirit:displayName>
+            <spirit:addressOffset>0x0000</spirit:addressOffset>
+            <spirit:range>8K</spirit:range>
+          </spirit:segment>
+        </spirit:segments>
       </spirit:addressSpace>
     </spirit:addressSpaces>
   </spirit:component>
@@ -414,7 +421,7 @@
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>ip_addr_1_1_1_3_dout</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="ip_addr_1_1_1_3" spirit:portRef="dout"/>
+        <spirit:internalPortReference spirit:componentRef="ip_addr_1_1_1_64" spirit:portRef="dout"/>
         <spirit:internalPortReference spirit:componentRef="udpEngine" spirit:portRef="inputIpAddress_V"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
