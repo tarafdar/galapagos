@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cluster>
+    <kernel> sender 
+        <num> 1 </num>
+        <rep> 1 </rep>
+        <interface>
+            <direction> in </direction>
+            <name> stream_in_V_V </name>
+            <tdest> 1 </tdest>
+        </interface>
+        <interface>
+            <direction> out </direction>
+            <name> stream_out_V_V </name>
+        </interface>
+    </kernel>
+  <kernel> recver
+        <num> 2 </num>
+        <rep> 1 </rep>
+        <interface>
+            <direction> in </direction>
+            <name> stream_in_V_V </name>
+            <tdest> 5 </tdest>
+        </interface>
+        <interface>
+            <direction> out </direction>
+            <name> stream_out_V_V </name>
+        </interface>
+    </kernel>
+</cluster>
