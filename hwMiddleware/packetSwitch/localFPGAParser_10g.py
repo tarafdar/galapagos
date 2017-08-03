@@ -447,7 +447,7 @@ def makeTCLFiles(outDir, sourceMAC, numExtra, schedulerList, listIP, localConnec
             tclMain.write('create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 id_' + str(kernel.num) + '\n')
             tclMain.write('set_property -dict [list CONFIG.CONST_WIDTH {32}] [get_bd_cells id_' + str(kernel.num) + ']\n')
             tclMain.write('set_property -dict [list CONFIG.CONST_VAL {' + str(kernel.num) + '}] [get_bd_cells id_' + str(kernel.num) + ']\n')
-            tclMain.write('connect_bd_net [get_bd_pins id_' + str(kernel.num) + '/dout] [get_bd_pins ' + instName + str(index) + '/id_V]\n')
+#            tclMain.write('connect_bd_net [get_bd_pins id_' + str(kernel.num) + '/dout] [get_bd_pins ' + instName + str(index) + '/id_V]\n')
             index = index + 1
     #instUserIPFile.write('endgroup\n')
     #instUserIPFile.write('endgroup\n')

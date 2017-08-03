@@ -125,7 +125,8 @@ if {[string equal [get_filesets -quiet sources_1] ""]} {
 
 # Set IP repository paths
 set obj [get_filesets sources_1]
-set_property ip_repo_paths {hlsIP_8k5 networkingIPRepo}
+#set_property ip_repo_paths {hlsIP_8k5 networkingIPRepo}
+set_property ip_repo_paths {hlsIP_8k5 } [current_project]
 
 # Rebuild user ip_repo's index before adding any source files
 update_ip_catalog -rebuild

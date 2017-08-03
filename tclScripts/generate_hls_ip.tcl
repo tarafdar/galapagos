@@ -4,130 +4,156 @@
 ## Copyright (C) 1986-2017 Xilinx, Inc. All Rights Reserved.
 ############################################################
 cd hlsIP_8k5
-#
-#
-#open_project heartBeat 
-#set_top heartBeat
-#add_files ../hlsSources/srcs/heartBeat.cpp
-#open_solution "solution1"
-#set_part {xcku115-flva1517-2-e}
-#create_clock -period 5 -name default
-#source "../hlsSources/directives/heartBeat.tcl"
-##csim_design
-#csynth_design
-##cosim_design
-#export_design -rtl verilog -format ip_catalog
-#close_project
-#
-#
-#open_project axiStreamGate 
-#set_top axiStreamGate
-#add_files ../hlsSources/srcs/axiStreamGate.cpp
-#open_solution "solution1"
-#set_part {xcku115-flva1517-2-e}
-#create_clock -period 5 -name default
-#source "../hlsSources/directives/axiStreamGate.tcl"
-##csim_design
-#csynth_design
-##cosim_design
-#export_design -rtl verilog -format ip_catalog
-#close_project
-#
-#open_project reverseEndian64 
-#set_top reverseEndian64
-#add_files ../hlsSources/srcs/reverseEndian64.cpp
-#open_solution "solution1"
-#set_part {xcku115-flva1517-2-e}
-#create_clock -period 5 -name default
-#source "../hlsSources/directives/reverseEndian64.tcl"
-##csim_design
-#csynth_design
-##cosim_design
-#export_design -rtl verilog -format ip_catalog
-#close_project
-#
-#
-#open_project fireWall64
-#set_top fireWall64
-#add_files ../hlsSources/srcs/fireWall64.cpp
-#open_solution "solution1"
-#set_part {xcku115-flva1517-2-e}
-#create_clock -period 5 -name default
-#source "../hlsSources/directives/fireWall64.tcl"
-##csim_design
-#csynth_design
-##cosim_design
-#export_design -rtl verilog -format ip_catalog
-#close_project
-#
-#open_project fireWall64_2
-#set_top fireWall64_2
-#add_files ../hlsSources/srcs/fireWall64_2.cpp
-#open_solution "solution1"
-#set_part {xcku115-flva1517-2-e}
-#create_clock -period 5 -name default
-#source "../hlsSources/directives/fireWall64_2.tcl"
-##csim_design
-#csynth_design
-##cosim_design
-#export_design -rtl verilog -format ip_catalog
-#close_project
-#
-#open_project packetFormatter_hardcode_64 
-#set_top packetFormatter_hardcode_64
-#add_files ../hlsSources/srcs/packetFormatter_hardcode_64.cpp
-#open_solution "solution1"
-#set_part {xcku115-flva1517-2-e}
-#create_clock -period 5 -name default
-#source "../hlsSources/directives/packetFormatter_hardcode_64.tcl"
-##csim_design
-#csynth_design
-##cosim_design
-#export_design -rtl verilog -format ip_catalog
-#close_project
-#
-#
-##userIP
-#
-#
-#open_project packetMaker
-#set_top packetMaker
-#add_files ../hlsSources/srcs/packetMaker.cpp
-#open_solution "solution1"
-#set_part {xcku115-flva1517-2-e}
-#create_clock -period 5 -name default
-#source "../hlsSources/directives/packetMaker.tcl"
-##csim_design
-#csynth_design
-##cosim_design
-#export_design -rtl verilog -format ip_catalog
-#close_project
-#
-#open_project packetMask
-#set_top packetMask
-#add_files ../hlsSources/srcs/packetMask.cpp
-#open_solution "solution1"
-#set_part {xcku115-flva1517-2-e}
-#create_clock -period 5 -name default
-#source "../hlsSources/directives/packetMask.tcl"
-##csim_design
-#csynth_design
-##cosim_design
-#export_design -rtl verilog -format ip_catalog
-#close_project
-#
-#open_project roundRobin 
-#set_top roundRobin
-#add_files ../hlsSources/srcs/roundRobin.cpp
-#open_solution "solution1"
-#set_part {xcku115-flva1517-2-e}
-#create_clock -period 5 -name default
+
+
+open_project heartBeat 
+set_top heartBeat
+add_files ../hlsSources/srcs/heartBeat.cpp
+open_solution "solution1"
+set_part {xcku115-flva1517-2-e}
+create_clock -period 5 -name default
+source "../hlsSources/directives/heartBeat.tcl"
+#csim_design
+csynth_design
+#cosim_design
+export_design -rtl verilog -format ip_catalog
+close_project
+
+
+open_project axiStreamGate 
+set_top axiStreamGate
+add_files ../hlsSources/srcs/axiStreamGate.cpp
+open_solution "solution1"
+set_part {xcku115-flva1517-2-e}
+create_clock -period 5 -name default
+source "../hlsSources/directives/axiStreamGate.tcl"
+#csim_design
+csynth_design
+#cosim_design
+export_design -rtl verilog -format ip_catalog
+close_project
+
+open_project reverseEndian64 
+set_top reverseEndian64
+add_files ../hlsSources/srcs/reverseEndian64.cpp
+open_solution "solution1"
+set_part {xcku115-flva1517-2-e}
+create_clock -period 5 -name default
+source "../hlsSources/directives/reverseEndian64.tcl"
+#csim_design
+csynth_design
+#cosim_design
+export_design -rtl verilog -format ip_catalog
+close_project
+
+
+open_project fireWall64
+set_top fireWall64
+add_files ../hlsSources/srcs/fireWall64.cpp
+open_solution "solution1"
+set_part {xcku115-flva1517-2-e}
+create_clock -period 5 -name default
+source "../hlsSources/directives/fireWall64.tcl"
+#csim_design
+csynth_design
+#cosim_design
+export_design -rtl verilog -format ip_catalog
+close_project
+
+open_project fireWall64_2
+set_top fireWall64_2
+add_files ../hlsSources/srcs/fireWall64_2.cpp
+open_solution "solution1"
+set_part {xcku115-flva1517-2-e}
+create_clock -period 5 -name default
+source "../hlsSources/directives/fireWall64_2.tcl"
+#csim_design
+csynth_design
+#cosim_design
+export_design -rtl verilog -format ip_catalog
+close_project
+
+open_project packetFormatter_hardcode_64 
+set_top packetFormatter_hardcode_64
+add_files ../hlsSources/srcs/packetFormatter_hardcode_64.cpp
+open_solution "solution1"
+set_part {xcku115-flva1517-2-e}
+create_clock -period 5 -name default
+source "../hlsSources/directives/packetFormatter_hardcode_64.tcl"
+#csim_design
+csynth_design
+#cosim_design
+export_design -rtl verilog -format ip_catalog
+close_project
+
+
+#userIP
+
+
+open_project packetMaker
+set_top packetMaker
+add_files ../hlsSources/srcs/packetMaker.cpp
+open_solution "solution1"
+set_part {xcku115-flva1517-2-e}
+create_clock -period 5 -name default
+source "../hlsSources/directives/packetMaker.tcl"
+#csim_design
+csynth_design
+#cosim_design
+export_design -rtl verilog -format ip_catalog
+close_project
+
+open_project packetMask
+set_top packetMask
+add_files ../hlsSources/srcs/packetMask.cpp
+open_solution "solution1"
+set_part {xcku115-flva1517-2-e}
+create_clock -period 5 -name default
+source "../hlsSources/directives/packetMask.tcl"
+#csim_design
+csynth_design
+#cosim_design
+export_design -rtl verilog -format ip_catalog
+close_project
+
+open_project roundRobin 
+set_top roundRobin
+add_files ../hlsSources/srcs/roundRobin.cpp
+open_solution "solution1"
+set_part {xcku115-flva1517-2-e}
+create_clock -period 5 -name default
+source "../hlsSources/directives/roundRobin.tcl"
+#csim_design
+csynth_design
+#cosim_design
+export_design -rtl verilog -format ip_catalog
+close_project
+
+open_project rank1 
+set_top sender
+add_files ../hlsSources/srcs/rank1.cpp
+open_solution "solution1"
+set_part {xcku115-flva1517-2-e}
+create_clock -period 5 -name default
 #source "../hlsSources/directives/roundRobin.tcl"
-##csim_design
-#csynth_design
-##cosim_design
-#export_design -rtl verilog -format ip_catalog
-#close_project
+#csim_design
+csynth_design
+#cosim_design
+export_design -rtl verilog -format ip_catalog
+close_project
+
+open_project rank2 
+set_top recver
+add_files ../hlsSources/srcs/rank2.cpp
+open_solution "solution1"
+set_part {xcku115-flva1517-2-e}
+create_clock -period 5 -name default
+#source "../hlsSources/directives/roundRobin.tcl"
+#csim_design
+csynth_design
+#cosim_design
+export_design -rtl verilog -format ip_catalog
+close_project
 
 
 #open_project dhcp_client 
@@ -168,23 +194,23 @@ cd hlsIP_8k5
 #export_design -format ip_catalog -display_name "UDP App Multiplexer for DHCP" -description "This module enables the connection of both the DHCP server and an additional application to the UDP offload engine, granted the DHCP server uses the standard ports." -vendor "xilinx.labs" -version "1.05"
 
 
-open_project udp 
-set_top udp
-add_files ../hlsSources/networkingSources/udp/udpCore/sources/udp.cpp
-open_solution "solution1"
-set_part {xcku115-flva1517-2-e}
-create_clock -period 6.66 -name default
-csynth_design
-export_design -format ip_catalog -display_name "10G UDP Offload Engine" -description "UDP Offload Engine supporting 10Gbps line rate" -vendor "xilinx.labs" -version "1.31"
-
-open_project udpLoopback 
-set_top udpLoopback
-add_files ../hlsSources/networkingSources/udp/udpLoopback/udpLoopback.cpp
-open_solution "solution1"
-set_part {xcku115-flva1517-2-e}
-create_clock -period 5 -name default
-csynth_design
-export_design -format ip_catalog -display_name "10G UDP Core Loopback module " -description "This traffic sink can be used for testing both paths of the XIR labs 10G UDP core. It loops the Rx data directly back to the Tx side." -vendor "xilinx.labs" -version "1.10"
+#open_project udp 
+#set_top udp
+#add_files ../hlsSources/networkingSources/udp/udpCore/sources/udp.cpp
+#open_solution "solution1"
+#set_part {xcku115-flva1517-2-e}
+#create_clock -period 6.66 -name default
+#csynth_design
+#export_design -format ip_catalog -display_name "10G UDP Offload Engine" -description "UDP Offload Engine supporting 10Gbps line rate" -vendor "xilinx.labs" -version "1.31"
+#
+#open_project udpLoopback 
+#set_top udpLoopback
+#add_files ../hlsSources/networkingSources/udp/udpLoopback/udpLoopback.cpp
+#open_solution "solution1"
+#set_part {xcku115-flva1517-2-e}
+#create_clock -period 5 -name default
+#csynth_design
+#export_design -format ip_catalog -display_name "10G UDP Core Loopback module " -description "This traffic sink can be used for testing both paths of the XIR labs 10G UDP core. It loops the Rx data directly back to the Tx side." -vendor "xilinx.labs" -version "1.10"
 
 
 
