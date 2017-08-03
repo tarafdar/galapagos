@@ -71,6 +71,7 @@ class packetFormatterObj:
 
 
 class fpgaObj:
+    typeNode = ''
     globalIn = []
     globalOut = []
     globalOut2 = []
@@ -117,14 +118,23 @@ def readKernelsFile(logicalKernelsFile):
     global allSchedulers
     global schedNum
     import xml.etree.ElementTree as ET
+    
+    print logicalKernelsFile
     tree = ET.parse(logicalKernelsFile)
     logicalCluster = tree.getroot()
+
+
 
     for kernelElement in logicalCluster:
         kernelName = kernelElement.text.replace(" ", "")
         kernelName = kernelName.replace("\n", "")
+        kernelName = kernelName.replace("\t", "")
+        print "KERNEL NAME "
+        print kernelName + 'HAHA'
         num = kernelElement.find('num').text.replace(" ", "")
         repElement = kernelElement.find('rep')
+        #kernType = kernelElement.find('type').text.replace(" ","")
+
         if(repElement != None):
             rep = int(repElement.text.replace(" ", ""))
 
@@ -204,9 +214,10 @@ def readFPGAMap(mapFile, macFile):
 
 
     for fpgaElement in mapCluster:
-
+        typeNode = fpgaElement.find('type').text.replace(" ", "")
         kernelElementArray = fpgaElement.findall('kernel')
         fpga = fpgaObj()
+        fpga.typeNode = typeNode
         #fpga.MAC_addr = fpgaElement.find('MAC').text.replace(" ", "")
         fpga.MAC_addr = macAddresses[fpgaIndex]
         fpga.num = fpgaIndex
@@ -402,6 +413,8 @@ def createLocalFPGA(projectName):
     globalConfigFile = open('tclScripts/createCluster.tcl', 'w')
 
     for fpga in allFPGAs:
+        if fpga.typeNode == 'sw':
+            continue
         fpgaElement = etree.Element('fpga')
         for kernel in fpga.kernels:
             ipElement = etree.Element('IP')
