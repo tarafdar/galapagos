@@ -22,13 +22,13 @@ ap_int <32>  reverseEndian32(ap_int <32> num){
 
 }
 
-ap_int <64> reverseEndian64(ap_int <64> X) {
-  ap_int <64> x = X;
-  x = (x & 0x00000000FFFFFFFF) << 32 | (x & 0xFFFFFFFF00000000) >> 32;
-  x = (x & 0x0000FFFF0000FFFF) << 16 | (x & 0xFFFF0000FFFF0000) >> 16;
-  x = (x & 0x00FF00FF00FF00FF) << 8  | (x & 0xFF00FF00FF00FF00) >> 8;
-  return x;
-}
+//ap_int <64> reverseEndian64(ap_int <64> X) {
+//  ap_int <64> x = X;
+//  x = (x & 0x00000000FFFFFFFF) << 32 | (x & 0xFFFFFFFF00000000) >> 32;
+//  x = (x & 0x0000FFFF0000FFFF) << 16 | (x & 0xFFFF0000FFFF0000) >> 16;
+//  x = (x & 0x00FF00FF00FF00FF) << 8  | (x & 0xFF00FF00FF00FF00) >> 8;
+//  return x;
+//}
 
 
 void fireWall64(
@@ -73,7 +73,8 @@ void fireWall64(
 
 
 
-		observedAddress = reverseEndian64(header[0].range(63,16));
+		//observedAddress = reverseEndian64(header[0].range(63,16));
+		observedAddress = header[0].range(63,16);
 
 
 		//top2bytes = ((header[1] & 0x0000FFFF) >> 8) | ((header[1] & 0x0000FFFF) << 8);
@@ -95,7 +96,8 @@ void fireWall64(
 		*match_out = match;
 
 		//dest_tmp = reverseEndian64(header[1].range(15,0));
-		dest = reverseEndian64(header[1].range(15,0));
+		//dest = reverseEndian64(header[1].range(15,0));
+		dest = header[1].range(15,0);
 		//dest_tmp = dest_tmp >> 16;
 		//dest = dest_tmp.range(15,0);
 		//dest = (dest >> 8) | (dest << 8);
@@ -109,7 +111,8 @@ void fireWall64(
 		while(!last ){
 			packetIn = stream_in.read();
 			packetOut.last = packetIn.last;
-			packetOut.data = reverseEndian64(packetIn.data);
+			//packetOut.data = reverseEndian64(packetIn.data);
+			packetOut.data = packetIn.data;
 			packetOut.dest = dest;
 			last = packetIn.last;
 			stream_out.write(packetOut);
