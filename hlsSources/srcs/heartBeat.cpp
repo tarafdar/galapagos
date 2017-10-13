@@ -35,7 +35,6 @@ void  heartBeat(
 
 ){
 
-
 	ap_int <48>   eth_dst;
 	eth_dst = 0xFFFFFFFFFFFF;
 	ap_axis packetHeader0, packetHeader1;
@@ -81,5 +80,7 @@ void  heartBeat(
 	currPayloadOut.last = 0x1;
 	stream_out.write(currPayloadOut);
 
+//	Nariman: add this line to stop this module after send a packet!
+	while(1);
 
 }

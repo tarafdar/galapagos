@@ -5,13 +5,13 @@
 
 struct ap_axis_in{
 
-	ap_int <64> data;
+	ap_int <128> data;
 	ap_uint<1> last;
 };
 
 struct ap_axis_out{
 
-	ap_int <64> data;
+	ap_int <128> data;
 	ap_uint <8> dest;
 	ap_uint<1> last;
 };
@@ -22,13 +22,13 @@ ap_int <32>  reverseEndian32(ap_int <32> num){
 
 }
 
-ap_int <64> reverseEndian64(ap_int <64> X) {
- ap_int <64> x = X;
- x = (x & 0x00000000FFFFFFFF) << 32 | (x & 0xFFFFFFFF00000000) >> 32;
- x = (x & 0x0000FFFF0000FFFF) << 16 | (x & 0xFFFF0000FFFF0000) >> 16;
- x = (x & 0x00FF00FF00FF00FF) << 8  | (x & 0xFF00FF00FF00FF00) >> 8;
- return x;
-}
+//ap_int <64> reverseEndian64(ap_int <64> X) {
+//  ap_int <64> x = X;
+//  x = (x & 0x00000000FFFFFFFF) << 32 | (x & 0xFFFFFFFF00000000) >> 32;
+//  x = (x & 0x0000FFFF0000FFFF) << 16 | (x & 0xFFFF0000FFFF0000) >> 16;
+//  x = (x & 0x00FF00FF00FF00FF) << 8  | (x & 0xFF00FF00FF00FF00) >> 8;
+//  return x;
+//}
 
 
 void fireWall64(
@@ -111,8 +111,8 @@ void fireWall64(
 		while(!last ){
 			packetIn = stream_in.read();
 			packetOut.last = packetIn.last;
-			packetOut.data = reverseEndian64(packetIn.data);
-			//packetOut.data = packetIn.data;
+			//packetOut.data = reverseEndian64(packetIn.data);
+			packetOut.data = packetIn.data;
 			packetOut.dest = dest;
 			last = packetIn.last;
 			stream_out.write(packetOut);

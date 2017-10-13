@@ -1,39 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cluster>
-	<kernel> sender 
+	<kernel> rank1rank1 
 		<num> 1 </num>
         <rep> 1 </rep>
         <interface>
             <direction> in </direction>
-            <name> stream_in_V_V </name>
+            <name> stream_in </name>
         </interface>
         <interface>
             <direction> out </direction>
-            <name> stream_out_V_V </name>
+            <name> stream_out </name>
         </interface>
     </kernel>
-	<kernel> recver
+    <kernel> rank2rank2 
         <num> 2 </num>
         <rep> 1 </rep>
         <interface>
             <direction> in </direction>
-            <name> stream_in_V_V </name>
+            <name> stream_in </name>
         </interface>
         <interface>
             <direction> out </direction>
-            <name> stream_out_V_V </name>
+            <name> stream_out </name>
         </interface>
-	</kernel>
-	<kernel> cpu
+    </kernel>
+    <kernel> rank3rank3 
         <num> 3 </num>
         <rep> 1 </rep>
         <interface>
             <direction> in </direction>
-            <name> stream_in_V_V </name>
+            <name> stream_in </name>
         </interface>
         <interface>
             <direction> out </direction>
-            <name> stream_out_V_V </name>
+            <name> stream_out </name>
+        </interface>
+    </kernel>
+    <kernel> rank4rank4 
+        <num> 4 </num>
+        <rep> 1 </rep>
+        <interface>
+            <direction> in </direction>
+            <name> stream_in </name>
+        </interface>
+        <interface>
+            <direction> out </direction>
+            <name> stream_out </name>
+        </interface>
+    </kernel>
+	<kernel> cpu
+        <num> 0 </num>
+        <rep> 1 </rep>
+        <interface>
+            <direction> in </direction>
+            <name> stream_in </name>
+        </interface>
+        <interface>
+            <direction> out </direction>
+            <name> stream_out </name>
         </interface>
 	</kernel>
 </cluster>

@@ -7,18 +7,18 @@
 #define NUM_WORDS 25
 
 struct ap_axis{
-	ap_int <64> data;
+	ap_int <128> data;
 	ap_uint<1> last;
-	ap_uint<8> keep;
+	ap_uint<16> keep;
 
 
 };
 
 struct ap_axis_dest{
-	ap_int <64> data;
+	ap_int <128> data;
 	ap_uint<1> last;
 	ap_uint<8> dest;
-	ap_uint<8> keep;
+	ap_uint<16> keep;
 
 
 };
@@ -79,31 +79,30 @@ void  packetFormatter_hardcode_64(
 	ap_int <48> temp3 = temp.concat(temp2);
 
 
-	ap_uint <16> tdest;
+	ap_uint <8> tdest;
 
-	ap_uint <8> zero = 0x00;
+	//ap_uint <8> zero = 0x00;
 //	ap_uint <16> kern_dst;
 
 	currPayloadIn = packetIn.read();
 	ap_wait();
-	tdest = zero.concat(currPayloadIn.dest);
+	tdest = currPayloadIn.dest;
 	//currPayloadOut.data = reverseEndian64(currPayloadIn.data);
 	currPayloadOut.data = currPayloadIn.data;
-	currPayloadOut.keep = 0xff;
-//	Nariman: I think it has a bug whatif payload be only one packet, then last signal never goes high!
-	currPayloadOut.last = currPayloadIn.last;
+	currPayloadOut.keep = 0xffff;
+	currPayloadOut.last = 0;
 
 
 	//packetHeader1.data = reverseEndian64(temp3.concat(kern_dst));
 	packetHeader1.data = temp3.concat(tdest);
 
 	//*packetHeader1_out = packetHeader1.data;
-	packetHeader0.keep = 0xff;
-	packetHeader1.keep = 0xff;
+	packetHeader0.keep = 0xffff;
+	packetHeader1.keep = 0xffff;
 
 
 	packetOut.write(packetHeader0);
-	packetOut.write(packetHeader1);
+	packetOut.write(packetHeader1);;
 	packetOut.write(currPayloadOut);
 
 

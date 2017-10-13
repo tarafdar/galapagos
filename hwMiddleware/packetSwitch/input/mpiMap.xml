@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cluster>
     <fpga>
-		<type> hw </type>
-		<kernel> 1 </kernel>
+        <type> hw </type>
+        <kernel> 1 </kernel>
         <kernel> 2 </kernel>
     </fpga>
     <fpga>
-		<type> sw </type>
+        <type> hw </type>
         <kernel> 3 </kernel>
-	</fpga>
+        <kernel> 4 </kernel>
+    </fpga>
+    <fpga>
+        <type> sw </type>
+        <kernel> 0 </kernel>
+    </fpga>
 </cluster>

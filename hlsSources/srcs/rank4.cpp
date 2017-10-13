@@ -1,13 +1,13 @@
-#define MODULE_RANK 1
+#define MODULE_RANK 4
 
 #include "MPI.h"
 
-void rank1(hls::stream<stream_packet> * stream_out,
+void rank4(hls::stream<stream_packet> * stream_out,
 		hls::stream<stream_packet> * stream_in,
 		int & state_out,
 		ap_uint<1> & module_rank,
 		int & packet_type){
-#pragma HLS INTERFACE ap_ctrl_none port=return
+
 #pragma HLS INTERFACE axis register both port=stream_in
 #pragma HLS INTERFACE axis register both port=stream_out
 
@@ -16,7 +16,7 @@ void rank1(hls::stream<stream_packet> * stream_out,
 	int s,p;
 	ap_uint<1> m;
 
-	while(!MPI_Recv(stream_out,stream_in,recv_array,10,MPI_INT,0,-1,0,s,m,p));
+	while(!MPI_Recv(stream_out,stream_in,recv_array,10,MPI_INT,3,-1,0,s,m,p));
 
 	state_out = s;
 	module_rank = m;
@@ -26,7 +26,7 @@ void rank1(hls::stream<stream_packet> * stream_out,
 		int temp = recv_array[i]++;
 	}
 
-	while(!MPI_Send(stream_out,stream_in,recv_array,10,MPI_INT,2,-1,0));
+	while(!MPI_Send(stream_out,stream_in,recv_array,10,MPI_INT,0,-1,0));
 
 	while(1);
 }
