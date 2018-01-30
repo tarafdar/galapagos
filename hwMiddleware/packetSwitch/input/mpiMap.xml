@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cluster>
-    <fpga>
+    <node>
+        <board> adm-pcie-8k5 </board>
         <type> hw </type>
         <kernel> 1 </kernel>
         <kernel> 2 </kernel>
-    </fpga>
-    <fpga>
+    </node>
+    <node>
+        <board> adm-pcie-8k5 </board>
         <type> hw </type>
         <kernel> 3 </kernel>
         <kernel> 4 </kernel>
-    </fpga>
-    <fpga>
+    </node>
+    <node>
+        <board> adm-pcie-8k5 </board>
         <type> sw </type>
         <kernel> 0 </kernel>
-    </fpga>
+    </node>
 </cluster>

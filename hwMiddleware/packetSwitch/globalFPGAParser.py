@@ -83,6 +83,7 @@ class fpgaObj:
     kernels = []
     MAC_addr = ''
     schedulers = []
+    board_name = ''
     def __init__(self):
         self.num = ''
         self.MAC_addr = ''
@@ -205,11 +206,13 @@ def readFPGAMap(mapFile, macFile):
 
 
 
-    for fpgaElement in mapCluster:
-        typeNode = fpgaElement.find('type').text.replace(" ", "")
-        kernelElementArray = fpgaElement.findall('kernel')
+    for nodeElement in mapCluster:
+        typeNode = nodeElement.find('type').text.replace(" ", "")
+        boardNode = nodeElement.find('board').text.replace(" ", "")
+        kernelElementArray = nodeElement.findall('kernel')
         fpga = fpgaObj()
         fpga.typeNode = typeNode
+        fpga.board_name = boardNode
         fpga.MAC_addr = macAddresses[fpgaIndex]
         fpga.num = fpgaIndex
         for kernelElement in kernelElementArray:
@@ -346,6 +349,7 @@ def redoIOMappings():
 
 
     for fpga in allFPGAs:
+        print 'board name ' + fpga.board_name
         for kernel in fpga.kernels:
             print 'kernel name ' + kernel.name + ' kernel num '+ str(kernel.num) + ' number of interfaces ' + str(len(kernel.interfaces))
             for interface in kernel.interfaces:
@@ -363,7 +367,7 @@ def redoIOMappings():
             for interface in scheduler.outInterfaces:
                 print 'interface type ' + interface.conn_type
                 print 'interface dest ' + str(interface.conn_dest)
-
+    
 
 
 def createLocalFPGA(projectName):
@@ -379,7 +383,7 @@ def createLocalFPGA(projectName):
     for fpga in allFPGAs:
         if fpga.typeNode == 'sw':
             continue
-        fpgaElement = etree.Element('fpga')
+        nodeElement = etree.Element('fpga')
         for kernel in fpga.kernels:
             ipElement = etree.Element('IP')
             nameAttribute = etree.Element('name')
@@ -439,7 +443,7 @@ def createLocalFPGA(projectName):
                     interfaceAttribute.append(tdestAttribute)
 
                 ipElement.append(interfaceAttribute)
-            fpgaElement.append(ipElement)
+            nodeElement.append(ipElement)
         for scheduler in fpga.schedulers:
             schedulerElement = etree.Element('scheduler')
             typeAttribute = etree.Element('type')
@@ -451,7 +455,7 @@ def createLocalFPGA(projectName):
             addrAttribute = etree.Element('addr')
             addrAttribute.text = str(scheduler.baseAddr)
             schedulerElement.append(addrAttribute)
-            fpgaElement.append(schedulerElement)
+            nodeElement.append(schedulerElement)
 
             for outInterface in scheduler.outInterfaces:
                 outAttribute = etree.Element( 'out')
@@ -462,7 +466,7 @@ def createLocalFPGA(projectName):
                 outDest.text = str(outInterface.conn_dest)
                 outAttribute.append(outDest)
                 schedulerElement.append(outAttribute)
-            fpgaElement.append(schedulerElement)
+            nodeElement.append(schedulerElement)
 
         for fpga2 in allFPGAs:
             if(fpga2.num != fpga.num):
@@ -484,7 +488,7 @@ def createLocalFPGA(projectName):
                             portAttribute.append(destAttribute)
                             extraInputSwitchAttribute.append(portAttribute)
 
-                            fpgaElement.append(extraInputSwitchAttribute)
+                            nodeElement.append(extraInputSwitchAttribute)
 
 
 
@@ -502,7 +506,7 @@ def createLocalFPGA(projectName):
             f.write(appendCmd1.rstrip('\r\n') + '\n' + appendCmd2.rstrip('\r\n') + '\n' + content)
 
 
-        s = etree.tostring(fpgaElement, pretty_print=True)
+        s = etree.tostring(nodeElement, pretty_print=True)
         fpgaLocalFile = open(dirName + '/fpga.xml', 'w')
         fpgaLocalFile.write(s)
         fpgaLocalFile.close()
