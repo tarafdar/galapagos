@@ -5,7 +5,7 @@ import os
 import shutil
 
 sys.path.append('hwMiddleware/packetSwitch')
-import localFPGAParser_10g
+import localFPGAParser
 
 projectName = ''
 allKernels = []
@@ -119,7 +119,6 @@ def readKernelsFile(logicalKernelsFile):
     global schedNum
     import xml.etree.ElementTree as ET
     
-    print logicalKernelsFile
     tree = ET.parse(logicalKernelsFile)
     logicalCluster = tree.getroot()
 
@@ -129,8 +128,6 @@ def readKernelsFile(logicalKernelsFile):
         kernelName = kernelElement.text.replace(" ", "")
         kernelName = kernelName.replace("\n", "")
         kernelName = kernelName.replace("\t", "")
-        print "KERNEL NAME "
-        print kernelName + 'HAHA'
         num = kernelElement.find('num').text.replace(" ", "")
         repElement = kernelElement.find('rep')
         #kernType = kernelElement.find('type').text.replace(" ","")
@@ -165,13 +162,10 @@ def readKernelsFile(logicalKernelsFile):
 
                     schedulerElement = interfaceElement.find('scheduler')
                     interface.scheduler_id = None
-                    print interface.name
-                    print interface.tdest
                     if schedulerElement != None and i == 1:
                         scheduler = schedulerObj()
                         for j in range(1, rep + 1):
                             scheduler.tdest_out.append(int(interface.tdest) + j - 1)
-                            print 'appending ' + str(int(interface.tdest) + j - 1)
                             scheduler.kernelNum.append(int(num) + j - 1)
                         #scheduler.baseAddr=int(interface.tdest)
                         scheduler.baseAddr=kernel.num
@@ -183,12 +177,10 @@ def readKernelsFile(logicalKernelsFile):
                         schedNum = schedNum + 1
 
                     if schedulerElement != None:
-                        print 'scheduler id is ' + str(schedNum)
                         interface.scheduler_id = schedNum - 1
                     interface.kernelNum = kernel.num
                     kernel.interfaces.append(interface)
 
-                #print kernel.num
                 allKernels.append(kernel)
 
 
@@ -218,15 +210,12 @@ def readFPGAMap(mapFile, macFile):
         kernelElementArray = fpgaElement.findall('kernel')
         fpga = fpgaObj()
         fpga.typeNode = typeNode
-        #fpga.MAC_addr = fpgaElement.find('MAC').text.replace(" ", "")
         fpga.MAC_addr = macAddresses[fpgaIndex]
         fpga.num = fpgaIndex
         for kernelElement in kernelElementArray:
             num = kernelElement.text.replace(" ", "")
             for kernel in allKernels:
-                #print 'num is ' + str(num) + ' kernel.num is ' + str(kernel.num)
                 if int(num) == int(kernel.num):
-                    #print 'match'
                     kernel.fpga = fpgaIndex
                     fpga.kernels.append(kernel)
         allFPGAs.append(fpga)
@@ -235,19 +224,13 @@ def readFPGAMap(mapFile, macFile):
 
     for scheduler in allSchedulers:
         fpgaArray = []
-        #print 'new scheduler '
-        #print len(scheduler.kernelNum)
         for kernelNum in scheduler.kernelNum:
             for kernel in allKernels:
-                #print 'scheduler ' + str(kernelNum) + ' kernel ' + str(kernel.num)
                 if int(kernelNum) == int(kernel.num):
-                    #print 'scheduler ' + str(kernelNum) + ' kernel ' + str(kernel.num) + ' fpga ' + str(kernel.fpga)
                     fpgaArray.append(kernel.fpga)
 
-        #print fpgaArray
 
         scheduler.fpga = max(set(fpgaArray), key=fpgaArray.count)
-        #print 'scheduler will be on fpga ' + str(scheduler.fpga)
         for fpga in allFPGAs:
             if(int(scheduler.fpga) == int(fpga.num)):
                 fpga.schedulers.append(scheduler)
@@ -275,36 +258,25 @@ def createGlobalInterfaceMap():
     for fpga in allFPGAs:
         outIndex = 0
         for outInterface in fpga.globalOut:
-            #outInterface.conn = connectionObj()
-            #outNew = copy.deepcopy(outInterface)
             if outInterface.conn_dir_tdest != None:
-                #print 'directly connected somewhere ' + str(outInterface.conn_dir_tdest)
                 inputIndex = 0
                 for inputInterface in allInputInterfaces:
                     #found interface that this is directly connected to
                     if(str(inputInterface.tdest) == str(outInterface.conn_dir_tdest)):
                         if(int(inputInterface.fpga) ==  int(outInterface.fpga)):
-                            #print 'local'
                             outInterface.conn_type = 'local'
                             outInterface.conn_dest = inputInterface.tdest
-                            #fpga.localOut.append(outNew)
-                            #allInputInterfaces.pop(inputIndex)
                         else:
-                            #print 'network'
                             outInterface.conn_type = 'network'
-                            #print 'network egress is on ' + str(outInterface.fpga)
                             for fpga2 in allFPGAs:
                                 if int(fpga2.num) == int(inputInterface.fpga):
                                     outInterface.conn_dest = fpga2.MAC_addr
-                             #       print 'MAC addr ' + str(outInterface.kernelNum) + ' ' + outInterface.name + ' ' + fpga2.MAC_addr+ outInterface.conn_dest
                     inputIndex = inputIndex + 1
             elif outInterface.dir_network != None:
-                #print 'network2'
                 outInterface.conn_type = 'network'
                 outInterface.conn_dest = outInterface.dir_network
 
             else:
-                #print 'global'
                 outInterface.conn_type = 'global'
             #allFPGAs[fpgaIndex].globalOut2.append(outNew)
             #allFPGAs[fpgaIndex].globalOut[outIndex] = copy.deepcopy(outNew)
@@ -355,15 +327,10 @@ def redoIOMappings():
                 if otherFPGA.num != fpga.num:
                     otherFPGA.inToOut.append(interface)
 
-#    for fpga in allFPGAs:
-#        for kernel in fpga.kernels:
-#            print '1) kernel name ' + kernel.name + ' kernel num ' + str(kernel.num)
-#
     for interface in allInputInterfaces:
         for fpga in allFPGAs:
             for kernel in fpga.kernels:
                 if(interface.kernelNum == kernel.num):
-                   # print 'adding ' + str(kernel.num) + ' interface ' + interface.name
                     kernel.interfaces.append(interface)
 
 
@@ -371,12 +338,9 @@ def redoIOMappings():
     for fpga in allFPGAs:
 
         for interface in fpga.globalOut:
-            #print interface.name
             index = 0
             for kernel in fpga.kernels:
-                #print '2) kernel name ' + kernel.name + ' kernel num ' + str(kernel.num)
                 if(interface.kernelNum == kernel.num):
-                 #   print 'adding2 ' + str(kernel.num) + ' interface ' + interface.name + ' index '  + str(index) + ' conn ' + str(interface.conn_dest)
                     kernel.interfaces.append(interface)
                 index = index + 1
 
@@ -495,7 +459,6 @@ def createLocalFPGA(projectName):
                 outType.text = outInterface.conn_type
                 outAttribute.append(outType)
                 outDest = etree.Element('dest')
-                print outInterface.conn_dest
                 outDest.text = str(outInterface.conn_dest)
                 outAttribute.append(outDest)
                 schedulerElement.append(outAttribute)
@@ -524,13 +487,11 @@ def createLocalFPGA(projectName):
                             fpgaElement.append(extraInputSwitchAttribute)
 
 
-        #print '\n\n*************************\n\n'
 
 
         dirName = 'projects/' + projectName + '/' + str(index)
         os.makedirs(dirName)
         shutil.copyfile('hwMiddleware/packetSwitch/configurationParameters.tcl', dirName + '/configurationParameters.tcl')
-#        shutil.copyfile('hwMiddleware/packetSwitch/localPRCreate.tcl', dirName + '/localPRCreate.tcl')
         
 
         appendCmd1 = 'set fpgaNum ' + str(index) + '\n'
@@ -542,11 +503,10 @@ def createLocalFPGA(projectName):
 
 
         s = etree.tostring(fpgaElement, pretty_print=True)
-        #print s
         fpgaLocalFile = open(dirName + '/fpga.xml', 'w')
         fpgaLocalFile.write(s)
         fpgaLocalFile.close()
-        localFPGAParser_10g.start(dirName + '/' + str(index), macAddresses[index], dirName + '/fpga.xml') 
+        localFPGAParser.start(dirName + '/' + str(index), macAddresses[index], dirName + '/fpga.xml') 
         index = index+1
         globalConfigFile.write('source ' + dirName + '/' + 'configurationParameters.tcl\n')
         globalConfigFile.write('source hwMiddleware/packetSwitch/localPRCreate.tcl\n')
