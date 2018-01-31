@@ -495,31 +495,36 @@ def createLocalFPGA(projectName):
 
         dirName = 'projects/' + projectName + '/' + str(index)
         os.makedirs(dirName)
-        shutil.copyfile('hwMiddleware/packetSwitch/configurationParameters.tcl', dirName + '/configurationParameters.tcl')
         
-
-        appendCmd1 = 'set fpgaNum ' + str(index) + '\n'
-        appendCmd2 = 'set projName ' + projectName + '\n'
-        with open(dirName + '/configurationParameters.tcl', 'r+') as f:
-            content = f.read()
-            f.seek(0,0)
-            f.write(appendCmd1.rstrip('\r\n') + '\n' + appendCmd2.rstrip('\r\n') + '\n' + content)
 
 
         s = etree.tostring(nodeElement, pretty_print=True)
         fpgaLocalFile = open(dirName + '/fpga.xml', 'w')
         fpgaLocalFile.write(s)
         fpgaLocalFile.close()
-        localFPGAParser.start(dirName + '/' + str(index), macAddresses[index], dirName + '/fpga.xml') 
+
+        outDir = dirName + '/' + str(index)
+        sourceMAC = macAddresses[index]
+        fpgaFile = dirName + '/fpga.xml'
+
+
+        localFPGAParser.start(dirName, sourceMAC, fpgaFile, fpga.board_name, index, projectName) 
         index = index+1
         globalConfigFile.write('source ' + dirName + '/' + 'configurationParameters.tcl\n')
         globalConfigFile.write('source hwMiddleware/packetSwitch/localPRCreate.tcl\n')
     
     globalConfigFile.close()
+
+
 args = sys.argv
-readKernelsFile(args[1])
-readFPGAMap(args[2], args[3])
+logicalFile = args[1]
+mapFile = args[2]
+macFile = args[3]
+projectName = args[4]
+
+readKernelsFile(logicalFile)
+readFPGAMap(mapFile, macFile)
 createGlobalInterfaceMap()
 placeSchedulers()
 redoIOMappings()
-createLocalFPGA(args[4])
+createLocalFPGA(projectName)

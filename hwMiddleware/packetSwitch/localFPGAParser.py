@@ -535,12 +535,14 @@ def makeTCLFiles(outDir, sourceMAC, numExtra, schedulerList, listIP, localConnec
 
 
 
-def start(outDir_in, sourceMAC_in, FPGA_file):
+def start(outDir_in, sourceMAC_in, FPGA_file, board_name, index, projectName):
 
     outDir = outDir_in
     sourceMAC = sourceMAC_in
     numExtra, schedulerList, listIP, packetFormatterList = readFPGAFile(FPGA_file, sourceMAC)
     localConnections, inputSwitchMasters, inputSwitchSlaves, packetFormatterList = makeFPGAIOTables(sourceMAC, schedulerList, listIP, packetFormatterList)
-    makeTCLFiles(outDir, sourceMAC, numExtra, schedulerList, listIP, localConnections, inputSwitchMasters, inputSwitchSlaves, packetFormatterList)
+    sys.path.append('hwMiddleware/packetSwitch/boards/' + board_name)
+    import tclFileGenerator
+    tclFileGenerator.makeTCLFiles(outDir, sourceMAC, numExtra, schedulerList, listIP, localConnections, inputSwitchMasters, inputSwitchSlaves, packetFormatterList, str(index), projectName)
 
 
