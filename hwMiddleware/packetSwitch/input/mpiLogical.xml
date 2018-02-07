@@ -10,6 +10,7 @@
         <interface>
             <direction> out </direction>
             <name> stream_out </name>
+            <debug/>
         </interface>
     </kernel>
     <kernel> rank2rank2 

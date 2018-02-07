@@ -37,6 +37,7 @@ class interfaceObj:
     dir_network = ''
     conn_type = ''
     conn_dest = ''
+    debug = False
     def __init__(self):
         self.scheduler_id = ''
         self.direction = ''
@@ -46,6 +47,7 @@ class interfaceObj:
         self.conn_dir_tdest = ''
         self.fpga = ''
         self.dir_network = ''
+        debug = False 
 class kernelObj:
     fpga = ''
     num = ''
@@ -145,11 +147,14 @@ def readKernelsFile(logicalKernelsFile):
                     interface = interfaceObj()
                     interface.direction = interfaceElement.find('direction').text.replace(" ", "")
                     interface.name = interfaceElement.find('name').text.replace(" ", "")
-                    #tdestElement = interfaceElement.find('tdest')
                     interface.tdest = None
-                    #if tdestElement != None:
-                    #    interface.tdest = int(tdestElement.text.replace(" ", "")) + i - 1
                     interface.tdest = kernel.num
+
+                    if interface.direction == 'out':
+                        debugNode = interfaceElement.find('debug')
+                        if debugNode != None:
+                            interface.debug = True
+
 
                     interface.conn_dir_tdest = None
                     connDirTdestElement = interfaceElement.find('conn_dir_tdest')
@@ -208,11 +213,15 @@ def readFPGAMap(mapFile, macFile):
 
     for nodeElement in mapCluster:
         typeNode = nodeElement.find('type').text.replace(" ", "")
-        boardNode = nodeElement.find('board').text.replace(" ", "")
+        
+        boardNode = nodeElement.find('board')
         kernelElementArray = nodeElement.findall('kernel')
         fpga = fpgaObj()
         fpga.typeNode = typeNode
-        fpga.board_name = boardNode
+        if boardNode != None:
+            fpga.board_name = boardNode.text.replace(" ", "")
+        else:
+            fpga.board_name = '' 
         fpga.MAC_addr = macAddresses[fpgaIndex]
         fpga.num = fpgaIndex
         for kernelElement in kernelElementArray:
@@ -425,12 +434,16 @@ def createLocalFPGA(projectName):
                 interfaceName.text = interface.name
                 interfaceAttribute.append(interfaceName)
 
-
+                
                 if(interface.direction == 'out'):
                     interfaceConn = etree.Element('conn')
                     interfaceConnType = etree.Element( 'type')
                     interfaceConnType.text = interface.conn_type
                     interfaceConn.append(interfaceConnType)
+                    if interface.debug == True:
+                        interfaceDebug = etree.Element('debug')
+                        interfaceAttribute.append(interfaceDebug)
+
                     if(interface.conn_type != 'global'):
                         interfaceConnDest = etree.Element('dest')
                         interfaceConnDest.text = str(interface.conn_dest)
@@ -442,6 +455,7 @@ def createLocalFPGA(projectName):
                     tdestAttribute.text = str(interface.tdest)
                     interfaceAttribute.append(tdestAttribute)
 
+                    
                 ipElement.append(interfaceAttribute)
             nodeElement.append(ipElement)
         for scheduler in fpga.schedulers:

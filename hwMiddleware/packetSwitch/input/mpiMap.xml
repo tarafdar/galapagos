@@ -13,7 +13,6 @@
         <kernel> 4 </kernel>
     </node>
     <node>
-        <board> adm-pcie-8k5 </board>
         <type> sw </type>
         <kernel> 0 </kernel>
     </node>

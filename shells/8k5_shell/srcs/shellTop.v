@@ -202,6 +202,87 @@ module shellTop
   //wire txn;
   //wire txp;
 
+  wire [63:0] SLOT_AXIS_0_tdata;
+  wire [15:0] SLOT_AXIS_0_tdest;
+  wire SLOT_AXIS_0_tlast;
+  wire SLOT_AXIS_0_tready;
+  wire SLOT_AXIS_0_tvalid;
+  wire [63:0] SLOT_AXIS_1_tdata;
+  wire [15:0] SLOT_AXIS_1_tdest;
+  wire SLOT_AXIS_1_tlast;
+  wire SLOT_AXIS_1_tready;
+  wire SLOT_AXIS_1_tvalid;
+  wire [63:0] SLOT_AXIS_2_tdata;
+  wire [15:0] SLOT_AXIS_2_tdest;
+  wire SLOT_AXIS_2_tlast;
+  wire SLOT_AXIS_2_tready;
+  wire SLOT_AXIS_2_tvalid;
+  wire [63:0] SLOT_AXIS_3_tdata;
+  wire [15:0] SLOT_AXIS_3_tdest;
+  wire SLOT_AXIS_3_tlast;
+  wire SLOT_AXIS_3_tready;
+  wire SLOT_AXIS_3_tvalid;
+  wire [63:0] SLOT_AXIS_4_tdata;
+  wire [15:0] SLOT_AXIS_4_tdest;
+  wire SLOT_AXIS_4_tlast;
+  wire SLOT_AXIS_4_tready;
+  wire SLOT_AXIS_4_tvalid;
+  wire [63:0] SLOT_5_tdata;
+  wire [15:0] SLOT_AXIS_5_tdest;
+  wire SLOT_AXIS_5_tlast;
+  wire SLOT_AXIS_5_tready;
+  wire SLOT_AXIS_5_tvalid;
+  wire [63:0] SLOT_AXIS_6_tdata;
+  wire [15:0] SLOT_AXIS_6_tdest;
+  wire SLOT_AXIS_6_tlast;
+  wire SLOT_AXIS_6_tready;
+  wire SLOT_AXIS_6_tvalid;
+  wire [63:0] SLOT_7_tdata;
+  wire [15:0] SLOT_AXIS_7_tdest;
+  wire SLOT_AXIS_7_tlast;
+  wire SLOT_AXIS_7_tready;
+  wire SLOT_AXIS_7_tvalid;
+  wire [63:0] SLOT_8_tdata;
+  wire [15:0] SLOT_AXIS_8_tdest;
+  wire SLOT_AXIS_8_tlast;
+  wire SLOT_AXIS_8_tready;
+  wire SLOT_AXIS_8_tvalid;
+  wire [63:0] SLOT_9_tdata;
+  wire [15:0] SLOT_AXIS_9_tdest;
+  wire SLOT_AXIS_9_tlast;
+  wire SLOT_AXIS_9_tready;
+  wire SLOT_AXIS_9_tvalid;
+  wire [63:0] SLOT_10_tdata;
+  wire [15:0] SLOT_AXIS_10_tdest;
+  wire SLOT_AXIS_10_tlast;
+  wire SLOT_AXIS_10_tready;
+  wire SLOT_AXIS_10_tvalid;
+  wire [63:0] SLOT_11_tdata;
+  wire [15:0] SLOT_AXIS_11_tdest;
+  wire SLOT_AXIS_11_tlast;
+  wire SLOT_AXIS_11_tready;
+  wire SLOT_AXIS_11_tvalid;
+  wire [63:0] SLOT_12_tdata;
+  wire [15:0] SLOT_AXIS_12_tdest;
+  wire SLOT_AXIS_12_tlast;
+  wire SLOT_AXIS_12_tready;
+  wire SLOT_AXIS_12_tvalid;
+  wire [63:0] SLOT_13_tdata;
+  wire [15:0] SLOT_AXIS_13_tdest;
+  wire SLOT_AXIS_13_tlast;
+  wire SLOT_AXIS_13_tready;
+  wire SLOT_AXIS_13_tvalid;
+  wire [63:0] SLOT_14_tdata;
+  wire [15:0] SLOT_AXIS_14_tdest;
+  wire SLOT_AXIS_14_tlast;
+  wire SLOT_AXIS_14_tready;
+  wire SLOT_AXIS_14_tvalid;
+  wire [63:0] SLOT_15_tdata;
+  wire [15:0] SLOT_AXIS_15_tdest;
+  wire SLOT_AXIS_15_tlast;
+  wire SLOT_AXIS_15_tready;
+  wire SLOT_AXIS_15_tvalid;
+  
   shell_wrapper shell_wrapper_i
        (.ARESETN(ARESETN),
         .CLK_CONTROL(CLK_CONTROL),
@@ -265,7 +346,88 @@ module shellTop
         .rxp(rxp),
         .sfp_tx_disable(sfp_tx_disable),
         .txn(txn),
-        .txp(txp));
+        .txp(txp),
+        .SLOT_0_AXIS_tdata(SLOT_AXIS_0_tdata),
+        .SLOT_0_AXIS_tdest(SLOT_AXIS_0_tdest),
+        .SLOT_0_AXIS_tlast(SLOT_AXIS_0_tlast),
+        .SLOT_0_AXIS_tready(SLOT_AXIS_0_tready),
+        .SLOT_0_AXIS_tvalid(SLOT_AXIS_0_tvalid),
+        .SLOT_1_AXIS_tdata(SLOT_AXIS_1_tdata),
+        .SLOT_1_AXIS_tdest(SLOT_AXIS_1_tdest),
+        .SLOT_1_AXIS_tlast(SLOT_AXIS_1_tlast),
+        .SLOT_1_AXIS_tready(SLOT_AXIS_1_tready),
+        .SLOT_1_AXIS_tvalid(SLOT_AXIS_1_tvalid),
+        .SLOT_2_AXIS_tdata(SLOT_AXIS_2_tdata),
+        .SLOT_2_AXIS_tdest(SLOT_AXIS_2_tdest),
+        .SLOT_2_AXIS_tlast(SLOT_AXIS_2_tlast),
+        .SLOT_2_AXIS_tready(SLOT_AXIS_2_tready),
+        .SLOT_2_AXIS_tvalid(SLOT_AXIS_2_tvalid),
+        .SLOT_3_AXIS_tdata(SLOT_AXIS_3_tdata),
+        .SLOT_3_AXIS_tdest(SLOT_AXIS_3_tdest),
+        .SLOT_3_AXIS_tlast(SLOT_AXIS_3_tlast),
+        .SLOT_3_AXIS_tready(SLOT_AXIS_3_tready),
+        .SLOT_3_AXIS_tvalid(SLOT_AXIS_3_tvalid),
+        .SLOT_4_AXIS_tdata(SLOT_AXIS_4_tdata),
+        .SLOT_4_AXIS_tdest(SLOT_AXIS_4_tdest),
+        .SLOT_4_AXIS_tlast(SLOT_AXIS_4_tlast),
+        .SLOT_4_AXIS_tready(SLOT_AXIS_4_tready),
+        .SLOT_4_AXIS_tvalid(SLOT_AXIS_4_tvalid),
+        .SLOT_5_AXIS_tdata(SLOT_AXIS_5_tdata),
+        .SLOT_5_AXIS_tdest(SLOT_AXIS_5_tdest),
+        .SLOT_5_AXIS_tlast(SLOT_AXIS_5_tlast),
+        .SLOT_5_AXIS_tready(SLOT_AXIS_5_tready),
+        .SLOT_5_AXIS_tvalid(SLOT_AXIS_5_tvalid),
+        .SLOT_6_AXIS_tdata(SLOT_AXIS_6_tdata),
+        .SLOT_6_AXIS_tdest(SLOT_AXIS_6_tdest),
+        .SLOT_6_AXIS_tlast(SLOT_AXIS_6_tlast),
+        .SLOT_6_AXIS_tready(SLOT_AXIS_6_tready),
+        .SLOT_6_AXIS_tvalid(SLOT_AXIS_6_tvalid),
+        .SLOT_7_AXIS_tdata(SLOT_AXIS_7_tdata),
+        .SLOT_7_AXIS_tdest(SLOT_AXIS_7_tdest),
+        .SLOT_7_AXIS_tlast(SLOT_AXIS_7_tlast),
+        .SLOT_7_AXIS_tready(SLOT_AXIS_7_tready),
+        .SLOT_7_AXIS_tvalid(SLOT_AXIS_7_tvalid),
+        .SLOT_8_AXIS_tdata(SLOT_AXIS_8_tdata),
+        .SLOT_8_AXIS_tdest(SLOT_AXIS_8_tdest),
+        .SLOT_8_AXIS_tlast(SLOT_AXIS_8_tlast),
+        .SLOT_8_AXIS_tready(SLOT_AXIS_8_tready),
+        .SLOT_8_AXIS_tvalid(SLOT_AXIS_8_tvalid),
+        .SLOT_9_AXIS_tdata(SLOT_AXIS_9_tdata),
+        .SLOT_9_AXIS_tdest(SLOT_AXIS_9_tdest),
+        .SLOT_9_AXIS_tlast(SLOT_AXIS_9_tlast),
+        .SLOT_9_AXIS_tready(SLOT_AXIS_9_tready),
+        .SLOT_9_AXIS_tvalid(SLOT_AXIS_9_tvalid),
+        .SLOT_10_AXIS_tdata(SLOT_AXIS_10_tdata),
+        .SLOT_10_AXIS_tdest(SLOT_AXIS_10_tdest),
+        .SLOT_10_AXIS_tlast(SLOT_AXIS_10_tlast),
+        .SLOT_10_AXIS_tready(SLOT_AXIS_10_tready),
+        .SLOT_10_AXIS_tvalid(SLOT_AXIS_10_tvalid),
+        .SLOT_11_AXIS_tdata(SLOT_AXIS_11_tdata),
+        .SLOT_11_AXIS_tdest(SLOT_AXIS_11_tdest),
+        .SLOT_11_AXIS_tlast(SLOT_AXIS_11_tlast),
+        .SLOT_11_AXIS_tready(SLOT_AXIS_11_tready),
+        .SLOT_11_AXIS_tvalid(SLOT_AXIS_11_tvalid),
+        .SLOT_12_AXIS_tdata(SLOT_AXIS_12_tdata),
+        .SLOT_12_AXIS_tdest(SLOT_AXIS_12_tdest),
+        .SLOT_12_AXIS_tlast(SLOT_AXIS_12_tlast),
+        .SLOT_12_AXIS_tready(SLOT_AXIS_12_tready),
+        .SLOT_12_AXIS_tvalid(SLOT_AXIS_12_tvalid),
+        .SLOT_13_AXIS_tdata(SLOT_AXIS_13_tdata),
+        .SLOT_13_AXIS_tdest(SLOT_AXIS_13_tdest),
+        .SLOT_13_AXIS_tlast(SLOT_AXIS_13_tlast),
+        .SLOT_13_AXIS_tready(SLOT_AXIS_13_tready),
+        .SLOT_13_AXIS_tvalid(SLOT_AXIS_13_tvalid),
+        .SLOT_14_AXIS_tdata(SLOT_AXIS_14_tdata),
+        .SLOT_14_AXIS_tdest(SLOT_AXIS_14_tdest),
+        .SLOT_14_AXIS_tlast(SLOT_AXIS_14_tlast),
+        .SLOT_14_AXIS_tready(SLOT_AXIS_14_tready),
+        .SLOT_14_AXIS_tvalid(SLOT_AXIS_14_tvalid),
+        .SLOT_15_AXIS_tdata(SLOT_AXIS_15_tdata),
+        .SLOT_15_AXIS_tdest(SLOT_AXIS_15_tdest),
+        .SLOT_15_AXIS_tlast(SLOT_AXIS_15_tlast),
+        .SLOT_15_AXIS_tready(SLOT_AXIS_15_tready),
+        .SLOT_15_AXIS_tvalid(SLOT_AXIS_15_tvalid)
+    );
 
    pr_wrapper pr_wrapper_i
        (.ARESETN(ARESETN),
@@ -311,5 +473,86 @@ module shellTop
         .S_AXI_wlast(M_AXI_wlast),
         .S_AXI_wready(M_AXI_wready),
         .S_AXI_wstrb(M_AXI_wstrb),
-        .S_AXI_wvalid(M_AXI_wvalid));
+        .S_AXI_wvalid(M_AXI_wvalid),
+        .SLOT_AXIS_0_tdata(SLOT_AXIS_0_tdata),
+        .SLOT_AXIS_0_tdest(SLOT_AXIS_0_tdest),
+        .SLOT_AXIS_0_tlast(SLOT_AXIS_0_tlast),
+        .SLOT_AXIS_0_tready(SLOT_AXIS_0_tready),
+        .SLOT_AXIS_0_tvalid(SLOT_AXIS_0_tvalid),
+        .SLOT_AXIS_1_tdata(SLOT_AXIS_1_tdata),
+        .SLOT_AXIS_1_tdest(SLOT_AXIS_1_tdest),
+        .SLOT_AXIS_1_tlast(SLOT_AXIS_1_tlast),
+        .SLOT_AXIS_1_tready(SLOT_AXIS_1_tready),
+        .SLOT_AXIS_1_tvalid(SLOT_AXIS_1_tvalid),
+        .SLOT_AXIS_2_tdata(SLOT_AXIS_2_tdata),
+        .SLOT_AXIS_2_tdest(SLOT_AXIS_2_tdest),
+        .SLOT_AXIS_2_tlast(SLOT_AXIS_2_tlast),
+        .SLOT_AXIS_2_tready(SLOT_AXIS_2_tready),
+        .SLOT_AXIS_2_tvalid(SLOT_AXIS_2_tvalid),
+        .SLOT_AXIS_3_tdata(SLOT_AXIS_3_tdata),
+        .SLOT_AXIS_3_tdest(SLOT_AXIS_3_tdest),
+        .SLOT_AXIS_3_tlast(SLOT_AXIS_3_tlast),
+        .SLOT_AXIS_3_tready(SLOT_AXIS_3_tready),
+        .SLOT_AXIS_3_tvalid(SLOT_AXIS_3_tvalid),
+        .SLOT_AXIS_4_tdata(SLOT_AXIS_4_tdata),
+        .SLOT_AXIS_4_tdest(SLOT_AXIS_4_tdest),
+        .SLOT_AXIS_4_tlast(SLOT_AXIS_4_tlast),
+        .SLOT_AXIS_4_tready(SLOT_AXIS_4_tready),
+        .SLOT_AXIS_4_tvalid(SLOT_AXIS_4_tvalid),
+        .SLOT_AXIS_5_tdata(SLOT_AXIS_5_tdata),
+        .SLOT_AXIS_5_tdest(SLOT_AXIS_5_tdest),
+        .SLOT_AXIS_5_tlast(SLOT_AXIS_5_tlast),
+        .SLOT_AXIS_5_tready(SLOT_AXIS_5_tready),
+        .SLOT_AXIS_5_tvalid(SLOT_AXIS_5_tvalid),
+        .SLOT_AXIS_6_tdata(SLOT_AXIS_6_tdata),
+        .SLOT_AXIS_6_tdest(SLOT_AXIS_6_tdest),
+        .SLOT_AXIS_6_tlast(SLOT_AXIS_6_tlast),
+        .SLOT_AXIS_6_tready(SLOT_AXIS_6_tready),
+        .SLOT_AXIS_6_tvalid(SLOT_AXIS_6_tvalid),
+        .SLOT_AXIS_7_tdata(SLOT_AXIS_7_tdata),
+        .SLOT_AXIS_7_tdest(SLOT_AXIS_7_tdest),
+        .SLOT_AXIS_7_tlast(SLOT_AXIS_7_tlast),
+        .SLOT_AXIS_7_tready(SLOT_AXIS_7_tready),
+        .SLOT_AXIS_7_tvalid(SLOT_AXIS_7_tvalid),
+        .SLOT_AXIS_8_tdata(SLOT_AXIS_8_tdata),
+        .SLOT_AXIS_8_tdest(SLOT_AXIS_8_tdest),
+        .SLOT_AXIS_8_tlast(SLOT_AXIS_8_tlast),
+        .SLOT_AXIS_8_tready(SLOT_AXIS_8_tready),
+        .SLOT_AXIS_8_tvalid(SLOT_AXIS_8_tvalid),
+        .SLOT_AXIS_9_tdata(SLOT_AXIS_9_tdata),
+        .SLOT_AXIS_9_tdest(SLOT_AXIS_9_tdest),
+        .SLOT_AXIS_9_tlast(SLOT_AXIS_9_tlast),
+        .SLOT_AXIS_9_tready(SLOT_AXIS_9_tready),
+        .SLOT_AXIS_9_tvalid(SLOT_AXIS_9_tvalid),
+        .SLOT_AXIS_10_tdata(SLOT_AXIS_10_tdata),
+        .SLOT_AXIS_10_tdest(SLOT_AXIS_10_tdest),
+        .SLOT_AXIS_10_tlast(SLOT_AXIS_10_tlast),
+        .SLOT_AXIS_10_tready(SLOT_AXIS_10_tready),
+        .SLOT_AXIS_10_tvalid(SLOT_AXIS_10_tvalid),
+        .SLOT_AXIS_11_tdata(SLOT_AXIS_11_tdata),
+        .SLOT_AXIS_11_tdest(SLOT_AXIS_11_tdest),
+        .SLOT_AXIS_11_tlast(SLOT_AXIS_11_tlast),
+        .SLOT_AXIS_11_tready(SLOT_AXIS_11_tready),
+        .SLOT_AXIS_11_tvalid(SLOT_AXIS_11_tvalid),
+        .SLOT_AXIS_12_tdata(SLOT_AXIS_12_tdata),
+        .SLOT_AXIS_12_tdest(SLOT_AXIS_12_tdest),
+        .SLOT_AXIS_12_tlast(SLOT_AXIS_12_tlast),
+        .SLOT_AXIS_12_tready(SLOT_AXIS_12_tready),
+        .SLOT_AXIS_12_tvalid(SLOT_AXIS_12_tvalid),
+        .SLOT_AXIS_13_tdata(SLOT_AXIS_13_tdata),
+        .SLOT_AXIS_13_tdest(SLOT_AXIS_13_tdest),
+        .SLOT_AXIS_13_tlast(SLOT_AXIS_13_tlast),
+        .SLOT_AXIS_13_tready(SLOT_AXIS_13_tready),
+        .SLOT_AXIS_13_tvalid(SLOT_AXIS_13_tvalid),
+        .SLOT_AXIS_14_tdata(SLOT_AXIS_14_tdata),
+        .SLOT_AXIS_14_tdest(SLOT_AXIS_14_tdest),
+        .SLOT_AXIS_14_tlast(SLOT_AXIS_14_tlast),
+        .SLOT_AXIS_14_tready(SLOT_AXIS_14_tready),
+        .SLOT_AXIS_14_tvalid(SLOT_AXIS_14_tvalid),
+        .SLOT_AXIS_15_tdata(SLOT_AXIS_15_tdata),
+        .SLOT_AXIS_15_tdest(SLOT_AXIS_15_tdest),
+        .SLOT_AXIS_15_tlast(SLOT_AXIS_15_tlast),
+        .SLOT_AXIS_15_tready(SLOT_AXIS_15_tready),
+        .SLOT_AXIS_15_tvalid(SLOT_AXIS_15_tvalid)
+    );
 endmodule

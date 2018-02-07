@@ -292,7 +292,7 @@ set obj [get_runs synth_1]
 set_property "part" "xcku115-flva1517-2-e" $obj
 
 # set the current synth run
-current_run -synthesis [get_runs synth_1]
+#current_run -synthesis [get_runs synth_1]
 
 # Create 'impl_1' run (if not found)
 if {[string equal [get_runs -quiet impl_1] ""]} {
@@ -311,6 +311,6 @@ current_run -implementation [get_runs impl_1]
 
 puts "INFO: Project created:$projName"
 
-source tclScripts/synthesizeShell_8k5.tcl
+#source tclScripts/synthesizeShell_8k5.tcl
 
 puts "INFO: Synthesized and created checkpoint:$projName"
