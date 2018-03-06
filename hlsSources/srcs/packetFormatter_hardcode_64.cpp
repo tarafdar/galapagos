@@ -78,7 +78,7 @@ void  packetFormatter_hardcode_64(
 	ap_int <16> temp2 = 0x7400;
 	ap_int <48> temp3 = temp.concat(temp2);
 
-
+	ap_int <1> last = 0;
 	ap_uint <16> tdest;
 
 	ap_uint <8> zero = 0x00;
@@ -86,7 +86,7 @@ void  packetFormatter_hardcode_64(
 
 	currPayloadIn = packetIn.read();
 	ap_wait();
-	tdest = zero.concat(currPayloadIn.dest);
+	tdest = currPayloadIn.dest.concat(zero);
 	//currPayloadOut.data = reverseEndian64(currPayloadIn.data);
 	currPayloadOut.data = currPayloadIn.data;
 	currPayloadOut.keep = 0xff;
@@ -107,8 +107,8 @@ void  packetFormatter_hardcode_64(
 	packetOut.write(currPayloadOut);
 
 
-	ap_int <1> last = 0;
-	do{
+	last = currPayloadIn.last;
+	while(!last){
 
 		currPayloadIn = packetIn.read();
 		//currPayloadOut.data = reverseEndian64(currPayloadIn.data);
@@ -117,10 +117,7 @@ void  packetFormatter_hardcode_64(
 		currPayloadOut.keep = currPayloadIn.keep;
 		packetOut.write(currPayloadOut);
 		last = currPayloadOut.last;
-
-
-	}while(last == 0);
-
+	}
 }
 /*
 void  packetFormatter_hardcode(
