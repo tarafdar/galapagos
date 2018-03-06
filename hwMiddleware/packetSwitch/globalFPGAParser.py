@@ -3,6 +3,7 @@ import sys
 import subprocess
 import os
 import shutil
+import getopt
 
 sys.path.append('hwMiddleware/packetSwitch')
 import localFPGAParser
@@ -530,11 +531,33 @@ def createLocalFPGA(projectName):
     globalConfigFile.close()
 
 
-args = sys.argv
-logicalFile = args[1]
-mapFile = args[2]
-macFile = args[3]
-projectName = args[4]
+try:
+    opts, args = getopt.getopt(sys.argv[1:],"", ["logicalFile=", "mapFile=", "macFile=", "projectName="])
+except:
+    usage()
+    sys.exit(2)
+
+
+logicalFile = None 
+mapFile = None
+macFile = None
+projectName = None
+
+for o, a in opts:
+    if o in ("--logicalFile"):
+        logicalFile = a
+    elif o in ("--mapFile"):
+        mapFile = a
+    elif o in ("--macFile"):
+        macFile = a
+    elif o in ("--projectName"):
+        projectName= a
+
+
+
+print logicalFile, mapFile, macFile, projectName
+
+
 
 readKernelsFile(logicalFile)
 readFPGAMap(mapFile, macFile)

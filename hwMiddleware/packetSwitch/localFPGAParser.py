@@ -174,7 +174,7 @@ def readFPGAFile(localFPGAFile, sourceMAC):
 
                 debugElement = interfaceElement.find('debug')
                 debug = False 
-                if debugElement != None && numDebug<16:
+                if (debugElement != None and numDebug<16):
                     debug = True
                     numDebug = numDebug + 1
 
