@@ -41,7 +41,8 @@
 
 # Set the reference directory for source file relative paths (by default the value is script directory path)
 set origin_dir "."
-source tclScripts/configurationParametersShell_8k5.tcl
+set dcpName [lindex $argv 0]
+source tclScripts/configurationParametersShell_adm-8k5.tcl
 
 # Use origin directory path location variable, if specified in the tcl shell
 if { [info exists ::origin_dir_loc] } {
@@ -311,6 +312,6 @@ current_run -implementation [get_runs impl_1]
 
 puts "INFO: Project created:$projName"
 
-#source tclScripts/synthesizeShell_8k5.tcl
+source tclScripts/synthesizeShell_adm-8k5.tcl
 
 puts "INFO: Synthesized and created checkpoint:$projName"

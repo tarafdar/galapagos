@@ -18,6 +18,17 @@ allInputInterfaces = []
 allFPGAsFinal = []
 allInterfaces = []
 macAddresses = []
+networkBridges=None
+
+
+class networkBridgesObj:
+    bridgeFromLocation = ''
+    bridgeToLocation = ''
+    stream_in_from = ''
+    stream_out_from = ''
+    stream_in_to = ''
+    stream_out_to = ''
+
 
 class connectionObj:
     conn_type = ''
@@ -57,6 +68,8 @@ class kernelObj:
     kernVersion = ''
     properties = []
     name = ''
+    clk = ''
+    aresetn = ''
     def __init__(self):
         self.num=''
         self.interfaces = []
@@ -65,6 +78,8 @@ class kernelObj:
         self.kernVersion = 1.0
         self.properties = []
         self.name = ''
+        self.clk = 'ap_clk'
+        self.aresetn = 'ap_rst_n'
 class packetFormatterObj:
     port = ''
     dest = ''
@@ -121,18 +136,53 @@ def readKernelsFile(logicalKernelsFile):
     global allKernels
     global allSchedulers
     global schedNum
+    global networkBridges
     import xml.etree.ElementTree as ET
     
     tree = ET.parse(logicalKernelsFile)
     logicalCluster = tree.getroot()
 
 
+    bridge = False
+    bridgeFromElement = logicalCluster.find('bridgeFrom')
+    bridgeToElement = logicalCluster.find('bridgeTo')
+    if bridgeFromElement != None and bridgeToElement == None:
+        print "Bridge specified from network but none to network"
+        quit()
+    elif bridgeToElement != None and bridgeFromElement == None:
+        print "Bridge specified to network but none from network"
+        quit()
+    elif bridgeFromElement != None:
+        bridge = True
 
-    for kernelElement in logicalCluster:
+    if bridge:
+        networkBridges = networkBridgesObj()
+        networkBridges.bridgeFromLocation = bridgeFromElement.find("location").text.replace(" ","")
+        networkBridges.bridgeToLocation = bridgeToElement.find("location").text.replace(" ","")
+        networkBridges.stream_in_from = bridgeFromElement.find("inPort").text.replace(" ","")
+        networkBridges.stream_out_from = bridgeFromElement.find("outPort").text.replace(" ","")
+        networkBridges.stream_in_to = bridgeToElement.find("inPort").text.replace(" ","")
+        networkBridges.stream_out_to = bridgeToElement.find("outPort").text.replace(" ","")
+
+
+    for kernelElement in logicalCluster.findall('kernel'):
         kernelName = kernelElement.text.replace(" ", "")
         kernelName = kernelName.replace("\n", "")
         kernelName = kernelName.replace("\t", "")
         num = kernelElement.find('num').text.replace(" ", "")
+        
+        clkElement = kernelElement.find('clk')
+        resetElement = kernelElement.find('aresetn')
+        if clkElement != None:
+            clk = clkElement.text.replace(" ", "")
+            print clk
+        else:
+            clk = ''
+        if resetElement != None:
+            aresetn = resetElement.text.replace(" ", "")
+        else:
+            aresetn = ''
+
         repElement = kernelElement.find('rep')
         #kernType = kernelElement.find('type').text.replace(" ","")
 
@@ -142,6 +192,8 @@ def readKernelsFile(logicalKernelsFile):
             for i in range(1,rep +1):
                 kernel = kernelObj()
                 kernel.name = kernelName
+                kernel.clk = clk
+                kernel.aresetn = aresetn
                 kernel.num = int(num) + i - 1
                 interfaceElementArray = kernelElement.findall('interface')
                 for interfaceElement in interfaceElementArray:
@@ -383,6 +435,7 @@ def redoIOMappings():
 def createLocalFPGA(projectName):
 
     global macAddresses
+    global networkBridges 
     from lxml import etree
 
     index = 0
@@ -401,7 +454,7 @@ def createLocalFPGA(projectName):
             ipElement.append(nameAttribute)
 
             clkAttribute = etree.Element('clk')
-            clkAttribute.text = 'clk'
+            clkAttribute.text = kernel.clk 
             ipElement.append(clkAttribute)
 
             idElement = etree.Element('id')
@@ -413,7 +466,7 @@ def createLocalFPGA(projectName):
             ipElement.append(startAttribute)
 
             resetAttribute = etree.Element('resetn')
-            resetAttribute.text = 'ap_rst_n'
+            resetAttribute.text = kernel.aresetn 
             ipElement.append(resetAttribute)
 
             typeAttribute = etree.Element('type')
@@ -523,7 +576,7 @@ def createLocalFPGA(projectName):
         fpgaFile = dirName + '/fpga.xml'
 
 
-        localFPGAParser.start(dirName, sourceMAC, fpgaFile, fpga.board_name, index, projectName) 
+        localFPGAParser.start(dirName, sourceMAC, fpgaFile, fpga.board_name, index, projectName, networkBridges) 
         index = index+1
         globalConfigFile.write('source ' + dirName + '/' + 'configurationParameters.tcl\n')
         globalConfigFile.write('source hwMiddleware/packetSwitch/localPRCreate.tcl\n')

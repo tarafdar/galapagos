@@ -69,16 +69,16 @@ class IPType:
     kernType = ''
     version = ''
     start = ''
-    clk = []
-    resetn = []
+    clk = '' 
+    resetn = ''
     def __init__(self):
         self.name = ''
         self.kernel = []
         self.kernType = ''
         self.version = ''
         self.start = ''
-        self.clk = []
-        self.resetn = []
+        self.clk = ''
+        self.resetn = ''
 
 def readFPGAFile(localFPGAFile, sourceMAC):
     listIP = []
@@ -134,9 +134,9 @@ def readFPGAFile(localFPGAFile, sourceMAC):
             nameElement = IP.find('name')
             name = nameElement.text.replace(" ", "")
             clkElement = IP.find('clk')
-            clk = clkElement.text
+            clk = clkElement.text.replace(" ", "")
             resetnElement = IP.find('resetn')
-            resetn = resetnElement.text
+            resetn = resetnElement.text.replace(" ", "")
             kernTypeElement = IP.find('type')
             kernType = kernTypeElement.text.replace(" ", "")
             versionElement = IP.find('version')
@@ -150,16 +150,19 @@ def readFPGAFile(localFPGAFile, sourceMAC):
 
 
             kernel = kernelObj()
-            clkArray = clk.split()
-
-            kernel.clk = clkArray
-            resetArray = resetn.split()
+            #clkArray = clk.split()
+            
+            #kernel.clk = clkArray
+            #resetArray = resetn.split()
             kernel.num = num
 
             kernel.kernType = kernType
-            kernel.resetn = resetArray
+            #kernel.resetn = resetArray
             kernel.version = version
 
+
+            kernel.clk = clk
+            kernel.resetn = resetn
             for interfaceElement in interfaceArray:
                 interface = interfaceObj()
                 dirElement = interfaceElement.find('dir')
@@ -211,8 +214,8 @@ def readFPGAFile(localFPGAFile, sourceMAC):
             if found == 0:
                 ipAdd = IPType()
                 ipAdd.name = name
-                ipAdd.clk = clkArray
-                ipAdd.resetn = resetArray
+                ipAdd.clk = clk  
+                ipAdd.resetn = resetn
                 ipAdd.start = start
 
                 listIP.append(ipAdd)
@@ -309,7 +312,7 @@ def makeFPGAIOTables(sourceMAC, schedulerList, listIP, packetFormatterList):
     return localConnections, inputSwitchMasters, inputSwitchSlaves, packetFormatterList
 
 
-def start(outDir_in, sourceMAC_in, FPGA_file, board_name, index, projectName):
+def start(outDir_in, sourceMAC_in, FPGA_file, board_name, index, projectName, networkBridges):
 
     outDir = outDir_in
     sourceMAC = sourceMAC_in
@@ -317,6 +320,6 @@ def start(outDir_in, sourceMAC_in, FPGA_file, board_name, index, projectName):
     localConnections, inputSwitchMasters, inputSwitchSlaves, packetFormatterList = makeFPGAIOTables(sourceMAC, schedulerList, listIP, packetFormatterList)
     sys.path.append('hwMiddleware/packetSwitch/boards/' + board_name)
     import tclFileGenerator
-    tclFileGenerator.makeTCLFiles(outDir, sourceMAC, numExtra, schedulerList, listIP, localConnections, inputSwitchMasters, inputSwitchSlaves, packetFormatterList, str(index), projectName)
+    tclFileGenerator.makeTCLFiles(outDir, sourceMAC, numExtra, schedulerList, listIP, localConnections, inputSwitchMasters, inputSwitchSlaves, packetFormatterList, str(index), projectName, networkBridges)
 
 

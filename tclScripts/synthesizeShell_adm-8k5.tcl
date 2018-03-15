@@ -1,4 +1,4 @@
-source tclScripts/configurationParametersShell_8k5.tcl
+source tclScripts/configurationParametersShell_adm-8k5.tcl
 generate_target all [get_files  shells/projects/$projName/$projName.srcs/sources_1/bd/$prDir/pr.bd]
 export_ip_user_files -of_objects [get_files shells/projects/$projName/$projName.srcs/sources_1/bd/$prDir/pr.bd] -no_script -sync -force -quiet
 create_ip_run [get_files -of_objects [get_fileset sources_1] shells/projects/$projName/$projName.srcs/sources_1/bd/$prDir/pr.bd]
@@ -55,4 +55,5 @@ place_design
 route_design
 update_design -cell pr_wrapper_i/pr_i -black_box
 lock_design -level routing
-write_checkpoint shells/projects/$projName/static_design.dcp 
+
+write_checkpoint shells/projects/$projName/$dcpName

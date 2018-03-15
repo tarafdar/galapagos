@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cluster>
     <node>
-        <board> adm-pcie-8k5 </board>
+        <board> adm-8k5 </board>
         <type> hw </type>
         <kernel> 1 </kernel>
         <kernel> 2 </kernel>
     </node>
     <node>
-        <board> adm-pcie-8k5 </board>
+        <board> adm-8k5 </board>
         <type> hw </type>
         <kernel> 3 </kernel>
         <kernel> 4 </kernel>
