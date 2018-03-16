@@ -13,7 +13,6 @@ all: userIP createCluster pr
 
 createCluster: tclScripts/createCluster.tcl
 
-pr: projects/${PROJECTNAME}/cluster
 
 userIP: ${USERIP_DIR}/* 
 	mkdir -p userIP
@@ -44,7 +43,7 @@ shells/projects/${BOARD}/${DCP}:
 	mkdir -p shells/${BOARD}/dcps
 	cp shells/projects/${BOARD}/${DCP} shells/${BOARD}/dcps
 
-projects/${PROJECTNAME}/cluster: 
+pr: createCluster 
 	vivado -mode tcl -source tclScripts/createCluster.tcl
 	touch projects/${PROJECTNAME}/cluster	
 

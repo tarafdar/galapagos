@@ -4,13 +4,6 @@
         <board> adm-8k5 </board>
         <type> hw </type>
         <kernel> 1 </kernel>
-        <kernel> 2 </kernel>
-    </node>
-    <node>
-        <board> adm-8k5 </board>
-        <type> hw </type>
-        <kernel> 3 </kernel>
-        <kernel> 4 </kernel>
     </node>
     <node>
         <type> sw </type>

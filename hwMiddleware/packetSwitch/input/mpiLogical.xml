@@ -14,7 +14,7 @@
         <clk> aclk </clk>
         <aresetn> aresetn </aresetn>
     </bridgeTo>
-	<kernel> rank1rank1 
+	<kernel> rank1md 
 		<num> 1 </num>
         <rep> 1 </rep>
         <clk> aclk </clk>
@@ -27,48 +27,6 @@
             <direction> out </direction>
             <name> stream_out_V </name>
             <debug/>
-        </interface>
-    </kernel>
-    <kernel> rank2rank2 
-        <num> 2 </num>
-        <rep> 1 </rep>
-        <clk> aclk </clk>
-        <aresetn> aresetn </aresetn>
-        <interface>
-            <direction> in </direction>
-            <name> stream_in_V </name>
-        </interface>
-        <interface>
-            <direction> out </direction>
-            <name> stream_out_V </name>
-        </interface>
-    </kernel>
-    <kernel> rank3rank3 
-        <num> 3 </num>
-        <rep> 1 </rep>
-        <clk> aclk </clk>
-        <aresetn> aresetn </aresetn>
-        <interface>
-            <direction> in </direction>
-            <name> stream_in_V </name>
-        </interface>
-        <interface>
-            <direction> out </direction>
-            <name> stream_out_V </name>
-        </interface>
-    </kernel>
-    <kernel> rank4rank4 
-        <num> 4 </num>
-        <rep> 1 </rep>
-        <clk> aclk </clk>
-        <aresetn> aresetn </aresetn>
-        <interface>
-            <direction> in </direction>
-            <name> stream_in_V </name>
-        </interface>
-        <interface>
-            <direction> out </direction>
-            <name> stream_out_V </name>
         </interface>
     </kernel>
 	<kernel> cpu
