@@ -127,7 +127,7 @@ if {[string equal [get_filesets -quiet sources_1] ""]} {
 # Set IP repository paths
 set obj [get_filesets sources_1]
 #set_property ip_repo_paths {hlsIP_8k5 networkingIPRepo}
-set_property ip_repo_paths {hlsIP_8k5 } [current_project]
+set_property ip_repo_paths {hlsIP_adm-8k5 } [current_project]
 
 # Rebuild user ip_repo's index before adding any source files
 update_ip_catalog -rebuild
@@ -135,12 +135,12 @@ update_ip_catalog -rebuild
 # Set 'sources_1' fileset object
 set obj [get_filesets sources_1]
 set files [list \
- "[file normalize "shells/8k5_shell/srcs/shell.bd"]"\
- "[file normalize "shells/8k5_shell/srcs/shell_wrapper.v"]"\
- "[file normalize "shells/8k5_shell/srcs/pr_wrapper.v"]"\
- "[file normalize "shells/8k5_shell/srcs/shellTop.v"]"\
+ "[file normalize "shells/adm-8k5/srcs/shell.bd"]"\
+ "[file normalize "shells/adm-8k5/srcs/shellTop.v"]"\
 ]
 import_files -norecurse -fileset $obj $files
+ #"[file normalize "shells/adm-8k5/srcs/pr_wrapper.v"]"\
+ #"[file normalize "shells/adm-8k5/srcs/shell_wrapper.v"]"\
 
 # Set 'sources_1' fileset file properties for remote files
 set file "shells/projects/$projName/$projName.srcs/sources_1/bd/srcs/shell.bd"
@@ -187,7 +187,7 @@ if {[string equal [get_filesets -quiet constrs_1] ""]} {
 set obj [get_filesets constrs_1]
 
 # Add/Import constrs file and set constrs file properties
-set file "[file normalize "shells/8k5_shell/constraints/ad_8k5.xdc"]"
+set file "[file normalize "shells/adm-8k5/constraints/ad_8k5.xdc"]"
 set file_imported [import_files -norecurse -fileset $obj $file]
 set file "shells/projects/$projName/$projName.srcs/constrs_1/imports/constraints/ad_8k5.xdc"
 set file [file normalize $file]
@@ -206,7 +206,7 @@ set_property "used_in_synthesis" "1" $file_obj
 
 
 # Add/Import constrs file and set constrs file properties
-set file "[file normalize "shells/8k5_shell/constraints/bitstream.xdc"]"
+set file "[file normalize "shells/adm-8k5/constraints/bitstream.xdc"]"
 set file_imported [import_files -norecurse -fileset $obj $file]
 set file "shells/projects/$projName/$projName.srcs/constrs_1/imports/constraints/bitstream.xdc"
 set file [file normalize $file]
@@ -225,7 +225,7 @@ set_property "used_in_synthesis" "1" $file_obj
 
 
 # Add/Import constrs file and set constrs file properties
-set file "[file normalize "shells/8k5_shell/constraints/pcie.xdc"]"
+set file "[file normalize "shells/adm-8k5/constraints/pcie.xdc"]"
 set file_imported [import_files -norecurse -fileset $obj $file]
 set file "shells/projects/$projName/$projName.srcs/constrs_1/imports/constraints/pcie.xdc"
 set file [file normalize $file]
@@ -244,7 +244,7 @@ set_property "used_in_synthesis" "1" $file_obj
 
 
 # Add/Import constrs file and set constrs file properties
-set file "[file normalize "shells/8k5_shell/constraints/refclk200.xdc"]"
+set file "[file normalize "shells/adm-8k5/constraints/refclk200.xdc"]"
 set file_import [import_files -norecurse -fileset $obj $file]
 set file "shells/projects/$projName/$projName.srcs/constrs_1/imports/constraints/refclk200.xdc"
 set file [file normalize $file]
