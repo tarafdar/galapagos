@@ -53,7 +53,8 @@ if {[string equal [get_filesets -quiet sources_1] ""]} {
 
 # Set IP repository paths
 set obj [get_filesets sources_1]
-set_property  ip_repo_paths  {$origin_dir/hlsIP_$board_name $origin_dir/userIP} [current_project]
+set_property  ip_repo_paths  hlsIP_$board_name [current_project]
+set_property ip_repo_paths [concat [get_property ip_repo_paths [current_project]] {userIP}] [current_project]
 # Rebuild user ip_repo's index before adding any source files
 update_ip_catalog -rebuild
 #---- makes .bd
@@ -82,7 +83,7 @@ wait_on_run pr_synth_1
 make_wrapper -files [get_files projects/$projName/$fpgaNum/$fpgaNum.srcs/sources_1/bd/pr/pr.bd] -top
 add_files -norecurse projects/$projName/$fpgaNum/$fpgaNum.srcs/sources_1/bd/pr/hdl/pr_wrapper.v
 
- Get the list of runs and reset them
+# Get the list of runs and reset them
 set ooc_runs [get_runs -filter {IS_SYNTHESIS} ]
 foreach run $ooc_runs { reset_run $run }
 
@@ -97,7 +98,7 @@ close_project
 set boardName [lindex $argv 1]
 
 open_checkpoint shells/$board_name/dcps/static_routed.dcp
-read_checkpoint -cell pr_wrapper_i/pr_i projects/$projName/$fpgaNum/$fpgaNum.runs/pr_synth_1/pr.dcp
+read_checkpoint -cell pr_i projects/$projName/$fpgaNum/$fpgaNum.runs/pr_synth_1/pr.dcp
 
 
 # foreach cp $checkpoints {

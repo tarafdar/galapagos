@@ -14,7 +14,7 @@
         <clk> aclk </clk>
         <aresetn> aresetn </aresetn>
     </bridgeTo>
-	<kernel> rank1md 
+	<kernel> rank1rank1 
 		<num> 1 </num>
         <rep> 1 </rep>
         <clk> aclk </clk>
