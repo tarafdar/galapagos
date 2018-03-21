@@ -47,8 +47,8 @@ def makeTCLFiles(outDir, sourceMAC, numExtra, schedulerList, listIP, localConnec
 
 
     tclMain.write('create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:axis_rtl:1.0 S_AXIS\n')
-    for i in range(16):
-        tclMain.write('create_bd_intf_port -mode Master -vlnv xilinx.com:interface:axis_rtl:1.0 SLOT_AXIS_' + str(i) +'\n')
+#    for i in range(16):
+#        tclMain.write('create_bd_intf_port -mode Master -vlnv xilinx.com:interface:axis_rtl:1.0 SLOT_AXIS_' + str(i) +'\n')
     tclMain.write('set_property -dict [list CONFIG.TDATA_NUM_BYTES [get_property CONFIG.TDATA_NUM_BYTES [get_bd_intf_pins receiveFifo_inst/S_AXIS]] CONFIG.HAS_TLAST [get_property CONFIG.HAS_TLAST [get_bd_intf_pins receiveFifo_inst/S_AXIS]]] [get_bd_intf_ports S_AXIS]\n')
     tclMain.write('connect_bd_intf_net [get_bd_intf_pins receiveFifo_inst/S_AXIS] [get_bd_intf_ports S_AXIS]\n')
 
@@ -239,40 +239,49 @@ def makeTCLFiles(outDir, sourceMAC, numExtra, schedulerList, listIP, localConnec
                 tclMain.write('CONFIG.M' + schedIndexStr + '_HAS_REGSLICE{1} CONFIG.M' + schedIndexStr + '_FIFO_MODE{1}')
             tclMain.write('] [get_bd_cells sched_inst_' + str(index) + ']\n')
                 
-
-
-    numDebug = 0
     for localConnection in localConnections:
-        if localConnection.port1.kernelInterface.debug == False:
-            tclMain.write('connect_bd_intf_net [get_bd_intf_pins ' + localConnection.port1.kernelName + '/' + localConnection.port1.interface.name + '] ' + '[get_bd_intf_pins ' + localConnection.port2.kernelName + '/' + localConnection.port2.interface.name + ']\n')
-        else:
-            tclMain.write('create_bd_cell -type ip -vlnv xilinx.com:ip:axis_broadcaster:1.1 probe_broadcaster_' + str(numDebug) + '\n')
-            tclMain.write('connect_bd_net [get_bd_ports CLK_DATA] [get_bd_pins probe_broadcaster_' + str(numDebug) + '/aclk]\n')
-            tclMain.write('connect_bd_net [get_bd_ports ARESETN] [get_bd_pins probe_broadcaster_' + str(numDebug) + '/aresetn]\n')
-            tclMain.write('set_property -dict [list CONFIG.M_TDATA_NUM_BYTES {8} CONFIG.S_TDATA_NUM_BYTES {8} CONFIG.TDEST_WIDTH {8} CONFIG.HAS_TLAST {1} CONFIG.M00_TDATA_REMAP {tdata[63:0]} CONFIG.M01_TDATA_REMAP {tdata[63:0]}] [get_bd_cells probe_broadcaster_' + str(numDebug) + ']\n')
-            tclMain.write('connect_bd_intf_net [get_bd_intf_pins ' + localConnection.port1.kernelName + '/' + localConnection.port1.interface.name + '] ' + '[get_bd_intf_pins probe_broadcaster_' + str(numDebug) + '/S_AXIS]\n')
-            tclMain.write('connect_bd_intf_net [get_bd_intf_pins probe_broadcaster_' + str(numDebug)  + '/' + 'M00_AXIS] ' + '[get_bd_intf_port SLOT_AXIS_' + str(numDebug) + ']\n')
-            tclMain.write('connect_bd_intf_net [get_bd_intf_pins probe_broadcaster_' + str(numDebug)  + '/' + 'M01_AXIS] ' + '[get_bd_intf_pins '+  localConnection.port2.kernelName + '/' + localConnection.port2.interface.name + ']\n')
-            numDebug = numDebug + 1
+        tclMain.write('connect_bd_intf_net [get_bd_intf_pins ' + localConnection.port1.kernelName + '/' + localConnection.port1.interface.name + '] ' + '[get_bd_intf_pins ' + localConnection.port2.kernelName + '/' + localConnection.port2.interface.name + ']\n')
 
     index = 1
     for inputSwitchSlave in inputSwitchSlaves:
         indexStr = "%02d"%index
-        if inputSwitchSlave.interface.debug == False:
-            print "false tcl gen"
-            tclMain.write('connect_bd_intf_net [get_bd_intf_pins ' + inputSwitchSlave.kernelName + '/' + inputSwitchSlave.interface.name + '] [get_bd_intf_pins inputSwitch_inst/S' + indexStr + '_AXIS]\n')
+        tclMain.write('connect_bd_intf_net [get_bd_intf_pins ' + inputSwitchSlave.kernelName + '/' + inputSwitchSlave.interface.name + '] [get_bd_intf_pins inputSwitch_inst/S' + indexStr + '_AXIS]\n')
 
-        else:
-            print "true tcl gen"
-            tclMain.write('create_bd_cell -type ip -vlnv xilinx.com:ip:axis_broadcaster:1.1 probe_broadcaster_' + str(numDebug) + '\n')
-            tclMain.write('set_property -dict [list CONFIG.M_TDATA_NUM_BYTES {8} CONFIG.S_TDATA_NUM_BYTES {8} CONFIG.TDEST_WIDTH {8} CONFIG.HAS_TLAST {1} CONFIG.M00_TDATA_REMAP {tdata[63:0]} CONFIG.M01_TDATA_REMAP {tdata[63:0]}] [get_bd_cells probe_broadcaster_' + str(numDebug) + ']\n')
-            tclMain.write('connect_bd_net [get_bd_ports CLK_DATA] [get_bd_pins probe_broadcaster_' + str(numDebug) + '/aclk]\n')
-            tclMain.write('connect_bd_net [get_bd_ports ARESETN] [get_bd_pins probe_broadcaster_' + str(numDebug) + '/aresetn]\n')
-            tclMain.write('connect_bd_intf_net [get_bd_intf_pins ' + inputSwitchSlave.kernelName + '/' + inputSwitchSlave.interface.name + '] ' + '[get_bd_intf_pins probe_broadcaster_' + str(numDebug)  + '/S_AXIS]\n')
-            tclMain.write('connect_bd_intf_net [get_bd_intf_pins probe_broadcaster_' + str(numDebug)  + '/' + 'M00_AXIS] ' + '[get_bd_intf_port SLOT_AXIS_' + str(numDebug) + ']\n')
-            tclMain.write('connect_bd_intf_net [get_bd_intf_pins probe_broadcaster_' + str(numDebug)  + '/' + 'M01_AXIS] ' + '[get_bd_intf_pins '+   'inputSwitch_inst/S' + indexStr + '_AXIS]\n')
-            numDebug = numDebug + 1
         index = index + 1
+
+
+    #numDebug = 0
+    #for localConnection in localConnections:
+    #    if localConnection.port1.kernelInterface.debug == False:
+    #        tclMain.write('connect_bd_intf_net [get_bd_intf_pins ' + localConnection.port1.kernelName + '/' + localConnection.port1.interface.name + '] ' + '[get_bd_intf_pins ' + localConnection.port2.kernelName + '/' + localConnection.port2.interface.name + ']\n')
+    #    else:
+    #        tclMain.write('create_bd_cell -type ip -vlnv xilinx.com:ip:axis_broadcaster:1.1 probe_broadcaster_' + str(numDebug) + '\n')
+    #        tclMain.write('connect_bd_net [get_bd_ports CLK_DATA] [get_bd_pins probe_broadcaster_' + str(numDebug) + '/aclk]\n')
+    #        tclMain.write('connect_bd_net [get_bd_ports ARESETN] [get_bd_pins probe_broadcaster_' + str(numDebug) + '/aresetn]\n')
+    #        tclMain.write('set_property -dict [list CONFIG.M_TDATA_NUM_BYTES {8} CONFIG.S_TDATA_NUM_BYTES {8} CONFIG.TDEST_WIDTH {8} CONFIG.HAS_TLAST {1} CONFIG.M00_TDATA_REMAP {tdata[63:0]} CONFIG.M01_TDATA_REMAP {tdata[63:0]}] [get_bd_cells probe_broadcaster_' + str(numDebug) + ']\n')
+    #        tclMain.write('connect_bd_intf_net [get_bd_intf_pins ' + localConnection.port1.kernelName + '/' + localConnection.port1.interface.name + '] ' + '[get_bd_intf_pins probe_broadcaster_' + str(numDebug) + '/S_AXIS]\n')
+    #        tclMain.write('connect_bd_intf_net [get_bd_intf_pins probe_broadcaster_' + str(numDebug)  + '/' + 'M00_AXIS] ' + '[get_bd_intf_port SLOT_AXIS_' + str(numDebug) + ']\n')
+    #        tclMain.write('connect_bd_intf_net [get_bd_intf_pins probe_broadcaster_' + str(numDebug)  + '/' + 'M01_AXIS] ' + '[get_bd_intf_pins '+  localConnection.port2.kernelName + '/' + localConnection.port2.interface.name + ']\n')
+    #        numDebug = numDebug + 1
+
+    #index = 1
+    #for inputSwitchSlave in inputSwitchSlaves:
+    #    indexStr = "%02d"%index
+    #    if inputSwitchSlave.interface.debug == False:
+    #        print "false tcl gen"
+    #        tclMain.write('connect_bd_intf_net [get_bd_intf_pins ' + inputSwitchSlave.kernelName + '/' + inputSwitchSlave.interface.name + '] [get_bd_intf_pins inputSwitch_inst/S' + indexStr + '_AXIS]\n')
+
+    #    else:
+    #        print "true tcl gen"
+    #        tclMain.write('create_bd_cell -type ip -vlnv xilinx.com:ip:axis_broadcaster:1.1 probe_broadcaster_' + str(numDebug) + '\n')
+    #        tclMain.write('set_property -dict [list CONFIG.M_TDATA_NUM_BYTES {8} CONFIG.S_TDATA_NUM_BYTES {8} CONFIG.TDEST_WIDTH {8} CONFIG.HAS_TLAST {1} CONFIG.M00_TDATA_REMAP {tdata[63:0]} CONFIG.M01_TDATA_REMAP {tdata[63:0]}] [get_bd_cells probe_broadcaster_' + str(numDebug) + ']\n')
+    #        tclMain.write('connect_bd_net [get_bd_ports CLK_DATA] [get_bd_pins probe_broadcaster_' + str(numDebug) + '/aclk]\n')
+    #        tclMain.write('connect_bd_net [get_bd_ports ARESETN] [get_bd_pins probe_broadcaster_' + str(numDebug) + '/aresetn]\n')
+    #        tclMain.write('connect_bd_intf_net [get_bd_intf_pins ' + inputSwitchSlave.kernelName + '/' + inputSwitchSlave.interface.name + '] ' + '[get_bd_intf_pins probe_broadcaster_' + str(numDebug)  + '/S_AXIS]\n')
+    #        tclMain.write('connect_bd_intf_net [get_bd_intf_pins probe_broadcaster_' + str(numDebug)  + '/' + 'M00_AXIS] ' + '[get_bd_intf_port SLOT_AXIS_' + str(numDebug) + ']\n')
+    #        tclMain.write('connect_bd_intf_net [get_bd_intf_pins probe_broadcaster_' + str(numDebug)  + '/' + 'M01_AXIS] ' + '[get_bd_intf_pins '+   'inputSwitch_inst/S' + indexStr + '_AXIS]\n')
+    #        numDebug = numDebug + 1
+    #    index = index + 1
 
     index = 0
     for inputSwitchMaster in inputSwitchMasters:
@@ -335,32 +344,33 @@ def makeTCLFiles(outDir, sourceMAC, numExtra, schedulerList, listIP, localConnec
 
 
 
-    if numDebug < 16:
-        tclMain.write('create_bd_cell -type ip -vlnv xilinx.com:ip:axis_broadcaster:1.1 axis_broadcaster_dummy_0\n')
-        tclMain.write('set_property -dict [list CONFIG.HAS_TLAST.VALUE_SRC USER CONFIG.S_TDATA_NUM_BYTES.VALUE_SRC USER CONFIG.M_TDATA_NUM_BYTES.VALUE_SRC USER CONFIG.HAS_TREADY.VALUE_SRC USER CONFIG.TDEST_WIDTH.VALUE_SRC USER] [get_bd_cells axis_broadcaster_dummy_0]\n')
-        tclMain.write('set_property -dict [list CONFIG.M_TDATA_NUM_BYTES {8} CONFIG.S_TDATA_NUM_BYTES {8} CONFIG.TDEST_WIDTH {0} CONFIG.HAS_TLAST {1} CONFIG.M00_TDATA_REMAP {tdata[63:0]} CONFIG.M01_TDATA_REMAP {tdata[63:0]}] [get_bd_cells axis_broadcaster_dummy_0]\n')
-        tclMain.write('create_bd_cell -type ip -vlnv xilinx.com:ip:axis_broadcaster:1.1 axis_broadcaster_dummy_1\n')
-        tclMain.write('set_property -dict [list CONFIG.HAS_TLAST.VALUE_SRC USER CONFIG.S_TDATA_NUM_BYTES.VALUE_SRC USER CONFIG.M_TDATA_NUM_BYTES.VALUE_SRC USER CONFIG.TDEST_WIDTH.VALUE_SRC USER CONFIG.HAS_TREADY.VALUE_SRC USER] [get_bd_cells axis_broadcaster_dummy_1]\n')
+   # if numDebug < 16:
+   #     tclMain.write('create_bd_cell -type ip -vlnv xilinx.com:ip:axis_broadcaster:1.1 axis_broadcaster_dummy_0\n')
+   #     tclMain.write('set_property -dict [list CONFIG.HAS_TLAST.VALUE_SRC USER CONFIG.S_TDATA_NUM_BYTES.VALUE_SRC USER CONFIG.M_TDATA_NUM_BYTES.VALUE_SRC USER CONFIG.HAS_TREADY.VALUE_SRC USER CONFIG.TDEST_WIDTH.VALUE_SRC USER] [get_bd_cells axis_broadcaster_dummy_0]\n')
+   #     tclMain.write('set_property -dict [list CONFIG.M_TDATA_NUM_BYTES {8} CONFIG.S_TDATA_NUM_BYTES {8} CONFIG.TDEST_WIDTH {0} CONFIG.HAS_TLAST {1} CONFIG.M00_TDATA_REMAP {tdata[63:0]} CONFIG.M01_TDATA_REMAP {tdata[63:0]}] [get_bd_cells axis_broadcaster_dummy_0]\n')
+   #     tclMain.write('create_bd_cell -type ip -vlnv xilinx.com:ip:axis_broadcaster:1.1 axis_broadcaster_dummy_1\n')
+   #     tclMain.write('set_property -dict [list CONFIG.HAS_TLAST.VALUE_SRC USER CONFIG.S_TDATA_NUM_BYTES.VALUE_SRC USER CONFIG.M_TDATA_NUM_BYTES.VALUE_SRC USER CONFIG.TDEST_WIDTH.VALUE_SRC USER CONFIG.HAS_TREADY.VALUE_SRC USER] [get_bd_cells axis_broadcaster_dummy_1]\n')
 
-        tclMain.write('set_property -dict [list CONFIG.NUM_MI {' + str(16 - numDebug) + '} CONFIG.M_TDATA_NUM_BYTES {8} CONFIG.S_TDATA_NUM_BYTES {8} CONFIG.TDEST_WIDTH {8} CONFIG.HAS_TLAST {1} ' )
-        for broadcastDebug in range(0, 16 - numDebug):
-            broadcastDebugStr = "%02d"%broadcastDebug
-            tclMain.write('CONFIG.M' + broadcastDebugStr + '_TDATA_REMAP {tdata[63:0]} ')
-        tclMain.write('] [get_bd_cells axis_broadcaster_dummy_1]\n')
-        tclMain.write('connect_bd_intf_net [get_bd_intf_pins sendFifo_inst/M_AXIS] [get_bd_intf_pins axis_broadcaster_dummy_0/S_AXIS]\n')
-        tclMain.write('connect_bd_intf_net [get_bd_intf_pins axis_broadcaster_dummy_0/M00_AXIS] [get_bd_intf_ports M_AXIS]\n')
-        tclMain.write('connect_bd_intf_net [get_bd_intf_pins axis_broadcaster_dummy_0/M01_AXIS] [get_bd_intf_pins axis_broadcaster_dummy_1/S_AXIS]\n')
-        debugIndex = 0
-        for broadcastDebug in range(numDebug, 16):
-            broadcastDebugStr = "%02d"%debugIndex
-            tclMain.write('connect_bd_intf_net [get_bd_intf_pins axis_broadcaster_dummy_1/M' + broadcastDebugStr +  '_AXIS] [get_bd_intf_ports SLOT_AXIS_' + str(broadcastDebug) +  ']\n')
-            debugIndex = debugIndex + 1
-        tclMain.write('connect_bd_net [get_bd_ports CLK_DATA] [get_bd_pins axis_broadcaster_dummy_0/aclk]\n')
-        tclMain.write('connect_bd_net [get_bd_ports ARESETN] [get_bd_pins axis_broadcaster_dummy_0/aresetn]\n')
-        tclMain.write('connect_bd_net [get_bd_ports CLK_DATA] [get_bd_pins axis_broadcaster_dummy_1/aclk]\n')
-        tclMain.write('connect_bd_net [get_bd_ports ARESETN] [get_bd_pins axis_broadcaster_dummy_1/aresetn]\n')
-    else:
-        tclMain.write('connect_bd_intf_net [get_bd_intf_pins sendFifo_inst/M_AXIS] [get_bd_intf_ports M_AXIS]\n')
+   #     tclMain.write('set_property -dict [list CONFIG.NUM_MI {' + str(16 - numDebug) + '} CONFIG.M_TDATA_NUM_BYTES {8} CONFIG.S_TDATA_NUM_BYTES {8} CONFIG.TDEST_WIDTH {8} CONFIG.HAS_TLAST {1} ' )
+   #     for broadcastDebug in range(0, 16 - numDebug):
+   #         broadcastDebugStr = "%02d"%broadcastDebug
+   #         tclMain.write('CONFIG.M' + broadcastDebugStr + '_TDATA_REMAP {tdata[63:0]} ')
+   #     tclMain.write('] [get_bd_cells axis_broadcaster_dummy_1]\n')
+   #     tclMain.write('connect_bd_intf_net [get_bd_intf_pins sendFifo_inst/M_AXIS] [get_bd_intf_pins axis_broadcaster_dummy_0/S_AXIS]\n')
+   #     tclMain.write('connect_bd_intf_net [get_bd_intf_pins axis_broadcaster_dummy_0/M00_AXIS] [get_bd_intf_ports M_AXIS]\n')
+   #     tclMain.write('connect_bd_intf_net [get_bd_intf_pins axis_broadcaster_dummy_0/M01_AXIS] [get_bd_intf_pins axis_broadcaster_dummy_1/S_AXIS]\n')
+   #     debugIndex = 0
+   #     for broadcastDebug in range(numDebug, 16):
+   #         broadcastDebugStr = "%02d"%debugIndex
+   #         tclMain.write('connect_bd_intf_net [get_bd_intf_pins axis_broadcaster_dummy_1/M' + broadcastDebugStr +  '_AXIS] [get_bd_intf_ports SLOT_AXIS_' + str(broadcastDebug) +  ']\n')
+   #         debugIndex = debugIndex + 1
+   #     tclMain.write('connect_bd_net [get_bd_ports CLK_DATA] [get_bd_pins axis_broadcaster_dummy_0/aclk]\n')
+   #     tclMain.write('connect_bd_net [get_bd_ports ARESETN] [get_bd_pins axis_broadcaster_dummy_0/aresetn]\n')
+   #     tclMain.write('connect_bd_net [get_bd_ports CLK_DATA] [get_bd_pins axis_broadcaster_dummy_1/aclk]\n')
+   #     tclMain.write('connect_bd_net [get_bd_ports ARESETN] [get_bd_pins axis_broadcaster_dummy_1/aresetn]\n')
+   # else:
+   #     tclMain.write('connect_bd_intf_net [get_bd_intf_pins sendFifo_inst/M_AXIS] [get_bd_intf_ports M_AXIS]\n')
 
+    tclMain.write('connect_bd_intf_net [get_bd_intf_pins sendFifo_inst/M_AXIS] [get_bd_intf_ports M_AXIS]\n')
 
 
