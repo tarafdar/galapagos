@@ -170,7 +170,8 @@ def readKernelsFile(logicalKernelsFile):
         kernelName = kernelName.replace("\n", "")
         kernelName = kernelName.replace("\t", "")
         num = kernelElement.find('num').text.replace(" ", "")
-        
+       
+        print "kernelname is " + kernelName
         clkElement = kernelElement.find('clk')
         resetElement = kernelElement.find('aresetn')
         if clkElement != None:
@@ -195,6 +196,8 @@ def readKernelsFile(logicalKernelsFile):
                 kernel.clk = clk
                 kernel.aresetn = aresetn
                 kernel.num = int(num) + i - 1
+                print "kernelName is "  + kernelName
+                print "kernelnum is "  + str(kernel.num)
                 interfaceElementArray = kernelElement.findall('interface')
                 for interfaceElement in interfaceElementArray:
                     interface = interfaceObj()
@@ -202,7 +205,7 @@ def readKernelsFile(logicalKernelsFile):
                     interface.name = interfaceElement.find('name').text.replace(" ", "")
                     interface.tdest = None
                     interface.tdest = kernel.num
-
+                    print "interface is " + interface.name
                     if interface.direction == 'out':
                         debugNode = interfaceElement.find('debug')
                         if debugNode != None:
@@ -242,7 +245,7 @@ def readKernelsFile(logicalKernelsFile):
 
                 allKernels.append(kernel)
 
-
+    print allKernels
 
 
 def readFPGAMap(mapFile, macFile):
@@ -266,7 +269,8 @@ def readFPGAMap(mapFile, macFile):
 
     for nodeElement in mapCluster:
         typeNode = nodeElement.find('type').text.replace(" ", "")
-        
+       
+        print "typenode is " + typeNode
         boardNode = nodeElement.find('board')
         kernelElementArray = nodeElement.findall('kernel')
         fpga = fpgaObj()
@@ -286,6 +290,7 @@ def readFPGAMap(mapFile, macFile):
         allFPGAs.append(fpga)
         fpgaIndex = fpgaIndex + 1
         
+    print allFPGAs
 
     for scheduler in allSchedulers:
         fpgaArray = []
@@ -317,7 +322,8 @@ def createGlobalInterfaceMap():
                 elif interface.direction == 'out':
                     allOutputInterfaces.append(interface)
                     fpga.globalOut.append(interface)
-
+        print "fpga " 
+        print fpga
 
     fpgaIndex = 0
     for fpga in allFPGAs:
@@ -343,10 +349,9 @@ def createGlobalInterfaceMap():
 
             else:
                 outInterface.conn_type = 'global'
-            #allFPGAs[fpgaIndex].globalOut2.append(outNew)
-            #allFPGAs[fpgaIndex].globalOut[outIndex] = copy.deepcopy(outNew)
             outIndex = outIndex + 1
         fpgaIndex = fpgaIndex+1
+
 def placeSchedulers():
     global allInputInterfaces
     global allSchedulers
@@ -432,7 +437,7 @@ def redoIOMappings():
     
 
 
-def createLocalFPGA(projectName):
+def createLocalFPGA(projectName, plus16):
 
     global macAddresses
     global networkBridges 
@@ -576,7 +581,7 @@ def createLocalFPGA(projectName):
         fpgaFile = dirName + '/fpga.xml'
 
 
-        localFPGAParser.start(dirName, sourceMAC, fpgaFile, fpga.board_name, index, projectName, networkBridges) 
+        localFPGAParser.start(dirName, sourceMAC, fpgaFile, fpga.board_name, index, projectName, networkBridges, len(allFPGAs), plus16) 
         index = index+1
         globalConfigFile.write('source ' + dirName + '/' + 'configurationParameters.tcl\n')
         globalConfigFile.write('source hwMiddleware/packetSwitch/localPRCreate.tcl\n')
@@ -595,6 +600,7 @@ logicalFile = None
 mapFile = None
 macFile = None
 projectName = None
+plus16 = 1 
 
 for o, a in opts:
     if o in ("--logicalFile"):
@@ -605,7 +611,8 @@ for o, a in opts:
         macFile = a
     elif o in ("--projectName"):
         projectName= a
-
+    elif o in ("--plus16"):
+        plus16 = int(a)
 
 
 print logicalFile, mapFile, macFile, projectName
@@ -617,4 +624,4 @@ readFPGAMap(mapFile, macFile)
 createGlobalInterfaceMap()
 placeSchedulers()
 redoIOMappings()
-createLocalFPGA(projectName)
+createLocalFPGA(projectName, plus16)

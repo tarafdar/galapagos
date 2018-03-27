@@ -6,7 +6,26 @@ import os
 
 
 
-def makeTCLFiles(outDir, sourceMAC, numExtra, schedulerList, listIP, localConnections, inputSwitchMasters, inputSwitchSlaves, packetFormatterList, index, projectName, networkBridges):
+def createPacketFormatter(index, packetFormatter, tclMain, networkBridges):
+    destMAC_int = int(packetFormatter.dest.replace(":", ""), 16)
+    tclMain.write('create_bd_cell -type ip -vlnv xilinx.com:hls:packetFormatter_hardcode_64:1.0 packetFormatter_inst_' + str(index) +'\n')
+    tclMain.write('create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 pf_dst_inst_' + str(index) + '\n')
+    if networkBridges != None:
+        tclMain.write('create_bd_cell -type ip -vlnv xilinx.com:hls:' + networkBridges.bridgeToLocation + ':1.0 bridgeTo_inst_' + str(index) +'\n')
+        tclMain.write('connect_bd_net [get_bd_nets CLK_DATA_1] [get_bd_ports CLK_DATA] [get_bd_pins bridgeTo_inst_' + str(index) + '/aclk]\n')
+        tclMain.write('connect_bd_net -net [get_bd_nets ARESETN_1] [get_bd_ports ARESETN] [get_bd_pins bridgeTo_inst_' + str(index) + '/aresetn] \n')
+
+    tclMain.write('set_property -dict [list CONFIG.CONST_WIDTH {48}] [get_bd_cells pf_dst_inst_' + str(index) + ']\n')
+    tclMain.write('set_property -dict [list CONFIG.CONST_VAL {' + str(destMAC_int) + '}] [get_bd_cells pf_dst_inst_' + str(index) +']\n')
+    tclMain.write('connect_bd_net [get_bd_pins pf_dst_inst_' + str(index) + '/dout] [get_bd_pins packetFormatter_inst_' + str(index) + '/eth_dst_V]\n')
+    tclMain.write('connect_bd_net [get_bd_nets CLK_DATA_1] [get_bd_ports CLK_DATA] [get_bd_pins packetFormatter_inst_' + str(index) + '/ap_clk]\n')
+    tclMain.write('connect_bd_net -net [get_bd_nets ARESETN_1] [get_bd_ports ARESETN] [get_bd_pins packetFormatter_inst_' + str(index) + '/ap_rst_n] \n')
+    tclMain.write('connect_bd_net [get_bd_pins src_inst/dout] [get_bd_pins packetFormatter_inst_' + str(index) + '/eth_src_V] [get_bd_pins src_inst/dout]\n')
+    
+
+
+
+def makeTCLFiles(outDir, sourceMAC, numExtra, schedulerList, listIP, localConnections, inputSwitchMasters, inputSwitchSlaves, packetFormatterList, index, projectName, networkBridges, numFPGAs, plus16, fpgaIndex):
     sourceMAC_int = int(sourceMAC.replace(":", ""), 16)
 
 
@@ -33,6 +52,16 @@ def makeTCLFiles(outDir, sourceMAC, numExtra, schedulerList, listIP, localConnec
 
     tclMain.write('set_property -dict [list CONFIG.CONST_VAL {' + str(sourceMAC_int) + '}] [get_bd_cells src_inst]\n')
     tclMain.write('create_bd_cell -type ip -vlnv xilinx.com:ip:axis_interconnect:2.1 inputSwitch_inst\n')
+
+    if plus16:
+        tclMain.write('create_bd_cell -type ip -vlnv xilinx.com:ip:axis_interconnect:2.1 fpgaSwitch_inst\n')
+
+        if(len(packetFormatterList[fpgaIndex]) > 0):
+            tclMain.write('create_bd_cell -type ip -vlnv xilinx.com:ip:axis_interconnect:2.1 outputFpgaSwitch_inst\n')
+            tclMain.write('set_property -dict [list CONFIG.NUM_SI {' + str(len(packetFormatterList[fpgaIndex])) + '}  CONFIG.NUM_MI {1} CONFIG.ARB_ON_MAX_XFERS {0} CONFIG.ARB_ON_TLAST {1} CONFIG.ARB_ALGORITHM {3}] [get_bd_cells outputFpgaSwitch_inst]\n')
+            tclMain.write('connect_bd_net [get_bd_ports CLK_DATA] [get_bd_pins outputFpgaSwitch_inst/M00_AXIS_ACLK]\n')
+            tclMain.write('connect_bd_net [get_bd_ports ARESETN] [get_bd_pins outputFpgaSwitch_inst/M00_AXIS_ARESETN]\n')
+
     tclMain.write('create_bd_cell -type ip -vlnv xilinx.com:ip:axis_interconnect:2.1 outputSwitch_inst\n')
     tclMain.write('create_bd_cell -type ip -vlnv xilinx.com:ip:axis_data_fifo:1.1 receiveFifo_inst\n')
     tclMain.write('create_bd_cell -type ip -vlnv xilinx.com:hls:fireWall64:1.0 fireWall_inst\n')
@@ -47,8 +76,6 @@ def makeTCLFiles(outDir, sourceMAC, numExtra, schedulerList, listIP, localConnec
 
 
     tclMain.write('create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:axis_rtl:1.0 S_AXIS\n')
-#    for i in range(16):
-#        tclMain.write('create_bd_intf_port -mode Master -vlnv xilinx.com:interface:axis_rtl:1.0 SLOT_AXIS_' + str(i) +'\n')
     tclMain.write('set_property -dict [list CONFIG.TDATA_NUM_BYTES [get_property CONFIG.TDATA_NUM_BYTES [get_bd_intf_pins receiveFifo_inst/S_AXIS]] CONFIG.HAS_TLAST [get_property CONFIG.HAS_TLAST [get_bd_intf_pins receiveFifo_inst/S_AXIS]]] [get_bd_intf_ports S_AXIS]\n')
     tclMain.write('connect_bd_intf_net [get_bd_intf_pins receiveFifo_inst/S_AXIS] [get_bd_intf_ports S_AXIS]\n')
 
@@ -59,9 +86,15 @@ def makeTCLFiles(outDir, sourceMAC, numExtra, schedulerList, listIP, localConnec
 
     if networkBridges != None:
         tclMain.write('connect_bd_intf_net [get_bd_intf_pins fireWall2_inst/stream_out] [get_bd_intf_pins bridgeFrom_inst/' +  networkBridges.stream_in_from + ']\n')
-        tclMain.write('connect_bd_intf_net [get_bd_intf_pins bridgeFrom_inst/' + networkBridges.stream_out_from + '] [get_bd_intf_pins inputSwitch_inst/S00_AXIS]\n')
+        if plus16:
+            tclMain.write('connect_bd_intf_net [get_bd_intf_pins bridgeFrom_inst/' + networkBridges.stream_out_from + '] [get_bd_intf_pins fpgaSwitch_inst/S00_AXIS]\n')
+        else:
+            tclMain.write('connect_bd_intf_net [get_bd_intf_pins bridgeFrom_inst/' + networkBridges.stream_out_from + '] [get_bd_intf_pins inputSwitch_inst/S00_AXIS]\n')
     else:
-        tclMain.write('connect_bd_intf_net [get_bd_intf_pins fireWall2_inst/stream_out] [get_bd_intf_pins inputSwitch_inst/S00_AXIS]\n')
+        if plus16:
+            tclMain.write('connect_bd_intf_net [get_bd_intf_pins fireWall2_inst/stream_out] [get_bd_intf_pins fpgaSwitch_inst/S00_AXIS]\n')
+        else:
+            tclMain.write('connect_bd_intf_net [get_bd_intf_pins fireWall2_inst/stream_out] [get_bd_intf_pins inputSwitch_inst/S00_AXIS]\n')
 
 
 
@@ -91,6 +124,14 @@ def makeTCLFiles(outDir, sourceMAC, numExtra, schedulerList, listIP, localConnec
     tclMain.write('connect_bd_net -net [get_bd_nets CLK_DATA_1] [get_bd_ports CLK_DATA] [get_bd_pins outputSwitch_inst/aclk]\n')
     tclMain.write('connect_bd_net -net [get_bd_nets ARESETN_1] [get_bd_ports ARESETN] [get_bd_pins outputSwitch_inst/aresetn]\n')
 
+    if plus16:
+        tclMain.write('connect_bd_net -net [get_bd_nets CLK_DATA_1] [get_bd_ports CLK_DATA] [get_bd_pins fpgaSwitch_inst/aclk]\n')
+        tclMain.write('connect_bd_net -net [get_bd_nets ARESETN_1] [get_bd_ports ARESETN] [get_bd_pins fpgaSwitch_inst/aresetn]\n')
+        if(len(packetFormatterList[fpgaIndex])>0):
+            tclMain.write('connect_bd_net -net [get_bd_nets CLK_DATA_1] [get_bd_ports CLK_DATA] [get_bd_pins outputFpgaSwitch_inst/aclk]\n')
+            tclMain.write('connect_bd_net -net [get_bd_nets ARESETN_1] [get_bd_ports ARESETN] [get_bd_pins outputFpgaSwitch_inst/aresetn]\n')
+
+
     tclMain.write('connect_bd_net -net [get_bd_nets ARESETN_1] [get_bd_ports ARESETN] [get_bd_pins receiveFifo_inst/s_axis_aresetn]\n')
     tclMain.write('connect_bd_net -net [get_bd_nets CLK_DATA_1] [get_bd_ports CLK_DATA] [get_bd_pins receiveFifo_inst/s_axis_aclk]\n')
     tclMain.write('connect_bd_net -net [get_bd_nets ARESETN_1] [get_bd_ports ARESETN] [get_bd_pins sendFifo_inst/s_axis_aresetn]\n')
@@ -98,7 +139,6 @@ def makeTCLFiles(outDir, sourceMAC, numExtra, schedulerList, listIP, localConnec
 
     tclMain.write('create_bd_intf_port -mode Master -vlnv xilinx.com:interface:axis_rtl:1.0 M_AXIS\n')
 
-#    tclMain.write('startgroup\n')
 
     for ip in listIP:
         instName = ip.name + "_inst_"
@@ -115,61 +155,106 @@ def makeTCLFiles(outDir, sourceMAC, numExtra, schedulerList, listIP, localConnec
             tclMain.write('set_property -dict [list CONFIG.CONST_WIDTH {32}] [get_bd_cells id_' + str(kernel.num) + ']\n')
             tclMain.write('set_property -dict [list CONFIG.CONST_VAL {' + str(kernel.num) + '}] [get_bd_cells id_' + str(kernel.num) + ']\n')
             index = index + 1
-#    tclMain.write('endgroup\n')
 
-
-#    tclMain.write('startgroup\n')
 
     index = 0
-    for packetFormatter in packetFormatterList:
+
+    if plus16:
+        pflTotal = packetFormatterList[fpgaIndex]
+    else:
+        pflTotal = packetFormatterList
+
+    print "packetformatter at index "
+    print packetFormatterList[fpgaIndex]
+
+    for packetFormatter in pflTotal:
         destMAC_int = int(packetFormatter.dest.replace(":", ""), 16)
-        tclMain.write('create_bd_cell -type ip -vlnv xilinx.com:hls:packetFormatter_hardcode_64:1.0 packetFormatter_inst_' + str(index) +'\n')
-        tclMain.write('create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 pf_dst_inst_' + str(index) + '\n')
-        if networkBridges != None:
-            tclMain.write('create_bd_cell -type ip -vlnv xilinx.com:hls:' + networkBridges.bridgeToLocation + ':1.0 bridgeTo_inst_' + str(index) +'\n')
-            tclMain.write('connect_bd_net [get_bd_nets CLK_DATA_1] [get_bd_ports CLK_DATA] [get_bd_pins bridgeTo_inst_' + str(index) + '/aclk]\n')
-            tclMain.write('connect_bd_net -net [get_bd_nets ARESETN_1] [get_bd_ports ARESETN] [get_bd_pins bridgeTo_inst_' + str(index) + '/aresetn] \n')
-
-        tclMain.write('set_property -dict [list CONFIG.CONST_WIDTH {48}] [get_bd_cells pf_dst_inst_' + str(index) + ']\n')
-        tclMain.write('set_property -dict [list CONFIG.CONST_VAL {' + str(destMAC_int) + '}] [get_bd_cells pf_dst_inst_' + str(index) +']\n')
-        tclMain.write('connect_bd_net [get_bd_pins pf_dst_inst_' + str(index) + '/dout] [get_bd_pins packetFormatter_inst_' + str(index) + '/eth_dst_V]\n')
-        tclMain.write('connect_bd_net [get_bd_nets CLK_DATA_1] [get_bd_ports CLK_DATA] [get_bd_pins packetFormatter_inst_' + str(index) + '/ap_clk]\n')
-        tclMain.write('connect_bd_net -net [get_bd_nets ARESETN_1] [get_bd_ports ARESETN] [get_bd_pins packetFormatter_inst_' + str(index) + '/ap_rst_n] \n')
-        tclMain.write('connect_bd_net [get_bd_pins src_inst/dout] [get_bd_pins packetFormatter_inst_' + str(index) + '/eth_src_V] [get_bd_pins src_inst/dout]\n')
+        createPacketFormatter(index, packetFormatter, tclMain, networkBridges)
         index = index + 1
+        print "blah blah"
+        print packetFormatter
+    if plus16:
+        for i in range(0, len(packetFormatterList)):
+             if i != fpgaIndex:
+                print packetFormatterList
+                packetFormatter = packetFormatterList[i][0]
+                createPacketFormatter(index, packetFormatter, tclMain, networkBridges)
+                index = index + 1
 
 
-#    tclMain.write('endgroup\n')
-#    tclMain.write('startgroup\n')
-#    tclMain.write('set_property -dict [list CONFIG.TDATA_NUM_BYTES {8} CONFIG.HAS_TLAST {1} CONFIG.HAS_TKEEP {1}] [get_bd_cells outputSwitch_inst]\nset_property -dict [list CONFIG.TDATA_NUM_BYTES {8} CONFIG.HAS_TLAST {1}] [get_bd_cells outputSwitch_inst]\nset_property -dict [list CONFIG.ARB_ON_MAX_XFERS {0} CONFIG.ARB_ON_TLAST {1}] [get_bd_cells outputSwitch_inst]\nendgroup\n')
-    tclMain.write('set_property -dict [list CONFIG.NUM_SI {' + str(len(packetFormatterList) + 1) + '}  CONFIG.NUM_MI {1} CONFIG.ARB_ON_MAX_XFERS {0} CONFIG.ARB_ON_TLAST {1} CONFIG.ARB_ALGORITHM {3}] [get_bd_cells outputSwitch_inst]\n')
 
-    for indexPF in range(0, len(packetFormatterList) + 1):
-        indexPFStr = "%02d"%indexPF
-        tclMain.write('connect_bd_net [get_bd_ports CLK_DATA] [get_bd_pins outputSwitch_inst/S' + indexPFStr + '_AXIS_ACLK]\n')
-        tclMain.write('connect_bd_net [get_bd_ports ARESETN] [get_bd_pins outputSwitch_inst/S' + indexPFStr + '_AXIS_ARESETN]\n')
+    if plus16 and (len(packetFormatterList[fpgaIndex]) == 0):
+        tclMain.write('set_property -dict [list CONFIG.NUM_SI {' + str(len(packetFormatterList)) + '}  CONFIG.NUM_MI {1} CONFIG.ARB_ON_MAX_XFERS {0} CONFIG.ARB_ON_TLAST {1} CONFIG.ARB_ALGORITHM {3}] [get_bd_cells outputSwitch_inst]\n')
+    else:
+        tclMain.write('set_property -dict [list CONFIG.NUM_SI {' + str(len(packetFormatterList) + 1) + '}  CONFIG.NUM_MI {1} CONFIG.ARB_ON_MAX_XFERS {0} CONFIG.ARB_ON_TLAST {1} CONFIG.ARB_ALGORITHM {3}] [get_bd_cells outputSwitch_inst]\n')
+    
+
+    if plus16:
+        for indexPF in range(0, len(packetFormatterList[fpgaIndex])):
+            indexPFStr = "%02d"%indexPF
+            tclMain.write('connect_bd_net [get_bd_ports CLK_DATA] [get_bd_pins outputFpgaSwitch_inst/S' + indexPFStr + '_AXIS_ACLK]\n')
+            tclMain.write('connect_bd_net [get_bd_ports ARESETN] [get_bd_pins outputFpgaSwitch_inst/S' + indexPFStr + '_AXIS_ARESETN]\n')
+
+        numAxisOS = len(packetFormatterList) 
+        if(len(packetFormatterList[fpgaIndex]) > 0):
+            numAxisOS = numAxisOS + 1
+            
+        for indexPF in range(0, numAxisOS):
+            indexPFStr = "%02d"%indexPF
+            tclMain.write('connect_bd_net [get_bd_ports CLK_DATA] [get_bd_pins outputSwitch_inst/S' + indexPFStr + '_AXIS_ACLK]\n')
+            tclMain.write('connect_bd_net [get_bd_ports ARESETN] [get_bd_pins outputSwitch_inst/S' + indexPFStr + '_AXIS_ARESETN]\n')
+
+
+    else:
+        for indexPF in range(0, len(packetFormatterList) + 1):
+            indexPFStr = "%02d"%indexPF
+            tclMain.write('connect_bd_net [get_bd_ports CLK_DATA] [get_bd_pins outputSwitch_inst/S' + indexPFStr + '_AXIS_ACLK]\n')
+            tclMain.write('connect_bd_net [get_bd_ports ARESETN] [get_bd_pins outputSwitch_inst/S' + indexPFStr + '_AXIS_ARESETN]\n')
 
     tclMain.write('connect_bd_net [get_bd_ports CLK_DATA] [get_bd_pins outputSwitch_inst/M00_AXIS_ACLK]\n')
     tclMain.write('connect_bd_net [get_bd_ports ARESETN] [get_bd_pins outputSwitch_inst/M00_AXIS_ARESETN]\n')
   
 
-    #tclMain.write('set_property -dict [list CONFIG.NUM_SI {' + str(len(inputSwitchSlaves) + 1) + '} CONFIG.NUM_MI {' + str(len(inputSwitchMasters) + numExtra + len(schedulerList)) + '} CONFIG.ARB_ON_MAX_XFERS {0} CONFIG.ARB_ON_TLAST{1} CONFIG.ARB_ALGORITHM{3}] [get_bd_cells inputSwitch_inst]\nset_property -dict [list CONFIG.HAS_TLAST.VALUE_SRC USER CONFIG.TDATA_NUM_BYTES.VALUE_SRC USER] [get_bd_cells inputSwitch_inst]\nset_property -dict [list CONFIG.TDATA_NUM_BYTES {8} CONFIG.HAS_TLAST {1}] [get_bd_cells inputSwitch_inst]\nset_property -dict [list ')
-    tclMain.write('set_property -dict [list CONFIG.NUM_SI {' + str(len(inputSwitchSlaves) + 1) + '} CONFIG.NUM_MI {' + str(len(inputSwitchMasters) + numExtra + len(schedulerList)) + '} CONFIG.ARB_ON_MAX_XFERS {0} CONFIG.ARB_ON_TLAST {1} CONFIG.ARB_ALGORITHM {3}] [get_bd_cells inputSwitch_inst]\n')
+
+    if plus16:
+        tclMain.write('set_property -dict [list CONFIG.NUM_SI {' + str(len(inputSwitchSlaves) + 1) + '} CONFIG.NUM_MI {' + str(len(packetFormatterList)) + '} CONFIG.ARB_ON_MAX_XFERS {0} CONFIG.ARB_ON_TLAST {1} CONFIG.ARB_ALGORITHM {3}] [get_bd_cells fpgaSwitch_inst]\n')
+        tclMain.write('set_property -dict [list CONFIG.NUM_SI {1} CONFIG.NUM_MI {' + str(len(inputSwitchMasters) + len(schedulerList)) + '} CONFIG.ARB_ON_MAX_XFERS {0} CONFIG.ARB_ON_TLAST {1} CONFIG.ARB_ALGORITHM {3}] [get_bd_cells inputSwitch_inst]\n')
+    else:
+        tclMain.write('set_property -dict [list CONFIG.NUM_SI {' + str(len(inputSwitchSlaves) + 1) + '} CONFIG.NUM_MI {' + str(len(inputSwitchMasters) + numExtra + len(schedulerList)) + '} CONFIG.ARB_ON_MAX_XFERS {0} CONFIG.ARB_ON_TLAST {1} CONFIG.ARB_ALGORITHM {3}] [get_bd_cells inputSwitch_inst]\n')
+
+    if plus16:
+        for indexSS in range(0, len(inputSwitchSlaves) + 1):
+            indexSSStr = "%02d"%indexSS
+            tclMain.write('connect_bd_net [get_bd_ports CLK_DATA] [get_bd_pins fpgaSwitch_inst/S' + indexSSStr + '_AXIS_ACLK]\n')
+            tclMain.write('connect_bd_net [get_bd_ports ARESETN] [get_bd_pins fpgaSwitch_inst/S' + indexSSStr + '_AXIS_ARESETN]\n')
+        
+        tclMain.write('connect_bd_net [get_bd_ports ARESETN] [get_bd_pins inputSwitch_inst/S00_AXIS_ARESETN]\n')
+        tclMain.write('connect_bd_net [get_bd_ports CLK_DATA] [get_bd_pins inputSwitch_inst/S00_AXIS_ACLK]\n')
+    else: 
+        for indexSS in range(0, len(inputSwitchSlaves) + 1):
+            indexSSStr = "%02d"%indexSS
+            tclMain.write('connect_bd_net [get_bd_ports CLK_DATA] [get_bd_pins inputSwitch_inst/S' + indexSSStr + '_AXIS_ACLK]\n')
+            tclMain.write('connect_bd_net [get_bd_ports ARESETN] [get_bd_pins inputSwitch_inst/S' + indexSSStr + '_AXIS_ARESETN]\n')
 
 
-    for indexSS in range(0, len(inputSwitchSlaves) + 1):
-        indexSSStr = "%02d"%indexSS
-        tclMain.write('connect_bd_net [get_bd_ports CLK_DATA] [get_bd_pins inputSwitch_inst/S' + indexSSStr + '_AXIS_ACLK]\n')
-        tclMain.write('connect_bd_net [get_bd_ports ARESETN] [get_bd_pins inputSwitch_inst/S' + indexSSStr + '_AXIS_ARESETN]\n')
+    if plus16:
+        smBound = len(inputSwitchMasters) + len(schedulerList)
+    else:
+        smBound = len(inputSwitchMasters) + numExtra + len(schedulerList)
 
-
-
-    for indexSM in range(0, len(inputSwitchMasters) + numExtra + len(schedulerList)):
+    for indexSM in range(0, smBound):
         indexSMStr = "%02d"%indexSM
         tclMain.write('connect_bd_net [get_bd_ports CLK_DATA] [get_bd_pins inputSwitch_inst/M' + indexSMStr + '_AXIS_ACLK]\n')
         tclMain.write('connect_bd_net [get_bd_ports ARESETN] [get_bd_pins inputSwitch_inst/M' + indexSMStr + '_AXIS_ARESETN]\n')
 
+    if plus16:
+        for indexSM in range(0, len(packetFormatterList)):
+            indexSMStr = "%02d"%indexSM
+            tclMain.write('connect_bd_net [get_bd_ports CLK_DATA] [get_bd_pins fpgaSwitch_inst/M' + indexSMStr + '_AXIS_ACLK]\n')
+            tclMain.write('connect_bd_net [get_bd_ports ARESETN] [get_bd_pins fpgaSwitch_inst/M' + indexSMStr + '_AXIS_ARESETN]\n')
 
+
+    
 
 
     tclMain.write('set_property -dict [list ')
@@ -182,21 +267,36 @@ def makeTCLFiles(outDir, sourceMAC, numExtra, schedulerList, listIP, localConnec
         indexStr = "%02d"%index
         tclMain.write('CONFIG.M' + indexStr + '_AXIS_BASETDEST {'+ format(int(dest), '#010x') + '} CONFIG.M' + indexStr + '_AXIS_HIGHTDEST {' + format(int(dest), '#010x') + '} ')
         index = index + 1
-
-
-    for packetFormatter in packetFormatterList:
-        if packetFormatter.port.kernelName == None:
-            indexStr = "%02d"%index
-            dest = packetFormatter.port.kernelInterface.tdest.replace(" ","")
-            tclMain.write('CONFIG.M' + indexStr + '_AXIS_BASETDEST {'+ format(int(dest), '#010x') + '} CONFIG.M' + indexStr + '_AXIS_HIGHTDEST {' + format(int(dest), '#010x') + '} ')
-            index = index + 1
+    
     for scheduler in schedulerList:
         indexStr = "%02d"%index
         dest = scheduler.inPort.replace(" ", "")
         tclMain.write('CONFIG.M' + indexStr + '_AXIS_BASETDEST {'+ format(int(dest), '#010x') + '} CONFIG.M' + indexStr + '_AXIS_HIGHTDEST {' + format(int(dest), '#010x') + '} CONFIG.M' + indexStr + '_HAS_REGSLICE{1} CONFIG.M' + indexStr + '_FIFO_MODE{1}')
         index = index + 1
 
-    tclMain.write('] [get_bd_cells inputSwitch_inst]\nset_property -dict [list CONFIG.TDATA_NUM_BYTES.VALUE_SRC USER CONFIG.HAS_TLAST.VALUE_SRC USER] [get_bd_cells receiveFifo_inst]\nset_property -dict [list CONFIG.TDATA_NUM_BYTES {8} CONFIG.HAS_TLAST {1}] [get_bd_cells receiveFifo_inst]\nset_property -dict [list CONFIG.FIFO_DEPTH {32768}] [get_bd_cells receiveFifo_inst]\nset_property -dict [list CONFIG.TDATA_NUM_BYTES {8}   CONFIG.HAS_TLAST {1} CONFIG.HAS_TKEEP {1} ] [get_bd_cells receiveFifo_inst]\nset_property -dict [list CONFIG.FIFO_DEPTH {32768} CONFIG.FIFO_MODE {2} CONFIG.TDATA_NUM_BYTES {8} CONFIG.HAS_TLAST {1} CONFIG.HAS_TKEEP {1}] [get_bd_cells sendFifo_inst]\n')
+    tclMain.write('] [get_bd_cells inputSwitch_inst]\n') 
+
+    if plus16:
+        tclMain.write('set_property -dict [list ')
+        for indexFpgaSwitch in range(0, len(packetFormatterList)):
+            #if indexFpgaSwitch != fpgaIndex:
+            #packetFormatter = packetFormatterList[indexFpgaSwitch][0]
+            #if packetFormatter.port.kernelName == None:
+            indexStr = "%02d"%indexFpgaSwitch
+            #dest = packetFormatter.port.kernelInterface.tdest.replace(" ","")
+            tclMain.write('CONFIG.M' + indexStr + '_AXIS_BASETDEST {'+ format(indexFpgaSwitch * 16, '#010x') + '} CONFIG.M' + indexStr + '_AXIS_HIGHTDEST {' + format((indexFpgaSwitch * 16) + 15, '#010x') + '} ')
+        tclMain.write('] [get_bd_cells fpgaSwitch_inst]\n') 
+    else:
+        tclMain.write('set_property -dict [list ')
+        for packetFormatter in packetFormatterList:
+            if packetFormatter.port.kernelName == None:
+                indexStr = "%02d"%index
+                dest = packetFormatter.port.kernelInterface.tdest.replace(" ","")
+                tclMain.write('CONFIG.M' + indexStr + '_AXIS_BASETDEST {'+ format(int(dest), '#010x') + '} CONFIG.M' + indexStr + '_AXIS_HIGHTDEST {' + format(int(dest), '#010x') + '} ')
+                index = index + 1
+        tclMain.write('] [get_bd_cells inputSwitch_inst]\n') 
+
+    tclMain.write('set_property -dict [list CONFIG.TDATA_NUM_BYTES.VALUE_SRC USER CONFIG.HAS_TLAST.VALUE_SRC USER] [get_bd_cells receiveFifo_inst]\nset_property -dict [list CONFIG.TDATA_NUM_BYTES {8} CONFIG.HAS_TLAST {1}] [get_bd_cells receiveFifo_inst]\nset_property -dict [list CONFIG.FIFO_DEPTH {32768}] [get_bd_cells receiveFifo_inst]\nset_property -dict [list CONFIG.TDATA_NUM_BYTES {8}   CONFIG.HAS_TLAST {1} CONFIG.HAS_TKEEP {1} ] [get_bd_cells receiveFifo_inst]\nset_property -dict [list CONFIG.FIFO_DEPTH {32768} CONFIG.FIFO_MODE {2} CONFIG.TDATA_NUM_BYTES {8} CONFIG.HAS_TLAST {1} CONFIG.HAS_TKEEP {1}] [get_bd_cells sendFifo_inst]\n')
 
 
 
@@ -245,43 +345,14 @@ def makeTCLFiles(outDir, sourceMAC, numExtra, schedulerList, listIP, localConnec
     index = 1
     for inputSwitchSlave in inputSwitchSlaves:
         indexStr = "%02d"%index
-        tclMain.write('connect_bd_intf_net [get_bd_intf_pins ' + inputSwitchSlave.kernelName + '/' + inputSwitchSlave.interface.name + '] [get_bd_intf_pins inputSwitch_inst/S' + indexStr + '_AXIS]\n')
 
+        if plus16:
+            tclMain.write('connect_bd_intf_net [get_bd_intf_pins ' + inputSwitchSlave.kernelName + '/' + inputSwitchSlave.interface.name + '] [get_bd_intf_pins fpgaSwitch_inst/S' + indexStr + '_AXIS]\n')
+        else:
+            tclMain.write('connect_bd_intf_net [get_bd_intf_pins ' + inputSwitchSlave.kernelName + '/' + inputSwitchSlave.interface.name + '] [get_bd_intf_pins inputSwitch_inst/S' + indexStr + '_AXIS]\n')
         index = index + 1
 
 
-    #numDebug = 0
-    #for localConnection in localConnections:
-    #    if localConnection.port1.kernelInterface.debug == False:
-    #        tclMain.write('connect_bd_intf_net [get_bd_intf_pins ' + localConnection.port1.kernelName + '/' + localConnection.port1.interface.name + '] ' + '[get_bd_intf_pins ' + localConnection.port2.kernelName + '/' + localConnection.port2.interface.name + ']\n')
-    #    else:
-    #        tclMain.write('create_bd_cell -type ip -vlnv xilinx.com:ip:axis_broadcaster:1.1 probe_broadcaster_' + str(numDebug) + '\n')
-    #        tclMain.write('connect_bd_net [get_bd_ports CLK_DATA] [get_bd_pins probe_broadcaster_' + str(numDebug) + '/aclk]\n')
-    #        tclMain.write('connect_bd_net [get_bd_ports ARESETN] [get_bd_pins probe_broadcaster_' + str(numDebug) + '/aresetn]\n')
-    #        tclMain.write('set_property -dict [list CONFIG.M_TDATA_NUM_BYTES {8} CONFIG.S_TDATA_NUM_BYTES {8} CONFIG.TDEST_WIDTH {8} CONFIG.HAS_TLAST {1} CONFIG.M00_TDATA_REMAP {tdata[63:0]} CONFIG.M01_TDATA_REMAP {tdata[63:0]}] [get_bd_cells probe_broadcaster_' + str(numDebug) + ']\n')
-    #        tclMain.write('connect_bd_intf_net [get_bd_intf_pins ' + localConnection.port1.kernelName + '/' + localConnection.port1.interface.name + '] ' + '[get_bd_intf_pins probe_broadcaster_' + str(numDebug) + '/S_AXIS]\n')
-    #        tclMain.write('connect_bd_intf_net [get_bd_intf_pins probe_broadcaster_' + str(numDebug)  + '/' + 'M00_AXIS] ' + '[get_bd_intf_port SLOT_AXIS_' + str(numDebug) + ']\n')
-    #        tclMain.write('connect_bd_intf_net [get_bd_intf_pins probe_broadcaster_' + str(numDebug)  + '/' + 'M01_AXIS] ' + '[get_bd_intf_pins '+  localConnection.port2.kernelName + '/' + localConnection.port2.interface.name + ']\n')
-    #        numDebug = numDebug + 1
-
-    #index = 1
-    #for inputSwitchSlave in inputSwitchSlaves:
-    #    indexStr = "%02d"%index
-    #    if inputSwitchSlave.interface.debug == False:
-    #        print "false tcl gen"
-    #        tclMain.write('connect_bd_intf_net [get_bd_intf_pins ' + inputSwitchSlave.kernelName + '/' + inputSwitchSlave.interface.name + '] [get_bd_intf_pins inputSwitch_inst/S' + indexStr + '_AXIS]\n')
-
-    #    else:
-    #        print "true tcl gen"
-    #        tclMain.write('create_bd_cell -type ip -vlnv xilinx.com:ip:axis_broadcaster:1.1 probe_broadcaster_' + str(numDebug) + '\n')
-    #        tclMain.write('set_property -dict [list CONFIG.M_TDATA_NUM_BYTES {8} CONFIG.S_TDATA_NUM_BYTES {8} CONFIG.TDEST_WIDTH {8} CONFIG.HAS_TLAST {1} CONFIG.M00_TDATA_REMAP {tdata[63:0]} CONFIG.M01_TDATA_REMAP {tdata[63:0]}] [get_bd_cells probe_broadcaster_' + str(numDebug) + ']\n')
-    #        tclMain.write('connect_bd_net [get_bd_ports CLK_DATA] [get_bd_pins probe_broadcaster_' + str(numDebug) + '/aclk]\n')
-    #        tclMain.write('connect_bd_net [get_bd_ports ARESETN] [get_bd_pins probe_broadcaster_' + str(numDebug) + '/aresetn]\n')
-    #        tclMain.write('connect_bd_intf_net [get_bd_intf_pins ' + inputSwitchSlave.kernelName + '/' + inputSwitchSlave.interface.name + '] ' + '[get_bd_intf_pins probe_broadcaster_' + str(numDebug)  + '/S_AXIS]\n')
-    #        tclMain.write('connect_bd_intf_net [get_bd_intf_pins probe_broadcaster_' + str(numDebug)  + '/' + 'M00_AXIS] ' + '[get_bd_intf_port SLOT_AXIS_' + str(numDebug) + ']\n')
-    #        tclMain.write('connect_bd_intf_net [get_bd_intf_pins probe_broadcaster_' + str(numDebug)  + '/' + 'M01_AXIS] ' + '[get_bd_intf_pins '+   'inputSwitch_inst/S' + indexStr + '_AXIS]\n')
-    #        numDebug = numDebug + 1
-    #    index = index + 1
 
     index = 0
     for inputSwitchMaster in inputSwitchMasters:
@@ -292,18 +363,45 @@ def makeTCLFiles(outDir, sourceMAC, numExtra, schedulerList, listIP, localConnec
 
 
     index2=0
-    for packetFormatter in packetFormatterList:
-        if packetFormatter.port.kernelName == None:
-            indexStr = "%02d"%index
 
-            if networkBridges != None:
-                tclMain.write('connect_bd_intf_net [get_bd_intf_pins inputSwitch_inst/M' + indexStr + '_AXIS] [get_bd_intf_pins bridgeTo_inst_' + str(index2) + '/' + networkBridges.stream_in_to + ']\n')
-                tclMain.write('connect_bd_intf_net [get_bd_intf_pins bridgeTo_inst_' + str(index2) + '/' + networkBridges.stream_out_to +'] [get_bd_intf_pins packetFormatter_inst_' +   str(index2) + '/packetIn]\n') 
-            else:
-                tclMain.write('connect_bd_intf_net [get_bd_intf_pins inputSwitch_inst/M' + indexStr + '_AXIS] [get_bd_intf_pins packetFormatter_inst_' + str(index2) + '/packetIn]\n')
-            index = index + 1
-            index2 = index2+1
-        
+
+#    if plus16:
+#        index = 0
+#        for pfIndex in range(0, len(packetFormatterList[fpgaIndex])):
+#            indexStr = "%02d"%pfIndex
+#            if networkBridges != None:
+#                tclMain.write('connect_bd_intf_net [get_bd_intf_pins inputSwitch_inst/M' + indexStr + '_AXIS] [get_bd_intf_pins bridgeTo_inst_' + str(index2) + '/' + networkBridges.stream_in_to + ']\n')
+#
+#
+#
+#        for pfIndex in range(len(packetFormatterList[fpgaIndex])-1, len(packetFormatterList[fpgaIndex]) - 1 + len(packetFormatterList)):
+#            indexStr = "%02d"%index
+#            if networkBridges != None:
+#                tclMain.write('connect_bd_intf_net [get_bd_intf_pins inputSwitch_inst/M' + indexStr + '_AXIS] [get_bd_intf_pins bridgeTo_inst_' + str(index2) + '/' + networkBridges.stream_in_to + ']\n')
+#                if(index != fpgaIndex): 
+#                    tclMain.write('connect_bd_intf_net [get_bd_intf_pins bridgeTo_inst_' + str(index) + '/' + networkBridges.stream_out_to +'] [get_bd_intf_pins packetFormatter_inst_' +   str(pfIndex) + '/packetIn]\n')
+#
+#
+#            else:
+#                tclMain.write('connect_bd_intf_net [get_bd_intf_pins inputSwitch_inst/M' + indexStr + '_AXIS] [get_bd_intf_pins packetFormatter_inst_' + str(index2) + '/packetIn]\n')
+#                index = index + 1
+#    else:
+    if (plus16 == 0):
+        for packetFormatter in packetFormatterList:
+            if packetFormatter.port.kernelName == None:
+                indexStr = "%02d"%index
+    
+                if networkBridges != None:
+                    tclMain.write('connect_bd_intf_net [get_bd_intf_pins inputSwitch_inst/M' + indexStr + '_AXIS] [get_bd_intf_pins bridgeTo_inst_' + str(index2) + '/' + networkBridges.stream_in_to + ']\n')
+                    tclMain.write('connect_bd_intf_net [get_bd_intf_pins bridgeTo_inst_' + str(index2) + '/' + networkBridges.stream_out_to +'] [get_bd_intf_pins packetFormatter_inst_' +   str(index2) + '/packetIn]\n') 
+                else:
+                    tclMain.write('connect_bd_intf_net [get_bd_intf_pins inputSwitch_inst/M' + indexStr + '_AXIS] [get_bd_intf_pins packetFormatter_inst_' + str(index2) + '/packetIn]\n')
+                index = index + 1
+                index2 = index2+1
+            
+
+
+            
 
 
 
@@ -319,57 +417,94 @@ def makeTCLFiles(outDir, sourceMAC, numExtra, schedulerList, listIP, localConnec
 
 
 
-    for packetFormatter in packetFormatterList:
-        if packetFormatter.port.kernelName != None:
-            indexStr = "%02d"%index
-            if networkBridges != None:
-                tclMain.write('connect_bd_intf_net [get_bd_intf_pins ' + packetFormatter.port.kernelName +  '/'+ packetFormatter.port.interface.name +'] [get_bd_intf_pins bridgeTo_inst_' + str(index2) + '/' + networkBridges.stream_in_to + ']\n')
-                tclMain.write('connect_bd_intf_net [get_bd_intf_pins bridgeTo_inst_' + str(index2) + '/' + networkBridges.stream_out_to + '] [get_bd_intf_pins packetFormatter_inst_' +   str(index2) + '/packetIn]\n') 
-            
-            else:
-                tclMain.write('connect_bd_intf_net [get_bd_intf_pins ' + packetFormatter.port.kernelName + '/' + packetFormatter.port.interface.name + '] [get_bd_intf_pins packetFormatter_inst_' + str(index2) + '/packetIn]\n')
-            index = index + 1
-            index2 = index2 + 1
+    if plus16:
+        index = 0
+
+        for pfIndex in range(0, len(packetFormatterList[fpgaIndex])):
+            packetFormatter = packetFormatterList[fpgaIndex][pfIndex]
+            if packetFormatter.port.kernelName != None:
+                if networkBridges != None:
+                    tclMain.write('connect_bd_intf_net [get_bd_intf_pins ' + packetFormatter.port.kernelName +  '/'+ packetFormatter.port.interface.name +'] [get_bd_intf_pins bridgeTo_inst_' + str(pfIndex) + '/' + networkBridges.stream_in_to + ']\n')
+                    tclMain.write('connect_bd_intf_net [get_bd_intf_pins bridgeTo_inst_' + str(index) + '/' + networkBridges.stream_out_to + '] [get_bd_intf_pins packetFormatter_inst_' +   str(pfIndex) + '/packetIn]\n') 
+                
+                else:
+                    tclMain.write('connect_bd_intf_net [get_bd_intf_pins ' + packetFormatter.port.kernelName + '/' + packetFormatter.port.interface.name + '] [get_bd_intf_pins packetFormatter_inst_' + str(pfIndex) + '/packetIn]\n')
 
 
+        for pfIndex in range(len(packetFormatterList[fpgaIndex]), len(packetFormatterList[fpgaIndex]) + len(packetFormatterList)):
+            if pfIndex != fpgaIndex:
+                packetFormatter = packetFormatterList[pfIndex][0]
+                if packetFormatter.port.kernelName != None:
+                    indexStr = "%02d"%pfIndex
+                    if networkBridges != None:
+                        tclMain.write('connect_bd_intf_net [get_bd_intf_pins ' + packetFormatter.port.kernelName +  '/'+ packetFormatter.port.interface.name +'] [get_bd_intf_pins bridgeTo_inst_' + str(pfIndex) + '/' + networkBridges.stream_in_to + ']\n')
+                        tclMain.write('connect_bd_intf_net [get_bd_intf_pins bridgeTo_inst_' + str(index) + '/' + networkBridges.stream_out_to + '] [get_bd_intf_pins packetFormatter_inst_' +   str(pfIndex) + '/packetIn]\n') 
+                    
+                    else:
+                        tclMain.write('connect_bd_intf_net [get_bd_intf_pins ' + packetFormatter.port.kernelName + '/' + packetFormatter.port.interface.name + '] [get_bd_intf_pins packetFormatter_inst_' + str(pfIndex2) + '/packetIn]\n')
+    else:
+        for packetFormatter in packetFormatterList:
+            if packetFormatter.port.kernelName != None:
+                indexStr = "%02d"%index
+                if networkBridges != None:
+                    tclMain.write('connect_bd_intf_net [get_bd_intf_pins ' + packetFormatter.port.kernelName +  '/'+ packetFormatter.port.interface.name +'] [get_bd_intf_pins bridgeTo_inst_' + str(index2) + '/' + networkBridges.stream_in_to + ']\n')
+                    tclMain.write('connect_bd_intf_net [get_bd_intf_pins bridgeTo_inst_' + str(index2) + '/' + networkBridges.stream_out_to + '] [get_bd_intf_pins packetFormatter_inst_' +   str(index2) + '/packetIn]\n') 
+                
+                else:
+                    tclMain.write('connect_bd_intf_net [get_bd_intf_pins ' + packetFormatter.port.kernelName + '/' + packetFormatter.port.interface.name + '] [get_bd_intf_pins packetFormatter_inst_' + str(index2) + '/packetIn]\n')
+                index = index + 1
+                index2 = index2 + 1
+    
+    
     index = 0 
-    for packetFormatter in packetFormatterList:
-        indexStr = "%02d"%index
-        tclMain.write('connect_bd_intf_net [get_bd_intf_pins packetFormatter_inst_' + str(index) + '/packetOut] [get_bd_intf_pins outputSwitch_inst/S' + indexStr + '_AXIS]\n')
-        index = index + 1
+    
+    if plus16:
+        for pfIndex in range(0, len(packetFormatterList[fpgaIndex])):
+            packetFormatter = packetFormatterList[fpgaIndex][pfIndex]
+            indexStr = "%02d"%pfIndex
+            tclMain.write('connect_bd_intf_net [get_bd_intf_pins packetFormatter_inst_' + str(pfIndex) + '/packetOut] [get_bd_intf_pins outputFpgaSwitch_inst/S' + indexStr + '_AXIS]\n')
+
+        if(len(packetFormatterList[fpgaIndex]) > 1):
+            index = 1
+        else:
+            index = 0
+        index2 = 0
+        for pfIndex in range(0, len(packetFormatterList)):
+            indexStr = "%02d"%index
+            if pfIndex != fpgaIndex:
+                tclMain.write('connect_bd_intf_net [get_bd_intf_pins packetFormatter_inst_' + str(index2) + '/packetOut] [get_bd_intf_pins outputSwitch_inst/S' + indexStr + '_AXIS]\n')
+                index = index + 1
+                index2 = index2 + 1
+    else:   
+        for packetFormatter in packetFormatterList:
+            indexStr = "%02d"%index
+            tclMain.write('connect_bd_intf_net [get_bd_intf_pins packetFormatter_inst_' + str(index) + '/packetOut] [get_bd_intf_pins outputSwitch_inst/S' + indexStr + '_AXIS]\n')
+            index = index + 1
 
     indexStr = "%02d"%index
-    tclMain.write('connect_bd_intf_net [get_bd_intf_pins heartBeat_inst/stream_out] [get_bd_intf_pins outputSwitch_inst/S' + indexStr + '_AXIS]\n')
+    if plus16:
+        if(len(packetFormatterList[fpgaIndex]) > 0):
+            indexStr = "%02d"%(len(packetFormatterList))
+        else:
+            indexStr = "%02d"%(len(packetFormatterList) -  1)
+        tclMain.write('connect_bd_intf_net [get_bd_intf_pins heartBeat_inst/stream_out] [get_bd_intf_pins outputSwitch_inst/S' + indexStr + '_AXIS]\n')
+    else:
+        tclMain.write('connect_bd_intf_net [get_bd_intf_pins heartBeat_inst/stream_out] [get_bd_intf_pins outputSwitch_inst/S' + indexStr + '_AXIS]\n')
 
 
+    if plus16:
+        indexStr = "%02d"%(fpgaIndex)
+        tclMain.write('connect_bd_intf_net [get_bd_intf_pins fpgaSwitch_inst/M' + indexStr + '_AXIS] [get_bd_intf_pins inputSwitch_inst/S00_AXIS]\n')
 
 
-   # if numDebug < 16:
-   #     tclMain.write('create_bd_cell -type ip -vlnv xilinx.com:ip:axis_broadcaster:1.1 axis_broadcaster_dummy_0\n')
-   #     tclMain.write('set_property -dict [list CONFIG.HAS_TLAST.VALUE_SRC USER CONFIG.S_TDATA_NUM_BYTES.VALUE_SRC USER CONFIG.M_TDATA_NUM_BYTES.VALUE_SRC USER CONFIG.HAS_TREADY.VALUE_SRC USER CONFIG.TDEST_WIDTH.VALUE_SRC USER] [get_bd_cells axis_broadcaster_dummy_0]\n')
-   #     tclMain.write('set_property -dict [list CONFIG.M_TDATA_NUM_BYTES {8} CONFIG.S_TDATA_NUM_BYTES {8} CONFIG.TDEST_WIDTH {0} CONFIG.HAS_TLAST {1} CONFIG.M00_TDATA_REMAP {tdata[63:0]} CONFIG.M01_TDATA_REMAP {tdata[63:0]}] [get_bd_cells axis_broadcaster_dummy_0]\n')
-   #     tclMain.write('create_bd_cell -type ip -vlnv xilinx.com:ip:axis_broadcaster:1.1 axis_broadcaster_dummy_1\n')
-   #     tclMain.write('set_property -dict [list CONFIG.HAS_TLAST.VALUE_SRC USER CONFIG.S_TDATA_NUM_BYTES.VALUE_SRC USER CONFIG.M_TDATA_NUM_BYTES.VALUE_SRC USER CONFIG.TDEST_WIDTH.VALUE_SRC USER CONFIG.HAS_TREADY.VALUE_SRC USER] [get_bd_cells axis_broadcaster_dummy_1]\n')
-
-   #     tclMain.write('set_property -dict [list CONFIG.NUM_MI {' + str(16 - numDebug) + '} CONFIG.M_TDATA_NUM_BYTES {8} CONFIG.S_TDATA_NUM_BYTES {8} CONFIG.TDEST_WIDTH {8} CONFIG.HAS_TLAST {1} ' )
-   #     for broadcastDebug in range(0, 16 - numDebug):
-   #         broadcastDebugStr = "%02d"%broadcastDebug
-   #         tclMain.write('CONFIG.M' + broadcastDebugStr + '_TDATA_REMAP {tdata[63:0]} ')
-   #     tclMain.write('] [get_bd_cells axis_broadcaster_dummy_1]\n')
-   #     tclMain.write('connect_bd_intf_net [get_bd_intf_pins sendFifo_inst/M_AXIS] [get_bd_intf_pins axis_broadcaster_dummy_0/S_AXIS]\n')
-   #     tclMain.write('connect_bd_intf_net [get_bd_intf_pins axis_broadcaster_dummy_0/M00_AXIS] [get_bd_intf_ports M_AXIS]\n')
-   #     tclMain.write('connect_bd_intf_net [get_bd_intf_pins axis_broadcaster_dummy_0/M01_AXIS] [get_bd_intf_pins axis_broadcaster_dummy_1/S_AXIS]\n')
-   #     debugIndex = 0
-   #     for broadcastDebug in range(numDebug, 16):
-   #         broadcastDebugStr = "%02d"%debugIndex
-   #         tclMain.write('connect_bd_intf_net [get_bd_intf_pins axis_broadcaster_dummy_1/M' + broadcastDebugStr +  '_AXIS] [get_bd_intf_ports SLOT_AXIS_' + str(broadcastDebug) +  ']\n')
-   #         debugIndex = debugIndex + 1
-   #     tclMain.write('connect_bd_net [get_bd_ports CLK_DATA] [get_bd_pins axis_broadcaster_dummy_0/aclk]\n')
-   #     tclMain.write('connect_bd_net [get_bd_ports ARESETN] [get_bd_pins axis_broadcaster_dummy_0/aresetn]\n')
-   #     tclMain.write('connect_bd_net [get_bd_ports CLK_DATA] [get_bd_pins axis_broadcaster_dummy_1/aclk]\n')
-   #     tclMain.write('connect_bd_net [get_bd_ports ARESETN] [get_bd_pins axis_broadcaster_dummy_1/aresetn]\n')
-   # else:
-   #     tclMain.write('connect_bd_intf_net [get_bd_intf_pins sendFifo_inst/M_AXIS] [get_bd_intf_ports M_AXIS]\n')
+    if plus16:
+        index = 0
+        for pfIndex in range(len(packetFormatterList[fpgaIndex]), len(packetFormatterList[fpgaIndex]) + len(packetFormatterList)):
+            print index
+            if(pfIndex != fpgaIndex):
+                pfIndexStr = "%02d"%(pfIndex)
+                tclMain.write('connect_bd_intf_net [get_bd_intf_pins fpgaSwitch_inst/M' + pfIndexStr + '_AXIS] [get_bd_intf_pins packetFormatter_inst_' + str(index) + '/packetIn]\n')
+                index = index + 1
 
     tclMain.write('connect_bd_intf_net [get_bd_intf_pins sendFifo_inst/M_AXIS] [get_bd_intf_ports M_AXIS]\n')
 
