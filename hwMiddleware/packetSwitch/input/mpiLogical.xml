@@ -15,7 +15,7 @@
         <aresetn> aresetn </aresetn>
     </bridgeTo>
 	<kernel> rank1rank1 
-		<num> 1 </num>
+        <num> 1 </num>
         <rep> 1 </rep>
         <clk> aclk </clk>
         <aresetn> aresetn </aresetn>
@@ -30,7 +30,7 @@
         </interface>
     </kernel>
 	<kernel> cpu
-        <num> 0 </num>
+        <num> 16 </num>
         <rep> 1 </rep>
         <interface>
             <direction> in </direction>
