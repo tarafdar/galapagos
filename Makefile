@@ -1,8 +1,8 @@
 BOARD = adm-8k5
 DCP = static_routed_v1.dcp
-LOGICALFILE=hwMiddleware/packetSwitch/input/mpiLogical.xml
-MACFILE=hwMiddleware/packetSwitch/input/mpiMacAddresses
-MAPFILE=hwMiddleware/packetSwitch/input/mpiMap.xml
+LOGICALFILE=hwMiddleware/packetSwitch/input/md/mpiLogical.xml
+MACFILE=hwMiddleware/packetSwitch/input/md/mpiMacAddresses
+MAPFILE=hwMiddleware/packetSwitch/input/md/mpiMap.xml
 PROJECTNAME=test
 USERIP_DIR=HMPI
 USERIPTCL=${USERIP_DIR}/generate_hls_ip.tcl
@@ -14,9 +14,9 @@ all: userIP createCluster pr
 createCluster: tclScripts/createCluster.tcl
 
 
-userIP: ${USERIP_DIR}/* 
+userIP: ${USERIP_DIR}/* ${USERIP_DIR}/generate_hls_ip.tcl
 	mkdir -p userIP
-	vivado_hls ${USERIPTCL}
+	vivado_hls -f ${USERIPTCL}
 
 shell: hlsShell shells/projects/${BOARD}/${DCP}
 
