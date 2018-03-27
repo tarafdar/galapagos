@@ -119,6 +119,127 @@
             <debug/>
         </interface>
     </kernel>
+
+    <kernel> rank16md16 
+        <num> 16 </num>
+        <rep> 1 </rep>
+        <clk> aclk </clk>
+        <aresetn> aresetn </aresetn>
+        <interface>
+            <direction> in </direction>
+            <name> stream_in_V </name>
+        </interface>
+        <interface>
+            <direction> out </direction>
+            <name> stream_out_V </name>
+            <debug/>
+        </interface>
+    </kernel>
+    <kernel> rank17md17 
+        <num> 17 </num>
+        <rep> 1 </rep>
+        <clk> aclk </clk>
+        <aresetn> aresetn </aresetn>
+        <interface>
+            <direction> in </direction>
+            <name> stream_in_V </name>
+        </interface>
+        <interface>
+            <direction> out </direction>
+            <name> stream_out_V </name>
+            <debug/>
+        </interface>
+    </kernel>
+    <kernel> rank18md18 
+        <num> 18 </num>
+        <rep> 1 </rep>
+        <clk> aclk </clk>
+        <aresetn> aresetn </aresetn>
+        <interface>
+            <direction> in </direction>
+            <name> stream_in_V </name>
+        </interface>
+        <interface>
+            <direction> out </direction>
+            <name> stream_out_V </name>
+            <debug/>
+        </interface>
+    </kernel>
+    <kernel> rank19md19 
+        <num> 19 </num>
+        <rep> 1 </rep>
+        <clk> aclk </clk>
+        <aresetn> aresetn </aresetn>
+        <interface>
+            <direction> in </direction>
+            <name> stream_in_V </name>
+        </interface>
+        <interface>
+            <direction> out </direction>
+            <name> stream_out_V </name>
+            <debug/>
+        </interface>
+    </kernel>
+    <kernel> rank20md20
+        <num> 20 </num>
+        <rep> 1 </rep>
+        <clk> aclk </clk>
+        <aresetn> aresetn </aresetn>
+        <interface>
+            <direction> in </direction>
+            <name> stream_in_V </name>
+        </interface>
+        <interface>
+            <direction> out </direction>
+            <name> stream_out_V </name>
+            <debug/>
+        </interface>
+    </kernel>
+    <kernel> rank21md21 
+        <num> 21 </num>
+        <rep> 1 </rep>
+        <clk> aclk </clk>
+        <aresetn> aresetn </aresetn>
+        <interface>
+            <direction> in </direction>
+            <name> stream_in_V </name>
+        </interface>
+        <interface>
+            <direction> out </direction>
+            <name> stream_out_V </name>
+            <debug/>
+        </interface>
+    </kernel>
+    <kernel> rank22md22 
+        <num> 22 </num>
+        <rep> 1 </rep>
+        <clk> aclk </clk>
+        <aresetn> aresetn </aresetn>
+        <interface>
+            <direction> in </direction>
+            <name> stream_in_V </name>
+        </interface>
+        <interface>
+            <direction> out </direction>
+            <name> stream_out_V </name>
+            <debug/>
+        </interface>
+    </kernel>
+    <kernel> rank23md23
+        <num> 23 </num>
+        <rep> 1 </rep>
+        <clk> aclk </clk>
+        <aresetn> aresetn </aresetn>
+        <interface>
+            <direction> in </direction>
+            <name> stream_in_V </name>
+        </interface>
+        <interface>
+            <direction> out </direction>
+            <name> stream_out_V </name>
+            <debug/>
+        </interface>
+    </kernel>
 	<kernel> cpu
         <num> 0 </num>
         <rep> 1 </rep>
