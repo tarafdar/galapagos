@@ -83,36 +83,36 @@ wait_on_run pr_synth_1
 make_wrapper -files [get_files projects/$projName/$fpgaNum/$fpgaNum.srcs/sources_1/bd/pr/pr.bd] -top
 add_files -norecurse projects/$projName/$fpgaNum/$fpgaNum.srcs/sources_1/bd/pr/hdl/pr_wrapper.v
 
-## Get the list of runs and reset them
-#set ooc_runs [get_runs -filter {IS_SYNTHESIS} ]
-#foreach run $ooc_runs { reset_run $run }
-#
-#if { [ llength $ooc_runs ] } {
-#  launch_runs -jobs 20 $ooc_runs
-#}
-#set checkpoints [get_property NAME [get_bd_cells]]
-#foreach run $ooc_runs { wait_on_run $run }
-#
-#close_project
-#
-#set boardName [lindex $argv 1]
-#
-#open_checkpoint shells/$board_name/dcps/static_routed.dcp
-#read_checkpoint -cell pr_i projects/$projName/$fpgaNum/$fpgaNum.runs/pr_synth_1/pr.dcp
-#
-#
-## foreach cp $checkpoints {
-##   read_checkpoint -cell pr_wrapper_i/pr_i/pr_i/$cp projects/$projName/$fpgaNum/$fpgaNum.runs/pr_${cp}_0_synth_1/pr_${cp}_0.dcp
-##   #puts stdout $cp
-## }
-#
-#
-#
-#opt_design
-#place_design
-#route_design
-#write_debug_probes projects/$projName/$fpgaNum/probe.ltx
-#write_bitstream -force -file projects/$projName/$fpgaNum/top.bit
-#close_project
-#
-#
+# Get the list of runs and reset them
+set ooc_runs [get_runs -filter {IS_SYNTHESIS} ]
+foreach run $ooc_runs { reset_run $run }
+
+if { [ llength $ooc_runs ] } {
+  launch_runs -jobs 20 $ooc_runs
+}
+set checkpoints [get_property NAME [get_bd_cells]]
+foreach run $ooc_runs { wait_on_run $run }
+
+close_project
+
+set boardName [lindex $argv 1]
+
+open_checkpoint shells/$board_name/dcps/static_routed.dcp
+read_checkpoint -cell pr_i projects/$projName/$fpgaNum/$fpgaNum.runs/pr_synth_1/pr.dcp
+
+
+# foreach cp $checkpoints {
+#   read_checkpoint -cell pr_wrapper_i/pr_i/pr_i/$cp projects/$projName/$fpgaNum/$fpgaNum.runs/pr_${cp}_0_synth_1/pr_${cp}_0.dcp
+#   #puts stdout $cp
+# }
+
+
+
+opt_design
+place_design
+route_design
+write_debug_probes projects/$projName/$fpgaNum/probe.ltx
+write_bitstream -force -file projects/$projName/$fpgaNum/top.bit
+close_project
+
+

@@ -14,6 +14,7 @@ def createPacketFormatter(index, packetFormatter, tclMain, networkBridges):
         tclMain.write('create_bd_cell -type ip -vlnv xilinx.com:hls:' + networkBridges.bridgeToLocation + ':1.0 bridgeTo_inst_' + str(index) +'\n')
         tclMain.write('connect_bd_net [get_bd_nets CLK_DATA_1] [get_bd_ports CLK_DATA] [get_bd_pins bridgeTo_inst_' + str(index) + '/aclk]\n')
         tclMain.write('connect_bd_net -net [get_bd_nets ARESETN_1] [get_bd_ports ARESETN] [get_bd_pins bridgeTo_inst_' + str(index) + '/aresetn] \n')
+        tclMain.write('connect_bd_intf_net [get_bd_intf_pins packetFormatter_inst_' + str(index) + '/packetOut] [get_bd_intf_pins bridgeTo_inst_' + str(index) + '/' + networkBridges.stream_in_to + ']\n')
 
     tclMain.write('set_property -dict [list CONFIG.CONST_WIDTH {48}] [get_bd_cells pf_dst_inst_' + str(index) + ']\n')
     tclMain.write('set_property -dict [list CONFIG.CONST_VAL {' + str(destMAC_int) + '}] [get_bd_cells pf_dst_inst_' + str(index) +']\n')
@@ -29,7 +30,9 @@ def makeTCLFiles(outDir, sourceMAC, numExtra, schedulerList, listIP, localConnec
     sourceMAC_int = int(sourceMAC.replace(":", ""), 16)
 
 
-
+    if plus16:
+        currentPacketFormatter = packetFormatterList[fpgaIndex]
+        packetFormatterList[fpgaIndex] = []
     tclMain = open( outDir + '/' + index + '.tcl', 'w')
     tclConfig = open( outDir + '/' + 'configurationParameters.tcl', 'w')
     curPath = os.getcwd()
@@ -58,9 +61,10 @@ def makeTCLFiles(outDir, sourceMAC, numExtra, schedulerList, listIP, localConnec
 
         if(len(packetFormatterList[fpgaIndex]) > 0):
             tclMain.write('create_bd_cell -type ip -vlnv xilinx.com:ip:axis_interconnect:2.1 outputFpgaSwitch_inst\n')
+            print "HERE " 
+            print packetFormatterList[fpgaIndex]
+            print str(len(packetFormatterList[fpgaIndex]))
             tclMain.write('set_property -dict [list CONFIG.NUM_SI {' + str(len(packetFormatterList[fpgaIndex])) + '}  CONFIG.NUM_MI {1} CONFIG.ARB_ON_MAX_XFERS {0} CONFIG.ARB_ON_TLAST {1} CONFIG.ARB_ALGORITHM {3}] [get_bd_cells outputFpgaSwitch_inst]\n')
-            tclMain.write('connect_bd_net [get_bd_ports CLK_DATA] [get_bd_pins outputFpgaSwitch_inst/M00_AXIS_ACLK]\n')
-            tclMain.write('connect_bd_net [get_bd_ports ARESETN] [get_bd_pins outputFpgaSwitch_inst/M00_AXIS_ARESETN]\n')
 
     tclMain.write('create_bd_cell -type ip -vlnv xilinx.com:ip:axis_interconnect:2.1 outputSwitch_inst\n')
     tclMain.write('create_bd_cell -type ip -vlnv xilinx.com:ip:axis_data_fifo:1.1 receiveFifo_inst\n')
@@ -165,28 +169,32 @@ def makeTCLFiles(outDir, sourceMAC, numExtra, schedulerList, listIP, localConnec
         pflTotal = packetFormatterList
 
     print "packetformatter at index "
-    print packetFormatterList[fpgaIndex]
+    #print packetFormatterList[fpgaIndex]
 
-    for packetFormatter in pflTotal:
-        destMAC_int = int(packetFormatter.dest.replace(":", ""), 16)
-        createPacketFormatter(index, packetFormatter, tclMain, networkBridges)
-        index = index + 1
-        print "blah blah"
-        print packetFormatter
+#    for packetFormatter in pflTotal:
+#        destMAC_int = int(packetFormatter.dest.replace(":", ""), 16)
+#        createPacketFormatter(index, packetFormatter, tclMain, networkBridges)
+#        index = index + 1
+#        #print packetFormatter
+#
+
+
+    print packetFormatterList
     if plus16:
         for i in range(0, len(packetFormatterList)):
-             if i != fpgaIndex:
-                print packetFormatterList
+            if i != fpgaIndex and packetFormatterList[i] != []:
                 packetFormatter = packetFormatterList[i][0]
+            #else:
+            #    packetFormatter = currentPacketFormatter 
+                print "packetFormatter i is " + str(i) + " index is " + str(index)
                 createPacketFormatter(index, packetFormatter, tclMain, networkBridges)
                 index = index + 1
 
 
 
-    if plus16 and (len(packetFormatterList[fpgaIndex]) == 0):
-        tclMain.write('set_property -dict [list CONFIG.NUM_SI {' + str(len(packetFormatterList)) + '}  CONFIG.NUM_MI {1} CONFIG.ARB_ON_MAX_XFERS {0} CONFIG.ARB_ON_TLAST {1} CONFIG.ARB_ALGORITHM {3}] [get_bd_cells outputSwitch_inst]\n')
-    else:
-        tclMain.write('set_property -dict [list CONFIG.NUM_SI {' + str(len(packetFormatterList) + 1) + '}  CONFIG.NUM_MI {1} CONFIG.ARB_ON_MAX_XFERS {0} CONFIG.ARB_ON_TLAST {1} CONFIG.ARB_ALGORITHM {3}] [get_bd_cells outputSwitch_inst]\n')
+
+    #tclMain.write('set_property -dict [list CONFIG.NUM_SI {' + str(len(packetFormatterList)) + '}  CONFIG.NUM_MI {1} CONFIG.ARB_ON_MAX_XFERS {0} CONFIG.ARB_ON_TLAST {1} CONFIG.ARB_ALGORITHM {3}] [get_bd_cells outputSwitch_inst]\n')
+    tclMain.write('set_property -dict [list CONFIG.NUM_SI {' + str(len(packetFormatterList)) + '}  CONFIG.NUM_MI {1} CONFIG.ARB_ON_MAX_XFERS {0} CONFIG.ARB_ON_TLAST {1} CONFIG.ARB_ALGORITHM {3}] [get_bd_cells outputSwitch_inst]\n')
     
 
     if plus16:
@@ -196,8 +204,6 @@ def makeTCLFiles(outDir, sourceMAC, numExtra, schedulerList, listIP, localConnec
             tclMain.write('connect_bd_net [get_bd_ports ARESETN] [get_bd_pins outputFpgaSwitch_inst/S' + indexPFStr + '_AXIS_ARESETN]\n')
 
         numAxisOS = len(packetFormatterList) 
-        if(len(packetFormatterList[fpgaIndex]) > 0):
-            numAxisOS = numAxisOS + 1
             
         for indexPF in range(0, numAxisOS):
             indexPFStr = "%02d"%indexPF
@@ -206,7 +212,8 @@ def makeTCLFiles(outDir, sourceMAC, numExtra, schedulerList, listIP, localConnec
 
 
     else:
-        for indexPF in range(0, len(packetFormatterList) + 1):
+        #for indexPF in range(0, len(packetFormatterList) + 1):
+        for indexPF in range(0, len(packetFormatterList) ):
             indexPFStr = "%02d"%indexPF
             tclMain.write('connect_bd_net [get_bd_ports CLK_DATA] [get_bd_pins outputSwitch_inst/S' + indexPFStr + '_AXIS_ACLK]\n')
             tclMain.write('connect_bd_net [get_bd_ports ARESETN] [get_bd_pins outputSwitch_inst/S' + indexPFStr + '_AXIS_ARESETN]\n')
@@ -253,6 +260,9 @@ def makeTCLFiles(outDir, sourceMAC, numExtra, schedulerList, listIP, localConnec
             tclMain.write('connect_bd_net [get_bd_ports CLK_DATA] [get_bd_pins fpgaSwitch_inst/M' + indexSMStr + '_AXIS_ACLK]\n')
             tclMain.write('connect_bd_net [get_bd_ports ARESETN] [get_bd_pins fpgaSwitch_inst/M' + indexSMStr + '_AXIS_ARESETN]\n')
 
+        if (len(packetFormatterList[fpgaIndex]) > 0):
+            tclMain.write('connect_bd_net [get_bd_ports CLK_DATA] [get_bd_pins outputFpgaSwitch_inst/M00_AXIS_ACLK]\n')
+            tclMain.write('connect_bd_net [get_bd_ports ARESETN] [get_bd_pins outputFpgaSwitch_inst/M00_AXIS_ARESETN]\n')
 
     
 
@@ -431,9 +441,11 @@ def makeTCLFiles(outDir, sourceMAC, numExtra, schedulerList, listIP, localConnec
                     tclMain.write('connect_bd_intf_net [get_bd_intf_pins ' + packetFormatter.port.kernelName + '/' + packetFormatter.port.interface.name + '] [get_bd_intf_pins packetFormatter_inst_' + str(pfIndex) + '/packetIn]\n')
 
 
+        pfIndexZero = 0
         for pfIndex in range(len(packetFormatterList[fpgaIndex]), len(packetFormatterList[fpgaIndex]) + len(packetFormatterList)):
-            if pfIndex != fpgaIndex:
-                packetFormatter = packetFormatterList[pfIndex][0]
+            if pfIndex != fpgaIndex and packetFormatterList[pfIndexZero] != []:
+                
+                packetFormatter = packetFormatterList[pfIndexZero][0]
                 if packetFormatter.port.kernelName != None:
                     indexStr = "%02d"%pfIndex
                     if networkBridges != None:
@@ -442,6 +454,7 @@ def makeTCLFiles(outDir, sourceMAC, numExtra, schedulerList, listIP, localConnec
                     
                     else:
                         tclMain.write('connect_bd_intf_net [get_bd_intf_pins ' + packetFormatter.port.kernelName + '/' + packetFormatter.port.interface.name + '] [get_bd_intf_pins packetFormatter_inst_' + str(pfIndex2) + '/packetIn]\n')
+            pfIndexZero = pfIndexZero + 1
     else:
         for packetFormatter in packetFormatterList:
             if packetFormatter.port.kernelName != None:
@@ -468,25 +481,27 @@ def makeTCLFiles(outDir, sourceMAC, numExtra, schedulerList, listIP, localConnec
             index = 1
         else:
             index = 0
-        index2 = 0
-        for pfIndex in range(0, len(packetFormatterList)):
+        #index2 = 0
+        #for pfIndex in range(len(packetFormatterList[fpgaIndex]), len(packetFormatterList[fpgaIndex])+len(packetFormatterList) - 1):
+        for pfIndex in range(0, len(packetFormatterList) - 1):
             indexStr = "%02d"%index
-            if pfIndex != fpgaIndex:
-                tclMain.write('connect_bd_intf_net [get_bd_intf_pins packetFormatter_inst_' + str(index2) + '/packetOut] [get_bd_intf_pins outputSwitch_inst/S' + indexStr + '_AXIS]\n')
-                index = index + 1
-                index2 = index2 + 1
+            #if pfIndex != fpgaIndex:
+            if networkBridges != None:
+                tclMain.write('connect_bd_intf_net [get_bd_intf_pins bridgeTo_inst_' + str(pfIndex) + '/' + networkBridges.stream_out_to + '] [get_bd_intf_pins outputSwitch_inst/S' + indexStr + '_AXIS]\n')
+            else:
+                tclMain.write('connect_bd_intf_net [get_bd_intf_pins packetFormatter_inst_' + str(pfIndex) + '/packetOut] [get_bd_intf_pins outputSwitch_inst/S' + indexStr + '_AXIS]\n')
+            index = index + 1
+            #index2 = index2 + 1
     else:   
         for packetFormatter in packetFormatterList:
             indexStr = "%02d"%index
+            print "index is " + str(index)
             tclMain.write('connect_bd_intf_net [get_bd_intf_pins packetFormatter_inst_' + str(index) + '/packetOut] [get_bd_intf_pins outputSwitch_inst/S' + indexStr + '_AXIS]\n')
             index = index + 1
 
     indexStr = "%02d"%index
     if plus16:
-        if(len(packetFormatterList[fpgaIndex]) > 0):
-            indexStr = "%02d"%(len(packetFormatterList))
-        else:
-            indexStr = "%02d"%(len(packetFormatterList) -  1)
+        indexStr = "%02d"%(len(packetFormatterList) - 1)
         tclMain.write('connect_bd_intf_net [get_bd_intf_pins heartBeat_inst/stream_out] [get_bd_intf_pins outputSwitch_inst/S' + indexStr + '_AXIS]\n')
     else:
         tclMain.write('connect_bd_intf_net [get_bd_intf_pins heartBeat_inst/stream_out] [get_bd_intf_pins outputSwitch_inst/S' + indexStr + '_AXIS]\n')
@@ -497,15 +512,32 @@ def makeTCLFiles(outDir, sourceMAC, numExtra, schedulerList, listIP, localConnec
         tclMain.write('connect_bd_intf_net [get_bd_intf_pins fpgaSwitch_inst/M' + indexStr + '_AXIS] [get_bd_intf_pins inputSwitch_inst/S00_AXIS]\n')
 
 
+    #if plus16 and (len(packetFormatterList[fpgaIndex]) > 0):
     if plus16:
         index = 0
-        for pfIndex in range(len(packetFormatterList[fpgaIndex]), len(packetFormatterList[fpgaIndex]) + len(packetFormatterList)):
-            print index
-            if(pfIndex != fpgaIndex):
+        #for pfIndex in range(len(packetFormatterList[fpgaIndex]) - 1, len(packetFormatterList[fpgaIndex]) + len(packetFormatterList) - 1):
+        for pfIndex in range(0, len(packetFormatterList)):
+            if(index != fpgaIndex):
+                print "index is " + str(index)
+                print "pf index is " + str(pfIndex)
                 pfIndexStr = "%02d"%(pfIndex)
+                indexStr = "%02d"%(index)
+                tclMain.write('connect_bd_intf_net [get_bd_intf_pins fpgaSwitch_inst/M' + pfIndexStr + '_AXIS] [get_bd_intf_pins packetFormatter_inst_' + str(index) + '/packetIn]\n')
+                print 'connect_bd_intf_net [get_bd_intf_pins fpgaSwitch_inst/M' + pfIndexStr + '_AXIS] [get_bd_intf_pins packetFormatter_inst_' + str(index) + '/packetIn]'
+                index = index + 1
+
+    indexStr = "%02d"%(index)
+
+
+    if plus16:
+        index = 0
+        for pfIndex in range(0, len(packetFormatterList)):
+            pfIndexStr = "%02d"%(pfIndex)
+            if pfIndex != fpgaIndex:
                 tclMain.write('connect_bd_intf_net [get_bd_intf_pins fpgaSwitch_inst/M' + pfIndexStr + '_AXIS] [get_bd_intf_pins packetFormatter_inst_' + str(index) + '/packetIn]\n')
                 index = index + 1
 
-    tclMain.write('connect_bd_intf_net [get_bd_intf_pins sendFifo_inst/M_AXIS] [get_bd_intf_ports M_AXIS]\n')
 
+    tclMain.write('connect_bd_intf_net [get_bd_intf_pins sendFifo_inst/M_AXIS] [get_bd_intf_ports M_AXIS]\n')
+    packetFormatterList[fpgaIndex] = currentPacketFormatter 
 

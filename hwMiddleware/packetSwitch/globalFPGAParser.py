@@ -448,6 +448,19 @@ def createLocalFPGA(projectName, plus16):
         shutil.rmtree('projects/' + projectName)
     globalConfigFile = open('tclScripts/createCluster.tcl', 'w')
 
+
+    packetFormatterList = []
+    numExtra_array = []
+    schedulerList_array = []
+    listIP_array = []
+    numDebug_array = []
+    localConnections_array = []
+    inputSwitchMasters_array = []
+    inputSwitchSlaves_array = []
+    if plus16:
+        for i in range(0, len(allFPGAs)):
+            packetFormatterList.append([])
+    
     for fpga in allFPGAs:
         if fpga.typeNode == 'sw':
             continue
@@ -579,15 +592,44 @@ def createLocalFPGA(projectName, plus16):
         outDir = dirName + '/' + str(index)
         sourceMAC = macAddresses[index]
         fpgaFile = dirName + '/fpga.xml'
+        
 
-
-        localFPGAParser.start(dirName, sourceMAC, fpgaFile, fpga.board_name, index, projectName, networkBridges, len(allFPGAs), plus16) 
+        numExtra, schedulerList, listIP, packetFormatterList, numDebug, localConnections, inputSwitchMasters, inputSwitchSlaves  = localFPGAParser.start(dirName, sourceMAC, fpgaFile, fpga.board_name, index, projectName, networkBridges, len(allFPGAs), plus16, packetFormatterList) 
+        numExtra_array.append(numExtra)
+        schedulerList_array.append(schedulerList)
+        listIP_array.append(listIP)
+        numDebug_array.append(numDebug)
+        localConnections_array.append(localConnections)
+        inputSwitchMasters_array.append(inputSwitchMasters)
+        inputSwitchSlaves_array.append(inputSwitchSlaves)
+        #import tclFileGenerator
+        #tclFileGenerator.makeTCLFiles(dirName, sourceMAC, numExtra, schedulerList, listIP, localConnections, inputSwitchMasters, inputSwitchSlaves, packetFormatterList, str(index), projectName, networkBridges, len(allFPGAs), plus16, index)
         index = index+1
         globalConfigFile.write('source ' + dirName + '/' + 'configurationParameters.tcl\n')
         globalConfigFile.write('source hwMiddleware/packetSwitch/localPRCreate.tcl\n')
-    
-    globalConfigFile.close()
+   
+    print packetFormatterList 
+    index = 0
+    for fpga in allFPGAs:
+        if fpga.typeNode == 'sw':
+            continue
+        sys.path.append('hwMiddleware/packetSwitch/boards/' + fpga.board_name)
+        dirName = 'projects/' + projectName + '/' + str(index)
+        outDir = dirName + '/' + str(index)
+        sourceMAC = macAddresses[index]
+        fpgaFile = dirName + '/fpga.xml'
+        import tclFileGenerator
+        numExtra = numExtra_array[index]
+        schedulerList = schedulerList_array[index]
+        listIP = listIP_array[index]
+        localConnections = localConnections_array[index]
+        inputSwitchMasters= inputSwitchMasters_array[index]
+        inputSwitchSlaves = inputSwitchSlaves_array[index]
+        tclFileGenerator.makeTCLFiles(dirName, sourceMAC, numExtra, schedulerList, listIP, localConnections, inputSwitchMasters, inputSwitchSlaves, packetFormatterList, str(index), projectName, networkBridges, len(allFPGAs), plus16, index)
+        index = index + 1
 
+    globalConfigFile.close()
+    print packetFormatterList
 
 try:
     opts, args = getopt.getopt(sys.argv[1:],"", ["logicalFile=", "mapFile=", "macFile=", "projectName="])
