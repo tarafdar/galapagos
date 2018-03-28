@@ -20,6 +20,6 @@
     </node>
     <node>
         <type> sw </type>
-        <kernel> 33 </kernel>
+        <kernel> 16 </kernel>
     </node>
 </cluster>

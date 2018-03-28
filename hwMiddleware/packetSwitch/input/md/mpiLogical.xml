@@ -31,7 +31,7 @@
         </interface>
     </kernel>
 	<kernel> cpu
-        <num> 33 </num>
+        <num> 16 </num>
         <rep> 1 </rep>
         <interface>
             <direction> in </direction>
