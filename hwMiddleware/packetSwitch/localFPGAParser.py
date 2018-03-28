@@ -80,10 +80,10 @@ class IPType:
         self.clk = ''
         self.resetn = ''
 
-def readFPGAFile(localFPGAFile, sourceMAC, numFPGAs, plus16, index):
+def readFPGAFile(localFPGAFile, sourceMAC, numFPGAs, plus16, index, packetFormatterList):
     listIP = []
     schedulerList = []
-    packetFormatterList = []
+    #packetFormatterList = []
     numExtra = 0
     numDebug = 0
     import xml.etree.ElementTree as ET
@@ -91,9 +91,6 @@ def readFPGAFile(localFPGAFile, sourceMAC, numFPGAs, plus16, index):
     FPGA = tree.getroot()
 
 
-    if plus16:
-        for i in range(0, numFPGAs):
-            packetFormatterList.append([])
 
 
 
@@ -139,14 +136,20 @@ def readFPGAFile(localFPGAFile, sourceMAC, numFPGAs, plus16, index):
                 packetFormatter.source = sourceMAC
                 if plus16:
                     fpgaIndex = int(dest)/16
-                    print "fpgaIndex is " + str(fpgaIndex)
-                    packetFormatterList[fpgaIndex].append(packetFormatter)
+                    print "fpgaIndex is " + str(fpgaIndex) + " " + str(dest)
+                    found = False
+                    for packetFormatter in packetFormatterList[fpgaIndex]:
+                        if packetFormatter.dest == dest:
+                            found = True
+                            break
+                    if not found:
+                        packetFormatterList[fpgaIndex].append(packetFormatter)
                 else:
                     packetFormatterList.append(packetFormatter)
                 print "in extra_input_switch portarray loop"
                 #print packetFormatterList[0]
                 #print packetFormatterList[0][0]
-                print packetFormatterList
+                #print packetFormatterList
         elif(IP.tag == 'IP'):
             found = 0
             nameElement = IP.find('name')
@@ -330,14 +333,16 @@ def makeFPGAIOTables(sourceMAC, schedulerList, listIP, packetFormatterList, plus
     return localConnections, inputSwitchMasters, inputSwitchSlaves, packetFormatterList
 
 
-def start(outDir_in, sourceMAC_in, FPGA_file, board_name, index, projectName, networkBridges, numFPGAs, plus16):
+def start(outDir_in, sourceMAC_in, FPGA_file, board_name, index, projectName, networkBridges, numFPGAs, plus16, packetFormatterList):
 
     outDir = outDir_in
     sourceMAC = sourceMAC_in
-    numExtra, schedulerList, listIP, packetFormatterList, numDebug = readFPGAFile(FPGA_file, sourceMAC, numFPGAs, plus16, index)
+    numExtra, schedulerList, listIP, packetFormatterList, numDebug = readFPGAFile(FPGA_file, sourceMAC, numFPGAs, plus16, index, packetFormatterList)
     localConnections, inputSwitchMasters, inputSwitchSlaves, packetFormatterList = makeFPGAIOTables(sourceMAC, schedulerList, listIP, packetFormatterList, plus16)
-    sys.path.append('hwMiddleware/packetSwitch/boards/' + board_name)
-    import tclFileGenerator
-    tclFileGenerator.makeTCLFiles(outDir, sourceMAC, numExtra, schedulerList, listIP, localConnections, inputSwitchMasters, inputSwitchSlaves, packetFormatterList, str(index), projectName, networkBridges, numFPGAs, plus16, index)
+    return numExtra, schedulerList, listIP, packetFormatterList, numDebug, localConnections, inputSwitchMasters, inputSwitchSlaves
+    #sys.path.append('hwMiddleware/packetSwitch/boards/' + board_name)
+    #import tclFileGenerator
+    #print packetFormatterList
+#    tclFileGenerator.makeTCLFiles(outDir, sourceMAC, numExtra, schedulerList, listIP, localConnections, inputSwitchMasters, inputSwitchSlaves, packetFormatterList, str(index), projectName, networkBridges, numFPGAs, plus16, index)
 
 
