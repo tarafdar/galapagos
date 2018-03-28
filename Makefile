@@ -1,5 +1,5 @@
 BOARD = adm-8k5
-DCP = static_routed_v1.dcp
+DCP = static_routed_v2.dcp
 LOGICALFILE=hwMiddleware/packetSwitch/input/md/mpiLogical.xml
 MACFILE=hwMiddleware/packetSwitch/input/md/mpiMacAddresses
 MAPFILE=hwMiddleware/packetSwitch/input/md/mpiMap.xml
