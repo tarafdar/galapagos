@@ -43,8 +43,13 @@ open_run synth_1 -name synth_1
 
 create_pblock pblock_pr_i
 add_cells_to_pblock pblock_pr_i [get_cells -quiet [list pr_i]]
-#resize_pblock pblock_pr_i -add {SLICE_X3Y0:SLICE_X95Y238 DSP48E2_X0Y0:DSP48E2_X17Y93 IOB_X1Y0:IOB_X1Y181 RAMB18_X1Y0:RAMB18_X11Y93 RAMB36_X1Y0:RAMB36_X11Y46}
-resize_pblock pblock_pr_i -add {SLICE_X0Y0:SLICE_X97Y542 DSP48E2_X0Y0:DSP48E2_X17Y215 RAMB18_X0Y0:RAMB18_X11Y215 RAMB36_X0Y0:RAMB36_X11Y107}
+##v1 
+#resize_pblock pblock_pr_i -add {SLICE_X0Y0:SLICE_X97Y542 DSP48E2_X0Y0:DSP48E2_X17Y215 RAMB18_X0Y0:RAMB18_X11Y215 RAMB36_X0Y0:RAMB36_X11Y107}
+
+##v2
+resize_pblock pblock_pr_i -add {SLICE_X8Y30:SLICE_X95Y540 DSP48E2_X1Y12:DSP48E2_X17Y215 IOB_X1Y26:IOB_X1Y467 RAMB18_X1Y12:RAMB18_X11Y215 RAMB36_X1Y6:RAMB36_X11Y107}
+ 
+
 set_property HD.RECONFIGURABLE 1 [get_cells pr_i]
 set_property SNAPPING_MODE ON [get_pblocks pblock_pr_i]
 set_property RESET_AFTER_RECONFIG 1 [get_pblocks pblock_pr_i]
