@@ -9,14 +9,32 @@
         <kernel> 4 </kernel>
         <kernel> 5 </kernel>
         <kernel> 6 </kernel>
+        <kernel> 7 </kernel>
         <kernel> 8 </kernel>
-        <kernel> 9 </kernel>
-        <kernel> 10 </kernel>
-        <kernel> 11 </kernel>
-        <kernel> 12 </kernel>
-        <kernel> 13 </kernel>
-        <kernel> 14 </kernel>
-        <kernel> 15 </kernel>
+    </node>
+    <node>
+        <board> adm-8k5 </board>
+        <type> hw </type>
+        <kernel> 32 </kernel>
+        <kernel> 33 </kernel>
+        <kernel> 34 </kernel>
+        <kernel> 35 </kernel>
+        <kernel> 36 </kernel>
+        <kernel> 37 </kernel>
+        <kernel> 38 </kernel>
+        <kernel> 39 </kernel>
+    </node>
+    <node>
+        <board> adm-8k5 </board>
+        <type> hw </type>
+        <kernel> 48 </kernel>
+        <kernel> 49 </kernel>
+        <kernel> 50 </kernel>
+        <kernel> 51 </kernel>
+        <kernel> 52 </kernel>
+        <kernel> 53 </kernel>
+        <kernel> 54 </kernel>
+        <kernel> 55 </kernel>
     </node>
     <node>
         <type> sw </type>

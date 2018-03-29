@@ -1,5 +1,5 @@
 BOARD = adm-8k5
-DCP = static_routed_v2.dcp
+DCP = static_routed_v1.dcp
 LOGICALFILE=hwMiddleware/packetSwitch/input/md/mpiLogical.xml
 MACFILE=hwMiddleware/packetSwitch/input/md/mpiMacAddresses
 MAPFILE=hwMiddleware/packetSwitch/input/md/mpiMap.xml
@@ -51,4 +51,5 @@ dcp:
 	mkdir -p shells/${BOARD}/dcps
 	ls shells/${BOARD}/dcps/static_routed.dcp 2> /dev/null &&  echo "File exists" || (wget http://www.eecg.toronto.edu/~tarafda1/hypervisors/${BOARD}/${DCP} && mv ${DCP} shells/${BOARD}/dcps/static_routed.dcp) 
        
-
+clean_dcp:
+	rm -rf shells/${BOARD}/dcps/static_routed.dcp

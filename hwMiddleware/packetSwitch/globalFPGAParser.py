@@ -70,6 +70,7 @@ class kernelObj:
     name = ''
     clk = ''
     aresetn = ''
+    id_port = 'id_V'
     def __init__(self):
         self.num=''
         self.interfaces = []
@@ -80,6 +81,7 @@ class kernelObj:
         self.name = ''
         self.clk = 'ap_clk'
         self.aresetn = 'ap_rst_n'
+        self.id_port = 'id_V'
 class packetFormatterObj:
     port = ''
     dest = ''
@@ -184,6 +186,11 @@ def readKernelsFile(logicalKernelsFile):
         else:
             aresetn = ''
 
+        idElement = kernelElement.find('id_port')
+        id_port = ''
+        if idElement != None:
+            id_port = idElement.text.replace(" ", "")
+
         repElement = kernelElement.find('rep')
         #kernType = kernelElement.find('type').text.replace(" ","")
 
@@ -196,6 +203,7 @@ def readKernelsFile(logicalKernelsFile):
                 kernel.clk = clk
                 kernel.aresetn = aresetn
                 kernel.num = int(num) + i - 1
+                kernel.id_port = id_port
                 print "kernelName is "  + kernelName
                 print "kernelnum is "  + str(kernel.num)
                 interfaceElementArray = kernelElement.findall('interface')
@@ -495,6 +503,10 @@ def createLocalFPGA(projectName, plus16):
             versionAttribute.text = '1.0'
             ipElement.append(versionAttribute)
 
+            id_portAttribute = etree.Element('id_port')
+            id_portAttribute.text = kernel.id_port
+            ipElement.append(id_portAttribute)
+            
             for interface in kernel.interfaces:
                 interfaceAttribute = etree.Element('interface')
 

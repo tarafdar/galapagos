@@ -57,12 +57,13 @@ class portObj:
 class kernelObj:
    interface = []
    num=''
+   id_port = ''
    def __init__(self):
         self.clk = []
         self.resetn = []
         self.interface = []
         self.start = ''
-
+        self.id_port = ''
 class IPType:
     name = ''
     kernel = []
@@ -180,7 +181,11 @@ def readFPGAFile(localFPGAFile, sourceMAC, numFPGAs, plus16, index, packetFormat
             kernel.kernType = kernType
             #kernel.resetn = resetArray
             kernel.version = version
-
+            id_portElement = IP.find('id_port')
+            if id_portElement != None:
+                kernel.id_port = id_portElement.text.replace(" ", "")
+            else:
+                kernel.id_port = ''
 
             kernel.clk = clk
             kernel.resetn = resetn

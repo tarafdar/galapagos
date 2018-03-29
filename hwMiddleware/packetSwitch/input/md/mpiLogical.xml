@@ -16,7 +16,39 @@
     </bridgeTo>
 	<kernel> md1 
 		<num> 1 </num>
-        <rep> 15 </rep>
+        <rep> 8 </rep>
+        <clk> aclk </clk>
+        <id_port> id_V </id_port>
+        <aresetn> aresetn </aresetn>
+        <interface>
+            <direction> in </direction>
+            <name> stream_in_V </name>
+        </interface>
+        <interface>
+            <direction> out </direction>
+            <name> stream_out_V </name>
+            <debug/>
+        </interface>
+    </kernel>
+	<kernel> md1 
+		<num> 32 </num>
+        <rep> 8 </rep>
+        <clk> aclk </clk>
+        <id_port> id_V </id_port>
+        <aresetn> aresetn </aresetn>
+        <interface>
+            <direction> in </direction>
+            <name> stream_in_V </name>
+        </interface>
+        <interface>
+            <direction> out </direction>
+            <name> stream_out_V </name>
+            <debug/>
+        </interface>
+    </kernel>
+	<kernel> md1 
+		<num> 48 </num>
+        <rep> 8 </rep>
         <clk> aclk </clk>
         <id_port> id_V </id_port>
         <aresetn> aresetn </aresetn>
