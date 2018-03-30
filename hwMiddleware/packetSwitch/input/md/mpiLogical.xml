@@ -63,7 +63,7 @@
         </interface>
     </kernel>
 	<kernel> cpu
-        <num> 16 </num>
+        <num> 0 </num>
         <rep> 1 </rep>
         <interface>
             <direction> in </direction>

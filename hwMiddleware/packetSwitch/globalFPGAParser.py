@@ -606,7 +606,24 @@ def createLocalFPGA(projectName, plus16):
         fpgaFile = dirName + '/fpga.xml'
         
 
-        numExtra, schedulerList, listIP, packetFormatterList, numDebug, localConnections, inputSwitchMasters, inputSwitchSlaves  = localFPGAParser.start(dirName, sourceMAC, fpgaFile, fpga.board_name, index, projectName, networkBridges, len(allFPGAs), plus16, packetFormatterList) 
+        lowRange = []
+        highRange = []
+
+        for fpga in allFPGAs:
+            print "printing kernels"
+            low = fpga.kernels[0].num
+            high = fpga.kernels[0].num
+            for kernel in fpga.kernels:
+                if kernel.num < low:
+                    low = kernel.num
+                
+                if kernel.num > high:
+                    high = kernel.num
+
+            lowRange.append(low)
+            highRange.append(high)
+
+        numExtra, schedulerList, listIP, packetFormatterList, numDebug, localConnections, inputSwitchMasters, inputSwitchSlaves  = localFPGAParser.start(allFPGAs, dirName, sourceMAC, fpgaFile, fpga.board_name, index, projectName, networkBridges, len(allFPGAs), plus16, packetFormatterList) 
         numExtra_array.append(numExtra)
         schedulerList_array.append(schedulerList)
         listIP_array.append(listIP)
@@ -637,7 +654,7 @@ def createLocalFPGA(projectName, plus16):
         localConnections = localConnections_array[index]
         inputSwitchMasters= inputSwitchMasters_array[index]
         inputSwitchSlaves = inputSwitchSlaves_array[index]
-        tclFileGenerator.makeTCLFiles(dirName, sourceMAC, numExtra, schedulerList, listIP, localConnections, inputSwitchMasters, inputSwitchSlaves, packetFormatterList, str(index), projectName, networkBridges, len(allFPGAs), plus16, index)
+        tclFileGenerator.makeTCLFiles(dirName, sourceMAC, numExtra, schedulerList, listIP, localConnections, inputSwitchMasters, inputSwitchSlaves, packetFormatterList, str(index), projectName, networkBridges, len(allFPGAs), plus16, index, lowRange, highRange)
         index = index + 1
 
     globalConfigFile.close()

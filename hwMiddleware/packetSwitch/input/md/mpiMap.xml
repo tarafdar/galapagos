@@ -38,6 +38,6 @@
     </node>
     <node>
         <type> sw </type>
-        <kernel> 16 </kernel>
+        <kernel> 0 </kernel>
     </node>
 </cluster>

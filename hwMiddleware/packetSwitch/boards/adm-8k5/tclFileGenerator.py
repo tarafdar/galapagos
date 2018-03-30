@@ -27,7 +27,8 @@ def createPacketFormatter(index, packetFormatter, tclMain, networkBridges):
 
 
 
-def makeTCLFiles(outDir, sourceMAC, numExtra, schedulerList, listIP, localConnections, inputSwitchMasters, inputSwitchSlaves, packetFormatterList, index, projectName, networkBridges, numFPGAs, plus16, fpgaIndex):
+def makeTCLFiles(outDir, sourceMAC, numExtra, schedulerList, listIP, localConnections, inputSwitchMasters, inputSwitchSlaves, packetFormatterList, index, projectName, networkBridges, numFPGAs, plus16, fpgaIndex, lowRange, highRange):
+#def makeTCLFiles(outDir, sourceMAC, numExtra, schedulerList, listIP, localConnections, inputSwitchMasters, inputSwitchSlaves, packetFormatterList, index, projectName, networkBridges, numFPGAs, plus16, fpgaIndex):
     sourceMAC_int = int(sourceMAC.replace(":", ""), 16)
 
 
@@ -310,7 +311,8 @@ def makeTCLFiles(outDir, sourceMAC, numExtra, schedulerList, listIP, localConnec
             #if packetFormatter.port.kernelName == None:
             indexStr = "%02d"%indexFpgaSwitch
             #dest = packetFormatter.port.kernelInterface.tdest.replace(" ","")
-            tclMain.write('CONFIG.M' + indexStr + '_AXIS_BASETDEST {'+ format(indexFpgaSwitch * 16, '#010x') + '} CONFIG.M' + indexStr + '_AXIS_HIGHTDEST {' + format((indexFpgaSwitch * 16) + 15, '#010x') + '} ')
+            #tclMain.write('CONFIG.M' + indexStr + '_AXIS_BASETDEST {'+ format(indexFpgaSwitch * 15, '#010x') + '} CONFIG.M' + indexStr + '_AXIS_HIGHTDEST {' + format((indexFpgaSwitch * 15) + 14, '#010x') + '} ')
+            tclMain.write('CONFIG.M' + indexStr + '_AXIS_BASETDEST {'+ format(lowRange[indexFpgaSwitch], '#010x') + '} CONFIG.M' + indexStr + '_AXIS_HIGHTDEST {' + format(highRange[indexFpgaSwitch], '#010x') + '} ')
         tclMain.write('] [get_bd_cells fpgaSwitch_inst]\n') 
     else:
         tclMain.write('set_property -dict [list ')

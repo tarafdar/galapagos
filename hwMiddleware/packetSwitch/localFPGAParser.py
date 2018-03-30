@@ -81,7 +81,7 @@ class IPType:
         self.clk = ''
         self.resetn = ''
 
-def readFPGAFile(localFPGAFile, sourceMAC, numFPGAs, plus16, index, packetFormatterList):
+def readFPGAFile(allFPGAs, localFPGAFile, sourceMAC, numFPGAs, plus16, index, packetFormatterList):
     listIP = []
     schedulerList = []
     #packetFormatterList = []
@@ -136,7 +136,19 @@ def readFPGAFile(localFPGAFile, sourceMAC, numFPGAs, plus16, index, packetFormat
                 packetFormatter.dest = MAC
                 packetFormatter.source = sourceMAC
                 if plus16:
-                    fpgaIndex = int(dest)/16
+                    index = 0
+                    fpgaIndex = 0
+                    for fpga in allFPGAs:
+                        for kernel in fpga.kernels:
+                            print "dest is " + str(dest) + " kernel num is " + str(kernel.num)
+                            if str(dest) == str(kernel.num):
+                                fpgaIndex = index
+                                
+                                print "dest found " + str(dest)
+                                break
+                        index = index + 1
+                    
+                    #fpgaIndex = int(dest)/16
                     print "fpgaIndex is " + str(fpgaIndex) + " " + str(dest)
                     found = False
                     for packetFormatter in packetFormatterList[fpgaIndex]:
@@ -338,11 +350,11 @@ def makeFPGAIOTables(sourceMAC, schedulerList, listIP, packetFormatterList, plus
     return localConnections, inputSwitchMasters, inputSwitchSlaves, packetFormatterList
 
 
-def start(outDir_in, sourceMAC_in, FPGA_file, board_name, index, projectName, networkBridges, numFPGAs, plus16, packetFormatterList):
+def start(allFPGAs, outDir_in, sourceMAC_in, FPGA_file, board_name, index, projectName, networkBridges, numFPGAs, plus16, packetFormatterList):
 
     outDir = outDir_in
     sourceMAC = sourceMAC_in
-    numExtra, schedulerList, listIP, packetFormatterList, numDebug = readFPGAFile(FPGA_file, sourceMAC, numFPGAs, plus16, index, packetFormatterList)
+    numExtra, schedulerList, listIP, packetFormatterList, numDebug = readFPGAFile(allFPGAs, FPGA_file, sourceMAC, numFPGAs, plus16, index, packetFormatterList)
     localConnections, inputSwitchMasters, inputSwitchSlaves, packetFormatterList = makeFPGAIOTables(sourceMAC, schedulerList, listIP, packetFormatterList, plus16)
     return numExtra, schedulerList, listIP, packetFormatterList, numDebug, localConnections, inputSwitchMasters, inputSwitchSlaves
     #sys.path.append('hwMiddleware/packetSwitch/boards/' + board_name)
