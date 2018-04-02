@@ -22,6 +22,26 @@
     <node>
         <board> adm-8k5 </board>
         <type> hw </type>
+        <kernel> 16 </kernel>
+        <kernel> 17 </kernel>
+        <kernel> 18 </kernel>
+        <kernel> 19 </kernel>
+        <kernel> 20 </kernel>
+        <kernel> 21 </kernel>
+        <kernel> 22 </kernel>
+        <kernel> 23 </kernel>
+        <kernel> 24 </kernel>
+        <kernel> 25 </kernel>
+        <kernel> 26 </kernel>
+        <kernel> 27 </kernel>
+        <kernel> 28 </kernel>
+        <kernel> 29 </kernel>
+        <kernel> 30 </kernel>
+    </node>
+    <node>
+        <board> adm-8k5 </board>
+        <type> hw </type>
+        <kernel> 31 </kernel>
         <kernel> 32 </kernel>
         <kernel> 33 </kernel>
         <kernel> 34 </kernel>
@@ -36,26 +56,6 @@
         <kernel> 43 </kernel>
         <kernel> 44 </kernel>
         <kernel> 45 </kernel>
-        <kernel> 46 </kernel>
-    </node>
-    <node>
-        <board> adm-8k5 </board>
-        <type> hw </type>
-        <kernel> 48 </kernel>
-        <kernel> 49 </kernel>
-        <kernel> 50 </kernel>
-        <kernel> 51 </kernel>
-        <kernel> 52 </kernel>
-        <kernel> 53 </kernel>
-        <kernel> 54 </kernel>
-        <kernel> 55 </kernel>
-        <kernel> 56 </kernel>
-        <kernel> 57 </kernel>
-        <kernel> 58 </kernel>
-        <kernel> 59 </kernel>
-        <kernel> 60 </kernel>
-        <kernel> 61 </kernel>
-        <kernel> 62 </kernel>
     </node>
     <node>
         <type> sw </type>
