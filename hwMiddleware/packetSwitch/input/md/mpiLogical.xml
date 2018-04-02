@@ -16,7 +16,7 @@
     </bridgeTo>
 	<kernel> md1 
 		<num> 1 </num>
-        <rep> 8 </rep>
+        <rep> 15 </rep>
         <clk> aclk </clk>
         <id_port> id_V </id_port>
         <aresetn> aresetn </aresetn>
@@ -32,7 +32,7 @@
     </kernel>
 	<kernel> md1 
 		<num> 32 </num>
-        <rep> 8 </rep>
+        <rep> 15 </rep>
         <clk> aclk </clk>
         <id_port> id_V </id_port>
         <aresetn> aresetn </aresetn>
@@ -48,7 +48,7 @@
     </kernel>
 	<kernel> md1 
 		<num> 48 </num>
-        <rep> 8 </rep>
+        <rep> 15 </rep>
         <clk> aclk </clk>
         <id_port> id_V </id_port>
         <aresetn> aresetn </aresetn>
