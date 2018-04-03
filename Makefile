@@ -44,7 +44,7 @@ shells/projects/${BOARD}/${DCP}:
 	cp shells/projects/${BOARD}/${DCP} shells/${BOARD}/dcps
 
 pr: createCluster 
-	vivado -mode batch -source tclScripts/createCluster.tcl
+	bash ./tclScripts/createCluster.sh
 	touch projects/${PROJECTNAME}/cluster	
 
 dcp:

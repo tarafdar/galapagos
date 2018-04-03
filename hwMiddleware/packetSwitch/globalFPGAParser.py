@@ -454,7 +454,7 @@ def createLocalFPGA(projectName, plus16):
     index = 0
     if os.path.exists('projects/' + projectName):
         shutil.rmtree('projects/' + projectName)
-    globalConfigFile = open('tclScripts/createCluster.tcl', 'w')
+    globalConfigFile = open('tclScripts/createCluster.sh', 'w')
 
 
     packetFormatterList = []
@@ -633,10 +633,18 @@ def createLocalFPGA(projectName, plus16):
         inputSwitchSlaves_array.append(inputSwitchSlaves)
         #import tclFileGenerator
         #tclFileGenerator.makeTCLFiles(dirName, sourceMAC, numExtra, schedulerList, listIP, localConnections, inputSwitchMasters, inputSwitchSlaves, packetFormatterList, str(index), projectName, networkBridges, len(allFPGAs), plus16, index)
+        if(index < len(allFPGAs) - 1):
+            globalConfigFile.write('vivado -mode batch -source '  + dirName + '/' + 'createLocalProject.tcl &\n')
+        else:
+            globalConfigFile.write('vivado -mode batch -source '  + dirName + '/' + 'createLocalProject.tcl\n')
+        globalConfigFile.write('echo \"$!\" >  '  + dirName + '/' + 'createLocalProject.pid\n')
+        localConfigFile = open(dirName + '/createLocalProject.tcl', 'w')
+        localConfigFile.write('source ' + dirName + '/' + 'configurationParameters.tcl\n')
+        localConfigFile.write('source hwMiddleware/packetSwitch/localPRCreate.tcl\n')
+        localConfigFile.close()
         index = index+1
-        globalConfigFile.write('source ' + dirName + '/' + 'configurationParameters.tcl\n')
-        globalConfigFile.write('source hwMiddleware/packetSwitch/localPRCreate.tcl\n')
    
+    globalConfigFile.close()
     print packetFormatterList 
     index = 0
     for fpga in allFPGAs:
@@ -657,7 +665,6 @@ def createLocalFPGA(projectName, plus16):
         tclFileGenerator.makeTCLFiles(dirName, sourceMAC, numExtra, schedulerList, listIP, localConnections, inputSwitchMasters, inputSwitchSlaves, packetFormatterList, str(index), projectName, networkBridges, len(allFPGAs), plus16, index, lowRange, highRange)
         index = index + 1
 
-    globalConfigFile.close()
     print packetFormatterList
 
 try:
