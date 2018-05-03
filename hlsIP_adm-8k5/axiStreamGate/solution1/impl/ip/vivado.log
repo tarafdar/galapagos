@@ -1,0 +1,16 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Thu May  3 09:57:16 2018
+# Process ID: 30439
+# Current directory: /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/axiStreamGate/solution1/impl/ip
+# Command line: vivado -notrace -mode batch -source run_ippack.tcl
+# Log file: /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/axiStreamGate/solution1/impl/ip/vivado.log
+# Journal file: /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/axiStreamGate/solution1/impl/ip/vivado.jou
+#-----------------------------------------------------------
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/cad1/Xilinx/Vivado/2018.1/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Thu May  3 09:57:26 2018...
