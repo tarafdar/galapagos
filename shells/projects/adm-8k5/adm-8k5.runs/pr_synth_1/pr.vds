@@ -1,0 +1,362 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Thu May  3 11:48:19 2018
+# Process ID: 4861
+# Current directory: /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.runs/pr_synth_1
+# Command line: vivado -log pr.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source pr.tcl
+# Log file: /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.runs/pr_synth_1/pr.vds
+# Journal file: /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.runs/pr_synth_1/vivado.jou
+#-----------------------------------------------------------
+source pr.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/cad1/Xilinx/Vivado/2018.1/data/ip'.
+Command: synth_design -top pr -part xcku115-flva1517-2-e -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xcku115'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcku115'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 4881 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:27 . Memory (MB): peak = 1373.469 ; gain = 4.965 ; free physical = 5966 ; free virtual = 36285
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'pr' [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/defaultFifo/synth/pr.v:13]
+INFO: [Synth 8-638] synthesizing module 'pr_axi_bram_ctrl_0_0' [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/defaultFifo/ip/pr_axi_bram_ctrl_0_0/synth/pr_axi_bram_ctrl_0_0.vhd:104]
+	Parameter C_BRAM_INST_MODE bound to: EXTERNAL - type: string 
+	Parameter C_MEMORY_DEPTH bound to: 8192 - type: integer 
+	Parameter C_BRAM_ADDR_WIDTH bound to: 13 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 16 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_S_AXI_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_S_AXI_PROTOCOL bound to: AXI4 - type: string 
+	Parameter C_S_AXI_SUPPORTS_NARROW_BURST bound to: 1 - type: integer 
+	Parameter C_SINGLE_PORT_BRAM bound to: 1 - type: integer 
+	Parameter C_FAMILY bound to: kintexu - type: string 
+	Parameter C_SELECT_XPM bound to: 1 - type: integer 
+	Parameter C_S_AXI_CTRL_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_CTRL_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_ECC bound to: 0 - type: integer 
+	Parameter C_ECC_TYPE bound to: 0 - type: integer 
+	Parameter C_FAULT_INJECT bound to: 0 - type: integer 
+	Parameter C_ECC_ONOFF_RESET_VALUE bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'axi_bram_ctrl' declared at '/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/defaultFifo/ipshared/6db1/hdl/axi_bram_ctrl_v4_0_rfs.vhd:23737' bound to instance 'U0' of component 'axi_bram_ctrl' [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/defaultFifo/ip/pr_axi_bram_ctrl_0_0/synth/pr_axi_bram_ctrl_0_0.vhd:254]
+INFO: [Synth 8-638] synthesizing module 'axi_bram_ctrl' [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/defaultFifo/ipshared/6db1/hdl/axi_bram_ctrl_v4_0_rfs.vhd:23907]
+	Parameter C_BRAM_INST_MODE bound to: EXTERNAL - type: string 
+	Parameter C_MEMORY_DEPTH bound to: 8192 - type: integer 
+	Parameter C_BRAM_ADDR_WIDTH bound to: 13 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 16 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_S_AXI_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_S_AXI_PROTOCOL bound to: AXI4 - type: string 
+	Parameter C_S_AXI_SUPPORTS_NARROW_BURST bound to: 1 - type: integer 
+	Parameter C_SINGLE_PORT_BRAM bound to: 1 - type: integer 
+	Parameter C_FAMILY bound to: kintexu - type: string 
+	Parameter C_SELECT_XPM bound to: 1 - type: integer 
+	Parameter C_S_AXI_CTRL_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_CTRL_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_ECC bound to: 0 - type: integer 
+	Parameter C_ECC_TYPE bound to: 0 - type: integer 
+	Parameter C_FAULT_INJECT bound to: 0 - type: integer 
+	Parameter C_ECC_ONOFF_RESET_VALUE bound to: 0 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'axi_bram_ctrl_top' [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/defaultFifo/ipshared/6db1/hdl/axi_bram_ctrl_v4_0_rfs.vhd:22907]
+	Parameter C_BRAM_ADDR_WIDTH bound to: 13 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 16 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_S_AXI_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_S_AXI_PROTOCOL bound to: AXI4 - type: string 
+	Parameter C_S_AXI_SUPPORTS_NARROW_BURST bound to: 1 - type: integer 
+	Parameter C_SINGLE_PORT_BRAM bound to: 1 - type: integer 
+	Parameter C_S_AXI_CTRL_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_CTRL_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_ECC bound to: 0 - type: integer 
+	Parameter C_ECC_TYPE bound to: 0 - type: integer 
+	Parameter C_FAULT_INJECT bound to: 0 - type: integer 
+	Parameter C_ECC_ONOFF_RESET_VALUE bound to: 0 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'full_axi' [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/defaultFifo/ipshared/6db1/hdl/axi_bram_ctrl_v4_0_rfs.vhd:21852]
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 16 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_S_AXI_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_S_AXI_PROTOCOL bound to: AXI4 - type: string 
+	Parameter C_S_AXI_SUPPORTS_NARROW_BURST bound to: 1 - type: integer 
+	Parameter C_SINGLE_PORT_BRAM bound to: 1 - type: integer 
+	Parameter C_S_AXI_CTRL_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_CTRL_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_ECC bound to: 0 - type: integer 
+	Parameter C_ECC_WIDTH bound to: 0 - type: integer 
+	Parameter C_ECC_TYPE bound to: 0 - type: integer 
+	Parameter C_FAULT_INJECT bound to: 0 - type: integer 
+	Parameter C_ECC_ONOFF_RESET_VALUE bound to: 0 - type: integer 
+	Parameter C_ENABLE_AXI_CTRL_REG_IF bound to: 0 - type: integer 
+	Parameter C_CE_FAILING_REGISTERS bound to: 0 - type: integer 
+	Parameter C_UE_FAILING_REGISTERS bound to: 0 - type: integer 
+	Parameter C_ECC_STATUS_REGISTERS bound to: 0 - type: integer 
+	Parameter C_ECC_ONOFF_REGISTER bound to: 0 - type: integer 
+	Parameter C_CE_COUNTER_WIDTH bound to: 0 - type: integer 
+INFO: [Synth 8-3919] null assignment ignored [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/defaultFifo/ipshared/6db1/hdl/axi_bram_ctrl_v4_0_rfs.vhd:21920]
+INFO: [Synth 8-638] synthesizing module 'sng_port_arb' [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/defaultFifo/ipshared/6db1/hdl/axi_bram_ctrl_v4_0_rfs.vhd:9219]
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'sng_port_arb' (1#1) [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/defaultFifo/ipshared/6db1/hdl/axi_bram_ctrl_v4_0_rfs.vhd:9219]
+INFO: [Synth 8-638] synthesizing module 'wr_chnl' [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/defaultFifo/ipshared/6db1/hdl/axi_bram_ctrl_v4_0_rfs.vhd:17016]
+	Parameter C_AXI_ADDR_WIDTH bound to: 16 - type: integer 
+	Parameter C_BRAM_ADDR_ADJUST_FACTOR bound to: 3 - type: integer 
+	Parameter C_AXI_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_AXI_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_S_AXI_SUPPORTS_NARROW bound to: 1 - type: integer 
+	Parameter C_S_AXI_PROTOCOL bound to: AXI4 - type: string 
+	Parameter C_SINGLE_PORT_BRAM bound to: 1 - type: integer 
+	Parameter C_ECC bound to: 0 - type: integer 
+	Parameter C_ECC_WIDTH bound to: 0 - type: integer 
+	Parameter C_ECC_TYPE bound to: 0 - type: integer 
+INFO: [Synth 8-506] null port 'FaultInjectECC' ignored [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/defaultFifo/ipshared/6db1/hdl/axi_bram_ctrl_v4_0_rfs.vhd:16983]
+INFO: [Synth 8-638] synthesizing module 'wrap_brst' [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/defaultFifo/ipshared/6db1/hdl/axi_bram_ctrl_v4_0_rfs.vhd:10218]
+	Parameter C_AXI_ADDR_WIDTH bound to: 16 - type: integer 
+	Parameter C_BRAM_ADDR_ADJUST_FACTOR bound to: 3 - type: integer 
+	Parameter C_AXI_DATA_WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'wrap_brst' (2#1) [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/defaultFifo/ipshared/6db1/hdl/axi_bram_ctrl_v4_0_rfs.vhd:10218]
+INFO: [Synth 8-226] default block is never used [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/defaultFifo/ipshared/6db1/hdl/axi_bram_ctrl_v4_0_rfs.vhd:18356]
+INFO: [Synth 8-638] synthesizing module 'ua_narrow' [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/defaultFifo/ipshared/6db1/hdl/axi_bram_ctrl_v4_0_rfs.vhd:9752]
+	Parameter C_AXI_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_BRAM_ADDR_ADJUST_FACTOR bound to: 3 - type: integer 
+	Parameter C_NARROW_BURST_CNT_LEN bound to: 3 - type: integer 
+INFO: [Synth 8-226] default block is never used [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/defaultFifo/ipshared/6db1/hdl/axi_bram_ctrl_v4_0_rfs.vhd:9931]
+INFO: [Synth 8-226] default block is never used [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/defaultFifo/ipshared/6db1/hdl/axi_bram_ctrl_v4_0_rfs.vhd:9970]
+INFO: [Synth 8-256] done synthesizing module 'ua_narrow' (3#1) [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/defaultFifo/ipshared/6db1/hdl/axi_bram_ctrl_v4_0_rfs.vhd:9752]
+INFO: [Synth 8-638] synthesizing module 'SRL_FIFO' [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/defaultFifo/ipshared/6db1/hdl/axi_bram_ctrl_v4_0_rfs.vhd:133]
+	Parameter C_DATA_BITS bound to: 1 - type: integer 
+	Parameter C_DEPTH bound to: 8 - type: integer 
+	Parameter C_XON bound to: 0 - type: bool 
+INFO: [Synth 8-3491] module 'FDR' declared at '/cad1/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_comp.v:3953' bound to instance 'Data_Exists_DFF' of component 'FDR' [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/defaultFifo/ipshared/6db1/hdl/axi_bram_ctrl_v4_0_rfs.vhd:230]
+INFO: [Synth 8-6157] synthesizing module 'FDR' [/cad1/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_comp.v:3953]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-6155] done synthesizing module 'FDR' (4#1) [/cad1/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_comp.v:3953]
+INFO: [Synth 8-3491] module 'MUXCY_L' declared at '/cad1/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_comp.v:26640' bound to instance 'MUXCY_L_I' of component 'MUXCY_L' [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/defaultFifo/ipshared/6db1/hdl/axi_bram_ctrl_v4_0_rfs.vhd:247]
+INFO: [Synth 8-6157] synthesizing module 'MUXCY_L' [/cad1/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_comp.v:26640]
+INFO: [Synth 8-6155] done synthesizing module 'MUXCY_L' (5#1) [/cad1/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_comp.v:26640]
+INFO: [Synth 8-3491] module 'XORCY' declared at '/cad1/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_comp.v:52721' bound to instance 'XORCY_I' of component 'XORCY' [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/defaultFifo/ipshared/6db1/hdl/axi_bram_ctrl_v4_0_rfs.vhd:254]
+INFO: [Synth 8-6157] synthesizing module 'XORCY' [/cad1/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_comp.v:52721]
+INFO: [Synth 8-6155] done synthesizing module 'XORCY' (6#1) [/cad1/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_comp.v:52721]
+INFO: [Synth 8-3491] module 'FDRE' declared at '/cad1/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_comp.v:3966' bound to instance 'FDRE_I' of component 'FDRE' [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/defaultFifo/ipshared/6db1/hdl/axi_bram_ctrl_v4_0_rfs.vhd:260]
+INFO: [Synth 8-6157] synthesizing module 'FDRE' [/cad1/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_comp.v:3966]
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+INFO: [Synth 8-6155] done synthesizing module 'FDRE' (7#1) [/cad1/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_comp.v:3966]
+INFO: [Synth 8-3491] module 'MUXCY_L' declared at '/cad1/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_comp.v:26640' bound to instance 'MUXCY_L_I' of component 'MUXCY_L' [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/defaultFifo/ipshared/6db1/hdl/axi_bram_ctrl_v4_0_rfs.vhd:247]
+INFO: [Synth 8-3491] module 'XORCY' declared at '/cad1/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_comp.v:52721' bound to instance 'XORCY_I' of component 'XORCY' [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/defaultFifo/ipshared/6db1/hdl/axi_bram_ctrl_v4_0_rfs.vhd:254]
+INFO: [Synth 8-3491] module 'FDRE' declared at '/cad1/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_comp.v:3966' bound to instance 'FDRE_I' of component 'FDRE' [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/defaultFifo/ipshared/6db1/hdl/axi_bram_ctrl_v4_0_rfs.vhd:260]
+INFO: [Synth 8-3491] module 'MUXCY_L' declared at '/cad1/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_comp.v:26640' bound to instance 'MUXCY_L_I' of component 'MUXCY_L' [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/defaultFifo/ipshared/6db1/hdl/axi_bram_ctrl_v4_0_rfs.vhd:247]
+INFO: [Synth 8-3491] module 'XORCY' declared at '/cad1/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_comp.v:52721' bound to instance 'XORCY_I' of component 'XORCY' [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/defaultFifo/ipshared/6db1/hdl/axi_bram_ctrl_v4_0_rfs.vhd:254]
+INFO: [Synth 8-3491] module 'FDRE' declared at '/cad1/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_comp.v:3966' bound to instance 'FDRE_I' of component 'FDRE' [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/defaultFifo/ipshared/6db1/hdl/axi_bram_ctrl_v4_0_rfs.vhd:260]
+INFO: [Synth 8-3491] module 'MUXCY_L' declared at '/cad1/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_comp.v:26640' bound to instance 'MUXCY_L_I' of component 'MUXCY_L' [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/defaultFifo/ipshared/6db1/hdl/axi_bram_ctrl_v4_0_rfs.vhd:247]
+INFO: [Synth 8-3491] module 'XORCY' declared at '/cad1/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_comp.v:52721' bound to instance 'XORCY_I' of component 'XORCY' [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/defaultFifo/ipshared/6db1/hdl/axi_bram_ctrl_v4_0_rfs.vhd:254]
+INFO: [Synth 8-3491] module 'FDRE' declared at '/cad1/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_comp.v:3966' bound to instance 'FDRE_I' of component 'FDRE' [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/defaultFifo/ipshared/6db1/hdl/axi_bram_ctrl_v4_0_rfs.vhd:260]
+INFO: [Synth 8-3491] module 'SRL16E' declared at '/cad1/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_comp.v:50709' bound to instance 'SRL16E_I' of component 'SRL16E' [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/defaultFifo/ipshared/6db1/hdl/axi_bram_ctrl_v4_0_rfs.vhd:271]
+INFO: [Synth 8-6157] synthesizing module 'SRL16E' [/cad1/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_comp.v:50709]
+	Parameter INIT bound to: 16'b0000000000000000 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+INFO: [Synth 8-6155] done synthesizing module 'SRL16E' (8#1) [/cad1/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_comp.v:50709]
+INFO: [Synth 8-256] done synthesizing module 'SRL_FIFO' (9#1) [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/defaultFifo/ipshared/6db1/hdl/axi_bram_ctrl_v4_0_rfs.vhd:133]
+WARNING: [Synth 8-6014] Unused sequential element curr_awsize_reg_reg was removed.  [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/defaultFifo/ipshared/6db1/hdl/axi_bram_ctrl_v4_0_rfs.vhd:18172]
+WARNING: [Synth 8-6014] Unused sequential element curr_awlen_reg_1_or_2_reg was removed.  [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/defaultFifo/ipshared/6db1/hdl/axi_bram_ctrl_v4_0_rfs.vhd:18449]
+INFO: [Synth 8-256] done synthesizing module 'wr_chnl' (10#1) [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/defaultFifo/ipshared/6db1/hdl/axi_bram_ctrl_v4_0_rfs.vhd:17016]
+INFO: [Synth 8-638] synthesizing module 'rd_chnl' [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/defaultFifo/ipshared/6db1/hdl/axi_bram_ctrl_v4_0_rfs.vhd:11498]
+	Parameter C_AXI_ADDR_WIDTH bound to: 16 - type: integer 
+	Parameter C_BRAM_ADDR_ADJUST_FACTOR bound to: 3 - type: integer 
+	Parameter C_AXI_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_AXI_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_S_AXI_SUPPORTS_NARROW bound to: 1 - type: integer 
+	Parameter C_S_AXI_PROTOCOL bound to: AXI4 - type: string 
+	Parameter C_SINGLE_PORT_BRAM bound to: 1 - type: integer 
+	Parameter C_ECC bound to: 0 - type: integer 
+	Parameter C_ECC_WIDTH bound to: 0 - type: integer 
+	Parameter C_ECC_TYPE bound to: 0 - type: integer 
+INFO: [Synth 8-226] default block is never used [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/defaultFifo/ipshared/6db1/hdl/axi_bram_ctrl_v4_0_rfs.vhd:12774]
+WARNING: [Synth 8-6014] Unused sequential element curr_arsize_reg_reg was removed.  [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/defaultFifo/ipshared/6db1/hdl/axi_bram_ctrl_v4_0_rfs.vhd:12641]
+WARNING: [Synth 8-6014] Unused sequential element no_ar_ack_reg was removed.  [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/defaultFifo/ipshared/6db1/hdl/axi_bram_ctrl_v4_0_rfs.vhd:14982]
+WARNING: [Synth 8-6014] Unused sequential element do_cmplt_burst_reg was removed.  [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/defaultFifo/ipshared/6db1/hdl/axi_bram_ctrl_v4_0_rfs.vhd:16034]
+WARNING: [Synth 8-6014] Unused sequential element axi_arsize_pipe_max_reg was removed.  [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/defaultFifo/ipshared/6db1/hdl/axi_bram_ctrl_v4_0_rfs.vhd:12181]
+INFO: [Synth 8-256] done synthesizing module 'rd_chnl' (11#1) [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/defaultFifo/ipshared/6db1/hdl/axi_bram_ctrl_v4_0_rfs.vhd:11498]
+INFO: [Synth 8-256] done synthesizing module 'full_axi' (12#1) [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/defaultFifo/ipshared/6db1/hdl/axi_bram_ctrl_v4_0_rfs.vhd:21852]
+INFO: [Synth 8-256] done synthesizing module 'axi_bram_ctrl_top' (13#1) [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/defaultFifo/ipshared/6db1/hdl/axi_bram_ctrl_v4_0_rfs.vhd:22907]
+INFO: [Synth 8-256] done synthesizing module 'axi_bram_ctrl' (14#1) [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/defaultFifo/ipshared/6db1/hdl/axi_bram_ctrl_v4_0_rfs.vhd:23907]
+INFO: [Synth 8-256] done synthesizing module 'pr_axi_bram_ctrl_0_0' (15#1) [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/defaultFifo/ip/pr_axi_bram_ctrl_0_0/synth/pr_axi_bram_ctrl_0_0.vhd:104]
+INFO: [Synth 8-6157] synthesizing module 'pr_axis_data_fifo_0_0' [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/defaultFifo/ip/pr_axis_data_fifo_0_0/synth/pr_axis_data_fifo_0_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'axis_data_fifo_v1_1_17_axis_data_fifo' [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/defaultFifo/ipshared/36f8/hdl/axis_data_fifo_v1_1_vl_rfs.v:62]
+	Parameter C_FAMILY bound to: kintexu - type: string 
+	Parameter C_AXIS_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_AXIS_TID_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIS_TDEST_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIS_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIS_SIGNAL_SET bound to: 32'b00000000000000000000000000011011 
+	Parameter C_FIFO_DEPTH bound to: 1024 - type: integer 
+	Parameter C_FIFO_MODE bound to: 1 - type: integer 
+	Parameter C_IS_ACLK_ASYNC bound to: 0 - type: integer 
+	Parameter C_SYNCHRONIZER_STAGE bound to: 2 - type: integer 
+	Parameter C_ACLKEN_CONV_MODE bound to: 0 - type: integer 
+	Parameter G_INDX_SS_TREADY bound to: 0 - type: integer 
+	Parameter G_INDX_SS_TDATA bound to: 1 - type: integer 
+	Parameter G_INDX_SS_TSTRB bound to: 2 - type: integer 
+	Parameter G_INDX_SS_TKEEP bound to: 3 - type: integer 
+	Parameter G_INDX_SS_TLAST bound to: 4 - type: integer 
+	Parameter G_INDX_SS_TID bound to: 5 - type: integer 
+	Parameter G_INDX_SS_TDEST bound to: 6 - type: integer 
+	Parameter G_INDX_SS_TUSER bound to: 7 - type: integer 
+	Parameter G_MASK_SS_TREADY bound to: 1 - type: integer 
+	Parameter G_MASK_SS_TDATA bound to: 2 - type: integer 
+	Parameter G_MASK_SS_TSTRB bound to: 4 - type: integer 
+	Parameter G_MASK_SS_TKEEP bound to: 8 - type: integer 
+	Parameter G_MASK_SS_TLAST bound to: 16 - type: integer 
+	Parameter G_MASK_SS_TID bound to: 32 - type: integer 
+	Parameter G_MASK_SS_TDEST bound to: 64 - type: integer 
+	Parameter G_MASK_SS_TUSER bound to: 128 - type: integer 
+	Parameter G_TASK_SEVERITY_ERR bound to: 2 - type: integer 
+	Parameter G_TASK_SEVERITY_WARNING bound to: 1 - type: integer 
+	Parameter G_TASK_SEVERITY_INFO bound to: 0 - type: integer 
+	Parameter P_TREADY_EXISTS bound to: 1 - type: integer 
+	Parameter P_TDATA_EXISTS bound to: 1 - type: integer 
+	Parameter P_TSTRB_EXISTS bound to: 0 - type: integer 
+	Parameter P_TKEEP_EXISTS bound to: 1 - type: integer 
+	Parameter P_TLAST_EXISTS bound to: 1 - type: integer 
+	Parameter P_TID_EXISTS bound to: 0 - type: integer 
+	Parameter P_TDEST_EXISTS bound to: 0 - type: integer 
+	Parameter P_TUSER_EXISTS bound to: 0 - type: integer 
+	Parameter P_AXIS_PAYLOAD_WIDTH bound to: 73 - type: integer 
+	Parameter P_WR_PNTR_WIDTH bound to: 10 - type: integer 
+	Parameter P_FIFO_COUNT_WIDTH bound to: 11 - type: integer 
+	Parameter P_FIFO_TYPE bound to: 1 - type: integer 
+	Parameter P_IMPLEMENTATION_TYPE_AXIS bound to: 1 - type: integer 
+	Parameter P_COMMON_CLOCK bound to: 1 - type: integer 
+	Parameter P_MSGON_VAL bound to: 1 - type: integer 
+	Parameter P_APPLICATION_TYPE_AXIS bound to: 0 - type: integer 
+	Parameter LP_S_ACLKEN_CAN_TOGGLE bound to: 0 - type: integer 
+	Parameter LP_M_ACLKEN_CAN_TOGGLE bound to: 0 - type: integer 
+	Parameter C_DIN_WIDTH bound to: 18 - type: integer 
+	Parameter C_RD_PNTR_WIDTH bound to: 10 - type: integer 
+	Parameter C_WR_PNTR_WIDTH bound to: 10 - type: integer 
+	Parameter C_DOUT_WIDTH bound to: 18 - type: integer 
+	Parameter C_DATA_COUNT_WIDTH bound to: 10 - type: integer 
+	Parameter C_RD_DATA_COUNT_WIDTH bound to: 10 - type: integer 
+	Parameter C_WR_DATA_COUNT_WIDTH bound to: 10 - type: integer 
+	Parameter C_AXI_ID_WIDTH bound to: 4 - type: integer 
+	Parameter C_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_AXI_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_AXI_AWUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_ARUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_RUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_BUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_WUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_RACH bound to: 4 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_RDCH bound to: 10 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_WACH bound to: 4 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_WDCH bound to: 10 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_WRCH bound to: 4 - type: integer 
+	Parameter C_RD_PNTR_WIDTH_RACH bound to: 4 - type: integer 
+	Parameter C_RD_PNTR_WIDTH_RDCH bound to: 10 - type: integer 
+	Parameter C_RD_PNTR_WIDTH_WACH bound to: 4 - type: integer 
+	Parameter C_RD_PNTR_WIDTH_WDCH bound to: 10 - type: integer 
+	Parameter C_RD_PNTR_WIDTH_WRCH bound to: 4 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_AXIS bound to: 10 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* KEEP = "TRUE" *) [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/defaultFifo/ipshared/36f8/hdl/axis_data_fifo_v1_1_vl_rfs.v:181]
+INFO: [Synth 8-6157] synthesizing module 'axis_infrastructure_v1_1_0_util_aclken_converter_wrapper' [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/defaultFifo/ipshared/0ab1/hdl/axis_infrastructure_v1_1_vl_rfs.v:600]
+	Parameter C_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_TID_WIDTH bound to: 1 - type: integer 
+	Parameter C_TDEST_WIDTH bound to: 1 - type: integer 
+	Parameter C_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_SIGNAL_SET bound to: 255 - type: integer 
+	Parameter C_S_ACLKEN_CAN_TOGGLE bound to: 0 - type: integer 
+	Parameter C_M_ACLKEN_CAN_TOGGLE bound to: 0 - type: integer 
+	Parameter G_INDX_SS_TREADY bound to: 0 - type: integer 
+	Parameter G_INDX_SS_TDATA bound to: 1 - type: integer 
+	Parameter G_INDX_SS_TSTRB bound to: 2 - type: integer 
+	Parameter G_INDX_SS_TKEEP bound to: 3 - type: integer 
+	Parameter G_INDX_SS_TLAST bound to: 4 - type: integer 
+	Parameter G_INDX_SS_TID bound to: 5 - type: integer 
+	Parameter G_INDX_SS_TDEST bound to: 6 - type: integer 
+	Parameter G_INDX_SS_TUSER bound to: 7 - type: integer 
+	Parameter G_MASK_SS_TREADY bound to: 1 - type: integer 
+	Parameter G_MASK_SS_TDATA bound to: 2 - type: integer 
+	Parameter G_MASK_SS_TSTRB bound to: 4 - type: integer 
+	Parameter G_MASK_SS_TKEEP bound to: 8 - type: integer 
+	Parameter G_MASK_SS_TLAST bound to: 16 - type: integer 
+	Parameter G_MASK_SS_TID bound to: 32 - type: integer 
+	Parameter G_MASK_SS_TDEST bound to: 64 - type: integer 
+	Parameter G_MASK_SS_TUSER bound to: 128 - type: integer 
+	Parameter G_TASK_SEVERITY_ERR bound to: 2 - type: integer 
+	Parameter G_TASK_SEVERITY_WARNING bound to: 1 - type: integer 
+	Parameter G_TASK_SEVERITY_INFO bound to: 0 - type: integer 
+	Parameter P_TPAYLOAD_WIDTH bound to: 84 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'axis_infrastructure_v1_1_0_util_axis2vector' [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/defaultFifo/ipshared/0ab1/hdl/axis_infrastructure_v1_1_vl_rfs.v:810]
+	Parameter C_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_TID_WIDTH bound to: 1 - type: integer 
+	Parameter C_TDEST_WIDTH bound to: 1 - type: integer 
+	Parameter C_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_TPAYLOAD_WIDTH bound to: 84 - type: integer 
+	Parameter C_SIGNAL_SET bound to: 255 - type: integer 
+	Parameter G_INDX_SS_TREADY bound to: 0 - type: integer 
+	Parameter G_INDX_SS_TDATA bound to: 1 - type: integer 
+	Parameter G_INDX_SS_TSTRB bound to: 2 - type: integer 
+	Parameter G_INDX_SS_TKEEP bound to: 3 - type: integer 
+	Parameter G_INDX_SS_TLAST bound to: 4 - type: integer 
+	Parameter G_INDX_SS_TID bound to: 5 - type: integer 
+	Parameter G_INDX_SS_TDEST bound to: 6 - type: integer 
+	Parameter G_INDX_SS_TUSER bound to: 7 - type: integer 
+	Parameter G_MASK_SS_TREADY bound to: 1 - type: integer 
+	Parameter G_MASK_SS_TDATA bound to: 2 - type: integer 
+	Parameter G_MASK_SS_TSTRB bound to: 4 - type: integer 
+	Parameter G_MASK_SS_TKEEP bound to: 8 - type: integer 
+	Parameter G_MASK_SS_TLAST bound to: 16 - type: integer 
+	Parameter G_MASK_SS_TID bound to: 32 - type: integer 
+	Parameter G_MASK_SS_TDEST bound to: 64 - type: integer 
+	Parameter G_MASK_SS_TUSER bound to: 128 - type: integer 
+	Parameter G_TASK_SEVERITY_ERR bound to: 2 - type: integer 
+	Parameter G_TASK_SEVERITY_WARNING bound to: 1 - type: integer 
+	Parameter G_TASK_SEVERITY_INFO bound to: 0 - type: integer 
+	Parameter P_TDATA_INDX bound to: 0 - type: integer 
+	Parameter P_TSTRB_INDX bound to: 64 - type: integer 
+	Parameter P_TKEEP_INDX bound to: 72 - type: integer 
+	Parameter P_TLAST_INDX bound to: 80 - type: integer 
+	Parameter P_TID_INDX bound to: 81 - type: integer 
+	Parameter P_TDEST_INDX bound to: 82 - type: integer 
+	Parameter P_TUSER_INDX bound to: 83 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'axis_infrastructure_v1_1_0_util_axis2vector' (16#1) [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/defaultFifo/ipshared/0ab1/hdl/axis_infrastructure_v1_1_vl_rfs.v:810]
+INFO: [Synth 8-6157] synthesizing module 'axis_infrastructure_v1_1_0_util_vector2axis' [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/defaultFifo/ipshared/0ab1/hdl/axis_infrastructure_v1_1_vl_rfs.v:992]
+	Parameter C_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_TID_WIDTH bound to: 1 - type: integer 
+	Parameter C_TDEST_WIDTH bound to: 1 - type: integer 
+	Parameter C_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_TPAYLOAD_WIDTH bound to: 84 - type: integer 
+	Parameter C_SIGNAL_SET bound to: 255 - type: integer 
+	Parameter G_INDX_SS_TREADY bound to: 0 - type: integer 
+	Parameter G_INDX_SS_TDATA bound to: 1 - type: integer 
+	Parameter G_INDX_SS_TSTRB bound to: 2 - type: integer 
+	Parameter G_INDX_SS_TKEEP bound to: 3 - type: integer 
+	Parameter G_INDX_SS_TLAST bound to: 4 - type: integer 
+	Parameter G_INDX_SS_TID bound to: 5 - type: integer 
+	Parameter G_INDX_SS_TDEST bound to: 6 - type: integer 
+	Parameter G_INDX_SS_TUSER bound to: 7 - type: integer 
+	Parameter G_MASK_SS_TREADY bound to: 1 - type: integer 
+	Parameter G_MASK_SS_TDATA bound to: 2 - type: integer 
+	Parameter G_MASK_SS_TSTRB bound to: 4 - type: integer 
+	Parameter G_MASK_SS_TKEEP bound to: 8 - type: integer 
+	Parameter G_MASK_SS_TLAST bound to: 16 - type: integer 
+	Parameter G_MASK_SS_TID bound to: 32 - type: integer 
+	Parameter G_MASK_SS_TDEST bound to: 64 - type: integer 
+	Parameter G_MASK_SS_TUSER bound to: 128 - type: integer 
+	Parameter G_TASK_SEVERITY_ERR bound to: 2 - type: integer 
+	Parameter G_TASK_SEVERITY_WARNING bound to: 1 - type: integer 
+	Parameter G_TASK_SEVERITY_INFO bound to: 0 - type: integer 
+	Parameter P_TDATA_INDX bound to: 0 - type: integer 
+	Parameter P_TSTRB_INDX bound to: 64 - type: integer 
+	Parameter P_TKEEP_INDX bound to: 72 - type: integer 
+	Parameter P_TLAST_INDX bound to: 80 - type: integer 
+	Parameter P_TID_INDX bound to: 81 - type: integer 
+	Parameter P_TDEST_INDX bound to: 82 - type: integer 
+	Parameter P_TUSER_INDX bound to: 83 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'axis_infrastructure_v1_1_0_util_vector2axis' (17#1) [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/defaultFifo/ipshared/0ab1/hdl/axis_infrastructure_v1_1_vl_rfs.v:992]
+INFO: [Synth 8-6155] done synthesizing module 'axis_infrastructure_v1_1_0_util_aclken_converter_wrapper' (18#1) [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/defaultFifo/ipshared/0ab1/hdl/axis_infrastructure_v1_1_vl_rfs.v:600]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_sync_rst' [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1055]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1107]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_sync_rst' (19#1) [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1055]

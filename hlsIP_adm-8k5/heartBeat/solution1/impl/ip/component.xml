@@ -518,8 +518,8 @@
       </xilinx:taxonomies>
       <xilinx:displayName>Heartbeat</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>1805030956</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2018-05-03T13:56:58Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>1805031145</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2018-05-03T15:45:25Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2018.1</xilinx:xilinxVersion>

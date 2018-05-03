@@ -624,8 +624,8 @@
       </xilinx:taxonomies>
       <xilinx:displayName>Reverseendian64</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>1805030957</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2018-05-03T13:57:53Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>1805031146</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2018-05-03T15:46:18Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2018.1</xilinx:xilinxVersion>

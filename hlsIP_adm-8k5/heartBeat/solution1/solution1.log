@@ -9,15 +9,15 @@ INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
 INFO: [HLS 200-10] Setting target device to 'xcku115-flva1517-2-e'
 INFO: [HLS 200-10] Analyzing design file '../hlsSources/srcs/heartBeat.cpp' ...
 INFO: [HLS 200-10] Validating synthesis directives ...
-INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:21 ; elapsed = 00:00:11 . Memory (MB): peak = 348.598 ; gain = 4.262 ; free physical = 7500 ; free virtual = 37717
-INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:23 ; elapsed = 00:00:13 . Memory (MB): peak = 348.598 ; gain = 4.262 ; free physical = 7498 ; free virtual = 37717
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:21 ; elapsed = 00:00:11 . Memory (MB): peak = 348.598 ; gain = 4.262 ; free physical = 7834 ; free virtual = 38075
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:22 ; elapsed = 00:00:13 . Memory (MB): peak = 348.598 ; gain = 4.262 ; free physical = 7827 ; free virtual = 38074
 INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:24 ; elapsed = 00:00:14 . Memory (MB): peak = 348.938 ; gain = 4.602 ; free physical = 7490 ; free virtual = 37708
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:23 ; elapsed = 00:00:14 . Memory (MB): peak = 348.938 ; gain = 4.602 ; free physical = 7818 ; free virtual = 38065
 INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:24 ; elapsed = 00:00:14 . Memory (MB): peak = 476.848 ; gain = 132.512 ; free physical = 7481 ; free virtual = 37699
-INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:25 ; elapsed = 00:00:15 . Memory (MB): peak = 476.848 ; gain = 132.512 ; free physical = 7454 ; free virtual = 37672
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:24 ; elapsed = 00:00:14 . Memory (MB): peak = 476.848 ; gain = 132.512 ; free physical = 7810 ; free virtual = 38057
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:25 ; elapsed = 00:00:15 . Memory (MB): peak = 476.848 ; gain = 132.512 ; free physical = 7784 ; free virtual = 38030
 WARNING: [XFORM 203-561] 'Loop-1' (../hlsSources/srcs/heartBeat.cpp:84:2) in function 'heartBeat' is an infinite loop.
-INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:25 ; elapsed = 00:00:16 . Memory (MB): peak = 476.848 ; gain = 132.512 ; free physical = 7451 ; free virtual = 37670
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:25 ; elapsed = 00:00:16 . Memory (MB): peak = 476.848 ; gain = 132.512 ; free physical = 7777 ; free virtual = 38028
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-10] Synthesizing 'heartBeat' ...
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -25,13 +25,13 @@ INFO: [HLS 200-42] -- Implementing module 'heartBeat'
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 16.08 seconds; current allocated memory: 88.271 MB.
+INFO: [HLS 200-111]  Elapsed time: 15.71 seconds; current allocated memory: 88.272 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.02 seconds; current allocated memory: 88.398 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.02 seconds; current allocated memory: 88.399 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'heartBeat'
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -41,8 +41,8 @@ INFO: [RTGEN 206-500] Setting interface mode on port 'heartBeat/stream_out_V_las
 INFO: [RTGEN 206-500] Setting interface mode on port 'heartBeat/stream_out_V_keep_V' to 'axis' (register, both mode).
 INFO: [RTGEN 206-500] Setting interface mode on function 'heartBeat' to 'ap_ctrl_none'.
 INFO: [RTGEN 206-100] Finished creating RTL model for 'heartBeat'.
-INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 88.800 MB.
-INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:26 ; elapsed = 00:00:17 . Memory (MB): peak = 476.848 ; gain = 132.512 ; free physical = 7450 ; free virtual = 37670
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 88.801 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:25 ; elapsed = 00:00:16 . Memory (MB): peak = 476.848 ; gain = 132.512 ; free physical = 7776 ; free virtual = 38028
 INFO: [SYSC 207-301] Generating SystemC RTL for heartBeat.
 INFO: [VHDL 208-304] Generating VHDL RTL for heartBeat.
 INFO: [VLOG 209-307] Generating Verilog RTL for heartBeat.

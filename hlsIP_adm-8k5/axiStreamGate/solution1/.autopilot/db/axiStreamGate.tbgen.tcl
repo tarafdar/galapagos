@@ -2,9 +2,9 @@ set C_TypeInfoList {{
 "axiStreamGate" : [[], { "return": [[], "void"]} , [{"ExternC" : 0}], [ {"packetIn": [[],"0"] }, {"programming": [[],{ "pointer":  {"scalar": "int"}}] }, {"packetOut": [[],"0"] }, {"programSafe": [[],{ "pointer":  {"scalar": "int"}}] }],[],""], 
 "0": [ "stream<ap_axis>", {"hls_type": {"stream": [[[[],"1"]],"2"]}}], 
 "1": [ "ap_axis", {"struct": [[],[],[{ "data": [[], "3"]},{ "last": [[], "4"]},{ "keep": [[], "5"]}],""]}], 
+"3": [ "ap_int<64>", {"hls_type": {"ap_int": [[[[], {"scalar": { "int": 64}}]],""]}}], 
 "4": [ "ap_uint<1>", {"hls_type": {"ap_uint": [[[[], {"scalar": { "int": 1}}]],""]}}], 
-"5": [ "ap_uint<8>", {"hls_type": {"ap_uint": [[[[], {"scalar": { "int": 8}}]],""]}}], 
-"3": [ "ap_int<64>", {"hls_type": {"ap_int": [[[[], {"scalar": { "int": 64}}]],""]}}],
+"5": [ "ap_uint<8>", {"hls_type": {"ap_uint": [[[[], {"scalar": { "int": 8}}]],""]}}],
 "2": ["hls", ""]
 }}
 set moduleName axiStreamGate

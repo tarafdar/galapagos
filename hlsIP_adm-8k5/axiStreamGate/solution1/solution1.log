@@ -20,15 +20,15 @@ WARNING: [HLS 200-40] In file included from ../hlsSources/srcs/axiStreamGate.cpp
                    =
 1 warning generated.
 INFO: [HLS 200-10] Validating synthesis directives ...
-INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:55 ; elapsed = 00:00:39 . Memory (MB): peak = 476.848 ; gain = 132.512 ; free physical = 7464 ; free virtual = 37682
-INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:57 ; elapsed = 00:00:41 . Memory (MB): peak = 476.848 ; gain = 132.512 ; free physical = 7463 ; free virtual = 37682
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:54 ; elapsed = 00:00:38 . Memory (MB): peak = 476.848 ; gain = 132.512 ; free physical = 7785 ; free virtual = 38025
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:55 ; elapsed = 00:00:40 . Memory (MB): peak = 476.848 ; gain = 132.512 ; free physical = 7778 ; free virtual = 38024
 INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:58 ; elapsed = 00:00:42 . Memory (MB): peak = 476.848 ; gain = 132.512 ; free physical = 7464 ; free virtual = 37683
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:56 ; elapsed = 00:00:41 . Memory (MB): peak = 476.848 ; gain = 132.512 ; free physical = 7778 ; free virtual = 38024
 INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:58 ; elapsed = 00:00:42 . Memory (MB): peak = 476.848 ; gain = 132.512 ; free physical = 7464 ; free virtual = 37683
-INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:59 ; elapsed = 00:00:43 . Memory (MB): peak = 476.848 ; gain = 132.512 ; free physical = 7445 ; free virtual = 37664
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:56 ; elapsed = 00:00:41 . Memory (MB): peak = 476.848 ; gain = 132.512 ; free physical = 7778 ; free virtual = 38024
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:57 ; elapsed = 00:00:42 . Memory (MB): peak = 476.848 ; gain = 132.512 ; free physical = 7760 ; free virtual = 38006
 WARNING: [XFORM 203-561] 'Loop-1' (../hlsSources/srcs/axiStreamGate.cpp:29:3) in function 'axiStreamGate' is an infinite loop.
-INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:59 ; elapsed = 00:00:44 . Memory (MB): peak = 476.848 ; gain = 132.512 ; free physical = 7443 ; free virtual = 37662
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:58 ; elapsed = 00:00:42 . Memory (MB): peak = 476.848 ; gain = 132.512 ; free physical = 7753 ; free virtual = 38005
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-10] Synthesizing 'axiStreamGate' ...
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -36,13 +36,13 @@ INFO: [HLS 200-42] -- Implementing module 'axiStreamGate'
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 27.59 seconds; current allocated memory: 112.921 MB.
+INFO: [HLS 200-111]  Elapsed time: 26.65 seconds; current allocated memory: 112.906 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.03 seconds; current allocated memory: 113.055 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.03 seconds; current allocated memory: 113.041 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'axiStreamGate'
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -57,8 +57,8 @@ INFO: [RTGEN 206-500] Setting interface mode on port 'axiStreamGate/programSafe'
 INFO: [RTGEN 206-500] Setting interface mode on function 'axiStreamGate' to 'ap_ctrl_none'.
 INFO: [RTGEN 206-100] Bundling port 'programming' and 'programSafe' to AXI-Lite port AXILiteS.
 INFO: [RTGEN 206-100] Finished creating RTL model for 'axiStreamGate'.
-INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 113.532 MB.
-INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:01:00 ; elapsed = 00:00:45 . Memory (MB): peak = 476.848 ; gain = 132.512 ; free physical = 7443 ; free virtual = 37662
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 113.518 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:58 ; elapsed = 00:00:43 . Memory (MB): peak = 476.848 ; gain = 132.512 ; free physical = 7753 ; free virtual = 38004
 INFO: [SYSC 207-301] Generating SystemC RTL for axiStreamGate.
 INFO: [VHDL 208-304] Generating VHDL RTL for axiStreamGate.
 INFO: [VLOG 209-307] Generating Verilog RTL for axiStreamGate.

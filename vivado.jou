@@ -2,8 +2,8 @@
 # Vivado v2018.1 (64-bit)
 # SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018
 # IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
-# Start of session at: Thu May  3 09:59:20 2018
-# Process ID: 30870
+# Start of session at: Thu May  3 11:47:42 2018
+# Process ID: 4712
 # Current directory: /nfs/ug/thesis/thesis0/pc/Quinn/galapagos
 # Command line: vivado -mode gui -source tclScripts/createShell_adm-8k5.tcl -tclargs static_routed_v2.dcp
 # Log file: /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/vivado.log
@@ -11,5 +11,3 @@
 #-----------------------------------------------------------
 start_gui
 source tclScripts/createShell_adm-8k5.tcl
-update_compile_order -fileset sources_1
-open_bd_design {/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/shell.bd}

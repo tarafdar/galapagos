@@ -8,19 +8,19 @@ Copyright (C) 1986-2018 Xilinx, Inc. All Rights Reserved.
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
 INFO: [HLS 200-10] Analyzing design file '../hlsSources/srcs/fireWall64.cpp' ...
 INFO: [HLS 200-10] Validating synthesis directives ...
-INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:02:06 ; elapsed = 00:01:35 . Memory (MB): peak = 540.449 ; gain = 196.113 ; free physical = 7359 ; free virtual = 37605
-INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:02:07 ; elapsed = 00:01:36 . Memory (MB): peak = 540.449 ; gain = 196.113 ; free physical = 7363 ; free virtual = 37609
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:02:00 ; elapsed = 00:01:31 . Memory (MB): peak = 540.449 ; gain = 196.113 ; free physical = 7744 ; free virtual = 37984
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:02:02 ; elapsed = 00:01:32 . Memory (MB): peak = 540.449 ; gain = 196.113 ; free physical = 7739 ; free virtual = 37984
 INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:02:08 ; elapsed = 00:01:37 . Memory (MB): peak = 540.449 ; gain = 196.113 ; free physical = 7360 ; free virtual = 37607
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:02:03 ; elapsed = 00:01:33 . Memory (MB): peak = 540.449 ; gain = 196.113 ; free physical = 7737 ; free virtual = 37983
 INFO: [HLS 200-10] Checking synthesizability ...
 INFO: [XFORM 203-602] Inlining function 'reverseEndian64' into 'fireWall64' (../hlsSources/srcs/fireWall64.cpp:114) automatically.
-INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:02:09 ; elapsed = 00:01:38 . Memory (MB): peak = 540.449 ; gain = 196.113 ; free physical = 7360 ; free virtual = 37607
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:02:03 ; elapsed = 00:01:34 . Memory (MB): peak = 540.449 ; gain = 196.113 ; free physical = 7732 ; free virtual = 37983
 INFO: [XFORM 203-102] Automatically partitioning small array 'header.V' (../hlsSources/srcs/fireWall64.cpp:46) completely based on array size.
 INFO: [XFORM 203-101] Partitioning array 'header.V' (../hlsSources/srcs/fireWall64.cpp:46) in dimension 1 completely.
 INFO: [XFORM 203-602] Inlining function 'reverseEndian64' into 'fireWall64' (../hlsSources/srcs/fireWall64.cpp:114) automatically.
-INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:02:10 ; elapsed = 00:01:39 . Memory (MB): peak = 540.449 ; gain = 196.113 ; free physical = 7335 ; free virtual = 37582
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:02:04 ; elapsed = 00:01:35 . Memory (MB): peak = 540.449 ; gain = 196.113 ; free physical = 7706 ; free virtual = 37958
 WARNING: [XFORM 203-561] 'Loop-1' (../hlsSources/srcs/fireWall64.cpp:65:14) in function 'fireWall64' is an infinite loop.
-INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:02:10 ; elapsed = 00:01:40 . Memory (MB): peak = 540.449 ; gain = 196.113 ; free physical = 7322 ; free virtual = 37568
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:02:04 ; elapsed = 00:01:35 . Memory (MB): peak = 540.449 ; gain = 196.113 ; free physical = 7705 ; free virtual = 37957
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-10] Synthesizing 'fireWall64' ...
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -28,13 +28,13 @@ INFO: [HLS 200-42] -- Implementing module 'fireWall64'
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 28.69 seconds; current allocated memory: 161.282 MB.
+INFO: [HLS 200-111]  Elapsed time: 26.68 seconds; current allocated memory: 161.267 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 161.525 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.03 seconds; current allocated memory: 161.511 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'fireWall64'
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -51,8 +51,8 @@ INFO: [RTGEN 206-500] Setting interface mode on function 'fireWall64' to 'ap_ctr
 WARNING: [RTGEN 206-101] Port 'fireWall64/observedAddress_out_V' has no fanin or fanout and is left dangling.
                Please use C simulation to confirm this function argument can be read from or written to.
 INFO: [RTGEN 206-100] Finished creating RTL model for 'fireWall64'.
-INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 162.193 MB.
-INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:02:11 ; elapsed = 00:01:40 . Memory (MB): peak = 540.449 ; gain = 196.113 ; free physical = 7324 ; free virtual = 37571
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 162.180 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:02:05 ; elapsed = 00:01:36 . Memory (MB): peak = 540.449 ; gain = 196.113 ; free physical = 7704 ; free virtual = 37956
 INFO: [SYSC 207-301] Generating SystemC RTL for fireWall64.
 INFO: [VHDL 208-304] Generating VHDL RTL for fireWall64.
 INFO: [VLOG 209-307] Generating Verilog RTL for fireWall64.

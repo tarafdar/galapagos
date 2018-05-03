@@ -8,15 +8,15 @@ Copyright (C) 1986-2018 Xilinx, Inc. All Rights Reserved.
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
 INFO: [HLS 200-10] Analyzing design file '../hlsSources/srcs/fireWall64_2.cpp' ...
 INFO: [HLS 200-10] Validating synthesis directives ...
-INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:02:41 ; elapsed = 00:02:03 . Memory (MB): peak = 540.449 ; gain = 196.113 ; free physical = 7424 ; free virtual = 37586
-INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:02:42 ; elapsed = 00:02:04 . Memory (MB): peak = 540.449 ; gain = 196.113 ; free physical = 7414 ; free virtual = 37586
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:02:34 ; elapsed = 00:01:58 . Memory (MB): peak = 540.449 ; gain = 196.113 ; free physical = 7722 ; free virtual = 37944
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:02:36 ; elapsed = 00:02:00 . Memory (MB): peak = 540.449 ; gain = 196.113 ; free physical = 7672 ; free virtual = 37909
 INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:02:43 ; elapsed = 00:02:06 . Memory (MB): peak = 540.449 ; gain = 196.113 ; free physical = 7386 ; free virtual = 37584
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:02:37 ; elapsed = 00:02:01 . Memory (MB): peak = 540.449 ; gain = 196.113 ; free physical = 7624 ; free virtual = 37896
 INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:02:43 ; elapsed = 00:02:06 . Memory (MB): peak = 540.449 ; gain = 196.113 ; free physical = 7386 ; free virtual = 37583
-INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:02:45 ; elapsed = 00:02:07 . Memory (MB): peak = 604.449 ; gain = 260.113 ; free physical = 7368 ; free virtual = 37566
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:02:37 ; elapsed = 00:02:01 . Memory (MB): peak = 540.449 ; gain = 196.113 ; free physical = 7620 ; free virtual = 37891
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:02:38 ; elapsed = 00:02:02 . Memory (MB): peak = 604.449 ; gain = 260.113 ; free physical = 7585 ; free virtual = 37864
 WARNING: [XFORM 203-561] 'Loop-1' (../hlsSources/srcs/fireWall64_2.cpp:37:6) in function 'fireWall64_2' is an infinite loop.
-INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:02:45 ; elapsed = 00:02:07 . Memory (MB): peak = 604.449 ; gain = 260.113 ; free physical = 7364 ; free virtual = 37562
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:02:39 ; elapsed = 00:02:03 . Memory (MB): peak = 604.449 ; gain = 260.113 ; free physical = 7581 ; free virtual = 37861
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-10] Synthesizing 'fireWall64_2' ...
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -24,13 +24,13 @@ INFO: [HLS 200-42] -- Implementing module 'fireWall64_2'
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 27.71 seconds; current allocated memory: 180.016 MB.
+INFO: [HLS 200-111]  Elapsed time: 27.19 seconds; current allocated memory: 180.017 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.03 seconds; current allocated memory: 180.143 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 180.144 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'fireWall64_2'
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -46,8 +46,8 @@ INFO: [RTGEN 206-500] Setting interface mode on port 'fireWall64_2/stream_garbag
 INFO: [RTGEN 206-500] Setting interface mode on port 'fireWall64_2/match_in_V' to 'ap_vld'.
 INFO: [RTGEN 206-500] Setting interface mode on function 'fireWall64_2' to 'ap_ctrl_none'.
 INFO: [RTGEN 206-100] Finished creating RTL model for 'fireWall64_2'.
-INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 180.939 MB.
-INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:02:46 ; elapsed = 00:02:08 . Memory (MB): peak = 604.449 ; gain = 260.113 ; free physical = 7369 ; free virtual = 37566
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 180.940 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:02:39 ; elapsed = 00:02:04 . Memory (MB): peak = 604.449 ; gain = 260.113 ; free physical = 7579 ; free virtual = 37861
 INFO: [SYSC 207-301] Generating SystemC RTL for fireWall64_2.
 INFO: [VHDL 208-304] Generating VHDL RTL for fireWall64_2.
 INFO: [VLOG 209-307] Generating Verilog RTL for fireWall64_2.

@@ -2,8 +2,8 @@
 # Vivado v2018.1 (64-bit)
 # SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018
 # IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
-# Start of session at: Thu May  3 09:59:09 2018
-# Process ID: 30826
+# Start of session at: Thu May  3 11:47:31 2018
+# Process ID: 4668
 # Current directory: /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/packetFormatter_hardcode_64/solution1/impl/ip
 # Command line: vivado -notrace -mode batch -source run_ippack.tcl
 # Log file: /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/packetFormatter_hardcode_64/solution1/impl/ip/vivado.log
@@ -13,4 +13,4 @@ source run_ippack.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/cad1/Xilinx/Vivado/2018.1/data/ip'.
-INFO: [Common 17-206] Exiting Vivado at Thu May  3 09:59:19 2018...
+INFO: [Common 17-206] Exiting Vivado at Thu May  3 11:47:41 2018...

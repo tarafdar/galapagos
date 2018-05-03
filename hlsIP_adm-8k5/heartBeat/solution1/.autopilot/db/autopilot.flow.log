@@ -1,4 +1,4 @@
-INFO: [HLS 200-0] Workspace /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1 opened at Thu May 03 09:56:30 EDT 2018
+INFO: [HLS 200-0] Workspace /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1 opened at Thu May 03 11:44:59 EDT 2018
 Execute     config_clock -quiet -name default -period 5 -default=false 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
 Command     config_clock returned 0; 0 sec.
@@ -21,7 +21,7 @@ Command         ap_source returned 0; 0 sec.
 Execute         source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/common/dsp48.lib 
 Command         ap_source returned 0; 0 sec.
 Execute         source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/xfir.lib 
-Command         ap_source returned 0; 0 sec.
+Command         ap_source returned 0; 0.01 sec.
 Execute         source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/dds_compiler.lib 
 Command         ap_source returned 0; 0 sec.
 Execute         source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/xfft.lib 
@@ -30,7 +30,7 @@ Command       ap_source returned 0; 0.01 sec.
 Execute       source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx_old.lib 
 Command       ap_source returned 0; 0 sec.
 Execute       source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx_vivado.lib 
-Command       ap_source returned 0; 0.01 sec.
+Command       ap_source returned 0; 0 sec.
 Execute       source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx.hlp 
 Execute         source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/common/target_info.tcl 
 Command         ap_source returned 0; 0 sec.
@@ -53,7 +53,7 @@ Execute       config_chip_info -quiet -speed medium
 Command       config_chip_info returned 0; 0 sec.
 Execute       source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx.hlp 
 Execute         source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/common/target_info.tcl 
-Command         ap_source returned 0; 0.01 sec.
+Command         ap_source returned 0; 0 sec.
 Execute         source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/xilinx_interface.hlp 
 Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/maxi.hlp 
 Command           ap_source returned 0; 0 sec.
@@ -62,13 +62,13 @@ Command           ap_source returned 0; 0 sec.
 Command         ap_source returned 0; 0 sec.
 Execute         source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/common/dsp48.hlp 
 Command         ap_source returned 0; 0 sec.
-Command       ap_source returned 0; 0.01 sec.
-Command     import_lib returned 0; 0.03 sec.
+Command       ap_source returned 0; 0 sec.
+Command     import_lib returned 0; 0.02 sec.
 Execute     source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/kintexu/kintexu.gen 
 Execute       source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/common/virtex.gen 
 Execute         source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx.gen 
 Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/plb46.gen 
-Command           ap_source returned 0; 0 sec.
+Command           ap_source returned 0; 0.01 sec.
 Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/fsl.gen 
 Command           ap_source returned 0; 0 sec.
 Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/axi4.gen 
@@ -80,20 +80,20 @@ Execute             source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/i
 Command             ap_source returned 0; 0.01 sec.
 Command           ap_source returned 0; 0.01 sec.
 Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
-Command           ap_source returned 0; 0.01 sec.
-Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
 Command           ap_source returned 0; 0 sec.
+Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Command           ap_source returned 0; 0.01 sec.
 Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/util.gen 
 Command           ap_source returned 0; 0 sec.
 Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/xfir.gen 
 Command           ap_source returned 0; 0 sec.
 Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/dds_compiler.gen 
-Command           ap_source returned 0; 0.01 sec.
+Command           ap_source returned 0; 0 sec.
 Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/xfft.gen 
-Command           ap_source returned 0; 0.05 sec.
-Command         ap_source returned 0; 0.08 sec.
+Command           ap_source returned 0; 0.06 sec.
+Command         ap_source returned 0; 0.09 sec.
 Execute         source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/common/dsp48.gen 
-Command         ap_source returned 0; 0.01 sec.
+Command         ap_source returned 0; 0 sec.
 Command       ap_source returned 0; 0.09 sec.
 Command     ap_source returned 0; 0.09 sec.
 Execute     open_platform DefaultPlatform 
@@ -102,7 +102,7 @@ Execute     import_lib /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/kinte
 Execute       source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx_fpv7.lib 
 Execute         source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx_hp.lib 
 Command         ap_source returned 0; 0 sec.
-Command       ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0.01 sec.
 Execute       source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx_fpv.hlp 
 Execute         source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx.hlp 
 Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/common/target_info.tcl 
@@ -118,18 +118,18 @@ Command           ap_source returned 0; 0 sec.
 Command         ap_source returned 0; 0 sec.
 Command       ap_source returned 0; 0 sec.
 Execute       source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/kintexu/kintexu_hp.hlp 
-Command       ap_source returned 0; 0 sec.
-Command     import_lib returned 0; 0.01 sec.
+Command       ap_source returned 0; 0.01 sec.
+Command     import_lib returned 0; 0.02 sec.
 Execute     source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/kintexu/kintexu_fpv7.gen 
 Execute       source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx_fpv6.gen 
-Command       ap_source returned 0; 0.01 sec.
-Command     ap_source returned 0; 0.01 sec.
+Command       ap_source returned 0; 0 sec.
+Command     ap_source returned 0; 0 sec.
 Execute     set_part xcku115-flva1517-2-e 
 Execute       add_library xilinx/kintexu/kintexu:xcku115:-flva1517:-2-e 
 Execute         get_default_platform 
 Command         get_default_platform returned 0; 0 sec.
 Execute         license_isbetapart xcku115 
-Command         license_isbetapart returned 1; 0.01 sec.
+Command         license_isbetapart returned 1; 0 sec.
 Execute         open_platform DefaultPlatform 
 Command         open_platform returned 0; 0 sec.
 Execute         import_lib /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/kintexu/kintexu 
@@ -153,10 +153,10 @@ Command             ap_source returned 0; 0 sec.
 Execute             source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/dds_compiler.lib 
 Command             ap_source returned 0; 0 sec.
 Execute             source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/xfft.lib 
-Command             ap_source returned 0; 0 sec.
-Command           ap_source returned 0; 0 sec.
-Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx_old.lib 
+Command             ap_source returned 0; 0.01 sec.
 Command           ap_source returned 0; 0.01 sec.
+Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx_old.lib 
+Command           ap_source returned 0; 0 sec.
 Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx_vivado.lib 
 Command           ap_source returned 0; 0 sec.
 Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx.hlp 
@@ -164,13 +164,13 @@ Execute             source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/c
 Command             ap_source returned 0; 0 sec.
 Execute             source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/xilinx_interface.hlp 
 Execute               source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/maxi.hlp 
-Command               ap_source returned 0; 0 sec.
+Command               ap_source returned 0; 0.01 sec.
 Execute               source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/saxilite.hlp 
 Command               ap_source returned 0; 0 sec.
-Command             ap_source returned 0; 0 sec.
+Command             ap_source returned 0; 0.01 sec.
 Execute             source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/common/dsp48.hlp 
 Command             ap_source returned 0; 0 sec.
-Command           ap_source returned 0; 0 sec.
+Command           ap_source returned 0; 0.01 sec.
 Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/kintexu/dsp48e2.hlp 
 Command           ap_source returned 0; 0 sec.
 Execute           get_default_platform 
@@ -190,7 +190,7 @@ Command               ap_source returned 0; 0 sec.
 Command             ap_source returned 0; 0 sec.
 Execute             source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/common/dsp48.hlp 
 Command             ap_source returned 0; 0 sec.
-Command           ap_source returned 0; 0.01 sec.
+Command           ap_source returned 0; 0 sec.
 Command         import_lib returned 0; 0.02 sec.
 Execute         source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/kintexu/kintexu.gen 
 Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/common/virtex.gen 
@@ -200,13 +200,13 @@ Command               ap_source returned 0; 0 sec.
 Execute               source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/fsl.gen 
 Command               ap_source returned 0; 0 sec.
 Execute               source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/axi4.gen 
-Command               ap_source returned 0; 0 sec.
+Command               ap_source returned 0; 0.01 sec.
 Execute               source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/nativeAXI4.gen 
 Execute                 source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/saxilite.gen 
 Command                 ap_source returned 0; 0 sec.
 Execute                 source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/maxi.gen 
-Command                 ap_source returned 0; 0.01 sec.
-Command               ap_source returned 0; 0.01 sec.
+Command                 ap_source returned 0; 0 sec.
+Command               ap_source returned 0; 0 sec.
 Execute               source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
 Command               ap_source returned 0; 0.01 sec.
 Execute               source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
@@ -214,7 +214,7 @@ Command               ap_source returned 0; 0 sec.
 Execute               source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/util.gen 
 Command               ap_source returned 0; 0 sec.
 Execute               source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/xfir.gen 
-Command               ap_source returned 0; 0 sec.
+Command               ap_source returned 0; 0.01 sec.
 Execute               source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/dds_compiler.gen 
 Command               ap_source returned 0; 0 sec.
 Execute               source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/xfft.gen 
@@ -230,7 +230,7 @@ Execute         config_chip_info -quiet -resource  {SLICE 82920} {LUT 663360}   
 Command         config_chip_info returned 0; 0 sec.
 Execute         config_chip_info -quiet -speed medium 
 Command         config_chip_info returned 0; 0 sec.
-Command       add_library returned 0; 0.12 sec.
+Command       add_library returned 0; 0.11 sec.
 Execute       add_library xilinx/kintexu/kintexu_fpv7 
 Execute         get_default_platform 
 Command         get_default_platform returned 0; 0 sec.
@@ -257,11 +257,11 @@ Command             ap_source returned 0; 0 sec.
 Command           ap_source returned 0; 0 sec.
 Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/kintexu/kintexu_hp.hlp 
 Command           ap_source returned 0; 0 sec.
-Command         import_lib returned 0; 0.01 sec.
+Command         import_lib returned 0; 0.02 sec.
 Execute         source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/kintexu/kintexu_fpv7.gen 
 Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx_fpv6.gen 
-Command           ap_source returned 0; 0.01 sec.
-Command         ap_source returned 0; 0.01 sec.
+Command           ap_source returned 0; 0 sec.
+Command         ap_source returned 0; 0 sec.
 Command       add_library returned 0; 0.02 sec.
 INFO: [HLS 200-10] Setting target device to 'xcku115-flva1517-2-e'
 Execute       get_default_platform 
@@ -273,7 +273,7 @@ Execute     config_chip_info -quiet -resource  {SLICE 82920} {LUT 663360}    {FF
 Command     config_chip_info returned 0; 0 sec.
 Execute     config_chip_info -quiet -speed medium 
 Command     config_chip_info returned 0; 0 sec.
-Command   open_solution returned 0; 0.31 sec.
+Command   open_solution returned 0; 0.3 sec.
 Execute   set_part xcku115-flva1517-2-e 
 Execute     add_library xilinx/kintexu/kintexu:xcku115:-flva1517:-2-e 
 Execute       get_default_platform 
@@ -308,7 +308,7 @@ Command         ap_source returned 0; 0 sec.
 Execute         source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx_old.lib 
 Command         ap_source returned 0; 0 sec.
 Execute         source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx_vivado.lib 
-Command         ap_source returned 0; 0 sec.
+Command         ap_source returned 0; 0.01 sec.
 Execute         source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx.hlp 
 Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/common/target_info.tcl 
 Command           ap_source returned 0; 0 sec.
@@ -316,11 +316,11 @@ Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/int
 Execute             source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/maxi.hlp 
 Command             ap_source returned 0; 0 sec.
 Execute             source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/saxilite.hlp 
-Command             ap_source returned 0; 0.01 sec.
-Command           ap_source returned 0; 0.01 sec.
+Command             ap_source returned 0; 0 sec.
+Command           ap_source returned 0; 0 sec.
 Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/common/dsp48.hlp 
 Command           ap_source returned 0; 0 sec.
-Command         ap_source returned 0; 0.01 sec.
+Command         ap_source returned 0; 0 sec.
 Execute         source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/kintexu/dsp48e2.hlp 
 Command         ap_source returned 0; 0 sec.
 Execute         get_default_platform 
@@ -331,7 +331,7 @@ Execute         config_chip_info -quiet -speed medium
 Command         config_chip_info returned 0; 0 sec.
 Execute         source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx.hlp 
 Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/common/target_info.tcl 
-Command           ap_source returned 0; 0 sec.
+Command           ap_source returned 0; 0.01 sec.
 Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/xilinx_interface.hlp 
 Execute             source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/maxi.hlp 
 Command             ap_source returned 0; 0 sec.
@@ -340,7 +340,7 @@ Command             ap_source returned 0; 0 sec.
 Command           ap_source returned 0; 0 sec.
 Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/common/dsp48.hlp 
 Command           ap_source returned 0; 0 sec.
-Command         ap_source returned 0; 0 sec.
+Command         ap_source returned 0; 0.01 sec.
 Command       import_lib returned 0; 0.02 sec.
 Execute       source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/kintexu/kintexu.gen 
 Execute         source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/common/virtex.gen 
@@ -348,7 +348,7 @@ Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/com
 Execute             source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/plb46.gen 
 Command             ap_source returned 0; 0 sec.
 Execute             source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/fsl.gen 
-Command             ap_source returned 0; 0.01 sec.
+Command             ap_source returned 0; 0 sec.
 Execute             source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/axi4.gen 
 Command             ap_source returned 0; 0 sec.
 Execute             source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/nativeAXI4.gen 
@@ -358,9 +358,9 @@ Execute               source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx
 Command               ap_source returned 0; 0.01 sec.
 Command             ap_source returned 0; 0.01 sec.
 Execute             source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
-Command             ap_source returned 0; 0 sec.
-Execute             source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
 Command             ap_source returned 0; 0.01 sec.
+Execute             source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Command             ap_source returned 0; 0 sec.
 Execute             source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/util.gen 
 Command             ap_source returned 0; 0 sec.
 Execute             source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/xfir.gen 
@@ -368,12 +368,12 @@ Command             ap_source returned 0; 0 sec.
 Execute             source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/dds_compiler.gen 
 Command             ap_source returned 0; 0 sec.
 Execute             source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/xfft.gen 
-Command             ap_source returned 0; 0.05 sec.
+Command             ap_source returned 0; 0.06 sec.
 Command           ap_source returned 0; 0.08 sec.
 Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/common/dsp48.gen 
 Command           ap_source returned 0; 0 sec.
-Command         ap_source returned 0; 0.09 sec.
-Command       ap_source returned 0; 0.09 sec.
+Command         ap_source returned 0; 0.08 sec.
+Command       ap_source returned 0; 0.08 sec.
 Execute       get_default_platform 
 Command       get_default_platform returned 0; 0 sec.
 Execute       config_chip_info -quiet -resource  {SLICE 82920} {LUT 663360}    {FF 1326720} {DSP48E 5520}  {BRAM 4320} {SLR 2}  
@@ -389,8 +389,8 @@ Command       open_platform returned 0; 0 sec.
 Execute       import_lib /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/kintexu/kintexu_fpv7 
 Execute         source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx_fpv7.lib 
 Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx_hp.lib 
-Command           ap_source returned 0; 0.01 sec.
-Command         ap_source returned 0; 0.01 sec.
+Command           ap_source returned 0; 0 sec.
+Command         ap_source returned 0; 0 sec.
 Execute         source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx_fpv.hlp 
 Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx.hlp 
 Execute             source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/common/target_info.tcl 
@@ -406,16 +406,16 @@ Command             ap_source returned 0; 0 sec.
 Command           ap_source returned 0; 0 sec.
 Command         ap_source returned 0; 0 sec.
 Execute         source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/kintexu/kintexu_hp.hlp 
-Command         ap_source returned 0; 0.01 sec.
+Command         ap_source returned 0; 0 sec.
 Command       import_lib returned 0; 0.02 sec.
 Execute       source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/kintexu/kintexu_fpv7.gen 
 Execute         source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx_fpv6.gen 
 Command         ap_source returned 0; 0 sec.
 Command       ap_source returned 0; 0 sec.
-Command     add_library returned 0; 0.02 sec.
+Command     add_library returned 0; 0.03 sec.
 Execute     get_default_platform 
 Command     get_default_platform returned 0; 0 sec.
-Command   set_part returned 0; 0.17 sec.
+Command   set_part returned 0; 0.16 sec.
 Execute   create_clock -period 5 -name default 
 Command   create_clock returned 0; 0 sec.
 Execute   source ../hlsSources/directives/heartBeat.tcl 
@@ -430,8 +430,8 @@ Execute     set_directive_interface -mode axis heartBeat stream_out
 INFO: [HLS 200-0] Setting directive 'INTERFACE' ap_ctrl_none=positionBoolean0mode port=positionBooleanTextRequiredreturn 
 INFO: [HLS 200-0] Setting directive 'INTERFACE' ap_none=positionBoolean0mode port=positionBooleanTextRequiredeth_address 
 INFO: [HLS 200-0] Setting directive 'INTERFACE' axis=positionBoolean0mode port=positionBooleanTextRequiredstream_out 
-Command     set_directive_interface returned 0; 0 sec.
-Command   ap_source returned 0; 0 sec.
+Command     set_directive_interface returned 0; 0.01 sec.
+Command   ap_source returned 0; 0.01 sec.
 Execute   csynth_design 
 Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -lm=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -enable_clang39=0 
 INFO: [HLS 200-10] Analyzing design file '../hlsSources/srcs/heartBeat.cpp' ...
@@ -448,11 +448,11 @@ Command       get_default_platform returned 0; 0 sec.
 INFO: [HLS 200-0] Source preprocessing
 Execute       clang  -fno-limit-debug-info -gcc-toolchain "/cad1/Xilinx/Vivado/2018.1/lnx64/tools/gcc" -hls  -fno-exceptions  -D__llvm__  -E "../hlsSources/srcs/heartBeat.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/cad1/Xilinx/Vivado/2018.1/common/technology/autopilot" -I "/cad1/Xilinx/Vivado/2018.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__  -o "/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.pp.0.cpp" 
 INFO: [HLS 200-0] exec clang -fno-limit-debug-info -gcc-toolchain /cad1/Xilinx/Vivado/2018.1/lnx64/tools/gcc -hls -fno-exceptions -D__llvm__ -E ../hlsSources/srcs/heartBeat.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /cad1/Xilinx/Vivado/2018.1/common/technology/autopilot -I /cad1/Xilinx/Vivado/2018.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -o /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.pp.0.cpp
-Command       clang returned 0; 1.05 sec.
+Command       clang returned 0; 1.03 sec.
 INFO: [HLS 200-0] Syntax Checking before pre-processing...
 Execute       clang  -fno-limit-debug-info -gcc-toolchain "/cad1/Xilinx/Vivado/2018.1/lnx64/tools/gcc" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/cad1/Xilinx/Vivado/2018.1/common/technology/autopilot" -I "/cad1/Xilinx/Vivado/2018.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__  "/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.pp.0.cpp"  -o "/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/useless.bc"  
 INFO: [HLS 200-0] exec clang -fno-limit-debug-info -gcc-toolchain /cad1/Xilinx/Vivado/2018.1/lnx64/tools/gcc -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /cad1/Xilinx/Vivado/2018.1/common/technology/autopilot -I /cad1/Xilinx/Vivado/2018.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.pp.0.cpp -o /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/useless.bc
-Command       clang returned 0; 1.37 sec.
+Command       clang returned 0; 1.32 sec.
 INFO: [HLS 200-0] GCC PP time: 2 seconds per iteration
 INFO: [HLS 200-0] Setting directive 'INTERFACE' ap_ctrl_none=positionBoolean0mode port=positionBooleanTextRequiredreturn 
 INFO: [HLS 200-0] Setting directive 'INTERFACE' ap_none=positionBoolean0mode port=positionBooleanTextRequiredeth_address 
@@ -471,7 +471,7 @@ Error:Syntax error in source:for (__decltype(__n + 0) __niter = __n;
 Error:Missing ; in source:t
 Error:Syntax error in source:)
  *__first = __tmp;
-Command       cdt returned 0; 4.91 sec.
+Command       cdt returned 0; 4.8 sec.
 INFO: [HLS 200-0] Marker-Pragma convertor: /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.pp.0.cpp.ap-cdt.cpp /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.pragma.0.cpp /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.pragma.0.cpp.ap-line.CXX 0
 INFO: [HLS 200-0] Converting Pragmas to Markers...
 Execute       source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/pragma.status.tcl 
@@ -480,32 +480,32 @@ INFO: [HLS 200-0] Pragma Handling...
 INFO: [HLS 200-0] Source preprocessing
 Execute       clang  -fno-limit-debug-info -gcc-toolchain "/cad1/Xilinx/Vivado/2018.1/lnx64/tools/gcc" -hls  -fno-exceptions  -D__llvm__  -E "/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.pragma.1.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/cad1/Xilinx/Vivado/2018.1/common/technology/autopilot" -I "/cad1/Xilinx/Vivado/2018.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__  -o "/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.pragma.2.cpp" 
 INFO: [HLS 200-0] exec clang -fno-limit-debug-info -gcc-toolchain /cad1/Xilinx/Vivado/2018.1/lnx64/tools/gcc -hls -fno-exceptions -D__llvm__ -E /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.pragma.1.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /cad1/Xilinx/Vivado/2018.1/common/technology/autopilot -I /cad1/Xilinx/Vivado/2018.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -o /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.pragma.2.cpp
-Command       clang returned 0; 1 sec.
+Command       clang returned 0; 0.98 sec.
 Execute       get_default_platform 
 Command       get_default_platform returned 0; 0 sec.
 INFO: [HLS 200-0] Processing labels
 Execute       clang  -fno-limit-debug-info -gcc-toolchain /cad1/Xilinx/Vivado/2018.1/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/cad1/Xilinx/Vivado/2018.1/common/technology/autopilot" -I "/cad1/Xilinx/Vivado/2018.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o "/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.g.bc" 
 INFO: [HLS 200-0] exec clang -fno-limit-debug-info -gcc-toolchain /cad1/Xilinx/Vivado/2018.1/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /cad1/Xilinx/Vivado/2018.1/common/technology/autopilot -I /cad1/Xilinx/Vivado/2018.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.g.bc
-Command       clang returned 0; 1.4 sec.
+Command       clang returned 0; 1.38 sec.
 Execute       source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/ve_warning.tcl 
 Command       ap_source returned 0; 0 sec.
 INFO: [HLS 200-10] Validating synthesis directives ...
 Execute       source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/pragma.status.tcl 
 Command       ap_source returned 0; 0 sec.
-INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:21 ; elapsed = 00:00:11 . Memory (MB): peak = 348.598 ; gain = 4.262 ; free physical = 7500 ; free virtual = 37717
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:21 ; elapsed = 00:00:11 . Memory (MB): peak = 348.598 ; gain = 4.262 ; free physical = 7834 ; free virtual = 38075
 INFO: [HLS 200-0] Linking Release ...
 Execute       llvm-ld /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.bc -hls-opt -except-internalize heartBeat -L/cad1/Xilinx/Vivado/2018.1/lnx64/lib -lm_basic -lhlsmc++ -lhlsm -o /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/a.o 
 Command       llvm-ld returned 0; 0.54 sec.
 Execute       disassemble /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/a.o /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/a.o 
 Execute         is_encrypted /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/a.o.bc 
-Command         is_encrypted returned 0; 0.01 sec.
-Command       disassemble returned 0; 0.54 sec.
+Command         is_encrypted returned 0; 0 sec.
+Command       disassemble returned 0; 0.52 sec.
 INFO: [HLS 200-0] Disassemble time: 0 seconds per iteration
 INFO: [HLS 200-0] Linking Debug ...
 Execute       llvm-ld /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.g.bc -hls-opt -except-internalize heartBeat -L/cad1/Xilinx/Vivado/2018.1/lnx64/lib -lm_basic -lhlsmc++ -lhlsm -o /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/a.g 
-Command       llvm-ld returned 0; 0.55 sec.
+Command       llvm-ld returned 0; 0.54 sec.
 INFO: [HLS 200-0] Disassemble time: 0 seconds per iteration
-INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:23 ; elapsed = 00:00:13 . Memory (MB): peak = 348.598 ; gain = 4.262 ; free physical = 7498 ; free virtual = 37717
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:22 ; elapsed = 00:00:13 . Memory (MB): peak = 348.598 ; gain = 4.262 ; free physical = 7827 ; free virtual = 38074
 Execute       ::config_rtl 
 Command       config_rtl returned 0; 0 sec.
 Execute       source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/global.setting.tcl 
@@ -517,23 +517,23 @@ INFO: [HLS 200-10] Starting code transformations ...
 Execute         transform -promote-dbg-pointer /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/a.pp.bc -o /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/a.pp.0.bc -f 
 Command         transform returned 0; 0.04 sec.
 Execute         llvm-ld /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/a.pp.0.bc -disable-opt -L/cad1/Xilinx/Vivado/2018.1/lnx64/lib -lfloatconversion -o /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/a.g.0 
-Command         llvm-ld returned 0; 0.55 sec.
+Command         llvm-ld returned 0; 0.52 sec.
 INFO: [HLS 200-0] Running Standard Transforms...
 Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top heartBeat -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/a.g.0.bc -o /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
 Command         transform returned 0; 0.05 sec.
 Execute         disassemble /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/a.g.1 /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/a.g.1 
 Execute           is_encrypted /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/a.g.1.bc 
 Command           is_encrypted returned 0; 0 sec.
-Command         disassemble returned 0; 0.53 sec.
-INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:24 ; elapsed = 00:00:14 . Memory (MB): peak = 348.938 ; gain = 4.602 ; free physical = 7490 ; free virtual = 37708
+Command         disassemble returned 0; 0.52 sec.
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:23 ; elapsed = 00:00:14 . Memory (MB): peak = 348.938 ; gain = 4.602 ; free physical = 7818 ; free virtual = 38065
 INFO: [HLS 200-10] Checking synthesizability ...
 INFO: [HLS 200-0] Checking Synthesizability 1/2..
 Execute         transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/a.g.1.bc -o /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/a.g.2.prechk.bc -f 
-Command         transform returned 0; 0.04 sec.
+Command         transform returned 0; 0.05 sec.
 INFO: [HLS 200-0] Checking Synthesizability 2/2..
 Execute         transform -syn-check /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/a.g.2.prechk.bc -o /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
 Command         transform returned 0; 0.04 sec.
-INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:24 ; elapsed = 00:00:14 . Memory (MB): peak = 476.848 ; gain = 132.512 ; free physical = 7481 ; free virtual = 37699
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:24 ; elapsed = 00:00:14 . Memory (MB): peak = 476.848 ; gain = 132.512 ; free physical = 7810 ; free virtual = 38057
 INFO: [HLS 200-0] Compiler optimizing ...
 INFO: [HLS 200-0] Share syncheck's 1.bc for syn flow: copy /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/a.g.1.bc to /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/a.o.1.bc
 INFO: [HLS 200-0] Presyn 1...
@@ -542,15 +542,15 @@ Command         transform returned 0; 0.07 sec.
 Execute         disassemble /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/a.o.1.tmp /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/a.o.1.tmp 
 Execute           is_encrypted /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/a.o.1.tmp.bc 
 Command           is_encrypted returned 0; 0 sec.
-Command         disassemble returned 0; 0.53 sec.
+Command         disassemble returned 0; 0.52 sec.
 INFO: [HLS 200-0] Presyn 2...
 Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/a.o.1.tmp.bc -o /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
 Command         transform returned 0; 0.06 sec.
 Execute         disassemble /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/a.o.2 /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/a.o.2 
 Execute           is_encrypted /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/a.o.2.bc 
 Command           is_encrypted returned 0; 0 sec.
-Command         disassemble returned 0; 0.52 sec.
-INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:25 ; elapsed = 00:00:15 . Memory (MB): peak = 476.848 ; gain = 132.512 ; free physical = 7454 ; free virtual = 37672
+Command         disassemble returned 0; 0.51 sec.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:25 ; elapsed = 00:00:15 . Memory (MB): peak = 476.848 ; gain = 132.512 ; free physical = 7784 ; free virtual = 38030
 INFO: [HLS 200-0] Building ssdm...
 Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -instcombine -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -read-loop-dep -dce -bitwidth -loop-dep -check-stream -norm-name -legalize -validate-dataflow -cdfg-build /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/a.o.2.bc -o /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
 WARNING: [XFORM 203-561] 'Loop-1' (../hlsSources/srcs/heartBeat.cpp:84:2) in function 'heartBeat' is an infinite loop.
@@ -558,11 +558,11 @@ Command         transform returned 0; 0.06 sec.
 Execute         disassemble /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/a.o.3 /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/a.o.3 
 Execute           is_encrypted /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/a.o.3.bc 
 Command           is_encrypted returned 0; 0 sec.
-Command         disassemble returned 0; 0.51 sec.
-INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:25 ; elapsed = 00:00:16 . Memory (MB): peak = 476.848 ; gain = 132.512 ; free physical = 7451 ; free virtual = 37670
+Command         disassemble returned 0; 0.5 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:25 ; elapsed = 00:00:16 . Memory (MB): peak = 476.848 ; gain = 132.512 ; free physical = 7777 ; free virtual = 38028
 INFO: [HLS 200-0] Finish building internal data model.
-Command       opt_and_import_c returned 0; 3.06 sec.
-Command     elaborate returned 0; 15.24 sec.
+Command       opt_and_import_c returned 0; 3 sec.
+Command     elaborate returned 0; 14.89 sec.
 Execute     autosyn 
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-0] Synthesizing C/C++ design ...
@@ -584,9 +584,9 @@ Command       apply_spec_resource_limit returned 0; 0 sec.
 INFO: [HLS 200-0] Model list for preprocess: heartBeat
 INFO: [HLS 200-0] Preprocessing Module: heartBeat ...
 Execute       set_default_model heartBeat 
-Command       set_default_model returned 0; 0 sec.
+Command       set_default_model returned 0; 0.01 sec.
 Execute       cdfg_preprocess -model heartBeat 
-Command       cdfg_preprocess returned 0; 0.01 sec.
+Command       cdfg_preprocess returned 0; 0 sec.
 Execute       rtl_gen_preprocess heartBeat 
 Command       rtl_gen_preprocess returned 0; 0 sec.
 INFO: [HLS 200-0] Model list for synthesis: heartBeat
@@ -599,7 +599,7 @@ Execute       schedule -model heartBeat
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
 Command       schedule returned 0; 0.01 sec.
-INFO: [HLS 200-111]  Elapsed time: 16.08 seconds; current allocated memory: 88.271 MB.
+INFO: [HLS 200-111]  Elapsed time: 15.71 seconds; current allocated memory: 88.272 MB.
 Execute       report -o /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.verbose.sched.rpt -verbose -f 
 Command       report returned 0; 0 sec.
 Execute       db_write -o /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.sched.adb -f 
@@ -642,17 +642,17 @@ INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
 Command       bind returned 0; 0.01 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.02 seconds; current allocated memory: 88.398 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.02 seconds; current allocated memory: 88.399 MB.
 Execute       report -o /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.verbose.bind.rpt -verbose -f 
-Command       report returned 0; 0.01 sec.
+Command       report returned 0; 0 sec.
 Execute       db_write -o /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.bind.adb -f 
-Command       db_write returned 0; 0 sec.
+Command       db_write returned 0; 0.02 sec.
 INFO: [HLS 200-0] Finish binding heartBeat.
 Execute       get_model_list heartBeat -filter all-wo-channel 
 Command       get_model_list returned 0; 0 sec.
 INFO: [HLS 200-0] Preprocessing for RTLGen ...
 Execute       rtl_gen_preprocess heartBeat 
-Command       rtl_gen_preprocess returned 0; 0.01 sec.
+Command       rtl_gen_preprocess returned 0; 0 sec.
 INFO: [HLS 200-0] Model list for RTL generation: heartBeat
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'heartBeat'
@@ -665,15 +665,15 @@ INFO: [RTGEN 206-500] Setting interface mode on port 'heartBeat/stream_out_V_kee
 INFO: [RTGEN 206-500] Setting interface mode on function 'heartBeat' to 'ap_ctrl_none'.
 INFO: [RTGEN 206-100] Finished creating RTL model for 'heartBeat'.
 Command       create_rtl_model returned 0; 0.02 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 88.800 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 88.801 MB.
 Execute       source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.rtl_wrap.cfg.tcl 
-Command       ap_source returned 0; 0.01 sec.
+Command       ap_source returned 0; 0 sec.
 Execute       gen_rtl heartBeat -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/syn/systemc/heartBeat -synmodules heartBeat 
-Command       gen_rtl returned 0; 0 sec.
+Command       gen_rtl returned 0; 0.01 sec.
 Execute       gen_rtl heartBeat -istop -style xilinx -f -lang vhdl -o /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/syn/vhdl/heartBeat 
 Command       gen_rtl returned 0; 0.01 sec.
 Execute       gen_rtl heartBeat -istop -style xilinx -f -lang vlog -o /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/syn/verilog/heartBeat 
-Command       gen_rtl returned 0; 0.01 sec.
+Command       gen_rtl returned 0; 0 sec.
 Execute       export_constraint_db -o /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.constraint.tcl -f -tool general 
 Command       export_constraint_db returned 0; 0 sec.
 Execute       report -model heartBeat -o /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.design.xml -verbose -f -dv 
@@ -689,7 +689,7 @@ Command       report returned 0; 0.01 sec.
 Execute       report -model heartBeat -o /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.verbose.rpt -verbose -f 
 Command       report returned 0; 0.01 sec.
 Execute       db_write -model heartBeat -o /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.adb -f 
-Command       db_write returned 0; 0.02 sec.
+Command       db_write returned 0; 0.01 sec.
 Execute       sc_get_clocks heartBeat 
 Command       sc_get_clocks returned 0; 0 sec.
 Execute       sc_get_portdomain heartBeat 
@@ -709,7 +709,7 @@ INFO: [HLS 200-0] RTL Generation done.
 INFO: [HLS 200-0] CAS Generation done.
 INFO: [HLS 200-0] CBC Generation done.
 Execute       export_ssdm /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/a.export.ll 
-Command       export_ssdm returned 0; 0 sec.
+Command       export_ssdm returned 0; 0.01 sec.
 Execute       source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/global.setting.tcl 
 Command       ap_source returned 0; 0 sec.
 Execute       source /cad1/Xilinx/Vivado/2018.1/common/technology/generic/autopilot/common.gen 
@@ -735,9 +735,9 @@ Execute             source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/i
 Command             ap_source returned 0; 0 sec.
 Execute             source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/nativeAXI4.gen 
 Execute               source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/saxilite.gen 
-Command               ap_source returned 0; 0.01 sec.
-Execute               source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/maxi.gen 
 Command               ap_source returned 0; 0 sec.
+Execute               source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/maxi.gen 
+Command               ap_source returned 0; 0.01 sec.
 Command             ap_source returned 0; 0.01 sec.
 Execute             source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
 Command             ap_source returned 0; 0.01 sec.
@@ -746,16 +746,16 @@ Command             ap_source returned 0; 0 sec.
 Execute             source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/util.gen 
 Command             ap_source returned 0; 0 sec.
 Execute             source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/xfir.gen 
-Command             ap_source returned 0; 0.01 sec.
+Command             ap_source returned 0; 0 sec.
 Execute             source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/dds_compiler.gen 
 Command             ap_source returned 0; 0 sec.
 Execute             source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/xfft.gen 
-Command             ap_source returned 0; 0.05 sec.
+Command             ap_source returned 0; 0.06 sec.
 Command           ap_source returned 0; 0.08 sec.
 Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/common/dsp48.gen 
 Command           ap_source returned 0; 0 sec.
-Command         ap_source returned 0; 0.09 sec.
-Command       ap_source returned 0; 0.09 sec.
+Command         ap_source returned 0; 0.08 sec.
+Command       ap_source returned 0; 0.08 sec.
 Execute       source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/kintexu/kintexu_fpv7.gen 
 Execute         source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx_fpv6.gen 
 Command         ap_source returned 0; 0 sec.
@@ -767,13 +767,13 @@ Command       ap_source returned 0; 0 sec.
 Execute       source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/global.setting.tcl 
 Command       ap_source returned 0; 0 sec.
 Execute       source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.compgen.tcl 
-Command       ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0.01 sec.
 Execute       source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/global.setting.tcl 
 Command       ap_source returned 0; 0 sec.
 Execute       source /cad1/Xilinx/Vivado/2018.1/common/technology/generic/autopilot/common.gen 
 Execute         source /cad1/Xilinx/Vivado/2018.1/common/technology/generic/autopilot/APCoreGen.gen 
 Command         ap_source returned 0; 0 sec.
-Command       ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0.01 sec.
 Execute       source /cad1/Xilinx/Vivado/2018.1/common/technology/generic/autopilot/op.gen 
 Command       ap_source returned 0; 0 sec.
 Execute       source /cad1/Xilinx/Vivado/2018.1/common/technology/generic/autopilot/op_simcore.gen 
@@ -790,17 +790,17 @@ Command             ap_source returned 0; 0 sec.
 Execute             source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/fsl.gen 
 Command             ap_source returned 0; 0 sec.
 Execute             source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/axi4.gen 
-Command             ap_source returned 0; 0.01 sec.
+Command             ap_source returned 0; 0 sec.
 Execute             source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/nativeAXI4.gen 
 Execute               source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/saxilite.gen 
 Command               ap_source returned 0; 0 sec.
 Execute               source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/maxi.gen 
-Command               ap_source returned 0; 0 sec.
-Command             ap_source returned 0; 0 sec.
+Command               ap_source returned 0; 0.01 sec.
+Command             ap_source returned 0; 0.01 sec.
 Execute             source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
 Command             ap_source returned 0; 0.01 sec.
 Execute             source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
-Command             ap_source returned 0; 0.01 sec.
+Command             ap_source returned 0; 0 sec.
 Execute             source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/util.gen 
 Command             ap_source returned 0; 0 sec.
 Execute             source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/xfir.gen 
@@ -809,17 +809,17 @@ Execute             source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/i
 Command             ap_source returned 0; 0 sec.
 Execute             source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/xfft.gen 
 Command             ap_source returned 0; 0.06 sec.
-Command           ap_source returned 0; 0.09 sec.
+Command           ap_source returned 0; 0.08 sec.
 Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/common/dsp48.gen 
 Command           ap_source returned 0; 0 sec.
-Command         ap_source returned 0; 0.09 sec.
-Command       ap_source returned 0; 0.09 sec.
+Command         ap_source returned 0; 0.08 sec.
+Command       ap_source returned 0; 0.08 sec.
 Execute       source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/kintexu/kintexu_fpv7.gen 
 Execute         source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx_fpv6.gen 
 Command         ap_source returned 0; 0 sec.
 Command       ap_source returned 0; 0 sec.
 Execute       source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.rtl_wrap.cfg.tcl 
-Command       ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0.01 sec.
 Execute       source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.rtl_wrap.cfg.tcl 
 Command       ap_source returned 0; 0 sec.
 Execute       source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.rtl_wrap.cfg.tcl 
@@ -851,7 +851,7 @@ Command       ap_source returned 0; 0 sec.
 Execute       source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/global.setting.tcl 
 Command       ap_source returned 0; 0 sec.
 Execute       source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/global.setting.tcl 
-Command       ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0.01 sec.
 Execute       source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.tbgen.tcl 
 Command       ap_source returned 0; 0 sec.
 Execute       source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.tbgen.tcl 
@@ -866,12 +866,12 @@ Execute       sc_get_clocks heartBeat
 Command       sc_get_clocks returned 0; 0 sec.
 Execute       source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/global.setting.tcl 
 Command       ap_source returned 0; 0 sec.
-INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:26 ; elapsed = 00:00:17 . Memory (MB): peak = 476.848 ; gain = 132.512 ; free physical = 7450 ; free virtual = 37670
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:25 ; elapsed = 00:00:16 . Memory (MB): peak = 476.848 ; gain = 132.512 ; free physical = 7776 ; free virtual = 38028
 INFO: [SYSC 207-301] Generating SystemC RTL for heartBeat.
 INFO: [VHDL 208-304] Generating VHDL RTL for heartBeat.
 INFO: [VLOG 209-307] Generating Verilog RTL for heartBeat.
-Command     autosyn returned 0; 0.66 sec.
-Command   csynth_design returned 0; 15.9 sec.
+Command     autosyn returned 0; 0.65 sec.
+Command   csynth_design returned 0; 15.54 sec.
 Execute   export_design -rtl verilog -format ip_catalog 
 Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/global.setting.tcl 
 Command     ap_source returned 0; 0 sec.
@@ -893,183 +893,6 @@ Execute         source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/commo
 Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/plb46.gen 
 Command           ap_source returned 0; 0 sec.
 Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/fsl.gen 
-Command           ap_source returned 0; 0 sec.
-Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/axi4.gen 
-Command           ap_source returned 0; 0 sec.
-Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/nativeAXI4.gen 
-Execute             source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/saxilite.gen 
-Command             ap_source returned 0; 0 sec.
-Execute             source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/maxi.gen 
-Command             ap_source returned 0; 0.01 sec.
-Command           ap_source returned 0; 0.01 sec.
-Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
-Command           ap_source returned 0; 0 sec.
-Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
-Command           ap_source returned 0; 0.01 sec.
-Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/util.gen 
-Command           ap_source returned 0; 0 sec.
-Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/xfir.gen 
-Command           ap_source returned 0; 0 sec.
-Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/dds_compiler.gen 
-Command           ap_source returned 0; 0 sec.
-Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/xfft.gen 
-Command           ap_source returned 0; 0.06 sec.
-Command         ap_source returned 0; 0.08 sec.
-Execute         source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/common/dsp48.gen 
-Command         ap_source returned 0; 0 sec.
-Command       ap_source returned 0; 0.09 sec.
-Command     ap_source returned 0; 0.09 sec.
-Execute     source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/kintexu/kintexu_fpv7.gen 
-Execute       source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx_fpv6.gen 
-Command       ap_source returned 0; 0 sec.
-Command     ap_source returned 0; 0 sec.
-Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/global.setting.tcl 
-Command     ap_source returned 0; 0 sec.
-INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
-Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/global.setting.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/global.setting.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /cad1/Xilinx/Vivado/2018.1/common/technology/generic/autopilot/common.gen 
-Execute       source /cad1/Xilinx/Vivado/2018.1/common/technology/generic/autopilot/APCoreGen.gen 
-Command       ap_source returned 0; 0 sec.
-Command     ap_source returned 0; 0.01 sec.
-Execute     source /cad1/Xilinx/Vivado/2018.1/common/technology/generic/autopilot/op.gen 
-Command     ap_source returned 0; 0 sec.
-Execute     source /cad1/Xilinx/Vivado/2018.1/common/technology/generic/autopilot/op_simcore.gen 
-Command     ap_source returned 0; 0 sec.
-Execute     source /cad1/Xilinx/Vivado/2018.1/common/technology/generic/autopilot/interface.gen 
-Command     ap_source returned 0; 0 sec.
-Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/global.setting.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/kintexu/kintexu.gen 
-Execute       source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/common/virtex.gen 
-Execute         source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx.gen 
-Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/plb46.gen 
-Command           ap_source returned 0; 0 sec.
-Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/fsl.gen 
-Command           ap_source returned 0; 0 sec.
-Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/axi4.gen 
-Command           ap_source returned 0; 0 sec.
-Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/nativeAXI4.gen 
-Execute             source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/saxilite.gen 
-Command             ap_source returned 0; 0 sec.
-Execute             source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/maxi.gen 
-Command             ap_source returned 0; 0.01 sec.
-Command           ap_source returned 0; 0.01 sec.
-Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
-Command           ap_source returned 0; 0.01 sec.
-Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
-Command           ap_source returned 0; 0 sec.
-Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/util.gen 
-Command           ap_source returned 0; 0 sec.
-Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/xfir.gen 
-Command           ap_source returned 0; 0 sec.
-Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/dds_compiler.gen 
-Command           ap_source returned 0; 0.01 sec.
-Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/xfft.gen 
-Command           ap_source returned 0; 0.05 sec.
-Command         ap_source returned 0; 0.08 sec.
-Execute         source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/common/dsp48.gen 
-Command         ap_source returned 0; 0 sec.
-Command       ap_source returned 0; 0.08 sec.
-Command     ap_source returned 0; 0.08 sec.
-Execute     source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/kintexu/kintexu_fpv7.gen 
-Execute       source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx_fpv6.gen 
-Command       ap_source returned 0; 0 sec.
-Command     ap_source returned 0; 0 sec.
-Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/global.setting.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.compgen.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/global.setting.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.compgen.tcl 
-Command     ap_source returned 0; 0.01 sec.
-Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/global.setting.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.compgen.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/global.setting.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.constraint.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.tbgen.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/global.setting.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.tbgen.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.tbgen.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.tbgen.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/global.setting.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/global.setting.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.rtl_wrap.cfg.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.rtl_wrap.cfg.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.rtl_wrap.cfg.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.tbgen.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.tbgen.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.tbgen.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.rtl_wrap.cfg.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.rtl_wrap.cfg.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.rtl_wrap.cfg.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.tbgen.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.tbgen.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.tbgen.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/global.setting.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.constraint.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/global.setting.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/global.setting.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.constraint.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.tbgen.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/global.setting.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.constraint.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.tbgen.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/global.setting.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /cad1/Xilinx/Vivado/2018.1/common/technology/generic/autopilot/common.gen 
-Execute       source /cad1/Xilinx/Vivado/2018.1/common/technology/generic/autopilot/APCoreGen.gen 
-Command       ap_source returned 0; 0 sec.
-Command     ap_source returned 0; 0 sec.
-Execute     source /cad1/Xilinx/Vivado/2018.1/common/technology/generic/autopilot/op.gen 
-Command     ap_source returned 0; 0 sec.
-Execute     source /cad1/Xilinx/Vivado/2018.1/common/technology/generic/autopilot/op_simcore.gen 
-Command     ap_source returned 0; 0 sec.
-Execute     source /cad1/Xilinx/Vivado/2018.1/common/technology/generic/autopilot/interface.gen 
-Command     ap_source returned 0; 0 sec.
-Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/global.setting.tcl 
-Command     ap_source returned 0; 0 sec.
-Execute     source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/kintexu/kintexu.gen 
-Execute       source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/common/virtex.gen 
-Execute         source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx.gen 
-Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/plb46.gen 
-Command           ap_source returned 0; 0 sec.
-Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/fsl.gen 
 Command           ap_source returned 0; 0.01 sec.
 Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/axi4.gen 
 Command           ap_source returned 0; 0 sec.
@@ -1077,10 +900,10 @@ Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/int
 Execute             source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/saxilite.gen 
 Command             ap_source returned 0; 0 sec.
 Execute             source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/maxi.gen 
-Command             ap_source returned 0; 0.01 sec.
-Command           ap_source returned 0; 0.01 sec.
-Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Command             ap_source returned 0; 0 sec.
 Command           ap_source returned 0; 0 sec.
+Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Command           ap_source returned 0; 0.01 sec.
 Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
 Command           ap_source returned 0; 0.01 sec.
 Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/util.gen 
@@ -1100,7 +923,184 @@ Execute     source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/kintexu/k
 Execute       source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx_fpv6.gen 
 Command       ap_source returned 0; 0 sec.
 Command     ap_source returned 0; 0 sec.
-Command   export_design returned 0; 11.6 sec.
+Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /cad1/Xilinx/Vivado/2018.1/common/technology/generic/autopilot/common.gen 
+Execute       source /cad1/Xilinx/Vivado/2018.1/common/technology/generic/autopilot/APCoreGen.gen 
+Command       ap_source returned 0; 0 sec.
+Command     ap_source returned 0; 0 sec.
+Execute     source /cad1/Xilinx/Vivado/2018.1/common/technology/generic/autopilot/op.gen 
+Command     ap_source returned 0; 0 sec.
+Execute     source /cad1/Xilinx/Vivado/2018.1/common/technology/generic/autopilot/op_simcore.gen 
+Command     ap_source returned 0; 0 sec.
+Execute     source /cad1/Xilinx/Vivado/2018.1/common/technology/generic/autopilot/interface.gen 
+Command     ap_source returned 0; 0 sec.
+Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/kintexu/kintexu.gen 
+Execute       source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/common/virtex.gen 
+Execute         source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx.gen 
+Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/plb46.gen 
+Command           ap_source returned 0; 0.01 sec.
+Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/fsl.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/axi4.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/saxilite.gen 
+Command             ap_source returned 0; 0 sec.
+Execute             source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/maxi.gen 
+Command             ap_source returned 0; 0 sec.
+Command           ap_source returned 0; 0 sec.
+Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Command           ap_source returned 0; 0.01 sec.
+Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Command           ap_source returned 0; 0.01 sec.
+Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/util.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/dds_compiler.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/xfft.gen 
+Command           ap_source returned 0; 0.06 sec.
+Command         ap_source returned 0; 0.09 sec.
+Execute         source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0.09 sec.
+Command     ap_source returned 0; 0.09 sec.
+Execute     source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/kintexu/kintexu_fpv7.gen 
+Execute       source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx_fpv6.gen 
+Command       ap_source returned 0; 0 sec.
+Command     ap_source returned 0; 0 sec.
+Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.compgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.compgen.tcl 
+Command     ap_source returned 0; 0.01 sec.
+Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.compgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.constraint.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.tbgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.tbgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.tbgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.tbgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.rtl_wrap.cfg.tcl 
+Command     ap_source returned 0; 0.01 sec.
+Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.rtl_wrap.cfg.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.rtl_wrap.cfg.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.tbgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.tbgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.tbgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.rtl_wrap.cfg.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.rtl_wrap.cfg.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.rtl_wrap.cfg.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.tbgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.tbgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.tbgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.constraint.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.constraint.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.tbgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.constraint.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/heartBeat.tbgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /cad1/Xilinx/Vivado/2018.1/common/technology/generic/autopilot/common.gen 
+Execute       source /cad1/Xilinx/Vivado/2018.1/common/technology/generic/autopilot/APCoreGen.gen 
+Command       ap_source returned 0; 0 sec.
+Command     ap_source returned 0; 0 sec.
+Execute     source /cad1/Xilinx/Vivado/2018.1/common/technology/generic/autopilot/op.gen 
+Command     ap_source returned 0; 0 sec.
+Execute     source /cad1/Xilinx/Vivado/2018.1/common/technology/generic/autopilot/op_simcore.gen 
+Command     ap_source returned 0; 0 sec.
+Execute     source /cad1/Xilinx/Vivado/2018.1/common/technology/generic/autopilot/interface.gen 
+Command     ap_source returned 0; 0 sec.
+Execute     source /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/kintexu/kintexu.gen 
+Execute       source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/common/virtex.gen 
+Execute         source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx.gen 
+Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/plb46.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/fsl.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/axi4.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/saxilite.gen 
+Command             ap_source returned 0; 0 sec.
+Execute             source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/maxi.gen 
+Command             ap_source returned 0; 0 sec.
+Command           ap_source returned 0; 0 sec.
+Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Command           ap_source returned 0; 0.01 sec.
+Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Command           ap_source returned 0; 0.01 sec.
+Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/util.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/dds_compiler.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/xfft.gen 
+Command           ap_source returned 0; 0.06 sec.
+Command         ap_source returned 0; 0.08 sec.
+Execute         source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0.09 sec.
+Command     ap_source returned 0; 0.09 sec.
+Execute     source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/kintexu/kintexu_fpv7.gen 
+Execute       source /cad1/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx_fpv6.gen 
+Command       ap_source returned 0; 0 sec.
+Command     ap_source returned 0; 0 sec.
+Command   export_design returned 0; 11.08 sec.
 Execute   close_project 
 Command   close_project returned 0; 0 sec.
 Execute   open_project axiStreamGate 
@@ -1112,7 +1112,7 @@ Execute   add_files ../hlsSources/srcs/axiStreamGate.cpp
 INFO: [HLS 200-10] Adding design file '../hlsSources/srcs/axiStreamGate.cpp' to the project
 Execute     is_xip ../hlsSources/srcs/axiStreamGate.cpp 
 Command     is_xip returned 0; 0 sec.
-Command   add_files returned 0; 0.01 sec.
+Command   add_files returned 0; 0 sec.
 Execute   open_solution solution1 
 Execute     cleanup_all 
 Command     cleanup_all returned 0; 0 sec.
