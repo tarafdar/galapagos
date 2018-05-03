@@ -1,0 +1,6 @@
+Changes as of Thursday, May 3rd at 10:10pm
+-Changed version of blk_mem_gen to 8.4
+-Changed version of clk_wiz to 6.0
+-Changed version of xdma to 4.1
+	Current state: can now open block diagram. Need to verify correctness
+
