@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="shell_reverseEndian64_1_0_synth_1" LaunchPart="xcku115-flva1517-2-e" LaunchTime="1525363777">
+  <File Type="RDS-RDS" Name="shell_reverseEndian64_1_0.vds"/>
+  <File Type="RDS-DCP" Name="shell_reverseEndian64_1_0.dcp"/>
+  <File Type="PA-TCL" Name="shell_reverseEndian64_1_0.tcl"/>
+  <File Type="REPORTS-TCL" Name="shell_reverseEndian64_1_0_reports.tcl"/>
+  <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/shell_reverseEndian64_1_0">
+    <File Path="$PSRCDIR/sources_1/bd/srcs/ip/shell_reverseEndian64_1_0/shell_reverseEndian64_1_0.xci">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../adm-8k5/srcs/ip/shell_reverseEndian64_1_0/shell_reverseEndian64_1_0.xci"/>
+        <Attr Name="ImportTime" Val="0"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="shell_reverseEndian64_1_0"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="BlockSrcs" RelSrcDir="$PSRCDIR/shell_reverseEndian64_1_0">
+    <File Path="$PSRCDIR/sources_1/bd/srcs/ip/shell_reverseEndian64_1_0/shell_reverseEndian64_1_0.xci">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../adm-8k5/srcs/ip/shell_reverseEndian64_1_0/shell_reverseEndian64_1_0.xci"/>
+        <Attr Name="ImportTime" Val="0"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="shell_reverseEndian64_1_0"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

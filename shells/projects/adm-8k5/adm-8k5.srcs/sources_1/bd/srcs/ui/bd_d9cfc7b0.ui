@@ -1,0 +1,111 @@
+{
+   ExpandedHierarchyInLayout: "/network",
+   guistr: "# # String gsaved with Nlview 6.8.5  2018-01-30 bk=1.4354 VDI=40 GEI=35 GUI=JA:1.6 TLS
+#  -string -flagsOSRD
+preplace port refclk_n -pg 1 -y 1060 -defaultsOSRD
+preplace port refclk_p -pg 1 -y 1080 -defaultsOSRD
+preplace port pcie_7x_mgt_rtl -pg 1 -y 50 -defaultsOSRD
+preplace port CLK_CONTROL -pg 1 -y 250 -defaultsOSRD
+preplace port txn -pg 1 -y 1010 -defaultsOSRD
+preplace port perst_n -pg 1 -y 90 -defaultsOSRD
+preplace port txp -pg 1 -y 990 -defaultsOSRD
+preplace port S_AXIS -pg 1 -y 630 -defaultsOSRD
+preplace port CLK_DATA -pg 1 -y 740 -defaultsOSRD
+preplace port M_AXI -pg 1 -y 230 -defaultsOSRD
+preplace port rxn -pg 1 -y 980 -defaultsOSRD
+preplace port M_AXIS -pg 1 -y 660 -defaultsOSRD
+preplace port diff_clock_rtl -pg 1 -y 70 -defaultsOSRD
+preplace port refclk200 -pg 1 -y 390 -defaultsOSRD
+preplace port rxp -pg 1 -y 1020 -defaultsOSRD
+preplace portBus ARESETN -pg 1 -y 520 -defaultsOSRD
+preplace portBus sfp_tx_disable -pg 1 -y 1070 -defaultsOSRD
+preplace inst network|tx_ifg_tuser -pg 1 -lvl 2 -y 982 -defaultsOSRD
+preplace inst network|axi_10g_ethernet_0 -pg 1 -lvl 3 -y 1282 -defaultsOSRD
+preplace inst reverseEndian64_1 -pg 1 -lvl 3 -y 660 -defaultsOSRD
+preplace inst network|rx_data_fifo_1 -pg 1 -lvl 3 -y 1762 -defaultsOSRD
+preplace inst network|rx_register_slice_1 -pg 1 -lvl 2 -y 1742 -defaultsOSRD
+preplace inst network|vcc -pg 1 -lvl 2 -y 1302 -defaultsOSRD
+preplace inst network|mac_config_vector -pg 1 -lvl 2 -y 1402 -defaultsOSRD
+preplace inst network|tx_register_slice_0 -pg 1 -lvl 2 -y 1902 -defaultsOSRD
+preplace inst mem_interface -pg 1 -lvl 5 -y 1560 -defaultsOSRD
+preplace inst gnd -pg 1 -lvl 5 -y 1050 -defaultsOSRD
+preplace inst network|ifg_delay -pg 1 -lvl 2 -y 1202 -defaultsOSRD
+preplace inst PCIe -pg 1 -lvl 2 -y 80 -defaultsOSRD
+preplace inst util_vector_logic_0 -pg 1 -lvl 3 -y 820 -defaultsOSRD
+preplace inst blk_mem_gen_0 -pg 1 -lvl 5 -y 330 -defaultsOSRD
+preplace inst control -pg 1 -lvl 2 -y 490 -defaultsOSRD
+preplace inst util_vector_logic_1 -pg 1 -lvl 2 -y 1140 -defaultsOSRD
+preplace inst util_vector_logic_2 -pg 1 -lvl 4 -y 590 -defaultsOSRD
+preplace inst network|tx_data_fifo_0 -pg 1 -lvl 1 -y 1912 -defaultsOSRD
+preplace inst network|gnd -pg 1 -lvl 2 -y 1082 -defaultsOSRD
+preplace inst axi_interconnect_0 -pg 1 -lvl 3 -y 220 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 1 -y 390 -defaultsOSRD
+preplace inst axi_bram_ctrl_0 -pg 1 -lvl 4 -y 330 -defaultsOSRD
+preplace inst microblaze_0_local_memory -pg 1 -lvl 3 -y 480 -defaultsOSRD
+preplace inst network|pcs_config_vector -pg 1 -lvl 2 -y 1502 -defaultsOSRD
+preplace inst reverseEndian64_0 -pg 1 -lvl 2 -y 650 -defaultsOSRD
+preplace inst network -pg 1 -lvl 3 -y 1032 -defaultsOSRD
+preplace netloc control_DLMB 1 2 1 N
+preplace netloc network|reset_1 1 0 3 NJ 1722 1300J 1662 1620
+preplace netloc network|mac_config_vector_dout 1 2 1 1540
+preplace netloc network_txp 1 3 3 2420J 990 2730J 980 3290J
+preplace netloc network|rxp_1 1 0 3 NJ 1642 1260J 1632 1560
+preplace netloc util_vector_logic_0_Res 1 3 1 2430
+preplace netloc network|Conn1 1 0 1 910
+preplace netloc network|axis_data_fifo_0_M_AXIS 1 1 1 N
+preplace netloc network|axi_10g_ethernet_0_rx_statistics_valid 1 3 1 2180
+preplace netloc network|tx_ifg_tuser_dout 1 2 1 1620J
+preplace netloc refclk_p_1 1 0 3 NJ 1080 NJ 1080 710J
+preplace netloc PCIe_axi_aclk 1 2 4 780 20 NJ 20 NJ 20 3290J
+preplace netloc network_network_reset_done 1 2 2 780 890 2390
+preplace netloc reverseEndian64_0_stream_out 1 2 1 750
+preplace netloc rxn_1 1 0 3 NJ 980 NJ 980 740J
+preplace netloc network|axis_register_slice_0_M_AXIS 1 2 1 1590
+preplace netloc reverseEndian64_1_stream_out 1 3 3 NJ 660 NJ 660 NJ
+preplace netloc diff_clock_rtl_1 1 0 2 NJ 70 NJ
+preplace netloc network|axi_10g_ethernet_0_resetdone_out 1 3 1 2160
+preplace netloc network|axis_register_slice_1_M_AXIS 1 2 1 N
+preplace netloc network|axi_10g_ethernet_0_tx_statistics_vector 1 3 1 2200
+preplace netloc network_clk_156 1 1 5 250 730 780 740 2410 740 NJ 740 NJ
+preplace netloc network|refclk_p_1 1 0 3 NJ 1702 1290J 1652 1600
+preplace netloc axi_interconnect_0_M01_AXI 1 3 3 NJ 230 NJ 230 NJ
+preplace netloc network|pcs_config_vector_dout 1 2 1 1570J
+preplace netloc S_AXIS_1 1 0 2 NJ 630 NJ
+preplace netloc perst_n_1 1 0 3 NJ 90 230 810 NJ
+preplace netloc refclk_n_1 1 0 3 NJ 1060 NJ 1060 720J
+preplace netloc rxp_1 1 0 3 NJ 1020 NJ 1020 730J
+preplace netloc network|axi_10g_ethernet_0_m_axis_rx 1 1 3 1310 1602 NJ 1602 2140
+preplace netloc network|refclk_n_1 1 0 3 NJ 1682 1270J 1642 1610
+preplace netloc PCIe_M_AXI 1 2 1 770
+preplace netloc PCIe_pcie_mgt 1 2 4 NJ 50 NJ 50 NJ 50 NJ
+preplace netloc axi_bram_ctrl_0_BRAM_PORTA 1 4 1 NJ
+preplace netloc SYS_Rst_1 1 2 1 720
+preplace netloc microblaze_0_Clk 1 1 3 220 390 760 40 2430J
+preplace netloc network|dclk_1 1 0 3 NJ 1622 NJ 1622 1530
+preplace netloc control_ILMB 1 2 1 N
+preplace netloc control_packetOut 1 2 1 750
+preplace netloc network|axi_10g_ethernet_0_txusrclk2_out 1 0 4 910 2002 1310 1822 1620 1852 2150
+preplace netloc network|rxn_1 1 0 3 NJ 1602 1260J 1612 1550
+preplace netloc network_M_AXIS 1 1 3 240 750 NJ 750 2400
+preplace netloc util_vector_logic_1_Res 1 2 1 700J
+preplace netloc refclk200_1 1 0 1 NJ
+preplace netloc network|axi_10g_ethernet_0_txn 1 3 1 2190
+preplace netloc network|ifg_delay_dout 1 2 1 1530J
+preplace netloc PCIe_axi_aresetn 1 2 2 700 30 2400J
+preplace netloc network|rx_data_fifo_1_M_AXIS 1 3 1 N
+preplace netloc network|axi_10g_ethernet_0_rx_statistics_vector 1 3 1 2170
+preplace netloc network|axi_10g_ethernet_0_tx_statistics_valid 1 3 1 2220
+preplace netloc network|tx_axis_aresetn_1 1 0 3 920 1662 1280 1142 1580
+preplace netloc network|gnd_dout 1 2 1 1610
+preplace netloc util_vector_logic_2_Res 1 1 5 260 740 770 390 2410 410 2730 520 NJ
+preplace netloc network|axi_10g_ethernet_0_txp 1 3 1 2210
+preplace netloc network|vcc_dout 1 2 1 NJ
+preplace netloc gnd_dout 1 5 1 3280J
+preplace netloc axi_interconnect_0_M00_AXI 1 3 1 2410
+preplace netloc S00_AXI_1 1 2 1 710
+preplace netloc network_txn 1 3 3 2430J 1010 2740J 990 3280J
+levelinfo -pg 1 -150 120 540 1010 2580 3070 3310 -top -110 -bot 2780
+levelinfo -hier network * 1090 1420 1880 *
+",
+}
+

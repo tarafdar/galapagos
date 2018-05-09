@@ -1,0 +1,142 @@
+{
+   ExpandedHierarchyInLayout: "",
+   guistr: "# # String gsaved with Nlview 6.8.5  2018-01-30 bk=1.4354 VDI=40 GEI=35 GUI=JA:1.6 TLS
+#  -string -flagsOSRD
+preplace port toeTX_s_axis_write -pg 1 -y 1370 -defaultsOSRD
+preplace port toeTX_m_axis_write_sts -pg 1 -y 1450 -defaultsOSRD
+preplace port upd_m_axis_read_sts -pg 1 -y 430 -defaultsOSRD
+preplace port teoTX_m_axis_read -pg 1 -y 1490 -defaultsOSRD
+preplace port clk156_25 -pg 1 -y 430 -defaultsOSRD
+preplace port toeTx_s_axis_write_cmd -pg 1 -y 1390 -defaultsOSRD
+preplace port toeTX_m_axis_read_sts -pg 1 -y 1470 -defaultsOSRD
+preplace port S02_AXI -pg 1 -y 390 -defaultsOSRD
+preplace port S00_AXI -pg 1 -y 350 -defaultsOSRD
+preplace port ht_m_axis_write_sts -pg 1 -y 350 -defaultsOSRD
+preplace port S01_AXI -pg 1 -y 370 -defaultsOSRD
+preplace port teo_RX_m_axis_read -pg 1 -y 1810 -defaultsOSRD
+preplace port toeRX_m_axis_read_sts -pg 1 -y 1790 -defaultsOSRD
+preplace port toeTX_s_axis_read_cmd -pg 1 -y 1410 -defaultsOSRD
+preplace port ht_m_axis_read_sts -pg 1 -y 40 -defaultsOSRD
+preplace port c0_ddr4_ui_clk -pg 1 -y 410 -defaultsOSRD
+preplace port S04_AXI -pg 1 -y 40 -defaultsOSRD
+preplace port udp_m_axis_read -pg 1 -y 370 -defaultsOSRD
+preplace port udp_m_axis_write_sts -pg 1 -y 390 -defaultsOSRD
+preplace port toeRX_s_axis_write_cmd -pg 1 -y 1710 -defaultsOSRD
+preplace port toeRX_m_axis_write_sts -pg 1 -y 1770 -defaultsOSRD
+preplace port S00_ACLK -pg 1 -y 470 -defaultsOSRD
+preplace port S00_ARESETN -pg 1 -y 20 -defaultsOSRD
+preplace port toeRx_s_axis_write -pg 1 -y 1690 -defaultsOSRD
+preplace port ht_m_axis_read -pg 1 -y 20 -defaultsOSRD
+preplace port c1_ddr4_act_n -pg 1 -y 580 -defaultsOSRD
+preplace port S03_AXI -pg 1 -y 410 -defaultsOSRD
+preplace port C0_DDR4_S_AXI -pg 1 -y 490 -defaultsOSRD
+preplace port c1_sys_clk_n -pg 1 -y 720 -defaultsOSRD
+preplace port c0_sys_clk_n -pg 1 -y 210 -defaultsOSRD
+preplace port m_axi_mm2s_aresetn -pg 1 -y 760 -defaultsOSRD
+preplace port c0_ddr4_act_n -pg 1 -y 70 -defaultsOSRD
+preplace port toeRx_s_axis_read_cmd -pg 1 -y 1730 -defaultsOSRD
+preplace port c1_sys_clk_p -pg 1 -y 740 -defaultsOSRD
+preplace port c0_ddr4_reset_n -pg 1 -y 330 -defaultsOSRD
+preplace port c0_sys_clk_p -pg 1 -y 230 -defaultsOSRD
+preplace port c1_ddr4_reset_n -pg 1 -y 840 -defaultsOSRD
+preplace portBus c1_ddr4_dqs_c -pg 1 -y 780 -defaultsOSRD
+preplace portBus c0_ddr4_dm_dbi_n -pg 1 -y 230 -defaultsOSRD
+preplace portBus c1_ddr4_bg -pg 1 -y 640 -defaultsOSRD
+preplace portBus c0_ddr4_bg -pg 1 -y 130 -defaultsOSRD
+preplace portBus sys_rst -pg 1 -y 700 -defaultsOSRD
+preplace portBus c1_ddr4_ck_t -pg 1 -y 680 -defaultsOSRD
+preplace portBus c1_ddr4_odt -pg 1 -y 820 -defaultsOSRD
+preplace portBus c0_ddr4_ck_t -pg 1 -y 170 -defaultsOSRD
+preplace portBus c0_ddr4_dqs_c -pg 1 -y 270 -defaultsOSRD
+preplace portBus c1_ddr4_cke -pg 1 -y 700 -defaultsOSRD
+preplace portBus c1_ddr4_dqs_t -pg 1 -y 800 -defaultsOSRD
+preplace portBus c1_ddr4_cs_n -pg 1 -y 720 -defaultsOSRD
+preplace portBus c0_ddr4_dq -pg 1 -y 250 -defaultsOSRD
+preplace portBus c0_ddr4_dqs_t -pg 1 -y 290 -defaultsOSRD
+preplace portBus c0_ddr4_adr -pg 1 -y 90 -defaultsOSRD
+preplace portBus c0_ddr4_odt -pg 1 -y 310 -defaultsOSRD
+preplace portBus c1_ddr4_ba -pg 1 -y 620 -defaultsOSRD
+preplace portBus c0_ddr4_ba -pg 1 -y 110 -defaultsOSRD
+preplace portBus c1_ddr4_dg -pg 1 -y 760 -defaultsOSRD
+preplace portBus c1_ddr4_dm_dbi_n -pg 1 -y 740 -defaultsOSRD
+preplace portBus c1_ddr4_adr -pg 1 -y 600 -defaultsOSRD
+preplace portBus c1_ddr4_ck_c -pg 1 -y 660 -defaultsOSRD
+preplace portBus c0_ddr4_cke -pg 1 -y 190 -defaultsOSRD
+preplace portBus c0_ddr4_ck_c -pg 1 -y 150 -defaultsOSRD
+preplace portBus c0_ddr4_cs_n -pg 1 -y 210 -defaultsOSRD
+preplace inst toeRx_data_mover -pg 1 -lvl 2 -y 1470 -defaultsOSRD
+preplace inst PCIe_interconnect -pg 1 -lvl 2 -y 500 -defaultsOSRD
+preplace inst toeTX_data_mover -pg 1 -lvl 2 -y 1790 -defaultsOSRD
+preplace inst proc_sys_reset_0 -pg 1 -lvl 1 -y 1030 -defaultsOSRD
+preplace inst proc_sys_reset_1 -pg 1 -lvl 1 -y 850 -defaultsOSRD
+preplace inst ddr4_0 -pg 1 -lvl 3 -y 240 -defaultsOSRD
+preplace inst toe_switch -pg 1 -lvl 2 -y 1120 -defaultsOSRD
+preplace inst ddr4_1 -pg 1 -lvl 3 -y 750 -defaultsOSRD
+preplace netloc Conn1 1 0 2 NJ 350 NJ
+preplace netloc Conn16 1 0 2 NJ 1710 NJ
+preplace netloc ddr4_1_c0_ddr4_odt 1 3 1 NJ
+preplace netloc Net4 1 3 1 NJ
+preplace netloc sys_rst_1 1 0 3 10J 710 NJ 710 1000
+preplace netloc Conn20 1 2 2 NJ 1490 NJ
+preplace netloc Conn17 1 0 2 NJ 1730 NJ
+preplace netloc Conn2 1 0 2 NJ 370 NJ
+preplace netloc toeTX_data_mover_M_AXI_MM2S 1 1 2 480 900 910
+preplace netloc Net5 1 3 1 NJ
+preplace netloc Conn18 1 2 2 NJ 1450 NJ
+preplace netloc Conn3 1 0 2 NJ 390 NJ
+preplace netloc Conn21 1 2 2 NJ 1770 NJ
+preplace netloc Net6 1 3 1 NJ
+preplace netloc ddr4_1_c0_ddr4_ck_c 1 3 1 NJ
+preplace netloc ddr4_0_c0_ddr4_cke 1 3 1 NJ
+preplace netloc ddr4_0_c0_ddr4_ba 1 3 1 NJ
+preplace netloc ddr4_0_c0_ddr4_adr 1 3 1 NJ
+preplace netloc Conn19 1 2 2 NJ 1470 NJ
+preplace netloc Conn4 1 0 2 NJ 410 NJ
+preplace netloc Conn22 1 2 2 NJ 1790 NJ
+preplace netloc toe_switch_1_M00_AXI 1 2 1 980
+preplace netloc Net7 1 3 1 NJ
+preplace netloc c1_sys_clk_p_1 1 0 3 NJ 740 NJ 740 NJ
+preplace netloc Conn23 1 2 2 NJ 1810 NJ
+preplace netloc ht_udp_axi_switch_M00_AXI 1 2 2 960 490 NJ
+preplace netloc ddr4_1_c0_ddr4_ui_clk_sync_rst 1 0 4 20 1140 440J 870 950J 1010 1380
+preplace netloc ddr4_0_c0_ddr4_ui_clk_sync_rst 1 0 4 30 730 NJ 730 990J 500 1380
+preplace netloc ddr4_0_c0_ddr4_ck_c 1 3 1 NJ
+preplace netloc c0_sys_clk_n_1 1 0 3 NJ 210 NJ 210 NJ
+preplace netloc S00_ACLK_1 1 0 2 NJ 470 NJ
+preplace netloc ddr4_1_c0_ddr4_reset_n 1 3 1 NJ
+preplace netloc ddr4_1_c0_ddr4_ba 1 3 1 NJ
+preplace netloc toeRx_data_mover_M_AXI_S2MM 1 1 2 470 890 920
+preplace netloc ddr4_1_c0_ddr4_cke 1 3 1 NJ
+preplace netloc ddr4_1_c0_ddr4_ck_t 1 3 1 NJ
+preplace netloc ddr4_0_c0_ddr4_odt 1 3 1 NJ
+preplace netloc proc_sys_reset_0_interconnect_aresetn 1 1 2 410 860 970
+preplace netloc m_axi_mm2s_aresetn_1 1 0 2 10 750 430
+preplace netloc toeRx_data_mover_M_AXI_MM2S 1 1 2 460 880 930
+preplace netloc ddr4_0_c0_ddr4_ck_t 1 3 1 NJ
+preplace netloc ddr4_0_c0_ddr4_bg 1 3 1 NJ
+preplace netloc ddr4_0_c0_ddr4_act_n 1 3 1 NJ
+preplace netloc m_axi_mm2s_aclk_1 1 0 2 NJ 430 420
+preplace netloc Conn12 1 0 2 NJ 1410 NJ
+preplace netloc ddr4_1_c0_ddr4_cs_n 1 3 1 NJ
+preplace netloc ddr4_0_c0_ddr4_reset_n 1 3 1 NJ
+preplace netloc Conn13 1 0 2 NJ 1390 NJ
+preplace netloc ddr4_1_c0_ddr4_adr 1 3 1 NJ
+preplace netloc Net1 1 3 1 NJ
+preplace netloc Net 1 3 1 NJ
+preplace netloc proc_sys_reset_1_interconnect_aresetn 1 1 2 400 780 NJ
+preplace netloc Conn14 1 0 2 NJ 1370 NJ
+preplace netloc toeTX_data_mover_M_AXI_S2MM 1 1 2 480 1630 900
+preplace netloc ddr4_1_c0_ddr4_ui_clk 1 0 4 20 700 440 850 990J 1000 1390
+preplace netloc ddr4_1_c0_ddr4_bg 1 3 1 NJ
+preplace netloc ddr4_1_c0_ddr4_act_n 1 3 1 NJ
+preplace netloc Net2 1 3 1 NJ
+preplace netloc ddr4_0_c0_ddr4_cs_n 1 3 1 NJ
+preplace netloc c1_sys_clk_n_1 1 0 3 NJ 720 NJ 720 NJ
+preplace netloc Conn15 1 0 2 NJ 1690 NJ
+preplace netloc ddr4_0_c0_ddr4_ui_clk 1 0 4 40 1130 450 910 940J 1020 1400
+preplace netloc Net3 1 3 1 NJ
+preplace netloc c0_sys_clk_p_1 1 0 3 NJ 230 NJ 230 NJ
+levelinfo -pg 1 -10 220 690 1190 1420 -top -10 -bot 1950
+",
+}
+
