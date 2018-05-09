@@ -1,0 +1,14 @@
+Changes as of Thursday, May 3rd at 10:10am
+
+shell.bd in: galapagos/shells/adm-8k5/srcs
+-Changed version of blk_mem_gen to 8.4
+-Changed version of clk_wiz to 6.0
+-Changed version of xdma to 4.1
+
+Changes as of Thursday, May 3rd at 1:39pm
+
+pr.bd in: galapagos/partialRegions/defaultFifo
+-Changed version of blk_mem_gen to 8.4 
+
+Current State:
+Synthesis now works! 
