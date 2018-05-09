@@ -1,9 +1,9 @@
 BOARD = adm-8k5
 DCP = static_routed_v2.dcp
-LOGICALFILE=hwMiddleware/packetSwitch/input/md/mpiLogical.xml
-MACFILE=hwMiddleware/packetSwitch/input/md/mpiMacAddresses
-MAPFILE=hwMiddleware/packetSwitch/input/md/mpiMap.xml
-PROJECTNAME=test
+LOGICALFILE=hwMiddleware/packetSwitch/input/kmeans90/mpiLogical.xml
+MACFILE=hwMiddleware/packetSwitch/input/kmeans90/mpiMacAddresses
+MAPFILE=hwMiddleware/packetSwitch/input/kmeans90/mpiMap.xml
+PROJECTNAME=kmeans90
 USERIP_DIR=HMPI
 USERIPTCL=${USERIP_DIR}/generate_hls_ip.tcl
 
