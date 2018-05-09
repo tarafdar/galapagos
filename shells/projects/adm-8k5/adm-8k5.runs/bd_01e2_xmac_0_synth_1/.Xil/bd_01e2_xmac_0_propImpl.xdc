@@ -1,0 +1,3 @@
+set_property SRC_FILE_INFO {cfile:/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_0/synth/bd_01e2_xmac_0.xdc rfile:../../../adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_0/synth/bd_01e2_xmac_0.xdc id:1 order:EARLY scoped_inst:inst} [current_design]
+set_property src_info {type:SCOPED_XDC file:1 line:11 export:INPUT save:INPUT read:READ} [current_design]
+set_max_delay 6.4000 -datapath_only -from [get_cells bd_01e2_xmac_0_core/rx/rx_pause_control/pause_quanta_reg[*]] -to [get_cells bd_01e2_xmac_0_core/tx/tx_cntl/pause_tx_quanta_reg[*]]

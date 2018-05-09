@@ -1,0 +1,13 @@
+
+*** Running vivado
+    with args -log shell_reverseEndian64_1_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source shell_reverseEndian64_1_0.tcl
+
+
+****** Vivado v2018.1 (64-bit)
+  **** SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018
+  **** IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source shell_reverseEndian64_1_0.tcl -notrace
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP shell_reverseEndian64_1_0, cache-ID = 266c89e31782e2b4.
+INFO: [Common 17-206] Exiting Vivado at Thu May  3 12:11:10 2018...
