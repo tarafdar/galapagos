@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="shell_vcc_0_synth_1" LaunchPart="xcku115-flva1517-2-e" LaunchTime="1525362814">
-  <File Type="RDS-RDS" Name="shell_vcc_0.vds"/>
   <File Type="RDS-DCP" Name="shell_vcc_0.dcp"/>
   <File Type="PA-TCL" Name="shell_vcc_0.tcl"/>
+  <File Type="RDS-RDS" Name="shell_vcc_0.vds"/>
   <File Type="REPORTS-TCL" Name="shell_vcc_0_reports.tcl"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/shell_vcc_0">
     <File Path="$PSRCDIR/sources_1/bd/srcs/ip/shell_vcc_0/shell_vcc_0.xci">

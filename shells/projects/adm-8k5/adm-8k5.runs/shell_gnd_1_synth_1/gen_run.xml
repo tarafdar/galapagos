@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="shell_gnd_1_synth_1" LaunchPart="xcku115-flva1517-2-e" LaunchTime="1525362814">
-  <File Type="RDS-UTIL-PB" Name="shell_gnd_1_utilization_synth.pb"/>
   <File Type="RDS-UTIL" Name="shell_gnd_1_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="shell_gnd_1_utilization_synth.pb"/>
   <File Type="RDS-RDS" Name="shell_gnd_1.vds"/>
   <File Type="RDS-DCP" Name="shell_gnd_1.dcp"/>
   <File Type="PA-TCL" Name="shell_gnd_1.tcl"/>

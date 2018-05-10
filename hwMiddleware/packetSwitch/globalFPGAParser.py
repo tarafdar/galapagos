@@ -505,7 +505,8 @@ def createLocalFPGA(projectName, plus16):
 
             id_portAttribute = etree.Element('id_port')
             id_portAttribute.text = kernel.id_port
-            ipElement.append(id_portAttribute)
+            if kernel.id_port != '':
+                ipElement.append(id_portAttribute)
             
             for interface in kernel.interfaces:
                 interfaceAttribute = etree.Element('interface')

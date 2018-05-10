@@ -128,7 +128,6 @@
           <spirit:configurableElementValue spirit:referenceId="C_USE_EXT_BRK">0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="C_USE_EXT_NM_BRK">0</spirit:configurableElementValue>
         </spirit:configurableElementValues>
-        <bd:hdl_attributes/>
       </spirit:componentInstance>
       <spirit:componentInstance>
         <spirit:instanceName>rst_0</spirit:instanceName>
@@ -162,7 +161,6 @@
           <spirit:configurableElementValue spirit:referenceId="C_HIGHADDR">0x000000000000FFFF</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="C_MASK">0x00000000C0010000</spirit:configurableElementValue>
         </spirit:configurableElementValues>
-        <bd:hdl_attributes/>
       </spirit:componentInstance>
       <spirit:componentInstance>
         <spirit:instanceName>ilmb_cntlr</spirit:instanceName>
@@ -191,7 +189,6 @@
           <spirit:configurableElementValue spirit:referenceId="C_HIGHADDR">0x0000000000017FFF</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="C_MASK">0x00000000C0010000</spirit:configurableElementValue>
         </spirit:configurableElementValues>
-        <bd:hdl_attributes/>
       </spirit:componentInstance>
       <spirit:componentInstance>
         <spirit:instanceName>second_ilmb_cntlr</spirit:instanceName>
