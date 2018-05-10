@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
-// Date        : Thu May  3 12:03:20 2018
+// Date        : Thu May  3 12:03:19 2018
 // Host        : ug238 running 64-bit Debian GNU/Linux 9.4 (stretch)
-// Command     : write_verilog -force -mode funcsim
-//               /nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/shell_axi_10g_ethernet_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top shell_axi_10g_ethernet_0_0 -prefix
+//               shell_axi_10g_ethernet_0_0_ shell_axi_10g_ethernet_0_0_sim_netlist.v
 // Design      : shell_axi_10g_ethernet_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,224 +12,7 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "shell_axi_10g_ethernet_0_0,bd_01e2,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "bd_01e2,Vivado 2018.1" *) 
-(* NotValidForBitStream *)
-module shell_axi_10g_ethernet_0_0
-   (tx_axis_aresetn,
-    rx_axis_aresetn,
-    tx_ifg_delay,
-    dclk,
-    txp,
-    txn,
-    rxp,
-    rxn,
-    signal_detect,
-    tx_fault,
-    tx_disable,
-    pcspma_status,
-    sim_speedup_control,
-    rxrecclk_out,
-    mac_tx_configuration_vector,
-    mac_rx_configuration_vector,
-    mac_status_vector,
-    pcs_pma_configuration_vector,
-    pcs_pma_status_vector,
-    areset_datapathclk_out,
-    txusrclk_out,
-    txusrclk2_out,
-    gttxreset_out,
-    gtrxreset_out,
-    txuserrdy_out,
-    coreclk_out,
-    resetdone_out,
-    reset_counter_done_out,
-    qpll0lock_out,
-    qpll0outclk_out,
-    qpll0outrefclk_out,
-    areset_coreclk_out,
-    refclk_p,
-    refclk_n,
-    reset,
-    s_axis_tx_tdata,
-    s_axis_tx_tkeep,
-    s_axis_tx_tlast,
-    s_axis_tx_tready,
-    s_axis_tx_tuser,
-    s_axis_tx_tvalid,
-    s_axis_pause_tdata,
-    s_axis_pause_tvalid,
-    m_axis_rx_tdata,
-    m_axis_rx_tkeep,
-    m_axis_rx_tlast,
-    m_axis_rx_tuser,
-    m_axis_rx_tvalid,
-    tx_statistics_valid,
-    tx_statistics_vector,
-    rx_statistics_valid,
-    rx_statistics_vector);
-  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.tx_axis_aresetn RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.tx_axis_aresetn, POLARITY ACTIVE_LOW" *) input tx_axis_aresetn;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.rx_axis_aresetn RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.rx_axis_aresetn, POLARITY ACTIVE_LOW" *) input rx_axis_aresetn;
-  input [7:0]tx_ifg_delay;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.dclk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.dclk, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN shell_clk_wiz_0_0_clk_out1" *) input dclk;
-  output txp;
-  output txn;
-  input rxp;
-  input rxn;
-  input signal_detect;
-  input tx_fault;
-  output tx_disable;
-  output [7:0]pcspma_status;
-  input sim_speedup_control;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.rxrecclk_out CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.rxrecclk_out, FREQ_HZ 156250000, PHASE 0.000, CLK_DOMAIN bd_01e2_xpcs_0_rxrecclk_out" *) output rxrecclk_out;
-  input [79:0]mac_tx_configuration_vector;
-  input [79:0]mac_rx_configuration_vector;
-  output [2:0]mac_status_vector;
-  input [535:0]pcs_pma_configuration_vector;
-  output [447:0]pcs_pma_status_vector;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.areset_datapathclk_out RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.areset_datapathclk_out, POLARITY ACTIVE_HIGH" *) output areset_datapathclk_out;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.txusrclk_out CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.txusrclk_out, FREQ_HZ 312500000, PHASE 0.000, CLK_DOMAIN bd_01e2_xpcs_0_txusrclk_out" *) output txusrclk_out;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.txusrclk2_out CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.txusrclk2_out, FREQ_HZ 156250000, PHASE 0.000, CLK_DOMAIN bd_01e2_xpcs_0_txusrclk2_out, ASSOCIATED_BUSIF m_axis_rx:s_axis_pause:s_axis_tx, ASSOCIATED_ASYNC_RESET tx_axis_aresetn:rx_axis_aresetn" *) output txusrclk2_out;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.gttxreset_out RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.gttxreset_out, POLARITY ACTIVE_HIGH" *) output gttxreset_out;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.gtrxreset_out RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.gtrxreset_out, POLARITY ACTIVE_HIGH" *) output gtrxreset_out;
-  output txuserrdy_out;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.coreclk_out CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.coreclk_out, FREQ_HZ 156250000, PHASE 0.000, CLK_DOMAIN bd_01e2_xpcs_0_coreclk_out" *) output coreclk_out;
-  output resetdone_out;
-  output reset_counter_done_out;
-  output qpll0lock_out;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.qpll0outclk_out CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.qpll0outclk_out, FREQ_HZ 156250000, PHASE 0.000, CLK_DOMAIN bd_01e2_xpcs_0_qpll0outclk_out" *) output qpll0outclk_out;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.qpll0outrefclk_out CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.qpll0outrefclk_out, FREQ_HZ 156250000, PHASE 0.000, CLK_DOMAIN bd_01e2_xpcs_0_qpll0outrefclk_out" *) output qpll0outrefclk_out;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.areset_coreclk_out RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.areset_coreclk_out, POLARITY ACTIVE_HIGH" *) output areset_coreclk_out;
-  input refclk_p;
-  input refclk_n;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.reset RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.reset, POLARITY ACTIVE_HIGH" *) input reset;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis_tx TDATA" *) input [63:0]s_axis_tx_tdata;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis_tx TKEEP" *) input [7:0]s_axis_tx_tkeep;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis_tx TLAST" *) input s_axis_tx_tlast;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis_tx TREADY" *) output s_axis_tx_tready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis_tx TUSER" *) input [0:0]s_axis_tx_tuser;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis_tx TVALID" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axis_tx, TDATA_NUM_BYTES 8, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 156250000, PHASE 0.000, CLK_DOMAIN bd_01e2_xpcs_0_txusrclk2_out, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} TDATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 64} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}} TDATA_WIDTH 64}" *) input s_axis_tx_tvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis_pause TDATA" *) input [15:0]s_axis_pause_tdata;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis_pause TVALID" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axis_pause, TDATA_NUM_BYTES 2, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 156250000, PHASE 0.000, CLK_DOMAIN bd_01e2_xpcs_0_txusrclk2_out, LAYERED_METADATA undef" *) input s_axis_pause_tvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis_rx TDATA" *) output [63:0]m_axis_rx_tdata;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis_rx TKEEP" *) output [7:0]m_axis_rx_tkeep;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis_rx TLAST" *) output m_axis_rx_tlast;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis_rx TUSER" *) output m_axis_rx_tuser;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis_rx TVALID" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m_axis_rx, TDATA_NUM_BYTES 8, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 1, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 156250000, PHASE 0.000, CLK_DOMAIN bd_01e2_xpcs_0_txusrclk2_out, LAYERED_METADATA undef" *) output m_axis_rx_tvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:display_ten_gig_eth_mac:statistics:2.0 tx_statistics valid" *) output tx_statistics_valid;
-  (* X_INTERFACE_INFO = "xilinx.com:display_ten_gig_eth_mac:statistics:2.0 tx_statistics vector" *) output [25:0]tx_statistics_vector;
-  (* X_INTERFACE_INFO = "xilinx.com:display_ten_gig_eth_mac:statistics:2.0 rx_statistics valid" *) output rx_statistics_valid;
-  (* X_INTERFACE_INFO = "xilinx.com:display_ten_gig_eth_mac:statistics:2.0 rx_statistics vector" *) output [29:0]rx_statistics_vector;
-
-  wire areset_coreclk_out;
-  wire areset_datapathclk_out;
-  wire coreclk_out;
-  wire dclk;
-  wire gtrxreset_out;
-  wire gttxreset_out;
-  wire [63:0]m_axis_rx_tdata;
-  wire [7:0]m_axis_rx_tkeep;
-  wire m_axis_rx_tlast;
-  wire m_axis_rx_tuser;
-  wire m_axis_rx_tvalid;
-  wire [79:0]mac_rx_configuration_vector;
-  wire [2:0]mac_status_vector;
-  wire [79:0]mac_tx_configuration_vector;
-  wire [535:0]pcs_pma_configuration_vector;
-  wire [447:0]pcs_pma_status_vector;
-  wire [7:0]pcspma_status;
-  wire qpll0lock_out;
-  wire qpll0outclk_out;
-  wire qpll0outrefclk_out;
-  wire refclk_n;
-  wire refclk_p;
-  wire reset;
-  wire reset_counter_done_out;
-  wire resetdone_out;
-  wire rx_axis_aresetn;
-  wire rx_statistics_valid;
-  wire [29:0]rx_statistics_vector;
-  wire rxn;
-  wire rxp;
-  wire rxrecclk_out;
-  wire [15:0]s_axis_pause_tdata;
-  wire s_axis_pause_tvalid;
-  wire [63:0]s_axis_tx_tdata;
-  wire [7:0]s_axis_tx_tkeep;
-  wire s_axis_tx_tlast;
-  wire s_axis_tx_tready;
-  wire [0:0]s_axis_tx_tuser;
-  wire s_axis_tx_tvalid;
-  wire signal_detect;
-  wire sim_speedup_control;
-  wire tx_axis_aresetn;
-  wire tx_disable;
-  wire tx_fault;
-  wire [7:0]tx_ifg_delay;
-  wire tx_statistics_valid;
-  wire [25:0]tx_statistics_vector;
-  wire txn;
-  wire txp;
-  wire txuserrdy_out;
-  wire txusrclk2_out;
-  wire txusrclk_out;
-
-  (* HW_HANDOFF = "shell_axi_10g_ethernet_0_0.hwdef" *) 
-  shell_axi_10g_ethernet_0_0_bd_01e2 inst
-       (.areset_coreclk_out(areset_coreclk_out),
-        .areset_datapathclk_out(areset_datapathclk_out),
-        .coreclk_out(coreclk_out),
-        .dclk(dclk),
-        .gtrxreset_out(gtrxreset_out),
-        .gttxreset_out(gttxreset_out),
-        .m_axis_rx_tdata(m_axis_rx_tdata),
-        .m_axis_rx_tkeep(m_axis_rx_tkeep),
-        .m_axis_rx_tlast(m_axis_rx_tlast),
-        .m_axis_rx_tuser(m_axis_rx_tuser),
-        .m_axis_rx_tvalid(m_axis_rx_tvalid),
-        .mac_rx_configuration_vector(mac_rx_configuration_vector),
-        .mac_status_vector(mac_status_vector),
-        .mac_tx_configuration_vector(mac_tx_configuration_vector),
-        .pcs_pma_configuration_vector(pcs_pma_configuration_vector),
-        .pcs_pma_status_vector(pcs_pma_status_vector),
-        .pcspma_status(pcspma_status),
-        .qpll0lock_out(qpll0lock_out),
-        .qpll0outclk_out(qpll0outclk_out),
-        .qpll0outrefclk_out(qpll0outrefclk_out),
-        .refclk_n(refclk_n),
-        .refclk_p(refclk_p),
-        .reset(reset),
-        .reset_counter_done_out(reset_counter_done_out),
-        .resetdone_out(resetdone_out),
-        .rx_axis_aresetn(rx_axis_aresetn),
-        .rx_statistics_valid(rx_statistics_valid),
-        .rx_statistics_vector(rx_statistics_vector),
-        .rxn(rxn),
-        .rxp(rxp),
-        .rxrecclk_out(rxrecclk_out),
-        .s_axis_pause_tdata(s_axis_pause_tdata),
-        .s_axis_pause_tvalid(s_axis_pause_tvalid),
-        .s_axis_tx_tdata(s_axis_tx_tdata),
-        .s_axis_tx_tkeep(s_axis_tx_tkeep),
-        .s_axis_tx_tlast(s_axis_tx_tlast),
-        .s_axis_tx_tready(s_axis_tx_tready),
-        .s_axis_tx_tuser(s_axis_tx_tuser),
-        .s_axis_tx_tvalid(s_axis_tx_tvalid),
-        .signal_detect(signal_detect),
-        .sim_speedup_control(sim_speedup_control),
-        .tx_axis_aresetn(tx_axis_aresetn),
-        .tx_disable(tx_disable),
-        .tx_fault(tx_fault),
-        .tx_ifg_delay(tx_ifg_delay),
-        .tx_statistics_valid(tx_statistics_valid),
-        .tx_statistics_vector(tx_statistics_vector),
-        .txn(txn),
-        .txp(txp),
-        .txuserrdy_out(txuserrdy_out),
-        .txusrclk2_out(txusrclk2_out),
-        .txusrclk_out(txusrclk_out));
-endmodule
-
-(* HW_HANDOFF = "shell_axi_10g_ethernet_0_0.hwdef" *) (* ORIG_REF_NAME = "bd_01e2" *) 
+(* HW_HANDOFF = "shell_axi_10g_ethernet_0_0.hwdef" *) 
 module shell_axi_10g_ethernet_0_0_bd_01e2
    (areset_coreclk_out,
     areset_datapathclk_out,
@@ -494,7 +277,7 @@ module shell_axi_10g_ethernet_0_0_bd_01e2
         .xgmii_txd(xmac_xgmii_xgmac_TXD));
 endmodule
 
-(* ORIG_REF_NAME = "bd_01e2_dcm_locked_driver_0" *) (* X_CORE_INFO = "xlconstant_v1_1_4_xlconstant,Vivado 2018.1" *) 
+(* X_CORE_INFO = "xlconstant_v1_1_4_xlconstant,Vivado 2018.1" *) 
 module shell_axi_10g_ethernet_0_0_bd_01e2_dcm_locked_driver_0
    (dout);
   output [0:0]dout;
@@ -502,7 +285,7 @@ module shell_axi_10g_ethernet_0_0_bd_01e2_dcm_locked_driver_0
 
 endmodule
 
-(* ORIG_REF_NAME = "bd_01e2_pma_pmd_type_driver_0" *) (* X_CORE_INFO = "xlconstant_v1_1_4_xlconstant,Vivado 2018.1" *) 
+(* X_CORE_INFO = "xlconstant_v1_1_4_xlconstant,Vivado 2018.1" *) 
 module shell_axi_10g_ethernet_0_0_bd_01e2_pma_pmd_type_driver_0
    (dout);
   output [2:0]dout;
@@ -510,7 +293,7 @@ module shell_axi_10g_ethernet_0_0_bd_01e2_pma_pmd_type_driver_0
 
 endmodule
 
-(* ORIG_REF_NAME = "bd_01e2_xmac_0" *) (* X_CORE_INFO = "ten_gig_eth_mac_v15_1_5,Vivado 2018.1" *) 
+(* X_CORE_INFO = "ten_gig_eth_mac_v15_1_5,Vivado 2018.1" *) 
 module shell_axi_10g_ethernet_0_0_bd_01e2_xmac_0
    (tx_clk0,
     reset,
@@ -580,7 +363,7 @@ module shell_axi_10g_ethernet_0_0_bd_01e2_xmac_0
 
 endmodule
 
-(* ORIG_REF_NAME = "bd_01e2_xpcs_0" *) (* X_CORE_INFO = "ten_gig_eth_pcs_pma_v6_0_12,Vivado 2018.1" *) 
+(* X_CORE_INFO = "ten_gig_eth_pcs_pma_v6_0_12,Vivado 2018.1" *) 
 module shell_axi_10g_ethernet_0_0_bd_01e2_xpcs_0
    (dclk,
     rxrecclk_out,
@@ -680,6 +463,223 @@ module shell_axi_10g_ethernet_0_0_bd_01e2_xpcs_0
   output tx_disable;
 
 
+endmodule
+
+(* CHECK_LICENSE_TYPE = "shell_axi_10g_ethernet_0_0,bd_01e2,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "bd_01e2,Vivado 2018.1" *) 
+(* NotValidForBitStream *)
+module shell_axi_10g_ethernet_0_0
+   (tx_axis_aresetn,
+    rx_axis_aresetn,
+    tx_ifg_delay,
+    dclk,
+    txp,
+    txn,
+    rxp,
+    rxn,
+    signal_detect,
+    tx_fault,
+    tx_disable,
+    pcspma_status,
+    sim_speedup_control,
+    rxrecclk_out,
+    mac_tx_configuration_vector,
+    mac_rx_configuration_vector,
+    mac_status_vector,
+    pcs_pma_configuration_vector,
+    pcs_pma_status_vector,
+    areset_datapathclk_out,
+    txusrclk_out,
+    txusrclk2_out,
+    gttxreset_out,
+    gtrxreset_out,
+    txuserrdy_out,
+    coreclk_out,
+    resetdone_out,
+    reset_counter_done_out,
+    qpll0lock_out,
+    qpll0outclk_out,
+    qpll0outrefclk_out,
+    areset_coreclk_out,
+    refclk_p,
+    refclk_n,
+    reset,
+    s_axis_tx_tdata,
+    s_axis_tx_tkeep,
+    s_axis_tx_tlast,
+    s_axis_tx_tready,
+    s_axis_tx_tuser,
+    s_axis_tx_tvalid,
+    s_axis_pause_tdata,
+    s_axis_pause_tvalid,
+    m_axis_rx_tdata,
+    m_axis_rx_tkeep,
+    m_axis_rx_tlast,
+    m_axis_rx_tuser,
+    m_axis_rx_tvalid,
+    tx_statistics_valid,
+    tx_statistics_vector,
+    rx_statistics_valid,
+    rx_statistics_vector);
+  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.tx_axis_aresetn RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.tx_axis_aresetn, POLARITY ACTIVE_LOW" *) input tx_axis_aresetn;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.rx_axis_aresetn RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.rx_axis_aresetn, POLARITY ACTIVE_LOW" *) input rx_axis_aresetn;
+  input [7:0]tx_ifg_delay;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.dclk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.dclk, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN shell_clk_wiz_0_0_clk_out1" *) input dclk;
+  output txp;
+  output txn;
+  input rxp;
+  input rxn;
+  input signal_detect;
+  input tx_fault;
+  output tx_disable;
+  output [7:0]pcspma_status;
+  input sim_speedup_control;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.rxrecclk_out CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.rxrecclk_out, FREQ_HZ 156250000, PHASE 0.000, CLK_DOMAIN bd_01e2_xpcs_0_rxrecclk_out" *) output rxrecclk_out;
+  input [79:0]mac_tx_configuration_vector;
+  input [79:0]mac_rx_configuration_vector;
+  output [2:0]mac_status_vector;
+  input [535:0]pcs_pma_configuration_vector;
+  output [447:0]pcs_pma_status_vector;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.areset_datapathclk_out RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.areset_datapathclk_out, POLARITY ACTIVE_HIGH" *) output areset_datapathclk_out;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.txusrclk_out CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.txusrclk_out, FREQ_HZ 312500000, PHASE 0.000, CLK_DOMAIN bd_01e2_xpcs_0_txusrclk_out" *) output txusrclk_out;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.txusrclk2_out CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.txusrclk2_out, FREQ_HZ 156250000, PHASE 0.000, CLK_DOMAIN bd_01e2_xpcs_0_txusrclk2_out, ASSOCIATED_BUSIF m_axis_rx:s_axis_pause:s_axis_tx, ASSOCIATED_ASYNC_RESET tx_axis_aresetn:rx_axis_aresetn" *) output txusrclk2_out;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.gttxreset_out RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.gttxreset_out, POLARITY ACTIVE_HIGH" *) output gttxreset_out;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.gtrxreset_out RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.gtrxreset_out, POLARITY ACTIVE_HIGH" *) output gtrxreset_out;
+  output txuserrdy_out;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.coreclk_out CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.coreclk_out, FREQ_HZ 156250000, PHASE 0.000, CLK_DOMAIN bd_01e2_xpcs_0_coreclk_out" *) output coreclk_out;
+  output resetdone_out;
+  output reset_counter_done_out;
+  output qpll0lock_out;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.qpll0outclk_out CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.qpll0outclk_out, FREQ_HZ 156250000, PHASE 0.000, CLK_DOMAIN bd_01e2_xpcs_0_qpll0outclk_out" *) output qpll0outclk_out;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.qpll0outrefclk_out CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.qpll0outrefclk_out, FREQ_HZ 156250000, PHASE 0.000, CLK_DOMAIN bd_01e2_xpcs_0_qpll0outrefclk_out" *) output qpll0outrefclk_out;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.areset_coreclk_out RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.areset_coreclk_out, POLARITY ACTIVE_HIGH" *) output areset_coreclk_out;
+  input refclk_p;
+  input refclk_n;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.reset RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.reset, POLARITY ACTIVE_HIGH" *) input reset;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis_tx TDATA" *) input [63:0]s_axis_tx_tdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis_tx TKEEP" *) input [7:0]s_axis_tx_tkeep;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis_tx TLAST" *) input s_axis_tx_tlast;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis_tx TREADY" *) output s_axis_tx_tready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis_tx TUSER" *) input [0:0]s_axis_tx_tuser;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis_tx TVALID" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axis_tx, TDATA_NUM_BYTES 8, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 156250000, PHASE 0.000, CLK_DOMAIN bd_01e2_xpcs_0_txusrclk2_out, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} TDATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 64} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}} TDATA_WIDTH 64}" *) input s_axis_tx_tvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis_pause TDATA" *) input [15:0]s_axis_pause_tdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis_pause TVALID" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axis_pause, TDATA_NUM_BYTES 2, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 156250000, PHASE 0.000, CLK_DOMAIN bd_01e2_xpcs_0_txusrclk2_out, LAYERED_METADATA undef" *) input s_axis_pause_tvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis_rx TDATA" *) output [63:0]m_axis_rx_tdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis_rx TKEEP" *) output [7:0]m_axis_rx_tkeep;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis_rx TLAST" *) output m_axis_rx_tlast;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis_rx TUSER" *) output m_axis_rx_tuser;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis_rx TVALID" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m_axis_rx, TDATA_NUM_BYTES 8, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 1, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 156250000, PHASE 0.000, CLK_DOMAIN bd_01e2_xpcs_0_txusrclk2_out, LAYERED_METADATA undef" *) output m_axis_rx_tvalid;
+  (* X_INTERFACE_INFO = "xilinx.com:display_ten_gig_eth_mac:statistics:2.0 tx_statistics valid" *) output tx_statistics_valid;
+  (* X_INTERFACE_INFO = "xilinx.com:display_ten_gig_eth_mac:statistics:2.0 tx_statistics vector" *) output [25:0]tx_statistics_vector;
+  (* X_INTERFACE_INFO = "xilinx.com:display_ten_gig_eth_mac:statistics:2.0 rx_statistics valid" *) output rx_statistics_valid;
+  (* X_INTERFACE_INFO = "xilinx.com:display_ten_gig_eth_mac:statistics:2.0 rx_statistics vector" *) output [29:0]rx_statistics_vector;
+
+  wire areset_coreclk_out;
+  wire areset_datapathclk_out;
+  wire coreclk_out;
+  wire dclk;
+  wire gtrxreset_out;
+  wire gttxreset_out;
+  wire [63:0]m_axis_rx_tdata;
+  wire [7:0]m_axis_rx_tkeep;
+  wire m_axis_rx_tlast;
+  wire m_axis_rx_tuser;
+  wire m_axis_rx_tvalid;
+  wire [79:0]mac_rx_configuration_vector;
+  wire [2:0]mac_status_vector;
+  wire [79:0]mac_tx_configuration_vector;
+  wire [535:0]pcs_pma_configuration_vector;
+  wire [447:0]pcs_pma_status_vector;
+  wire [7:0]pcspma_status;
+  wire qpll0lock_out;
+  wire qpll0outclk_out;
+  wire qpll0outrefclk_out;
+  wire refclk_n;
+  wire refclk_p;
+  wire reset;
+  wire reset_counter_done_out;
+  wire resetdone_out;
+  wire rx_axis_aresetn;
+  wire rx_statistics_valid;
+  wire [29:0]rx_statistics_vector;
+  wire rxn;
+  wire rxp;
+  wire rxrecclk_out;
+  wire [15:0]s_axis_pause_tdata;
+  wire s_axis_pause_tvalid;
+  wire [63:0]s_axis_tx_tdata;
+  wire [7:0]s_axis_tx_tkeep;
+  wire s_axis_tx_tlast;
+  wire s_axis_tx_tready;
+  wire [0:0]s_axis_tx_tuser;
+  wire s_axis_tx_tvalid;
+  wire signal_detect;
+  wire sim_speedup_control;
+  wire tx_axis_aresetn;
+  wire tx_disable;
+  wire tx_fault;
+  wire [7:0]tx_ifg_delay;
+  wire tx_statistics_valid;
+  wire [25:0]tx_statistics_vector;
+  wire txn;
+  wire txp;
+  wire txuserrdy_out;
+  wire txusrclk2_out;
+  wire txusrclk_out;
+
+  (* HW_HANDOFF = "shell_axi_10g_ethernet_0_0.hwdef" *) 
+  shell_axi_10g_ethernet_0_0_bd_01e2 inst
+       (.areset_coreclk_out(areset_coreclk_out),
+        .areset_datapathclk_out(areset_datapathclk_out),
+        .coreclk_out(coreclk_out),
+        .dclk(dclk),
+        .gtrxreset_out(gtrxreset_out),
+        .gttxreset_out(gttxreset_out),
+        .m_axis_rx_tdata(m_axis_rx_tdata),
+        .m_axis_rx_tkeep(m_axis_rx_tkeep),
+        .m_axis_rx_tlast(m_axis_rx_tlast),
+        .m_axis_rx_tuser(m_axis_rx_tuser),
+        .m_axis_rx_tvalid(m_axis_rx_tvalid),
+        .mac_rx_configuration_vector(mac_rx_configuration_vector),
+        .mac_status_vector(mac_status_vector),
+        .mac_tx_configuration_vector(mac_tx_configuration_vector),
+        .pcs_pma_configuration_vector(pcs_pma_configuration_vector),
+        .pcs_pma_status_vector(pcs_pma_status_vector),
+        .pcspma_status(pcspma_status),
+        .qpll0lock_out(qpll0lock_out),
+        .qpll0outclk_out(qpll0outclk_out),
+        .qpll0outrefclk_out(qpll0outrefclk_out),
+        .refclk_n(refclk_n),
+        .refclk_p(refclk_p),
+        .reset(reset),
+        .reset_counter_done_out(reset_counter_done_out),
+        .resetdone_out(resetdone_out),
+        .rx_axis_aresetn(rx_axis_aresetn),
+        .rx_statistics_valid(rx_statistics_valid),
+        .rx_statistics_vector(rx_statistics_vector),
+        .rxn(rxn),
+        .rxp(rxp),
+        .rxrecclk_out(rxrecclk_out),
+        .s_axis_pause_tdata(s_axis_pause_tdata),
+        .s_axis_pause_tvalid(s_axis_pause_tvalid),
+        .s_axis_tx_tdata(s_axis_tx_tdata),
+        .s_axis_tx_tkeep(s_axis_tx_tkeep),
+        .s_axis_tx_tlast(s_axis_tx_tlast),
+        .s_axis_tx_tready(s_axis_tx_tready),
+        .s_axis_tx_tuser(s_axis_tx_tuser),
+        .s_axis_tx_tvalid(s_axis_tx_tvalid),
+        .signal_detect(signal_detect),
+        .sim_speedup_control(sim_speedup_control),
+        .tx_axis_aresetn(tx_axis_aresetn),
+        .tx_disable(tx_disable),
+        .tx_fault(tx_fault),
+        .tx_ifg_delay(tx_ifg_delay),
+        .tx_statistics_valid(tx_statistics_valid),
+        .tx_statistics_vector(tx_statistics_vector),
+        .txn(txn),
+        .txp(txp),
+        .txuserrdy_out(txuserrdy_out),
+        .txusrclk2_out(txusrclk2_out),
+        .txusrclk_out(txusrclk_out));
 endmodule
 `ifndef GLBL
 `define GLBL

@@ -1,0 +1,122 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Thu May 10 11:26:09 2018
+# Process ID: 15918
+# Current directory: /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5
+# Command line: vivado adm-8k5.xpr
+# Log file: /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/vivado.log
+# Journal file: /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project adm-8k5.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/cad1/Xilinx/Vivado/2018.1/data/ip'.
+WARNING: [IP_Flow 19-3664] IP 'shell_blk_mem_gen_0_0' generated file not found '/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_blk_mem_gen_0_0/shell_blk_mem_gen_0_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'shell_blk_mem_gen_0_0' generated file not found '/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_blk_mem_gen_0_0/shell_blk_mem_gen_0_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'shell_blk_mem_gen_0_0' generated file not found '/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_blk_mem_gen_0_0/shell_blk_mem_gen_0_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'shell_blk_mem_gen_0_0' generated file not found '/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_blk_mem_gen_0_0/shell_blk_mem_gen_0_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'shell_blk_mem_gen_0_0' generated file not found '/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_blk_mem_gen_0_0/shell_blk_mem_gen_0_0_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'bd_01e2_xpcs_0' generated file not found '/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/.Xil/Vivado-9082-ug239/coregen/bd_01e2_xpcs_0_1/elaborate/configure_gt.tcl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'shell_auto_ds_3' generated file not found '/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_ds_3/shell_auto_ds_3.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'shell_auto_ds_3' generated file not found '/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_ds_3/shell_auto_ds_3_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'shell_auto_ds_3' generated file not found '/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_ds_3/shell_auto_ds_3_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'shell_auto_ds_3' generated file not found '/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_ds_3/shell_auto_ds_3_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'shell_auto_ds_3' generated file not found '/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_ds_3/shell_auto_ds_3_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'shell_auto_cc_2' generated file not found '/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_cc_2/shell_auto_cc_2.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'shell_auto_cc_2' generated file not found '/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_cc_2/shell_auto_cc_2_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'shell_auto_cc_2' generated file not found '/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_cc_2/shell_auto_cc_2_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'shell_auto_cc_2' generated file not found '/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_cc_2/shell_auto_cc_2_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'shell_auto_cc_2' generated file not found '/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_cc_2/shell_auto_cc_2_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'shell_auto_pc_0' generated file not found '/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_pc_0/shell_auto_pc_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'shell_auto_pc_0' generated file not found '/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_pc_0/shell_auto_pc_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'shell_auto_pc_0' generated file not found '/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_pc_0/shell_auto_pc_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'shell_auto_pc_0' generated file not found '/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_pc_0/shell_auto_pc_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'shell_auto_pc_0' generated file not found '/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_pc_0/shell_auto_pc_0_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'shell_auto_us_0' generated file not found '/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_us_0/shell_auto_us_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'shell_auto_us_0' generated file not found '/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_us_0/shell_auto_us_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'shell_auto_us_0' generated file not found '/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_us_0/shell_auto_us_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'shell_auto_us_0' generated file not found '/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_us_0/shell_auto_us_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'shell_auto_us_0' generated file not found '/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_us_0/shell_auto_us_0_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'shell_auto_ds_2' generated file not found '/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_ds_2/shell_auto_ds_2.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'shell_auto_ds_2' generated file not found '/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_ds_2/shell_auto_ds_2_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'shell_auto_ds_2' generated file not found '/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_ds_2/shell_auto_ds_2_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'shell_auto_ds_2' generated file not found '/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_ds_2/shell_auto_ds_2_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'shell_auto_ds_2' generated file not found '/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_ds_2/shell_auto_ds_2_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'shell_auto_ds_1' generated file not found '/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_ds_1/shell_auto_ds_1.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'shell_auto_ds_1' generated file not found '/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_ds_1/shell_auto_ds_1_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'shell_auto_ds_1' generated file not found '/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_ds_1/shell_auto_ds_1_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'shell_auto_ds_1' generated file not found '/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_ds_1/shell_auto_ds_1_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'shell_auto_ds_1' generated file not found '/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_ds_1/shell_auto_ds_1_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'shell_auto_ds_0' generated file not found '/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_ds_0/shell_auto_ds_0.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'shell_auto_ds_0' generated file not found '/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_ds_0/shell_auto_ds_0_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'shell_auto_ds_0' generated file not found '/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_ds_0/shell_auto_ds_0_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'shell_auto_ds_0' generated file not found '/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_ds_0/shell_auto_ds_0_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'shell_auto_ds_0' generated file not found '/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_ds_0/shell_auto_ds_0_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'shell_auto_us_1' generated file not found '/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_us_1/shell_auto_us_1.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'shell_auto_us_1' generated file not found '/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_us_1/shell_auto_us_1_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'shell_auto_us_1' generated file not found '/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_us_1/shell_auto_us_1_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'shell_auto_us_1' generated file not found '/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_us_1/shell_auto_us_1_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'shell_auto_us_1' generated file not found '/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_us_1/shell_auto_us_1_sim_netlist.vhdl'. Please regenerate to continue.
+open_project: Time (s): cpu = 00:00:35 ; elapsed = 00:00:26 . Memory (MB): peak = 6388.605 ; gain = 346.957 ; free physical = 6020 ; free virtual = 33715
+update_compile_order -fileset sources_1
+open_bd_design {/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/shell.bd}
+Adding cell -- xilinx.com:ip:util_vector_logic:2.0 - util_vector_logic_0
+Adding cell -- xilinx.com:ip:util_vector_logic:2.0 - util_vector_logic_1
+Adding cell -- xilinx.com:ip:clk_wiz:6.0 - clk_wiz_0
+Adding cell -- xilinx.com:ip:xlconstant:1.1 - gnd
+Adding cell -- xilinx.com:ip:util_vector_logic:2.0 - util_vector_logic_2
+Adding cell -- xilinx.com:hls:reverseEndian64:1.0 - reverseEndian64_0
+Adding cell -- xilinx.com:hls:reverseEndian64:1.0 - reverseEndian64_1
+Adding cell -- xilinx.com:ip:axi_bram_ctrl:4.0 - axi_bram_ctrl_0
+Adding cell -- xilinx.com:ip:blk_mem_gen:8.4 - blk_mem_gen_0
+Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding cell -- xilinx.com:ip:axi_mmu:2.1 - s01_mmu
+Adding cell -- xilinx.com:ip:axi_clock_converter:2.1 - auto_cc
+Adding cell -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_ds
+Adding cell -- xilinx.com:ip:axi_clock_converter:2.1 - auto_cc
+Adding cell -- xilinx.com:ip:microblaze:10.0 - microblaze_0
+Adding cell -- xilinx.com:hls:axiStreamGate:1.0 - axiStreamGate_0
+Adding cell -- xilinx.com:ip:mdm:3.2 - mdm_1
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_clk_wiz_0_100M
+Adding cell -- xilinx.com:ip:axi_hwicap:3.0 - axi_hwicap_0
+Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding cell -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
+Adding cell -- xilinx.com:ip:axi_clock_converter:2.1 - auto_cc
+Adding cell -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_ds
+Adding cell -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_ds
+Adding cell -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_ds
+Adding cell -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
+Adding cell -- xilinx.com:ip:lmb_v10:3.0 - dlmb_v10
+Adding cell -- xilinx.com:ip:lmb_v10:3.0 - ilmb_v10
+Adding cell -- xilinx.com:ip:lmb_bram_if_cntlr:4.0 - dlmb_bram_if_cntlr
+Adding cell -- xilinx.com:ip:lmb_bram_if_cntlr:4.0 - ilmb_bram_if_cntlr
+Adding cell -- xilinx.com:ip:blk_mem_gen:8.4 - lmb_bram
+Adding cell -- xilinx.com:ip:xdma:4.1 - xdma_0
+Adding cell -- xilinx.com:ip:util_ds_buf:2.1 - util_ds_buf
+Adding cell -- xilinx.com:ip:xlconstant:1.1 - gnd
+Adding cell -- xilinx.com:ip:axis_register_slice:1.1 - tx_register_slice_0
+Adding cell -- xilinx.com:ip:axi_10g_ethernet:3.1 - axi_10g_ethernet_0
+Adding cell -- xilinx.com:ip:xlconstant:1.1 - mac_config_vector
+Adding cell -- xilinx.com:ip:xlconstant:1.1 - tx_ifg_tuser
+Adding cell -- xilinx.com:ip:xlconstant:1.1 - ifg_delay
+Adding cell -- xilinx.com:ip:xlconstant:1.1 - vcc
+Adding cell -- xilinx.com:ip:xlconstant:1.1 - pcs_config_vector
+Adding cell -- xilinx.com:ip:axis_register_slice:1.1 - rx_register_slice_1
+Adding cell -- xilinx.com:ip:axis_data_fifo:1.1 - rx_data_fifo_1
+Adding cell -- xilinx.com:ip:axis_data_fifo:1.1 - tx_data_fifo_0
+Successfully read diagram <shell> from BD file </nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/shell.bd>
+open_bd_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:10 . Memory (MB): peak = 7640.980 ; gain = 0.000 ; free physical = 6087 ; free virtual = 33841
+reset_run synth_1
+reset_run shell_auto_ds_0_synth_1
+reset_run shell_auto_us_0_synth_1
+reset_run shell_auto_ds_2_synth_1
+reset_run shell_auto_ds_1_synth_1
+reset_run shell_auto_us_1_synth_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu May 10 11:28:47 2018...

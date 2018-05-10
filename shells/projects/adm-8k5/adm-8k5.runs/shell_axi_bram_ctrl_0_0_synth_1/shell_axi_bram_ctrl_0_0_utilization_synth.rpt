@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
-| Date         : Thu May  3 12:11:20 2018
-| Host         : ug238 running 64-bit Debian GNU/Linux 9.4 (stretch)
+| Date         : Thu May 10 15:23:41 2018
+| Host         : ug239 running 64-bit Debian GNU/Linux 9.4 (stretch)
 | Command      : report_utilization -file shell_axi_bram_ctrl_0_0_utilization_synth.rpt -pb shell_axi_bram_ctrl_0_0_utilization_synth.pb
 | Design       : shell_axi_bram_ctrl_0_0
 | Device       : xcku115flva1517-2
@@ -32,22 +32,20 @@ Table of Contents
 1. CLB Logic
 ------------
 
-+----------------------------+------+-------+-----------+-------+
-|          Site Type         | Used | Fixed | Available | Util% |
-+----------------------------+------+-------+-----------+-------+
-| CLB LUTs*                  |  228 |     0 |    663360 |  0.03 |
-|   LUT as Logic             |  227 |     0 |    663360 |  0.03 |
-|   LUT as Memory            |    1 |     0 |    293760 | <0.01 |
-|     LUT as Distributed RAM |    0 |     0 |           |       |
-|     LUT as Shift Register  |    1 |     0 |           |       |
-| CLB Registers              |  324 |     0 |   1326720 |  0.02 |
-|   Register as Flip Flop    |  324 |     0 |   1326720 |  0.02 |
-|   Register as Latch        |    0 |     0 |   1326720 |  0.00 |
-| CARRY8                     |    1 |     0 |     82920 | <0.01 |
-| F7 Muxes                   |    0 |     0 |    331680 |  0.00 |
-| F8 Muxes                   |    0 |     0 |    165840 |  0.00 |
-| F9 Muxes                   |    0 |     0 |     82920 |  0.00 |
-+----------------------------+------+-------+-----------+-------+
++-------------------------+------+-------+-----------+-------+
+|        Site Type        | Used | Fixed | Available | Util% |
++-------------------------+------+-------+-----------+-------+
+| CLB LUTs*               |   29 |     0 |    663360 | <0.01 |
+|   LUT as Logic          |   29 |     0 |    663360 | <0.01 |
+|   LUT as Memory         |    0 |     0 |    293760 |  0.00 |
+| CLB Registers           |   17 |     0 |   1326720 | <0.01 |
+|   Register as Flip Flop |   17 |     0 |   1326720 | <0.01 |
+|   Register as Latch     |    0 |     0 |   1326720 |  0.00 |
+| CARRY8                  |    0 |     0 |     82920 |  0.00 |
+| F7 Muxes                |    0 |     0 |    331680 |  0.00 |
+| F8 Muxes                |    0 |     0 |    165840 |  0.00 |
+| F9 Muxes                |    0 |     0 |     82920 |  0.00 |
++-------------------------+------+-------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
 
 
@@ -66,7 +64,7 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 1     |          Yes |         Set |            - |
-| 323   |          Yes |       Reset |            - |
+| 16    |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -161,16 +159,14 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |  323 |            Register |
-| LUT3     |   98 |                 CLB |
-| LUT6     |   92 |                 CLB |
-| LUT5     |   38 |                 CLB |
-| LUT4     |   37 |                 CLB |
-| LUT2     |   28 |                 CLB |
+| LUT6     |   16 |                 CLB |
+| FDRE     |   16 |            Register |
+| LUT3     |    7 |                 CLB |
+| LUT5     |    3 |                 CLB |
+| LUT2     |    3 |                 CLB |
+| LUT4     |    2 |                 CLB |
 | LUT1     |    2 |                 CLB |
-| SRL16E   |    1 |                 CLB |
 | FDSE     |    1 |            Register |
-| CARRY8   |    1 |                 CLB |
 +----------+------+---------------------+
 
 

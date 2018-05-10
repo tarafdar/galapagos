@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
--- Date        : Thu May  3 11:57:40 2018
+-- Date        : Thu May  3 11:57:39 2018
 -- Host        : ug238 running 64-bit Debian GNU/Linux 9.4 (stretch)
--- Command     : write_vhdl -force -mode funcsim
---               /nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axiStreamGate_0_0/shell_axiStreamGate_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top shell_axiStreamGate_0_0 -prefix
+--               shell_axiStreamGate_0_0_ shell_axiStreamGate_0_0_sim_netlist.vhdl
 -- Design      : shell_axiStreamGate_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -44,8 +44,6 @@ entity shell_axiStreamGate_0_0_axiStreamGate_AXILiteS_s_axi is
     s_axi_AXILiteS_BREADY : in STD_LOGIC;
     s_axi_AXILiteS_WVALID : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of shell_axiStreamGate_0_0_axiStreamGate_AXILiteS_s_axi : entity is "axiStreamGate_AXILiteS_s_axi";
 end shell_axiStreamGate_0_0_axiStreamGate_AXILiteS_s_axi;
 
 architecture STRUCTURE of shell_axiStreamGate_0_0_axiStreamGate_AXILiteS_s_axi is
@@ -1662,8 +1660,6 @@ entity shell_axiStreamGate_0_0_axiStreamGate is
   attribute C_S_AXI_DATA_WIDTH of shell_axiStreamGate_0_0_axiStreamGate : entity is 32;
   attribute C_S_AXI_WSTRB_WIDTH : integer;
   attribute C_S_AXI_WSTRB_WIDTH of shell_axiStreamGate_0_0_axiStreamGate : entity is 4;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of shell_axiStreamGate_0_0_axiStreamGate : entity is "axiStreamGate";
   attribute ap_ST_fsm_state1 : string;
   attribute ap_ST_fsm_state1 of shell_axiStreamGate_0_0_axiStreamGate : entity is "5'b00001";
   attribute ap_ST_fsm_state2 : string;

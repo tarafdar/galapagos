@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
--- Date        : Thu May  3 12:03:20 2018
+-- Date        : Thu May  3 12:03:19 2018
 -- Host        : ug238 running 64-bit Debian GNU/Linux 9.4 (stretch)
--- Command     : write_vhdl -force -mode funcsim
---               /nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/shell_axi_10g_ethernet_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top shell_axi_10g_ethernet_0_0 -prefix
+--               shell_axi_10g_ethernet_0_0_ shell_axi_10g_ethernet_0_0_sim_netlist.vhdl
 -- Design      : shell_axi_10g_ethernet_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -71,8 +71,6 @@ entity shell_axi_10g_ethernet_0_0_bd_01e2 is
   );
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of shell_axi_10g_ethernet_0_0_bd_01e2 : entity is "shell_axi_10g_ethernet_0_0.hwdef";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of shell_axi_10g_ethernet_0_0_bd_01e2 : entity is "bd_01e2";
 end shell_axi_10g_ethernet_0_0_bd_01e2;
 
 architecture STRUCTURE of shell_axi_10g_ethernet_0_0_bd_01e2 is

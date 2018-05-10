@@ -1,0 +1,61 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Thu May 10 11:30:00 2018
+# Process ID: 17302
+# Current directory: /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5
+# Command line: vivado adm-8k5.xpr
+# Log file: /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/vivado.log
+# Journal file: /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project adm-8k5.xpr
+update_compile_order -fileset sources_1
+open_bd_design {/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/shell.bd}
+add_files -fileset constrs_1 -norecurse /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/constrs_1/imports/constraints/ddr4sdram_locs_b0_x64.xdc
+reset_run shell_xbar_0_synth_1
+reset_run shell_xbar_1_synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+validate_bd_design
+connect_bd_net [get_bd_pins axi_interconnect_1/M01_ACLK] [get_bd_pins clk_wiz_0/clk_out1]
+connect_bd_net [get_bd_pins axi_interconnect_1/M01_ARESETN] [get_bd_pins util_vector_logic_2/Res]
+save_bd_design
+validate_bd_design
+disconnect_bd_net /microblaze_0_Clk [get_bd_pins axi_interconnect_1/M01_ACLK]
+disconnect_bd_net /util_vector_logic_2_Res [get_bd_pins axi_interconnect_1/M01_ARESETN]
+connect_bd_net [get_bd_pins axi_interconnect_1/M01_ACLK] [get_bd_pins PCIe/axi_aclk] -boundary_type upper
+startgroup
+connect_bd_net [get_bd_pins axi_interconnect_1/M01_ARESETN] [get_bd_pins PCIe/axi_aresetn] -boundary_type upper
+endgroup
+validate_bd_design
+assign_bd_address [get_bd_addr_segs {mem_interface/ddr4_0/C0_DDR4_MEMORY_MAP/C0_DDR4_ADDRESS_BLOCK }]
+set_property range 4G [get_bd_addr_segs {PCIe/xdma_0/M_AXI/SEG_ddr4_0_C0_DDR4_ADDRESS_BLOCK}]
+assign_bd_address [get_bd_addr_segs {axi_bram_ctrl_0/S_AXI/Mem0 }]
+assign_bd_address [get_bd_addr_segs {M_AXI/Reg }]
+set_property offset 0x0000001044A00000 [get_bd_addr_segs {PCIe/xdma_0/M_AXI/SEG_M_AXI_Reg}]
+save_bd_design
+validate_bd_design
+set_property range 4K [get_bd_addr_segs {PCIe/xdma_0/M_AXI/SEG_axi_bram_ctrl_0_Mem0}]
+validate_bd_design
+set_property offset 0x0000000100000000 [get_bd_addr_segs {PCIe/xdma_0/M_AXI/SEG_ddr4_0_C0_DDR4_ADDRESS_BLOCK}]
+set_property offset 0x0000000100000000 [get_bd_addr_segs {PCIe/xdma_0/M_AXI/SEG_ddr4_0_C0_DDR4_ADDRESS_BLOCK}]
+startgroup
+exclude_bd_addr_seg [get_bd_addr_segs PCIe/xdma_0/M_AXI/SEG_axi_bram_ctrl_0_Mem0]
+exclude_bd_addr_seg [get_bd_addr_segs PCIe/xdma_0/M_AXI/SEG_M_AXI_Reg]
+endgroup
+set_property offset 0x0000010000000000 [get_bd_addr_segs {PCIe/xdma_0/M_AXI/SEG_ddr4_0_C0_DDR4_ADDRESS_BLOCK}]
+set_property offset 0x0000000100000000 [get_bd_addr_segs {PCIe/xdma_0/M_AXI/SEG_ddr4_0_C0_DDR4_ADDRESS_BLOCK}]
+include_bd_addr_seg [get_bd_addr_segs -excluded PCIe/xdma_0/M_AXI/SEG_axi_bram_ctrl_0_Mem0]
+set_property offset 0x0000000000000000 [get_bd_addr_segs {PCIe/xdma_0/M_AXI/SEG_axi_bram_ctrl_0_Mem0}]
+startgroup
+set_property -dict [list CONFIG.axilite_master_en {true} CONFIG.pf0_msix_cap_table_bir {BAR_1} CONFIG.pf0_msix_cap_pba_bir {BAR_1}] [get_bd_cells PCIe/xdma_0]
+endgroup
+delete_bd_objs [get_bd_intf_nets S00_AXI_2] [get_bd_intf_nets axi_interconnect_1_M00_AXI] [get_bd_intf_nets axi_interconnect_1_M01_AXI] [get_bd_cells axi_interconnect_1]
+connect_bd_intf_net -boundary_type upper [get_bd_intf_pins PCIe/M_AXI] [get_bd_intf_pins mem_interface/PCIE_AXI]
+connect_bd_intf_net [get_bd_intf_pins PCIe/xdma_0/M_AXI_LITE] -boundary_type upper [get_bd_intf_pins axi_interconnect_0/S01_AXI]
+validate_bd_design
+assign_bd_address [get_bd_addr_segs {axi_bram_ctrl_0/S_AXI/Mem0 }]
+assign_bd_address [get_bd_addr_segs {M_AXI/Reg }]
+validate_bd_design

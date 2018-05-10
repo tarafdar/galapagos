@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
--- Date        : Thu May  3 11:58:08 2018
+-- Date        : Thu May  3 11:58:07 2018
 -- Host        : ug238 running 64-bit Debian GNU/Linux 9.4 (stretch)
--- Command     : write_vhdl -force -mode funcsim
---               /nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_rst_clk_wiz_0_100M_0/shell_rst_clk_wiz_0_100M_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top shell_rst_clk_wiz_0_100M_0 -prefix
+--               shell_rst_clk_wiz_0_100M_0_ shell_rst_clk_wiz_0_100M_0_sim_netlist.vhdl
 -- Design      : shell_rst_clk_wiz_0_100M_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -25,8 +25,6 @@ entity shell_rst_clk_wiz_0_100M_0_cdc_sync is
     aux_reset_in : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of shell_rst_clk_wiz_0_100M_0_cdc_sync : entity is "cdc_sync";
 end shell_rst_clk_wiz_0_100M_0_cdc_sync;
 
 architecture STRUCTURE of shell_rst_clk_wiz_0_100M_0_cdc_sync is
@@ -235,8 +233,6 @@ entity shell_rst_clk_wiz_0_100M_0_upcnt_n is
     seq_cnt_en : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of shell_rst_clk_wiz_0_100M_0_upcnt_n : entity is "upcnt_n";
 end shell_rst_clk_wiz_0_100M_0_upcnt_n;
 
 architecture STRUCTURE of shell_rst_clk_wiz_0_100M_0_upcnt_n is
@@ -401,8 +397,6 @@ entity shell_rst_clk_wiz_0_100M_0_lpf is
     ext_reset_in : in STD_LOGIC;
     aux_reset_in : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of shell_rst_clk_wiz_0_100M_0_lpf : entity is "lpf";
 end shell_rst_clk_wiz_0_100M_0_lpf;
 
 architecture STRUCTURE of shell_rst_clk_wiz_0_100M_0_lpf is
@@ -584,8 +578,6 @@ entity shell_rst_clk_wiz_0_100M_0_sequence_psr is
     lpf_int : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of shell_rst_clk_wiz_0_100M_0_sequence_psr : entity is "sequence_psr";
 end shell_rst_clk_wiz_0_100M_0_sequence_psr;
 
 architecture STRUCTURE of shell_rst_clk_wiz_0_100M_0_sequence_psr is
@@ -924,8 +916,6 @@ entity shell_rst_clk_wiz_0_100M_0_proc_sys_reset is
   attribute C_NUM_PERP_ARESETN of shell_rst_clk_wiz_0_100M_0_proc_sys_reset : entity is 1;
   attribute C_NUM_PERP_RST : integer;
   attribute C_NUM_PERP_RST of shell_rst_clk_wiz_0_100M_0_proc_sys_reset : entity is 1;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of shell_rst_clk_wiz_0_100M_0_proc_sys_reset : entity is "proc_sys_reset";
 end shell_rst_clk_wiz_0_100M_0_proc_sys_reset;
 
 architecture STRUCTURE of shell_rst_clk_wiz_0_100M_0_proc_sys_reset is

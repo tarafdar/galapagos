@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
-// Date        : Thu May  3 12:10:56 2018
+// Date        : Thu May  3 12:10:54 2018
 // Host        : ug238 running 64-bit Debian GNU/Linux 9.4 (stretch)
-// Command     : write_verilog -force -mode funcsim
-//               /nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_reverseEndian64_0_0/shell_reverseEndian64_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top shell_reverseEndian64_0_0 -prefix
+//               shell_reverseEndian64_0_0_ shell_reverseEndian64_0_0_sim_netlist.v
 // Design      : shell_reverseEndian64_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,69 +12,8 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "shell_reverseEndian64_0_0,reverseEndian64,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "reverseEndian64,Vivado 2018.1" *) 
-(* hls_module = "yes" *) 
-(* NotValidForBitStream *)
-module shell_reverseEndian64_0_0
-   (ap_clk,
-    ap_rst_n,
-    stream_in_TVALID,
-    stream_in_TREADY,
-    stream_in_TDATA,
-    stream_in_TKEEP,
-    stream_in_TLAST,
-    stream_out_TVALID,
-    stream_out_TREADY,
-    stream_out_TDATA,
-    stream_out_TKEEP,
-    stream_out_TLAST);
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 ap_clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME ap_clk, ASSOCIATED_BUSIF stream_in:stream_out, ASSOCIATED_RESET ap_rst_n, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}, FREQ_HZ 156250000, PHASE 0.000, CLK_DOMAIN bd_01e2_xpcs_0_txusrclk2_out" *) input ap_clk;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 ap_rst_n RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME ap_rst_n, POLARITY ACTIVE_LOW, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {RST {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}" *) input ap_rst_n;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 stream_in TVALID" *) input stream_in_TVALID;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 stream_in TREADY" *) output stream_in_TREADY;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 stream_in TDATA" *) input [63:0]stream_in_TDATA;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 stream_in TKEEP" *) input [7:0]stream_in_TKEEP;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 stream_in TLAST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME stream_in, TDATA_NUM_BYTES 8, TUSER_WIDTH 0, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} TDATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 64} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}} TDATA_WIDTH 64}, TDEST_WIDTH 0, TID_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 156250000, PHASE 0.000, CLK_DOMAIN bd_01e2_xpcs_0_txusrclk2_out" *) input [0:0]stream_in_TLAST;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 stream_out TVALID" *) output stream_out_TVALID;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 stream_out TREADY" *) input stream_out_TREADY;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 stream_out TDATA" *) output [63:0]stream_out_TDATA;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 stream_out TKEEP" *) output [7:0]stream_out_TKEEP;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 stream_out TLAST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME stream_out, TDATA_NUM_BYTES 8, TUSER_WIDTH 0, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} TDATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 64} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}} TDATA_WIDTH 64}, TDEST_WIDTH 0, TID_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 156250000, PHASE 0.000, CLK_DOMAIN bd_01e2_xpcs_0_txusrclk2_out" *) output [0:0]stream_out_TLAST;
-
-  wire ap_clk;
-  wire ap_rst_n;
-  wire [63:0]stream_in_TDATA;
-  wire [7:0]stream_in_TKEEP;
-  wire [0:0]stream_in_TLAST;
-  wire stream_in_TREADY;
-  wire stream_in_TVALID;
-  wire [63:0]stream_out_TDATA;
-  wire [7:0]stream_out_TKEEP;
-  wire [0:0]stream_out_TLAST;
-  wire stream_out_TREADY;
-  wire stream_out_TVALID;
-
-  (* ap_ST_fsm_state1 = "4'b0001" *) 
-  (* ap_ST_fsm_state2 = "4'b0010" *) 
-  (* ap_ST_fsm_state3 = "4'b0100" *) 
-  (* ap_ST_fsm_state4 = "4'b1000" *) 
-  shell_reverseEndian64_0_0_reverseEndian64 inst
-       (.ap_clk(ap_clk),
-        .ap_rst_n(ap_rst_n),
-        .stream_in_TDATA(stream_in_TDATA),
-        .stream_in_TKEEP(stream_in_TKEEP),
-        .stream_in_TLAST(stream_in_TLAST),
-        .stream_in_TREADY(stream_in_TREADY),
-        .stream_in_TVALID(stream_in_TVALID),
-        .stream_out_TDATA(stream_out_TDATA),
-        .stream_out_TKEEP(stream_out_TKEEP),
-        .stream_out_TLAST(stream_out_TLAST),
-        .stream_out_TREADY(stream_out_TREADY),
-        .stream_out_TVALID(stream_out_TVALID));
-endmodule
-
-(* ORIG_REF_NAME = "reverseEndian64" *) (* ap_ST_fsm_state1 = "4'b0001" *) (* ap_ST_fsm_state2 = "4'b0010" *) 
-(* ap_ST_fsm_state3 = "4'b0100" *) (* ap_ST_fsm_state4 = "4'b1000" *) (* hls_module = "yes" *) 
+(* ap_ST_fsm_state1 = "4'b0001" *) (* ap_ST_fsm_state2 = "4'b0010" *) (* ap_ST_fsm_state3 = "4'b0100" *) 
+(* ap_ST_fsm_state4 = "4'b1000" *) (* hls_module = "yes" *) 
 module shell_reverseEndian64_0_0_reverseEndian64
    (ap_clk,
     ap_rst_n,
@@ -3690,6 +3629,67 @@ module shell_reverseEndian64_0_0_reverseEndian64
         .D(\stream_out_V_tkeep_V_1_state[1]_i_1_n_0 ),
         .Q(stream_out_V_tkeep_V_1_ack_in),
         .R(ap_rst_n_inv));
+endmodule
+
+(* CHECK_LICENSE_TYPE = "shell_reverseEndian64_0_0,reverseEndian64,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "reverseEndian64,Vivado 2018.1" *) 
+(* hls_module = "yes" *) 
+(* NotValidForBitStream *)
+module shell_reverseEndian64_0_0
+   (ap_clk,
+    ap_rst_n,
+    stream_in_TVALID,
+    stream_in_TREADY,
+    stream_in_TDATA,
+    stream_in_TKEEP,
+    stream_in_TLAST,
+    stream_out_TVALID,
+    stream_out_TREADY,
+    stream_out_TDATA,
+    stream_out_TKEEP,
+    stream_out_TLAST);
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 ap_clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME ap_clk, ASSOCIATED_BUSIF stream_in:stream_out, ASSOCIATED_RESET ap_rst_n, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}, FREQ_HZ 156250000, PHASE 0.000, CLK_DOMAIN bd_01e2_xpcs_0_txusrclk2_out" *) input ap_clk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 ap_rst_n RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME ap_rst_n, POLARITY ACTIVE_LOW, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {RST {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}" *) input ap_rst_n;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 stream_in TVALID" *) input stream_in_TVALID;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 stream_in TREADY" *) output stream_in_TREADY;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 stream_in TDATA" *) input [63:0]stream_in_TDATA;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 stream_in TKEEP" *) input [7:0]stream_in_TKEEP;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 stream_in TLAST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME stream_in, TDATA_NUM_BYTES 8, TUSER_WIDTH 0, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} TDATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 64} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}} TDATA_WIDTH 64}, TDEST_WIDTH 0, TID_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 156250000, PHASE 0.000, CLK_DOMAIN bd_01e2_xpcs_0_txusrclk2_out" *) input [0:0]stream_in_TLAST;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 stream_out TVALID" *) output stream_out_TVALID;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 stream_out TREADY" *) input stream_out_TREADY;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 stream_out TDATA" *) output [63:0]stream_out_TDATA;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 stream_out TKEEP" *) output [7:0]stream_out_TKEEP;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 stream_out TLAST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME stream_out, TDATA_NUM_BYTES 8, TUSER_WIDTH 0, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} TDATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 64} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}} TDATA_WIDTH 64}, TDEST_WIDTH 0, TID_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 156250000, PHASE 0.000, CLK_DOMAIN bd_01e2_xpcs_0_txusrclk2_out" *) output [0:0]stream_out_TLAST;
+
+  wire ap_clk;
+  wire ap_rst_n;
+  wire [63:0]stream_in_TDATA;
+  wire [7:0]stream_in_TKEEP;
+  wire [0:0]stream_in_TLAST;
+  wire stream_in_TREADY;
+  wire stream_in_TVALID;
+  wire [63:0]stream_out_TDATA;
+  wire [7:0]stream_out_TKEEP;
+  wire [0:0]stream_out_TLAST;
+  wire stream_out_TREADY;
+  wire stream_out_TVALID;
+
+  (* ap_ST_fsm_state1 = "4'b0001" *) 
+  (* ap_ST_fsm_state2 = "4'b0010" *) 
+  (* ap_ST_fsm_state3 = "4'b0100" *) 
+  (* ap_ST_fsm_state4 = "4'b1000" *) 
+  shell_reverseEndian64_0_0_reverseEndian64 inst
+       (.ap_clk(ap_clk),
+        .ap_rst_n(ap_rst_n),
+        .stream_in_TDATA(stream_in_TDATA),
+        .stream_in_TKEEP(stream_in_TKEEP),
+        .stream_in_TLAST(stream_in_TLAST),
+        .stream_in_TREADY(stream_in_TREADY),
+        .stream_in_TVALID(stream_in_TVALID),
+        .stream_out_TDATA(stream_out_TDATA),
+        .stream_out_TKEEP(stream_out_TKEEP),
+        .stream_out_TLAST(stream_out_TLAST),
+        .stream_out_TREADY(stream_out_TREADY),
+        .stream_out_TVALID(stream_out_TVALID));
 endmodule
 `ifndef GLBL
 `define GLBL

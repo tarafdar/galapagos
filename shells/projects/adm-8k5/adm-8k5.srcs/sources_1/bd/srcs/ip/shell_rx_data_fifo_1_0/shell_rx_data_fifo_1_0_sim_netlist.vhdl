@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
--- Date        : Thu May  3 12:07:59 2018
+-- Date        : Thu May  3 12:07:58 2018
 -- Host        : ug238 running 64-bit Debian GNU/Linux 9.4 (stretch)
--- Command     : write_vhdl -force -mode funcsim
---               /nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_rx_data_fifo_1_0/shell_rx_data_fifo_1_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top shell_rx_data_fifo_1_0 -prefix
+--               shell_rx_data_fifo_1_0_ shell_rx_data_fifo_1_0_sim_netlist.vhdl
 -- Design      : shell_rx_data_fifo_1_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -28,8 +28,6 @@ entity shell_rx_data_fifo_1_0_xpm_cdc_async_rst is
   attribute INIT_SYNC_FF of shell_rx_data_fifo_1_0_xpm_cdc_async_rst : entity is 0;
   attribute INV_DEF_VAL : string;
   attribute INV_DEF_VAL of shell_rx_data_fifo_1_0_xpm_cdc_async_rst : entity is "1'b1";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of shell_rx_data_fifo_1_0_xpm_cdc_async_rst : entity is "xpm_cdc_async_rst";
   attribute RST_ACTIVE_HIGH : integer;
   attribute RST_ACTIVE_HIGH of shell_rx_data_fifo_1_0_xpm_cdc_async_rst : entity is 1;
   attribute VERSION : integer;
@@ -98,8 +96,6 @@ entity shell_rx_data_fifo_1_0_xpm_cdc_sync_rst is
   attribute INIT of shell_rx_data_fifo_1_0_xpm_cdc_sync_rst : entity is "1";
   attribute INIT_SYNC_FF : integer;
   attribute INIT_SYNC_FF of shell_rx_data_fifo_1_0_xpm_cdc_sync_rst : entity is 0;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of shell_rx_data_fifo_1_0_xpm_cdc_sync_rst : entity is "xpm_cdc_sync_rst";
   attribute SIM_ASSERT_CHK : integer;
   attribute SIM_ASSERT_CHK of shell_rx_data_fifo_1_0_xpm_cdc_sync_rst : entity is 0;
   attribute VERSION : integer;
@@ -209,8 +205,6 @@ entity shell_rx_data_fifo_1_0_blk_mem_gen_prim_wrapper is
     DINPADINP : in STD_LOGIC_VECTOR ( 1 downto 0 );
     ram_full_fb_i_reg : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of shell_rx_data_fifo_1_0_blk_mem_gen_prim_wrapper : entity is "blk_mem_gen_prim_wrapper";
 end shell_rx_data_fifo_1_0_blk_mem_gen_prim_wrapper;
 
 architecture STRUCTURE of shell_rx_data_fifo_1_0_blk_mem_gen_prim_wrapper is
@@ -1029,8 +1023,6 @@ entity shell_rx_data_fifo_1_0_compare is
     s_axis_tvalid : in STD_LOGIC;
     \out\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of shell_rx_data_fifo_1_0_compare : entity is "compare";
 end shell_rx_data_fifo_1_0_compare;
 
 architecture STRUCTURE of shell_rx_data_fifo_1_0_compare is
@@ -1364,8 +1356,6 @@ entity shell_rx_data_fifo_1_0_rd_bin_cntr is
     E : in STD_LOGIC_VECTOR ( 0 to 0 );
     s_aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of shell_rx_data_fifo_1_0_rd_bin_cntr : entity is "rd_bin_cntr";
 end shell_rx_data_fifo_1_0_rd_bin_cntr;
 
 architecture STRUCTURE of shell_rx_data_fifo_1_0_rd_bin_cntr is
@@ -2031,8 +2021,6 @@ entity shell_rx_data_fifo_1_0_rd_fwft is
     S : in STD_LOGIC_VECTOR ( 6 downto 0 );
     \gaxis_fifo.gaxisf.gaxis_pkt_fifo_cc.axis_pkt_cnt_reg[9]\ : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of shell_rx_data_fifo_1_0_rd_fwft : entity is "rd_fwft";
 end shell_rx_data_fifo_1_0_rd_fwft;
 
 architecture STRUCTURE of shell_rx_data_fifo_1_0_rd_fwft is
@@ -2416,8 +2404,6 @@ entity shell_rx_data_fifo_1_0_wr_bin_cntr is
     E : in STD_LOGIC_VECTOR ( 0 to 0 );
     s_aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of shell_rx_data_fifo_1_0_wr_bin_cntr : entity is "wr_bin_cntr";
 end shell_rx_data_fifo_1_0_wr_bin_cntr;
 
 architecture STRUCTURE of shell_rx_data_fifo_1_0_wr_bin_cntr is
@@ -2903,8 +2889,6 @@ entity shell_rx_data_fifo_1_0_blk_mem_gen_prim_width is
     DINPADINP : in STD_LOGIC_VECTOR ( 1 downto 0 );
     ram_full_fb_i_reg : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of shell_rx_data_fifo_1_0_blk_mem_gen_prim_width : entity is "blk_mem_gen_prim_width";
 end shell_rx_data_fifo_1_0_blk_mem_gen_prim_width;
 
 architecture STRUCTURE of shell_rx_data_fifo_1_0_blk_mem_gen_prim_width is
@@ -3112,8 +3096,6 @@ entity shell_rx_data_fifo_1_0_rd_status_flags_ss is
     \gpregsm1.curr_fwft_state_reg[0]\ : in STD_LOGIC;
     \ngwrdrst.grst.g7serrst.gsckt_wrst.gcc_rst.sckt_wr_rst_cc_reg[0]\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of shell_rx_data_fifo_1_0_rd_status_flags_ss : entity is "rd_status_flags_ss";
 end shell_rx_data_fifo_1_0_rd_status_flags_ss;
 
 architecture STRUCTURE of shell_rx_data_fifo_1_0_rd_status_flags_ss is
@@ -3189,8 +3171,6 @@ entity shell_rx_data_fifo_1_0_reset_blk_ramfifo is
     src_rst : in STD_LOGIC;
     s_aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of shell_rx_data_fifo_1_0_reset_blk_ramfifo : entity is "reset_blk_ramfifo";
 end shell_rx_data_fifo_1_0_reset_blk_ramfifo;
 
 architecture STRUCTURE of shell_rx_data_fifo_1_0_reset_blk_ramfifo is
@@ -3573,8 +3553,6 @@ entity shell_rx_data_fifo_1_0_wr_status_flags_ss is
     \gaxis_fifo.gaxisf.gaxis_pkt_fifo_cc.gdc_pkt.axis_dc_pkt_fifo_reg[7]\ : in STD_LOGIC_VECTOR ( 6 downto 0 );
     \gaxis_fifo.gaxisf.gaxis_pkt_fifo_cc.gdc_pkt.axis_dc_pkt_fifo_reg[9]\ : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of shell_rx_data_fifo_1_0_wr_status_flags_ss : entity is "wr_status_flags_ss";
 end shell_rx_data_fifo_1_0_wr_status_flags_ss;
 
 architecture STRUCTURE of shell_rx_data_fifo_1_0_wr_status_flags_ss is
@@ -3835,8 +3813,6 @@ entity shell_rx_data_fifo_1_0_blk_mem_gen_generic_cstr is
     s_axis_tvalid : in STD_LOGIC;
     \out\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of shell_rx_data_fifo_1_0_blk_mem_gen_generic_cstr : entity is "blk_mem_gen_generic_cstr";
 end shell_rx_data_fifo_1_0_blk_mem_gen_generic_cstr;
 
 architecture STRUCTURE of shell_rx_data_fifo_1_0_blk_mem_gen_generic_cstr is
@@ -3937,8 +3913,6 @@ entity shell_rx_data_fifo_1_0_rd_logic is
     S : in STD_LOGIC_VECTOR ( 6 downto 0 );
     \gaxis_fifo.gaxisf.gaxis_pkt_fifo_cc.axis_pkt_cnt_reg[9]\ : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of shell_rx_data_fifo_1_0_rd_logic : entity is "rd_logic";
 end shell_rx_data_fifo_1_0_rd_logic;
 
 architecture STRUCTURE of shell_rx_data_fifo_1_0_rd_logic is
@@ -4089,8 +4063,6 @@ entity shell_rx_data_fifo_1_0_wr_logic is
     \gaxis_fifo.gaxisf.gaxis_pkt_fifo_cc.gdc_pkt.axis_dc_pkt_fifo_reg[7]\ : in STD_LOGIC_VECTOR ( 6 downto 0 );
     \gaxis_fifo.gaxisf.gaxis_pkt_fifo_cc.gdc_pkt.axis_dc_pkt_fifo_reg[9]\ : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of shell_rx_data_fifo_1_0_wr_logic : entity is "wr_logic";
 end shell_rx_data_fifo_1_0_wr_logic;
 
 architecture STRUCTURE of shell_rx_data_fifo_1_0_wr_logic is
@@ -4169,8 +4141,6 @@ entity shell_rx_data_fifo_1_0_blk_mem_gen_top is
     s_axis_tvalid : in STD_LOGIC;
     \out\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of shell_rx_data_fifo_1_0_blk_mem_gen_top : entity is "blk_mem_gen_top";
 end shell_rx_data_fifo_1_0_blk_mem_gen_top;
 
 architecture STRUCTURE of shell_rx_data_fifo_1_0_blk_mem_gen_top is
@@ -4210,8 +4180,6 @@ entity shell_rx_data_fifo_1_0_blk_mem_gen_v8_4_1_synth is
     s_axis_tvalid : in STD_LOGIC;
     \out\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of shell_rx_data_fifo_1_0_blk_mem_gen_v8_4_1_synth : entity is "blk_mem_gen_v8_4_1_synth";
 end shell_rx_data_fifo_1_0_blk_mem_gen_v8_4_1_synth;
 
 architecture STRUCTURE of shell_rx_data_fifo_1_0_blk_mem_gen_v8_4_1_synth is
@@ -4251,8 +4219,6 @@ entity shell_rx_data_fifo_1_0_blk_mem_gen_v8_4_1 is
     s_axis_tvalid : in STD_LOGIC;
     \out\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of shell_rx_data_fifo_1_0_blk_mem_gen_v8_4_1 : entity is "blk_mem_gen_v8_4_1";
 end shell_rx_data_fifo_1_0_blk_mem_gen_v8_4_1;
 
 architecture STRUCTURE of shell_rx_data_fifo_1_0_blk_mem_gen_v8_4_1 is
@@ -4293,8 +4259,6 @@ entity shell_rx_data_fifo_1_0_memory is
     \out\ : in STD_LOGIC;
     E : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of shell_rx_data_fifo_1_0_memory : entity is "memory";
 end shell_rx_data_fifo_1_0_memory;
 
 architecture STRUCTURE of shell_rx_data_fifo_1_0_memory is
@@ -5157,8 +5121,6 @@ entity shell_rx_data_fifo_1_0_fifo_generator_ramfifo is
     \gaxis_fifo.gaxisf.gaxis_pkt_fifo_cc.gdc_pkt.axis_dc_pkt_fifo_reg[9]\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
     s_aresetn : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of shell_rx_data_fifo_1_0_fifo_generator_ramfifo : entity is "fifo_generator_ramfifo";
 end shell_rx_data_fifo_1_0_fifo_generator_ramfifo;
 
 architecture STRUCTURE of shell_rx_data_fifo_1_0_fifo_generator_ramfifo is
@@ -5357,8 +5319,6 @@ entity shell_rx_data_fifo_1_0_fifo_generator_top is
     \gaxis_fifo.gaxisf.gaxis_pkt_fifo_cc.gdc_pkt.axis_dc_pkt_fifo_reg[9]\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
     s_aresetn : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of shell_rx_data_fifo_1_0_fifo_generator_top : entity is "fifo_generator_top";
 end shell_rx_data_fifo_1_0_fifo_generator_top;
 
 architecture STRUCTURE of shell_rx_data_fifo_1_0_fifo_generator_top is
@@ -5416,8 +5376,6 @@ entity shell_rx_data_fifo_1_0_fifo_generator_v13_2_2_synth is
     s_axis_tlast : in STD_LOGIC;
     s_aresetn : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of shell_rx_data_fifo_1_0_fifo_generator_v13_2_2_synth : entity is "fifo_generator_v13_2_2_synth";
 end shell_rx_data_fifo_1_0_fifo_generator_v13_2_2_synth;
 
 architecture STRUCTURE of shell_rx_data_fifo_1_0_fifo_generator_v13_2_2_synth is
@@ -6689,8 +6647,6 @@ entity shell_rx_data_fifo_1_0_fifo_generator_v13_2_2 is
   attribute C_WR_PNTR_WIDTH_WRCH of shell_rx_data_fifo_1_0_fifo_generator_v13_2_2 : entity is 4;
   attribute C_WR_RESPONSE_LATENCY : integer;
   attribute C_WR_RESPONSE_LATENCY of shell_rx_data_fifo_1_0_fifo_generator_v13_2_2 : entity is 1;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of shell_rx_data_fifo_1_0_fifo_generator_v13_2_2 : entity is "fifo_generator_v13_2_2";
 end shell_rx_data_fifo_1_0_fifo_generator_v13_2_2;
 
 architecture STRUCTURE of shell_rx_data_fifo_1_0_fifo_generator_v13_2_2 is
@@ -7410,8 +7366,6 @@ entity shell_rx_data_fifo_1_0_axis_data_fifo_v1_1_17_axis_data_fifo is
   attribute LP_M_ACLKEN_CAN_TOGGLE of shell_rx_data_fifo_1_0_axis_data_fifo_v1_1_17_axis_data_fifo : entity is 0;
   attribute LP_S_ACLKEN_CAN_TOGGLE : integer;
   attribute LP_S_ACLKEN_CAN_TOGGLE of shell_rx_data_fifo_1_0_axis_data_fifo_v1_1_17_axis_data_fifo : entity is 0;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of shell_rx_data_fifo_1_0_axis_data_fifo_v1_1_17_axis_data_fifo : entity is "axis_data_fifo_v1_1_17_axis_data_fifo";
   attribute P_APPLICATION_TYPE_AXIS : integer;
   attribute P_APPLICATION_TYPE_AXIS of shell_rx_data_fifo_1_0_axis_data_fifo_v1_1_17_axis_data_fifo : entity is 1;
   attribute P_AXIS_PAYLOAD_WIDTH : integer;

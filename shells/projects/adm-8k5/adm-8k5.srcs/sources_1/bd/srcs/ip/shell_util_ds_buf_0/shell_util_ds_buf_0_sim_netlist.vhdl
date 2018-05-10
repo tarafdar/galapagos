@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
--- Date        : Thu May  3 12:01:32 2018
+-- Date        : Thu May  3 12:01:31 2018
 -- Host        : ug238 running 64-bit Debian GNU/Linux 9.4 (stretch)
--- Command     : write_vhdl -force -mode funcsim
---               /nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_util_ds_buf_0/shell_util_ds_buf_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top shell_util_ds_buf_0 -prefix
+--               shell_util_ds_buf_0_ shell_util_ds_buf_0_sim_netlist.vhdl
 -- Design      : shell_util_ds_buf_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -51,8 +51,6 @@ entity shell_util_ds_buf_0_util_ds_buf is
   attribute C_BUF_TYPE of shell_util_ds_buf_0_util_ds_buf : entity is "ibufdsgte3";
   attribute C_SIZE : integer;
   attribute C_SIZE of shell_util_ds_buf_0_util_ds_buf : entity is 1;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of shell_util_ds_buf_0_util_ds_buf : entity is "util_ds_buf";
 end shell_util_ds_buf_0_util_ds_buf;
 
 architecture STRUCTURE of shell_util_ds_buf_0_util_ds_buf is

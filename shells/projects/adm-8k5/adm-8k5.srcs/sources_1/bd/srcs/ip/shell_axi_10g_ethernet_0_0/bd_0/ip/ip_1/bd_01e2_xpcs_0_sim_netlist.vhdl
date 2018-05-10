@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
--- Date        : Thu May  3 11:55:39 2018
+-- Date        : Thu May  3 11:55:36 2018
 -- Host        : ug238 running 64-bit Debian GNU/Linux 9.4 (stretch)
--- Command     : write_vhdl -force -mode funcsim
---               /nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/bd_01e2_xpcs_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top bd_01e2_xpcs_0 -prefix
+--               bd_01e2_xpcs_0_ bd_01e2_xpcs_0_sim_netlist.vhdl
 -- Design      : bd_01e2_xpcs_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -23,8 +23,6 @@ entity bd_01e2_xpcs_0_bd_01e2_xpcs_0_ff_synchronizer is
     rx_resetdone_int : in STD_LOGIC;
     core_status : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of bd_01e2_xpcs_0_bd_01e2_xpcs_0_ff_synchronizer : entity is "bd_01e2_xpcs_0_ff_synchronizer";
 end bd_01e2_xpcs_0_bd_01e2_xpcs_0_ff_synchronizer;
 
 architecture STRUCTURE of bd_01e2_xpcs_0_bd_01e2_xpcs_0_ff_synchronizer is
@@ -1710,8 +1708,6 @@ entity bd_01e2_xpcs_0_bd_01e2_xpcs_0_ff_synchronizer_rst is
     refclk_n : in STD_LOGIC;
     reset : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of bd_01e2_xpcs_0_bd_01e2_xpcs_0_ff_synchronizer_rst : entity is "bd_01e2_xpcs_0_ff_synchronizer_rst";
 end bd_01e2_xpcs_0_bd_01e2_xpcs_0_ff_synchronizer_rst;
 
 architecture STRUCTURE of bd_01e2_xpcs_0_bd_01e2_xpcs_0_ff_synchronizer_rst is
@@ -4361,8 +4357,6 @@ entity bd_01e2_xpcs_0_gtwizard_ultrascale_v1_7_3_bit_synchronizer is
     rxresetdone_out : in STD_LOGIC_VECTOR ( 0 to 0 );
     gtwiz_reset_clk_freerun_in : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of bd_01e2_xpcs_0_gtwizard_ultrascale_v1_7_3_bit_synchronizer : entity is "gtwizard_ultrascale_v1_7_3_bit_synchronizer";
 end bd_01e2_xpcs_0_gtwizard_ultrascale_v1_7_3_bit_synchronizer;
 
 architecture STRUCTURE of bd_01e2_xpcs_0_gtwizard_ultrascale_v1_7_3_bit_synchronizer is
@@ -6271,8 +6265,6 @@ entity bd_01e2_xpcs_0_gtwizard_ultrascale_v1_7_3_gthe3_channel is
     lopt_6 : out STD_LOGIC;
     lopt_7 : out STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of bd_01e2_xpcs_0_gtwizard_ultrascale_v1_7_3_gthe3_channel : entity is "gtwizard_ultrascale_v1_7_3_gthe3_channel";
 end bd_01e2_xpcs_0_gtwizard_ultrascale_v1_7_3_gthe3_channel;
 
 architecture STRUCTURE of bd_01e2_xpcs_0_gtwizard_ultrascale_v1_7_3_gthe3_channel is
@@ -7047,8 +7039,6 @@ entity bd_01e2_xpcs_0_gtwizard_ultrascale_v1_7_3_gthe3_common is
     refclk : in STD_LOGIC;
     gtwiz_reset_qpll0reset_out : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of bd_01e2_xpcs_0_gtwizard_ultrascale_v1_7_3_gthe3_common : entity is "gtwizard_ultrascale_v1_7_3_gthe3_common";
 end bd_01e2_xpcs_0_gtwizard_ultrascale_v1_7_3_gthe3_common;
 
 architecture STRUCTURE of bd_01e2_xpcs_0_gtwizard_ultrascale_v1_7_3_gthe3_common is
@@ -7327,8 +7317,6 @@ entity bd_01e2_xpcs_0_gtwizard_ultrascale_v1_7_3_reset_inv_synchronizer is
     rxusrclk2_in : in STD_LOGIC_VECTOR ( 0 to 0 );
     gtwiz_reset_rx_done_int_reg : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of bd_01e2_xpcs_0_gtwizard_ultrascale_v1_7_3_reset_inv_synchronizer : entity is "gtwizard_ultrascale_v1_7_3_reset_inv_synchronizer";
 end bd_01e2_xpcs_0_gtwizard_ultrascale_v1_7_3_reset_inv_synchronizer;
 
 architecture STRUCTURE of bd_01e2_xpcs_0_gtwizard_ultrascale_v1_7_3_reset_inv_synchronizer is
@@ -7527,8 +7515,6 @@ entity bd_01e2_xpcs_0_gtwizard_ultrascale_v1_7_3_reset_synchronizer is
     gtwiz_reset_clk_freerun_in : in STD_LOGIC_VECTOR ( 0 to 0 );
     gtwiz_reset_all_in : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of bd_01e2_xpcs_0_gtwizard_ultrascale_v1_7_3_reset_synchronizer : entity is "gtwizard_ultrascale_v1_7_3_reset_synchronizer";
 end bd_01e2_xpcs_0_gtwizard_ultrascale_v1_7_3_reset_synchronizer;
 
 architecture STRUCTURE of bd_01e2_xpcs_0_gtwizard_ultrascale_v1_7_3_reset_synchronizer is
@@ -8414,8 +8400,6 @@ entity bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_cs_ipif_access is
     drp_ack : in STD_LOGIC;
     Q : in STD_LOGIC_VECTOR ( 15 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_cs_ipif_access : entity is "ten_gig_eth_pcs_pma_v6_0_12_cs_ipif_access";
 end bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_cs_ipif_access;
 
 architecture STRUCTURE of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_cs_ipif_access is
@@ -8823,8 +8807,6 @@ entity bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_dp_ram is
     ADDRH : in STD_LOGIC_VECTOR ( 4 downto 0 );
     rd_clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_dp_ram : entity is "ten_gig_eth_pcs_pma_v6_0_12_dp_ram";
 end bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_dp_ram;
 
 architecture STRUCTURE of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_dp_ram is
@@ -9872,8 +9854,6 @@ entity bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_g_register is
     resetdone : in STD_LOGIC;
     configuration_vector : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_g_register : entity is "ten_gig_eth_pcs_pma_v6_0_12_g_register";
 end bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_g_register;
 
 architecture STRUCTURE of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_g_register is
@@ -10824,8 +10804,6 @@ entity bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_idle_detect is
     comp_8 : in STD_LOGIC;
     \mcp1_rx_ebuff_data_reg[31]\ : in STD_LOGIC_VECTOR ( 23 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_idle_detect : entity is "ten_gig_eth_pcs_pma_v6_0_12_idle_detect";
 end bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_idle_detect;
 
 architecture STRUCTURE of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_idle_detect is
@@ -11127,8 +11105,6 @@ entity bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_idle_insert is
     configuration_vector : in STD_LOGIC_VECTOR ( 0 to 0 );
     \xgmii_txc_reg2_reg[7]\ : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_idle_insert : entity is "ten_gig_eth_pcs_pma_v6_0_12_idle_insert";
 end bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_idle_insert;
 
 architecture STRUCTURE of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_idle_insert is
@@ -14191,8 +14167,6 @@ entity bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_ieee_counters is
     coreclk : in STD_LOGIC;
     data_out_reg : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_ieee_counters : entity is "ten_gig_eth_pcs_pma_v6_0_12_ieee_counters";
 end bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_ieee_counters;
 
 architecture STRUCTURE of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_ieee_counters is
@@ -14954,8 +14928,6 @@ entity bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_pcs_descramble is
     \out\ : in STD_LOGIC;
     rxusrclk2 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_pcs_descramble : entity is "ten_gig_eth_pcs_pma_v6_0_12_pcs_descramble";
 end bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_pcs_descramble;
 
 architecture STRUCTURE of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_pcs_descramble is
@@ -16179,8 +16151,6 @@ entity bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_pcs_scramble is
     configuration_vector : in STD_LOGIC_VECTOR ( 118 downto 0 );
     Q : in STD_LOGIC_VECTOR ( 63 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_pcs_scramble : entity is "ten_gig_eth_pcs_pma_v6_0_12_pcs_scramble";
 end bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_pcs_scramble;
 
 architecture STRUCTURE of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_pcs_scramble is
@@ -18733,8 +18703,6 @@ entity bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_pulse_synchronizer is
     counter_sync_3 : in STD_LOGIC;
     counter_sync_2 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_pulse_synchronizer : entity is "ten_gig_eth_pcs_pma_v6_0_12_pulse_synchronizer";
 end bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_pulse_synchronizer;
 
 architecture STRUCTURE of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_pulse_synchronizer is
@@ -20311,8 +20279,6 @@ entity bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_rx_ber_mon_fsm is
     \outreg_reg[15]\ : in STD_LOGIC_VECTOR ( 15 downto 0 );
     SR : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_rx_ber_mon_fsm : entity is "ten_gig_eth_pcs_pma_v6_0_12_rx_ber_mon_fsm";
 end bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_rx_ber_mon_fsm;
 
 architecture STRUCTURE of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_rx_ber_mon_fsm is
@@ -21188,8 +21154,6 @@ entity bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_rx_block_lock_fsm is
     \outreg_reg[2]\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     \b_lock_count_reg[0]\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_rx_block_lock_fsm : entity is "ten_gig_eth_pcs_pma_v6_0_12_rx_block_lock_fsm";
 end bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_rx_block_lock_fsm;
 
 architecture STRUCTURE of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_rx_block_lock_fsm is
@@ -21867,8 +21831,6 @@ entity bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_rx_decoder is
     \FSM_sequential_mcp1_state_reg[2]\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     \FSM_sequential_mcp1_state_reg[2]_0\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_rx_decoder : entity is "ten_gig_eth_pcs_pma_v6_0_12_rx_decoder";
 end bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_rx_decoder;
 
 architecture STRUCTURE of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_rx_decoder is
@@ -30328,8 +30290,6 @@ entity bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_rx_pcs_fsm is
     rx_ebuff_ctrl_t : in STD_LOGIC_VECTOR ( 7 downto 0 );
     rx_ebuff_data_t : in STD_LOGIC_VECTOR ( 63 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_rx_pcs_fsm : entity is "ten_gig_eth_pcs_pma_v6_0_12_rx_pcs_fsm";
 end bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_rx_pcs_fsm;
 
 architecture STRUCTURE of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_rx_pcs_fsm is
@@ -32018,8 +31978,6 @@ entity bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_rx_pcs_test is
     \outreg_reg[2]\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
     block_field : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_rx_pcs_test : entity is "ten_gig_eth_pcs_pma_v6_0_12_rx_pcs_test";
 end bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_rx_pcs_test;
 
 architecture STRUCTURE of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_rx_pcs_test is
@@ -32921,8 +32879,6 @@ entity bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_seq_detect is
     comp_1_4 : in STD_LOGIC;
     comp_2 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_seq_detect : entity is "ten_gig_eth_pcs_pma_v6_0_12_seq_detect";
 end bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_seq_detect;
 
 architecture STRUCTURE of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_seq_detect is
@@ -33012,8 +32968,6 @@ entity bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_synchronizer is
     in0 : in STD_LOGIC;
     rxusrclk2 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_synchronizer : entity is "ten_gig_eth_pcs_pma_v6_0_12_synchronizer";
 end bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_synchronizer;
 
 architecture STRUCTURE of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_synchronizer is
@@ -35521,8 +35475,6 @@ entity bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_synchronizer_enable is
     en : in STD_LOGIC;
     q : out STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_synchronizer_enable : entity is "ten_gig_eth_pcs_pma_v6_0_12_synchronizer_enable";
 end bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_synchronizer_enable;
 
 architecture STRUCTURE of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_synchronizer_enable is
@@ -38004,8 +37956,6 @@ entity bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_tx_encoder is
     \xgmii_txc_reg_reg[7]\ : in STD_LOGIC_VECTOR ( 7 downto 0 );
     \xgmii_txd_reg_reg[63]\ : in STD_LOGIC_VECTOR ( 63 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_tx_encoder : entity is "ten_gig_eth_pcs_pma_v6_0_12_tx_encoder";
 end bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_tx_encoder;
 
 architecture STRUCTURE of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_tx_encoder is
@@ -47291,8 +47241,6 @@ entity bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_tx_pcs_fsm is
     coreclk : in STD_LOGIC;
     \tx_encoded_data_reg[65]\ : in STD_LOGIC_VECTOR ( 65 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_tx_pcs_fsm : entity is "ten_gig_eth_pcs_pma_v6_0_12_tx_pcs_fsm";
 end bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_tx_pcs_fsm;
 
 architecture STRUCTURE of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_tx_pcs_fsm is
@@ -47926,8 +47874,6 @@ entity bd_01e2_xpcs_0_bd_01e2_xpcs_0_cable_pull_logic is
     gt0_rxresetdone_i_reg_rxusrclk2 : in STD_LOGIC;
     D : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of bd_01e2_xpcs_0_bd_01e2_xpcs_0_cable_pull_logic : entity is "bd_01e2_xpcs_0_cable_pull_logic";
 end bd_01e2_xpcs_0_bd_01e2_xpcs_0_cable_pull_logic;
 
 architecture STRUCTURE of bd_01e2_xpcs_0_bd_01e2_xpcs_0_cable_pull_logic is
@@ -49933,8 +49879,6 @@ entity bd_01e2_xpcs_0_bd_01e2_xpcs_0_gt_common_wrapper is
     refclk : in STD_LOGIC;
     gtwiz_reset_qpll0reset_out : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of bd_01e2_xpcs_0_bd_01e2_xpcs_0_gt_common_wrapper : entity is "bd_01e2_xpcs_0_gt_common_wrapper";
 end bd_01e2_xpcs_0_bd_01e2_xpcs_0_gt_common_wrapper;
 
 architecture STRUCTURE of bd_01e2_xpcs_0_bd_01e2_xpcs_0_gt_common_wrapper is
@@ -50292,8 +50236,6 @@ entity bd_01e2_xpcs_0_bd_01e2_xpcs_0_gt_gthe3_channel_wrapper is
     lopt_6 : out STD_LOGIC;
     lopt_7 : out STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of bd_01e2_xpcs_0_bd_01e2_xpcs_0_gt_gthe3_channel_wrapper : entity is "bd_01e2_xpcs_0_gt_gthe3_channel_wrapper";
 end bd_01e2_xpcs_0_bd_01e2_xpcs_0_gt_gthe3_channel_wrapper;
 
 architecture STRUCTURE of bd_01e2_xpcs_0_bd_01e2_xpcs_0_gt_gthe3_channel_wrapper is
@@ -50667,8 +50609,6 @@ entity bd_01e2_xpcs_0_bd_01e2_xpcs_0_local_clock_and_reset is
     lopt_2 : in STD_LOGIC;
     lopt_3 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of bd_01e2_xpcs_0_bd_01e2_xpcs_0_local_clock_and_reset : entity is "bd_01e2_xpcs_0_local_clock_and_reset";
 end bd_01e2_xpcs_0_bd_01e2_xpcs_0_local_clock_and_reset;
 
 architecture STRUCTURE of bd_01e2_xpcs_0_bd_01e2_xpcs_0_local_clock_and_reset is
@@ -50844,8 +50784,6 @@ entity bd_01e2_xpcs_0_bd_01e2_xpcs_0_shared_clock_and_reset is
     lopt_1 : in STD_LOGIC;
     lopt_2 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of bd_01e2_xpcs_0_bd_01e2_xpcs_0_shared_clock_and_reset : entity is "bd_01e2_xpcs_0_shared_clock_and_reset";
 end bd_01e2_xpcs_0_bd_01e2_xpcs_0_shared_clock_and_reset;
 
 architecture STRUCTURE of bd_01e2_xpcs_0_bd_01e2_xpcs_0_shared_clock_and_reset is
@@ -51274,8 +51212,6 @@ entity bd_01e2_xpcs_0_gtwizard_ultrascale_v1_7_3_gtwiz_reset is
     gtwiz_reset_rx_pll_and_datapath_in : in STD_LOGIC_VECTOR ( 0 to 0 );
     \gen_gtwizard_gthe3.gen_reset_controller_internal.gen_single_instance.txresetdone_sync\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of bd_01e2_xpcs_0_gtwizard_ultrascale_v1_7_3_gtwiz_reset : entity is "gtwizard_ultrascale_v1_7_3_gtwiz_reset";
 end bd_01e2_xpcs_0_gtwizard_ultrascale_v1_7_3_gtwiz_reset;
 
 architecture STRUCTURE of bd_01e2_xpcs_0_gtwizard_ultrascale_v1_7_3_gtwiz_reset is
@@ -53668,8 +53604,6 @@ entity bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_asynch_fifo is
   );
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_asynch_fifo : entity is "yes";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_asynch_fifo : entity is "ten_gig_eth_pcs_pma_v6_0_12_asynch_fifo";
   attribute WIDTH : integer;
   attribute WIDTH of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_asynch_fifo : entity is 74;
 end bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_asynch_fifo;
@@ -55416,8 +55350,6 @@ entity bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_coherent_resyncs_en is
     rxusrclk2 : in STD_LOGIC;
     configuration_vector : in STD_LOGIC_VECTOR ( 15 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_coherent_resyncs_en : entity is "ten_gig_eth_pcs_pma_v6_0_12_coherent_resyncs_en";
 end bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_coherent_resyncs_en;
 
 architecture STRUCTURE of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_coherent_resyncs_en is
@@ -56306,8 +56238,6 @@ entity bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_common_ieee_registers is
     \pcs_ber_count_reg[5]\ : in STD_LOGIC_VECTOR ( 5 downto 0 );
     Q : in STD_LOGIC_VECTOR ( 15 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_common_ieee_registers : entity is "ten_gig_eth_pcs_pma_v6_0_12_common_ieee_registers";
 end bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_common_ieee_registers;
 
 architecture STRUCTURE of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_common_ieee_registers is
@@ -56463,8 +56393,6 @@ entity bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_g_resyncs is
     in0 : in STD_LOGIC;
     coreclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_g_resyncs : entity is "ten_gig_eth_pcs_pma_v6_0_12_g_resyncs";
 end bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_g_resyncs;
 
 architecture STRUCTURE of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_g_resyncs is
@@ -56701,8 +56629,6 @@ entity bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_g_resyncs_en is
     rxusrclk2 : in STD_LOGIC;
     d : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_g_resyncs_en : entity is "ten_gig_eth_pcs_pma_v6_0_12_g_resyncs_en";
 end bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_g_resyncs_en;
 
 architecture STRUCTURE of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_g_resyncs_en is
@@ -56742,8 +56668,6 @@ entity bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_idle_delete is
     status : in STD_LOGIC_VECTOR ( 0 to 0 );
     \mcp1_rx_ebuff_ctrl_reg[7]\ : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_idle_delete : entity is "ten_gig_eth_pcs_pma_v6_0_12_idle_delete";
 end bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_idle_delete;
 
 architecture STRUCTURE of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_idle_delete is
@@ -59466,8 +59390,6 @@ entity bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_management_cs is
     drp_ack : in STD_LOGIC;
     Q : in STD_LOGIC_VECTOR ( 15 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_management_cs : entity is "ten_gig_eth_pcs_pma_v6_0_12_management_cs";
 end bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_management_cs;
 
 architecture STRUCTURE of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_management_cs is
@@ -59519,8 +59441,6 @@ entity bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_rx_pcs is
     \outreg_reg[15]\ : in STD_LOGIC_VECTOR ( 15 downto 0 );
     \outreg_reg[2]\ : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_rx_pcs : entity is "ten_gig_eth_pcs_pma_v6_0_12_rx_pcs";
 end bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_rx_pcs;
 
 architecture STRUCTURE of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_rx_pcs is
@@ -60355,8 +60275,6 @@ entity bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_rxusrclk2_coreclk_counter_resy
     rx_test_mode_int_reg : in STD_LOGIC;
     rxreset_rxusrclk2 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_rxusrclk2_coreclk_counter_resync : entity is "ten_gig_eth_pcs_pma_v6_0_12_rxusrclk2_coreclk_counter_resync";
 end bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_rxusrclk2_coreclk_counter_resync;
 
 architecture STRUCTURE of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_rxusrclk2_coreclk_counter_resync is
@@ -60769,8 +60687,6 @@ entity bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_toggle_synchronizer is
     \out\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
     ipif_cs_dclk_reg : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_toggle_synchronizer : entity is "ten_gig_eth_pcs_pma_v6_0_12_toggle_synchronizer";
 end bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_toggle_synchronizer;
 
 architecture STRUCTURE of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_toggle_synchronizer is
@@ -61366,8 +61282,6 @@ entity bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_tx_pcs is
     D : in STD_LOGIC_VECTOR ( 7 downto 0 );
     \out\ : in STD_LOGIC_VECTOR ( 63 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_tx_pcs : entity is "ten_gig_eth_pcs_pma_v6_0_12_tx_pcs";
 end bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_tx_pcs;
 
 architecture STRUCTURE of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_tx_pcs is
@@ -61490,8 +61404,6 @@ entity bd_01e2_xpcs_0_bd_01e2_xpcs_0_gt_common is
     refclk : in STD_LOGIC;
     gtwiz_reset_qpll0reset_out : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of bd_01e2_xpcs_0_bd_01e2_xpcs_0_gt_common : entity is "bd_01e2_xpcs_0_gt_common";
 end bd_01e2_xpcs_0_bd_01e2_xpcs_0_gt_common;
 
 architecture STRUCTURE of bd_01e2_xpcs_0_bd_01e2_xpcs_0_gt_common is
@@ -61856,8 +61768,6 @@ entity bd_01e2_xpcs_0_bd_01e2_xpcs_0_gt_gtwizard_gthe3 is
     lopt_6 : out STD_LOGIC;
     lopt_7 : out STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of bd_01e2_xpcs_0_bd_01e2_xpcs_0_gt_gtwizard_gthe3 : entity is "bd_01e2_xpcs_0_gt_gtwizard_gthe3";
 end bd_01e2_xpcs_0_bd_01e2_xpcs_0_gt_gtwizard_gthe3;
 
 architecture STRUCTURE of bd_01e2_xpcs_0_bd_01e2_xpcs_0_gt_gtwizard_gthe3 is
@@ -62280,8 +62190,6 @@ entity bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_drp_ipif is
     drp_drpdo : in STD_LOGIC_VECTOR ( 15 downto 0 );
     drp_gnt : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_drp_ipif : entity is "ten_gig_eth_pcs_pma_v6_0_12_drp_ipif";
 end bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_drp_ipif;
 
 architecture STRUCTURE of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_drp_ipif is
@@ -62654,8 +62562,6 @@ entity bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_elastic_buffer is
     configuration_vector : in STD_LOGIC_VECTOR ( 0 to 0 );
     \xgmii_txc_reg2_reg[7]\ : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_elastic_buffer : entity is "ten_gig_eth_pcs_pma_v6_0_12_elastic_buffer";
 end bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_elastic_buffer;
 
 architecture STRUCTURE of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_elastic_buffer is
@@ -62847,8 +62753,6 @@ entity bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_ieee_registers is
     \pcs_ber_count_reg[5]\ : in STD_LOGIC_VECTOR ( 5 downto 0 );
     Q : in STD_LOGIC_VECTOR ( 15 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_ieee_registers : entity is "ten_gig_eth_pcs_pma_v6_0_12_ieee_registers";
 end bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_ieee_registers;
 
 architecture STRUCTURE of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_ieee_registers is
@@ -62980,8 +62884,6 @@ entity bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_pcs_top is
     \out\ : in STD_LOGIC_VECTOR ( 63 downto 0 );
     \outreg_reg[2]\ : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_pcs_top : entity is "ten_gig_eth_pcs_pma_v6_0_12_pcs_top";
 end bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_pcs_top;
 
 architecture STRUCTURE of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_pcs_top is
@@ -63860,8 +63762,6 @@ entity bd_01e2_xpcs_0_bd_01e2_xpcs_0_gt_gtwizard_top is
   attribute C_TX_USRCLK_FREQUENCY of bd_01e2_xpcs_0_bd_01e2_xpcs_0_gt_gtwizard_top : entity is "312.500000";
   attribute C_USER_GTPOWERGOOD_DELAY_EN : integer;
   attribute C_USER_GTPOWERGOOD_DELAY_EN of bd_01e2_xpcs_0_bd_01e2_xpcs_0_gt_gtwizard_top : entity is 0;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of bd_01e2_xpcs_0_bd_01e2_xpcs_0_gt_gtwizard_top : entity is "bd_01e2_xpcs_0_gt_gtwizard_top";
 end bd_01e2_xpcs_0_bd_01e2_xpcs_0_gt_gtwizard_top;
 
 architecture STRUCTURE of bd_01e2_xpcs_0_bd_01e2_xpcs_0_gt_gtwizard_top is
@@ -64425,8 +64325,6 @@ entity bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_elastic_buffer_wrapper is
     configuration_vector : in STD_LOGIC_VECTOR ( 0 to 0 );
     \xgmii_txc_reg2_reg[7]\ : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_elastic_buffer_wrapper : entity is "ten_gig_eth_pcs_pma_v6_0_12_elastic_buffer_wrapper";
 end bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_elastic_buffer_wrapper;
 
 architecture STRUCTURE of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_elastic_buffer_wrapper is
@@ -64494,8 +64392,6 @@ entity bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_management_top is
     drp_drpdo : in STD_LOGIC_VECTOR ( 15 downto 0 );
     drp_gnt : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_management_top : entity is "ten_gig_eth_pcs_pma_v6_0_12_management_top";
 end bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_management_top;
 
 architecture STRUCTURE of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_management_top is
@@ -64893,8 +64789,6 @@ entity bd_01e2_xpcs_0_bd_01e2_xpcs_0_gt is
   attribute CHECK_LICENSE_TYPE of bd_01e2_xpcs_0_bd_01e2_xpcs_0_gt : entity is "bd_01e2_xpcs_0_gt,bd_01e2_xpcs_0_gt_gtwizard_top,{}";
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of bd_01e2_xpcs_0_bd_01e2_xpcs_0_gt : entity is "yes";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of bd_01e2_xpcs_0_bd_01e2_xpcs_0_gt : entity is "bd_01e2_xpcs_0_gt";
   attribute X_CORE_INFO : string;
   attribute X_CORE_INFO of bd_01e2_xpcs_0_bd_01e2_xpcs_0_gt : entity is "bd_01e2_xpcs_0_gt_gtwizard_top,Vivado 2018.1";
 end bd_01e2_xpcs_0_bd_01e2_xpcs_0_gt;
@@ -65809,8 +65703,6 @@ entity bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_baser_top is
     rxreset_rxusrclk2 : in STD_LOGIC;
     drp_gnt : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_baser_top : entity is "ten_gig_eth_pcs_pma_v6_0_12_baser_top";
 end bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_baser_top;
 
 architecture STRUCTURE of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_baser_top is
@@ -70936,8 +70828,6 @@ entity bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_baser_gen is
     rxreset_rxusrclk2 : in STD_LOGIC;
     drp_gnt : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_baser_gen : entity is "ten_gig_eth_pcs_pma_v6_0_12_baser_gen";
 end bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_baser_gen;
 
 architecture STRUCTURE of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_baser_gen is
@@ -71049,8 +70939,6 @@ entity bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_wrapper is
     rxreset_rxusrclk2 : in STD_LOGIC;
     drp_gnt : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_wrapper : entity is "ten_gig_eth_pcs_pma_v6_0_12_wrapper";
 end bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_wrapper;
 
 architecture STRUCTURE of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_wrapper is
@@ -71201,8 +71089,6 @@ entity bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12 is
   attribute C_SPEED10_25 of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12 : entity is 10;
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12 : entity is "yes";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12 : entity is "ten_gig_eth_pcs_pma_v6_0_12";
 end bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12;
 
 architecture STRUCTURE of bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12 is
@@ -72027,8 +71913,6 @@ entity bd_01e2_xpcs_0_bd_01e2_xpcs_0_block is
     lopt_2 : out STD_LOGIC;
     lopt_3 : out STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of bd_01e2_xpcs_0_bd_01e2_xpcs_0_block : entity is "bd_01e2_xpcs_0_block";
 end bd_01e2_xpcs_0_bd_01e2_xpcs_0_block;
 
 architecture STRUCTURE of bd_01e2_xpcs_0_bd_01e2_xpcs_0_block is
@@ -74335,8 +74219,6 @@ entity bd_01e2_xpcs_0_bd_01e2_xpcs_0_support is
   );
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of bd_01e2_xpcs_0_bd_01e2_xpcs_0_support : entity is "yes";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of bd_01e2_xpcs_0_bd_01e2_xpcs_0_support : entity is "bd_01e2_xpcs_0_support";
 end bd_01e2_xpcs_0_bd_01e2_xpcs_0_support;
 
 architecture STRUCTURE of bd_01e2_xpcs_0_bd_01e2_xpcs_0_support is

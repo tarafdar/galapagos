@@ -14,14 +14,14 @@
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.CORECLK.FREQ_HZ">156250000</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.CORECLK.PHASE">0.000</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.CORECLK_OUT.ASSOCIATED_BUSIF"/>
-        <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.CORECLK_OUT.ASSOCIATED_RESET">areset_coreclk_out</spirit:configurableElementValue>
-        <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.CORECLK_OUT.CLK_DOMAIN">bd_01e2_xpcs_0_coreclk_out</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.CORECLK_OUT.ASSOCIATED_RESET"/>
+        <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.CORECLK_OUT.CLK_DOMAIN"/>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.CORECLK_OUT.FREQ_HZ">156250000</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.CORECLK_OUT.PHASE">0.000</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.DCLK.ASSOCIATED_RESET"/>
-        <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.DCLK.CLK_DOMAIN">shell_clk_wiz_0_0_clk_out1</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.DCLK.CLK_DOMAIN"/>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.DCLK.FREQ_HZ">100000000</spirit:configurableElementValue>
-        <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.DCLK.PHASE">0.0</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.DCLK.PHASE">0.000</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.GT_LATCLK.ASSOCIATED_BUSIF"/>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.GT_LATCLK.ASSOCIATED_RESET"/>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.GT_LATCLK.CLK_DOMAIN"/>
@@ -40,7 +40,7 @@
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.QPLL0OUTCLK.PHASE">0.000</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.QPLL0OUTCLK_OUT.ASSOCIATED_BUSIF"/>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.QPLL0OUTCLK_OUT.ASSOCIATED_RESET"/>
-        <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.QPLL0OUTCLK_OUT.CLK_DOMAIN">bd_01e2_xpcs_0_qpll0outclk_out</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.QPLL0OUTCLK_OUT.CLK_DOMAIN"/>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.QPLL0OUTCLK_OUT.PHASE">0.000</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.QPLL0OUTREFCLK.ASSOCIATED_BUSIF"/>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.QPLL0OUTREFCLK.ASSOCIATED_RESET"/>
@@ -49,7 +49,7 @@
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.QPLL0OUTREFCLK.PHASE">0.000</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.QPLL0OUTREFCLK_OUT.ASSOCIATED_BUSIF"/>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.QPLL0OUTREFCLK_OUT.ASSOCIATED_RESET"/>
-        <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.QPLL0OUTREFCLK_OUT.CLK_DOMAIN">bd_01e2_xpcs_0_qpll0outrefclk_out</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.QPLL0OUTREFCLK_OUT.CLK_DOMAIN"/>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.QPLL0OUTREFCLK_OUT.FREQ_HZ">156250000</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.QPLL0OUTREFCLK_OUT.PHASE">0.000</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.QPLLOUTCLK.ASSOCIATED_BUSIF"/>
@@ -73,7 +73,7 @@
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.REFCLK_DIFF_PORT.CAN_DEBUG">false</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.REFCLK_DIFF_PORT.FREQ_HZ">156250000</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.RXRECCLK_OUT.ASSOCIATED_BUSIF"/>
-        <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.RXRECCLK_OUT.CLK_DOMAIN">bd_01e2_xpcs_0_rxrecclk_out</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.RXRECCLK_OUT.CLK_DOMAIN"/>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.RXRECCLK_OUT.FREQ_HZ">156250000</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.RXRECCLK_OUT.PHASE">0.000</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.TXOUTCLK.ASSOCIATED_BUSIF"/>
@@ -97,12 +97,12 @@
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.TXUSRCLK2.PHASE">0.000</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.TXUSRCLK2_OUT.ASSOCIATED_BUSIF">xgmii_interface</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.TXUSRCLK2_OUT.ASSOCIATED_RESET">areset_datapathclk_out</spirit:configurableElementValue>
-        <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.TXUSRCLK2_OUT.CLK_DOMAIN">bd_01e2_xpcs_0_txusrclk2_out</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.TXUSRCLK2_OUT.CLK_DOMAIN"/>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.TXUSRCLK2_OUT.FREQ_HZ">156250000</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.TXUSRCLK2_OUT.PHASE">0.000</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.TXUSRCLK_OUT.ASSOCIATED_BUSIF"/>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.TXUSRCLK_OUT.ASSOCIATED_RESET"/>
-        <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.TXUSRCLK_OUT.CLK_DOMAIN">bd_01e2_xpcs_0_txusrclk_out</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.TXUSRCLK_OUT.CLK_DOMAIN"/>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.TXUSRCLK_OUT.FREQ_HZ">312500000</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.TXUSRCLK_OUT.PHASE">0.000</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.c_1588">0</spirit:configurableElementValue>
@@ -164,39 +164,17 @@
         <xilinx:componentInstanceExtensions>
           <xilinx:configElementInfos>
             <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CORECLK.FREQ_HZ" xilinx:valueSource="user" xilinx:valuePermission="bd"/>
-            <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CORECLK_OUT.ASSOCIATED_BUSIF" xilinx:valueSource="user" xilinx:valuePermission="bd"/>
-            <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CORECLK_OUT.ASSOCIATED_RESET" xilinx:valueSource="user" xilinx:valuePermission="bd"/>
-            <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CORECLK_OUT.CLK_DOMAIN" xilinx:valuePermission="bd"/>
             <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CORECLK_OUT.FREQ_HZ" xilinx:valueSource="user" xilinx:valuePermission="bd"/>
-            <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CORECLK_OUT.PHASE" xilinx:valuePermission="bd"/>
-            <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.DCLK.CLK_DOMAIN" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
-            <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.DCLK.FREQ_HZ" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd"/>
-            <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.DCLK.PHASE" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd"/>
-            <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.QPLL0OUTCLK_OUT.CLK_DOMAIN" xilinx:valuePermission="bd"/>
-            <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.QPLL0OUTREFCLK_OUT.ASSOCIATED_BUSIF" xilinx:valuePermission="bd"/>
-            <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.QPLL0OUTREFCLK_OUT.ASSOCIATED_RESET" xilinx:valuePermission="bd"/>
-            <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.QPLL0OUTREFCLK_OUT.CLK_DOMAIN" xilinx:valuePermission="bd"/>
             <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.QPLL0OUTREFCLK_OUT.FREQ_HZ" xilinx:valueSource="user" xilinx:valuePermission="bd"/>
-            <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.QPLL0OUTREFCLK_OUT.PHASE" xilinx:valuePermission="bd"/>
-            <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.REFCLK_DIFF_PORT.CAN_DEBUG" xilinx:valuePermission="bd"/>
             <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.REFCLK_DIFF_PORT.FREQ_HZ" xilinx:valueSource="user" xilinx:valuePermission="bd"/>
-            <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.RXRECCLK_OUT.ASSOCIATED_BUSIF" xilinx:valueSource="user" xilinx:valuePermission="bd"/>
-            <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.RXRECCLK_OUT.CLK_DOMAIN" xilinx:valuePermission="bd"/>
             <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.RXRECCLK_OUT.FREQ_HZ" xilinx:valueSource="user" xilinx:valuePermission="bd"/>
-            <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.RXRECCLK_OUT.PHASE" xilinx:valuePermission="bd"/>
             <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.TXOUTCLK.FREQ_HZ" xilinx:valueSource="user" xilinx:valuePermission="bd"/>
             <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.TXUSRCLK.FREQ_HZ" xilinx:valueSource="user" xilinx:valuePermission="bd"/>
             <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.TXUSRCLK2.FREQ_HZ" xilinx:valueSource="user" xilinx:valuePermission="bd"/>
             <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.TXUSRCLK2_OUT.ASSOCIATED_BUSIF" xilinx:valueSource="user" xilinx:valuePermission="bd"/>
             <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.TXUSRCLK2_OUT.ASSOCIATED_RESET" xilinx:valueSource="user" xilinx:valuePermission="bd"/>
-            <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.TXUSRCLK2_OUT.CLK_DOMAIN" xilinx:valuePermission="bd"/>
             <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.TXUSRCLK2_OUT.FREQ_HZ" xilinx:valueSource="user" xilinx:valuePermission="bd"/>
-            <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.TXUSRCLK2_OUT.PHASE" xilinx:valuePermission="bd"/>
-            <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.TXUSRCLK_OUT.ASSOCIATED_BUSIF" xilinx:valuePermission="bd"/>
-            <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.TXUSRCLK_OUT.ASSOCIATED_RESET" xilinx:valuePermission="bd"/>
-            <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.TXUSRCLK_OUT.CLK_DOMAIN" xilinx:valuePermission="bd"/>
             <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.TXUSRCLK_OUT.FREQ_HZ" xilinx:valueSource="user" xilinx:valuePermission="bd"/>
-            <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.TXUSRCLK_OUT.PHASE" xilinx:valuePermission="bd"/>
             <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.DClkRate" xilinx:valueSource="user"/>
             <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.IEEE_1588" xilinx:valueSource="user"/>
             <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.Locations" xilinx:valueSource="user"/>

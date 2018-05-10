@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
--- Date        : Thu May  3 11:59:48 2018
--- Host        : ug238 running 64-bit Debian GNU/Linux 9.4 (stretch)
+-- Date        : Thu May 10 15:25:58 2018
+-- Host        : ug239 running 64-bit Debian GNU/Linux 9.4 (stretch)
 -- Command     : write_vhdl -force -mode funcsim
---               /nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_dlmb_bram_if_cntlr_0/shell_dlmb_bram_if_cntlr_0_sim_netlist.vhdl
+--               /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_dlmb_bram_if_cntlr_0/shell_dlmb_bram_if_cntlr_0_sim_netlist.vhdl
 -- Design      : shell_dlmb_bram_if_cntlr_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -121,7 +121,7 @@ entity shell_dlmb_bram_if_cntlr_0_lmb_bram_if_cntlr is
   attribute C_LMB_DWIDTH : integer;
   attribute C_LMB_DWIDTH of shell_dlmb_bram_if_cntlr_0_lmb_bram_if_cntlr : entity is 32;
   attribute C_MASK : string;
-  attribute C_MASK of shell_dlmb_bram_if_cntlr_0_lmb_bram_if_cntlr : entity is "64'b0000000000000000000000000000000001000000000000000000000000000000";
+  attribute C_MASK of shell_dlmb_bram_if_cntlr_0_lmb_bram_if_cntlr : entity is "64'b0000000000000000000000000000000011000000000000000000000000000000";
   attribute C_MASK1 : string;
   attribute C_MASK1 of shell_dlmb_bram_if_cntlr_0_lmb_bram_if_cntlr : entity is "64'b0000000000000000000000000000000000000000100000000000000000000000";
   attribute C_MASK2 : string;
@@ -158,8 +158,8 @@ architecture STRUCTURE of shell_dlmb_bram_if_cntlr_0_lmb_bram_if_cntlr is
   signal lmb_select : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
   attribute SOFT_HLUTNM of \BRAM_WEN_A[0]_INST_0\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \BRAM_WEN_A[1]_INST_0\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \BRAM_WEN_A[2]_INST_0\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \BRAM_WEN_A[1]_INST_0\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \BRAM_WEN_A[2]_INST_0\ : label is "soft_lutpair1";
   attribute SOFT_HLUTNM of \BRAM_WEN_A[3]_INST_0\ : label is "soft_lutpair0";
 begin
   BRAM_Addr_A(0 to 31) <= \^lmb_abus\(0 to 31);
@@ -328,56 +328,61 @@ begin
   \^lmb_addrstrobe\ <= LMB_AddrStrobe;
   \^lmb_clk\ <= LMB_Clk;
   \^lmb_writedbus\(0 to 31) <= LMB_WriteDBus(0 to 31);
-\BRAM_WEN_A[0]_INST_0\: unisim.vcomponents.LUT3
+\BRAM_WEN_A[0]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"20"
+      INIT => X"0200"
     )
         port map (
       I0 => LMB_BE(0),
       I1 => \^lmb_abus\(1),
-      I2 => LMB_WriteStrobe,
+      I2 => \^lmb_abus\(0),
+      I3 => LMB_WriteStrobe,
       O => BRAM_WEN_A(0)
     );
-\BRAM_WEN_A[1]_INST_0\: unisim.vcomponents.LUT3
+\BRAM_WEN_A[1]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"40"
+      INIT => X"1000"
     )
         port map (
       I0 => \^lmb_abus\(1),
-      I1 => LMB_WriteStrobe,
-      I2 => LMB_BE(1),
+      I1 => \^lmb_abus\(0),
+      I2 => LMB_WriteStrobe,
+      I3 => LMB_BE(1),
       O => BRAM_WEN_A(1)
     );
-\BRAM_WEN_A[2]_INST_0\: unisim.vcomponents.LUT3
+\BRAM_WEN_A[2]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"40"
+      INIT => X"1000"
     )
         port map (
       I0 => \^lmb_abus\(1),
-      I1 => LMB_WriteStrobe,
-      I2 => LMB_BE(2),
+      I1 => \^lmb_abus\(0),
+      I2 => LMB_WriteStrobe,
+      I3 => LMB_BE(2),
       O => BRAM_WEN_A(2)
     );
-\BRAM_WEN_A[3]_INST_0\: unisim.vcomponents.LUT3
+\BRAM_WEN_A[3]_INST_0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"40"
+      INIT => X"1000"
     )
         port map (
       I0 => \^lmb_abus\(1),
-      I1 => LMB_WriteStrobe,
-      I2 => LMB_BE(3),
+      I1 => \^lmb_abus\(0),
+      I2 => LMB_WriteStrobe,
+      I3 => LMB_BE(3),
       O => BRAM_WEN_A(3)
     );
 GND: unisim.vcomponents.GND
      port map (
       G => \<const0>\
     );
-\No_ECC.Sl_Rdy_i_1\: unisim.vcomponents.LUT1
+\No_ECC.Sl_Rdy_i_1\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"1"
     )
         port map (
       I0 => \^lmb_abus\(1),
+      I1 => \^lmb_abus\(0),
       O => lmb_select
     );
 \No_ECC.Sl_Rdy_reg\: unisim.vcomponents.FDRE
@@ -499,7 +504,7 @@ architecture STRUCTURE of shell_dlmb_bram_if_cntlr_0 is
   attribute C_LMB_DWIDTH : integer;
   attribute C_LMB_DWIDTH of U0 : label is 32;
   attribute C_MASK : string;
-  attribute C_MASK of U0 : label is "64'b0000000000000000000000000000000001000000000000000000000000000000";
+  attribute C_MASK of U0 : label is "64'b0000000000000000000000000000000011000000000000000000000000000000";
   attribute C_MASK1 : string;
   attribute C_MASK1 of U0 : label is "64'b0000000000000000000000000000000000000000100000000000000000000000";
   attribute C_MASK2 : string;

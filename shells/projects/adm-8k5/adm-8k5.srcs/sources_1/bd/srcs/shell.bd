@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:BoundaryCRC="0x69BE7995A2695C89" bd:device="xcku115-flva1517-2-e" bd:synthFlowMode="Hierarchical" bd:tool_version="2018.1" bd:top="shell" bd:version="1.00.a">
+<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:BoundaryCRC="0xE5DDBA11D51DEADF" bd:device="xcku115-flva1517-2-e" bd:isValidated="true" bd:synthFlowMode="Hierarchical" bd:tool_version="2018.1" bd:top="shell" bd:version="1.00.a">
 
   <spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
     <spirit:vendor>xilinx.com</spirit:vendor>
@@ -26,8 +26,22 @@
         <spirit:abstractionType spirit:library="interface" spirit:name="diff_clock_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
         <spirit:parameters>
           <spirit:parameter>
+            <spirit:name>CAN_DEBUG</spirit:name>
+            <spirit:value>false</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
             <spirit:name>FREQ_HZ</spirit:name>
             <spirit:value>100000000</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:busInterface>
@@ -36,7 +50,116 @@
         <spirit:master/>
         <spirit:busType spirit:library="interface" spirit:name="axis" spirit:vendor="xilinx.com" spirit:version="1.0"/>
         <spirit:abstractionType spirit:library="interface" spirit:name="axis_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:parameters/>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>TDATA_NUM_BYTES</spirit:name>
+            <spirit:value>8</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="const_prop"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>TDEST_WIDTH</spirit:name>
+            <spirit:value>0</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="const_prop"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>TID_WIDTH</spirit:name>
+            <spirit:value>0</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="const_prop"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>TUSER_WIDTH</spirit:name>
+            <spirit:value>0</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="const_prop"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>HAS_TREADY</spirit:name>
+            <spirit:value>1</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="const_prop"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>HAS_TSTRB</spirit:name>
+            <spirit:value>0</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="const_prop"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>HAS_TKEEP</spirit:name>
+            <spirit:value>1</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="const_prop"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>HAS_TLAST</spirit:name>
+            <spirit:value>1</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="const_prop"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>FREQ_HZ</spirit:name>
+            <spirit:value>156250000</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user_prop"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>PHASE</spirit:name>
+            <spirit:value>0.000</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>CLK_DOMAIN</spirit:name>
+            <spirit:value>bd_01e2_xpcs_0_txusrclk2_out</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default_prop"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>LAYERED_METADATA</spirit:name>
+            <spirit:value>xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} TDATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 64} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}} TDATA_WIDTH 64}</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="ip_prop"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+        </spirit:parameters>
       </spirit:busInterface>
       <spirit:busInterface>
         <spirit:name>M_AXI</spirit:name>
@@ -47,34 +170,272 @@
           <spirit:parameter>
             <spirit:name>DATA_WIDTH</spirit:name>
             <spirit:value>256</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>PROTOCOL</spirit:name>
             <spirit:value>AXI4</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>FREQ_HZ</spirit:name>
+            <spirit:value>250000000</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user_prop"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>ID_WIDTH</spirit:name>
+            <spirit:value>0</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="const_prop"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>ADDR_WIDTH</spirit:name>
             <spirit:value>64</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>AWUSER_WIDTH</spirit:name>
+            <spirit:value>0</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="const_prop"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>ARUSER_WIDTH</spirit:name>
+            <spirit:value>0</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="const_prop"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>WUSER_WIDTH</spirit:name>
+            <spirit:value>0</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="const_prop"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>RUSER_WIDTH</spirit:name>
+            <spirit:value>0</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="const_prop"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>BUSER_WIDTH</spirit:name>
+            <spirit:value>0</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="const_prop"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>READ_WRITE_MODE</spirit:name>
+            <spirit:value>READ_WRITE</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>HAS_BURST</spirit:name>
             <spirit:value>0</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>HAS_LOCK</spirit:name>
+            <spirit:value>1</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default_prop"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>HAS_PROT</spirit:name>
+            <spirit:value>1</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="const_prop"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>HAS_CACHE</spirit:name>
+            <spirit:value>1</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default_prop"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>HAS_QOS</spirit:name>
             <spirit:value>0</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>HAS_REGION</spirit:name>
             <spirit:value>0</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>HAS_WSTRB</spirit:name>
+            <spirit:value>1</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="const_prop"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>HAS_BRESP</spirit:name>
+            <spirit:value>1</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="const_prop"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>HAS_RRESP</spirit:name>
+            <spirit:value>1</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>SUPPORTS_NARROW_BURST</spirit:name>
+            <spirit:value>0</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="ip_prop"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>NUM_READ_OUTSTANDING</spirit:name>
             <spirit:value>16</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>NUM_WRITE_OUTSTANDING</spirit:name>
             <spirit:value>16</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>MAX_BURST_LENGTH</spirit:name>
+            <spirit:value>1</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="ip_prop"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>PHASE</spirit:name>
+            <spirit:value>0.000</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>CLK_DOMAIN</spirit:name>
+            <spirit:value>shell_xdma_0_0_axi_aclk</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default_prop"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>NUM_READ_THREADS</spirit:name>
+            <spirit:value>1</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>NUM_WRITE_THREADS</spirit:name>
+            <spirit:value>1</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>RUSER_BITS_PER_BYTE</spirit:name>
+            <spirit:value>0</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>WUSER_BITS_PER_BYTE</spirit:name>
+            <spirit:value>0</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:busInterface>
@@ -87,38 +448,110 @@
           <spirit:parameter>
             <spirit:name>TDATA_NUM_BYTES</spirit:name>
             <spirit:value>8</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>TDEST_WIDTH</spirit:name>
             <spirit:value>0</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>TID_WIDTH</spirit:name>
             <spirit:value>0</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>TUSER_WIDTH</spirit:name>
             <spirit:value>0</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>HAS_TREADY</spirit:name>
             <spirit:value>1</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>HAS_TSTRB</spirit:name>
             <spirit:value>0</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>HAS_TKEEP</spirit:name>
             <spirit:value>1</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>HAS_TLAST</spirit:name>
             <spirit:value>1</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>FREQ_HZ</spirit:name>
+            <spirit:value>156250000</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user_prop"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>PHASE</spirit:name>
+            <spirit:value>0.000</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>CLK_DOMAIN</spirit:name>
+            <spirit:value>bd_01e2_xpcs_0_txusrclk2_out</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default_prop"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>LAYERED_METADATA</spirit:name>
             <spirit:value>xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} TDATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 64} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}} TDATA_WIDTH 64}</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:busInterface>
@@ -131,110 +564,272 @@
           <spirit:parameter>
             <spirit:name>DATA_WIDTH</spirit:name>
             <spirit:value>512</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>PROTOCOL</spirit:name>
             <spirit:value>AXI4</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>FREQ_HZ</spirit:name>
+            <spirit:value>156250000</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user_prop"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>ID_WIDTH</spirit:name>
             <spirit:value>1</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>ADDR_WIDTH</spirit:name>
             <spirit:value>32</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>AWUSER_WIDTH</spirit:name>
             <spirit:value>0</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>ARUSER_WIDTH</spirit:name>
             <spirit:value>0</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>WUSER_WIDTH</spirit:name>
             <spirit:value>0</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>RUSER_WIDTH</spirit:name>
             <spirit:value>0</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>BUSER_WIDTH</spirit:name>
             <spirit:value>0</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>READ_WRITE_MODE</spirit:name>
             <spirit:value>READ_WRITE</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>HAS_BURST</spirit:name>
             <spirit:value>1</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>HAS_LOCK</spirit:name>
             <spirit:value>1</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>HAS_PROT</spirit:name>
             <spirit:value>1</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>HAS_CACHE</spirit:name>
             <spirit:value>1</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>HAS_QOS</spirit:name>
             <spirit:value>1</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>HAS_REGION</spirit:name>
             <spirit:value>0</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>HAS_WSTRB</spirit:name>
             <spirit:value>1</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>HAS_BRESP</spirit:name>
             <spirit:value>1</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>HAS_RRESP</spirit:name>
             <spirit:value>1</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>SUPPORTS_NARROW_BURST</spirit:name>
             <spirit:value>1</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>NUM_READ_OUTSTANDING</spirit:name>
             <spirit:value>2</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>NUM_WRITE_OUTSTANDING</spirit:name>
             <spirit:value>2</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>MAX_BURST_LENGTH</spirit:name>
             <spirit:value>256</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>PHASE</spirit:name>
+            <spirit:value>0.000</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>CLK_DOMAIN</spirit:name>
+            <spirit:value>bd_01e2_xpcs_0_txusrclk2_out</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default_prop"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>NUM_READ_THREADS</spirit:name>
             <spirit:value>1</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>NUM_WRITE_THREADS</spirit:name>
             <spirit:value>1</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>RUSER_BITS_PER_BYTE</spirit:name>
             <spirit:value>0</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>WUSER_BITS_PER_BYTE</spirit:name>
             <spirit:value>0</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:busInterface>
@@ -259,6 +854,29 @@
           <spirit:parameter>
             <spirit:name>FREQ_HZ</spirit:name>
             <spirit:value>200000000</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>PHASE</spirit:name>
+            <spirit:value>0.000</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>CLK_DOMAIN</spirit:name>
+            <spirit:value>shell_refclk200</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:busInterface>
@@ -281,8 +899,40 @@
         </spirit:portMaps>
         <spirit:parameters>
           <spirit:parameter>
+            <spirit:name>FREQ_HZ</spirit:name>
+            <spirit:value>250000000</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user_prop"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>PHASE</spirit:name>
+            <spirit:value>0.000</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>CLK_DOMAIN</spirit:name>
+            <spirit:value>shell_xdma_0_0_axi_aclk</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default_prop"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
             <spirit:name>ASSOCIATED_BUSIF</spirit:name>
             <spirit:value>M_AXI</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:busInterface>
@@ -305,8 +955,40 @@
         </spirit:portMaps>
         <spirit:parameters>
           <spirit:parameter>
+            <spirit:name>FREQ_HZ</spirit:name>
+            <spirit:value>156250000</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user_prop"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>PHASE</spirit:name>
+            <spirit:value>0.000</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>CLK_DOMAIN</spirit:name>
+            <spirit:value>bd_01e2_xpcs_0_txusrclk2_out</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default_prop"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
             <spirit:name>ASSOCIATED_BUSIF</spirit:name>
             <spirit:value>M_AXIS:S_AXIS:S_AXI_MEM</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:busInterface>
@@ -327,7 +1009,26 @@
             </spirit:physicalPort>
           </spirit:portMap>
         </spirit:portMaps>
-        <spirit:parameters/>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>FREQ_HZ</spirit:name>
+            <spirit:value>100000000</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>PHASE</spirit:name>
+            <spirit:value>0.000</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+        </spirit:parameters>
       </spirit:busInterface>
       <spirit:busInterface>
         <spirit:name>CLK.C0_DDR4_CK_C_0</spirit:name>
@@ -346,7 +1047,26 @@
             </spirit:physicalPort>
           </spirit:portMap>
         </spirit:portMaps>
-        <spirit:parameters/>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>FREQ_HZ</spirit:name>
+            <spirit:value>100000000</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>PHASE</spirit:name>
+            <spirit:value>0.000</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+        </spirit:parameters>
       </spirit:busInterface>
       <spirit:busInterface>
         <spirit:name>CLK.C0_SYS_CLK_N_0</spirit:name>
@@ -365,7 +1085,35 @@
             </spirit:physicalPort>
           </spirit:portMap>
         </spirit:portMaps>
-        <spirit:parameters/>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>FREQ_HZ</spirit:name>
+            <spirit:value>100000000</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>PHASE</spirit:name>
+            <spirit:value>0.000</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>CLK_DOMAIN</spirit:name>
+            <spirit:value>shell_c0_sys_clk_n_0</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+        </spirit:parameters>
       </spirit:busInterface>
       <spirit:busInterface>
         <spirit:name>CLK.C0_SYS_CLK_P_0</spirit:name>
@@ -384,7 +1132,35 @@
             </spirit:physicalPort>
           </spirit:portMap>
         </spirit:portMaps>
-        <spirit:parameters/>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>FREQ_HZ</spirit:name>
+            <spirit:value>100000000</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>PHASE</spirit:name>
+            <spirit:value>0.000</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>CLK_DOMAIN</spirit:name>
+            <spirit:value>shell_c0_sys_clk_p_0</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+        </spirit:parameters>
       </spirit:busInterface>
     </spirit:busInterfaces>
     <spirit:model>
@@ -627,7 +1403,14 @@
         <spirit:name>S_AXI_MEM</spirit:name>
         <spirit:range>4G</spirit:range>
         <spirit:width>32</spirit:width>
-        <spirit:segments/>
+        <spirit:segments>
+          <spirit:segment>
+            <spirit:name>SEG_ddr4_0_C0_DDR4_ADDRESS_BLOCK</spirit:name>
+            <spirit:displayName>/mem_interface/ddr4_0/C0_DDR4_MEMORY_MAP/C0_DDR4_ADDRESS_BLOCK</spirit:displayName>
+            <spirit:addressOffset>0x00000000</spirit:addressOffset>
+            <spirit:range>1G</spirit:range>
+          </spirit:segment>
+        </spirit:segments>
       </spirit:addressSpace>
     </spirit:addressSpaces>
     <spirit:memoryMaps>
@@ -730,6 +1513,8 @@
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">shell_axi_interconnect_0_0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="NUM_SI">2</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="NUM_MI">2</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="ENABLE_ADVANCED_OPTIONS">0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="XBAR_DATA_WIDTH">32</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="appcore">xilinx.com:ip:axi_interconnect:2.1</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
@@ -738,30 +1523,20 @@
         <spirit:componentRef spirit:library="ip" spirit:name="axi_bram_ctrl" spirit:vendor="xilinx.com" spirit:version="4.0"/>
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">shell_axi_bram_ctrl_0_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="DATA_WIDTH">64</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PROTOCOL">AXI4LITE</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="SINGLE_PORT_BRAM">1</spirit:configurableElementValue>
         </spirit:configurableElementValues>
         <bd:hdl_attributes/>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>blk_mem_gen_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="ip" spirit:name="blk_mem_gen" spirit:vendor="xilinx.com" spirit:version="8.4"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">shell_blk_mem_gen_0_0</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
         <spirit:instanceName>mem_interface</spirit:instanceName>
         <spirit:componentRef spirit:library="BlockDiagram/shell_imp" spirit:name="mem_interface" spirit:vendor="xilinx.com" spirit:version="1.00.a"/>
       </spirit:componentInstance>
       <spirit:componentInstance>
-        <spirit:instanceName>axi_interconnect_1</spirit:instanceName>
-        <spirit:componentRef spirit:library="BlockDiagram/shell_imp" spirit:name="axi_interconnect_1" spirit:vendor="xilinx.com" spirit:version="1.00.a"/>
+        <spirit:instanceName>blk_mem_gen_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="blk_mem_gen" spirit:vendor="xilinx.com" spirit:version="8.4"/>
         <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">shell_axi_interconnect_0_1</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="NUM_SI">1</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="NUM_MI">2</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="appcore">xilinx.com:ip:axi_interconnect:2.1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">shell_blk_mem_gen_0_0</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
     </spirit:componentInstances>
@@ -797,9 +1572,14 @@
         <spirit:activeInterface spirit:busRef="M03_AXI" spirit:componentRef="control"/>
       </spirit:interconnection>
       <spirit:interconnection>
-        <spirit:name>axi_interconnect_0_M00_AXI</spirit:name>
-        <spirit:activeInterface spirit:busRef="M00_AXI" spirit:componentRef="axi_interconnect_0"/>
-        <spirit:activeInterface spirit:busRef="S_AXI" spirit:componentRef="axi_bram_ctrl_0"/>
+        <spirit:name>PCIe_M_AXI</spirit:name>
+        <spirit:activeInterface spirit:busRef="M_AXI" spirit:componentRef="PCIe"/>
+        <spirit:activeInterface spirit:busRef="PCIE_AXI" spirit:componentRef="mem_interface"/>
+      </spirit:interconnection>
+      <spirit:interconnection>
+        <spirit:name>S01_AXI_1</spirit:name>
+        <spirit:activeInterface spirit:busRef="S01_AXI" spirit:componentRef="axi_interconnect_0"/>
+        <spirit:activeInterface spirit:busRef="M_AXI_LITE" spirit:componentRef="PCIe"/>
       </spirit:interconnection>
       <spirit:interconnection>
         <spirit:name>axi_bram_ctrl_0_BRAM_PORTA</spirit:name>
@@ -807,19 +1587,9 @@
         <spirit:activeInterface spirit:busRef="BRAM_PORTA" spirit:componentRef="axi_bram_ctrl_0"/>
       </spirit:interconnection>
       <spirit:interconnection>
-        <spirit:name>axi_interconnect_1_M00_AXI</spirit:name>
-        <spirit:activeInterface spirit:busRef="M00_AXI" spirit:componentRef="axi_interconnect_1"/>
-        <spirit:activeInterface spirit:busRef="PCIE_AXI" spirit:componentRef="mem_interface"/>
-      </spirit:interconnection>
-      <spirit:interconnection>
-        <spirit:name>S00_AXI_2</spirit:name>
-        <spirit:activeInterface spirit:busRef="S00_AXI" spirit:componentRef="axi_interconnect_1"/>
-        <spirit:activeInterface spirit:busRef="M_AXI" spirit:componentRef="PCIe"/>
-      </spirit:interconnection>
-      <spirit:interconnection>
-        <spirit:name>axi_interconnect_1_M01_AXI</spirit:name>
-        <spirit:activeInterface spirit:busRef="M01_AXI" spirit:componentRef="axi_interconnect_1"/>
-        <spirit:activeInterface spirit:busRef="S01_AXI" spirit:componentRef="axi_interconnect_0"/>
+        <spirit:name>axi_interconnect_0_M00_AXI</spirit:name>
+        <spirit:activeInterface spirit:busRef="S_AXI" spirit:componentRef="axi_bram_ctrl_0"/>
+        <spirit:activeInterface spirit:busRef="M00_AXI" spirit:componentRef="axi_interconnect_0"/>
       </spirit:interconnection>
     </spirit:interconnections>
     <spirit:adHocConnections>
@@ -897,9 +1667,6 @@
         <spirit:internalPortReference spirit:componentRef="util_vector_logic_2" spirit:portRef="Op1"/>
         <spirit:internalPortReference spirit:componentRef="axi_interconnect_0" spirit:portRef="M01_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="axi_interconnect_0" spirit:portRef="S01_ARESETN"/>
-        <spirit:internalPortReference spirit:componentRef="axi_interconnect_1" spirit:portRef="S00_ARESETN"/>
-        <spirit:internalPortReference spirit:componentRef="axi_interconnect_1" spirit:portRef="ARESETN"/>
-        <spirit:internalPortReference spirit:componentRef="axi_interconnect_1" spirit:portRef="M00_ARESETN"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>util_vector_logic_0_Res</spirit:name>
@@ -928,9 +1695,6 @@
         <spirit:internalPortReference spirit:componentRef="axi_interconnect_0" spirit:portRef="M01_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="axi_interconnect_0" spirit:portRef="S01_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="mem_interface" spirit:portRef="PCIE_ACLK"/>
-        <spirit:internalPortReference spirit:componentRef="axi_interconnect_1" spirit:portRef="ACLK"/>
-        <spirit:internalPortReference spirit:componentRef="axi_interconnect_1" spirit:portRef="S00_ACLK"/>
-        <spirit:internalPortReference spirit:componentRef="axi_interconnect_1" spirit:portRef="M00_ACLK"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>network_clk_156</spirit:name>
@@ -1045,841 +1809,6 @@
       </spirit:hierConnection>
       <spirit:hierConnection spirit:interfaceRef="S_AXI_MEM/MEM_AXI_0_1">
         <spirit:activeInterface spirit:busRef="MEM_AXI" spirit:componentRef="mem_interface"/>
-      </spirit:hierConnection>
-    </spirit:hierConnections>
-  </spirit:design>
-
-  <spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
-    <spirit:vendor>xilinx.com</spirit:vendor>
-    <spirit:library>BlockDiagram/shell_imp</spirit:library>
-    <spirit:name>axi_interconnect_1</spirit:name>
-    <spirit:version>1.00.a</spirit:version>
-    <spirit:busInterfaces>
-      <spirit:busInterface>
-        <spirit:name>S00_AXI</spirit:name>
-        <spirit:slave/>
-        <spirit:busType spirit:library="interface" spirit:name="aximm" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:abstractionType spirit:library="interface" spirit:name="aximm_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-      </spirit:busInterface>
-      <spirit:busInterface>
-        <spirit:name>M00_AXI</spirit:name>
-        <spirit:master/>
-        <spirit:busType spirit:library="interface" spirit:name="aximm" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:abstractionType spirit:library="interface" spirit:name="aximm_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-      </spirit:busInterface>
-      <spirit:busInterface>
-        <spirit:name>M01_AXI</spirit:name>
-        <spirit:master/>
-        <spirit:busType spirit:library="interface" spirit:name="aximm" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:abstractionType spirit:library="interface" spirit:name="aximm_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-      </spirit:busInterface>
-      <spirit:busInterface>
-        <spirit:name>CLK.ACLK</spirit:name>
-        <spirit:displayName>Clk</spirit:displayName>
-        <spirit:description>Clock</spirit:description>
-        <spirit:busType spirit:library="signal" spirit:name="clock" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:abstractionType spirit:library="signal" spirit:name="clock_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:slave/>
-        <spirit:portMaps>
-          <spirit:portMap>
-            <spirit:logicalPort>
-              <spirit:name>CLK</spirit:name>
-            </spirit:logicalPort>
-            <spirit:physicalPort>
-              <spirit:name>ACLK</spirit:name>
-            </spirit:physicalPort>
-          </spirit:portMap>
-        </spirit:portMaps>
-        <spirit:parameters>
-          <spirit:parameter>
-            <spirit:name>ASSOCIATED_RESET</spirit:name>
-            <spirit:value>ARESETN</spirit:value>
-          </spirit:parameter>
-        </spirit:parameters>
-      </spirit:busInterface>
-      <spirit:busInterface>
-        <spirit:name>RST.ARESETN</spirit:name>
-        <spirit:displayName>Reset</spirit:displayName>
-        <spirit:description>Reset</spirit:description>
-        <spirit:busType spirit:library="signal" spirit:name="reset" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:abstractionType spirit:library="signal" spirit:name="reset_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:slave/>
-        <spirit:portMaps>
-          <spirit:portMap>
-            <spirit:logicalPort>
-              <spirit:name>RST</spirit:name>
-            </spirit:logicalPort>
-            <spirit:physicalPort>
-              <spirit:name>ARESETN</spirit:name>
-            </spirit:physicalPort>
-          </spirit:portMap>
-        </spirit:portMaps>
-      </spirit:busInterface>
-      <spirit:busInterface>
-        <spirit:name>CLK.S00_ACLK</spirit:name>
-        <spirit:displayName>Clk</spirit:displayName>
-        <spirit:description>Clock</spirit:description>
-        <spirit:busType spirit:library="signal" spirit:name="clock" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:abstractionType spirit:library="signal" spirit:name="clock_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:slave/>
-        <spirit:portMaps>
-          <spirit:portMap>
-            <spirit:logicalPort>
-              <spirit:name>CLK</spirit:name>
-            </spirit:logicalPort>
-            <spirit:physicalPort>
-              <spirit:name>S00_ACLK</spirit:name>
-            </spirit:physicalPort>
-          </spirit:portMap>
-        </spirit:portMaps>
-        <spirit:parameters>
-          <spirit:parameter>
-            <spirit:name>ASSOCIATED_BUSIF</spirit:name>
-            <spirit:value>S00_AXI</spirit:value>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>ASSOCIATED_RESET</spirit:name>
-            <spirit:value>S00_ARESETN</spirit:value>
-          </spirit:parameter>
-        </spirit:parameters>
-      </spirit:busInterface>
-      <spirit:busInterface>
-        <spirit:name>RST.S00_ARESETN</spirit:name>
-        <spirit:displayName>Reset</spirit:displayName>
-        <spirit:description>Reset</spirit:description>
-        <spirit:busType spirit:library="signal" spirit:name="reset" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:abstractionType spirit:library="signal" spirit:name="reset_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:slave/>
-        <spirit:portMaps>
-          <spirit:portMap>
-            <spirit:logicalPort>
-              <spirit:name>RST</spirit:name>
-            </spirit:logicalPort>
-            <spirit:physicalPort>
-              <spirit:name>S00_ARESETN</spirit:name>
-            </spirit:physicalPort>
-          </spirit:portMap>
-        </spirit:portMaps>
-      </spirit:busInterface>
-      <spirit:busInterface>
-        <spirit:name>CLK.M00_ACLK</spirit:name>
-        <spirit:displayName>Clk</spirit:displayName>
-        <spirit:description>Clock</spirit:description>
-        <spirit:busType spirit:library="signal" spirit:name="clock" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:abstractionType spirit:library="signal" spirit:name="clock_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:slave/>
-        <spirit:portMaps>
-          <spirit:portMap>
-            <spirit:logicalPort>
-              <spirit:name>CLK</spirit:name>
-            </spirit:logicalPort>
-            <spirit:physicalPort>
-              <spirit:name>M00_ACLK</spirit:name>
-            </spirit:physicalPort>
-          </spirit:portMap>
-        </spirit:portMaps>
-        <spirit:parameters>
-          <spirit:parameter>
-            <spirit:name>ASSOCIATED_BUSIF</spirit:name>
-            <spirit:value>M00_AXI</spirit:value>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>ASSOCIATED_RESET</spirit:name>
-            <spirit:value>M00_ARESETN</spirit:value>
-          </spirit:parameter>
-        </spirit:parameters>
-      </spirit:busInterface>
-      <spirit:busInterface>
-        <spirit:name>RST.M00_ARESETN</spirit:name>
-        <spirit:displayName>Reset</spirit:displayName>
-        <spirit:description>Reset</spirit:description>
-        <spirit:busType spirit:library="signal" spirit:name="reset" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:abstractionType spirit:library="signal" spirit:name="reset_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:slave/>
-        <spirit:portMaps>
-          <spirit:portMap>
-            <spirit:logicalPort>
-              <spirit:name>RST</spirit:name>
-            </spirit:logicalPort>
-            <spirit:physicalPort>
-              <spirit:name>M00_ARESETN</spirit:name>
-            </spirit:physicalPort>
-          </spirit:portMap>
-        </spirit:portMaps>
-      </spirit:busInterface>
-      <spirit:busInterface>
-        <spirit:name>CLK.M01_ACLK</spirit:name>
-        <spirit:displayName>Clk</spirit:displayName>
-        <spirit:description>Clock</spirit:description>
-        <spirit:busType spirit:library="signal" spirit:name="clock" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:abstractionType spirit:library="signal" spirit:name="clock_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:slave/>
-        <spirit:portMaps>
-          <spirit:portMap>
-            <spirit:logicalPort>
-              <spirit:name>CLK</spirit:name>
-            </spirit:logicalPort>
-            <spirit:physicalPort>
-              <spirit:name>M01_ACLK</spirit:name>
-            </spirit:physicalPort>
-          </spirit:portMap>
-        </spirit:portMaps>
-        <spirit:parameters>
-          <spirit:parameter>
-            <spirit:name>ASSOCIATED_BUSIF</spirit:name>
-            <spirit:value>M01_AXI</spirit:value>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>ASSOCIATED_RESET</spirit:name>
-            <spirit:value>M01_ARESETN</spirit:value>
-          </spirit:parameter>
-        </spirit:parameters>
-      </spirit:busInterface>
-      <spirit:busInterface>
-        <spirit:name>RST.M01_ARESETN</spirit:name>
-        <spirit:displayName>Reset</spirit:displayName>
-        <spirit:description>Reset</spirit:description>
-        <spirit:busType spirit:library="signal" spirit:name="reset" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:abstractionType spirit:library="signal" spirit:name="reset_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:slave/>
-        <spirit:portMaps>
-          <spirit:portMap>
-            <spirit:logicalPort>
-              <spirit:name>RST</spirit:name>
-            </spirit:logicalPort>
-            <spirit:physicalPort>
-              <spirit:name>M01_ARESETN</spirit:name>
-            </spirit:physicalPort>
-          </spirit:portMap>
-        </spirit:portMaps>
-      </spirit:busInterface>
-    </spirit:busInterfaces>
-    <spirit:model>
-      <spirit:views>
-        <spirit:view>
-          <spirit:name>BlockDiagram</spirit:name>
-          <spirit:envIdentifier>:vivado.xilinx.com:</spirit:envIdentifier>
-          <spirit:hierarchyRef spirit:library="BlockDiagram/shell_imp" spirit:name="axi_interconnect_1_imp" spirit:vendor="xilinx.com" spirit:version="1.00.a"/>
-        </spirit:view>
-      </spirit:views>
-      <spirit:ports>
-        <spirit:port>
-          <spirit:name>ACLK</spirit:name>
-          <spirit:wire>
-            <spirit:direction>in</spirit:direction>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
-          <spirit:name>ARESETN</spirit:name>
-          <spirit:wire>
-            <spirit:direction>in</spirit:direction>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
-          <spirit:name>S00_ACLK</spirit:name>
-          <spirit:wire>
-            <spirit:direction>in</spirit:direction>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
-          <spirit:name>S00_ARESETN</spirit:name>
-          <spirit:wire>
-            <spirit:direction>in</spirit:direction>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
-          <spirit:name>M00_ACLK</spirit:name>
-          <spirit:wire>
-            <spirit:direction>in</spirit:direction>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
-          <spirit:name>M00_ARESETN</spirit:name>
-          <spirit:wire>
-            <spirit:direction>in</spirit:direction>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
-          <spirit:name>M01_ACLK</spirit:name>
-          <spirit:wire>
-            <spirit:direction>in</spirit:direction>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
-          <spirit:name>M01_ARESETN</spirit:name>
-          <spirit:wire>
-            <spirit:direction>in</spirit:direction>
-          </spirit:wire>
-        </spirit:port>
-      </spirit:ports>
-    </spirit:model>
-  </spirit:component>
-
-  <spirit:design xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
-    <spirit:vendor>xilinx.com</spirit:vendor>
-    <spirit:library>BlockDiagram/shell_imp</spirit:library>
-    <spirit:name>axi_interconnect_1_imp</spirit:name>
-    <spirit:version>1.00.a</spirit:version>
-    <spirit:componentInstances>
-      <spirit:componentInstance>
-        <spirit:instanceName>xbar</spirit:instanceName>
-        <spirit:componentRef spirit:library="ip" spirit:name="axi_crossbar" spirit:vendor="xilinx.com" spirit:version="2.1"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">shell_xbar_4</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="NUM_SI">1</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="NUM_MI">2</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="STRATEGY">0</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>s00_couplers</spirit:instanceName>
-        <spirit:componentRef spirit:library="BlockDiagram/shell_imp/axi_interconnect_1_imp" spirit:name="s00_couplers" spirit:vendor="xilinx.com" spirit:version="1.00.a"/>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>m00_couplers</spirit:instanceName>
-        <spirit:componentRef spirit:library="BlockDiagram/shell_imp/axi_interconnect_1_imp" spirit:name="m00_couplers" spirit:vendor="xilinx.com" spirit:version="1.00.a"/>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>m01_couplers</spirit:instanceName>
-        <spirit:componentRef spirit:library="BlockDiagram/shell_imp/axi_interconnect_1_imp" spirit:name="m01_couplers" spirit:vendor="xilinx.com" spirit:version="1.00.a"/>
-      </spirit:componentInstance>
-    </spirit:componentInstances>
-    <spirit:interconnections>
-      <spirit:interconnection>
-        <spirit:name>s00_couplers_to_xbar</spirit:name>
-        <spirit:activeInterface spirit:busRef="M_AXI" spirit:componentRef="s00_couplers"/>
-        <spirit:activeInterface spirit:busRef="S00_AXI" spirit:componentRef="xbar"/>
-      </spirit:interconnection>
-      <spirit:interconnection>
-        <spirit:name>xbar_to_m00_couplers</spirit:name>
-        <spirit:activeInterface spirit:busRef="M00_AXI" spirit:componentRef="xbar"/>
-        <spirit:activeInterface spirit:busRef="S_AXI" spirit:componentRef="m00_couplers"/>
-      </spirit:interconnection>
-      <spirit:interconnection>
-        <spirit:name>xbar_to_m01_couplers</spirit:name>
-        <spirit:activeInterface spirit:busRef="M01_AXI" spirit:componentRef="xbar"/>
-        <spirit:activeInterface spirit:busRef="S_AXI" spirit:componentRef="m01_couplers"/>
-      </spirit:interconnection>
-    </spirit:interconnections>
-    <spirit:adHocConnections>
-      <spirit:adHocConnection>
-        <spirit:name>axi_interconnect_1_ACLK_net</spirit:name>
-        <spirit:externalPortReference spirit:portRef="ACLK"/>
-        <spirit:internalPortReference spirit:componentRef="xbar" spirit:portRef="aclk"/>
-        <spirit:internalPortReference spirit:componentRef="s00_couplers" spirit:portRef="S_ACLK"/>
-        <spirit:internalPortReference spirit:componentRef="s00_couplers" spirit:portRef="M_ACLK"/>
-        <spirit:internalPortReference spirit:componentRef="m00_couplers" spirit:portRef="M_ACLK"/>
-        <spirit:internalPortReference spirit:componentRef="m01_couplers" spirit:portRef="M_ACLK"/>
-        <spirit:internalPortReference spirit:componentRef="m00_couplers" spirit:portRef="S_ACLK"/>
-        <spirit:internalPortReference spirit:componentRef="m01_couplers" spirit:portRef="S_ACLK"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>axi_interconnect_1_ARESETN_net</spirit:name>
-        <spirit:externalPortReference spirit:portRef="ARESETN"/>
-        <spirit:internalPortReference spirit:componentRef="xbar" spirit:portRef="aresetn"/>
-        <spirit:internalPortReference spirit:componentRef="s00_couplers" spirit:portRef="S_ARESETN"/>
-        <spirit:internalPortReference spirit:componentRef="s00_couplers" spirit:portRef="M_ARESETN"/>
-        <spirit:internalPortReference spirit:componentRef="m00_couplers" spirit:portRef="M_ARESETN"/>
-        <spirit:internalPortReference spirit:componentRef="m01_couplers" spirit:portRef="M_ARESETN"/>
-        <spirit:internalPortReference spirit:componentRef="m00_couplers" spirit:portRef="S_ARESETN"/>
-        <spirit:internalPortReference spirit:componentRef="m01_couplers" spirit:portRef="S_ARESETN"/>
-      </spirit:adHocConnection>
-    </spirit:adHocConnections>
-    <spirit:hierConnections>
-      <spirit:hierConnection spirit:interfaceRef="S00_AXI/axi_interconnect_1_to_s00_couplers">
-        <spirit:activeInterface spirit:busRef="S_AXI" spirit:componentRef="s00_couplers"/>
-      </spirit:hierConnection>
-      <spirit:hierConnection spirit:interfaceRef="M00_AXI/m00_couplers_to_axi_interconnect_1">
-        <spirit:activeInterface spirit:busRef="M_AXI" spirit:componentRef="m00_couplers"/>
-      </spirit:hierConnection>
-      <spirit:hierConnection spirit:interfaceRef="M01_AXI/m01_couplers_to_axi_interconnect_1">
-        <spirit:activeInterface spirit:busRef="M_AXI" spirit:componentRef="m01_couplers"/>
-      </spirit:hierConnection>
-    </spirit:hierConnections>
-  </spirit:design>
-
-  <spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
-    <spirit:vendor>xilinx.com</spirit:vendor>
-    <spirit:library>BlockDiagram/shell_imp/axi_interconnect_1_imp</spirit:library>
-    <spirit:name>m01_couplers</spirit:name>
-    <spirit:version>1.00.a</spirit:version>
-    <spirit:busInterfaces>
-      <spirit:busInterface>
-        <spirit:name>M_AXI</spirit:name>
-        <spirit:master/>
-        <spirit:busType spirit:library="interface" spirit:name="aximm" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:abstractionType spirit:library="interface" spirit:name="aximm_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-      </spirit:busInterface>
-      <spirit:busInterface>
-        <spirit:name>S_AXI</spirit:name>
-        <spirit:slave/>
-        <spirit:busType spirit:library="interface" spirit:name="aximm" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:abstractionType spirit:library="interface" spirit:name="aximm_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-      </spirit:busInterface>
-      <spirit:busInterface>
-        <spirit:name>CLK.M_ACLK</spirit:name>
-        <spirit:displayName>Clk</spirit:displayName>
-        <spirit:description>Clock</spirit:description>
-        <spirit:busType spirit:library="signal" spirit:name="clock" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:abstractionType spirit:library="signal" spirit:name="clock_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:slave/>
-        <spirit:portMaps>
-          <spirit:portMap>
-            <spirit:logicalPort>
-              <spirit:name>CLK</spirit:name>
-            </spirit:logicalPort>
-            <spirit:physicalPort>
-              <spirit:name>M_ACLK</spirit:name>
-            </spirit:physicalPort>
-          </spirit:portMap>
-        </spirit:portMaps>
-        <spirit:parameters>
-          <spirit:parameter>
-            <spirit:name>ASSOCIATED_BUSIF</spirit:name>
-            <spirit:value>M_AXI</spirit:value>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>ASSOCIATED_RESET</spirit:name>
-            <spirit:value>M_ARESETN</spirit:value>
-          </spirit:parameter>
-        </spirit:parameters>
-      </spirit:busInterface>
-      <spirit:busInterface>
-        <spirit:name>RST.M_ARESETN</spirit:name>
-        <spirit:displayName>Reset</spirit:displayName>
-        <spirit:description>Reset</spirit:description>
-        <spirit:busType spirit:library="signal" spirit:name="reset" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:abstractionType spirit:library="signal" spirit:name="reset_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:slave/>
-        <spirit:portMaps>
-          <spirit:portMap>
-            <spirit:logicalPort>
-              <spirit:name>RST</spirit:name>
-            </spirit:logicalPort>
-            <spirit:physicalPort>
-              <spirit:name>M_ARESETN</spirit:name>
-            </spirit:physicalPort>
-          </spirit:portMap>
-        </spirit:portMaps>
-      </spirit:busInterface>
-      <spirit:busInterface>
-        <spirit:name>CLK.S_ACLK</spirit:name>
-        <spirit:displayName>Clk</spirit:displayName>
-        <spirit:description>Clock</spirit:description>
-        <spirit:busType spirit:library="signal" spirit:name="clock" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:abstractionType spirit:library="signal" spirit:name="clock_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:slave/>
-        <spirit:portMaps>
-          <spirit:portMap>
-            <spirit:logicalPort>
-              <spirit:name>CLK</spirit:name>
-            </spirit:logicalPort>
-            <spirit:physicalPort>
-              <spirit:name>S_ACLK</spirit:name>
-            </spirit:physicalPort>
-          </spirit:portMap>
-        </spirit:portMaps>
-        <spirit:parameters>
-          <spirit:parameter>
-            <spirit:name>ASSOCIATED_BUSIF</spirit:name>
-            <spirit:value>S_AXI</spirit:value>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>ASSOCIATED_RESET</spirit:name>
-            <spirit:value>S_ARESETN</spirit:value>
-          </spirit:parameter>
-        </spirit:parameters>
-      </spirit:busInterface>
-      <spirit:busInterface>
-        <spirit:name>RST.S_ARESETN</spirit:name>
-        <spirit:displayName>Reset</spirit:displayName>
-        <spirit:description>Reset</spirit:description>
-        <spirit:busType spirit:library="signal" spirit:name="reset" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:abstractionType spirit:library="signal" spirit:name="reset_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:slave/>
-        <spirit:portMaps>
-          <spirit:portMap>
-            <spirit:logicalPort>
-              <spirit:name>RST</spirit:name>
-            </spirit:logicalPort>
-            <spirit:physicalPort>
-              <spirit:name>S_ARESETN</spirit:name>
-            </spirit:physicalPort>
-          </spirit:portMap>
-        </spirit:portMaps>
-      </spirit:busInterface>
-    </spirit:busInterfaces>
-    <spirit:model>
-      <spirit:views>
-        <spirit:view>
-          <spirit:name>BlockDiagram</spirit:name>
-          <spirit:envIdentifier>:vivado.xilinx.com:</spirit:envIdentifier>
-          <spirit:hierarchyRef spirit:library="BlockDiagram/shell_imp/axi_interconnect_1_imp" spirit:name="m01_couplers_imp" spirit:vendor="xilinx.com" spirit:version="1.00.a"/>
-        </spirit:view>
-      </spirit:views>
-      <spirit:ports>
-        <spirit:port>
-          <spirit:name>M_ACLK</spirit:name>
-          <spirit:wire>
-            <spirit:direction>in</spirit:direction>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
-          <spirit:name>M_ARESETN</spirit:name>
-          <spirit:wire>
-            <spirit:direction>in</spirit:direction>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
-          <spirit:name>S_ACLK</spirit:name>
-          <spirit:wire>
-            <spirit:direction>in</spirit:direction>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
-          <spirit:name>S_ARESETN</spirit:name>
-          <spirit:wire>
-            <spirit:direction>in</spirit:direction>
-          </spirit:wire>
-        </spirit:port>
-      </spirit:ports>
-    </spirit:model>
-  </spirit:component>
-
-  <spirit:design xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
-    <spirit:vendor>xilinx.com</spirit:vendor>
-    <spirit:library>BlockDiagram/shell_imp/axi_interconnect_1_imp</spirit:library>
-    <spirit:name>m01_couplers_imp</spirit:name>
-    <spirit:version>1.00.a</spirit:version>
-    <spirit:interconnections/>
-    <spirit:adHocConnections/>
-    <spirit:hierConnections>
-      <spirit:hierConnection spirit:interfaceRef="M_AXI/m01_couplers_to_m01_couplers">
-        <spirit:activeInterface spirit:busRef="S_AXI" spirit:componentRef="./m01_couplers_to_m01_couplers"/>
-      </spirit:hierConnection>
-    </spirit:hierConnections>
-  </spirit:design>
-
-  <spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
-    <spirit:vendor>xilinx.com</spirit:vendor>
-    <spirit:library>BlockDiagram/shell_imp/axi_interconnect_1_imp</spirit:library>
-    <spirit:name>m00_couplers</spirit:name>
-    <spirit:version>1.00.a</spirit:version>
-    <spirit:busInterfaces>
-      <spirit:busInterface>
-        <spirit:name>M_AXI</spirit:name>
-        <spirit:master/>
-        <spirit:busType spirit:library="interface" spirit:name="aximm" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:abstractionType spirit:library="interface" spirit:name="aximm_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-      </spirit:busInterface>
-      <spirit:busInterface>
-        <spirit:name>S_AXI</spirit:name>
-        <spirit:slave/>
-        <spirit:busType spirit:library="interface" spirit:name="aximm" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:abstractionType spirit:library="interface" spirit:name="aximm_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-      </spirit:busInterface>
-      <spirit:busInterface>
-        <spirit:name>CLK.M_ACLK</spirit:name>
-        <spirit:displayName>Clk</spirit:displayName>
-        <spirit:description>Clock</spirit:description>
-        <spirit:busType spirit:library="signal" spirit:name="clock" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:abstractionType spirit:library="signal" spirit:name="clock_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:slave/>
-        <spirit:portMaps>
-          <spirit:portMap>
-            <spirit:logicalPort>
-              <spirit:name>CLK</spirit:name>
-            </spirit:logicalPort>
-            <spirit:physicalPort>
-              <spirit:name>M_ACLK</spirit:name>
-            </spirit:physicalPort>
-          </spirit:portMap>
-        </spirit:portMaps>
-        <spirit:parameters>
-          <spirit:parameter>
-            <spirit:name>ASSOCIATED_BUSIF</spirit:name>
-            <spirit:value>M_AXI</spirit:value>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>ASSOCIATED_RESET</spirit:name>
-            <spirit:value>M_ARESETN</spirit:value>
-          </spirit:parameter>
-        </spirit:parameters>
-      </spirit:busInterface>
-      <spirit:busInterface>
-        <spirit:name>RST.M_ARESETN</spirit:name>
-        <spirit:displayName>Reset</spirit:displayName>
-        <spirit:description>Reset</spirit:description>
-        <spirit:busType spirit:library="signal" spirit:name="reset" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:abstractionType spirit:library="signal" spirit:name="reset_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:slave/>
-        <spirit:portMaps>
-          <spirit:portMap>
-            <spirit:logicalPort>
-              <spirit:name>RST</spirit:name>
-            </spirit:logicalPort>
-            <spirit:physicalPort>
-              <spirit:name>M_ARESETN</spirit:name>
-            </spirit:physicalPort>
-          </spirit:portMap>
-        </spirit:portMaps>
-      </spirit:busInterface>
-      <spirit:busInterface>
-        <spirit:name>CLK.S_ACLK</spirit:name>
-        <spirit:displayName>Clk</spirit:displayName>
-        <spirit:description>Clock</spirit:description>
-        <spirit:busType spirit:library="signal" spirit:name="clock" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:abstractionType spirit:library="signal" spirit:name="clock_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:slave/>
-        <spirit:portMaps>
-          <spirit:portMap>
-            <spirit:logicalPort>
-              <spirit:name>CLK</spirit:name>
-            </spirit:logicalPort>
-            <spirit:physicalPort>
-              <spirit:name>S_ACLK</spirit:name>
-            </spirit:physicalPort>
-          </spirit:portMap>
-        </spirit:portMaps>
-        <spirit:parameters>
-          <spirit:parameter>
-            <spirit:name>ASSOCIATED_BUSIF</spirit:name>
-            <spirit:value>S_AXI</spirit:value>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>ASSOCIATED_RESET</spirit:name>
-            <spirit:value>S_ARESETN</spirit:value>
-          </spirit:parameter>
-        </spirit:parameters>
-      </spirit:busInterface>
-      <spirit:busInterface>
-        <spirit:name>RST.S_ARESETN</spirit:name>
-        <spirit:displayName>Reset</spirit:displayName>
-        <spirit:description>Reset</spirit:description>
-        <spirit:busType spirit:library="signal" spirit:name="reset" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:abstractionType spirit:library="signal" spirit:name="reset_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:slave/>
-        <spirit:portMaps>
-          <spirit:portMap>
-            <spirit:logicalPort>
-              <spirit:name>RST</spirit:name>
-            </spirit:logicalPort>
-            <spirit:physicalPort>
-              <spirit:name>S_ARESETN</spirit:name>
-            </spirit:physicalPort>
-          </spirit:portMap>
-        </spirit:portMaps>
-      </spirit:busInterface>
-    </spirit:busInterfaces>
-    <spirit:model>
-      <spirit:views>
-        <spirit:view>
-          <spirit:name>BlockDiagram</spirit:name>
-          <spirit:envIdentifier>:vivado.xilinx.com:</spirit:envIdentifier>
-          <spirit:hierarchyRef spirit:library="BlockDiagram/shell_imp/axi_interconnect_1_imp" spirit:name="m00_couplers_imp" spirit:vendor="xilinx.com" spirit:version="1.00.a"/>
-        </spirit:view>
-      </spirit:views>
-      <spirit:ports>
-        <spirit:port>
-          <spirit:name>M_ACLK</spirit:name>
-          <spirit:wire>
-            <spirit:direction>in</spirit:direction>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
-          <spirit:name>M_ARESETN</spirit:name>
-          <spirit:wire>
-            <spirit:direction>in</spirit:direction>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
-          <spirit:name>S_ACLK</spirit:name>
-          <spirit:wire>
-            <spirit:direction>in</spirit:direction>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
-          <spirit:name>S_ARESETN</spirit:name>
-          <spirit:wire>
-            <spirit:direction>in</spirit:direction>
-          </spirit:wire>
-        </spirit:port>
-      </spirit:ports>
-    </spirit:model>
-  </spirit:component>
-
-  <spirit:design xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
-    <spirit:vendor>xilinx.com</spirit:vendor>
-    <spirit:library>BlockDiagram/shell_imp/axi_interconnect_1_imp</spirit:library>
-    <spirit:name>m00_couplers_imp</spirit:name>
-    <spirit:version>1.00.a</spirit:version>
-    <spirit:interconnections/>
-    <spirit:adHocConnections/>
-    <spirit:hierConnections>
-      <spirit:hierConnection spirit:interfaceRef="M_AXI/m00_couplers_to_m00_couplers">
-        <spirit:activeInterface spirit:busRef="S_AXI" spirit:componentRef="./m00_couplers_to_m00_couplers"/>
-      </spirit:hierConnection>
-    </spirit:hierConnections>
-  </spirit:design>
-
-  <spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
-    <spirit:vendor>xilinx.com</spirit:vendor>
-    <spirit:library>BlockDiagram/shell_imp/axi_interconnect_1_imp</spirit:library>
-    <spirit:name>s00_couplers</spirit:name>
-    <spirit:version>1.00.a</spirit:version>
-    <spirit:busInterfaces>
-      <spirit:busInterface>
-        <spirit:name>M_AXI</spirit:name>
-        <spirit:master/>
-        <spirit:busType spirit:library="interface" spirit:name="aximm" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:abstractionType spirit:library="interface" spirit:name="aximm_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-      </spirit:busInterface>
-      <spirit:busInterface>
-        <spirit:name>S_AXI</spirit:name>
-        <spirit:slave/>
-        <spirit:busType spirit:library="interface" spirit:name="aximm" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:abstractionType spirit:library="interface" spirit:name="aximm_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-      </spirit:busInterface>
-      <spirit:busInterface>
-        <spirit:name>CLK.M_ACLK</spirit:name>
-        <spirit:displayName>Clk</spirit:displayName>
-        <spirit:description>Clock</spirit:description>
-        <spirit:busType spirit:library="signal" spirit:name="clock" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:abstractionType spirit:library="signal" spirit:name="clock_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:slave/>
-        <spirit:portMaps>
-          <spirit:portMap>
-            <spirit:logicalPort>
-              <spirit:name>CLK</spirit:name>
-            </spirit:logicalPort>
-            <spirit:physicalPort>
-              <spirit:name>M_ACLK</spirit:name>
-            </spirit:physicalPort>
-          </spirit:portMap>
-        </spirit:portMaps>
-        <spirit:parameters>
-          <spirit:parameter>
-            <spirit:name>ASSOCIATED_BUSIF</spirit:name>
-            <spirit:value>M_AXI</spirit:value>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>ASSOCIATED_RESET</spirit:name>
-            <spirit:value>M_ARESETN</spirit:value>
-          </spirit:parameter>
-        </spirit:parameters>
-      </spirit:busInterface>
-      <spirit:busInterface>
-        <spirit:name>RST.M_ARESETN</spirit:name>
-        <spirit:displayName>Reset</spirit:displayName>
-        <spirit:description>Reset</spirit:description>
-        <spirit:busType spirit:library="signal" spirit:name="reset" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:abstractionType spirit:library="signal" spirit:name="reset_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:slave/>
-        <spirit:portMaps>
-          <spirit:portMap>
-            <spirit:logicalPort>
-              <spirit:name>RST</spirit:name>
-            </spirit:logicalPort>
-            <spirit:physicalPort>
-              <spirit:name>M_ARESETN</spirit:name>
-            </spirit:physicalPort>
-          </spirit:portMap>
-        </spirit:portMaps>
-      </spirit:busInterface>
-      <spirit:busInterface>
-        <spirit:name>CLK.S_ACLK</spirit:name>
-        <spirit:displayName>Clk</spirit:displayName>
-        <spirit:description>Clock</spirit:description>
-        <spirit:busType spirit:library="signal" spirit:name="clock" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:abstractionType spirit:library="signal" spirit:name="clock_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:slave/>
-        <spirit:portMaps>
-          <spirit:portMap>
-            <spirit:logicalPort>
-              <spirit:name>CLK</spirit:name>
-            </spirit:logicalPort>
-            <spirit:physicalPort>
-              <spirit:name>S_ACLK</spirit:name>
-            </spirit:physicalPort>
-          </spirit:portMap>
-        </spirit:portMaps>
-        <spirit:parameters>
-          <spirit:parameter>
-            <spirit:name>ASSOCIATED_BUSIF</spirit:name>
-            <spirit:value>S_AXI</spirit:value>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>ASSOCIATED_RESET</spirit:name>
-            <spirit:value>S_ARESETN</spirit:value>
-          </spirit:parameter>
-        </spirit:parameters>
-      </spirit:busInterface>
-      <spirit:busInterface>
-        <spirit:name>RST.S_ARESETN</spirit:name>
-        <spirit:displayName>Reset</spirit:displayName>
-        <spirit:description>Reset</spirit:description>
-        <spirit:busType spirit:library="signal" spirit:name="reset" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:abstractionType spirit:library="signal" spirit:name="reset_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
-        <spirit:slave/>
-        <spirit:portMaps>
-          <spirit:portMap>
-            <spirit:logicalPort>
-              <spirit:name>RST</spirit:name>
-            </spirit:logicalPort>
-            <spirit:physicalPort>
-              <spirit:name>S_ARESETN</spirit:name>
-            </spirit:physicalPort>
-          </spirit:portMap>
-        </spirit:portMaps>
-      </spirit:busInterface>
-    </spirit:busInterfaces>
-    <spirit:model>
-      <spirit:views>
-        <spirit:view>
-          <spirit:name>BlockDiagram</spirit:name>
-          <spirit:envIdentifier>:vivado.xilinx.com:</spirit:envIdentifier>
-          <spirit:hierarchyRef spirit:library="BlockDiagram/shell_imp/axi_interconnect_1_imp" spirit:name="s00_couplers_imp" spirit:vendor="xilinx.com" spirit:version="1.00.a"/>
-        </spirit:view>
-      </spirit:views>
-      <spirit:ports>
-        <spirit:port>
-          <spirit:name>M_ACLK</spirit:name>
-          <spirit:wire>
-            <spirit:direction>in</spirit:direction>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
-          <spirit:name>M_ARESETN</spirit:name>
-          <spirit:wire>
-            <spirit:direction>in</spirit:direction>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
-          <spirit:name>S_ACLK</spirit:name>
-          <spirit:wire>
-            <spirit:direction>in</spirit:direction>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
-          <spirit:name>S_ARESETN</spirit:name>
-          <spirit:wire>
-            <spirit:direction>in</spirit:direction>
-          </spirit:wire>
-        </spirit:port>
-      </spirit:ports>
-    </spirit:model>
-  </spirit:component>
-
-  <spirit:design xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
-    <spirit:vendor>xilinx.com</spirit:vendor>
-    <spirit:library>BlockDiagram/shell_imp/axi_interconnect_1_imp</spirit:library>
-    <spirit:name>s00_couplers_imp</spirit:name>
-    <spirit:version>1.00.a</spirit:version>
-    <spirit:interconnections/>
-    <spirit:adHocConnections/>
-    <spirit:hierConnections>
-      <spirit:hierConnection spirit:interfaceRef="M_AXI/s00_couplers_to_s00_couplers">
-        <spirit:activeInterface spirit:busRef="S_AXI" spirit:componentRef="./s00_couplers_to_s00_couplers"/>
       </spirit:hierConnection>
     </spirit:hierConnections>
   </spirit:design>
@@ -2712,13 +2641,6 @@
         <spirit:instanceName>m00_couplers</spirit:instanceName>
         <spirit:componentRef spirit:library="BlockDiagram/shell_imp/mem_interface_imp/mem_interconnect_imp" spirit:name="m00_couplers" spirit:vendor="xilinx.com" spirit:version="1.00.a"/>
       </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>s01_mmu</spirit:instanceName>
-        <spirit:componentRef spirit:library="ip" spirit:name="axi_mmu" spirit:vendor="xilinx.com" spirit:version="2.1"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">shell_s01_mmu_1</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
     </spirit:componentInstances>
     <spirit:interconnections>
       <spirit:interconnection>
@@ -2735,11 +2657,6 @@
         <spirit:name>xbar_to_m00_couplers</spirit:name>
         <spirit:activeInterface spirit:busRef="M00_AXI" spirit:componentRef="xbar"/>
         <spirit:activeInterface spirit:busRef="S_AXI" spirit:componentRef="m00_couplers"/>
-      </spirit:interconnection>
-      <spirit:interconnection>
-        <spirit:name>s01_mmu_M_AXI</spirit:name>
-        <spirit:activeInterface spirit:busRef="M_AXI" spirit:componentRef="s01_mmu"/>
-        <spirit:activeInterface spirit:busRef="S_AXI" spirit:componentRef="s01_couplers"/>
       </spirit:interconnection>
     </spirit:interconnections>
     <spirit:adHocConnections>
@@ -2773,13 +2690,11 @@
         <spirit:name>S01_ACLK_1</spirit:name>
         <spirit:externalPortReference spirit:portRef="S01_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="s01_couplers" spirit:portRef="S_ACLK"/>
-        <spirit:internalPortReference spirit:componentRef="s01_mmu" spirit:portRef="aclk"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>S01_ARESETN_1</spirit:name>
         <spirit:externalPortReference spirit:portRef="S01_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="s01_couplers" spirit:portRef="S_ARESETN"/>
-        <spirit:internalPortReference spirit:componentRef="s01_mmu" spirit:portRef="aresetn"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>M00_ACLK_1</spirit:name>
@@ -2799,8 +2714,8 @@
       <spirit:hierConnection spirit:interfaceRef="M00_AXI/m00_couplers_to_mem_interconnect">
         <spirit:activeInterface spirit:busRef="M_AXI" spirit:componentRef="m00_couplers"/>
       </spirit:hierConnection>
-      <spirit:hierConnection spirit:interfaceRef="S01_AXI/S01_AXI_1">
-        <spirit:activeInterface spirit:busRef="S_AXI" spirit:componentRef="s01_mmu"/>
+      <spirit:hierConnection spirit:interfaceRef="S01_AXI/mem_interconnect_to_s01_couplers">
+        <spirit:activeInterface spirit:busRef="S_AXI" spirit:componentRef="s01_couplers"/>
       </spirit:hierConnection>
     </spirit:hierConnections>
   </spirit:design>
@@ -2963,7 +2878,7 @@
         <spirit:instanceName>auto_cc</spirit:instanceName>
         <spirit:componentRef spirit:library="ip" spirit:name="axi_clock_converter" spirit:vendor="xilinx.com" spirit:version="2.1"/>
         <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">shell_auto_cc_4</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">shell_auto_cc_3</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="SYNCHRONIZATION_STAGES">3</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
@@ -3318,43 +3233,74 @@
     <spirit:version>1.00.a</spirit:version>
     <spirit:componentInstances>
       <spirit:componentInstance>
+        <spirit:instanceName>auto_us</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="axi_dwidth_converter" spirit:vendor="xilinx.com" spirit:version="2.1"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">shell_auto_us_4</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="SI_DATA_WIDTH">256</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="MI_DATA_WIDTH">512</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>auto_rs</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="axi_register_slice" spirit:vendor="xilinx.com" spirit:version="2.1"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">shell_auto_rs_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
         <spirit:instanceName>auto_cc</spirit:instanceName>
         <spirit:componentRef spirit:library="ip" spirit:name="axi_clock_converter" spirit:vendor="xilinx.com" spirit:version="2.1"/>
         <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">shell_auto_cc_5</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">shell_auto_cc_4</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="SYNCHRONIZATION_STAGES">3</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
     </spirit:componentInstances>
-    <spirit:interconnections/>
+    <spirit:interconnections>
+      <spirit:interconnection>
+        <spirit:name>auto_rs_to_auto_us</spirit:name>
+        <spirit:activeInterface spirit:busRef="S_AXI" spirit:componentRef="auto_us"/>
+        <spirit:activeInterface spirit:busRef="M_AXI" spirit:componentRef="auto_rs"/>
+      </spirit:interconnection>
+      <spirit:interconnection>
+        <spirit:name>auto_us_to_auto_cc</spirit:name>
+        <spirit:activeInterface spirit:busRef="M_AXI" spirit:componentRef="auto_us"/>
+        <spirit:activeInterface spirit:busRef="S_AXI" spirit:componentRef="auto_cc"/>
+      </spirit:interconnection>
+    </spirit:interconnections>
     <spirit:adHocConnections>
+      <spirit:adHocConnection>
+        <spirit:name>S_ACLK_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="S_ACLK"/>
+        <spirit:internalPortReference spirit:componentRef="auto_us" spirit:portRef="s_axi_aclk"/>
+        <spirit:internalPortReference spirit:componentRef="auto_rs" spirit:portRef="aclk"/>
+        <spirit:internalPortReference spirit:componentRef="auto_cc" spirit:portRef="s_axi_aclk"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>S_ARESETN_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="S_ARESETN"/>
+        <spirit:internalPortReference spirit:componentRef="auto_us" spirit:portRef="s_axi_aresetn"/>
+        <spirit:internalPortReference spirit:componentRef="auto_rs" spirit:portRef="aresetn"/>
+        <spirit:internalPortReference spirit:componentRef="auto_cc" spirit:portRef="s_axi_aresetn"/>
+      </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>M_ACLK_1</spirit:name>
         <spirit:externalPortReference spirit:portRef="M_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="auto_cc" spirit:portRef="m_axi_aclk"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
-        <spirit:name>S_ACLK_1</spirit:name>
-        <spirit:externalPortReference spirit:portRef="S_ACLK"/>
-        <spirit:internalPortReference spirit:componentRef="auto_cc" spirit:portRef="s_axi_aclk"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
         <spirit:name>M_ARESETN_1</spirit:name>
         <spirit:externalPortReference spirit:portRef="M_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="auto_cc" spirit:portRef="m_axi_aresetn"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>S_ARESETN_1</spirit:name>
-        <spirit:externalPortReference spirit:portRef="S_ARESETN"/>
-        <spirit:internalPortReference spirit:componentRef="auto_cc" spirit:portRef="s_axi_aresetn"/>
       </spirit:adHocConnection>
     </spirit:adHocConnections>
     <spirit:hierConnections>
       <spirit:hierConnection spirit:interfaceRef="M_AXI/auto_cc_to_s00_couplers">
         <spirit:activeInterface spirit:busRef="M_AXI" spirit:componentRef="auto_cc"/>
       </spirit:hierConnection>
-      <spirit:hierConnection spirit:interfaceRef="S_AXI/s00_couplers_to_auto_cc">
-        <spirit:activeInterface spirit:busRef="S_AXI" spirit:componentRef="auto_cc"/>
+      <spirit:hierConnection spirit:interfaceRef="S_AXI/s00_couplers_to_auto_rs">
+        <spirit:activeInterface spirit:busRef="S_AXI" spirit:componentRef="auto_rs"/>
       </spirit:hierConnection>
     </spirit:hierConnections>
   </spirit:design>
@@ -3715,6 +3661,13 @@
         <spirit:instanceName>m01_couplers</spirit:instanceName>
         <spirit:componentRef spirit:library="BlockDiagram/shell_imp/axi_interconnect_0_imp" spirit:name="m01_couplers" spirit:vendor="xilinx.com" spirit:version="1.00.a"/>
       </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>s01_mmu</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="axi_mmu" spirit:vendor="xilinx.com" spirit:version="2.1"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">shell_s01_mmu_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
     </spirit:componentInstances>
     <spirit:interconnections>
       <spirit:interconnection>
@@ -3736,6 +3689,11 @@
         <spirit:name>xbar_to_m01_couplers</spirit:name>
         <spirit:activeInterface spirit:busRef="M01_AXI" spirit:componentRef="xbar"/>
         <spirit:activeInterface spirit:busRef="S_AXI" spirit:componentRef="m01_couplers"/>
+      </spirit:interconnection>
+      <spirit:interconnection>
+        <spirit:name>s01_mmu_M_AXI</spirit:name>
+        <spirit:activeInterface spirit:busRef="M_AXI" spirit:componentRef="s01_mmu"/>
+        <spirit:activeInterface spirit:busRef="S_AXI" spirit:componentRef="s01_couplers"/>
       </spirit:interconnection>
     </spirit:interconnections>
     <spirit:adHocConnections>
@@ -3771,11 +3729,13 @@
         <spirit:name>S01_ACLK_1</spirit:name>
         <spirit:externalPortReference spirit:portRef="S01_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="s01_couplers" spirit:portRef="S_ACLK"/>
+        <spirit:internalPortReference spirit:componentRef="s01_mmu" spirit:portRef="aclk"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>S01_ARESETN_1</spirit:name>
         <spirit:externalPortReference spirit:portRef="S01_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="s01_couplers" spirit:portRef="S_ARESETN"/>
+        <spirit:internalPortReference spirit:componentRef="s01_mmu" spirit:portRef="aresetn"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>M00_ACLK_1</spirit:name>
@@ -3808,8 +3768,8 @@
       <spirit:hierConnection spirit:interfaceRef="M01_AXI/m01_couplers_to_axi_interconnect_0">
         <spirit:activeInterface spirit:busRef="M_AXI" spirit:componentRef="m01_couplers"/>
       </spirit:hierConnection>
-      <spirit:hierConnection spirit:interfaceRef="S01_AXI/axi_interconnect_0_to_s01_couplers">
-        <spirit:activeInterface spirit:busRef="S_AXI" spirit:componentRef="s01_couplers"/>
+      <spirit:hierConnection spirit:interfaceRef="S01_AXI/S01_AXI_1">
+        <spirit:activeInterface spirit:busRef="S_AXI" spirit:componentRef="s01_mmu"/>
       </spirit:hierConnection>
     </spirit:hierConnections>
   </spirit:design>
@@ -3967,11 +3927,77 @@
     <spirit:library>BlockDiagram/shell_imp/axi_interconnect_0_imp</spirit:library>
     <spirit:name>m01_couplers_imp</spirit:name>
     <spirit:version>1.00.a</spirit:version>
-    <spirit:interconnections/>
-    <spirit:adHocConnections/>
+    <spirit:componentInstances>
+      <spirit:componentInstance>
+        <spirit:instanceName>auto_pc</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="axi_protocol_converter" spirit:vendor="xilinx.com" spirit:version="2.1"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">shell_auto_pc_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="SI_PROTOCOL">AXI4LITE</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="MI_PROTOCOL">AXI4</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>auto_us</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="axi_dwidth_converter" spirit:vendor="xilinx.com" spirit:version="2.1"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">shell_auto_us_2</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="SI_DATA_WIDTH">64</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="MI_DATA_WIDTH">256</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>auto_cc</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="axi_clock_converter" spirit:vendor="xilinx.com" spirit:version="2.1"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">shell_auto_cc_1</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+    </spirit:componentInstances>
+    <spirit:interconnections>
+      <spirit:interconnection>
+        <spirit:name>auto_pc_to_auto_us</spirit:name>
+        <spirit:activeInterface spirit:busRef="M_AXI" spirit:componentRef="auto_pc"/>
+        <spirit:activeInterface spirit:busRef="S_AXI" spirit:componentRef="auto_us"/>
+      </spirit:interconnection>
+      <spirit:interconnection>
+        <spirit:name>auto_us_to_auto_cc</spirit:name>
+        <spirit:activeInterface spirit:busRef="M_AXI" spirit:componentRef="auto_us"/>
+        <spirit:activeInterface spirit:busRef="S_AXI" spirit:componentRef="auto_cc"/>
+      </spirit:interconnection>
+    </spirit:interconnections>
+    <spirit:adHocConnections>
+      <spirit:adHocConnection>
+        <spirit:name>S_ACLK_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="S_ACLK"/>
+        <spirit:internalPortReference spirit:componentRef="auto_pc" spirit:portRef="aclk"/>
+        <spirit:internalPortReference spirit:componentRef="auto_us" spirit:portRef="s_axi_aclk"/>
+        <spirit:internalPortReference spirit:componentRef="auto_cc" spirit:portRef="s_axi_aclk"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>S_ARESETN_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="S_ARESETN"/>
+        <spirit:internalPortReference spirit:componentRef="auto_pc" spirit:portRef="aresetn"/>
+        <spirit:internalPortReference spirit:componentRef="auto_us" spirit:portRef="s_axi_aresetn"/>
+        <spirit:internalPortReference spirit:componentRef="auto_cc" spirit:portRef="s_axi_aresetn"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>M_ACLK_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="M_ACLK"/>
+        <spirit:internalPortReference spirit:componentRef="auto_cc" spirit:portRef="m_axi_aclk"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>M_ARESETN_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="M_ARESETN"/>
+        <spirit:internalPortReference spirit:componentRef="auto_cc" spirit:portRef="m_axi_aresetn"/>
+      </spirit:adHocConnection>
+    </spirit:adHocConnections>
     <spirit:hierConnections>
-      <spirit:hierConnection spirit:interfaceRef="M_AXI/m01_couplers_to_m01_couplers">
-        <spirit:activeInterface spirit:busRef="S_AXI" spirit:componentRef="./m01_couplers_to_m01_couplers"/>
+      <spirit:hierConnection spirit:interfaceRef="M_AXI/auto_cc_to_m01_couplers">
+        <spirit:activeInterface spirit:busRef="M_AXI" spirit:componentRef="auto_cc"/>
+      </spirit:hierConnection>
+      <spirit:hierConnection spirit:interfaceRef="S_AXI/m01_couplers_to_auto_pc">
+        <spirit:activeInterface spirit:busRef="S_AXI" spirit:componentRef="auto_pc"/>
       </spirit:hierConnection>
     </spirit:hierConnections>
   </spirit:design>
@@ -4129,11 +4155,36 @@
     <spirit:library>BlockDiagram/shell_imp/axi_interconnect_0_imp</spirit:library>
     <spirit:name>m00_couplers_imp</spirit:name>
     <spirit:version>1.00.a</spirit:version>
+    <spirit:componentInstances>
+      <spirit:componentInstance>
+        <spirit:instanceName>auto_ds</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="axi_dwidth_converter" spirit:vendor="xilinx.com" spirit:version="2.1"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">shell_auto_ds_3</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="SI_DATA_WIDTH">64</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="MI_DATA_WIDTH">32</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+    </spirit:componentInstances>
     <spirit:interconnections/>
-    <spirit:adHocConnections/>
+    <spirit:adHocConnections>
+      <spirit:adHocConnection>
+        <spirit:name>S_ACLK_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="S_ACLK"/>
+        <spirit:internalPortReference spirit:componentRef="auto_ds" spirit:portRef="s_axi_aclk"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>S_ARESETN_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="S_ARESETN"/>
+        <spirit:internalPortReference spirit:componentRef="auto_ds" spirit:portRef="s_axi_aresetn"/>
+      </spirit:adHocConnection>
+    </spirit:adHocConnections>
     <spirit:hierConnections>
-      <spirit:hierConnection spirit:interfaceRef="M_AXI/m00_couplers_to_m00_couplers">
-        <spirit:activeInterface spirit:busRef="S_AXI" spirit:componentRef="./m00_couplers_to_m00_couplers"/>
+      <spirit:hierConnection spirit:interfaceRef="M_AXI/auto_ds_to_m00_couplers">
+        <spirit:activeInterface spirit:busRef="M_AXI" spirit:componentRef="auto_ds"/>
+      </spirit:hierConnection>
+      <spirit:hierConnection spirit:interfaceRef="S_AXI/m00_couplers_to_auto_ds">
+        <spirit:activeInterface spirit:busRef="S_AXI" spirit:componentRef="auto_ds"/>
       </spirit:hierConnection>
     </spirit:hierConnections>
   </spirit:design>
@@ -4291,11 +4342,61 @@
     <spirit:library>BlockDiagram/shell_imp/axi_interconnect_0_imp</spirit:library>
     <spirit:name>s01_couplers_imp</spirit:name>
     <spirit:version>1.00.a</spirit:version>
-    <spirit:interconnections/>
-    <spirit:adHocConnections/>
+    <spirit:componentInstances>
+      <spirit:componentInstance>
+        <spirit:instanceName>auto_us</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="axi_dwidth_converter" spirit:vendor="xilinx.com" spirit:version="2.1"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">shell_auto_us_3</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="SI_DATA_WIDTH">32</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="MI_DATA_WIDTH">64</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>auto_cc</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="axi_clock_converter" spirit:vendor="xilinx.com" spirit:version="2.1"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">shell_auto_cc_2</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+    </spirit:componentInstances>
+    <spirit:interconnections>
+      <spirit:interconnection>
+        <spirit:name>auto_us_to_auto_cc</spirit:name>
+        <spirit:activeInterface spirit:busRef="M_AXI" spirit:componentRef="auto_us"/>
+        <spirit:activeInterface spirit:busRef="S_AXI" spirit:componentRef="auto_cc"/>
+      </spirit:interconnection>
+    </spirit:interconnections>
+    <spirit:adHocConnections>
+      <spirit:adHocConnection>
+        <spirit:name>S_ACLK_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="S_ACLK"/>
+        <spirit:internalPortReference spirit:componentRef="auto_us" spirit:portRef="s_axi_aclk"/>
+        <spirit:internalPortReference spirit:componentRef="auto_cc" spirit:portRef="s_axi_aclk"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>S_ARESETN_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="S_ARESETN"/>
+        <spirit:internalPortReference spirit:componentRef="auto_us" spirit:portRef="s_axi_aresetn"/>
+        <spirit:internalPortReference spirit:componentRef="auto_cc" spirit:portRef="s_axi_aresetn"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>M_ACLK_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="M_ACLK"/>
+        <spirit:internalPortReference spirit:componentRef="auto_cc" spirit:portRef="m_axi_aclk"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>M_ARESETN_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="M_ARESETN"/>
+        <spirit:internalPortReference spirit:componentRef="auto_cc" spirit:portRef="m_axi_aresetn"/>
+      </spirit:adHocConnection>
+    </spirit:adHocConnections>
     <spirit:hierConnections>
-      <spirit:hierConnection spirit:interfaceRef="M_AXI/s01_couplers_to_s01_couplers">
-        <spirit:activeInterface spirit:busRef="S_AXI" spirit:componentRef="./s01_couplers_to_s01_couplers"/>
+      <spirit:hierConnection spirit:interfaceRef="M_AXI/auto_cc_to_s01_couplers">
+        <spirit:activeInterface spirit:busRef="M_AXI" spirit:componentRef="auto_cc"/>
+      </spirit:hierConnection>
+      <spirit:hierConnection spirit:interfaceRef="S_AXI/s01_couplers_to_auto_us">
+        <spirit:activeInterface spirit:busRef="S_AXI" spirit:componentRef="auto_us"/>
       </spirit:hierConnection>
     </spirit:hierConnections>
   </spirit:design>
@@ -5198,13 +5299,6 @@
         <spirit:instanceName>m03_couplers</spirit:instanceName>
         <spirit:componentRef spirit:library="BlockDiagram/shell_imp/control_imp/microblaze_0_axi_periph_imp" spirit:name="m03_couplers" spirit:vendor="xilinx.com" spirit:version="1.00.a"/>
       </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>s00_mmu</spirit:instanceName>
-        <spirit:componentRef spirit:library="ip" spirit:name="axi_mmu" spirit:vendor="xilinx.com" spirit:version="2.1"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">shell_s00_mmu_0</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
     </spirit:componentInstances>
     <spirit:interconnections>
       <spirit:interconnection>
@@ -5232,11 +5326,6 @@
         <spirit:activeInterface spirit:busRef="M03_AXI" spirit:componentRef="xbar"/>
         <spirit:activeInterface spirit:busRef="S_AXI" spirit:componentRef="m03_couplers"/>
       </spirit:interconnection>
-      <spirit:interconnection>
-        <spirit:name>s00_mmu_M_AXI</spirit:name>
-        <spirit:activeInterface spirit:busRef="M_AXI" spirit:componentRef="s00_mmu"/>
-        <spirit:activeInterface spirit:busRef="S_AXI" spirit:componentRef="s00_couplers"/>
-      </spirit:interconnection>
     </spirit:interconnections>
     <spirit:adHocConnections>
       <spirit:adHocConnection>
@@ -5263,13 +5352,11 @@
         <spirit:name>S00_ACLK_1</spirit:name>
         <spirit:externalPortReference spirit:portRef="S00_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="s00_couplers" spirit:portRef="S_ACLK"/>
-        <spirit:internalPortReference spirit:componentRef="s00_mmu" spirit:portRef="aclk"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>S00_ARESETN_1</spirit:name>
         <spirit:externalPortReference spirit:portRef="S00_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="s00_couplers" spirit:portRef="S_ARESETN"/>
-        <spirit:internalPortReference spirit:componentRef="s00_mmu" spirit:portRef="aresetn"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>M00_ACLK_1</spirit:name>
@@ -5313,8 +5400,8 @@
       </spirit:adHocConnection>
     </spirit:adHocConnections>
     <spirit:hierConnections>
-      <spirit:hierConnection spirit:interfaceRef="S00_AXI/S00_AXI_1">
-        <spirit:activeInterface spirit:busRef="S_AXI" spirit:componentRef="s00_mmu"/>
+      <spirit:hierConnection spirit:interfaceRef="S00_AXI/microblaze_0_axi_periph_to_s00_couplers">
+        <spirit:activeInterface spirit:busRef="S_AXI" spirit:componentRef="s00_couplers"/>
       </spirit:hierConnection>
       <spirit:hierConnection spirit:interfaceRef="M00_AXI/m00_couplers_to_microblaze_0_axi_periph">
         <spirit:activeInterface spirit:busRef="M_AXI" spirit:componentRef="m00_couplers"/>
@@ -5484,53 +5571,11 @@
     <spirit:library>BlockDiagram/shell_imp/control_imp/microblaze_0_axi_periph_imp</spirit:library>
     <spirit:name>m03_couplers_imp</spirit:name>
     <spirit:version>1.00.a</spirit:version>
-    <spirit:componentInstances>
-      <spirit:componentInstance>
-        <spirit:instanceName>auto_pc</spirit:instanceName>
-        <spirit:componentRef spirit:library="ip" spirit:name="axi_protocol_converter" spirit:vendor="xilinx.com" spirit:version="2.1"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">shell_auto_pc_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="SI_PROTOCOL">AXI4LITE</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="MI_PROTOCOL">AXI4</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>auto_us</spirit:instanceName>
-        <spirit:componentRef spirit:library="ip" spirit:name="axi_dwidth_converter" spirit:vendor="xilinx.com" spirit:version="2.1"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">shell_auto_us_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="SI_DATA_WIDTH">64</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="MI_DATA_WIDTH">512</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-    </spirit:componentInstances>
-    <spirit:interconnections>
-      <spirit:interconnection>
-        <spirit:name>auto_pc_to_auto_us</spirit:name>
-        <spirit:activeInterface spirit:busRef="M_AXI" spirit:componentRef="auto_pc"/>
-        <spirit:activeInterface spirit:busRef="S_AXI" spirit:componentRef="auto_us"/>
-      </spirit:interconnection>
-    </spirit:interconnections>
-    <spirit:adHocConnections>
-      <spirit:adHocConnection>
-        <spirit:name>S_ACLK_1</spirit:name>
-        <spirit:externalPortReference spirit:portRef="S_ACLK"/>
-        <spirit:internalPortReference spirit:componentRef="auto_pc" spirit:portRef="aclk"/>
-        <spirit:internalPortReference spirit:componentRef="auto_us" spirit:portRef="s_axi_aclk"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>S_ARESETN_1</spirit:name>
-        <spirit:externalPortReference spirit:portRef="S_ARESETN"/>
-        <spirit:internalPortReference spirit:componentRef="auto_pc" spirit:portRef="aresetn"/>
-        <spirit:internalPortReference spirit:componentRef="auto_us" spirit:portRef="s_axi_aresetn"/>
-      </spirit:adHocConnection>
-    </spirit:adHocConnections>
+    <spirit:interconnections/>
+    <spirit:adHocConnections/>
     <spirit:hierConnections>
-      <spirit:hierConnection spirit:interfaceRef="M_AXI/auto_us_to_m03_couplers">
-        <spirit:activeInterface spirit:busRef="M_AXI" spirit:componentRef="auto_us"/>
-      </spirit:hierConnection>
-      <spirit:hierConnection spirit:interfaceRef="S_AXI/m03_couplers_to_auto_pc">
-        <spirit:activeInterface spirit:busRef="S_AXI" spirit:componentRef="auto_pc"/>
+      <spirit:hierConnection spirit:interfaceRef="M_AXI/m03_couplers_to_m03_couplers">
+        <spirit:activeInterface spirit:busRef="S_AXI" spirit:componentRef="./m03_couplers_to_m03_couplers"/>
       </spirit:hierConnection>
     </spirit:hierConnections>
   </spirit:design>
@@ -6510,6 +6555,12 @@
         <spirit:abstractionType spirit:library="interface" spirit:name="diff_clock_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
       </spirit:busInterface>
       <spirit:busInterface>
+        <spirit:name>M_AXI_LITE</spirit:name>
+        <spirit:master/>
+        <spirit:busType spirit:library="interface" spirit:name="aximm" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:abstractionType spirit:library="interface" spirit:name="aximm_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+      </spirit:busInterface>
+      <spirit:busInterface>
         <spirit:name>RST.SYS_RST_N</spirit:name>
         <spirit:displayName>Reset</spirit:displayName>
         <spirit:description>Reset</spirit:description>
@@ -6612,6 +6663,7 @@
           <spirit:configurableElementValue spirit:referenceId="axi_data_width">256_bit</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="axisten_freq">250</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="pf0_device_id">8038</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="axilite_master_en">true</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="pf0_interrupt_pin">NONE</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="xdma_rnum_chnl">4</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="xdma_wnum_chnl">4</spirit:configurableElementValue>
@@ -6667,6 +6719,9 @@
       </spirit:hierConnection>
       <spirit:hierConnection spirit:interfaceRef="CLK_IN_D/Conn3">
         <spirit:activeInterface spirit:busRef="CLK_IN_D" spirit:componentRef="util_ds_buf"/>
+      </spirit:hierConnection>
+      <spirit:hierConnection spirit:interfaceRef="M_AXI_LITE/Conn4">
+        <spirit:activeInterface spirit:busRef="M_AXI_LITE" spirit:componentRef="xdma_0"/>
       </spirit:hierConnection>
     </spirit:hierConnections>
   </spirit:design>
@@ -7143,13 +7198,47 @@
         <spirit:busType spirit:library="interface" spirit:name="aximm" spirit:vendor="xilinx.com" spirit:version="1.0"/>
         <spirit:abstractionType spirit:library="interface" spirit:name="aximm_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
       </spirit:busInterface>
+      <spirit:busInterface>
+        <spirit:name>M_AXI_LITE</spirit:name>
+        <spirit:master>
+          <spirit:addressSpaceRef spirit:addressSpaceRef="M_AXI_LITE"/>
+        </spirit:master>
+        <spirit:busType spirit:library="interface" spirit:name="aximm" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:abstractionType spirit:library="interface" spirit:name="aximm_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+      </spirit:busInterface>
     </spirit:busInterfaces>
     <spirit:addressSpaces>
       <spirit:addressSpace>
         <spirit:name>M_AXI</spirit:name>
         <spirit:range>16E</spirit:range>
         <spirit:width>32</spirit:width>
-        <spirit:segments/>
+        <spirit:segments>
+          <spirit:segment>
+            <spirit:name>SEG_ddr4_0_C0_DDR4_ADDRESS_BLOCK</spirit:name>
+            <spirit:displayName>/mem_interface/ddr4_0/C0_DDR4_MEMORY_MAP/C0_DDR4_ADDRESS_BLOCK</spirit:displayName>
+            <spirit:addressOffset>0x0000000000000000</spirit:addressOffset>
+            <spirit:range>1G</spirit:range>
+          </spirit:segment>
+        </spirit:segments>
+      </spirit:addressSpace>
+      <spirit:addressSpace>
+        <spirit:name>M_AXI_LITE</spirit:name>
+        <spirit:range>4G</spirit:range>
+        <spirit:width>32</spirit:width>
+        <spirit:segments>
+          <spirit:segment>
+            <spirit:name>SEG_M_AXI_Reg</spirit:name>
+            <spirit:displayName>/M_AXI/Reg</spirit:displayName>
+            <spirit:addressOffset>0x80000000</spirit:addressOffset>
+            <spirit:range>4K</spirit:range>
+          </spirit:segment>
+          <spirit:segment>
+            <spirit:name>SEG_axi_bram_ctrl_0_Mem0</spirit:name>
+            <spirit:displayName>/axi_bram_ctrl_0/S_AXI/Mem0</spirit:displayName>
+            <spirit:addressOffset>0xC0000000</spirit:addressOffset>
+            <spirit:range>4K</spirit:range>
+          </spirit:segment>
+        </spirit:segments>
       </spirit:addressSpace>
     </spirit:addressSpaces>
   </spirit:component>
@@ -7192,6 +7281,12 @@
         <spirit:width>32</spirit:width>
         <spirit:segments>
           <spirit:segment>
+            <spirit:name>SEG_M_AXI_Reg</spirit:name>
+            <spirit:displayName>/M_AXI/Reg</spirit:displayName>
+            <spirit:addressOffset>0x80000000</spirit:addressOffset>
+            <spirit:range>64K</spirit:range>
+          </spirit:segment>
+          <spirit:segment>
             <spirit:name>SEG_axiStreamGate_0_Reg</spirit:name>
             <spirit:displayName>/control/axiStreamGate_0/s_axi_AXILiteS/Reg</spirit:displayName>
             <spirit:addressOffset>0x44A00000</spirit:addressOffset>
@@ -7201,7 +7296,7 @@
             <spirit:name>SEG_axi_bram_ctrl_0_Mem0</spirit:name>
             <spirit:displayName>/axi_bram_ctrl_0/S_AXI/Mem0</spirit:displayName>
             <spirit:addressOffset>0xC0000000</spirit:addressOffset>
-            <spirit:range>1M</spirit:range>
+            <spirit:range>4K</spirit:range>
           </spirit:segment>
           <spirit:segment>
             <spirit:name>SEG_axi_hwicap_0_Reg</spirit:name>

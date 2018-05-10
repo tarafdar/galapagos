@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
--- Date        : Thu May  3 12:00:45 2018
+-- Date        : Thu May  3 12:00:44 2018
 -- Host        : ug238 running 64-bit Debian GNU/Linux 9.4 (stretch)
--- Command     : write_vhdl -force -mode funcsim
---               /nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_ilmb_bram_if_cntlr_0/shell_ilmb_bram_if_cntlr_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top shell_ilmb_bram_if_cntlr_0 -prefix
+--               shell_ilmb_bram_if_cntlr_0_ shell_ilmb_bram_if_cntlr_0_sim_netlist.vhdl
 -- Design      : shell_ilmb_bram_if_cntlr_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -142,8 +142,6 @@ entity shell_ilmb_bram_if_cntlr_0_lmb_bram_if_cntlr is
   attribute C_UE_FAILING_REGISTERS of shell_ilmb_bram_if_cntlr_0_lmb_bram_if_cntlr : entity is 0;
   attribute C_WRITE_ACCESS : integer;
   attribute C_WRITE_ACCESS of shell_ilmb_bram_if_cntlr_0_lmb_bram_if_cntlr : entity is 2;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of shell_ilmb_bram_if_cntlr_0_lmb_bram_if_cntlr : entity is "lmb_bram_if_cntlr";
 end shell_ilmb_bram_if_cntlr_0_lmb_bram_if_cntlr;
 
 architecture STRUCTURE of shell_ilmb_bram_if_cntlr_0_lmb_bram_if_cntlr is

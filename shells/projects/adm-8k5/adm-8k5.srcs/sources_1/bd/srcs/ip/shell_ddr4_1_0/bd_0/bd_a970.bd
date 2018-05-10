@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:BoundaryCRC="0xBCE55F39397D5E69" bd:bdsource="SBD" bd:device="xcku115-flva1517-2-e" bd:isScoped="true" bd:synthFlowMode="None" bd:tool_version="2018.1" bd:top="bd_a970" bd:version="1.00.a">
+<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:BoundaryCRC="0xBCE55F39397D5E69" bd:bdsource="SBD" bd:device="xcku115-flva1517-2-e" bd:isScoped="true" bd:isValidated="true" bd:synthFlowMode="None" bd:tool_version="2018.1" bd:top="bd_a970" bd:version="1.00.a">
 
   <spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
     <spirit:vendor>xilinx.com</spirit:vendor>
@@ -46,10 +46,29 @@
           <spirit:parameter>
             <spirit:name>FREQ_HZ</spirit:name>
             <spirit:value>100000000</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>PHASE</spirit:name>
+            <spirit:value>0.000</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>ASSOCIATED_ASYNC_RESET</spirit:name>
             <spirit:value>Reset</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:busInterface>
@@ -74,6 +93,11 @@
           <spirit:parameter>
             <spirit:name>POLARITY</spirit:name>
             <spirit:value>ACTIVE_HIGH</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="user"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:busInterface>
@@ -128,6 +152,7 @@
           <spirit:configurableElementValue spirit:referenceId="C_USE_EXT_BRK">0</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="C_USE_EXT_NM_BRK">0</spirit:configurableElementValue>
         </spirit:configurableElementValues>
+        <bd:hdl_attributes/>
       </spirit:componentInstance>
       <spirit:componentInstance>
         <spirit:instanceName>rst_0</spirit:instanceName>
@@ -161,6 +186,7 @@
           <spirit:configurableElementValue spirit:referenceId="C_HIGHADDR">0x000000000000FFFF</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="C_MASK">0x00000000C0010000</spirit:configurableElementValue>
         </spirit:configurableElementValues>
+        <bd:hdl_attributes/>
       </spirit:componentInstance>
       <spirit:componentInstance>
         <spirit:instanceName>ilmb_cntlr</spirit:instanceName>
@@ -189,6 +215,7 @@
           <spirit:configurableElementValue spirit:referenceId="C_HIGHADDR">0x0000000000017FFF</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="C_MASK">0x00000000C0010000</spirit:configurableElementValue>
         </spirit:configurableElementValues>
+        <bd:hdl_attributes/>
       </spirit:componentInstance>
       <spirit:componentInstance>
         <spirit:instanceName>second_ilmb_cntlr</spirit:instanceName>

@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
-// Date        : Thu May  3 12:01:32 2018
+// Date        : Thu May  3 12:01:31 2018
 // Host        : ug238 running 64-bit Debian GNU/Linux 9.4 (stretch)
-// Command     : write_verilog -force -mode funcsim
-//               /nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_util_ds_buf_0/shell_util_ds_buf_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top shell_util_ds_buf_0 -prefix
+//               shell_util_ds_buf_0_ shell_util_ds_buf_0_sim_netlist.v
 // Design      : shell_util_ds_buf_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -75,7 +75,7 @@ module shell_util_ds_buf_0
         .OBUF_IN(1'b0));
 endmodule
 
-(* C_BUF_TYPE = "ibufdsgte3" *) (* C_SIZE = "1" *) (* ORIG_REF_NAME = "util_ds_buf" *) 
+(* C_BUF_TYPE = "ibufdsgte3" *) (* C_SIZE = "1" *) 
 module shell_util_ds_buf_0_util_ds_buf
    (IBUF_DS_P,
     IBUF_DS_N,

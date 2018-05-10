@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
--- Date        : Thu May  3 12:10:56 2018
+-- Date        : Thu May  3 12:10:55 2018
 -- Host        : ug238 running 64-bit Debian GNU/Linux 9.4 (stretch)
--- Command     : write_vhdl -force -mode funcsim
---               /nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_reverseEndian64_0_0/shell_reverseEndian64_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top shell_reverseEndian64_0_0 -prefix
+--               shell_reverseEndian64_0_0_ shell_reverseEndian64_0_0_sim_netlist.vhdl
 -- Design      : shell_reverseEndian64_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -29,8 +29,6 @@ entity shell_reverseEndian64_0_0_reverseEndian64 is
     stream_out_TLAST : out STD_LOGIC_VECTOR ( 0 to 0 );
     stream_out_TKEEP : out STD_LOGIC_VECTOR ( 7 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of shell_reverseEndian64_0_0_reverseEndian64 : entity is "reverseEndian64";
   attribute ap_ST_fsm_state1 : string;
   attribute ap_ST_fsm_state1 of shell_reverseEndian64_0_0_reverseEndian64 : entity is "4'b0001";
   attribute ap_ST_fsm_state2 : string;
