@@ -14,29 +14,29 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xcku115'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcku115'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 2078 
+INFO: Helper process launched with PID 12492 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1348.457 ; gain = 76.000 ; free physical = 3702 ; free virtual = 34995
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1347.453 ; gain = 76.000 ; free physical = 7708 ; free virtual = 35188
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'shell_dlmb_v10_0' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_dlmb_v10_0/synth/shell_dlmb_v10_0.vhd:89]
+INFO: [Synth 8-638] synthesizing module 'shell_dlmb_v10_0' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_dlmb_v10_0/synth/shell_dlmb_v10_0.vhd:89]
 	Parameter C_LMB_NUM_SLAVES bound to: 1 - type: integer 
 	Parameter C_LMB_DWIDTH bound to: 32 - type: integer 
 	Parameter C_LMB_AWIDTH bound to: 32 - type: integer 
 	Parameter C_EXT_RESET_HIGH bound to: 1 - type: integer 
-INFO: [Synth 8-3491] module 'lmb_v10' declared at '/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/78eb/hdl/lmb_v10_v3_0_vh_rfs.vhd:92' bound to instance 'U0' of component 'lmb_v10' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_dlmb_v10_0/synth/shell_dlmb_v10_0.vhd:164]
-INFO: [Synth 8-638] synthesizing module 'lmb_v10' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/78eb/hdl/lmb_v10_v3_0_vh_rfs.vhd:140]
+INFO: [Synth 8-3491] module 'lmb_v10' declared at '/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/78eb/hdl/lmb_v10_v3_0_vh_rfs.vhd:92' bound to instance 'U0' of component 'lmb_v10' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_dlmb_v10_0/synth/shell_dlmb_v10_0.vhd:164]
+INFO: [Synth 8-638] synthesizing module 'lmb_v10' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/78eb/hdl/lmb_v10_v3_0_vh_rfs.vhd:140]
 	Parameter C_LMB_NUM_SLAVES bound to: 1 - type: integer 
 	Parameter C_LMB_DWIDTH bound to: 32 - type: integer 
 	Parameter C_LMB_AWIDTH bound to: 32 - type: integer 
 	Parameter C_EXT_RESET_HIGH bound to: 1 - type: integer 
-INFO: [Synth 8-3491] module 'FDS' declared at '/cad1/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_comp.v:4089' bound to instance 'POR_FF_I' of component 'FDS' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/78eb/hdl/lmb_v10_v3_0_vh_rfs.vhd:169]
+INFO: [Synth 8-3491] module 'FDS' declared at '/cad1/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_comp.v:4089' bound to instance 'POR_FF_I' of component 'FDS' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/78eb/hdl/lmb_v10_v3_0_vh_rfs.vhd:169]
 INFO: [Synth 8-6157] synthesizing module 'FDS' [/cad1/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_comp.v:4089]
 	Parameter INIT bound to: 1'b1 
 INFO: [Synth 8-6155] done synthesizing module 'FDS' (1#1) [/cad1/Xilinx/Vivado/2018.1/scripts/rt/data/unisim_comp.v:4089]
-INFO: [Synth 8-256] done synthesizing module 'lmb_v10' (2#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/78eb/hdl/lmb_v10_v3_0_vh_rfs.vhd:140]
-INFO: [Synth 8-256] done synthesizing module 'shell_dlmb_v10_0' (3#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_dlmb_v10_0/synth/shell_dlmb_v10_0.vhd:89]
+INFO: [Synth 8-256] done synthesizing module 'lmb_v10' (2#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/78eb/hdl/lmb_v10_v3_0_vh_rfs.vhd:140]
+INFO: [Synth 8-256] done synthesizing module 'shell_dlmb_v10_0' (3#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_dlmb_v10_0/synth/shell_dlmb_v10_0.vhd:89]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1394.066 ; gain = 121.609 ; free physical = 3844 ; free virtual = 35138
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1393.062 ; gain = 121.609 ; free physical = 7686 ; free virtual = 35166
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -49,10 +49,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1394.066 ; gain = 121.609 ; free physical = 3843 ; free virtual = 35137
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1393.062 ; gain = 121.609 ; free physical = 7682 ; free virtual = 35163
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1394.066 ; gain = 121.609 ; free physical = 3843 ; free virtual = 35137
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1393.062 ; gain = 121.609 ; free physical = 7682 ; free virtual = 35163
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -61,38 +61,38 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_dlmb_v10_0/shell_dlmb_v10_0_ooc.xdc] for cell 'U0'
-Finished Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_dlmb_v10_0/shell_dlmb_v10_0_ooc.xdc] for cell 'U0'
-Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_dlmb_v10_0/shell_dlmb_v10_0.xdc] for cell 'U0'
-Finished Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_dlmb_v10_0/shell_dlmb_v10_0.xdc] for cell 'U0'
-Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.runs/shell_dlmb_v10_0_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.runs/shell_dlmb_v10_0_synth_1/dont_touch.xdc]
+Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_dlmb_v10_0/shell_dlmb_v10_0_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_dlmb_v10_0/shell_dlmb_v10_0_ooc.xdc] for cell 'U0'
+Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_dlmb_v10_0/shell_dlmb_v10_0.xdc] for cell 'U0'
+Finished Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_dlmb_v10_0/shell_dlmb_v10_0.xdc] for cell 'U0'
+Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.runs/shell_dlmb_v10_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.runs/shell_dlmb_v10_0_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 1 instances were transformed.
   FDS => FDSE: 1 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.03 . Memory (MB): peak = 1999.609 ; gain = 1.000 ; free physical = 3595 ; free virtual = 34876
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1998.621 ; gain = 1.000 ; free physical = 7487 ; free virtual = 34955
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:32 . Memory (MB): peak = 1999.609 ; gain = 727.152 ; free physical = 3641 ; free virtual = 34924
+Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:32 . Memory (MB): peak = 1998.621 ; gain = 727.168 ; free physical = 7441 ; free virtual = 34911
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xcku115-flva1517-2-e
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:32 . Memory (MB): peak = 1999.609 ; gain = 727.152 ; free physical = 3641 ; free virtual = 34924
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:32 . Memory (MB): peak = 1998.621 ; gain = 727.168 ; free physical = 7441 ; free virtual = 34911
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property DONT_TOUCH = true for U0. (constraint file  /nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.runs/shell_dlmb_v10_0_synth_1/dont_touch.xdc, line 9).
+Applied set_property DONT_TOUCH = true for U0. (constraint file  /nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.runs/shell_dlmb_v10_0_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:32 . Memory (MB): peak = 1999.609 ; gain = 727.152 ; free physical = 3643 ; free virtual = 34926
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:32 . Memory (MB): peak = 1998.621 ; gain = 727.168 ; free physical = 7443 ; free virtual = 34913
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:32 . Memory (MB): peak = 1999.609 ; gain = 727.152 ; free physical = 3646 ; free virtual = 34930
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:32 . Memory (MB): peak = 1998.621 ; gain = 727.168 ; free physical = 7439 ; free virtual = 34910
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -128,7 +128,7 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:32 . Memory (MB): peak = 1999.609 ; gain = 727.152 ; free physical = 3691 ; free virtual = 34978
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:32 . Memory (MB): peak = 1998.621 ; gain = 727.168 ; free physical = 7413 ; free virtual = 34884
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -140,13 +140,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:00:58 . Memory (MB): peak = 2218.133 ; gain = 945.676 ; free physical = 1977 ; free virtual = 33299
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:33 ; elapsed = 00:00:58 . Memory (MB): peak = 2216.902 ; gain = 945.449 ; free physical = 5767 ; free virtual = 33250
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:58 . Memory (MB): peak = 2218.133 ; gain = 945.676 ; free physical = 1977 ; free virtual = 33299
+Finished Timing Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:58 . Memory (MB): peak = 2216.902 ; gain = 945.449 ; free physical = 5764 ; free virtual = 33247
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -158,7 +158,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:34 ; elapsed = 00:00:58 . Memory (MB): peak = 2218.133 ; gain = 945.676 ; free physical = 1974 ; free virtual = 33297
+Finished Technology Mapping : Time (s): cpu = 00:00:33 ; elapsed = 00:00:58 . Memory (MB): peak = 2216.902 ; gain = 945.449 ; free physical = 5763 ; free virtual = 33245
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -182,7 +182,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:34 ; elapsed = 00:00:59 . Memory (MB): peak = 2218.133 ; gain = 945.676 ; free physical = 1951 ; free virtual = 33277
+Finished IO Insertion : Time (s): cpu = 00:00:34 ; elapsed = 00:00:59 . Memory (MB): peak = 2216.902 ; gain = 945.449 ; free physical = 5786 ; free virtual = 33268
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -195,7 +195,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:34 ; elapsed = 00:00:59 . Memory (MB): peak = 2218.133 ; gain = 945.676 ; free physical = 1952 ; free virtual = 33277
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:34 ; elapsed = 00:00:59 . Memory (MB): peak = 2216.902 ; gain = 945.449 ; free physical = 5786 ; free virtual = 33268
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -207,25 +207,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:34 ; elapsed = 00:00:59 . Memory (MB): peak = 2218.133 ; gain = 945.676 ; free physical = 1962 ; free virtual = 33277
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:34 ; elapsed = 00:00:59 . Memory (MB): peak = 2216.902 ; gain = 945.449 ; free physical = 5786 ; free virtual = 33268
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:34 ; elapsed = 00:00:59 . Memory (MB): peak = 2218.133 ; gain = 945.676 ; free physical = 1962 ; free virtual = 33277
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:34 ; elapsed = 00:00:59 . Memory (MB): peak = 2216.902 ; gain = 945.449 ; free physical = 5786 ; free virtual = 33268
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:34 ; elapsed = 00:00:59 . Memory (MB): peak = 2218.133 ; gain = 945.676 ; free physical = 1962 ; free virtual = 33277
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:34 ; elapsed = 00:00:59 . Memory (MB): peak = 2216.902 ; gain = 945.449 ; free physical = 5785 ; free virtual = 33268
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:34 ; elapsed = 00:00:59 . Memory (MB): peak = 2218.133 ; gain = 945.676 ; free physical = 1962 ; free virtual = 33277
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:34 ; elapsed = 00:00:59 . Memory (MB): peak = 2216.902 ; gain = 945.449 ; free physical = 5785 ; free virtual = 33268
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -252,11 +252,11 @@ Report Instance Areas:
 |2     |  U0     |lmb_v10 |     1|
 +------+---------+--------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:34 ; elapsed = 00:00:59 . Memory (MB): peak = 2218.133 ; gain = 945.676 ; free physical = 1962 ; free virtual = 33277
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:34 ; elapsed = 00:00:59 . Memory (MB): peak = 2216.902 ; gain = 945.449 ; free physical = 5785 ; free virtual = 33268
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:26 ; elapsed = 00:00:43 . Memory (MB): peak = 2218.133 ; gain = 340.133 ; free physical = 1982 ; free virtual = 33297
-Synthesis Optimization Complete : Time (s): cpu = 00:00:34 ; elapsed = 00:00:59 . Memory (MB): peak = 2218.141 ; gain = 945.676 ; free physical = 1991 ; free virtual = 33307
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:26 ; elapsed = 00:00:43 . Memory (MB): peak = 2216.902 ; gain = 339.891 ; free physical = 5803 ; free virtual = 33286
+Synthesis Optimization Complete : Time (s): cpu = 00:00:34 ; elapsed = 00:00:59 . Memory (MB): peak = 2216.910 ; gain = 945.449 ; free physical = 5813 ; free virtual = 33295
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -269,5 +269,5 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 21 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:01:01 . Memory (MB): peak = 2268.883 ; gain = 1028.000 ; free physical = 1890 ; free virtual = 33205
-INFO: [Common 17-1381] The checkpoint '/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.runs/shell_dlmb_v10_0_synth_1/shell_dlmb_v10_0.dcp' has been generated.
+synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:01:00 . Memory (MB): peak = 2267.652 ; gain = 1027.773 ; free physical = 5777 ; free virtual = 33260
+INFO: [Common 17-1381] The checkpoint '/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.runs/shell_dlmb_v10_0_synth_1/shell_dlmb_v10_0.dcp' has been generated.

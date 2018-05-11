@@ -734,8 +734,8 @@
       </xilinx:taxonomies>
       <xilinx:displayName>Packetformatter_hardcode_64</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>1805031150</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2018-05-03T15:50:53Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>1805111140</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2018-05-11T15:41:09Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2018.1</xilinx:xilinxVersion>

@@ -7,6 +7,8 @@
 # of Vivado)
 ################################################################################
 create_clock -name refclk200 -period 5 [get_ports refclk200]
+create_clock -name c0_sys_clk_n_0 -period 10 [get_ports c0_sys_clk_n_0]
+create_clock -name c0_sys_clk_p_0 -period 10 [get_ports c0_sys_clk_p_0]
 create_clock -name diff_clock_rtl_clk_p -period 10 [get_ports diff_clock_rtl_clk_p]
 
 ################################################################################

@@ -1,4 +1,4 @@
-; ModuleID = '/nfs/ug/thesis/thesis0/pc/Graham/galapagos/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/a.o.3.bc'
+; ModuleID = '/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/hlsIP_adm-8k5/heartBeat/solution1/.autopilot/db/a.o.3.bc'
 target datalayout = "e-p:64:64:64-i1:8:8-i8:8:8-i16:16:16-i32:32:32-i64:64:64-f32:32:32-f64:64:64-v64:64:64-v128:128:128-a0:0:64-s0:64:64-f80:128:128-n8:16:32:64-S128"
 target triple = "x86_64-unknown-linux-gnu"
 
@@ -233,19 +233,19 @@ entry:
 !102 = metadata !{i32 790531, metadata !103, metadata !"stream_out.V.data.V", null, i32 30, metadata !4435, i32 0, i32 0} ; [ DW_TAG_arg_variable_field ]
 !103 = metadata !{i32 786689, metadata !104, metadata !"stream_out", metadata !105, i32 33554462, metadata !4404, i32 0, i32 0} ; [ DW_TAG_arg_variable ]
 !104 = metadata !{i32 786478, i32 0, metadata !105, metadata !"heartBeat", metadata !"heartBeat", metadata !"_Z9heartBeat6ap_intILi48EEN3hls6streamI7ap_axisEE", metadata !105, i32 24, metadata !106, i1 false, i1 true, i32 0, i32 0, null, i32 256, i1 false, null, null, null, metadata !125, i32 36} ; [ DW_TAG_subprogram ]
-!105 = metadata !{i32 786473, metadata !"../hlsSources/srcs/heartBeat.cpp", metadata !"/thesis0/pc/Graham/galapagos", null} ; [ DW_TAG_file_type ]
+!105 = metadata !{i32 786473, metadata !"../hlsSources/srcs/heartBeat.cpp", metadata !"/thesis0/pc/Graham/galapagos_test", null} ; [ DW_TAG_file_type ]
 !106 = metadata !{i32 786453, i32 0, metadata !"", i32 0, i32 0, i64 0, i64 0, i64 0, i32 0, null, metadata !107, i32 0, i32 0} ; [ DW_TAG_subroutine_type ]
 !107 = metadata !{null, metadata !108, metadata !3024}
 !108 = metadata !{i32 786434, null, metadata !"ap_int<48>", metadata !109, i32 74, i64 64, i64 64, i32 0, i32 0, null, metadata !110, i32 0, null, metadata !3023} ; [ DW_TAG_class_type ]
-!109 = metadata !{i32 786473, metadata !"/cad1/Xilinx/Vivado/2018.1/common/technology/autopilot/ap_int.h", metadata !"/thesis0/pc/Graham/galapagos", null} ; [ DW_TAG_file_type ]
+!109 = metadata !{i32 786473, metadata !"/cad1/Xilinx/Vivado/2018.1/common/technology/autopilot/ap_int.h", metadata !"/thesis0/pc/Graham/galapagos_test", null} ; [ DW_TAG_file_type ]
 !110 = metadata !{metadata !111, metadata !1840, metadata !1844, metadata !1850, metadata !1856, metadata !2956, metadata !2959, metadata !2962, metadata !2965, metadata !2968, metadata !2971, metadata !2974, metadata !2977, metadata !2980, metadata !2983, metadata !2986, metadata !2989, metadata !2992, metadata !2995, metadata !2998, metadata !3001, metadata !3004, metadata !3007, metadata !3011, metadata !3014, metadata !3018, metadata !3021, metadata !3022}
 !111 = metadata !{i32 786460, metadata !108, null, metadata !109, i32 0, i64 0, i64 0, i64 0, i32 0, metadata !112} ; [ DW_TAG_inheritance ]
 !112 = metadata !{i32 786434, null, metadata !"ap_int_base<48, true, true>", metadata !113, i32 1453, i64 64, i64 64, i32 0, i32 0, null, metadata !114, i32 0, null, metadata !1839} ; [ DW_TAG_class_type ]
-!113 = metadata !{i32 786473, metadata !"/cad1/Xilinx/Vivado/2018.1/common/technology/autopilot/ap_int_syn.h", metadata !"/thesis0/pc/Graham/galapagos", null} ; [ DW_TAG_file_type ]
+!113 = metadata !{i32 786473, metadata !"/cad1/Xilinx/Vivado/2018.1/common/technology/autopilot/ap_int_syn.h", metadata !"/thesis0/pc/Graham/galapagos_test", null} ; [ DW_TAG_file_type ]
 !114 = metadata !{metadata !115, metadata !137, metadata !141, metadata !149, metadata !155, metadata !158, metadata !162, metadata !166, metadata !170, metadata !174, metadata !177, metadata !181, metadata !185, metadata !189, metadata !194, metadata !199, metadata !204, metadata !208, metadata !212, metadata !218, metadata !221, metadata !225, metadata !228, metadata !231, metadata !232, metadata !236, metadata !239, metadata !242, metadata !245, metadata !248, metadata !251, metadata !254, metadata !257, metadata !260, metadata !263, metadata !266, metadata !269, metadata !279, metadata !282, metadata !285, metadata !288, metadata !291, metadata !294, metadata !297, metadata !300, metadata !303, metadata !306, metadata !309, metadata !312, metadata !315, metadata !316, metadata !320, metadata !323, metadata !324, metadata !325, metadata !326, metadata !327, metadata !328, metadata !331, metadata !332, metadata !335, metadata !336, metadata !337, metadata !338, metadata !339, metadata !340, metadata !343, metadata !344, metadata !345, metadata !348, metadata !349, metadata !352, metadata !353, metadata !360, metadata !366, metadata !367, metadata !370, metadata !371, metadata !375, metadata !376, metadata !377, metadata !378, metadata !1525, metadata !1809, metadata !1812, metadata !1815, metadata !1818, metadata !1819, metadata !1820, metadata !1821, metadata !1822, metadata !1823, metadata !1824, metadata !1825, metadata !1826, metadata !1827, metadata !1828, metadata !1829, metadata !1832, metadata !1835, metadata !1838}
 !115 = metadata !{i32 786460, metadata !112, null, metadata !113, i32 0, i64 0, i64 0, i64 0, i32 0, metadata !116} ; [ DW_TAG_inheritance ]
 !116 = metadata !{i32 786434, null, metadata !"ssdm_int<48 + 1024 * 0, true>", metadata !117, i32 50, i64 64, i64 64, i32 0, i32 0, null, metadata !118, i32 0, null, metadata !132} ; [ DW_TAG_class_type ]
-!117 = metadata !{i32 786473, metadata !"/cad1/Xilinx/Vivado/2018.1/common/technology/autopilot/etc/autopilot_dt.def", metadata !"/thesis0/pc/Graham/galapagos", null} ; [ DW_TAG_file_type ]
+!117 = metadata !{i32 786473, metadata !"/cad1/Xilinx/Vivado/2018.1/common/technology/autopilot/etc/autopilot_dt.def", metadata !"/thesis0/pc/Graham/galapagos_test", null} ; [ DW_TAG_file_type ]
 !118 = metadata !{metadata !119, metadata !121, metadata !127}
 !119 = metadata !{i32 786445, metadata !116, metadata !"V", metadata !117, i32 50, i64 48, i64 64, i64 0, i32 0, metadata !120} ; [ DW_TAG_member ]
 !120 = metadata !{i32 786468, null, metadata !"int48", null, i32 0, i64 48, i64 64, i64 0, i32 0, i32 5} ; [ DW_TAG_base_type ]
@@ -3154,7 +3154,7 @@ entry:
 !3023 = metadata !{metadata !365}
 !3024 = metadata !{i32 786434, metadata !3025, metadata !"stream<ap_axis>", metadata !3026, i32 79, i64 128, i64 64, i32 0, i32 0, null, metadata !3027, i32 0, null, metadata !4433} ; [ DW_TAG_class_type ]
 !3025 = metadata !{i32 786489, null, metadata !"hls", metadata !3026, i32 69} ; [ DW_TAG_namespace ]
-!3026 = metadata !{i32 786473, metadata !"/cad1/Xilinx/Vivado/2018.1/common/technology/autopilot/hls_stream.h", metadata !"/thesis0/pc/Graham/galapagos", null} ; [ DW_TAG_file_type ]
+!3026 = metadata !{i32 786473, metadata !"/cad1/Xilinx/Vivado/2018.1/common/technology/autopilot/hls_stream.h", metadata !"/thesis0/pc/Graham/galapagos_test", null} ; [ DW_TAG_file_type ]
 !3027 = metadata !{metadata !3028, metadata !4389, metadata !4393, metadata !4396, metadata !4401, metadata !4405, metadata !4409, metadata !4414, metadata !4418, metadata !4419, metadata !4420, metadata !4423, metadata !4426, metadata !4427, metadata !4430}
 !3028 = metadata !{i32 786445, metadata !3024, metadata !"V", metadata !3026, i32 163, i64 128, i64 64, i64 0, i32 0, metadata !3029} ; [ DW_TAG_member ]
 !3029 = metadata !{i32 786434, null, metadata !"ap_axis", metadata !105, i32 7, i64 128, i64 64, i32 0, i32 0, null, metadata !3030, i32 0, null, null} ; [ DW_TAG_class_type ]

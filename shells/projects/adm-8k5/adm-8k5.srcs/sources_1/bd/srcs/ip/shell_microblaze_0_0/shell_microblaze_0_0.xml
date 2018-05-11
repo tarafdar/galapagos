@@ -13467,8 +13467,8 @@
         <spirit:addressBlock>
           <spirit:name>microblaze_0</spirit:name>
           <spirit:baseAddress spirit:format="long">3221225472</spirit:baseAddress>
-          <spirit:range spirit:format="long">1048576</spirit:range>
-          <spirit:width spirit:format="long">64</spirit:width>
+          <spirit:range spirit:format="long">4096</spirit:range>
+          <spirit:width spirit:format="long">32</spirit:width>
           <spirit:parameters>
             <spirit:parameter>
               <spirit:name>lsb</spirit:name>
@@ -13476,7 +13476,7 @@
             </spirit:parameter>
             <spirit:parameter>
               <spirit:name>msb</spirit:name>
-              <spirit:value spirit:id="ADDRSPACE_ADDRBLOCKPARAM_VALUE.DATA.LOCAL_MEMORY_MAP.MICROBLAZE_0.msb">63</spirit:value>
+              <spirit:value spirit:id="ADDRSPACE_ADDRBLOCKPARAM_VALUE.DATA.LOCAL_MEMORY_MAP.MICROBLAZE_0.msb">31</spirit:value>
             </spirit:parameter>
             <spirit:parameter>
               <spirit:name>workflow</spirit:name>
@@ -13499,8 +13499,8 @@
         <spirit:addressBlock>
           <spirit:name>microblaze_1</spirit:name>
           <spirit:baseAddress spirit:format="long">3221225472</spirit:baseAddress>
-          <spirit:range spirit:format="long">1048576</spirit:range>
-          <spirit:width spirit:format="long">64</spirit:width>
+          <spirit:range spirit:format="long">4096</spirit:range>
+          <spirit:width spirit:format="long">32</spirit:width>
           <spirit:parameters>
             <spirit:parameter>
               <spirit:name>lsb</spirit:name>
@@ -13508,7 +13508,7 @@
             </spirit:parameter>
             <spirit:parameter>
               <spirit:name>msb</spirit:name>
-              <spirit:value spirit:id="ADDRSPACE_ADDRBLOCKPARAM_VALUE.DATA.LOCAL_MEMORY_MAP.MICROBLAZE_1.msb">63</spirit:value>
+              <spirit:value spirit:id="ADDRSPACE_ADDRBLOCKPARAM_VALUE.DATA.LOCAL_MEMORY_MAP.MICROBLAZE_1.msb">31</spirit:value>
             </spirit:parameter>
             <spirit:parameter>
               <spirit:name>workflow</spirit:name>
@@ -13630,7 +13630,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu May 03 15:52:58 UTC 2018</spirit:value>
+            <spirit:value>Fri May 11 15:44:44 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
@@ -13648,7 +13648,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu May 03 15:52:58 UTC 2018</spirit:value>
+            <spirit:value>Fri May 11 15:44:49 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
@@ -13668,7 +13668,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu May 03 15:52:58 UTC 2018</spirit:value>
+            <spirit:value>Fri May 11 15:44:49 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
@@ -13688,7 +13688,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu May 03 15:52:58 UTC 2018</spirit:value>
+            <spirit:value>Fri May 11 15:44:44 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
@@ -13708,7 +13708,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu May 03 15:52:58 UTC 2018</spirit:value>
+            <spirit:value>Fri May 11 15:44:49 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
@@ -13726,7 +13726,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu May 03 15:58:34 UTC 2018</spirit:value>
+            <spirit:value>Fri May 11 15:50:16 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>

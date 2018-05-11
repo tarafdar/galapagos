@@ -14,24 +14,24 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xcku115'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcku115'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 3660 
+INFO: Helper process launched with PID 14155 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1367.465 ; gain = 85.000 ; free physical = 3433 ; free virtual = 34740
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1366.469 ; gain = 85.000 ; free physical = 7125 ; free virtual = 34612
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'shell_axi_10g_ethernet_0_0' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/synth/shell_axi_10g_ethernet_0_0.v:58]
-INFO: [Synth 8-6157] synthesizing module 'bd_01e2' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/synth/bd_01e2.v:10]
-INFO: [Synth 8-6157] synthesizing module 'bd_01e2_dcm_locked_driver_0' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.runs/shell_axi_10g_ethernet_0_0_synth_1/.Xil/Vivado-3525-ug238/realtime/bd_01e2_dcm_locked_driver_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'bd_01e2_dcm_locked_driver_0' (1#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.runs/shell_axi_10g_ethernet_0_0_synth_1/.Xil/Vivado-3525-ug238/realtime/bd_01e2_dcm_locked_driver_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'bd_01e2_pma_pmd_type_driver_0' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.runs/shell_axi_10g_ethernet_0_0_synth_1/.Xil/Vivado-3525-ug238/realtime/bd_01e2_pma_pmd_type_driver_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'bd_01e2_pma_pmd_type_driver_0' (2#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.runs/shell_axi_10g_ethernet_0_0_synth_1/.Xil/Vivado-3525-ug238/realtime/bd_01e2_pma_pmd_type_driver_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'bd_01e2_xmac_0' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.runs/shell_axi_10g_ethernet_0_0_synth_1/.Xil/Vivado-3525-ug238/realtime/bd_01e2_xmac_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'bd_01e2_xmac_0' (3#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.runs/shell_axi_10g_ethernet_0_0_synth_1/.Xil/Vivado-3525-ug238/realtime/bd_01e2_xmac_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'bd_01e2_xpcs_0' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.runs/shell_axi_10g_ethernet_0_0_synth_1/.Xil/Vivado-3525-ug238/realtime/bd_01e2_xpcs_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'bd_01e2_xpcs_0' (4#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.runs/shell_axi_10g_ethernet_0_0_synth_1/.Xil/Vivado-3525-ug238/realtime/bd_01e2_xpcs_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'bd_01e2' (5#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/synth/bd_01e2.v:10]
-INFO: [Synth 8-6155] done synthesizing module 'shell_axi_10g_ethernet_0_0' (6#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/synth/shell_axi_10g_ethernet_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'shell_axi_10g_ethernet_0_0' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/synth/shell_axi_10g_ethernet_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'bd_01e2' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/synth/bd_01e2.v:10]
+INFO: [Synth 8-6157] synthesizing module 'bd_01e2_dcm_locked_driver_0' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.runs/shell_axi_10g_ethernet_0_0_synth_1/.Xil/Vivado-14038-ug238/realtime/bd_01e2_dcm_locked_driver_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_01e2_dcm_locked_driver_0' (1#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.runs/shell_axi_10g_ethernet_0_0_synth_1/.Xil/Vivado-14038-ug238/realtime/bd_01e2_dcm_locked_driver_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'bd_01e2_pma_pmd_type_driver_0' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.runs/shell_axi_10g_ethernet_0_0_synth_1/.Xil/Vivado-14038-ug238/realtime/bd_01e2_pma_pmd_type_driver_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_01e2_pma_pmd_type_driver_0' (2#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.runs/shell_axi_10g_ethernet_0_0_synth_1/.Xil/Vivado-14038-ug238/realtime/bd_01e2_pma_pmd_type_driver_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'bd_01e2_xmac_0' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.runs/shell_axi_10g_ethernet_0_0_synth_1/.Xil/Vivado-14038-ug238/realtime/bd_01e2_xmac_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_01e2_xmac_0' (3#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.runs/shell_axi_10g_ethernet_0_0_synth_1/.Xil/Vivado-14038-ug238/realtime/bd_01e2_xmac_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'bd_01e2_xpcs_0' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.runs/shell_axi_10g_ethernet_0_0_synth_1/.Xil/Vivado-14038-ug238/realtime/bd_01e2_xpcs_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_01e2_xpcs_0' (4#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.runs/shell_axi_10g_ethernet_0_0_synth_1/.Xil/Vivado-14038-ug238/realtime/bd_01e2_xpcs_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bd_01e2' (5#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/synth/bd_01e2.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'shell_axi_10g_ethernet_0_0' (6#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/synth/shell_axi_10g_ethernet_0_0.v:58]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1413.074 ; gain = 130.609 ; free physical = 3508 ; free virtual = 34816
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1412.078 ; gain = 130.609 ; free physical = 7119 ; free virtual = 34606
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -44,69 +44,69 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1413.074 ; gain = 130.609 ; free physical = 3491 ; free virtual = 34800
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1412.078 ; gain = 130.609 ; free physical = 7102 ; free virtual = 34589
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1413.074 ; gain = 130.609 ; free physical = 3491 ; free virtual = 34799
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1412.078 ; gain = 130.609 ; free physical = 7102 ; free virtual = 34589
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xcku115-flva1517-2-e
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_0/bd_01e2_xmac_0/bd_01e2_xmac_0_in_context.xdc] for cell 'inst/xmac'
-Finished Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_0/bd_01e2_xmac_0/bd_01e2_xmac_0_in_context.xdc] for cell 'inst/xmac'
-Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/bd_01e2_xpcs_0/bd_01e2_xpcs_0_in_context.xdc] for cell 'inst/xpcs'
-Finished Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/bd_01e2_xpcs_0/bd_01e2_xpcs_0_in_context.xdc] for cell 'inst/xpcs'
-Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_2/bd_01e2_dcm_locked_driver_0/bd_01e2_dcm_locked_driver_0_in_context.xdc] for cell 'inst/dcm_locked_driver'
-Finished Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_2/bd_01e2_dcm_locked_driver_0/bd_01e2_dcm_locked_driver_0_in_context.xdc] for cell 'inst/dcm_locked_driver'
-Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_3/bd_01e2_pma_pmd_type_driver_0/bd_01e2_pma_pmd_type_driver_0_in_context.xdc] for cell 'inst/pma_pmd_type_driver'
-Finished Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_3/bd_01e2_pma_pmd_type_driver_0/bd_01e2_pma_pmd_type_driver_0_in_context.xdc] for cell 'inst/pma_pmd_type_driver'
-Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/synth/shell_axi_10g_ethernet_0_0_ooc.xdc] for cell 'inst'
-Finished Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/synth/shell_axi_10g_ethernet_0_0_ooc.xdc] for cell 'inst'
-Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.runs/shell_axi_10g_ethernet_0_0_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.runs/shell_axi_10g_ethernet_0_0_synth_1/dont_touch.xdc]
+Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_0/bd_01e2_xmac_0/bd_01e2_xmac_0_in_context.xdc] for cell 'inst/xmac'
+Finished Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_0/bd_01e2_xmac_0/bd_01e2_xmac_0_in_context.xdc] for cell 'inst/xmac'
+Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/bd_01e2_xpcs_0/bd_01e2_xpcs_0_in_context.xdc] for cell 'inst/xpcs'
+Finished Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/bd_01e2_xpcs_0/bd_01e2_xpcs_0_in_context.xdc] for cell 'inst/xpcs'
+Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_2/bd_01e2_dcm_locked_driver_0/bd_01e2_dcm_locked_driver_0_in_context.xdc] for cell 'inst/dcm_locked_driver'
+Finished Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_2/bd_01e2_dcm_locked_driver_0/bd_01e2_dcm_locked_driver_0_in_context.xdc] for cell 'inst/dcm_locked_driver'
+Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_3/bd_01e2_pma_pmd_type_driver_0/bd_01e2_pma_pmd_type_driver_0_in_context.xdc] for cell 'inst/pma_pmd_type_driver'
+Finished Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_3/bd_01e2_pma_pmd_type_driver_0/bd_01e2_pma_pmd_type_driver_0_in_context.xdc] for cell 'inst/pma_pmd_type_driver'
+Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/synth/shell_axi_10g_ethernet_0_0_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/synth/shell_axi_10g_ethernet_0_0_ooc.xdc] for cell 'inst'
+Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.runs/shell_axi_10g_ethernet_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.runs/shell_axi_10g_ethernet_0_0_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2027.609 ; gain = 0.000 ; free physical = 2293 ; free virtual = 33613
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2027.605 ; gain = 0.000 ; free physical = 7231 ; free virtual = 34729
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:32 . Memory (MB): peak = 2027.609 ; gain = 745.145 ; free physical = 3294 ; free virtual = 34617
+Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:32 . Memory (MB): peak = 2027.605 ; gain = 746.137 ; free physical = 6937 ; free virtual = 34436
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xcku115-flva1517-2-e
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:32 . Memory (MB): peak = 2027.609 ; gain = 745.145 ; free physical = 3294 ; free virtual = 34617
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:32 . Memory (MB): peak = 2027.605 ; gain = 746.137 ; free physical = 6936 ; free virtual = 34436
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property IO_BUFFER_TYPE = NONE for refclk_n. (constraint file  /nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/bd_01e2_xpcs_0/bd_01e2_xpcs_0_in_context.xdc, line 8).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for refclk_n. (constraint file  /nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/bd_01e2_xpcs_0/bd_01e2_xpcs_0_in_context.xdc, line 9).
-Applied set_property IO_BUFFER_TYPE = NONE for refclk_p. (constraint file  /nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/bd_01e2_xpcs_0/bd_01e2_xpcs_0_in_context.xdc, line 10).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for refclk_p. (constraint file  /nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/bd_01e2_xpcs_0/bd_01e2_xpcs_0_in_context.xdc, line 11).
-Applied set_property IO_BUFFER_TYPE = NONE for rxn. (constraint file  /nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/bd_01e2_xpcs_0/bd_01e2_xpcs_0_in_context.xdc, line 12).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for rxn. (constraint file  /nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/bd_01e2_xpcs_0/bd_01e2_xpcs_0_in_context.xdc, line 13).
-Applied set_property IO_BUFFER_TYPE = NONE for rxp. (constraint file  /nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/bd_01e2_xpcs_0/bd_01e2_xpcs_0_in_context.xdc, line 14).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for rxp. (constraint file  /nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/bd_01e2_xpcs_0/bd_01e2_xpcs_0_in_context.xdc, line 15).
-Applied set_property IO_BUFFER_TYPE = NONE for txn. (constraint file  /nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/bd_01e2_xpcs_0/bd_01e2_xpcs_0_in_context.xdc, line 16).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for txn. (constraint file  /nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/bd_01e2_xpcs_0/bd_01e2_xpcs_0_in_context.xdc, line 17).
-Applied set_property IO_BUFFER_TYPE = NONE for txp. (constraint file  /nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/bd_01e2_xpcs_0/bd_01e2_xpcs_0_in_context.xdc, line 18).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for txp. (constraint file  /nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/bd_01e2_xpcs_0/bd_01e2_xpcs_0_in_context.xdc, line 19).
+Applied set_property IO_BUFFER_TYPE = NONE for refclk_n. (constraint file  /nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/bd_01e2_xpcs_0/bd_01e2_xpcs_0_in_context.xdc, line 8).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for refclk_n. (constraint file  /nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/bd_01e2_xpcs_0/bd_01e2_xpcs_0_in_context.xdc, line 9).
+Applied set_property IO_BUFFER_TYPE = NONE for refclk_p. (constraint file  /nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/bd_01e2_xpcs_0/bd_01e2_xpcs_0_in_context.xdc, line 10).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for refclk_p. (constraint file  /nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/bd_01e2_xpcs_0/bd_01e2_xpcs_0_in_context.xdc, line 11).
+Applied set_property IO_BUFFER_TYPE = NONE for rxn. (constraint file  /nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/bd_01e2_xpcs_0/bd_01e2_xpcs_0_in_context.xdc, line 12).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for rxn. (constraint file  /nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/bd_01e2_xpcs_0/bd_01e2_xpcs_0_in_context.xdc, line 13).
+Applied set_property IO_BUFFER_TYPE = NONE for rxp. (constraint file  /nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/bd_01e2_xpcs_0/bd_01e2_xpcs_0_in_context.xdc, line 14).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for rxp. (constraint file  /nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/bd_01e2_xpcs_0/bd_01e2_xpcs_0_in_context.xdc, line 15).
+Applied set_property IO_BUFFER_TYPE = NONE for txn. (constraint file  /nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/bd_01e2_xpcs_0/bd_01e2_xpcs_0_in_context.xdc, line 16).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for txn. (constraint file  /nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/bd_01e2_xpcs_0/bd_01e2_xpcs_0_in_context.xdc, line 17).
+Applied set_property IO_BUFFER_TYPE = NONE for txp. (constraint file  /nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/bd_01e2_xpcs_0/bd_01e2_xpcs_0_in_context.xdc, line 18).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for txp. (constraint file  /nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/bd_01e2_xpcs_0/bd_01e2_xpcs_0_in_context.xdc, line 19).
 Applied set_property DONT_TOUCH = true for inst. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for inst/xmac. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for inst/xpcs. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for inst/dcm_locked_driver. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for inst/pma_pmd_type_driver. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:32 . Memory (MB): peak = 2027.609 ; gain = 745.145 ; free physical = 3295 ; free virtual = 34618
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:32 . Memory (MB): peak = 2027.605 ; gain = 746.137 ; free physical = 6935 ; free virtual = 34434
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:32 . Memory (MB): peak = 2027.609 ; gain = 745.145 ; free physical = 3292 ; free virtual = 34616
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:32 . Memory (MB): peak = 2027.605 ; gain = 746.137 ; free physical = 6928 ; free virtual = 34428
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -142,7 +142,7 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:32 . Memory (MB): peak = 2027.609 ; gain = 745.145 ; free physical = 3271 ; free virtual = 34596
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:32 . Memory (MB): peak = 2027.605 ; gain = 746.137 ; free physical = 6956 ; free virtual = 34458
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -161,13 +161,13 @@ INFO: [Synth 8-5578] Moved timing constraint from pin 'inst/xpcs/qpll0outclk_out
 INFO: [Synth 8-5578] Moved timing constraint from pin 'inst/xpcs/qpll0outrefclk_out' to pin 'inst/xpcs/bbstub_qpll0outrefclk_out/O'
 INFO: [Synth 8-5819] Moved 6 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:00:59 . Memory (MB): peak = 2250.891 ; gain = 968.426 ; free physical = 1941 ; free virtual = 33264
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:00:58 . Memory (MB): peak = 2249.887 ; gain = 968.418 ; free physical = 5527 ; free virtual = 33031
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:59 . Memory (MB): peak = 2250.891 ; gain = 968.426 ; free physical = 1940 ; free virtual = 33264
+Finished Timing Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:58 . Memory (MB): peak = 2249.887 ; gain = 968.418 ; free physical = 5534 ; free virtual = 33038
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -179,7 +179,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:34 ; elapsed = 00:00:59 . Memory (MB): peak = 2252.891 ; gain = 970.426 ; free physical = 1939 ; free virtual = 33263
+Finished Technology Mapping : Time (s): cpu = 00:00:34 ; elapsed = 00:00:58 . Memory (MB): peak = 2250.887 ; gain = 969.418 ; free physical = 5537 ; free virtual = 33041
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -203,7 +203,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:35 ; elapsed = 00:01:00 . Memory (MB): peak = 2252.891 ; gain = 970.426 ; free physical = 1942 ; free virtual = 33265
+Finished IO Insertion : Time (s): cpu = 00:00:34 ; elapsed = 00:00:59 . Memory (MB): peak = 2251.887 ; gain = 970.418 ; free physical = 5527 ; free virtual = 33030
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -216,7 +216,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:35 ; elapsed = 00:01:00 . Memory (MB): peak = 2252.891 ; gain = 970.426 ; free physical = 1942 ; free virtual = 33265
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:34 ; elapsed = 00:00:59 . Memory (MB): peak = 2251.887 ; gain = 970.418 ; free physical = 5527 ; free virtual = 33030
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -228,25 +228,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:35 ; elapsed = 00:01:00 . Memory (MB): peak = 2252.891 ; gain = 970.426 ; free physical = 1942 ; free virtual = 33265
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:34 ; elapsed = 00:00:59 . Memory (MB): peak = 2251.887 ; gain = 970.418 ; free physical = 5527 ; free virtual = 33030
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:35 ; elapsed = 00:01:00 . Memory (MB): peak = 2252.891 ; gain = 970.426 ; free physical = 1942 ; free virtual = 33265
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:34 ; elapsed = 00:00:59 . Memory (MB): peak = 2251.887 ; gain = 970.418 ; free physical = 5527 ; free virtual = 33030
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:35 ; elapsed = 00:01:00 . Memory (MB): peak = 2252.891 ; gain = 970.426 ; free physical = 1941 ; free virtual = 33265
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:34 ; elapsed = 00:00:59 . Memory (MB): peak = 2251.887 ; gain = 970.418 ; free physical = 5527 ; free virtual = 33030
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:35 ; elapsed = 00:01:00 . Memory (MB): peak = 2252.891 ; gain = 970.426 ; free physical = 1941 ; free virtual = 33265
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:34 ; elapsed = 00:00:59 . Memory (MB): peak = 2251.887 ; gain = 970.418 ; free physical = 5527 ; free virtual = 33030
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -280,11 +280,11 @@ Report Instance Areas:
 |2     |  inst   |bd_01e2 |   810|
 +------+---------+--------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:35 ; elapsed = 00:01:00 . Memory (MB): peak = 2252.891 ; gain = 970.426 ; free physical = 1941 ; free virtual = 33264
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:34 ; elapsed = 00:00:59 . Memory (MB): peak = 2251.887 ; gain = 970.418 ; free physical = 5527 ; free virtual = 33030
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:27 ; elapsed = 00:00:45 . Memory (MB): peak = 2252.891 ; gain = 355.891 ; free physical = 1959 ; free virtual = 33283
-Synthesis Optimization Complete : Time (s): cpu = 00:00:35 ; elapsed = 00:01:00 . Memory (MB): peak = 2252.898 ; gain = 970.426 ; free physical = 1969 ; free virtual = 33292
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:26 ; elapsed = 00:00:43 . Memory (MB): peak = 2251.887 ; gain = 354.891 ; free physical = 5546 ; free virtual = 33049
+Synthesis Optimization Complete : Time (s): cpu = 00:00:34 ; elapsed = 00:00:59 . Memory (MB): peak = 2251.895 ; gain = 970.418 ; free physical = 5554 ; free virtual = 33058
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -294,11 +294,11 @@ No Unisim elements were transformed.
 INFO: [Common 17-83] Releasing license: Synthesis
 28 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:01:02 . Memory (MB): peak = 2302.633 ; gain = 1028.172 ; free physical = 3123 ; free virtual = 34445
-INFO: [Common 17-1381] The checkpoint '/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.runs/shell_axi_10g_ethernet_0_0_synth_1/shell_axi_10g_ethernet_0_0.dcp' has been generated.
-INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP /nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/shell_axi_10g_ethernet_0_0.xci
+synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:01:01 . Memory (MB): peak = 2301.629 ; gain = 1028.164 ; free physical = 5507 ; free virtual = 33011
+INFO: [Common 17-1381] The checkpoint '/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.runs/shell_axi_10g_ethernet_0_0_synth_1/shell_axi_10g_ethernet_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP /nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/shell_axi_10g_ethernet_0_0.xci
 INFO: [Coretcl 2-1174] Renamed 5 cell refs.
-INFO: [Common 17-1381] The checkpoint '/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.runs/shell_axi_10g_ethernet_0_0_synth_1/shell_axi_10g_ethernet_0_0.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint '/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.runs/shell_axi_10g_ethernet_0_0_synth_1/shell_axi_10g_ethernet_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file shell_axi_10g_ethernet_0_0_utilization_synth.rpt -pb shell_axi_10g_ethernet_0_0_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00.52 ; elapsed = 00:00:00.55 . Memory (MB): peak = 2306.633 ; gain = 0.000 ; free physical = 2862 ; free virtual = 34184
-INFO: [Common 17-206] Exiting Vivado at Thu May  3 12:03:20 2018...
+report_utilization: Time (s): cpu = 00:00:00.51 ; elapsed = 00:00:00.55 . Memory (MB): peak = 2305.629 ; gain = 0.000 ; free physical = 5653 ; free virtual = 33155
+INFO: [Common 17-206] Exiting Vivado at Fri May 11 11:54:56 2018...

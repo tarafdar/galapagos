@@ -827,8 +827,8 @@
       </xilinx:taxonomies>
       <xilinx:displayName>Firewall64_2</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>1805031150</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2018-05-03T15:50:27Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>1805111140</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2018-05-11T15:40:42Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2018.1</xilinx:xilinxVersion>

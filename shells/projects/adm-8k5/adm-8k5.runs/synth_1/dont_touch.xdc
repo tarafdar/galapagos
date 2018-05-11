@@ -42,8 +42,20 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==shell_axi_bram_
 # IP: bd/srcs/ip/shell_blk_mem_gen_0_0/shell_blk_mem_gen_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==shell_blk_mem_gen_0_0 || ORIG_REF_NAME==shell_blk_mem_gen_0_0} -quiet] -quiet
 
+# IP: bd/srcs/ip/shell_proc_sys_reset_1_0/shell_proc_sys_reset_1_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==shell_proc_sys_reset_1_0 || ORIG_REF_NAME==shell_proc_sys_reset_1_0} -quiet] -quiet
+
+# IP: bd/srcs/ip/shell_ddr4_0_0/shell_ddr4_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==shell_ddr4_0_0 || ORIG_REF_NAME==shell_ddr4_0_0} -quiet] -quiet
+
+# IP: bd/srcs/ip/shell_mem_interconnect_0/shell_mem_interconnect_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==shell_mem_interconnect_0 || ORIG_REF_NAME==shell_mem_interconnect_0} -quiet] -quiet
+
 # IP: bd/srcs/ip/shell_xbar_0/shell_xbar_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==shell_xbar_0 || ORIG_REF_NAME==shell_xbar_0} -quiet] -quiet
+
+# IP: bd/srcs/ip/shell_xbar_1/shell_xbar_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==shell_xbar_1 || ORIG_REF_NAME==shell_xbar_1} -quiet] -quiet
 
 # IP: bd/srcs/ip/shell_microblaze_0_0/shell_microblaze_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==shell_microblaze_0_0 || ORIG_REF_NAME==shell_microblaze_0_0} -quiet] -quiet
@@ -63,8 +75,8 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==shell_microblaz
 # IP: bd/srcs/ip/shell_axi_hwicap_0_0/shell_axi_hwicap_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==shell_axi_hwicap_0_0 || ORIG_REF_NAME==shell_axi_hwicap_0_0} -quiet] -quiet
 
-# IP: bd/srcs/ip/shell_xbar_1/shell_xbar_1.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==shell_xbar_1 || ORIG_REF_NAME==shell_xbar_1} -quiet] -quiet
+# IP: bd/srcs/ip/shell_xbar_2/shell_xbar_2.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==shell_xbar_2 || ORIG_REF_NAME==shell_xbar_2} -quiet] -quiet
 
 # IP: bd/srcs/ip/shell_dlmb_v10_0/shell_dlmb_v10_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==shell_dlmb_v10_0 || ORIG_REF_NAME==shell_dlmb_v10_0} -quiet] -quiet
@@ -120,8 +132,26 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==shell_rx_data_f
 # IP: bd/srcs/ip/shell_tx_data_fifo_0_0/shell_tx_data_fifo_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==shell_tx_data_fifo_0_0 || ORIG_REF_NAME==shell_tx_data_fifo_0_0} -quiet] -quiet
 
+# IP: bd/srcs/ip/shell_auto_cc_3/shell_auto_cc_3.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==shell_auto_cc_3 || ORIG_REF_NAME==shell_auto_cc_3} -quiet] -quiet
+
+# IP: bd/srcs/ip/shell_auto_us_3/shell_auto_us_3.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==shell_auto_us_3 || ORIG_REF_NAME==shell_auto_us_3} -quiet] -quiet
+
+# IP: bd/srcs/ip/shell_auto_rs_0/shell_auto_rs_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==shell_auto_rs_0 || ORIG_REF_NAME==shell_auto_rs_0} -quiet] -quiet
+
+# IP: bd/srcs/ip/shell_auto_cc_4/shell_auto_cc_4.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==shell_auto_cc_4 || ORIG_REF_NAME==shell_auto_cc_4} -quiet] -quiet
+
 # IP: bd/srcs/ip/shell_s01_mmu_0/shell_s01_mmu_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==shell_s01_mmu_0 || ORIG_REF_NAME==shell_s01_mmu_0} -quiet] -quiet
+
+# IP: bd/srcs/ip/shell_auto_pc_0/shell_auto_pc_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==shell_auto_pc_0 || ORIG_REF_NAME==shell_auto_pc_0} -quiet] -quiet
+
+# IP: bd/srcs/ip/shell_auto_us_1/shell_auto_us_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==shell_auto_us_1 || ORIG_REF_NAME==shell_auto_us_1} -quiet] -quiet
 
 # IP: bd/srcs/ip/shell_auto_cc_1/shell_auto_cc_1.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==shell_auto_cc_1 || ORIG_REF_NAME==shell_auto_cc_1} -quiet] -quiet
@@ -129,14 +159,11 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==shell_auto_cc_1
 # IP: bd/srcs/ip/shell_auto_ds_3/shell_auto_ds_3.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==shell_auto_ds_3 || ORIG_REF_NAME==shell_auto_ds_3} -quiet] -quiet
 
+# IP: bd/srcs/ip/shell_auto_us_2/shell_auto_us_2.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==shell_auto_us_2 || ORIG_REF_NAME==shell_auto_us_2} -quiet] -quiet
+
 # IP: bd/srcs/ip/shell_auto_cc_2/shell_auto_cc_2.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==shell_auto_cc_2 || ORIG_REF_NAME==shell_auto_cc_2} -quiet] -quiet
-
-# IP: bd/srcs/ip/shell_auto_pc_0/shell_auto_pc_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==shell_auto_pc_0 || ORIG_REF_NAME==shell_auto_pc_0} -quiet] -quiet
-
-# IP: bd/srcs/ip/shell_auto_us_0/shell_auto_us_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==shell_auto_us_0 || ORIG_REF_NAME==shell_auto_us_0} -quiet] -quiet
 
 # IP: bd/srcs/ip/shell_auto_cc_0/shell_auto_cc_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==shell_auto_cc_0 || ORIG_REF_NAME==shell_auto_cc_0} -quiet] -quiet
@@ -150,7 +177,7 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==shell_auto_ds_1
 # IP: bd/srcs/ip/shell_auto_ds_0/shell_auto_ds_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==shell_auto_ds_0 || ORIG_REF_NAME==shell_auto_ds_0} -quiet] -quiet
 
-# IP: bd/srcs/ip/shell_auto_us_1/shell_auto_us_1.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==shell_auto_us_1 || ORIG_REF_NAME==shell_auto_us_1} -quiet] -quiet
+# IP: bd/srcs/ip/shell_auto_us_0/shell_auto_us_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==shell_auto_us_0 || ORIG_REF_NAME==shell_auto_us_0} -quiet] -quiet
 
 # XDC: bd/srcs/shell_ooc.xdc

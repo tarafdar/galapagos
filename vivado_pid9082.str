@@ -1,0 +1,969 @@
+/*
+
+Xilinx Vivado v2018.1 (64-bit) [Major: 2018, Minor: 1]
+SW Build: 2188600 on Wed Apr  4 18:39:19 MDT 2018
+IP Build: 2185939 on Wed Apr  4 20:55:05 MDT 2018
+
+Process ID: 9082
+License: Customer
+
+Current time: 	Thu May 10 11:03:00 EDT 2018
+Time zone: 	Eastern Standard Time (America/Toronto)
+
+OS: PRETTY_NAME="Debian GNU/Linux 9 (stretch)"
+OS Version: 4.9.0-6-amd64
+OS Architecture: amd64
+Available processors (cores): 8
+
+Display: :0
+Screen size: 1920x1200
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 40 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	/nfs/ug/cad/cad1/Xilinx/Vivado/2018.1/tps/lnx64/jre
+Java executable location: 	/nfs/ug/cad/cad1/Xilinx/Vivado/2018.1/tps/lnx64/jre/bin/java
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 2 GB
+
+
+User name: 	smithqu1
+User home directory: /nfs/ug/homes-0/s/smithqu1
+User working directory: /nfs/ug/thesis/thesis0/pc/Quinn/galapagos
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /nfs/ug/cad/cad1/Xilinx/Vivado
+HDI_APPROOT: /cad1/Xilinx/Vivado/2018.1
+RDI_DATADIR: /nfs/ug/cad/cad1/Xilinx/Vivado/2018.1/data
+RDI_BINDIR: /nfs/ug/cad/cad1/Xilinx/Vivado/2018.1/bin
+
+Vivado preferences file location: /homes/s/smithqu1/.Xilinx/Vivado/2018.1/vivado.xml
+Vivado preferences directory: /homes/s/smithqu1/.Xilinx/Vivado/2018.1/
+Vivado layouts directory: /nfs/ug/homes-0/s/smithqu1/.Xilinx/Vivado/2018.1/layouts
+PlanAhead jar file location: 	/nfs/ug/cad/cad1/Xilinx/Vivado/2018.1/lib/classes/planAhead.jar
+Vivado log file location: 	/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/vivado.log
+Vivado journal file location: 	/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-9082-ug239
+
+GUI allocated memory:	152 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 1,011 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// TclEventType: START_PROGRESS_DIALOG
+// Tcl Message: start_gui 
+// TclEventType: START_PROGRESS_DIALOG
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// bv (ch):  Sourcing Tcl script 'tclScripts/createShell_adm-8k5.tcl' : addNotify
+// Tcl Message: source tclScripts/createShell_adm-8k5.tcl 
+// [GUI Memory]: 85 MB (+86496kb) [00:00:05]
+// [Engine Memory]: 876 MB (+767146kb) [00:00:05]
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_ADD
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/cad1/Xilinx/Vivado/2018.1/data/ip'. 
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 1,003 MB (+86859kb) [00:00:06]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// [GUI Memory]: 90 MB (+683kb) [00:00:08]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,024 MB. GUI used memory: 42 MB. Current time: 5/10/18 11:03:00 AM EDT
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: MSGMGR_REFRESH_MSG
+// TclEventType: PROJECT_CHANGE
+// TclEventType: RUN_MODIFY
+// TclEventType: PROJECT_CHANGE
+// TclEventType: CREATE_IP_CATALOG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJ_DESIGN_MODE_SET
+// Tcl Message: create_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:05 . Memory (MB): peak = 6192.105 ; gain = 178.832 ; free physical = 4403 ; free virtual = 36931 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository '/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/hlsIP_adm-8k5'. 
+// Tcl Message: # set obj [get_filesets sources_1] # set files [list \ #  "[file normalize "shells/adm-8k5/srcs/shell.bd"]"\ #  "[file normalize "shells/adm-8k5/srcs/shellTop.v"]"\ # ] # import_files -norecurse -fileset $obj $files # set file "shells/projects/$projName/$projName.srcs/sources_1/bd/srcs/shell.bd" # set file [file normalize $file] # set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]] # if { ![get_property "is_locked" $file_obj] } { #   set_property "synth_checkpoint_mode" "Hierarchical" $file_obj # } 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJ_DESIGN_MODE_SET
+// Tcl Message: # set obj [get_filesets sources_1] # set_property "top" "shellTop" $obj # set obj [get_filesets sources_1] # set files [list \ #  "[file normalize "partialRegions/$prDir/pr.bd"]"\ # ] # import_files -norecurse -fileset $obj $files # set file "shells/projects/$projName/$projName.srcs/sources_1/bd/$prDir/pr.bd" # set file [file normalize $file] # set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]] # if { ![get_property "is_locked" $file_obj] } { #   set_property "synth_checkpoint_mode" "Singular" $file_obj # } 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: RUN_MODIFY
+// TclEventType: LOAD_FEATURE
+// Tcl Message: INFO: Project created:adm-8k5 
+// Tcl Message: # source tclScripts/synthesizeShell_adm-8k5.tcl ## source tclScripts/configurationParametersShell_adm-8k5.tcl ### set projName adm-8k5  ### set prDir defaultFifo ## generate_target all [get_files  shells/projects/$projName/$projName.srcs/sources_1/bd/$prDir/pr.bd] 
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: LOAD_FEATURE
+// Tcl Message: INFO: [BD 41-434] Could not find an IP with XCI file by name: pr_blk_mem_gen_0_0  INFO: [Device 21-403] Loading part xcku115-flva1517-2-e 
+// [Engine Memory]: 1,113 MB (+63265kb) [00:00:18]
+// [Engine Memory]: 1,447 MB (+292000kb) [00:00:23]
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 1,554 MB (+36401kb) [00:00:27]
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: Wrote  : </nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/defaultFifo/pr.bd>  
+// Tcl Message: VHDL Output written to : /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/defaultFifo/synth/pr.v 
+// Tcl Message: VHDL Output written to : /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/defaultFifo/sim/pr.v VHDL Output written to : /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/defaultFifo/hdl/pr_wrapper.v 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_CLOSE_DIAGRAM
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block blk_mem_gen_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_bram_ctrl_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_data_fifo_0 . 
+// Tcl Message: Exporting to file /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/defaultFifo/hw_handoff/pr.hwh Generated Block Design Tcl file /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/defaultFifo/hw_handoff/pr_bd.tcl Generated Hardware Definition File /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/defaultFifo/synth/pr.hwdef 
+// Tcl Message: generate_target: Time (s): cpu = 00:00:10 ; elapsed = 00:00:16 . Memory (MB): peak = 6733.941 ; gain = 539.836 ; free physical = 3792 ; free virtual = 36355 
+// Tcl Message: ## export_ip_user_files -of_objects [get_files shells/projects/$projName/$projName.srcs/sources_1/bd/$prDir/pr.bd] -no_script -sync -force -quiet ## create_ip_run [get_files -of_objects [get_fileset sources_1] shells/projects/$projName/$projName.srcs/sources_1/bd/$prDir/pr.bd] ## launch_runs -jobs 4 pr_synth_1 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,578 MB. GUI used memory: 45 MB. Current time: 5/10/18 11:03:20 AM EDT
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: [Thu May 10 11:03:21 2018] Launched pr_synth_1... Run output will be captured here: /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.runs/pr_synth_1/runme.log 
+// Tcl Message: ## generate_target all [get_files  shells/projects/$projName/$projName.srcs/sources_1/bd/srcs/shell.bd] 
+// Tcl Message: INFO: [BD 41-434] Could not find an IP with XCI file by name: shell_util_vector_logic_0_0  INFO: [BD 41-434] Could not find an IP with XCI file by name: shell_util_vector_logic_1_0  INFO: [BD 41-434] Could not find an IP with XCI file by name: shell_clk_wiz_0_0  
+// [Engine Memory]: 1,665 MB (+34525kb) [00:00:37]
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,700 MB. GUI used memory: 44 MB. Current time: 5/10/18 11:03:40 AM EDT
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [BD 41-434] Could not find an IP with XCI file by name: shell_gnd_0  INFO: [BD 41-434] Could not find an IP with XCI file by name: shell_util_vector_logic_2_0  INFO: [BD 41-434] Could not find an IP with XCI file by name: shell_reverseEndian64_0_0  
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [BD 41-434] Could not find an IP with XCI file by name: shell_auto_cc_1  INFO: [BD 41-434] Could not find an IP with XCI file by name: shell_auto_ds_3  INFO: [BD 41-434] Could not find an IP with XCI file by name: shell_auto_cc_2  INFO: [BD 41-434] Could not find an IP with XCI file by name: shell_microblaze_0_0  
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [BD 41-434] Could not find an IP with XCI file by name: shell_axiStreamGate_0_0  INFO: [BD 41-434] Could not find an IP with XCI file by name: shell_mdm_1_0  
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 1,779 MB (+31749kb) [00:00:52]
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [BD 41-434] Could not find an IP with XCI file by name: shell_rst_clk_wiz_0_100M_0  INFO: [BD 41-434] Could not find an IP with XCI file by name: shell_microblaze_0_axi_periph_0  INFO: [BD 41-434] Could not find an IP with XCI file by name: shell_axi_hwicap_0_0  
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [BD 41-434] Could not find an IP with XCI file by name: shell_xbar_1  INFO: [BD 41-434] Could not find an IP with XCI file by name: shell_auto_pc_0  INFO: [BD 41-434] Could not find an IP with XCI file by name: shell_auto_us_0  
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [BD 41-434] Could not find an IP with XCI file by name: shell_auto_ds_2  INFO: [BD 41-434] Could not find an IP with XCI file by name: shell_auto_us_1  INFO: [BD 41-434] Could not find an IP with XCI file by name: shell_dlmb_v10_0  INFO: [BD 41-434] Could not find an IP with XCI file by name: shell_ilmb_v10_0  INFO: [BD 41-434] Could not find an IP with XCI file by name: shell_dlmb_bram_if_cntlr_0  INFO: [BD 41-434] Could not find an IP with XCI file by name: shell_ilmb_bram_if_cntlr_0  INFO: [BD 41-434] Could not find an IP with XCI file by name: shell_lmb_bram_0  
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [BD 41-434] Could not find an IP with XCI file by name: shell_xdma_0_0  
+// TclEventType: REPORT_IP_STATUS_STALE
+// [Engine Memory]: 1,900 MB (+34241kb) [00:00:58]
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,962 MB. GUI used memory: 44 MB. Current time: 5/10/18 11:04:00 AM EDT
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [BD 41-434] Could not find an IP with XCI file by name: shell_util_ds_buf_0  INFO: [BD 41-434] Could not find an IP with XCI file by name: shell_gnd_1  INFO: [BD 41-434] Could not find an IP with XCI file by name: shell_tx_register_slice_0_0  INFO: [BD 41-434] Could not find an IP with XCI file by name: shell_axi_10g_ethernet_0_0  
+selectButton(RDIResource.ProgressDialog_BACKGROUND, "Background"); // a (bv)
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// Tcl Message: create_bd_cell: Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 7147.367 ; gain = 0.000 ; free physical = 2839 ; free virtual = 35427 
+// Tcl Message: </xmac/s_axi/Reg> is being mapped into </s_axi> at <0x44A00000 [ 64K ]> 
+// TclEventType: REPORT_IP_STATUS_STALE
+// Elapsed time: 11 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 0, true); // B (D, ch) - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 0); // B (D, ch)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 0); // B (D, ch)
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// Tcl Message: create_bd_cell: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 7171.395 ; gain = 24.027 ; free physical = 2773 ; free virtual = 35360 
+// HMemoryUtils.trashcanNow. Engine heap size: 2,005 MB. GUI used memory: 45 MB. Current time: 5/10/18 11:04:35 AM EDT
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// [Engine Memory]: 2,005 MB (+10285kb) [00:01:47]
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [xilinx.com:ip:axi_hwicap:3.0-1] /control/axi_hwicap_0                      ##########################################################################################                     Clocks connected to AXI HWICAP are same. Configuring AXI HWICAP in SYNC mode ..........                     ########################################################################################## 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: Wrote  : </nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/shell.bd>  
+// Tcl Message: VHDL Output written to : /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v 
+// Tcl Message: VHDL Output written to : /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/sim/shell.v VHDL Output written to : /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/hdl/shell_wrapper.v 
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block util_vector_logic_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block util_vector_logic_1 . 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block gnd . INFO: [BD 41-1029] Generation completed for the IP Integrator block util_vector_logic_2 . INFO: [BD 41-1029] Generation completed for the IP Integrator block reverseEndian64_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block reverseEndian64_1 . INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_bram_ctrl_0 . 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,048 MB. GUI used memory: 44 MB. Current time: 5/10/18 11:04:55 AM EDT
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block blk_mem_gen_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/xbar . 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block PCIe/xdma_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block PCIe/util_ds_buf . INFO: [BD 41-1029] Generation completed for the IP Integrator block network/gnd . INFO: [BD 41-1029] Generation completed for the IP Integrator block network/tx_register_slice_0 . 
+// TclEventType: FILE_SET_CHANGE
+// [GUI Memory]: 96 MB (+1789kb) [00:02:20]
+// [Engine Memory]: 2,112 MB (+6737kb) [00:02:20]
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_CLOSE_DIAGRAM
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// Tcl Message: Exporting to file /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/hw_handoff/shell_axi_10g_ethernet_0_0.hwh Generated Block Design Tcl file /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/hw_handoff/shell_axi_10g_ethernet_0_0_bd.tcl Generated Hardware Definition File /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/synth/shell_axi_10g_ethernet_0_0.hwdef 
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/m01_couplers/auto_cc . 
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/m00_couplers/auto_ds . 
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/s01_couplers/auto_cc . 
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block control/microblaze_0_axi_periph/m03_couplers/auto_pc . 
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block control/microblaze_0_axi_periph/m03_couplers/auto_us . 
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block control/microblaze_0_axi_periph/m02_couplers/auto_cc . 
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block control/microblaze_0_axi_periph/m02_couplers/auto_ds . 
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block control/microblaze_0_axi_periph/m01_couplers/auto_ds . 
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block control/microblaze_0_axi_periph/m00_couplers/auto_ds . 
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block control/microblaze_0_axi_periph/s00_couplers/auto_us . 
+// Tcl Message: Exporting to file /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/hw_handoff/shell.hwh Generated Block Design Tcl file /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/hw_handoff/shell_bd.tcl Generated Hardware Definition File /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.hwdef 
+// Tcl Message: generate_target: Time (s): cpu = 00:01:47 ; elapsed = 00:02:03 . Memory (MB): peak = 7302.203 ; gain = 485.227 ; free physical = 2580 ; free virtual = 35237 
+// Tcl Message: ## export_ip_user_files -of_objects [get_files shells/projects/$projName/$projName.srcs/sources_1/bd/srcs/shell.bd] -no_script -sync -force -quiet ## create_ip_run [get_files -of_objects [get_fileset sources_1] shells/projects/$projName/$projName.srcs/sources_1/bd/srcs/shell.bd] 
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 2,132 MB. GUI used memory: 46 MB. Current time: 5/10/18 11:05:25 AM EDT
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// [GUI Memory]: 101 MB (+22kb) [00:02:35]
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: create_ip_run: Time (s): cpu = 00:00:12 ; elapsed = 00:00:06 . Memory (MB): peak = 7362.055 ; gain = 59.852 ; free physical = 2491 ; free virtual = 35148 
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// [Engine Memory]: 2,220 MB (+3047kb) [00:02:39]
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 7423.754 ; gain = 61.699 ; free physical = 2349 ; free virtual = 35009 
+// Tcl Message: ## wait_on_run pr_synth_1 
+// Tcl Message: [Thu May 10 11:05:36 2018] Waiting for pr_synth_1 to finish... 
+// Tcl Message: [Thu May 10 11:05:41 2018] Waiting for pr_synth_1 to finish... 
+// Tcl Message: [Thu May 10 11:05:47 2018] Waiting for pr_synth_1 to finish... 
+// Tcl Message: [Thu May 10 11:05:52 2018] Waiting for pr_synth_1 to finish... 
+// Tcl Message: [Thu May 10 11:06:02 2018] Waiting for pr_synth_1 to finish... 
+// Tcl Message: [Thu May 10 11:06:12 2018] Waiting for pr_synth_1 to finish... 
+// Tcl Message: [Thu May 10 11:06:22 2018] Waiting for pr_synth_1 to finish... 
+// Tcl Message: [Thu May 10 11:06:32 2018] Waiting for pr_synth_1 to finish... 
+// Tcl Message: [Thu May 10 11:06:52 2018] Waiting for pr_synth_1 to finish... 
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking too long to process. Increasing delay to 2000 ms.
+// TclEventType: RUN_COMPLETED
+// Tcl Message: [Thu May 10 11:07:12 2018] Waiting for pr_synth_1 to finish... 
+// TclEventType: RUN_COMPLETED
+// Tcl Message: [Thu May 10 11:07:29 2018] pr_synth_1 finished 
+// Tcl Message: wait_on_run: Time (s): cpu = 00:03:12 ; elapsed = 00:01:53 . Memory (MB): peak = 7423.754 ; gain = 0.000 ; free physical = 1993 ; free virtual = 32273 
+// Tcl Message: ## wait_on_run shell_util_vector_logic_0_0_synth_1 
+// Tcl Message: [Thu May 10 11:07:29 2018] Waiting for shell_util_vector_logic_0_0_synth_1 to finish... 
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking too long to process. Increasing delay to 3000 ms.
+// Tcl Message: [Thu May 10 11:07:34 2018] Waiting for shell_util_vector_logic_0_0_synth_1 to finish... 
+// TclEventType: RUN_COMPLETED
+// Tcl Message: [Thu May 10 11:07:39 2018] Waiting for shell_util_vector_logic_0_0_synth_1 to finish... 
+// Tcl Message: [Thu May 10 11:07:44 2018] Waiting for shell_util_vector_logic_0_0_synth_1 to finish... 
+// [GUI Memory]: 114 MB (+8967kb) [00:04:55]
+// Tcl Message: [Thu May 10 11:07:54 2018] Waiting for shell_util_vector_logic_0_0_synth_1 to finish... 
+// Tcl Message: [Thu May 10 11:08:04 2018] Waiting for shell_util_vector_logic_0_0_synth_1 to finish... 
+// Tcl Message: [Thu May 10 11:08:15 2018] Waiting for shell_util_vector_logic_0_0_synth_1 to finish... 
+// TclEventType: RUN_COMPLETED
+// Tcl Message: [Thu May 10 11:08:20 2018] shell_util_vector_logic_0_0_synth_1 finished 
+// Tcl Message: wait_on_run: Time (s): cpu = 00:00:05 ; elapsed = 00:00:51 . Memory (MB): peak = 7423.754 ; gain = 0.000 ; free physical = 3650 ; free virtual = 33931 
+// Tcl Message: ## wait_on_run shell_util_vector_logic_1_0_synth_1 
+// Tcl Message: [Thu May 10 11:08:20 2018] Waiting for shell_util_vector_logic_1_0_synth_1 to finish... 
+// Tcl Message: [Thu May 10 11:08:20 2018] shell_util_vector_logic_1_0_synth_1 finished 
+// Tcl Message: ## wait_on_run shell_clk_wiz_0_0_synth_1 
+// Tcl Message: [Thu May 10 11:08:20 2018] Waiting for shell_clk_wiz_0_0_synth_1 to finish... 
+// Tcl Message: [Thu May 10 11:08:25 2018] Waiting for shell_clk_wiz_0_0_synth_1 to finish... 
+// Tcl Message: [Thu May 10 11:08:30 2018] Waiting for shell_clk_wiz_0_0_synth_1 to finish... 
+// TclEventType: RUN_COMPLETED
+// Tcl Message: [Thu May 10 11:08:35 2018] Waiting for shell_clk_wiz_0_0_synth_1 to finish... 
+// Tcl Message: [Thu May 10 11:08:45 2018] Waiting for shell_clk_wiz_0_0_synth_1 to finish... 
+// Tcl Message: [Thu May 10 11:08:55 2018] Waiting for shell_clk_wiz_0_0_synth_1 to finish... 
+// TclEventType: RUN_COMPLETED
+// Tcl Message: [Thu May 10 11:09:00 2018] shell_clk_wiz_0_0_synth_1 finished 
+// Tcl Message: wait_on_run: Time (s): cpu = 00:00:03 ; elapsed = 00:00:40 . Memory (MB): peak = 7423.754 ; gain = 0.000 ; free physical = 4409 ; free virtual = 34694 
+// Tcl Message: ## wait_on_run shell_gnd_0_synth_1 
+// Tcl Message: [Thu May 10 11:09:00 2018] Waiting for shell_gnd_0_synth_1 to finish... 
+// Tcl Message: [Thu May 10 11:09:00 2018] shell_gnd_0_synth_1 finished 
+// Tcl Message: ## wait_on_run shell_gnd_1_synth_1 
+// Tcl Message: [Thu May 10 11:09:00 2018] Waiting for shell_gnd_1_synth_1 to finish... 
+// Tcl Message: [Thu May 10 11:09:06 2018] Waiting for shell_gnd_1_synth_1 to finish... 
+// Tcl Message: [Thu May 10 11:09:11 2018] Waiting for shell_gnd_1_synth_1 to finish... 
+// Tcl Message: [Thu May 10 11:09:16 2018] Waiting for shell_gnd_1_synth_1 to finish... 
+// Tcl Message: [Thu May 10 11:09:26 2018] Waiting for shell_gnd_1_synth_1 to finish... 
+// Tcl Message: [Thu May 10 11:09:36 2018] Waiting for shell_gnd_1_synth_1 to finish... 
+// [GUI Memory]: 122 MB (+1680kb) [00:06:54]
+// Tcl Message: [Thu May 10 11:09:46 2018] Waiting for shell_gnd_1_synth_1 to finish... 
+// Tcl Message: [Thu May 10 11:09:56 2018] Waiting for shell_gnd_1_synth_1 to finish... 
+// TclEventType: RUN_COMPLETED
+// Tcl Message: [Thu May 10 11:10:16 2018] Waiting for shell_gnd_1_synth_1 to finish... 
+// TclEventType: RUN_COMPLETED
+// Tcl Message: [Thu May 10 11:10:36 2018] Waiting for shell_gnd_1_synth_1 to finish... 
+// TclEventType: RUN_COMPLETED
+// Tcl Message: [Thu May 10 11:10:56 2018] Waiting for shell_gnd_1_synth_1 to finish... 
+// TclEventType: RUN_COMPLETED
+// Tcl Message: [Thu May 10 11:11:17 2018] Waiting for shell_gnd_1_synth_1 to finish... 
+// TclEventType: RUN_COMPLETED
+// Tcl Message: [Thu May 10 11:11:57 2018] Waiting for shell_gnd_1_synth_1 to finish... 
+// TclEventType: RUN_COMPLETED
+// Tcl Message: [Thu May 10 11:12:37 2018] Waiting for shell_gnd_1_synth_1 to finish... 
+// TclEventType: RUN_COMPLETED
+// Tcl Message: [Thu May 10 11:13:17 2018] Waiting for shell_gnd_1_synth_1 to finish... 
+// [GUI Memory]: 131 MB (+2809kb) [00:10:54]
+// TclEventType: RUN_COMPLETED
+// Tcl Message: [Thu May 10 11:13:58 2018] Waiting for shell_gnd_1_synth_1 to finish... 
+// TclEventType: RUN_COMPLETED
+// Tcl Message: [Thu May 10 11:15:13 2018] shell_gnd_1_synth_1 finished 
+// Tcl Message: wait_on_run: Time (s): cpu = 00:00:24 ; elapsed = 00:06:13 . Memory (MB): peak = 7423.754 ; gain = 0.000 ; free physical = 2508 ; free virtual = 32841 
+// Tcl Message: ## wait_on_run  shell_util_vector_logic_0_0_synth_1 
+// Tcl Message: [Thu May 10 11:15:13 2018] Waiting for shell_util_vector_logic_0_0_synth_1 to finish... 
+// Tcl Message: [Thu May 10 11:15:13 2018] shell_util_vector_logic_0_0_synth_1 finished 
+// Tcl Message: ## wait_on_run shell_util_vector_logic_1_0_synth_1 
+// Tcl Message: [Thu May 10 11:15:13 2018] Waiting for shell_util_vector_logic_1_0_synth_1 to finish... 
+// Tcl Message: [Thu May 10 11:15:13 2018] shell_util_vector_logic_1_0_synth_1 finished 
+// Tcl Message: ## wait_on_run shell_util_vector_logic_2_0_synth_1 
+// Tcl Message: [Thu May 10 11:15:13 2018] Waiting for shell_util_vector_logic_2_0_synth_1 to finish... 
+// Tcl Message:  *** Running vivado     with args -log shell_util_vector_logic_2_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source shell_util_vector_logic_2_0.tcl   ****** Vivado v2018.1 (64-bit)   **** SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018   **** IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018     ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.  source shell_util_vector_logic_2_0.tcl -notrace INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP shell_util_vector_logic_2_0, cache-ID = 170f90388ee4a16d. INFO: [Common 17-206] Exiting Vivado at Thu May 10 11:08:32 2018... 
+// Tcl Message: [Thu May 10 11:15:13 2018] shell_util_vector_logic_2_0_synth_1 finished 
+// Tcl Message: ## wait_on_run shell_microblaze_0_0_synth_1 
+// Tcl Message: [Thu May 10 11:15:13 2018] Waiting for shell_microblaze_0_0_synth_1 to finish... 
+// Tcl Message: [Thu May 10 11:15:13 2018] shell_microblaze_0_0_synth_1 finished 
+// Tcl Message: ## wait_on_run shell_axiStreamGate_0_0_synth_1 
+// Tcl Message: [Thu May 10 11:15:14 2018] Waiting for shell_axiStreamGate_0_0_synth_1 to finish... 
+// Tcl Message: [Thu May 10 11:15:14 2018] shell_axiStreamGate_0_0_synth_1 finished 
+// Tcl Message: ## wait_on_run shell_axi_hwicap_0_0_synth_1 
+// Tcl Message: [Thu May 10 11:15:14 2018] Waiting for shell_axi_hwicap_0_0_synth_1 to finish... 
+// Tcl Message: [Thu May 10 11:15:14 2018] shell_axi_hwicap_0_0_synth_1 finished 
+// Tcl Message: ## wait_on_run shell_mdm_1_0_synth_1 
+// Tcl Message: [Thu May 10 11:15:14 2018] Waiting for shell_mdm_1_0_synth_1 to finish... 
+// Tcl Message: [Thu May 10 11:15:14 2018] shell_mdm_1_0_synth_1 finished 
+// Tcl Message: ## wait_on_run shell_rst_clk_wiz_0_100M_0_synth_1 
+// Tcl Message: [Thu May 10 11:15:14 2018] Waiting for shell_rst_clk_wiz_0_100M_0_synth_1 to finish... 
+// Tcl Message: [Thu May 10 11:15:14 2018] shell_rst_clk_wiz_0_100M_0_synth_1 finished 
+// Tcl Message: ## wait_on_run shell_xbar_0_synth_1 
+// Tcl Message: [Thu May 10 11:15:14 2018] Waiting for shell_xbar_0_synth_1 to finish... 
+// Tcl Message: [Thu May 10 11:15:14 2018] shell_xbar_0_synth_1 finished 
+// Tcl Message: ## wait_on_run shell_ilmb_bram_if_cntlr_0_synth_1 
+// Tcl Message: [Thu May 10 11:15:14 2018] Waiting for shell_ilmb_bram_if_cntlr_0_synth_1 to finish... 
+// Tcl Message: [Thu May 10 11:15:14 2018] shell_ilmb_bram_if_cntlr_0_synth_1 finished 
+// Tcl Message: ## wait_on_run shell_ilmb_v10_0_synth_1 
+// Tcl Message: [Thu May 10 11:15:14 2018] Waiting for shell_ilmb_v10_0_synth_1 to finish... 
+// Tcl Message:  *** Running vivado     with args -log shell_ilmb_v10_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source shell_ilmb_v10_0.tcl   ****** Vivado v2018.1 (64-bit)   **** SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018   **** IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018     ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.  source shell_ilmb_v10_0.tcl -notrace INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP shell_ilmb_v10_0, cache-ID = 44b3d3ea76eeae4d. INFO: [Common 17-206] Exiting Vivado at Thu May 10 11:11:57 2018... 
+// Tcl Message: [Thu May 10 11:15:14 2018] shell_ilmb_v10_0_synth_1 finished 
+// Tcl Message: ## wait_on_run shell_ilmb_bram_if_cntlr_0_synth_1 
+// Tcl Message: [Thu May 10 11:15:14 2018] Waiting for shell_ilmb_bram_if_cntlr_0_synth_1 to finish... 
+// Tcl Message: [Thu May 10 11:15:14 2018] shell_ilmb_bram_if_cntlr_0_synth_1 finished 
+// Tcl Message: ## wait_on_run shell_ilmb_v10_0_synth_1 
+// Tcl Message: [Thu May 10 11:15:14 2018] Waiting for shell_ilmb_v10_0_synth_1 to finish... 
+// Tcl Message:  *** Running vivado     with args -log shell_ilmb_v10_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source shell_ilmb_v10_0.tcl   ****** Vivado v2018.1 (64-bit)   **** SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018   **** IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018     ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.  source shell_ilmb_v10_0.tcl -notrace INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP shell_ilmb_v10_0, cache-ID = 44b3d3ea76eeae4d. INFO: [Common 17-206] Exiting Vivado at Thu May 10 11:11:57 2018... 
+// Tcl Message: [Thu May 10 11:15:14 2018] shell_ilmb_v10_0_synth_1 finished 
+// Tcl Message: ## wait_on_run shell_lmb_bram_0_synth_1 
+// Tcl Message: [Thu May 10 11:15:14 2018] Waiting for shell_lmb_bram_0_synth_1 to finish... 
+// Tcl Message: [Thu May 10 11:15:14 2018] shell_lmb_bram_0_synth_1 finished 
+// Tcl Message: ## wait_on_run shell_xdma_0_0_synth_1 
+// Tcl Message: [Thu May 10 11:15:14 2018] Waiting for shell_xdma_0_0_synth_1 to finish... 
+// Tcl Message: [Thu May 10 11:15:19 2018] Waiting for shell_xdma_0_0_synth_1 to finish... 
+// Tcl Message: [Thu May 10 11:15:24 2018] Waiting for shell_xdma_0_0_synth_1 to finish... 
+// Tcl Message: [Thu May 10 11:15:29 2018] Waiting for shell_xdma_0_0_synth_1 to finish... 
+// Tcl Message: [Thu May 10 11:15:39 2018] Waiting for shell_xdma_0_0_synth_1 to finish... 
+// Tcl Message: [Thu May 10 11:15:49 2018] Waiting for shell_xdma_0_0_synth_1 to finish... 
+// TclEventType: RUN_COMPLETED
+// Tcl Message: [Thu May 10 11:15:59 2018] Waiting for shell_xdma_0_0_synth_1 to finish... 
+// Tcl Message: [Thu May 10 11:16:09 2018] Waiting for shell_xdma_0_0_synth_1 to finish... 
+// Tcl Message: [Thu May 10 11:16:29 2018] Waiting for shell_xdma_0_0_synth_1 to finish... 
+// TclEventType: RUN_COMPLETED
+// Tcl Message: [Thu May 10 11:16:50 2018] Waiting for shell_xdma_0_0_synth_1 to finish... 
+// Tcl Message: [Thu May 10 11:17:10 2018] Waiting for shell_xdma_0_0_synth_1 to finish... 
+// TclEventType: RUN_COMPLETED
+// Tcl Message: [Thu May 10 11:17:30 2018] Waiting for shell_xdma_0_0_synth_1 to finish... 
+// TclEventType: RUN_COMPLETED
+// [GUI Memory]: 138 MB (+1202kb) [00:15:13]
+// Tcl Message: [Thu May 10 11:18:10 2018] Waiting for shell_xdma_0_0_synth_1 to finish... 
+// TclEventType: RUN_COMPLETED
+// Tcl Message: [Thu May 10 11:18:51 2018] Waiting for shell_xdma_0_0_synth_1 to finish... 
+// [GUI Memory]: 146 MB (+686kb) [00:16:31]
+// Tcl Message: [Thu May 10 11:19:31 2018] Waiting for shell_xdma_0_0_synth_1 to finish... 
+// TclEventType: RUN_COMPLETED
+// Tcl Message: [Thu May 10 11:20:11 2018] Waiting for shell_xdma_0_0_synth_1 to finish... 
+// TclEventType: RUN_COMPLETED
+// [GUI Memory]: 154 MB (+1194kb) [00:18:37]
+// Tcl Message: [Thu May 10 11:21:32 2018] Waiting for shell_xdma_0_0_synth_1 to finish... 
+// [Engine Memory]: 2,375 MB (+45768kb) [00:18:55]
+// HMemoryUtils.trashcanNow. Engine heap size: 2,375 MB. GUI used memory: 84 MB. Current time: 5/10/18 11:21:50 AM EDT
+// TclEventType: RUN_COMPLETED
+// Tcl Message: [Thu May 10 11:22:33 2018] shell_xdma_0_0_synth_1 finished 
+// Tcl Message: wait_on_run: Time (s): cpu = 00:40:02 ; elapsed = 00:07:19 . Memory (MB): peak = 7423.754 ; gain = 0.000 ; free physical = 8928 ; free virtual = 35941 
+// Tcl Message: ## wait_on_run shell_util_ds_buf_0_synth_1 
+// Tcl Message: [Thu May 10 11:22:33 2018] Waiting for shell_util_ds_buf_0_synth_1 to finish... 
+// Tcl Message: [Thu May 10 11:22:33 2018] shell_util_ds_buf_0_synth_1 finished 
+// Tcl Message: ## wait_on_run shell_tx_register_slice_0_0_synth_1 
+// Tcl Message: [Thu May 10 11:22:33 2018] Waiting for shell_tx_register_slice_0_0_synth_1 to finish... 
+// Tcl Message: [Thu May 10 11:22:33 2018] shell_tx_register_slice_0_0_synth_1 finished 
+// Tcl Message: ## wait_on_run shell_axi_10g_ethernet_0_0_synth_1 
+// Tcl Message: [Thu May 10 11:22:33 2018] Waiting for shell_axi_10g_ethernet_0_0_synth_1 to finish... 
+// Tcl Message: [Thu May 10 11:22:33 2018] shell_axi_10g_ethernet_0_0_synth_1 finished 
+// Tcl Message: ## wait_on_run shell_mac_config_vector_0_synth_1 
+// Tcl Message: [Thu May 10 11:22:33 2018] Waiting for shell_mac_config_vector_0_synth_1 to finish... 
+// Tcl Message: [Thu May 10 11:22:33 2018] shell_mac_config_vector_0_synth_1 finished 
+// Tcl Message: ## wait_on_run shell_tx_ifg_tuser_0_synth_1 
+// Tcl Message: [Thu May 10 11:22:33 2018] Waiting for shell_tx_ifg_tuser_0_synth_1 to finish... 
+// Tcl Message: [Thu May 10 11:22:33 2018] shell_tx_ifg_tuser_0_synth_1 finished 
+// Tcl Message: ## wait_on_run shell_tx_data_fifo_0_0_synth_1 
+// Tcl Message: [Thu May 10 11:22:33 2018] Waiting for shell_tx_data_fifo_0_0_synth_1 to finish... 
+// Tcl Message:  *** Running vivado     with args -log shell_tx_data_fifo_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source shell_tx_data_fifo_0_0.tcl   ****** Vivado v2018.1 (64-bit)   **** SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018   **** IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018     ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.  source shell_tx_data_fifo_0_0.tcl -notrace INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP shell_tx_data_fifo_0_0, cache-ID = d42b258b2c9d7380. INFO: [Common 17-206] Exiting Vivado at Thu May 10 11:20:50 2018... 
+// Tcl Message: [Thu May 10 11:22:33 2018] shell_tx_data_fifo_0_0_synth_1 finished 
+// Tcl Message: ## wait_on_run shell_auto_cc_0_synth_1 
+// Tcl Message: [Thu May 10 11:22:33 2018] Waiting for shell_auto_cc_0_synth_1 to finish... 
+// Tcl Message: [Thu May 10 11:22:33 2018] shell_auto_cc_0_synth_1 finished 
+// Tcl Message: ## launch_runs synth_1 -jobs 4 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// [Engine Memory]: 2,820 MB (+342326kb) [00:19:43]
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking too long to process. Increasing delay to 4000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 2,822 MB. GUI used memory: 92 MB. Current time: 5/10/18 11:22:36 AM EDT
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Thu May 10 11:22:39 2018] Launched synth_1... Run output will be captured here: /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.runs/synth_1/runme.log 
+// Tcl Message: launch_runs: Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 8262.465 ; gain = 838.711 ; free physical = 8820 ; free virtual = 35851 
+// Tcl Message: ## wait_on_run synth_1 
+// Tcl Message: [Thu May 10 11:22:39 2018] Waiting for synth_1 to finish... 
+// Tcl Message: [Thu May 10 11:22:44 2018] Waiting for synth_1 to finish... 
+// Tcl Message: [Thu May 10 11:22:50 2018] Waiting for synth_1 to finish... 
+// Tcl Message: [Thu May 10 11:22:55 2018] Waiting for synth_1 to finish... 
+// Tcl Message: [Thu May 10 11:23:05 2018] Waiting for synth_1 to finish... 
+// Tcl Message: [Thu May 10 11:23:15 2018] Waiting for synth_1 to finish... 
+// Tcl Message: [Thu May 10 11:23:25 2018] Waiting for synth_1 to finish... 
+// Tcl Message: [Thu May 10 11:23:35 2018] Waiting for synth_1 to finish... 
+// TclEventType: RUN_COMPLETED
+// Tcl Message: [Thu May 10 11:23:55 2018] Waiting for synth_1 to finish... 
+// TclEventType: RUN_COMPLETED
+// Tcl Message: [Thu May 10 11:24:15 2018] Waiting for synth_1 to finish... 
+// TclEventType: RUN_COMPLETED
+// Tcl Message: [Thu May 10 11:24:36 2018] Waiting for synth_1 to finish... 
+// Elapsed time: 1224 seconds
+closeMainWindow("adm-8k5 - [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.xpr] - Vivado 2018.1"); // ch
+// HOptionPane Warning: 'A background task is running. Please wait until it completes to exit Vivado. If you choose to abort background task and exit immediately, you will lose all unsaved changes to project. (Background Task)'

@@ -138,6 +138,8 @@ module shellTop
   output txn;
   output txp;
 
+
+  
   (* keep = "true" *) wire [0:0]ARESETN;
   (* keep = "true" *) wire CLK_CONTROL;
   (* keep = "true" *) wire CLK_DATA;
@@ -149,29 +151,29 @@ module shellTop
   (* keep = "true" *) wire [63:0]M_AXI_araddr;
   (* keep = "true" *) wire [1:0]M_AXI_arburst;
   (* keep = "true" *) wire [3:0]M_AXI_arcache;
-  (* keep = "true" *) wire [3:0]M_AXI_arid;
   (* keep = "true" *) wire [7:0]M_AXI_arlen;
-  (* keep = "true" *) wire M_AXI_arlock;
+  (* keep = "true" *) wire [0:0]M_AXI_arlock;
   (* keep = "true" *) wire [2:0]M_AXI_arprot;
+  (* keep = "true" *) wire [3:0]M_AXI_arqos;
   (* keep = "true" *) wire M_AXI_arready;
+  (* keep = "true" *) wire [3:0]M_AXI_arregion;
   (* keep = "true" *) wire [2:0]M_AXI_arsize;
   (* keep = "true" *) wire M_AXI_arvalid;
   (* keep = "true" *) wire [63:0]M_AXI_awaddr;
   (* keep = "true" *) wire [1:0]M_AXI_awburst;
   (* keep = "true" *) wire [3:0]M_AXI_awcache;
-  (* keep = "true" *) wire [3:0]M_AXI_awid;
   (* keep = "true" *) wire [7:0]M_AXI_awlen;
-  (* keep = "true" *) wire M_AXI_awlock;
+  (* keep = "true" *) wire [0:0]M_AXI_awlock;
   (* keep = "true" *) wire [2:0]M_AXI_awprot;
+  (* keep = "true" *) wire [3:0]M_AXI_awqos;
   (* keep = "true" *) wire M_AXI_awready;
+  (* keep = "true" *) wire [3:0]M_AXI_awregion;
   (* keep = "true" *) wire [2:0]M_AXI_awsize;
   (* keep = "true" *) wire M_AXI_awvalid;
-  (* keep = "true" *) wire [3:0]M_AXI_bid;
   (* keep = "true" *) wire M_AXI_bready;
   (* keep = "true" *) wire [1:0]M_AXI_bresp;
   (* keep = "true" *) wire M_AXI_bvalid;
   (* keep = "true" *) wire [255:0]M_AXI_rdata;
-  (* keep = "true" *) wire [3:0]M_AXI_rid;
   (* keep = "true" *) wire M_AXI_rlast;
   (* keep = "true" *) wire M_AXI_rready;
   (* keep = "true" *) wire [1:0]M_AXI_rresp;
@@ -183,9 +185,77 @@ module shellTop
   (* keep = "true" *) wire M_AXI_wvalid;
   (* keep = "true" *) wire [63:0]S_AXIS_tdata;
   (* keep = "true" *) wire [7:0]S_AXIS_tkeep;
-  (* keep = "true" *) wire S_AXIS_tlast;
+  (* keep = "true" *) wire [0:0]S_AXIS_tlast;
   (* keep = "true" *) wire S_AXIS_tready;
   (* keep = "true" *) wire S_AXIS_tvalid;
+  (* keep = "true" *) wire [63:0]S_AXI_MEM_araddr;
+  (* keep = "true" *) wire [1:0]S_AXI_MEM_arburst;
+  (* keep = "true" *) wire [3:0]S_AXI_MEM_arcache;
+  (* keep = "true" *) wire [1:0]S_AXI_MEM_arid;
+  (* keep = "true" *) wire [7:0]S_AXI_MEM_arlen;
+  (* keep = "true" *) wire [0:0]S_AXI_MEM_arlock;
+  (* keep = "true" *) wire [2:0]S_AXI_MEM_arprot;
+  (* keep = "true" *) wire [3:0]S_AXI_MEM_arqos;
+  (* keep = "true" *) wire [0:0]S_AXI_MEM_arready;
+  (* keep = "true" *) wire [2:0]S_AXI_MEM_arsize;
+  (* keep = "true" *) wire [0:0]S_AXI_MEM_arvalid;
+  (* keep = "true" *) wire [63:0]S_AXI_MEM_awaddr;
+  (* keep = "true" *) wire [1:0]S_AXI_MEM_awburst;
+  (* keep = "true" *) wire [3:0]S_AXI_MEM_awcache;
+  (* keep = "true" *) wire [1:0]S_AXI_MEM_awid;
+  (* keep = "true" *) wire [7:0]S_AXI_MEM_awlen;
+  (* keep = "true" *) wire [0:0]S_AXI_MEM_awlock;
+  (* keep = "true" *) wire [2:0]S_AXI_MEM_awprot;
+  (* keep = "true" *) wire [3:0]S_AXI_MEM_awqos;
+  (* keep = "true" *) wire [0:0]S_AXI_MEM_awready;
+  (* keep = "true" *) wire [2:0]S_AXI_MEM_awsize;
+  (* keep = "true" *) wire [0:0]S_AXI_MEM_awvalid;
+  (* keep = "true" *) wire [1:0]S_AXI_MEM_bid;
+  (* keep = "true" *) wire [0:0]S_AXI_MEM_bready;
+  (* keep = "true" *) wire [1:0]S_AXI_MEM_bresp;
+  (* keep = "true" *) wire [0:0]S_AXI_MEM_bvalid;
+  (* keep = "true" *) wire [511:0]S_AXI_MEM_rdata;
+  (* keep = "true" *) wire [1:0]S_AXI_MEM_rid;
+  (* keep = "true" *) wire [0:0]S_AXI_MEM_rlast;
+  (* keep = "true" *) wire [0:0]S_AXI_MEM_rready;
+  (* keep = "true" *) wire [1:0]S_AXI_MEM_rresp;
+  (* keep = "true" *) wire [0:0]S_AXI_MEM_rvalid;
+  (* keep = "true" *) wire [511:0]S_AXI_MEM_wdata;
+  (* keep = "true" *) wire [0:0]S_AXI_MEM_wlast;
+  (* keep = "true" *) wire [0:0]S_AXI_MEM_wready;
+  (* keep = "true" *) wire [63:0]S_AXI_MEM_wstrb;
+  (* keep = "true" *) wire [0:0]S_AXI_MEM_wvalid;
+  (* keep = "true" *) wire c0_ddr4_act_n_0;
+  (* keep = "true" *) wire [16:0]c0_ddr4_adr_0;
+  (* keep = "true" *) wire [1:0]c0_ddr4_ba_0;
+  (* keep = "true" *) wire [1:0]c0_ddr4_bg_0;
+  (* keep = "true" *) wire [0:0]c0_ddr4_ck_c_0;
+  (* keep = "true" *) wire [0:0]c0_ddr4_ck_t_0;
+  (* keep = "true" *) wire [0:0]c0_ddr4_cke_0;
+  (* keep = "true" *) wire [0:0]c0_ddr4_cs_n_0;
+  (* keep = "true" *) wire [63:0]c0_ddr4_dg_0;
+  (* keep = "true" *) wire [7:0]c0_ddr4_dm_dbi_n_0;
+  (* keep = "true" *) wire [7:0]c0_ddr4_dqs_c_0;
+  (* keep = "true" *) wire [7:0]c0_ddr4_dqs_t_0;
+  (* keep = "true" *) wire [0:0]c0_ddr4_odt_0;
+  (* keep = "true" *) wire c0_ddr4_reset_n_0;
+  (* keep = "true" *) wire c0_sys_clk_n_0;
+  (* keep = "true" *) wire c0_sys_clk_p_0;
+  (* keep = "true" *) wire [0:0]diff_clock_rtl_clk_n;
+  (* keep = "true" *) wire [0:0]diff_clock_rtl_clk_p;
+  (* keep = "true" *) wire [7:0]pcie_7x_mgt_rtl_rxn;
+  (* keep = "true" *) wire [7:0]pcie_7x_mgt_rtl_rxp;
+  (* keep = "true" *) wire [7:0]pcie_7x_mgt_rtl_txn;
+  (* keep = "true" *) wire [7:0]pcie_7x_mgt_rtl_txp;
+  (* keep = "true" *) wire perst_n;
+  (* keep = "true" *) wire refclk200;
+  (* keep = "true" *) wire refclk_n;
+  (* keep = "true" *) wire refclk_p;
+  (* keep = "true" *) wire rxn;
+  (* keep = "true" *) wire rxp;
+  (* keep = "true" *) wire [1:0]sfp_tx_disable;
+  (* keep = "true" *) wire txn;
+  (* keep = "true" *) wire txp;
   //wire [0:0]diff_clock_rtl_clk_n;
   //wire [0:0]diff_clock_rtl_clk_p;
   //wire [7:0]pcie_7x_mgt_rtl_rxn;
@@ -284,7 +354,7 @@ module shellTop
   //(* keep = "true" *) wire SLOT_AXIS_15_tvalid;
   
   //shell_wrapper shell_wrapper_i
-  shell shell_i
+   shell shell_i
        (.ARESETN(ARESETN),
         .CLK_CONTROL(CLK_CONTROL),
         .CLK_DATA(CLK_DATA),
@@ -296,29 +366,29 @@ module shellTop
         .M_AXI_araddr(M_AXI_araddr),
         .M_AXI_arburst(M_AXI_arburst),
         .M_AXI_arcache(M_AXI_arcache),
-        .M_AXI_arid(M_AXI_arid),
         .M_AXI_arlen(M_AXI_arlen),
         .M_AXI_arlock(M_AXI_arlock),
         .M_AXI_arprot(M_AXI_arprot),
+        .M_AXI_arqos(M_AXI_arqos),
         .M_AXI_arready(M_AXI_arready),
+        .M_AXI_arregion(M_AXI_arregion),
         .M_AXI_arsize(M_AXI_arsize),
         .M_AXI_arvalid(M_AXI_arvalid),
         .M_AXI_awaddr(M_AXI_awaddr),
         .M_AXI_awburst(M_AXI_awburst),
         .M_AXI_awcache(M_AXI_awcache),
-        .M_AXI_awid(M_AXI_awid),
         .M_AXI_awlen(M_AXI_awlen),
         .M_AXI_awlock(M_AXI_awlock),
         .M_AXI_awprot(M_AXI_awprot),
+        .M_AXI_awqos(M_AXI_awqos),
         .M_AXI_awready(M_AXI_awready),
+        .M_AXI_awregion(M_AXI_awregion),
         .M_AXI_awsize(M_AXI_awsize),
         .M_AXI_awvalid(M_AXI_awvalid),
-        .M_AXI_bid(M_AXI_bid),
         .M_AXI_bready(M_AXI_bready),
         .M_AXI_bresp(M_AXI_bresp),
         .M_AXI_bvalid(M_AXI_bvalid),
         .M_AXI_rdata(M_AXI_rdata),
-        .M_AXI_rid(M_AXI_rid),
         .M_AXI_rlast(M_AXI_rlast),
         .M_AXI_rready(M_AXI_rready),
         .M_AXI_rresp(M_AXI_rresp),
@@ -333,6 +403,59 @@ module shellTop
         .S_AXIS_tlast(S_AXIS_tlast),
         .S_AXIS_tready(S_AXIS_tready),
         .S_AXIS_tvalid(S_AXIS_tvalid),
+        .S_AXI_MEM_araddr(S_AXI_MEM_araddr),
+        .S_AXI_MEM_arburst(S_AXI_MEM_arburst),
+        .S_AXI_MEM_arcache(S_AXI_MEM_arcache),
+        .S_AXI_MEM_arid(S_AXI_MEM_arid),
+        .S_AXI_MEM_arlen(S_AXI_MEM_arlen),
+        .S_AXI_MEM_arlock(S_AXI_MEM_arlock),
+        .S_AXI_MEM_arprot(S_AXI_MEM_arprot),
+        .S_AXI_MEM_arqos(S_AXI_MEM_arqos),
+        .S_AXI_MEM_arready(S_AXI_MEM_arready),
+        .S_AXI_MEM_arsize(S_AXI_MEM_arsize),
+        .S_AXI_MEM_arvalid(S_AXI_MEM_arvalid),
+        .S_AXI_MEM_awaddr(S_AXI_MEM_awaddr),
+        .S_AXI_MEM_awburst(S_AXI_MEM_awburst),
+        .S_AXI_MEM_awcache(S_AXI_MEM_awcache),
+        .S_AXI_MEM_awid(S_AXI_MEM_awid),
+        .S_AXI_MEM_awlen(S_AXI_MEM_awlen),
+        .S_AXI_MEM_awlock(S_AXI_MEM_awlock),
+        .S_AXI_MEM_awprot(S_AXI_MEM_awprot),
+        .S_AXI_MEM_awqos(S_AXI_MEM_awqos),
+        .S_AXI_MEM_awready(S_AXI_MEM_awready),
+        .S_AXI_MEM_awsize(S_AXI_MEM_awsize),
+        .S_AXI_MEM_awvalid(S_AXI_MEM_awvalid),
+        .S_AXI_MEM_bid(S_AXI_MEM_bid),
+        .S_AXI_MEM_bready(S_AXI_MEM_bready),
+        .S_AXI_MEM_bresp(S_AXI_MEM_bresp),
+        .S_AXI_MEM_bvalid(S_AXI_MEM_bvalid),
+        .S_AXI_MEM_rdata(S_AXI_MEM_rdata),
+        .S_AXI_MEM_rid(S_AXI_MEM_rid),
+        .S_AXI_MEM_rlast(S_AXI_MEM_rlast),
+        .S_AXI_MEM_rready(S_AXI_MEM_rready),
+        .S_AXI_MEM_rresp(S_AXI_MEM_rresp),
+        .S_AXI_MEM_rvalid(S_AXI_MEM_rvalid),
+        .S_AXI_MEM_wdata(S_AXI_MEM_wdata),
+        .S_AXI_MEM_wlast(S_AXI_MEM_wlast),
+        .S_AXI_MEM_wready(S_AXI_MEM_wready),
+        .S_AXI_MEM_wstrb(S_AXI_MEM_wstrb),
+        .S_AXI_MEM_wvalid(S_AXI_MEM_wvalid),
+        .c0_ddr4_act_n_0(c0_ddr4_act_n_0),
+        .c0_ddr4_adr_0(c0_ddr4_adr_0),
+        .c0_ddr4_ba_0(c0_ddr4_ba_0),
+        .c0_ddr4_bg_0(c0_ddr4_bg_0),
+        .c0_ddr4_ck_c_0(c0_ddr4_ck_c_0),
+        .c0_ddr4_ck_t_0(c0_ddr4_ck_t_0),
+        .c0_ddr4_cke_0(c0_ddr4_cke_0),
+        .c0_ddr4_cs_n_0(c0_ddr4_cs_n_0),
+        .c0_ddr4_dg_0(c0_ddr4_dg_0),
+        .c0_ddr4_dm_dbi_n_0(c0_ddr4_dm_dbi_n_0),
+        .c0_ddr4_dqs_c_0(c0_ddr4_dqs_c_0),
+        .c0_ddr4_dqs_t_0(c0_ddr4_dqs_t_0),
+        .c0_ddr4_odt_0(c0_ddr4_odt_0),
+        .c0_ddr4_reset_n_0(c0_ddr4_reset_n_0),
+        .c0_sys_clk_n_0(c0_sys_clk_n_0),
+        .c0_sys_clk_p_0(c0_sys_clk_p_0),
         .diff_clock_rtl_clk_n(diff_clock_rtl_clk_n),
         .diff_clock_rtl_clk_p(diff_clock_rtl_clk_p),
         .pcie_7x_mgt_rtl_rxn(pcie_7x_mgt_rtl_rxn),
@@ -347,88 +470,7 @@ module shellTop
         .rxp(rxp),
         .sfp_tx_disable(sfp_tx_disable),
         .txn(txn),
-        .txp(txp)//,
-        //.SLOT_0_AXIS_tdata(SLOT_AXIS_0_tdata),
-        //.SLOT_0_AXIS_tdest(SLOT_AXIS_0_tdest),
-        //.SLOT_0_AXIS_tlast(SLOT_AXIS_0_tlast),
-        //.SLOT_0_AXIS_tready(SLOT_AXIS_0_tready),
-        //.SLOT_0_AXIS_tvalid(SLOT_AXIS_0_tvalid),
-        //.SLOT_1_AXIS_tdata(SLOT_AXIS_1_tdata),
-        //.SLOT_1_AXIS_tdest(SLOT_AXIS_1_tdest),
-        //.SLOT_1_AXIS_tlast(SLOT_AXIS_1_tlast),
-        //.SLOT_1_AXIS_tready(SLOT_AXIS_1_tready),
-        //.SLOT_1_AXIS_tvalid(SLOT_AXIS_1_tvalid),
-        //.SLOT_2_AXIS_tdata(SLOT_AXIS_2_tdata),
-        //.SLOT_2_AXIS_tdest(SLOT_AXIS_2_tdest),
-        //.SLOT_2_AXIS_tlast(SLOT_AXIS_2_tlast),
-        //.SLOT_2_AXIS_tready(SLOT_AXIS_2_tready),
-        //.SLOT_2_AXIS_tvalid(SLOT_AXIS_2_tvalid),
-        //.SLOT_3_AXIS_tdata(SLOT_AXIS_3_tdata),
-        //.SLOT_3_AXIS_tdest(SLOT_AXIS_3_tdest),
-        //.SLOT_3_AXIS_tlast(SLOT_AXIS_3_tlast),
-        //.SLOT_3_AXIS_tready(SLOT_AXIS_3_tready),
-        //.SLOT_3_AXIS_tvalid(SLOT_AXIS_3_tvalid),
-        //.SLOT_4_AXIS_tdata(SLOT_AXIS_4_tdata),
-        //.SLOT_4_AXIS_tdest(SLOT_AXIS_4_tdest),
-        //.SLOT_4_AXIS_tlast(SLOT_AXIS_4_tlast),
-        //.SLOT_4_AXIS_tready(SLOT_AXIS_4_tready),
-        //.SLOT_4_AXIS_tvalid(SLOT_AXIS_4_tvalid),
-        //.SLOT_5_AXIS_tdata(SLOT_AXIS_5_tdata),
-        //.SLOT_5_AXIS_tdest(SLOT_AXIS_5_tdest),
-        //.SLOT_5_AXIS_tlast(SLOT_AXIS_5_tlast),
-        //.SLOT_5_AXIS_tready(SLOT_AXIS_5_tready),
-        //.SLOT_5_AXIS_tvalid(SLOT_AXIS_5_tvalid),
-        //.SLOT_6_AXIS_tdata(SLOT_AXIS_6_tdata),
-        //.SLOT_6_AXIS_tdest(SLOT_AXIS_6_tdest),
-        //.SLOT_6_AXIS_tlast(SLOT_AXIS_6_tlast),
-        //.SLOT_6_AXIS_tready(SLOT_AXIS_6_tready),
-        //.SLOT_6_AXIS_tvalid(SLOT_AXIS_6_tvalid),
-        //.SLOT_7_AXIS_tdata(SLOT_AXIS_7_tdata),
-        //.SLOT_7_AXIS_tdest(SLOT_AXIS_7_tdest),
-        //.SLOT_7_AXIS_tlast(SLOT_AXIS_7_tlast),
-        //.SLOT_7_AXIS_tready(SLOT_AXIS_7_tready),
-        //.SLOT_7_AXIS_tvalid(SLOT_AXIS_7_tvalid),
-        //.SLOT_8_AXIS_tdata(SLOT_AXIS_8_tdata),
-        //.SLOT_8_AXIS_tdest(SLOT_AXIS_8_tdest),
-        //.SLOT_8_AXIS_tlast(SLOT_AXIS_8_tlast),
-        //.SLOT_8_AXIS_tready(SLOT_AXIS_8_tready),
-        //.SLOT_8_AXIS_tvalid(SLOT_AXIS_8_tvalid),
-        //.SLOT_9_AXIS_tdata(SLOT_AXIS_9_tdata),
-        //.SLOT_9_AXIS_tdest(SLOT_AXIS_9_tdest),
-        //.SLOT_9_AXIS_tlast(SLOT_AXIS_9_tlast),
-        //.SLOT_9_AXIS_tready(SLOT_AXIS_9_tready),
-        //.SLOT_9_AXIS_tvalid(SLOT_AXIS_9_tvalid),
-        //.SLOT_10_AXIS_tdata(SLOT_AXIS_10_tdata),
-        //.SLOT_10_AXIS_tdest(SLOT_AXIS_10_tdest),
-        //.SLOT_10_AXIS_tlast(SLOT_AXIS_10_tlast),
-        //.SLOT_10_AXIS_tready(SLOT_AXIS_10_tready),
-        //.SLOT_10_AXIS_tvalid(SLOT_AXIS_10_tvalid),
-        //.SLOT_11_AXIS_tdata(SLOT_AXIS_11_tdata),
-        //.SLOT_11_AXIS_tdest(SLOT_AXIS_11_tdest),
-        //.SLOT_11_AXIS_tlast(SLOT_AXIS_11_tlast),
-        //.SLOT_11_AXIS_tready(SLOT_AXIS_11_tready),
-        //.SLOT_11_AXIS_tvalid(SLOT_AXIS_11_tvalid),
-        //.SLOT_12_AXIS_tdata(SLOT_AXIS_12_tdata),
-        //.SLOT_12_AXIS_tdest(SLOT_AXIS_12_tdest),
-        //.SLOT_12_AXIS_tlast(SLOT_AXIS_12_tlast),
-        //.SLOT_12_AXIS_tready(SLOT_AXIS_12_tready),
-        //.SLOT_12_AXIS_tvalid(SLOT_AXIS_12_tvalid),
-        //.SLOT_13_AXIS_tdata(SLOT_AXIS_13_tdata),
-        //.SLOT_13_AXIS_tdest(SLOT_AXIS_13_tdest),
-        //.SLOT_13_AXIS_tlast(SLOT_AXIS_13_tlast),
-        //.SLOT_13_AXIS_tready(SLOT_AXIS_13_tready),
-        //.SLOT_13_AXIS_tvalid(SLOT_AXIS_13_tvalid),
-        //.SLOT_14_AXIS_tdata(SLOT_AXIS_14_tdata),
-        //.SLOT_14_AXIS_tdest(SLOT_AXIS_14_tdest),
-        //.SLOT_14_AXIS_tlast(SLOT_AXIS_14_tlast),
-        //.SLOT_14_AXIS_tready(SLOT_AXIS_14_tready),
-        //.SLOT_14_AXIS_tvalid(SLOT_AXIS_14_tvalid),
-        //.SLOT_15_AXIS_tdata(SLOT_AXIS_15_tdata),
-        //.SLOT_15_AXIS_tdest(SLOT_AXIS_15_tdest),
-        //.SLOT_15_AXIS_tlast(SLOT_AXIS_15_tlast),
-        //.SLOT_15_AXIS_tready(SLOT_AXIS_15_tready),
-        //.SLOT_15_AXIS_tvalid(SLOT_AXIS_15_tvalid)
-    );
+        .txp(txp));
 
    //pr_wrapper pr_wrapper_i
    pr pr_i

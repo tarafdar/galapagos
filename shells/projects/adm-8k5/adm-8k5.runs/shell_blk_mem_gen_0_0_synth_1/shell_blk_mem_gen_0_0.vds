@@ -2,12 +2,12 @@
 # Vivado v2018.1 (64-bit)
 # SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018
 # IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
-# Start of session at: Thu May  3 12:09:40 2018
-# Process ID: 6026
-# Current directory: /nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.runs/shell_blk_mem_gen_0_0_synth_1
+# Start of session at: Fri May 11 12:08:47 2018
+# Process ID: 18984
+# Current directory: /nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.runs/shell_blk_mem_gen_0_0_synth_1
 # Command line: vivado -log shell_blk_mem_gen_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source shell_blk_mem_gen_0_0.tcl
-# Log file: /nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.runs/shell_blk_mem_gen_0_0_synth_1/shell_blk_mem_gen_0_0.vds
-# Journal file: /nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.runs/shell_blk_mem_gen_0_0_synth_1/vivado.jou
+# Log file: /nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.runs/shell_blk_mem_gen_0_0_synth_1/shell_blk_mem_gen_0_0.vds
+# Journal file: /nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.runs/shell_blk_mem_gen_0_0_synth_1/vivado.jou
 #-----------------------------------------------------------
 source shell_blk_mem_gen_0_0.tcl -notrace
 Command: synth_design -top shell_blk_mem_gen_0_0 -part xcku115-flva1517-2-e -mode out_of_context
@@ -15,11 +15,11 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xcku115'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcku115'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 6058 
+INFO: Helper process launched with PID 19068 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:18 . Memory (MB): peak = 1349.449 ; gain = 77.000 ; free physical = 7307 ; free virtual = 35184
+Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:17 . Memory (MB): peak = 1348.461 ; gain = 78.000 ; free physical = 8461 ; free virtual = 35771
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'shell_blk_mem_gen_0_0' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_blk_mem_gen_0_0/synth/shell_blk_mem_gen_0_0.vhd:72]
+INFO: [Synth 8-638] synthesizing module 'shell_blk_mem_gen_0_0' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_blk_mem_gen_0_0/synth/shell_blk_mem_gen_0_0.vhd:72]
 	Parameter C_FAMILY bound to: kintexu - type: string 
 	Parameter C_XDEVICEFAMILY bound to: kintexu - type: string 
 	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
@@ -47,12 +47,12 @@ INFO: [Synth 8-638] synthesizing module 'shell_blk_mem_gen_0_0' [/nfs/ug/thesis/
 	Parameter C_HAS_ENA bound to: 1 - type: integer 
 	Parameter C_HAS_REGCEA bound to: 0 - type: integer 
 	Parameter C_USE_BYTE_WEA bound to: 1 - type: integer 
-	Parameter C_WEA_WIDTH bound to: 8 - type: integer 
+	Parameter C_WEA_WIDTH bound to: 4 - type: integer 
 	Parameter C_WRITE_MODE_A bound to: WRITE_FIRST - type: string 
-	Parameter C_WRITE_WIDTH_A bound to: 64 - type: integer 
-	Parameter C_READ_WIDTH_A bound to: 64 - type: integer 
-	Parameter C_WRITE_DEPTH_A bound to: 131072 - type: integer 
-	Parameter C_READ_DEPTH_A bound to: 131072 - type: integer 
+	Parameter C_WRITE_WIDTH_A bound to: 32 - type: integer 
+	Parameter C_READ_WIDTH_A bound to: 32 - type: integer 
+	Parameter C_WRITE_DEPTH_A bound to: 1024 - type: integer 
+	Parameter C_READ_DEPTH_A bound to: 1024 - type: integer 
 	Parameter C_ADDRA_WIDTH bound to: 32 - type: integer 
 	Parameter C_HAS_RSTB bound to: 0 - type: integer 
 	Parameter C_RST_PRIORITY_B bound to: CE - type: string 
@@ -61,12 +61,12 @@ INFO: [Synth 8-638] synthesizing module 'shell_blk_mem_gen_0_0' [/nfs/ug/thesis/
 	Parameter C_HAS_ENB bound to: 0 - type: integer 
 	Parameter C_HAS_REGCEB bound to: 0 - type: integer 
 	Parameter C_USE_BYTE_WEB bound to: 1 - type: integer 
-	Parameter C_WEB_WIDTH bound to: 8 - type: integer 
+	Parameter C_WEB_WIDTH bound to: 4 - type: integer 
 	Parameter C_WRITE_MODE_B bound to: WRITE_FIRST - type: string 
-	Parameter C_WRITE_WIDTH_B bound to: 64 - type: integer 
-	Parameter C_READ_WIDTH_B bound to: 64 - type: integer 
-	Parameter C_WRITE_DEPTH_B bound to: 131072 - type: integer 
-	Parameter C_READ_DEPTH_B bound to: 131072 - type: integer 
+	Parameter C_WRITE_WIDTH_B bound to: 32 - type: integer 
+	Parameter C_READ_WIDTH_B bound to: 32 - type: integer 
+	Parameter C_WRITE_DEPTH_B bound to: 1024 - type: integer 
+	Parameter C_READ_DEPTH_B bound to: 1024 - type: integer 
 	Parameter C_ADDRB_WIDTH bound to: 32 - type: integer 
 	Parameter C_HAS_MEM_OUTPUT_REGS_A bound to: 0 - type: integer 
 	Parameter C_HAS_MEM_OUTPUT_REGS_B bound to: 0 - type: integer 
@@ -90,114 +90,114 @@ INFO: [Synth 8-638] synthesizing module 'shell_blk_mem_gen_0_0' [/nfs/ug/thesis/
 	Parameter C_EN_SHUTDOWN_PIN bound to: 0 - type: integer 
 	Parameter C_EN_SAFETY_CKT bound to: 1 - type: integer 
 	Parameter C_DISABLE_WARN_BHV_RANGE bound to: 0 - type: integer 
-	Parameter C_COUNT_36K_BRAM bound to: 256 - type: string 
+	Parameter C_COUNT_36K_BRAM bound to: 1 - type: string 
 	Parameter C_COUNT_18K_BRAM bound to: 0 - type: string 
-	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     35.482364 mW - type: string 
-INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_1' declared at '/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/67d8/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195313' bound to instance 'U0' of component 'blk_mem_gen_v8_4_1' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_blk_mem_gen_0_0/synth/shell_blk_mem_gen_0_0.vhd:237]
-INFO: [Synth 8-256] done synthesizing module 'shell_blk_mem_gen_0_0' (11#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_blk_mem_gen_0_0/synth/shell_blk_mem_gen_0_0.vhd:72]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port MUX_RST[0]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port MEM_LAT_RST
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port MEM_REG_RST
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port MUX_REGCE[0]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port MEM_REGCE
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port WE
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port ADDR_IN[16]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port ADDR_IN[15]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port ADDR_IN[14]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port ADDR_IN[13]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port ADDR_IN[12]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port ADDR_IN[11]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port ADDR_IN[10]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port ADDR_IN[9]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port ADDR_IN[8]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port ADDR_IN[7]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port ADDR_IN[6]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port ADDR_IN[5]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port ADDR_IN[4]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port ADDR_IN[3]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port ADDR_IN[2]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port ADDR_IN[1]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port ADDR_IN[0]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[511]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[510]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[509]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[508]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[507]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[506]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[505]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[504]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[503]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[502]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[501]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[500]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[499]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[498]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[497]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[496]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[495]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[494]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[493]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[492]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[491]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[490]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[489]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[488]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[487]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[486]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[485]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[484]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[483]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[482]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[481]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[480]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[479]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[478]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[477]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[476]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[475]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[474]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[473]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[472]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[471]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[470]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[469]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[468]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[467]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[466]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[465]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[464]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[463]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[462]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[461]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[460]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[459]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[458]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[457]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[456]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[455]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[454]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[453]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[452]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[451]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[450]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[449]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[448]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[447]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[446]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[445]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[444]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[443]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[442]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[441]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[440]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[439]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[438]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[437]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[436]
-WARNING: [Synth 8-3331] design blk_mem_gen_mux__parameterized0 has unconnected port SBITERRIN[435]
+	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     0.5472 mW - type: string 
+INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_1' declared at '/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/67d8/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195313' bound to instance 'U0' of component 'blk_mem_gen_v8_4_1' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_blk_mem_gen_0_0/synth/shell_blk_mem_gen_0_0.vhd:237]
+INFO: [Synth 8-256] done synthesizing module 'shell_blk_mem_gen_0_0' (9#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_blk_mem_gen_0_0/synth/shell_blk_mem_gen_0_0.vhd:72]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port SSRA
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port CLKB
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port SSRB
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port ENB
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port REGCEB
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port WEB[3]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port WEB[2]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port WEB[1]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port WEB[0]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port ADDRB[9]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port ADDRB[8]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port ADDRB[7]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port ADDRB[6]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port ADDRB[5]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port ADDRB[4]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port ADDRB[3]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port ADDRB[2]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port ADDRB[1]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port ADDRB[0]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[35]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[34]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[33]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[32]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[31]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[30]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[29]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[28]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[27]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[26]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[25]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[24]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[23]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[22]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[21]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[20]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[19]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[18]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[17]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[16]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[15]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[14]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[13]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[12]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[11]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[10]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[9]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[8]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[7]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[6]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[5]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[4]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[3]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[2]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[1]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[0]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port INJECTSBITERR
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port INJECTDBITERR
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port ECCPIPECE
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port ram_rstram_b
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port ram_rstreg_b
+WARNING: [Synth 8-3331] design blk_mem_gen_generic_cstr has unconnected port REGCEA[0]
+WARNING: [Synth 8-3331] design blk_mem_gen_generic_cstr has unconnected port REGCEB[0]
+WARNING: [Synth 8-3331] design blk_mem_gen_generic_cstr has unconnected port INJECTSBITERR
+WARNING: [Synth 8-3331] design blk_mem_gen_generic_cstr has unconnected port INJECTDBITERR
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port CLKB
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port DOUTB_I[31]
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port DOUTB_I[30]
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port DOUTB_I[29]
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port DOUTB_I[28]
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port DOUTB_I[27]
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port DOUTB_I[26]
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port DOUTB_I[25]
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port DOUTB_I[24]
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port DOUTB_I[23]
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port DOUTB_I[22]
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port DOUTB_I[21]
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port DOUTB_I[20]
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port DOUTB_I[19]
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port DOUTB_I[18]
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port DOUTB_I[17]
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port DOUTB_I[16]
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port DOUTB_I[15]
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port DOUTB_I[14]
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port DOUTB_I[13]
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port DOUTB_I[12]
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port DOUTB_I[11]
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port DOUTB_I[10]
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port DOUTB_I[9]
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port DOUTB_I[8]
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port DOUTB_I[7]
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port DOUTB_I[6]
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port DOUTB_I[5]
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port DOUTB_I[4]
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port DOUTB_I[3]
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port DOUTB_I[2]
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port DOUTB_I[1]
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port DOUTB_I[0]
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port SBITERR_I
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port DBITERR_I
+WARNING: [Synth 8-3331] design blk_mem_output_block has unconnected port RDADDRECC_I[9]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:03:25 ; elapsed = 00:03:42 . Memory (MB): peak = 1646.168 ; gain = 373.719 ; free physical = 6287 ; free virtual = 34126
+Finished RTL Elaboration : Time (s): cpu = 00:01:05 ; elapsed = 00:01:20 . Memory (MB): peak = 1559.609 ; gain = 289.148 ; free physical = 7229 ; free virtual = 34546
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -210,45 +210,45 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:03:26 ; elapsed = 00:03:43 . Memory (MB): peak = 1646.168 ; gain = 373.719 ; free physical = 6328 ; free virtual = 34150
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:05 ; elapsed = 00:01:20 . Memory (MB): peak = 1559.609 ; gain = 289.148 ; free physical = 7216 ; free virtual = 34533
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:03:26 ; elapsed = 00:03:43 . Memory (MB): peak = 1646.168 ; gain = 373.719 ; free physical = 6328 ; free virtual = 34150
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:05 ; elapsed = 00:01:20 . Memory (MB): peak = 1559.609 ; gain = 289.148 ; free physical = 7216 ; free virtual = 34533
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xcku115-flva1517-2-e
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_blk_mem_gen_0_0/shell_blk_mem_gen_0_0_ooc.xdc] for cell 'U0'
-Finished Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_blk_mem_gen_0_0/shell_blk_mem_gen_0_0_ooc.xdc] for cell 'U0'
-Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.runs/shell_blk_mem_gen_0_0_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.runs/shell_blk_mem_gen_0_0_synth_1/dont_touch.xdc]
+Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_blk_mem_gen_0_0/shell_blk_mem_gen_0_0_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_blk_mem_gen_0_0/shell_blk_mem_gen_0_0_ooc.xdc] for cell 'U0'
+Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.runs/shell_blk_mem_gen_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.runs/shell_blk_mem_gen_0_0_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.08 . Memory (MB): peak = 2194.867 ; gain = 1.000 ; free physical = 5277 ; free virtual = 33089
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2012.246 ; gain = 1.000 ; free physical = 8276 ; free virtual = 35591
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:03:44 ; elapsed = 00:04:09 . Memory (MB): peak = 2194.867 ; gain = 922.418 ; free physical = 6397 ; free virtual = 34202
+Finished Constraint Validation : Time (s): cpu = 00:01:21 ; elapsed = 00:01:44 . Memory (MB): peak = 2012.246 ; gain = 741.785 ; free physical = 7969 ; free virtual = 35284
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xcku115-flva1517-2-e
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:03:44 ; elapsed = 00:04:09 . Memory (MB): peak = 2194.867 ; gain = 922.418 ; free physical = 6397 ; free virtual = 34202
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:21 ; elapsed = 00:01:44 . Memory (MB): peak = 2012.246 ; gain = 741.785 ; free physical = 7969 ; free virtual = 35284
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property DONT_TOUCH = true for U0. (constraint file  /nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.runs/shell_blk_mem_gen_0_0_synth_1/dont_touch.xdc, line 9).
+Applied set_property DONT_TOUCH = true for U0. (constraint file  /nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.runs/shell_blk_mem_gen_0_0_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:03:44 ; elapsed = 00:04:09 . Memory (MB): peak = 2194.867 ; gain = 922.418 ; free physical = 6395 ; free virtual = 34201
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:21 ; elapsed = 00:01:44 . Memory (MB): peak = 2012.246 ; gain = 741.785 ; free physical = 7969 ; free virtual = 35284
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:03:48 ; elapsed = 00:04:14 . Memory (MB): peak = 2194.867 ; gain = 922.418 ; free physical = 6172 ; free virtual = 33999
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:21 ; elapsed = 00:01:44 . Memory (MB): peak = 2012.246 ; gain = 741.785 ; free physical = 7970 ; free virtual = 35284
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -261,13 +261,10 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---XORs : 
-	   2 Input      1 Bit         XORs := 128   
+	   2 Input      1 Bit         XORs := 1     
 +---Registers : 
-	                5 Bit    Registers := 128   
-	                3 Bit    Registers := 2     
-	                1 Bit    Registers := 896   
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 144   
+	                5 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -275,16 +272,6 @@ Finished RTL Component Statistics
 Start RTL Hierarchical Component Statistics 
 ---------------------------------------------------------------------------------
 Hierarchical RTL Component report 
-Module bindec 
-Detailed RTL Component Info : 
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 8     
-Module blk_mem_gen_prim_wrapper 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
 Module blk_mem_gen_prim_width 
 Detailed RTL Component Info : 
 +---XORs : 
@@ -292,1665 +279,6 @@ Detailed RTL Component Info :
 +---Registers : 
 	                5 Bit    Registers := 1     
 	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized0 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized0 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized1 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized1 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized2 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized2 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized3 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized3 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized4 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized4 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized5 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized5 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized6 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized6 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized7 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized7 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized8 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized8 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized9 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized9 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized10 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized10 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized11 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized11 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized12 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized12 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized13 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized13 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized14 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized14 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized15 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized15 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized16 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized16 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized17 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized17 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized18 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized18 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized19 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized19 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized20 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized20 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized21 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized21 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized22 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized22 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized23 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized23 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized24 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized24 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized25 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized25 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized26 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized26 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized27 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized27 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized28 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized28 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized29 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized29 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized30 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized30 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized31 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized31 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized32 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized32 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized33 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized33 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized34 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized34 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized35 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized35 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized36 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized36 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized37 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized37 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized38 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized38 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized39 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized39 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized40 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized40 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized41 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized41 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized42 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized42 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized43 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized43 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized44 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized44 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized45 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized45 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized46 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized46 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized47 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized47 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized48 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized48 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized49 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized49 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized50 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized50 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized51 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized51 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized52 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized52 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized53 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized53 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized54 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized54 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized55 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized55 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized56 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized56 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized57 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized57 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized58 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized58 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized59 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized59 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized60 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized60 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized61 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized61 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized62 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized62 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized63 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized63 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized64 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized64 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized65 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized65 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized66 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized66 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized67 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized67 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized68 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized68 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized69 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized69 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized70 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized70 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized71 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized71 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized72 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized72 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized73 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized73 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized74 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized74 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized75 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized75 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized76 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized76 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized77 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized77 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized78 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized78 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized79 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized79 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized80 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized80 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized81 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized81 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized82 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized82 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized83 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized83 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized84 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized84 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized85 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized85 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized86 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized86 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized87 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized87 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized88 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized88 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized89 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized89 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized90 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized90 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized91 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized91 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized92 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized92 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized93 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized93 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized94 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized94 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized95 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized95 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized96 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized96 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized97 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized97 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized98 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized98 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized99 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized99 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized100 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized100 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized101 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized101 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized102 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized102 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized103 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized103 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized104 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized104 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized105 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized105 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized106 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized106 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized107 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized107 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized108 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized108 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized109 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized109 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized110 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized110 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized111 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized111 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized112 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized112 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized113 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized113 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized114 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized114 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized115 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized115 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized116 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized116 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized117 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized117 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized118 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized118 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized119 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized119 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized120 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized120 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized121 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized121 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized122 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized122 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized123 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized123 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized124 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized124 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized125 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized125 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_prim_wrapper__parameterized126 
-Detailed RTL Component Info : 
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      1 Bit        Muxes := 1     
-Module blk_mem_gen_prim_width__parameterized126 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
-+---Registers : 
-	                5 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
-Module blk_mem_gen_mux 
-Detailed RTL Component Info : 
-+---Registers : 
-	                3 Bit    Registers := 1     
-Module blk_mem_gen_mux__parameterized0 
-Detailed RTL Component Info : 
-+---Registers : 
-	                3 Bit    Registers := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -1967,15 +295,10 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-INFO: [Synth 8-3332] Sequential element (inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[1]) is unused and will be removed from module blk_mem_gen_v8_4_1.
-INFO: [Synth 8-3332] Sequential element (inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[0]) is unused and will be removed from module blk_mem_gen_v8_4_1.
-INFO: [Synth 8-3332] Sequential element (inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/has_mux_b.B/no_softecc_sel_reg.ce_pri.sel_pipe_reg[2]) is unused and will be removed from module blk_mem_gen_v8_4_1.
-INFO: [Synth 8-3332] Sequential element (inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/has_mux_b.B/no_softecc_sel_reg.ce_pri.sel_pipe_reg[1]) is unused and will be removed from module blk_mem_gen_v8_4_1.
-INFO: [Synth 8-3332] Sequential element (inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/has_mux_b.B/no_softecc_sel_reg.ce_pri.sel_pipe_reg[0]) is unused and will be removed from module blk_mem_gen_v8_4_1.
 INFO: [Synth 8-3332] Sequential element (inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/SAFETY_CKT_GEN.ENB_NO_REG.ENB_dly_D_reg) is unused and will be removed from module blk_mem_gen_v8_4_1.
 INFO: [Synth 8-3332] Sequential element (inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/SAFETY_CKT_GEN.ENB_NO_REG.ENB_dly_reg) is unused and will be removed from module blk_mem_gen_v8_4_1.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:03:50 ; elapsed = 00:04:17 . Memory (MB): peak = 2194.867 ; gain = 922.418 ; free physical = 6062 ; free virtual = 33896
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:21 ; elapsed = 00:01:44 . Memory (MB): peak = 2012.246 ; gain = 741.785 ; free physical = 7948 ; free virtual = 35268
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1987,13 +310,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:04:01 ; elapsed = 00:04:44 . Memory (MB): peak = 2287.305 ; gain = 1014.855 ; free physical = 6086 ; free virtual = 33927
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:31 ; elapsed = 00:02:10 . Memory (MB): peak = 2244.535 ; gain = 974.074 ; free physical = 6882 ; free virtual = 34205
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:04:02 ; elapsed = 00:04:44 . Memory (MB): peak = 2320.305 ; gain = 1047.855 ; free physical = 6028 ; free virtual = 33869
+Finished Timing Optimization : Time (s): cpu = 00:01:31 ; elapsed = 00:02:10 . Memory (MB): peak = 2254.551 ; gain = 984.090 ; free physical = 6880 ; free virtual = 34203
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -2005,7 +328,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:04:03 ; elapsed = 00:04:46 . Memory (MB): peak = 2355.125 ; gain = 1082.676 ; free physical = 5959 ; free virtual = 33800
+Finished Technology Mapping : Time (s): cpu = 00:01:31 ; elapsed = 00:02:10 . Memory (MB): peak = 2254.551 ; gain = 984.090 ; free physical = 6876 ; free virtual = 34199
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -2029,7 +352,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:04:04 ; elapsed = 00:04:46 . Memory (MB): peak = 2355.125 ; gain = 1082.676 ; free physical = 5933 ; free virtual = 33774
+Finished IO Insertion : Time (s): cpu = 00:01:32 ; elapsed = 00:02:10 . Memory (MB): peak = 2254.551 ; gain = 984.090 ; free physical = 6842 ; free virtual = 34165
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -2042,7 +365,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:04:04 ; elapsed = 00:04:46 . Memory (MB): peak = 2355.125 ; gain = 1082.676 ; free physical = 5933 ; free virtual = 33774
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:32 ; elapsed = 00:02:10 . Memory (MB): peak = 2254.551 ; gain = 984.090 ; free physical = 6842 ; free virtual = 34165
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -2054,25 +377,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:04:04 ; elapsed = 00:04:47 . Memory (MB): peak = 2355.125 ; gain = 1082.676 ; free physical = 5926 ; free virtual = 33767
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:32 ; elapsed = 00:02:10 . Memory (MB): peak = 2254.551 ; gain = 984.090 ; free physical = 6842 ; free virtual = 34165
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:04:04 ; elapsed = 00:04:47 . Memory (MB): peak = 2355.125 ; gain = 1082.676 ; free physical = 5926 ; free virtual = 33767
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:32 ; elapsed = 00:02:10 . Memory (MB): peak = 2254.551 ; gain = 984.090 ; free physical = 6842 ; free virtual = 34165
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:04:04 ; elapsed = 00:04:47 . Memory (MB): peak = 2355.125 ; gain = 1082.676 ; free physical = 5926 ; free virtual = 33767
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:32 ; elapsed = 00:02:10 . Memory (MB): peak = 2254.551 ; gain = 984.090 ; free physical = 6842 ; free virtual = 34165
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:04:04 ; elapsed = 00:04:47 . Memory (MB): peak = 2355.125 ; gain = 1082.676 ; free physical = 5926 ; free virtual = 33767
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:32 ; elapsed = 00:02:10 . Memory (MB): peak = 2254.551 ; gain = 984.090 ; free physical = 6842 ; free virtual = 34165
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -2082,7 +405,7 @@ Static Shift Register Report:
 +-------------------+----------------------------------------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
 |Module Name        | RTL Name                                                                                                                               | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
 +-------------------+----------------------------------------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-|blk_mem_gen_v8_4_1 | inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[4] | 4      | 128   | NO           | NO                 | YES               | 128    | 0       | 
+|blk_mem_gen_v8_4_1 | inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[4] | 4      | 1     | NO           | NO                 | YES               | 1      | 0       | 
 +-------------------+----------------------------------------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
 
 ---------------------------------------------------------------------------------
@@ -2099,409 +422,49 @@ Report BlackBoxes:
 +-+--------------+----------+
 
 Report Cell Usage: 
-+------+-----------+------+
-|      |Cell       |Count |
-+------+-----------+------+
-|1     |LUT2       |   256|
-|2     |LUT3       |   194|
-|3     |LUT4       |   384|
-|4     |LUT5       |   128|
-|5     |LUT6       |    25|
-|6     |RAMB36E2   |   128|
-|7     |RAMB36E2_1 |   128|
-|8     |SRL16E     |   128|
-|9     |FDRE       |   769|
-|10    |FDSE       |   128|
-+------+-----------+------+
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |LUT2     |     3|
+|2     |LUT4     |     1|
+|3     |RAMB36E2 |     1|
+|4     |SRL16E   |     1|
+|5     |FDRE     |     6|
++------+---------+------+
 
 Report Instance Areas: 
-+------+--------------------------------------------------------------+-------------------------------------------+------+
-|      |Instance                                                      |Module                                     |Cells |
-+------+--------------------------------------------------------------+-------------------------------------------+------+
-|1     |top                                                           |                                           |  2268|
-|2     |  U0                                                          |blk_mem_gen_v8_4_1                         |  2268|
-|3     |    inst_blk_mem_gen                                          |blk_mem_gen_v8_4_1_synth                   |  2268|
-|4     |      \gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen  |blk_mem_gen_top                            |  2268|
-|5     |        \valid.cstr                                           |blk_mem_gen_generic_cstr                   |  2140|
-|6     |          \has_mux_a.A                                        |blk_mem_gen_mux                            |    66|
-|7     |          \ramloop[0].ram.r                                   |blk_mem_gen_prim_width                     |    16|
-|8     |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper                   |     8|
-|9     |          \ramloop[100].ram.r                                 |blk_mem_gen_prim_width__parameterized99    |    16|
-|10    |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized99  |     8|
-|11    |          \ramloop[101].ram.r                                 |blk_mem_gen_prim_width__parameterized100   |    16|
-|12    |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized100 |     8|
-|13    |          \ramloop[102].ram.r                                 |blk_mem_gen_prim_width__parameterized101   |    16|
-|14    |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized101 |     8|
-|15    |          \ramloop[103].ram.r                                 |blk_mem_gen_prim_width__parameterized102   |    16|
-|16    |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized102 |     8|
-|17    |          \ramloop[104].ram.r                                 |blk_mem_gen_prim_width__parameterized103   |    16|
-|18    |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized103 |     8|
-|19    |          \ramloop[105].ram.r                                 |blk_mem_gen_prim_width__parameterized104   |    16|
-|20    |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized104 |     8|
-|21    |          \ramloop[106].ram.r                                 |blk_mem_gen_prim_width__parameterized105   |    16|
-|22    |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized105 |     8|
-|23    |          \ramloop[107].ram.r                                 |blk_mem_gen_prim_width__parameterized106   |    16|
-|24    |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized106 |     8|
-|25    |          \ramloop[108].ram.r                                 |blk_mem_gen_prim_width__parameterized107   |    16|
-|26    |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized107 |     8|
-|27    |          \ramloop[109].ram.r                                 |blk_mem_gen_prim_width__parameterized108   |    16|
-|28    |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized108 |     8|
-|29    |          \ramloop[10].ram.r                                  |blk_mem_gen_prim_width__parameterized9     |    16|
-|30    |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized9   |     8|
-|31    |          \ramloop[110].ram.r                                 |blk_mem_gen_prim_width__parameterized109   |    16|
-|32    |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized109 |     8|
-|33    |          \ramloop[111].ram.r                                 |blk_mem_gen_prim_width__parameterized110   |    16|
-|34    |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized110 |     8|
-|35    |          \ramloop[112].ram.r                                 |blk_mem_gen_prim_width__parameterized111   |    16|
-|36    |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized111 |     8|
-|37    |          \ramloop[113].ram.r                                 |blk_mem_gen_prim_width__parameterized112   |    16|
-|38    |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized112 |     8|
-|39    |          \ramloop[114].ram.r                                 |blk_mem_gen_prim_width__parameterized113   |    16|
-|40    |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized113 |     8|
-|41    |          \ramloop[115].ram.r                                 |blk_mem_gen_prim_width__parameterized114   |    16|
-|42    |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized114 |     8|
-|43    |          \ramloop[116].ram.r                                 |blk_mem_gen_prim_width__parameterized115   |    16|
-|44    |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized115 |     8|
-|45    |          \ramloop[117].ram.r                                 |blk_mem_gen_prim_width__parameterized116   |    16|
-|46    |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized116 |     8|
-|47    |          \ramloop[118].ram.r                                 |blk_mem_gen_prim_width__parameterized117   |    16|
-|48    |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized117 |     8|
-|49    |          \ramloop[119].ram.r                                 |blk_mem_gen_prim_width__parameterized118   |    16|
-|50    |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized118 |     8|
-|51    |          \ramloop[11].ram.r                                  |blk_mem_gen_prim_width__parameterized10    |    16|
-|52    |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized10  |     8|
-|53    |          \ramloop[120].ram.r                                 |blk_mem_gen_prim_width__parameterized119   |    16|
-|54    |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized119 |     8|
-|55    |          \ramloop[121].ram.r                                 |blk_mem_gen_prim_width__parameterized120   |    16|
-|56    |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized120 |     8|
-|57    |          \ramloop[122].ram.r                                 |blk_mem_gen_prim_width__parameterized121   |    16|
-|58    |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized121 |     8|
-|59    |          \ramloop[123].ram.r                                 |blk_mem_gen_prim_width__parameterized122   |    16|
-|60    |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized122 |     8|
-|61    |          \ramloop[124].ram.r                                 |blk_mem_gen_prim_width__parameterized123   |    16|
-|62    |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized123 |     8|
-|63    |          \ramloop[125].ram.r                                 |blk_mem_gen_prim_width__parameterized124   |    16|
-|64    |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized124 |     8|
-|65    |          \ramloop[126].ram.r                                 |blk_mem_gen_prim_width__parameterized125   |    16|
-|66    |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized125 |     8|
-|67    |          \ramloop[127].ram.r                                 |blk_mem_gen_prim_width__parameterized126   |    16|
-|68    |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized126 |     8|
-|69    |          \ramloop[12].ram.r                                  |blk_mem_gen_prim_width__parameterized11    |    16|
-|70    |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized11  |     8|
-|71    |          \ramloop[13].ram.r                                  |blk_mem_gen_prim_width__parameterized12    |    16|
-|72    |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized12  |     8|
-|73    |          \ramloop[14].ram.r                                  |blk_mem_gen_prim_width__parameterized13    |    16|
-|74    |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized13  |     8|
-|75    |          \ramloop[15].ram.r                                  |blk_mem_gen_prim_width__parameterized14    |    16|
-|76    |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized14  |     8|
-|77    |          \ramloop[16].ram.r                                  |blk_mem_gen_prim_width__parameterized15    |    16|
-|78    |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized15  |     8|
-|79    |          \ramloop[17].ram.r                                  |blk_mem_gen_prim_width__parameterized16    |    16|
-|80    |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized16  |     8|
-|81    |          \ramloop[18].ram.r                                  |blk_mem_gen_prim_width__parameterized17    |    16|
-|82    |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized17  |     8|
-|83    |          \ramloop[19].ram.r                                  |blk_mem_gen_prim_width__parameterized18    |    16|
-|84    |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized18  |     8|
-|85    |          \ramloop[1].ram.r                                   |blk_mem_gen_prim_width__parameterized0     |    16|
-|86    |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized0   |     8|
-|87    |          \ramloop[20].ram.r                                  |blk_mem_gen_prim_width__parameterized19    |    16|
-|88    |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized19  |     8|
-|89    |          \ramloop[21].ram.r                                  |blk_mem_gen_prim_width__parameterized20    |    16|
-|90    |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized20  |     8|
-|91    |          \ramloop[22].ram.r                                  |blk_mem_gen_prim_width__parameterized21    |    16|
-|92    |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized21  |     8|
-|93    |          \ramloop[23].ram.r                                  |blk_mem_gen_prim_width__parameterized22    |    16|
-|94    |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized22  |     8|
-|95    |          \ramloop[24].ram.r                                  |blk_mem_gen_prim_width__parameterized23    |    16|
-|96    |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized23  |     8|
-|97    |          \ramloop[25].ram.r                                  |blk_mem_gen_prim_width__parameterized24    |    16|
-|98    |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized24  |     8|
-|99    |          \ramloop[26].ram.r                                  |blk_mem_gen_prim_width__parameterized25    |    16|
-|100   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized25  |     8|
-|101   |          \ramloop[27].ram.r                                  |blk_mem_gen_prim_width__parameterized26    |    16|
-|102   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized26  |     8|
-|103   |          \ramloop[28].ram.r                                  |blk_mem_gen_prim_width__parameterized27    |    16|
-|104   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized27  |     8|
-|105   |          \ramloop[29].ram.r                                  |blk_mem_gen_prim_width__parameterized28    |    16|
-|106   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized28  |     8|
-|107   |          \ramloop[2].ram.r                                   |blk_mem_gen_prim_width__parameterized1     |    16|
-|108   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized1   |     8|
-|109   |          \ramloop[30].ram.r                                  |blk_mem_gen_prim_width__parameterized29    |    16|
-|110   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized29  |     8|
-|111   |          \ramloop[31].ram.r                                  |blk_mem_gen_prim_width__parameterized30    |    16|
-|112   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized30  |     8|
-|113   |          \ramloop[32].ram.r                                  |blk_mem_gen_prim_width__parameterized31    |    16|
-|114   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized31  |     8|
-|115   |          \ramloop[33].ram.r                                  |blk_mem_gen_prim_width__parameterized32    |    16|
-|116   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized32  |     8|
-|117   |          \ramloop[34].ram.r                                  |blk_mem_gen_prim_width__parameterized33    |    16|
-|118   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized33  |     8|
-|119   |          \ramloop[35].ram.r                                  |blk_mem_gen_prim_width__parameterized34    |    16|
-|120   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized34  |     8|
-|121   |          \ramloop[36].ram.r                                  |blk_mem_gen_prim_width__parameterized35    |    16|
-|122   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized35  |     8|
-|123   |          \ramloop[37].ram.r                                  |blk_mem_gen_prim_width__parameterized36    |    16|
-|124   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized36  |     8|
-|125   |          \ramloop[38].ram.r                                  |blk_mem_gen_prim_width__parameterized37    |    16|
-|126   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized37  |     8|
-|127   |          \ramloop[39].ram.r                                  |blk_mem_gen_prim_width__parameterized38    |    16|
-|128   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized38  |     8|
-|129   |          \ramloop[3].ram.r                                   |blk_mem_gen_prim_width__parameterized2     |    16|
-|130   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized2   |     8|
-|131   |          \ramloop[40].ram.r                                  |blk_mem_gen_prim_width__parameterized39    |    16|
-|132   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized39  |     8|
-|133   |          \ramloop[41].ram.r                                  |blk_mem_gen_prim_width__parameterized40    |    16|
-|134   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized40  |     8|
-|135   |          \ramloop[42].ram.r                                  |blk_mem_gen_prim_width__parameterized41    |    16|
-|136   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized41  |     8|
-|137   |          \ramloop[43].ram.r                                  |blk_mem_gen_prim_width__parameterized42    |    16|
-|138   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized42  |     8|
-|139   |          \ramloop[44].ram.r                                  |blk_mem_gen_prim_width__parameterized43    |    16|
-|140   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized43  |     8|
-|141   |          \ramloop[45].ram.r                                  |blk_mem_gen_prim_width__parameterized44    |    16|
-|142   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized44  |     8|
-|143   |          \ramloop[46].ram.r                                  |blk_mem_gen_prim_width__parameterized45    |    16|
-|144   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized45  |     8|
-|145   |          \ramloop[47].ram.r                                  |blk_mem_gen_prim_width__parameterized46    |    16|
-|146   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized46  |     8|
-|147   |          \ramloop[48].ram.r                                  |blk_mem_gen_prim_width__parameterized47    |    16|
-|148   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized47  |     8|
-|149   |          \ramloop[49].ram.r                                  |blk_mem_gen_prim_width__parameterized48    |    16|
-|150   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized48  |     8|
-|151   |          \ramloop[4].ram.r                                   |blk_mem_gen_prim_width__parameterized3     |    16|
-|152   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized3   |     8|
-|153   |          \ramloop[50].ram.r                                  |blk_mem_gen_prim_width__parameterized49    |    16|
-|154   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized49  |     8|
-|155   |          \ramloop[51].ram.r                                  |blk_mem_gen_prim_width__parameterized50    |    16|
-|156   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized50  |     8|
-|157   |          \ramloop[52].ram.r                                  |blk_mem_gen_prim_width__parameterized51    |    16|
-|158   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized51  |     8|
-|159   |          \ramloop[53].ram.r                                  |blk_mem_gen_prim_width__parameterized52    |    16|
-|160   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized52  |     8|
-|161   |          \ramloop[54].ram.r                                  |blk_mem_gen_prim_width__parameterized53    |    16|
-|162   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized53  |     8|
-|163   |          \ramloop[55].ram.r                                  |blk_mem_gen_prim_width__parameterized54    |    16|
-|164   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized54  |     8|
-|165   |          \ramloop[56].ram.r                                  |blk_mem_gen_prim_width__parameterized55    |    16|
-|166   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized55  |     8|
-|167   |          \ramloop[57].ram.r                                  |blk_mem_gen_prim_width__parameterized56    |    16|
-|168   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized56  |     8|
-|169   |          \ramloop[58].ram.r                                  |blk_mem_gen_prim_width__parameterized57    |    16|
-|170   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized57  |     8|
-|171   |          \ramloop[59].ram.r                                  |blk_mem_gen_prim_width__parameterized58    |    16|
-|172   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized58  |     8|
-|173   |          \ramloop[5].ram.r                                   |blk_mem_gen_prim_width__parameterized4     |    16|
-|174   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized4   |     8|
-|175   |          \ramloop[60].ram.r                                  |blk_mem_gen_prim_width__parameterized59    |    16|
-|176   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized59  |     8|
-|177   |          \ramloop[61].ram.r                                  |blk_mem_gen_prim_width__parameterized60    |    16|
-|178   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized60  |     8|
-|179   |          \ramloop[62].ram.r                                  |blk_mem_gen_prim_width__parameterized61    |    16|
-|180   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized61  |     8|
-|181   |          \ramloop[63].ram.r                                  |blk_mem_gen_prim_width__parameterized62    |    16|
-|182   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized62  |     8|
-|183   |          \ramloop[64].ram.r                                  |blk_mem_gen_prim_width__parameterized63    |    16|
-|184   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized63  |     8|
-|185   |          \ramloop[65].ram.r                                  |blk_mem_gen_prim_width__parameterized64    |    16|
-|186   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized64  |     8|
-|187   |          \ramloop[66].ram.r                                  |blk_mem_gen_prim_width__parameterized65    |    16|
-|188   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized65  |     8|
-|189   |          \ramloop[67].ram.r                                  |blk_mem_gen_prim_width__parameterized66    |    16|
-|190   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized66  |     8|
-|191   |          \ramloop[68].ram.r                                  |blk_mem_gen_prim_width__parameterized67    |    16|
-|192   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized67  |     8|
-|193   |          \ramloop[69].ram.r                                  |blk_mem_gen_prim_width__parameterized68    |    16|
-|194   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized68  |     8|
-|195   |          \ramloop[6].ram.r                                   |blk_mem_gen_prim_width__parameterized5     |    16|
-|196   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized5   |     8|
-|197   |          \ramloop[70].ram.r                                  |blk_mem_gen_prim_width__parameterized69    |    16|
-|198   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized69  |     8|
-|199   |          \ramloop[71].ram.r                                  |blk_mem_gen_prim_width__parameterized70    |    16|
-|200   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized70  |     8|
-|201   |          \ramloop[72].ram.r                                  |blk_mem_gen_prim_width__parameterized71    |    16|
-|202   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized71  |     8|
-|203   |          \ramloop[73].ram.r                                  |blk_mem_gen_prim_width__parameterized72    |    16|
-|204   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized72  |     8|
-|205   |          \ramloop[74].ram.r                                  |blk_mem_gen_prim_width__parameterized73    |    16|
-|206   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized73  |     8|
-|207   |          \ramloop[75].ram.r                                  |blk_mem_gen_prim_width__parameterized74    |    16|
-|208   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized74  |     8|
-|209   |          \ramloop[76].ram.r                                  |blk_mem_gen_prim_width__parameterized75    |    16|
-|210   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized75  |     8|
-|211   |          \ramloop[77].ram.r                                  |blk_mem_gen_prim_width__parameterized76    |    16|
-|212   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized76  |     8|
-|213   |          \ramloop[78].ram.r                                  |blk_mem_gen_prim_width__parameterized77    |    16|
-|214   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized77  |     8|
-|215   |          \ramloop[79].ram.r                                  |blk_mem_gen_prim_width__parameterized78    |    16|
-|216   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized78  |     8|
-|217   |          \ramloop[7].ram.r                                   |blk_mem_gen_prim_width__parameterized6     |    16|
-|218   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized6   |     8|
-|219   |          \ramloop[80].ram.r                                  |blk_mem_gen_prim_width__parameterized79    |    16|
-|220   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized79  |     8|
-|221   |          \ramloop[81].ram.r                                  |blk_mem_gen_prim_width__parameterized80    |    16|
-|222   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized80  |     8|
-|223   |          \ramloop[82].ram.r                                  |blk_mem_gen_prim_width__parameterized81    |    16|
-|224   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized81  |     8|
-|225   |          \ramloop[83].ram.r                                  |blk_mem_gen_prim_width__parameterized82    |    16|
-|226   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized82  |     8|
-|227   |          \ramloop[84].ram.r                                  |blk_mem_gen_prim_width__parameterized83    |    16|
-|228   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized83  |     8|
-|229   |          \ramloop[85].ram.r                                  |blk_mem_gen_prim_width__parameterized84    |    16|
-|230   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized84  |     8|
-|231   |          \ramloop[86].ram.r                                  |blk_mem_gen_prim_width__parameterized85    |    16|
-|232   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized85  |     8|
-|233   |          \ramloop[87].ram.r                                  |blk_mem_gen_prim_width__parameterized86    |    16|
-|234   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized86  |     8|
-|235   |          \ramloop[88].ram.r                                  |blk_mem_gen_prim_width__parameterized87    |    16|
-|236   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized87  |     8|
-|237   |          \ramloop[89].ram.r                                  |blk_mem_gen_prim_width__parameterized88    |    16|
-|238   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized88  |     8|
-|239   |          \ramloop[8].ram.r                                   |blk_mem_gen_prim_width__parameterized7     |    16|
-|240   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized7   |     8|
-|241   |          \ramloop[90].ram.r                                  |blk_mem_gen_prim_width__parameterized89    |    16|
-|242   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized89  |     8|
-|243   |          \ramloop[91].ram.r                                  |blk_mem_gen_prim_width__parameterized90    |    16|
-|244   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized90  |     8|
-|245   |          \ramloop[92].ram.r                                  |blk_mem_gen_prim_width__parameterized91    |    16|
-|246   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized91  |     8|
-|247   |          \ramloop[93].ram.r                                  |blk_mem_gen_prim_width__parameterized92    |    16|
-|248   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized92  |     8|
-|249   |          \ramloop[94].ram.r                                  |blk_mem_gen_prim_width__parameterized93    |    16|
-|250   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized93  |     8|
-|251   |          \ramloop[95].ram.r                                  |blk_mem_gen_prim_width__parameterized94    |    16|
-|252   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized94  |     8|
-|253   |          \ramloop[96].ram.r                                  |blk_mem_gen_prim_width__parameterized95    |    16|
-|254   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized95  |     8|
-|255   |          \ramloop[97].ram.r                                  |blk_mem_gen_prim_width__parameterized96    |    16|
-|256   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized96  |     8|
-|257   |          \ramloop[98].ram.r                                  |blk_mem_gen_prim_width__parameterized97    |    16|
-|258   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized97  |     8|
-|259   |          \ramloop[99].ram.r                                  |blk_mem_gen_prim_width__parameterized98    |    16|
-|260   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized98  |     8|
-|261   |          \ramloop[9].ram.r                                   |blk_mem_gen_prim_width__parameterized8     |    16|
-|262   |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized8   |     8|
-+------+--------------------------------------------------------------+-------------------------------------------+------+
++------+--------------------------------------------------------------+-------------------------+------+
+|      |Instance                                                      |Module                   |Cells |
++------+--------------------------------------------------------------+-------------------------+------+
+|1     |top                                                           |                         |    12|
+|2     |  U0                                                          |blk_mem_gen_v8_4_1       |    12|
+|3     |    inst_blk_mem_gen                                          |blk_mem_gen_v8_4_1_synth |    12|
+|4     |      \gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen  |blk_mem_gen_top          |    12|
+|5     |        \valid.cstr                                           |blk_mem_gen_generic_cstr |    12|
+|6     |          \ramloop[0].ram.r                                   |blk_mem_gen_prim_width   |    12|
+|7     |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper |     3|
++------+--------------------------------------------------------------+-------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:04:04 ; elapsed = 00:04:47 . Memory (MB): peak = 2355.125 ; gain = 1082.676 ; free physical = 5926 ; free virtual = 33767
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:32 ; elapsed = 00:02:10 . Memory (MB): peak = 2254.551 ; gain = 984.090 ; free physical = 6842 ; free virtual = 34165
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 2484 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:03:54 ; elapsed = 00:04:29 . Memory (MB): peak = 2355.125 ; gain = 533.977 ; free physical = 5947 ; free virtual = 33788
-Synthesis Optimization Complete : Time (s): cpu = 00:04:05 ; elapsed = 00:04:47 . Memory (MB): peak = 2355.133 ; gain = 1082.676 ; free physical = 5956 ; free virtual = 33797
+Synthesis finished with 0 errors, 0 critical warnings and 244 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:23 ; elapsed = 00:01:54 . Memory (MB): peak = 2254.551 ; gain = 531.453 ; free physical = 6864 ; free virtual = 34187
+Synthesis Optimization Complete : Time (s): cpu = 00:01:32 ; elapsed = 00:02:10 . Memory (MB): peak = 2254.559 ; gain = 984.090 ; free physical = 6874 ; free virtual = 34197
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[100].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[100].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[101].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[101].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[102].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[102].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[103].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[103].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[104].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[104].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[105].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[105].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[106].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[106].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[107].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[107].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[108].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[108].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[109].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[109].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[10].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[10].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[110].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[110].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[111].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[111].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[112].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[112].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[113].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[113].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[114].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[114].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[115].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[115].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[116].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[116].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[117].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[117].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[118].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[118].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[119].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[119].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[120].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[120].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[121].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[121].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[122].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[122].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[123].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[123].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[124].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[124].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[125].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[125].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[126].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[126].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[127].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[127].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[12].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[12].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[13].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[13].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[14].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[14].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[15].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[15].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[16].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[16].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[17].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[17].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[19].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[19].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[20].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[20].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[21].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[21].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[22].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[22].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[23].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[23].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[24].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[24].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[25].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[25].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[26].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[26].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[27].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[27].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[28].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[28].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[29].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_B has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[29].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.CASCADED_PRIM36.ram_T has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
-INFO: [Common 17-14] Message 'Opt 31-422' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.SP.SIMPLE_PRIM36.SERIES8_SP_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-121 Infos, 100 Warnings, 0 Critical Warnings and 0 Errors encountered.
+16 Infos, 100 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:04:08 ; elapsed = 00:04:50 . Memory (MB): peak = 2409.586 ; gain = 1168.711 ; free physical = 5966 ; free virtual = 33806
-INFO: [Common 17-1381] The checkpoint '/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.runs/shell_blk_mem_gen_0_0_synth_1/shell_blk_mem_gen_0_0.dcp' has been generated.
-INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP /nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_blk_mem_gen_0_0/shell_blk_mem_gen_0_0.xci
-INFO: [Coretcl 2-1174] Renamed 261 cell refs.
-INFO: [Common 17-1381] The checkpoint '/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.runs/shell_blk_mem_gen_0_0_synth_1/shell_blk_mem_gen_0_0.dcp' has been generated.
+synth_design: Time (s): cpu = 00:01:34 ; elapsed = 00:02:13 . Memory (MB): peak = 2294.027 ; gain = 1055.141 ; free physical = 6927 ; free virtual = 34250
+INFO: [Common 17-1381] The checkpoint '/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.runs/shell_blk_mem_gen_0_0_synth_1/shell_blk_mem_gen_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP /nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_blk_mem_gen_0_0/shell_blk_mem_gen_0_0.xci
+INFO: [Coretcl 2-1174] Renamed 6 cell refs.
+INFO: [Common 17-1381] The checkpoint '/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.runs/shell_blk_mem_gen_0_0_synth_1/shell_blk_mem_gen_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file shell_blk_mem_gen_0_0_utilization_synth.rpt -pb shell_blk_mem_gen_0_0_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00.52 ; elapsed = 00:00:00.56 . Memory (MB): peak = 2433.598 ; gain = 0.000 ; free physical = 5935 ; free virtual = 33789
-INFO: [Common 17-206] Exiting Vivado at Thu May  3 12:14:48 2018...
+report_utilization: Time (s): cpu = 00:00:00.49 ; elapsed = 00:00:00.53 . Memory (MB): peak = 2294.027 ; gain = 0.000 ; free physical = 6928 ; free virtual = 34251
+INFO: [Common 17-206] Exiting Vivado at Fri May 11 12:11:11 2018...

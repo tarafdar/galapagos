@@ -2,12 +2,12 @@
 # Vivado v2018.1 (64-bit)
 # SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018
 # IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
-# Start of session at: Thu May  3 11:56:49 2018
-# Process ID: 1265
-# Current directory: /nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.runs/shell_mdm_1_0_synth_1
+# Start of session at: Fri May 11 11:48:34 2018
+# Process ID: 11813
+# Current directory: /nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.runs/shell_mdm_1_0_synth_1
 # Command line: vivado -log shell_mdm_1_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source shell_mdm_1_0.tcl
-# Log file: /nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.runs/shell_mdm_1_0_synth_1/shell_mdm_1_0.vds
-# Journal file: /nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.runs/shell_mdm_1_0_synth_1/vivado.jou
+# Log file: /nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.runs/shell_mdm_1_0_synth_1/shell_mdm_1_0.vds
+# Journal file: /nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.runs/shell_mdm_1_0_synth_1/vivado.jou
 #-----------------------------------------------------------
 source shell_mdm_1_0.tcl -notrace
 Command: synth_design -top shell_mdm_1_0 -part xcku115-flva1517-2-e -mode out_of_context
@@ -15,11 +15,11 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xcku115'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcku115'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 1349 
+INFO: Helper process launched with PID 11897 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1356.387 ; gain = 78.000 ; free physical = 3943 ; free virtual = 35206
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1355.395 ; gain = 78.000 ; free physical = 7767 ; free virtual = 35214
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'shell_mdm_1_0' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_mdm_1_0/synth/shell_mdm_1_0.vhd:94]
+INFO: [Synth 8-638] synthesizing module 'shell_mdm_1_0' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_mdm_1_0/synth/shell_mdm_1_0.vhd:94]
 	Parameter C_FAMILY bound to: kintexu - type: string 
 	Parameter C_JTAG_CHAIN bound to: 2 - type: integer 
 	Parameter C_USE_BSCAN bound to: 0 - type: integer 
@@ -50,8 +50,8 @@ INFO: [Synth 8-638] synthesizing module 'shell_mdm_1_0' [/nfs/ug/thesis/thesis0/
 	Parameter C_DATA_SIZE bound to: 32 - type: integer 
 	Parameter C_M_AXIS_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_M_AXIS_ID_WIDTH bound to: 7 - type: integer 
-INFO: [Synth 8-3491] module 'MDM' declared at '/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:12362' bound to instance 'U0' of component 'MDM' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_mdm_1_0/synth/shell_mdm_1_0.vhd:1697]
-INFO: [Synth 8-638] synthesizing module 'MDM' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:14013]
+INFO: [Synth 8-3491] module 'MDM' declared at '/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:12362' bound to instance 'U0' of component 'MDM' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_mdm_1_0/synth/shell_mdm_1_0.vhd:1697]
+INFO: [Synth 8-638] synthesizing module 'MDM' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:14013]
 	Parameter C_FAMILY bound to: kintexu - type: string 
 	Parameter C_JTAG_CHAIN bound to: 2 - type: integer 
 	Parameter C_USE_BSCAN bound to: 0 - type: integer 
@@ -82,25 +82,25 @@ INFO: [Synth 8-638] synthesizing module 'MDM' [/nfs/ug/thesis/thesis0/pc/Graham/
 	Parameter C_DATA_SIZE bound to: 32 - type: integer 
 	Parameter C_M_AXIS_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_M_AXIS_ID_WIDTH bound to: 7 - type: integer 
-INFO: [Synth 8-5534] Detected attribute (* buffer_type = "none" *) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:15517]
+INFO: [Synth 8-5534] Detected attribute (* buffer_type = "none" *) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:15517]
 	Parameter C_TARGET bound to: 1'b0 
 	Parameter DISABLE_JTAG bound to: FALSE - type: string 
 	Parameter JTAG_CHAIN bound to: 2 - type: integer 
-INFO: [Synth 8-3491] module 'MB_BSCANE2' declared at '/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:253' bound to instance 'BSCAN_I' of component 'MB_BSCANE2' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:15584]
-INFO: [Synth 8-638] synthesizing module 'MB_BSCANE2' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:277]
+INFO: [Synth 8-3491] module 'MB_BSCANE2' declared at '/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:253' bound to instance 'BSCAN_I' of component 'MB_BSCANE2' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:15584]
+INFO: [Synth 8-638] synthesizing module 'MB_BSCANE2' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:277]
 	Parameter C_TARGET bound to: 1'b0 
 	Parameter DISABLE_JTAG bound to: FALSE - type: string 
 	Parameter JTAG_CHAIN bound to: 2 - type: integer 
 	Parameter DISABLE_JTAG bound to: FALSE - type: string 
 	Parameter JTAG_CHAIN bound to: 2 - type: integer 
-INFO: [Synth 8-113] binding component instance 'BSCANE2_I' to cell 'BSCANE2' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:287]
-INFO: [Synth 8-256] done synthesizing module 'MB_BSCANE2' (1#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:277]
+INFO: [Synth 8-113] binding component instance 'BSCANE2_I' to cell 'BSCANE2' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:287]
+INFO: [Synth 8-256] done synthesizing module 'MB_BSCANE2' (1#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:277]
 	Parameter C_TARGET bound to: 1'b0 
-INFO: [Synth 8-3491] module 'MB_BUFG' declared at '/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:315' bound to instance 'BUFG_DRCK' of component 'MB_BUFG' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:15737]
-INFO: [Synth 8-638] synthesizing module 'MB_BUFG' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:328]
+INFO: [Synth 8-3491] module 'MB_BUFG' declared at '/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:315' bound to instance 'BUFG_DRCK' of component 'MB_BUFG' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:15737]
+INFO: [Synth 8-638] synthesizing module 'MB_BUFG' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:328]
 	Parameter C_TARGET bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'Native' to cell 'BUFG' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:338]
-INFO: [Synth 8-256] done synthesizing module 'MB_BUFG' (2#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:328]
+INFO: [Synth 8-113] binding component instance 'Native' to cell 'BUFG' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:338]
+INFO: [Synth 8-256] done synthesizing module 'MB_BUFG' (2#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:328]
 	Parameter C_TARGET bound to: 1'b0 
 	Parameter C_JTAG_CHAIN bound to: 2 - type: integer 
 	Parameter C_USE_BSCAN bound to: 0 - type: integer 
@@ -130,8 +130,8 @@ INFO: [Synth 8-256] done synthesizing module 'MB_BUFG' (2#1) [/nfs/ug/thesis/the
 	Parameter C_TRACE_ID bound to: 110 - type: integer 
 	Parameter C_M_AXIS_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_M_AXIS_ID_WIDTH bound to: 7 - type: integer 
-INFO: [Synth 8-3491] module 'MDM_Core' declared at '/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:5413' bound to instance 'MDM_Core_I1' of component 'MDM_Core' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:15821]
-INFO: [Synth 8-638] synthesizing module 'MDM_Core' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:6649]
+INFO: [Synth 8-3491] module 'MDM_Core' declared at '/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:5413' bound to instance 'MDM_Core_I1' of component 'MDM_Core' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:15821]
+INFO: [Synth 8-638] synthesizing module 'MDM_Core' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:6649]
 	Parameter C_TARGET bound to: 1'b0 
 	Parameter C_JTAG_CHAIN bound to: 2 - type: integer 
 	Parameter C_USE_BSCAN bound to: 0 - type: integer 
@@ -163,16 +163,16 @@ INFO: [Synth 8-638] synthesizing module 'MDM_Core' [/nfs/ug/thesis/thesis0/pc/Gr
 	Parameter C_M_AXIS_ID_WIDTH bound to: 7 - type: integer 
 	Parameter C_TARGET bound to: 1'b0 
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-3491] module 'MB_FDRE' declared at '/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:433' bound to instance 'TX_Buffer_Empty_FDRE' of component 'MB_FDRE' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:7553]
-INFO: [Synth 8-638] synthesizing module 'MB_FDRE' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:450]
+INFO: [Synth 8-3491] module 'MB_FDRE' declared at '/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:433' bound to instance 'TX_Buffer_Empty_FDRE' of component 'MB_FDRE' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:7553]
+INFO: [Synth 8-638] synthesizing module 'MB_FDRE' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:450]
 	Parameter C_TARGET bound to: 1'b0 
 	Parameter INIT bound to: 1'b0 
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'Native' to cell 'FDRE' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:479]
-INFO: [Synth 8-256] done synthesizing module 'MB_FDRE' (3#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:450]
+INFO: [Synth 8-113] binding component instance 'Native' to cell 'FDRE' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:479]
+INFO: [Synth 8-256] done synthesizing module 'MB_FDRE' (3#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:450]
 	Parameter C_TARGET bound to: 1'b0 
 	Parameter C_USE_BSCAN bound to: 0 - type: integer 
 	Parameter C_MB_DBG_PORTS bound to: 1 - type: integer 
@@ -190,8 +190,8 @@ INFO: [Synth 8-256] done synthesizing module 'MB_FDRE' (3#1) [/nfs/ug/thesis/the
 	Parameter C_TRACE_OUTPUT bound to: 0 - type: integer 
 	Parameter C_TRACE_PROTOCOL bound to: 1 - type: integer 
 	Parameter C_EN_WIDTH bound to: 1 - type: integer 
-INFO: [Synth 8-3491] module 'JTAG_CONTROL' declared at '/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:2846' bound to instance 'JTAG_CONTROL_I' of component 'JTAG_CONTROL' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:9985]
-INFO: [Synth 8-638] synthesizing module 'JTAG_CONTROL' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:3117]
+INFO: [Synth 8-3491] module 'JTAG_CONTROL' declared at '/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:2846' bound to instance 'JTAG_CONTROL_I' of component 'JTAG_CONTROL' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:9985]
+INFO: [Synth 8-638] synthesizing module 'JTAG_CONTROL' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:3117]
 	Parameter C_TARGET bound to: 1'b0 
 	Parameter C_USE_BSCAN bound to: 0 - type: integer 
 	Parameter C_MB_DBG_PORTS bound to: 1 - type: integer 
@@ -211,83 +211,83 @@ INFO: [Synth 8-638] synthesizing module 'JTAG_CONTROL' [/nfs/ug/thesis/thesis0/p
 	Parameter C_EN_WIDTH bound to: 1 - type: integer 
 	Parameter C_TARGET bound to: 1'b0 
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-3491] module 'MB_FDC_1' declared at '/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:614' bound to instance 'FDC_I' of component 'MB_FDC_1' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:3466]
-INFO: [Synth 8-638] synthesizing module 'MB_FDC_1' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:630]
+INFO: [Synth 8-3491] module 'MB_FDC_1' declared at '/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:614' bound to instance 'FDC_I' of component 'MB_FDC_1' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:3466]
+INFO: [Synth 8-638] synthesizing module 'MB_FDC_1' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:630]
 	Parameter C_TARGET bound to: 1'b0 
 	Parameter INIT bound to: 1'b0 
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'Native' to cell 'FDC_1' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:651]
-INFO: [Synth 8-256] done synthesizing module 'MB_FDC_1' (4#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:630]
+INFO: [Synth 8-113] binding component instance 'Native' to cell 'FDC_1' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:651]
+INFO: [Synth 8-256] done synthesizing module 'MB_FDC_1' (4#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:630]
 	Parameter C_TARGET bound to: 1'b0 
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-3491] module 'MB_FDRE_1' declared at '/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:673' bound to instance 'SYNC_FDRE' of component 'MB_FDRE_1' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:3476]
-INFO: [Synth 8-638] synthesizing module 'MB_FDRE_1' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:690]
+INFO: [Synth 8-3491] module 'MB_FDRE_1' declared at '/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:673' bound to instance 'SYNC_FDRE' of component 'MB_FDRE_1' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:3476]
+INFO: [Synth 8-638] synthesizing module 'MB_FDRE_1' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:690]
 	Parameter C_TARGET bound to: 1'b0 
 	Parameter INIT bound to: 1'b0 
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'Native' to cell 'FDRE_1' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:713]
-INFO: [Synth 8-256] done synthesizing module 'MB_FDRE_1' (5#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:690]
+INFO: [Synth 8-113] binding component instance 'Native' to cell 'FDRE_1' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:713]
+INFO: [Synth 8-256] done synthesizing module 'MB_FDRE_1' (5#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:690]
 	Parameter C_TARGET bound to: 1'b0 
 	Parameter C_STATIC bound to: 1 - type: bool 
 	Parameter C_USE_SRL16 bound to: yes - type: string 
 	Parameter INIT bound to: 16'b0000000101100111 
-INFO: [Synth 8-3491] module 'MB_SRL16E' declared at '/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:736' bound to instance 'SRL16E_1' of component 'MB_SRL16E' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:3617]
-INFO: [Synth 8-638] synthesizing module 'MB_SRL16E' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:759]
+INFO: [Synth 8-3491] module 'MB_SRL16E' declared at '/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:736' bound to instance 'SRL16E_1' of component 'MB_SRL16E' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:3617]
+INFO: [Synth 8-638] synthesizing module 'MB_SRL16E' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:759]
 	Parameter C_TARGET bound to: 1'b0 
 	Parameter C_STATIC bound to: 1 - type: bool 
 	Parameter C_USE_SRL16 bound to: yes - type: string 
 	Parameter INIT bound to: 16'b0000000101100111 
 	Parameter INIT bound to: 16'b0000000101100111 
 	Parameter IS_CLK_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'MB_SRL16E_I1' to cell 'SRL16E' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:763]
-INFO: [Synth 8-256] done synthesizing module 'MB_SRL16E' (6#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:759]
+INFO: [Synth 8-113] binding component instance 'MB_SRL16E_I1' to cell 'SRL16E' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:763]
+INFO: [Synth 8-256] done synthesizing module 'MB_SRL16E' (6#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:759]
 	Parameter C_TARGET bound to: 1'b0 
 	Parameter C_STATIC bound to: 1 - type: bool 
 	Parameter C_USE_SRL16 bound to: yes - type: string 
 	Parameter INIT bound to: 16'b0100001010100111 
-INFO: [Synth 8-3491] module 'MB_SRL16E' declared at '/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:736' bound to instance 'SRL16E_2' of component 'MB_SRL16E' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:3634]
-INFO: [Synth 8-638] synthesizing module 'MB_SRL16E__parameterized1' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:759]
+INFO: [Synth 8-3491] module 'MB_SRL16E' declared at '/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:736' bound to instance 'SRL16E_2' of component 'MB_SRL16E' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:3634]
+INFO: [Synth 8-638] synthesizing module 'MB_SRL16E__parameterized1' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:759]
 	Parameter C_TARGET bound to: 1'b0 
 	Parameter C_STATIC bound to: 1 - type: bool 
 	Parameter C_USE_SRL16 bound to: yes - type: string 
 	Parameter INIT bound to: 16'b0100001010100111 
 	Parameter INIT bound to: 16'b0100001010100111 
 	Parameter IS_CLK_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'MB_SRL16E_I1' to cell 'SRL16E' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:763]
-INFO: [Synth 8-256] done synthesizing module 'MB_SRL16E__parameterized1' (6#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:759]
+INFO: [Synth 8-113] binding component instance 'MB_SRL16E_I1' to cell 'SRL16E' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:763]
+INFO: [Synth 8-256] done synthesizing module 'MB_SRL16E__parameterized1' (6#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:759]
 	Parameter C_TARGET bound to: 1'b0 
 	Parameter C_STATIC bound to: 1 - type: bool 
 	Parameter C_USE_SRL16 bound to: yes - type: string 
 	Parameter INIT bound to: 16'b0100010001000011 
-INFO: [Synth 8-3491] module 'MB_SRL16E' declared at '/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:736' bound to instance 'SRL16E_ID_1' of component 'MB_SRL16E' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:3703]
-INFO: [Synth 8-638] synthesizing module 'MB_SRL16E__parameterized3' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:759]
+INFO: [Synth 8-3491] module 'MB_SRL16E' declared at '/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:736' bound to instance 'SRL16E_ID_1' of component 'MB_SRL16E' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:3703]
+INFO: [Synth 8-638] synthesizing module 'MB_SRL16E__parameterized3' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:759]
 	Parameter C_TARGET bound to: 1'b0 
 	Parameter C_STATIC bound to: 1 - type: bool 
 	Parameter C_USE_SRL16 bound to: yes - type: string 
 	Parameter INIT bound to: 16'b0100010001000011 
 	Parameter INIT bound to: 16'b0100010001000011 
 	Parameter IS_CLK_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'MB_SRL16E_I1' to cell 'SRL16E' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:763]
-INFO: [Synth 8-256] done synthesizing module 'MB_SRL16E__parameterized3' (6#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:759]
+INFO: [Synth 8-113] binding component instance 'MB_SRL16E_I1' to cell 'SRL16E' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:763]
+INFO: [Synth 8-256] done synthesizing module 'MB_SRL16E__parameterized3' (6#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:759]
 	Parameter C_TARGET bound to: 1'b0 
 	Parameter C_STATIC bound to: 1 - type: bool 
 	Parameter C_USE_SRL16 bound to: yes - type: string 
 	Parameter INIT bound to: 16'b0101100001001101 
-INFO: [Synth 8-3491] module 'MB_SRL16E' declared at '/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:736' bound to instance 'SRL16E_ID_2' of component 'MB_SRL16E' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:3720]
-INFO: [Synth 8-638] synthesizing module 'MB_SRL16E__parameterized5' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:759]
+INFO: [Synth 8-3491] module 'MB_SRL16E' declared at '/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:736' bound to instance 'SRL16E_ID_2' of component 'MB_SRL16E' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:3720]
+INFO: [Synth 8-638] synthesizing module 'MB_SRL16E__parameterized5' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:759]
 	Parameter C_TARGET bound to: 1'b0 
 	Parameter C_STATIC bound to: 1 - type: bool 
 	Parameter C_USE_SRL16 bound to: yes - type: string 
 	Parameter INIT bound to: 16'b0101100001001101 
 	Parameter INIT bound to: 16'b0101100001001101 
 	Parameter IS_CLK_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'MB_SRL16E_I1' to cell 'SRL16E' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:763]
-INFO: [Synth 8-256] done synthesizing module 'MB_SRL16E__parameterized5' (6#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:759]
-INFO: [Synth 8-5534] Detected attribute (* async_reg = "TRUE" *) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:3879]
-INFO: [Synth 8-5534] Detected attribute (* async_reg = "TRUE" *) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:4117]
-INFO: [Synth 8-5534] Detected attribute (* async_reg = "TRUE" *) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:4118]
-INFO: [Synth 8-5534] Detected attribute (* async_reg = "TRUE" *) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:4131]
-INFO: [Synth 8-5534] Detected attribute (* async_reg = "TRUE" *) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:4132]
+INFO: [Synth 8-113] binding component instance 'MB_SRL16E_I1' to cell 'SRL16E' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:763]
+INFO: [Synth 8-256] done synthesizing module 'MB_SRL16E__parameterized5' (6#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:759]
+INFO: [Synth 8-5534] Detected attribute (* async_reg = "TRUE" *) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:3879]
+INFO: [Synth 8-5534] Detected attribute (* async_reg = "TRUE" *) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:4117]
+INFO: [Synth 8-5534] Detected attribute (* async_reg = "TRUE" *) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:4118]
+INFO: [Synth 8-5534] Detected attribute (* async_reg = "TRUE" *) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:4131]
+INFO: [Synth 8-5534] Detected attribute (* async_reg = "TRUE" *) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:4132]
 	Parameter C_TARGET bound to: 1'b0 
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CE_INVERTED bound to: 1'b0 
@@ -295,8 +295,8 @@ INFO: [Synth 8-5534] Detected attribute (* async_reg = "TRUE" *) [/nfs/ug/thesis
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
 	Parameter IS_S_INVERTED bound to: 1'b0 
-INFO: [Synth 8-3491] module 'MB_FDRSE' declared at '/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:816' bound to instance 'Ext_BRK_FDRSE' of component 'MB_FDRSE' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:4143]
-INFO: [Synth 8-638] synthesizing module 'MB_FDRSE' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:842]
+INFO: [Synth 8-3491] module 'MB_FDRSE' declared at '/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:816' bound to instance 'Ext_BRK_FDRSE' of component 'MB_FDRSE' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:4143]
+INFO: [Synth 8-638] synthesizing module 'MB_FDRSE' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:842]
 	Parameter C_TARGET bound to: 1'b0 
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CE_INVERTED bound to: 1'b0 
@@ -310,105 +310,105 @@ INFO: [Synth 8-638] synthesizing module 'MB_FDRSE' [/nfs/ug/thesis/thesis0/pc/Gr
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
 	Parameter IS_S_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'Native' to cell 'FDRSE' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:898]
-INFO: [Synth 8-256] done synthesizing module 'MB_FDRSE' (7#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:842]
+INFO: [Synth 8-113] binding component instance 'Native' to cell 'FDRSE' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:898]
+INFO: [Synth 8-256] done synthesizing module 'MB_FDRSE' (7#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:842]
 	Parameter C_TARGET bound to: 1'b0 
 	Parameter C_DATA_BITS bound to: 8 - type: integer 
 	Parameter C_DEPTH bound to: 16 - type: integer 
 	Parameter C_USE_SRL16 bound to: yes - type: string 
-INFO: [Synth 8-3491] module 'SRL_FIFO' declared at '/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:1751' bound to instance 'RX_FIFO_I' of component 'SRL_FIFO' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:4267]
-INFO: [Synth 8-638] synthesizing module 'SRL_FIFO' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:1771]
+INFO: [Synth 8-3491] module 'SRL_FIFO' declared at '/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:1751' bound to instance 'RX_FIFO_I' of component 'SRL_FIFO' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:4267]
+INFO: [Synth 8-638] synthesizing module 'SRL_FIFO' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:1771]
 	Parameter C_TARGET bound to: 1'b0 
 	Parameter C_DATA_BITS bound to: 8 - type: integer 
 	Parameter C_DEPTH bound to: 16 - type: integer 
 	Parameter C_USE_SRL16 bound to: yes - type: string 
 	Parameter C_TARGET bound to: 1'b0 
-INFO: [Synth 8-3491] module 'MB_MUXCY_XORCY' declared at '/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:927' bound to instance 'MUXCY_L_I' of component 'MB_MUXCY_XORCY' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:1899]
-INFO: [Synth 8-638] synthesizing module 'MB_MUXCY_XORCY' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:943]
+INFO: [Synth 8-3491] module 'MB_MUXCY_XORCY' declared at '/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:927' bound to instance 'MUXCY_L_I' of component 'MB_MUXCY_XORCY' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:1899]
+INFO: [Synth 8-638] synthesizing module 'MB_MUXCY_XORCY' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:943]
 	Parameter C_TARGET bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'Native_I1' to cell 'MUXCY_L' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:954]
-INFO: [Synth 8-113] binding component instance 'Native_I2' to cell 'XORCY' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:961]
-INFO: [Synth 8-256] done synthesizing module 'MB_MUXCY_XORCY' (8#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:943]
-	Parameter C_TARGET bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-3491] module 'MB_FDRE' declared at '/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:433' bound to instance 'FDRE_I' of component 'MB_FDRE' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:1923]
-	Parameter C_TARGET bound to: 1'b0 
-INFO: [Synth 8-3491] module 'MB_MUXCY_XORCY' declared at '/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:927' bound to instance 'MUXCY_L_I' of component 'MB_MUXCY_XORCY' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:1899]
+INFO: [Synth 8-113] binding component instance 'Native_I1' to cell 'MUXCY_L' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:954]
+INFO: [Synth 8-113] binding component instance 'Native_I2' to cell 'XORCY' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:961]
+INFO: [Synth 8-256] done synthesizing module 'MB_MUXCY_XORCY' (8#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:943]
 	Parameter C_TARGET bound to: 1'b0 
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-3491] module 'MB_FDRE' declared at '/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:433' bound to instance 'FDRE_I' of component 'MB_FDRE' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:1923]
+INFO: [Synth 8-3491] module 'MB_FDRE' declared at '/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:433' bound to instance 'FDRE_I' of component 'MB_FDRE' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:1923]
 	Parameter C_TARGET bound to: 1'b0 
-INFO: [Synth 8-3491] module 'MB_MUXCY_XORCY' declared at '/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:927' bound to instance 'MUXCY_L_I' of component 'MB_MUXCY_XORCY' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:1899]
-	Parameter C_TARGET bound to: 1'b0 
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-3491] module 'MB_FDRE' declared at '/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:433' bound to instance 'FDRE_I' of component 'MB_FDRE' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:1923]
-	Parameter C_TARGET bound to: 1'b0 
-INFO: [Synth 8-3491] module 'MB_XORCY' declared at '/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:1023' bound to instance 'XORCY_I' of component 'MB_XORCY' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:1913]
-INFO: [Synth 8-638] synthesizing module 'MB_XORCY' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:1037]
-	Parameter C_TARGET bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'Native' to cell 'XORCY' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:1047]
-INFO: [Synth 8-256] done synthesizing module 'MB_XORCY' (9#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:1037]
+INFO: [Synth 8-3491] module 'MB_MUXCY_XORCY' declared at '/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:927' bound to instance 'MUXCY_L_I' of component 'MB_MUXCY_XORCY' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:1899]
 	Parameter C_TARGET bound to: 1'b0 
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-3491] module 'MB_FDRE' declared at '/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:433' bound to instance 'FDRE_I' of component 'MB_FDRE' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:1923]
+INFO: [Synth 8-3491] module 'MB_FDRE' declared at '/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:433' bound to instance 'FDRE_I' of component 'MB_FDRE' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:1923]
+	Parameter C_TARGET bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_MUXCY_XORCY' declared at '/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:927' bound to instance 'MUXCY_L_I' of component 'MB_MUXCY_XORCY' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:1899]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDRE' declared at '/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:433' bound to instance 'FDRE_I' of component 'MB_FDRE' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:1923]
+	Parameter C_TARGET bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_XORCY' declared at '/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:1023' bound to instance 'XORCY_I' of component 'MB_XORCY' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:1913]
+INFO: [Synth 8-638] synthesizing module 'MB_XORCY' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:1037]
+	Parameter C_TARGET bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'Native' to cell 'XORCY' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:1047]
+INFO: [Synth 8-256] done synthesizing module 'MB_XORCY' (9#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:1037]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDRE' declared at '/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:433' bound to instance 'FDRE_I' of component 'MB_FDRE' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:1923]
 	Parameter C_TARGET bound to: 1'b0 
 	Parameter C_STATIC bound to: 0 - type: bool 
 	Parameter C_USE_SRL16 bound to: yes - type: string 
 	Parameter INIT bound to: 16'b0000000000000000 
-INFO: [Synth 8-3491] module 'MB_SRL16E' declared at '/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:736' bound to instance 'SRL16E_I' of component 'MB_SRL16E' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:1940]
-INFO: [Synth 8-638] synthesizing module 'MB_SRL16E__parameterized7' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:759]
+INFO: [Synth 8-3491] module 'MB_SRL16E' declared at '/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:736' bound to instance 'SRL16E_I' of component 'MB_SRL16E' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:1940]
+INFO: [Synth 8-638] synthesizing module 'MB_SRL16E__parameterized7' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:759]
 	Parameter C_TARGET bound to: 1'b0 
 	Parameter C_STATIC bound to: 0 - type: bool 
 	Parameter C_USE_SRL16 bound to: yes - type: string 
 	Parameter INIT bound to: 16'b0000000000000000 
 	Parameter INIT bound to: 16'b0000000000000000 
 	Parameter IS_CLK_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'MB_SRL16E_I1' to cell 'SRL16E' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:763]
-INFO: [Synth 8-256] done synthesizing module 'MB_SRL16E__parameterized7' (9#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:759]
+INFO: [Synth 8-113] binding component instance 'MB_SRL16E_I1' to cell 'SRL16E' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:763]
+INFO: [Synth 8-256] done synthesizing module 'MB_SRL16E__parameterized7' (9#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:759]
 	Parameter C_TARGET bound to: 1'b0 
 	Parameter C_STATIC bound to: 0 - type: bool 
 	Parameter C_USE_SRL16 bound to: yes - type: string 
 	Parameter INIT bound to: 16'b0000000000000000 
-INFO: [Synth 8-3491] module 'MB_SRL16E' declared at '/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:736' bound to instance 'SRL16E_I' of component 'MB_SRL16E' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:1940]
+INFO: [Synth 8-3491] module 'MB_SRL16E' declared at '/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:736' bound to instance 'SRL16E_I' of component 'MB_SRL16E' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:1940]
 	Parameter C_TARGET bound to: 1'b0 
 	Parameter C_STATIC bound to: 0 - type: bool 
 	Parameter C_USE_SRL16 bound to: yes - type: string 
 	Parameter INIT bound to: 16'b0000000000000000 
-INFO: [Synth 8-3491] module 'MB_SRL16E' declared at '/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:736' bound to instance 'SRL16E_I' of component 'MB_SRL16E' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:1940]
+INFO: [Synth 8-3491] module 'MB_SRL16E' declared at '/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:736' bound to instance 'SRL16E_I' of component 'MB_SRL16E' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:1940]
 	Parameter C_TARGET bound to: 1'b0 
 	Parameter C_STATIC bound to: 0 - type: bool 
 	Parameter C_USE_SRL16 bound to: yes - type: string 
 	Parameter INIT bound to: 16'b0000000000000000 
-INFO: [Synth 8-3491] module 'MB_SRL16E' declared at '/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:736' bound to instance 'SRL16E_I' of component 'MB_SRL16E' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:1940]
+INFO: [Synth 8-3491] module 'MB_SRL16E' declared at '/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:736' bound to instance 'SRL16E_I' of component 'MB_SRL16E' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:1940]
 	Parameter C_TARGET bound to: 1'b0 
 	Parameter C_STATIC bound to: 0 - type: bool 
 	Parameter C_USE_SRL16 bound to: yes - type: string 
 	Parameter INIT bound to: 16'b0000000000000000 
-INFO: [Synth 8-3491] module 'MB_SRL16E' declared at '/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:736' bound to instance 'SRL16E_I' of component 'MB_SRL16E' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:1940]
+INFO: [Synth 8-3491] module 'MB_SRL16E' declared at '/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:736' bound to instance 'SRL16E_I' of component 'MB_SRL16E' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:1940]
 	Parameter C_TARGET bound to: 1'b0 
 	Parameter C_STATIC bound to: 0 - type: bool 
 	Parameter C_USE_SRL16 bound to: yes - type: string 
 	Parameter INIT bound to: 16'b0000000000000000 
-INFO: [Synth 8-3491] module 'MB_SRL16E' declared at '/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:736' bound to instance 'SRL16E_I' of component 'MB_SRL16E' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:1940]
+INFO: [Synth 8-3491] module 'MB_SRL16E' declared at '/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:736' bound to instance 'SRL16E_I' of component 'MB_SRL16E' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:1940]
 	Parameter C_TARGET bound to: 1'b0 
 	Parameter C_STATIC bound to: 0 - type: bool 
 	Parameter C_USE_SRL16 bound to: yes - type: string 
 	Parameter INIT bound to: 16'b0000000000000000 
-INFO: [Synth 8-3491] module 'MB_SRL16E' declared at '/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:736' bound to instance 'SRL16E_I' of component 'MB_SRL16E' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:1940]
+INFO: [Synth 8-3491] module 'MB_SRL16E' declared at '/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:736' bound to instance 'SRL16E_I' of component 'MB_SRL16E' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:1940]
 	Parameter C_TARGET bound to: 1'b0 
 	Parameter C_STATIC bound to: 0 - type: bool 
 	Parameter C_USE_SRL16 bound to: yes - type: string 
 	Parameter INIT bound to: 16'b0000000000000000 
-INFO: [Synth 8-3491] module 'MB_SRL16E' declared at '/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:736' bound to instance 'SRL16E_I' of component 'MB_SRL16E' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:1940]
-INFO: [Synth 8-256] done synthesizing module 'SRL_FIFO' (10#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:1771]
+INFO: [Synth 8-3491] module 'MB_SRL16E' declared at '/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:736' bound to instance 'SRL16E_I' of component 'MB_SRL16E' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:1940]
+INFO: [Synth 8-256] done synthesizing module 'SRL_FIFO' (10#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:1771]
 	Parameter C_TARGET bound to: 1'b0 
 	Parameter C_DATA_BITS bound to: 8 - type: integer 
 	Parameter C_DEPTH bound to: 16 - type: integer 
 	Parameter C_USE_SRL16 bound to: yes - type: string 
-INFO: [Synth 8-3491] module 'SRL_FIFO' declared at '/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:1751' bound to instance 'TX_FIFO_I' of component 'SRL_FIFO' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:4289]
-INFO: [Synth 8-256] done synthesizing module 'JTAG_CONTROL' (11#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:3117]
-INFO: [Synth 8-256] done synthesizing module 'MDM_Core' (12#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:6649]
-INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
+INFO: [Synth 8-3491] module 'SRL_FIFO' declared at '/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:1751' bound to instance 'TX_FIFO_I' of component 'SRL_FIFO' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:4289]
+INFO: [Synth 8-256] done synthesizing module 'JTAG_CONTROL' (11#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:3117]
+INFO: [Synth 8-256] done synthesizing module 'MDM_Core' (12#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:6649]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
 	Parameter C_S_AXI_MIN_SIZE bound to: 32'b00000000000000000000000000001111 
@@ -417,7 +417,7 @@ INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif' [/nfs/ug/thesis/thesis0/
 	Parameter C_ARD_ADDR_RANGE_ARRAY bound to: 128'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111 
 	Parameter C_ARD_NUM_CE_ARRAY bound to: 32'b00000000000000000000000000000100 
 	Parameter C_FAMILY bound to: kintexu - type: string 
-INFO: [Synth 8-638] synthesizing module 'slave_attachment' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
+INFO: [Synth 8-638] synthesizing module 'slave_attachment' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
 	Parameter C_ARD_ADDR_RANGE_ARRAY bound to: 128'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111 
 	Parameter C_ARD_NUM_CE_ARRAY bound to: 32'b00000000000000000000000000000100 
 	Parameter C_IPIF_ABUS_WIDTH bound to: 4 - type: integer 
@@ -426,44 +426,44 @@ INFO: [Synth 8-638] synthesizing module 'slave_attachment' [/nfs/ug/thesis/thesi
 	Parameter C_USE_WSTRB bound to: 0 - type: integer 
 	Parameter C_DPHASE_TIMEOUT bound to: 0 - type: integer 
 	Parameter C_FAMILY bound to: kintexu - type: string 
-INFO: [Synth 8-638] synthesizing module 'address_decoder' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
+INFO: [Synth 8-638] synthesizing module 'address_decoder' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
 	Parameter C_BUS_AWIDTH bound to: 4 - type: integer 
 	Parameter C_S_AXI_MIN_SIZE bound to: 15 - type: integer 
 	Parameter C_ARD_ADDR_RANGE_ARRAY bound to: 128'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111 
 	Parameter C_ARD_NUM_CE_ARRAY bound to: 32'b00000000000000000000000000000100 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-638] synthesizing module 'pselect_f' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 	Parameter C_AB bound to: 2 - type: integer 
 	Parameter C_AW bound to: 2 - type: integer 
 	Parameter C_BAR bound to: 2'b00 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'pselect_f' (13#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized0' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f' (13#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized0' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 	Parameter C_AB bound to: 2 - type: integer 
 	Parameter C_AW bound to: 2 - type: integer 
 	Parameter C_BAR bound to: 2'b01 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized0' (13#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized1' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized0' (13#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized1' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 	Parameter C_AB bound to: 2 - type: integer 
 	Parameter C_AW bound to: 2 - type: integer 
 	Parameter C_BAR bound to: 2'b10 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized1' (13#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized2' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized1' (13#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized2' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 	Parameter C_AB bound to: 2 - type: integer 
 	Parameter C_AW bound to: 2 - type: integer 
 	Parameter C_BAR bound to: 2'b11 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized2' (13#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-256] done synthesizing module 'address_decoder' (14#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
-INFO: [Synth 8-226] default block is never used [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2550]
-WARNING: [Synth 8-6014] Unused sequential element is_read_reg was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2447]
-WARNING: [Synth 8-6014] Unused sequential element is_write_reg was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2448]
-INFO: [Synth 8-256] done synthesizing module 'slave_attachment' (15#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif' (16#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
-INFO: [Synth 8-256] done synthesizing module 'MDM' (17#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:14013]
-INFO: [Synth 8-256] done synthesizing module 'shell_mdm_1_0' (18#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_mdm_1_0/synth/shell_mdm_1_0.vhd:94]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized2' (13#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'address_decoder' (14#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
+INFO: [Synth 8-226] default block is never used [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2550]
+WARNING: [Synth 8-6014] Unused sequential element is_read_reg was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2447]
+WARNING: [Synth 8-6014] Unused sequential element is_write_reg was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2448]
+INFO: [Synth 8-256] done synthesizing module 'slave_attachment' (15#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif' (16#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
+INFO: [Synth 8-256] done synthesizing module 'MDM' (17#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:14013]
+INFO: [Synth 8-256] done synthesizing module 'shell_mdm_1_0' (18#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_mdm_1_0/synth/shell_mdm_1_0.vhd:94]
 WARNING: [Synth 8-3331] design address_decoder has unconnected port Address_In_Erly[2]
 WARNING: [Synth 8-3331] design address_decoder has unconnected port Address_In_Erly[3]
 WARNING: [Synth 8-3331] design address_decoder has unconnected port Bus_RNW
@@ -566,7 +566,7 @@ WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Dbg_Trig_In_4[4
 WARNING: [Synth 8-3331] design JTAG_CONTROL has unconnected port Dbg_Trig_In_4[5]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1414.996 ; gain = 136.609 ; free physical = 3888 ; free virtual = 35155
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1413.004 ; gain = 135.609 ; free physical = 7686 ; free virtual = 35136
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -579,10 +579,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1414.996 ; gain = 136.609 ; free physical = 3889 ; free virtual = 35156
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1413.004 ; gain = 135.609 ; free physical = 7679 ; free virtual = 35129
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1414.996 ; gain = 136.609 ; free physical = 3889 ; free virtual = 35156
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1413.004 ; gain = 135.609 ; free physical = 7679 ; free virtual = 35129
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 18 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -591,16 +591,16 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_mdm_1_0/shell_mdm_1_0_ooc_trace.xdc] for cell 'U0'
-Finished Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_mdm_1_0/shell_mdm_1_0_ooc_trace.xdc] for cell 'U0'
-Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_mdm_1_0/shell_mdm_1_0_ooc.xdc] for cell 'U0'
-Finished Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_mdm_1_0/shell_mdm_1_0_ooc.xdc] for cell 'U0'
-Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_mdm_1_0/shell_mdm_1_0.xdc] for cell 'U0'
-Finished Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_mdm_1_0/shell_mdm_1_0.xdc] for cell 'U0'
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_mdm_1_0/shell_mdm_1_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/shell_mdm_1_0_propImpl.xdc].
+Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_mdm_1_0/shell_mdm_1_0_ooc_trace.xdc] for cell 'U0'
+Finished Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_mdm_1_0/shell_mdm_1_0_ooc_trace.xdc] for cell 'U0'
+Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_mdm_1_0/shell_mdm_1_0_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_mdm_1_0/shell_mdm_1_0_ooc.xdc] for cell 'U0'
+Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_mdm_1_0/shell_mdm_1_0.xdc] for cell 'U0'
+Finished Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_mdm_1_0/shell_mdm_1_0.xdc] for cell 'U0'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_mdm_1_0/shell_mdm_1_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/shell_mdm_1_0_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/shell_mdm_1_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.runs/shell_mdm_1_0_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.runs/shell_mdm_1_0_synth_1/dont_touch.xdc]
+Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.runs/shell_mdm_1_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.runs/shell_mdm_1_0_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
@@ -611,36 +611,36 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   FDRSE => FDRSE (FDRE, LUT4, VCC): 1 instances
   MUXCY_L => MUXCY: 6 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2107.453 ; gain = 0.000 ; free physical = 2176 ; free virtual = 33553
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2106.469 ; gain = 0.000 ; free physical = 6008 ; free virtual = 33568
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:25 ; elapsed = 00:00:36 . Memory (MB): peak = 2107.453 ; gain = 829.066 ; free physical = 2253 ; free virtual = 33529
+Finished Constraint Validation : Time (s): cpu = 00:00:25 ; elapsed = 00:00:35 . Memory (MB): peak = 2106.469 ; gain = 829.074 ; free physical = 6084 ; free virtual = 33545
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xcku115-flva1517-2-e
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:25 ; elapsed = 00:00:36 . Memory (MB): peak = 2107.453 ; gain = 829.066 ; free physical = 2253 ; free virtual = 33529
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:25 ; elapsed = 00:00:35 . Memory (MB): peak = 2106.469 ; gain = 829.074 ; free physical = 6084 ; free virtual = 33545
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-WARNING: set_property USER_SLR_ASSIGNMENT could not find object (constraint file  /nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_mdm_1_0/shell_mdm_1_0.xdc, line 58).
-WARNING: set_property USER_SLR_ASSIGNMENT could not find object (constraint file  /nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_mdm_1_0/shell_mdm_1_0.xdc, line 58).
-WARNING: set_property USER_SLR_ASSIGNMENT could not find object (constraint file  /nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_mdm_1_0/shell_mdm_1_0.xdc, line 58).
-WARNING: set_property USER_SLR_ASSIGNMENT could not find object (constraint file  /nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_mdm_1_0/shell_mdm_1_0.xdc, line 58).
-WARNING: set_property USER_SLR_ASSIGNMENT could not find object (constraint file  /nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_mdm_1_0/shell_mdm_1_0.xdc, line 58).
-WARNING: set_property USER_SLR_ASSIGNMENT could not find object (constraint file  /nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_mdm_1_0/shell_mdm_1_0.xdc, line 58).
-WARNING: set_property USER_SLR_ASSIGNMENT could not find object (constraint file  /nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_mdm_1_0/shell_mdm_1_0.xdc, line 58).
-WARNING: set_property USER_SLR_ASSIGNMENT could not find object (constraint file  /nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_mdm_1_0/shell_mdm_1_0.xdc, line 58).
-WARNING: set_property USER_SLR_ASSIGNMENT could not find object (constraint file  /nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_mdm_1_0/shell_mdm_1_0.xdc, line 58).
-WARNING: set_property USER_SLR_ASSIGNMENT could not find object (constraint file  /nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_mdm_1_0/shell_mdm_1_0.xdc, line 58).
-WARNING: set_property USER_SLR_ASSIGNMENT could not find object (constraint file  /nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_mdm_1_0/shell_mdm_1_0.xdc, line 58).
-WARNING: set_property USER_SLR_ASSIGNMENT could not find object (constraint file  /nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_mdm_1_0/shell_mdm_1_0.xdc, line 58).
-WARNING: set_property USER_SLR_ASSIGNMENT could not find object (constraint file  /nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_mdm_1_0/shell_mdm_1_0.xdc, line 58).
-Applied set_property DONT_TOUCH = true for U0. (constraint file  /nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.runs/shell_mdm_1_0_synth_1/dont_touch.xdc, line 9).
+WARNING: set_property USER_SLR_ASSIGNMENT could not find object (constraint file  /nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_mdm_1_0/shell_mdm_1_0.xdc, line 58).
+WARNING: set_property USER_SLR_ASSIGNMENT could not find object (constraint file  /nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_mdm_1_0/shell_mdm_1_0.xdc, line 58).
+WARNING: set_property USER_SLR_ASSIGNMENT could not find object (constraint file  /nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_mdm_1_0/shell_mdm_1_0.xdc, line 58).
+WARNING: set_property USER_SLR_ASSIGNMENT could not find object (constraint file  /nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_mdm_1_0/shell_mdm_1_0.xdc, line 58).
+WARNING: set_property USER_SLR_ASSIGNMENT could not find object (constraint file  /nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_mdm_1_0/shell_mdm_1_0.xdc, line 58).
+WARNING: set_property USER_SLR_ASSIGNMENT could not find object (constraint file  /nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_mdm_1_0/shell_mdm_1_0.xdc, line 58).
+WARNING: set_property USER_SLR_ASSIGNMENT could not find object (constraint file  /nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_mdm_1_0/shell_mdm_1_0.xdc, line 58).
+WARNING: set_property USER_SLR_ASSIGNMENT could not find object (constraint file  /nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_mdm_1_0/shell_mdm_1_0.xdc, line 58).
+WARNING: set_property USER_SLR_ASSIGNMENT could not find object (constraint file  /nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_mdm_1_0/shell_mdm_1_0.xdc, line 58).
+WARNING: set_property USER_SLR_ASSIGNMENT could not find object (constraint file  /nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_mdm_1_0/shell_mdm_1_0.xdc, line 58).
+WARNING: set_property USER_SLR_ASSIGNMENT could not find object (constraint file  /nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_mdm_1_0/shell_mdm_1_0.xdc, line 58).
+WARNING: set_property USER_SLR_ASSIGNMENT could not find object (constraint file  /nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_mdm_1_0/shell_mdm_1_0.xdc, line 58).
+WARNING: set_property USER_SLR_ASSIGNMENT could not find object (constraint file  /nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_mdm_1_0/shell_mdm_1_0.xdc, line 58).
+Applied set_property DONT_TOUCH = true for U0. (constraint file  /nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.runs/shell_mdm_1_0_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:36 . Memory (MB): peak = 2107.453 ; gain = 829.066 ; free physical = 2288 ; free virtual = 33564
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:36 . Memory (MB): peak = 2106.469 ; gain = 829.074 ; free physical = 6068 ; free virtual = 33529
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5544] ROM "buffer_Full" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "buffer_Empty" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
@@ -666,7 +666,7 @@ INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address si
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'slave_attachment'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:26 ; elapsed = 00:00:37 . Memory (MB): peak = 2107.453 ; gain = 829.066 ; free physical = 2219 ; free virtual = 33496
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:26 ; elapsed = 00:00:36 . Memory (MB): peak = 2106.469 ; gain = 829.074 ; free physical = 6081 ; free virtual = 33543
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -809,8 +809,8 @@ Warning: Parallel synthesis criteria is not met
 INFO: [Synth 8-5546] ROM "mb_data_overrun" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "fifo_Write" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "fifo_Read" won't be mapped to RAM because it is too sparse
-WARNING: [Synth 8-6014] Unused sequential element MDM_Core_I1/JTAG_CONTROL_I/Use_Serial_Unified_Completion.clear_overrun_reg was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:3888]
-WARNING: [Synth 8-6014] Unused sequential element Use_AXI_IPIF.AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[0].cs_out_i_reg was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2004]
+WARNING: [Synth 8-6014] Unused sequential element MDM_Core_I1/JTAG_CONTROL_I/Use_Serial_Unified_Completion.clear_overrun_reg was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/351e/hdl/mdm_v3_2_vh_rfs.vhd:3888]
+WARNING: [Synth 8-6014] Unused sequential element Use_AXI_IPIF.AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[0].cs_out_i_reg was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/cced/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2004]
 INFO: [Synth 8-5546] ROM "MDM_Core_I1/JTAG_CONTROL_I/fifo_Write" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "MDM_Core_I1/JTAG_CONTROL_I/fifo_Read" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\MDM_Core_I1/Use_BSCAN.Config_Reg_reg[31] )
@@ -822,7 +822,7 @@ WARNING: [Synth 8-3332] Sequential element (Use_AXI_IPIF.AXI_LITE_IPIF_I/I_SLAVE
 WARNING: [Synth 8-3332] Sequential element (Use_AXI_IPIF.AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_reg[1]) is unused and will be removed from module MDM.
 WARNING: [Synth 8-3332] Sequential element (Use_AXI_IPIF.AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_reg[0]) is unused and will be removed from module MDM.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:38 . Memory (MB): peak = 2107.453 ; gain = 829.066 ; free physical = 2222 ; free virtual = 33504
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:38 . Memory (MB): peak = 2106.469 ; gain = 829.074 ; free physical = 6040 ; free virtual = 33503
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -834,13 +834,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:37 ; elapsed = 00:01:04 . Memory (MB): peak = 2252.891 ; gain = 974.504 ; free physical = 2344 ; free virtual = 33630
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:37 ; elapsed = 00:01:03 . Memory (MB): peak = 2251.906 ; gain = 974.512 ; free physical = 7430 ; free virtual = 34890
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:37 ; elapsed = 00:01:04 . Memory (MB): peak = 2277.922 ; gain = 999.535 ; free physical = 2339 ; free virtual = 33625
+Finished Timing Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:01:04 . Memory (MB): peak = 2276.938 ; gain = 999.543 ; free physical = 7419 ; free virtual = 34880
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -852,7 +852,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:38 ; elapsed = 00:01:05 . Memory (MB): peak = 2285.930 ; gain = 1007.543 ; free physical = 2341 ; free virtual = 33627
+Finished Technology Mapping : Time (s): cpu = 00:00:38 ; elapsed = 00:01:04 . Memory (MB): peak = 2284.945 ; gain = 1007.551 ; free physical = 7415 ; free virtual = 34876
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -876,7 +876,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:38 ; elapsed = 00:01:05 . Memory (MB): peak = 2285.930 ; gain = 1007.543 ; free physical = 2307 ; free virtual = 33593
+Finished IO Insertion : Time (s): cpu = 00:00:38 ; elapsed = 00:01:04 . Memory (MB): peak = 2284.945 ; gain = 1007.551 ; free physical = 7401 ; free virtual = 34862
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -889,7 +889,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:38 ; elapsed = 00:01:05 . Memory (MB): peak = 2285.930 ; gain = 1007.543 ; free physical = 2307 ; free virtual = 33593
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:38 ; elapsed = 00:01:04 . Memory (MB): peak = 2284.945 ; gain = 1007.551 ; free physical = 7401 ; free virtual = 34862
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -901,25 +901,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:38 ; elapsed = 00:01:05 . Memory (MB): peak = 2285.930 ; gain = 1007.543 ; free physical = 2306 ; free virtual = 33592
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:38 ; elapsed = 00:01:04 . Memory (MB): peak = 2284.945 ; gain = 1007.551 ; free physical = 7400 ; free virtual = 34861
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:38 ; elapsed = 00:01:05 . Memory (MB): peak = 2285.930 ; gain = 1007.543 ; free physical = 2306 ; free virtual = 33592
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:39 ; elapsed = 00:01:04 . Memory (MB): peak = 2284.945 ; gain = 1007.551 ; free physical = 7400 ; free virtual = 34861
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:38 ; elapsed = 00:01:05 . Memory (MB): peak = 2285.930 ; gain = 1007.543 ; free physical = 2306 ; free virtual = 33592
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:39 ; elapsed = 00:01:04 . Memory (MB): peak = 2284.945 ; gain = 1007.551 ; free physical = 7400 ; free virtual = 34861
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:38 ; elapsed = 00:01:05 . Memory (MB): peak = 2285.930 ; gain = 1007.543 ; free physical = 2306 ; free virtual = 33592
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:39 ; elapsed = 00:01:04 . Memory (MB): peak = 2284.945 ; gain = 1007.551 ; free physical = 7400 ; free virtual = 34861
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -1033,11 +1033,11 @@ Report Instance Areas:
 |53    |    \Use_E2.BSCAN_I                                                       |MB_BSCANE2                   |    10|
 +------+--------------------------------------------------------------------------+-----------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:38 ; elapsed = 00:01:05 . Memory (MB): peak = 2285.930 ; gain = 1007.543 ; free physical = 2306 ; free virtual = 33592
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:39 ; elapsed = 00:01:04 . Memory (MB): peak = 2284.945 ; gain = 1007.551 ; free physical = 7400 ; free virtual = 34861
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 4294 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:30 ; elapsed = 00:00:47 . Memory (MB): peak = 2285.930 ; gain = 315.086 ; free physical = 2346 ; free virtual = 33632
-Synthesis Optimization Complete : Time (s): cpu = 00:00:38 ; elapsed = 00:01:05 . Memory (MB): peak = 2285.938 ; gain = 1007.543 ; free physical = 2356 ; free virtual = 33641
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:30 ; elapsed = 00:00:47 . Memory (MB): peak = 2284.945 ; gain = 314.086 ; free physical = 7420 ; free virtual = 34881
+Synthesis Optimization Complete : Time (s): cpu = 00:00:39 ; elapsed = 00:01:04 . Memory (MB): peak = 2284.953 ; gain = 1007.551 ; free physical = 7430 ; free virtual = 34891
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 17 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -1053,11 +1053,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 140 Infos, 109 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:40 ; elapsed = 00:01:07 . Memory (MB): peak = 2342.578 ; gain = 1090.039 ; free physical = 2343 ; free virtual = 33628
-INFO: [Common 17-1381] The checkpoint '/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.runs/shell_mdm_1_0_synth_1/shell_mdm_1_0.dcp' has been generated.
-INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP /nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_mdm_1_0/shell_mdm_1_0.xci
+synth_design: Time (s): cpu = 00:00:40 ; elapsed = 00:01:06 . Memory (MB): peak = 2341.594 ; gain = 1090.047 ; free physical = 7342 ; free virtual = 34803
+INFO: [Common 17-1381] The checkpoint '/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.runs/shell_mdm_1_0_synth_1/shell_mdm_1_0.dcp' has been generated.
+INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP /nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_mdm_1_0/shell_mdm_1_0.xci
 INFO: [Coretcl 2-1174] Renamed 52 cell refs.
-INFO: [Common 17-1381] The checkpoint '/nfs/ug/thesis/thesis0/pc/Graham/galapagos/shells/projects/adm-8k5/adm-8k5.runs/shell_mdm_1_0_synth_1/shell_mdm_1_0.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint '/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.runs/shell_mdm_1_0_synth_1/shell_mdm_1_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file shell_mdm_1_0_utilization_synth.rpt -pb shell_mdm_1_0_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00.52 ; elapsed = 00:00:00.57 . Memory (MB): peak = 2366.590 ; gain = 0.000 ; free physical = 3444 ; free virtual = 34735
-INFO: [Common 17-206] Exiting Vivado at Thu May  3 11:58:10 2018...
+report_utilization: Time (s): cpu = 00:00:00.49 ; elapsed = 00:00:00.56 . Memory (MB): peak = 2365.605 ; gain = 0.000 ; free physical = 7245 ; free virtual = 34708
+INFO: [Common 17-206] Exiting Vivado at Fri May 11 11:49:53 2018...

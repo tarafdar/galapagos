@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
-//Date        : Thu May  3 11:52:55 2018
+//Date        : Fri May 11 11:44:33 2018
 //Host        : ug238 running 64-bit Debian GNU/Linux 9.4 (stretch)
 //Command     : generate_target shell_wrapper.bd
 //Design      : shell_wrapper
@@ -21,7 +21,6 @@ module shell_wrapper
     M_AXI_araddr,
     M_AXI_arburst,
     M_AXI_arcache,
-    M_AXI_arid,
     M_AXI_arlen,
     M_AXI_arlock,
     M_AXI_arprot,
@@ -33,7 +32,6 @@ module shell_wrapper
     M_AXI_awaddr,
     M_AXI_awburst,
     M_AXI_awcache,
-    M_AXI_awid,
     M_AXI_awlen,
     M_AXI_awlock,
     M_AXI_awprot,
@@ -42,12 +40,10 @@ module shell_wrapper
     M_AXI_awregion,
     M_AXI_awsize,
     M_AXI_awvalid,
-    M_AXI_bid,
     M_AXI_bready,
     M_AXI_bresp,
     M_AXI_bvalid,
     M_AXI_rdata,
-    M_AXI_rid,
     M_AXI_rlast,
     M_AXI_rready,
     M_AXI_rresp,
@@ -62,6 +58,59 @@ module shell_wrapper
     S_AXIS_tlast,
     S_AXIS_tready,
     S_AXIS_tvalid,
+    S_AXI_MEM_araddr,
+    S_AXI_MEM_arburst,
+    S_AXI_MEM_arcache,
+    S_AXI_MEM_arid,
+    S_AXI_MEM_arlen,
+    S_AXI_MEM_arlock,
+    S_AXI_MEM_arprot,
+    S_AXI_MEM_arqos,
+    S_AXI_MEM_arready,
+    S_AXI_MEM_arsize,
+    S_AXI_MEM_arvalid,
+    S_AXI_MEM_awaddr,
+    S_AXI_MEM_awburst,
+    S_AXI_MEM_awcache,
+    S_AXI_MEM_awid,
+    S_AXI_MEM_awlen,
+    S_AXI_MEM_awlock,
+    S_AXI_MEM_awprot,
+    S_AXI_MEM_awqos,
+    S_AXI_MEM_awready,
+    S_AXI_MEM_awsize,
+    S_AXI_MEM_awvalid,
+    S_AXI_MEM_bid,
+    S_AXI_MEM_bready,
+    S_AXI_MEM_bresp,
+    S_AXI_MEM_bvalid,
+    S_AXI_MEM_rdata,
+    S_AXI_MEM_rid,
+    S_AXI_MEM_rlast,
+    S_AXI_MEM_rready,
+    S_AXI_MEM_rresp,
+    S_AXI_MEM_rvalid,
+    S_AXI_MEM_wdata,
+    S_AXI_MEM_wlast,
+    S_AXI_MEM_wready,
+    S_AXI_MEM_wstrb,
+    S_AXI_MEM_wvalid,
+    c0_ddr4_act_n_0,
+    c0_ddr4_adr_0,
+    c0_ddr4_ba_0,
+    c0_ddr4_bg_0,
+    c0_ddr4_ck_c_0,
+    c0_ddr4_ck_t_0,
+    c0_ddr4_cke_0,
+    c0_ddr4_cs_n_0,
+    c0_ddr4_dg_0,
+    c0_ddr4_dm_dbi_n_0,
+    c0_ddr4_dqs_c_0,
+    c0_ddr4_dqs_t_0,
+    c0_ddr4_odt_0,
+    c0_ddr4_reset_n_0,
+    c0_sys_clk_n_0,
+    c0_sys_clk_p_0,
     diff_clock_rtl_clk_n,
     diff_clock_rtl_clk_p,
     pcie_7x_mgt_rtl_rxn,
@@ -88,7 +137,6 @@ module shell_wrapper
   output [63:0]M_AXI_araddr;
   output [1:0]M_AXI_arburst;
   output [3:0]M_AXI_arcache;
-  output [4:0]M_AXI_arid;
   output [7:0]M_AXI_arlen;
   output [0:0]M_AXI_arlock;
   output [2:0]M_AXI_arprot;
@@ -100,7 +148,6 @@ module shell_wrapper
   output [63:0]M_AXI_awaddr;
   output [1:0]M_AXI_awburst;
   output [3:0]M_AXI_awcache;
-  output [4:0]M_AXI_awid;
   output [7:0]M_AXI_awlen;
   output [0:0]M_AXI_awlock;
   output [2:0]M_AXI_awprot;
@@ -109,12 +156,10 @@ module shell_wrapper
   output [3:0]M_AXI_awregion;
   output [2:0]M_AXI_awsize;
   output M_AXI_awvalid;
-  input [4:0]M_AXI_bid;
   output M_AXI_bready;
   input [1:0]M_AXI_bresp;
   input M_AXI_bvalid;
   input [255:0]M_AXI_rdata;
-  input [4:0]M_AXI_rid;
   input M_AXI_rlast;
   output M_AXI_rready;
   input [1:0]M_AXI_rresp;
@@ -129,6 +174,59 @@ module shell_wrapper
   input [0:0]S_AXIS_tlast;
   output S_AXIS_tready;
   input S_AXIS_tvalid;
+  input [63:0]S_AXI_MEM_araddr;
+  input [1:0]S_AXI_MEM_arburst;
+  input [3:0]S_AXI_MEM_arcache;
+  input [1:0]S_AXI_MEM_arid;
+  input [7:0]S_AXI_MEM_arlen;
+  input [0:0]S_AXI_MEM_arlock;
+  input [2:0]S_AXI_MEM_arprot;
+  input [3:0]S_AXI_MEM_arqos;
+  output [0:0]S_AXI_MEM_arready;
+  input [2:0]S_AXI_MEM_arsize;
+  input [0:0]S_AXI_MEM_arvalid;
+  input [63:0]S_AXI_MEM_awaddr;
+  input [1:0]S_AXI_MEM_awburst;
+  input [3:0]S_AXI_MEM_awcache;
+  input [1:0]S_AXI_MEM_awid;
+  input [7:0]S_AXI_MEM_awlen;
+  input [0:0]S_AXI_MEM_awlock;
+  input [2:0]S_AXI_MEM_awprot;
+  input [3:0]S_AXI_MEM_awqos;
+  output [0:0]S_AXI_MEM_awready;
+  input [2:0]S_AXI_MEM_awsize;
+  input [0:0]S_AXI_MEM_awvalid;
+  output [1:0]S_AXI_MEM_bid;
+  input [0:0]S_AXI_MEM_bready;
+  output [1:0]S_AXI_MEM_bresp;
+  output [0:0]S_AXI_MEM_bvalid;
+  output [511:0]S_AXI_MEM_rdata;
+  output [1:0]S_AXI_MEM_rid;
+  output [0:0]S_AXI_MEM_rlast;
+  input [0:0]S_AXI_MEM_rready;
+  output [1:0]S_AXI_MEM_rresp;
+  output [0:0]S_AXI_MEM_rvalid;
+  input [511:0]S_AXI_MEM_wdata;
+  input [0:0]S_AXI_MEM_wlast;
+  output [0:0]S_AXI_MEM_wready;
+  input [63:0]S_AXI_MEM_wstrb;
+  input [0:0]S_AXI_MEM_wvalid;
+  output c0_ddr4_act_n_0;
+  output [16:0]c0_ddr4_adr_0;
+  output [1:0]c0_ddr4_ba_0;
+  output [1:0]c0_ddr4_bg_0;
+  output [0:0]c0_ddr4_ck_c_0;
+  output [0:0]c0_ddr4_ck_t_0;
+  output [0:0]c0_ddr4_cke_0;
+  output [0:0]c0_ddr4_cs_n_0;
+  inout [63:0]c0_ddr4_dg_0;
+  inout [7:0]c0_ddr4_dm_dbi_n_0;
+  inout [7:0]c0_ddr4_dqs_c_0;
+  inout [7:0]c0_ddr4_dqs_t_0;
+  output [0:0]c0_ddr4_odt_0;
+  output c0_ddr4_reset_n_0;
+  input c0_sys_clk_n_0;
+  input c0_sys_clk_p_0;
   input [0:0]diff_clock_rtl_clk_n;
   input [0:0]diff_clock_rtl_clk_p;
   input [7:0]pcie_7x_mgt_rtl_rxn;
@@ -156,7 +254,6 @@ module shell_wrapper
   wire [63:0]M_AXI_araddr;
   wire [1:0]M_AXI_arburst;
   wire [3:0]M_AXI_arcache;
-  wire [4:0]M_AXI_arid;
   wire [7:0]M_AXI_arlen;
   wire [0:0]M_AXI_arlock;
   wire [2:0]M_AXI_arprot;
@@ -168,7 +265,6 @@ module shell_wrapper
   wire [63:0]M_AXI_awaddr;
   wire [1:0]M_AXI_awburst;
   wire [3:0]M_AXI_awcache;
-  wire [4:0]M_AXI_awid;
   wire [7:0]M_AXI_awlen;
   wire [0:0]M_AXI_awlock;
   wire [2:0]M_AXI_awprot;
@@ -177,12 +273,10 @@ module shell_wrapper
   wire [3:0]M_AXI_awregion;
   wire [2:0]M_AXI_awsize;
   wire M_AXI_awvalid;
-  wire [4:0]M_AXI_bid;
   wire M_AXI_bready;
   wire [1:0]M_AXI_bresp;
   wire M_AXI_bvalid;
   wire [255:0]M_AXI_rdata;
-  wire [4:0]M_AXI_rid;
   wire M_AXI_rlast;
   wire M_AXI_rready;
   wire [1:0]M_AXI_rresp;
@@ -197,6 +291,59 @@ module shell_wrapper
   wire [0:0]S_AXIS_tlast;
   wire S_AXIS_tready;
   wire S_AXIS_tvalid;
+  wire [63:0]S_AXI_MEM_araddr;
+  wire [1:0]S_AXI_MEM_arburst;
+  wire [3:0]S_AXI_MEM_arcache;
+  wire [1:0]S_AXI_MEM_arid;
+  wire [7:0]S_AXI_MEM_arlen;
+  wire [0:0]S_AXI_MEM_arlock;
+  wire [2:0]S_AXI_MEM_arprot;
+  wire [3:0]S_AXI_MEM_arqos;
+  wire [0:0]S_AXI_MEM_arready;
+  wire [2:0]S_AXI_MEM_arsize;
+  wire [0:0]S_AXI_MEM_arvalid;
+  wire [63:0]S_AXI_MEM_awaddr;
+  wire [1:0]S_AXI_MEM_awburst;
+  wire [3:0]S_AXI_MEM_awcache;
+  wire [1:0]S_AXI_MEM_awid;
+  wire [7:0]S_AXI_MEM_awlen;
+  wire [0:0]S_AXI_MEM_awlock;
+  wire [2:0]S_AXI_MEM_awprot;
+  wire [3:0]S_AXI_MEM_awqos;
+  wire [0:0]S_AXI_MEM_awready;
+  wire [2:0]S_AXI_MEM_awsize;
+  wire [0:0]S_AXI_MEM_awvalid;
+  wire [1:0]S_AXI_MEM_bid;
+  wire [0:0]S_AXI_MEM_bready;
+  wire [1:0]S_AXI_MEM_bresp;
+  wire [0:0]S_AXI_MEM_bvalid;
+  wire [511:0]S_AXI_MEM_rdata;
+  wire [1:0]S_AXI_MEM_rid;
+  wire [0:0]S_AXI_MEM_rlast;
+  wire [0:0]S_AXI_MEM_rready;
+  wire [1:0]S_AXI_MEM_rresp;
+  wire [0:0]S_AXI_MEM_rvalid;
+  wire [511:0]S_AXI_MEM_wdata;
+  wire [0:0]S_AXI_MEM_wlast;
+  wire [0:0]S_AXI_MEM_wready;
+  wire [63:0]S_AXI_MEM_wstrb;
+  wire [0:0]S_AXI_MEM_wvalid;
+  wire c0_ddr4_act_n_0;
+  wire [16:0]c0_ddr4_adr_0;
+  wire [1:0]c0_ddr4_ba_0;
+  wire [1:0]c0_ddr4_bg_0;
+  wire [0:0]c0_ddr4_ck_c_0;
+  wire [0:0]c0_ddr4_ck_t_0;
+  wire [0:0]c0_ddr4_cke_0;
+  wire [0:0]c0_ddr4_cs_n_0;
+  wire [63:0]c0_ddr4_dg_0;
+  wire [7:0]c0_ddr4_dm_dbi_n_0;
+  wire [7:0]c0_ddr4_dqs_c_0;
+  wire [7:0]c0_ddr4_dqs_t_0;
+  wire [0:0]c0_ddr4_odt_0;
+  wire c0_ddr4_reset_n_0;
+  wire c0_sys_clk_n_0;
+  wire c0_sys_clk_p_0;
   wire [0:0]diff_clock_rtl_clk_n;
   wire [0:0]diff_clock_rtl_clk_p;
   wire [7:0]pcie_7x_mgt_rtl_rxn;
@@ -225,7 +372,6 @@ module shell_wrapper
         .M_AXI_araddr(M_AXI_araddr),
         .M_AXI_arburst(M_AXI_arburst),
         .M_AXI_arcache(M_AXI_arcache),
-        .M_AXI_arid(M_AXI_arid),
         .M_AXI_arlen(M_AXI_arlen),
         .M_AXI_arlock(M_AXI_arlock),
         .M_AXI_arprot(M_AXI_arprot),
@@ -237,7 +383,6 @@ module shell_wrapper
         .M_AXI_awaddr(M_AXI_awaddr),
         .M_AXI_awburst(M_AXI_awburst),
         .M_AXI_awcache(M_AXI_awcache),
-        .M_AXI_awid(M_AXI_awid),
         .M_AXI_awlen(M_AXI_awlen),
         .M_AXI_awlock(M_AXI_awlock),
         .M_AXI_awprot(M_AXI_awprot),
@@ -246,12 +391,10 @@ module shell_wrapper
         .M_AXI_awregion(M_AXI_awregion),
         .M_AXI_awsize(M_AXI_awsize),
         .M_AXI_awvalid(M_AXI_awvalid),
-        .M_AXI_bid(M_AXI_bid),
         .M_AXI_bready(M_AXI_bready),
         .M_AXI_bresp(M_AXI_bresp),
         .M_AXI_bvalid(M_AXI_bvalid),
         .M_AXI_rdata(M_AXI_rdata),
-        .M_AXI_rid(M_AXI_rid),
         .M_AXI_rlast(M_AXI_rlast),
         .M_AXI_rready(M_AXI_rready),
         .M_AXI_rresp(M_AXI_rresp),
@@ -266,6 +409,59 @@ module shell_wrapper
         .S_AXIS_tlast(S_AXIS_tlast),
         .S_AXIS_tready(S_AXIS_tready),
         .S_AXIS_tvalid(S_AXIS_tvalid),
+        .S_AXI_MEM_araddr(S_AXI_MEM_araddr),
+        .S_AXI_MEM_arburst(S_AXI_MEM_arburst),
+        .S_AXI_MEM_arcache(S_AXI_MEM_arcache),
+        .S_AXI_MEM_arid(S_AXI_MEM_arid),
+        .S_AXI_MEM_arlen(S_AXI_MEM_arlen),
+        .S_AXI_MEM_arlock(S_AXI_MEM_arlock),
+        .S_AXI_MEM_arprot(S_AXI_MEM_arprot),
+        .S_AXI_MEM_arqos(S_AXI_MEM_arqos),
+        .S_AXI_MEM_arready(S_AXI_MEM_arready),
+        .S_AXI_MEM_arsize(S_AXI_MEM_arsize),
+        .S_AXI_MEM_arvalid(S_AXI_MEM_arvalid),
+        .S_AXI_MEM_awaddr(S_AXI_MEM_awaddr),
+        .S_AXI_MEM_awburst(S_AXI_MEM_awburst),
+        .S_AXI_MEM_awcache(S_AXI_MEM_awcache),
+        .S_AXI_MEM_awid(S_AXI_MEM_awid),
+        .S_AXI_MEM_awlen(S_AXI_MEM_awlen),
+        .S_AXI_MEM_awlock(S_AXI_MEM_awlock),
+        .S_AXI_MEM_awprot(S_AXI_MEM_awprot),
+        .S_AXI_MEM_awqos(S_AXI_MEM_awqos),
+        .S_AXI_MEM_awready(S_AXI_MEM_awready),
+        .S_AXI_MEM_awsize(S_AXI_MEM_awsize),
+        .S_AXI_MEM_awvalid(S_AXI_MEM_awvalid),
+        .S_AXI_MEM_bid(S_AXI_MEM_bid),
+        .S_AXI_MEM_bready(S_AXI_MEM_bready),
+        .S_AXI_MEM_bresp(S_AXI_MEM_bresp),
+        .S_AXI_MEM_bvalid(S_AXI_MEM_bvalid),
+        .S_AXI_MEM_rdata(S_AXI_MEM_rdata),
+        .S_AXI_MEM_rid(S_AXI_MEM_rid),
+        .S_AXI_MEM_rlast(S_AXI_MEM_rlast),
+        .S_AXI_MEM_rready(S_AXI_MEM_rready),
+        .S_AXI_MEM_rresp(S_AXI_MEM_rresp),
+        .S_AXI_MEM_rvalid(S_AXI_MEM_rvalid),
+        .S_AXI_MEM_wdata(S_AXI_MEM_wdata),
+        .S_AXI_MEM_wlast(S_AXI_MEM_wlast),
+        .S_AXI_MEM_wready(S_AXI_MEM_wready),
+        .S_AXI_MEM_wstrb(S_AXI_MEM_wstrb),
+        .S_AXI_MEM_wvalid(S_AXI_MEM_wvalid),
+        .c0_ddr4_act_n_0(c0_ddr4_act_n_0),
+        .c0_ddr4_adr_0(c0_ddr4_adr_0),
+        .c0_ddr4_ba_0(c0_ddr4_ba_0),
+        .c0_ddr4_bg_0(c0_ddr4_bg_0),
+        .c0_ddr4_ck_c_0(c0_ddr4_ck_c_0),
+        .c0_ddr4_ck_t_0(c0_ddr4_ck_t_0),
+        .c0_ddr4_cke_0(c0_ddr4_cke_0),
+        .c0_ddr4_cs_n_0(c0_ddr4_cs_n_0),
+        .c0_ddr4_dg_0(c0_ddr4_dg_0),
+        .c0_ddr4_dm_dbi_n_0(c0_ddr4_dm_dbi_n_0),
+        .c0_ddr4_dqs_c_0(c0_ddr4_dqs_c_0),
+        .c0_ddr4_dqs_t_0(c0_ddr4_dqs_t_0),
+        .c0_ddr4_odt_0(c0_ddr4_odt_0),
+        .c0_ddr4_reset_n_0(c0_ddr4_reset_n_0),
+        .c0_sys_clk_n_0(c0_sys_clk_n_0),
+        .c0_sys_clk_p_0(c0_sys_clk_p_0),
         .diff_clock_rtl_clk_n(diff_clock_rtl_clk_n),
         .diff_clock_rtl_clk_p(diff_clock_rtl_clk_p),
         .pcie_7x_mgt_rtl_rxn(pcie_7x_mgt_rtl_rxn),

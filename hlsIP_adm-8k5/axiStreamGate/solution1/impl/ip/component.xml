@@ -1237,8 +1237,8 @@ format long minimum {} maximum {}} value 32} bitoffset {attribs {resolve_type im
       </xilinx:taxonomies>
       <xilinx:displayName>Axistreamgate</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>1805031148</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2018-05-03T15:49:08Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>1805111139</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2018-05-11T15:39:22Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2018.1</xilinx:xilinxVersion>

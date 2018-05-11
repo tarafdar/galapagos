@@ -1,4 +1,10 @@
 <AutoPilot:solution xmlns:AutoPilot="com.autoesl.autopilot.solution">
+    <config>
+        <schedule model="heartBeat"/>
+    </config>
+    <ExportDesign askAgain="true" evaluate="false" rtl="verilog" formatName="ip_catalog">
+        <Format formatName="ip_catalog" description="" vendor="" library="" ipname="" version="" driver_input_dir="" display_name="" taxonomy=""/>
+    </ExportDesign>
     <name>
         <value string="solution1"/>
     </name>
@@ -13,13 +19,7 @@
         <library value="xilinx/kintexu/kintexu_fpv7" name="DefaultPlatform"/>
     </libraryList>
     <clockList>
-        <clock name="default" period="5" default="false"/>
+        <clock name="default" default="false" period="5"/>
     </clockList>
-    <config>
-        <schedule model="heartBeat"/>
-    </config>
-    <ExportDesign askAgain="true" evaluate="false" rtl="verilog" formatName="ip_catalog">
-        <Format formatName="ip_catalog" description="" vendor="" library="" ipname="" version="" driver_input_dir="" display_name="" taxonomy=""/>
-    </ExportDesign>
 </AutoPilot:solution>
 

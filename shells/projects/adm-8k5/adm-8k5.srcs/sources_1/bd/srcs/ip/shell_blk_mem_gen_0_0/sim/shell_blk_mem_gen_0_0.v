@@ -71,14 +71,14 @@ input wire rsta;
 (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTA EN" *)
 input wire ena;
 (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTA WE" *)
-input wire [7 : 0] wea;
+input wire [3 : 0] wea;
 (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTA ADDR" *)
 input wire [31 : 0] addra;
 (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTA DIN" *)
-input wire [63 : 0] dina;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME BRAM_PORTA, MEM_SIZE 1048576, MEM_WIDTH 64, MEM_ECC NONE, MASTER_TYPE BRAM_CTRL, READ_WRITE_MODE READ_WRITE" *)
+input wire [31 : 0] dina;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME BRAM_PORTA, MEM_SIZE 4096, MEM_WIDTH 32, MEM_ECC NONE, MASTER_TYPE BRAM_CTRL, READ_WRITE_MODE READ_WRITE" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTA DOUT" *)
-output wire [63 : 0] douta;
+output wire [31 : 0] douta;
 output wire rsta_busy;
 
   blk_mem_gen_v8_4_1 #(
@@ -109,12 +109,12 @@ output wire rsta_busy;
     .C_HAS_ENA(1),
     .C_HAS_REGCEA(0),
     .C_USE_BYTE_WEA(1),
-    .C_WEA_WIDTH(8),
+    .C_WEA_WIDTH(4),
     .C_WRITE_MODE_A("WRITE_FIRST"),
-    .C_WRITE_WIDTH_A(64),
-    .C_READ_WIDTH_A(64),
-    .C_WRITE_DEPTH_A(131072),
-    .C_READ_DEPTH_A(131072),
+    .C_WRITE_WIDTH_A(32),
+    .C_READ_WIDTH_A(32),
+    .C_WRITE_DEPTH_A(1024),
+    .C_READ_DEPTH_A(1024),
     .C_ADDRA_WIDTH(32),
     .C_HAS_RSTB(0),
     .C_RST_PRIORITY_B("CE"),
@@ -123,12 +123,12 @@ output wire rsta_busy;
     .C_HAS_ENB(0),
     .C_HAS_REGCEB(0),
     .C_USE_BYTE_WEB(1),
-    .C_WEB_WIDTH(8),
+    .C_WEB_WIDTH(4),
     .C_WRITE_MODE_B("WRITE_FIRST"),
-    .C_WRITE_WIDTH_B(64),
-    .C_READ_WIDTH_B(64),
-    .C_WRITE_DEPTH_B(131072),
-    .C_READ_DEPTH_B(131072),
+    .C_WRITE_WIDTH_B(32),
+    .C_READ_WIDTH_B(32),
+    .C_WRITE_DEPTH_B(1024),
+    .C_READ_DEPTH_B(1024),
     .C_ADDRB_WIDTH(32),
     .C_HAS_MEM_OUTPUT_REGS_A(0),
     .C_HAS_MEM_OUTPUT_REGS_B(0),
@@ -152,9 +152,9 @@ output wire rsta_busy;
     .C_EN_SHUTDOWN_PIN(0),
     .C_EN_SAFETY_CKT(1),
     .C_DISABLE_WARN_BHV_RANGE(0),
-    .C_COUNT_36K_BRAM("256"),
+    .C_COUNT_36K_BRAM("1"),
     .C_COUNT_18K_BRAM("0"),
-    .C_EST_POWER_SUMMARY("Estimated Power for IP     :     35.482364 mW")
+    .C_EST_POWER_SUMMARY("Estimated Power for IP     :     0.5472 mW")
   ) inst (
     .clka(clka),
     .rsta(rsta),
@@ -168,9 +168,9 @@ output wire rsta_busy;
     .rstb(1'D0),
     .enb(1'D0),
     .regceb(1'D0),
-    .web(8'B0),
+    .web(4'B0),
     .addrb(32'B0),
-    .dinb(64'B0),
+    .dinb(32'B0),
     .doutb(),
     .injectsbiterr(1'D0),
     .injectdbiterr(1'D0),
@@ -192,8 +192,8 @@ output wire rsta_busy;
     .s_axi_awburst(2'B0),
     .s_axi_awvalid(1'D0),
     .s_axi_awready(),
-    .s_axi_wdata(64'B0),
-    .s_axi_wstrb(8'B0),
+    .s_axi_wdata(32'B0),
+    .s_axi_wstrb(4'B0),
     .s_axi_wlast(1'D0),
     .s_axi_wvalid(1'D0),
     .s_axi_wready(),
