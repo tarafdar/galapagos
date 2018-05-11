@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
--- Date        : Thu May  3 11:59:29 2018
+-- Date        : Fri May 11 11:51:11 2018
 -- Host        : ug238 running 64-bit Debian GNU/Linux 9.4 (stretch)
--- Command     : write_vhdl -force -mode funcsim -rename_top shell_axi_hwicap_0_0 -prefix
---               shell_axi_hwicap_0_0_ shell_axi_hwicap_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim
+--               /nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_hwicap_0_0/shell_axi_hwicap_0_0_sim_netlist.vhdl
 -- Design      : shell_axi_hwicap_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -71,6 +71,8 @@ entity shell_axi_hwicap_0_0_address_decoder is
     \bus2ip_addr_i_reg[8]\ : in STD_LOGIC_VECTOR ( 6 downto 0 );
     bus2ip_rnw_i : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of shell_axi_hwicap_0_0_address_decoder : entity is "address_decoder";
 end shell_axi_hwicap_0_0_address_decoder;
 
 architecture STRUCTURE of shell_axi_hwicap_0_0_address_decoder is
@@ -1659,6 +1661,8 @@ entity shell_axi_hwicap_0_0_cdc_sync is
     Q : in STD_LOGIC_VECTOR ( 11 downto 0 );
     s_axi_aclk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of shell_axi_hwicap_0_0_cdc_sync : entity is "cdc_sync";
 end shell_axi_hwicap_0_0_cdc_sync;
 
 architecture STRUCTURE of shell_axi_hwicap_0_0_cdc_sync is
@@ -6128,6 +6132,8 @@ entity shell_axi_hwicap_0_0_icap_statemachine is
     SR : in STD_LOGIC_VECTOR ( 0 to 0 );
     D : in STD_LOGIC_VECTOR ( 31 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of shell_axi_hwicap_0_0_icap_statemachine : entity is "icap_statemachine";
 end shell_axi_hwicap_0_0_icap_statemachine;
 
 architecture STRUCTURE of shell_axi_hwicap_0_0_icap_statemachine is
@@ -8713,6 +8719,8 @@ entity shell_axi_hwicap_0_0_interrupt_control is
     E : in STD_LOGIC_VECTOR ( 0 to 0 );
     s_axi_wdata : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of shell_axi_hwicap_0_0_interrupt_control : entity is "interrupt_control";
 end shell_axi_hwicap_0_0_interrupt_control;
 
 architecture STRUCTURE of shell_axi_hwicap_0_0_interrupt_control is
@@ -8925,6 +8933,8 @@ entity shell_axi_hwicap_0_0_xpm_cdc_gray is
   attribute DEST_SYNC_FF of shell_axi_hwicap_0_0_xpm_cdc_gray : entity is 4;
   attribute INIT_SYNC_FF : integer;
   attribute INIT_SYNC_FF of shell_axi_hwicap_0_0_xpm_cdc_gray : entity is 1;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of shell_axi_hwicap_0_0_xpm_cdc_gray : entity is "xpm_cdc_gray";
   attribute REG_OUTPUT : integer;
   attribute REG_OUTPUT of shell_axi_hwicap_0_0_xpm_cdc_gray : entity is 0;
   attribute SIM_ASSERT_CHK : integer;
@@ -13324,6 +13334,8 @@ entity shell_axi_hwicap_0_0_xpm_cdc_sync_rst is
   attribute INIT of shell_axi_hwicap_0_0_xpm_cdc_sync_rst : entity is "0";
   attribute INIT_SYNC_FF : integer;
   attribute INIT_SYNC_FF of shell_axi_hwicap_0_0_xpm_cdc_sync_rst : entity is 1;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of shell_axi_hwicap_0_0_xpm_cdc_sync_rst : entity is "xpm_cdc_sync_rst";
   attribute SIM_ASSERT_CHK : integer;
   attribute SIM_ASSERT_CHK of shell_axi_hwicap_0_0_xpm_cdc_sync_rst : entity is 0;
   attribute VERSION : integer;
@@ -13710,6 +13722,8 @@ entity shell_axi_hwicap_0_0_xpm_counter_updn is
     wr_pntr_plus1_pf_carry : in STD_LOGIC;
     wr_clk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of shell_axi_hwicap_0_0_xpm_counter_updn : entity is "xpm_counter_updn";
 end shell_axi_hwicap_0_0_xpm_counter_updn;
 
 architecture STRUCTURE of shell_axi_hwicap_0_0_xpm_counter_updn is
@@ -17097,6 +17111,8 @@ entity shell_axi_hwicap_0_0_xpm_fifo_reg_bit is
     prog_full : in STD_LOGIC;
     wr_en : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of shell_axi_hwicap_0_0_xpm_fifo_reg_bit : entity is "xpm_fifo_reg_bit";
 end shell_axi_hwicap_0_0_xpm_fifo_reg_bit;
 
 architecture STRUCTURE of shell_axi_hwicap_0_0_xpm_fifo_reg_bit is
@@ -17249,6 +17265,8 @@ entity shell_axi_hwicap_0_0_xpm_fifo_reg_vec is
     D : in STD_LOGIC_VECTOR ( 5 downto 0 );
     wr_clk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of shell_axi_hwicap_0_0_xpm_fifo_reg_vec : entity is "xpm_fifo_reg_vec";
 end shell_axi_hwicap_0_0_xpm_fifo_reg_vec;
 
 architecture STRUCTURE of shell_axi_hwicap_0_0_xpm_fifo_reg_vec is
@@ -18864,6 +18882,8 @@ entity shell_axi_hwicap_0_0_xpm_memory_base is
   attribute MESSAGE_CONTROL of shell_axi_hwicap_0_0_xpm_memory_base : entity is 0;
   attribute NUM_CHAR_LOC : integer;
   attribute NUM_CHAR_LOC of shell_axi_hwicap_0_0_xpm_memory_base : entity is 0;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of shell_axi_hwicap_0_0_xpm_memory_base : entity is "xpm_memory_base";
   attribute P_ECC_MODE : string;
   attribute P_ECC_MODE of shell_axi_hwicap_0_0_xpm_memory_base : entity is "no_ecc";
   attribute P_ENABLE_BYTE_WRITE_A : integer;
@@ -19671,6 +19691,8 @@ entity shell_axi_hwicap_0_0_slave_attachment is
     s_axi_wdata : in STD_LOGIC_VECTOR ( 0 to 0 );
     \ip2bus_data_i_reg[0]_0\ : in STD_LOGIC_VECTOR ( 31 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of shell_axi_hwicap_0_0_slave_attachment : entity is "slave_attachment";
 end shell_axi_hwicap_0_0_slave_attachment;
 
 architecture STRUCTURE of shell_axi_hwicap_0_0_slave_attachment is
@@ -20707,6 +20729,8 @@ entity shell_axi_hwicap_0_0_xpm_fifo_rst is
     \gen_pf_ic_rc.ram_empty_i_reg\ : in STD_LOGIC;
     rd_en : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of shell_axi_hwicap_0_0_xpm_fifo_rst : entity is "xpm_fifo_rst";
 end shell_axi_hwicap_0_0_xpm_fifo_rst;
 
 architecture STRUCTURE of shell_axi_hwicap_0_0_xpm_fifo_rst is
@@ -21641,6 +21665,8 @@ entity shell_axi_hwicap_0_0_axi_lite_ipif is
     s_axi_wdata : in STD_LOGIC_VECTOR ( 0 to 0 );
     \ip2bus_data_i_reg[0]_0\ : in STD_LOGIC_VECTOR ( 31 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of shell_axi_hwicap_0_0_axi_lite_ipif : entity is "axi_lite_ipif";
 end shell_axi_hwicap_0_0_axi_lite_ipif;
 
 architecture STRUCTURE of shell_axi_hwicap_0_0_axi_lite_ipif is
@@ -21793,6 +21819,8 @@ entity shell_axi_hwicap_0_0_xpm_fifo_base is
   attribute FULL_RESET_VALUE of shell_axi_hwicap_0_0_xpm_fifo_base : entity is 1;
   attribute FULL_RST_VAL : string;
   attribute FULL_RST_VAL of shell_axi_hwicap_0_0_xpm_fifo_base : entity is "1'b1";
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of shell_axi_hwicap_0_0_xpm_fifo_base : entity is "xpm_fifo_base";
   attribute PE_THRESH_ADJ : integer;
   attribute PE_THRESH_ADJ of shell_axi_hwicap_0_0_xpm_fifo_base : entity is 10;
   attribute PE_THRESH_MAX : integer;
@@ -23935,6 +23963,8 @@ entity shell_axi_hwicap_0_0_xpm_fifo_async is
     \FSM_sequential_icap_nstate_cs_reg[1]\ : in STD_LOGIC;
     gate_signal_p_reg : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of shell_axi_hwicap_0_0_xpm_fifo_async : entity is "xpm_fifo_async";
 end shell_axi_hwicap_0_0_xpm_fifo_async;
 
 architecture STRUCTURE of shell_axi_hwicap_0_0_xpm_fifo_async is
@@ -24521,6 +24551,8 @@ entity shell_axi_hwicap_0_0_async_fifo_fg is
     \FSM_sequential_icap_nstate_cs_reg[1]\ : in STD_LOGIC;
     gate_signal_p_reg : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of shell_axi_hwicap_0_0_async_fifo_fg : entity is "async_fifo_fg";
 end shell_axi_hwicap_0_0_async_fifo_fg;
 
 architecture STRUCTURE of shell_axi_hwicap_0_0_async_fifo_fg is
@@ -24682,6 +24714,8 @@ entity shell_axi_hwicap_0_0_ipic_if is
     \icap_status_i_reg[0]\ : in STD_LOGIC_VECTOR ( 31 downto 0 );
     rdfifo_wren : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of shell_axi_hwicap_0_0_ipic_if : entity is "ipic_if";
 end shell_axi_hwicap_0_0_ipic_if;
 
 architecture STRUCTURE of shell_axi_hwicap_0_0_ipic_if is
@@ -25951,6 +25985,8 @@ entity shell_axi_hwicap_0_0_hwicap is
     bus2ip_wrce : in STD_LOGIC_VECTOR ( 1 downto 0 );
     D : in STD_LOGIC_VECTOR ( 31 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of shell_axi_hwicap_0_0_hwicap : entity is "hwicap";
 end shell_axi_hwicap_0_0_hwicap;
 
 architecture STRUCTURE of shell_axi_hwicap_0_0_hwicap is
@@ -26641,6 +26677,8 @@ entity shell_axi_hwicap_0_0_axi_hwicap is
   attribute C_S_AXI_DATA_WIDTH of shell_axi_hwicap_0_0_axi_hwicap : entity is 32;
   attribute C_WRITE_FIFO_DEPTH : integer;
   attribute C_WRITE_FIFO_DEPTH of shell_axi_hwicap_0_0_axi_hwicap : entity is 64;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of shell_axi_hwicap_0_0_axi_hwicap : entity is "axi_hwicap";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of shell_axi_hwicap_0_0_axi_hwicap : entity is "yes";
 end shell_axi_hwicap_0_0_axi_hwicap;

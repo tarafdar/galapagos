@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
-// Date        : Thu May  3 11:56:47 2018
+// Date        : Fri May 11 11:48:33 2018
 // Host        : ug238 running 64-bit Debian GNU/Linux 9.4 (stretch)
-// Command     : write_verilog -force -mode funcsim -rename_top shell_clk_wiz_0_0 -prefix
-//               shell_clk_wiz_0_0_ shell_clk_wiz_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim
+//               /nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_clk_wiz_0_0/shell_clk_wiz_0_0_sim_netlist.v
 // Design      : shell_clk_wiz_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -27,6 +27,7 @@ module shell_clk_wiz_0_0
         .clk_out1(clk_out1));
 endmodule
 
+(* ORIG_REF_NAME = "shell_clk_wiz_0_0_clk_wiz" *) 
 module shell_clk_wiz_0_0_shell_clk_wiz_0_0_clk_wiz
    (clk_out1,
     clk_in1);

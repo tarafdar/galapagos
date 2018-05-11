@@ -1,6 +1,6 @@
 
 *** Running vivado
-    with args -log shell_auto_us_4.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source shell_auto_us_4.tcl
+    with args -log shell_auto_us_3.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source shell_auto_us_3.tcl
 
 
 ****** Vivado v2018.1 (64-bit)
@@ -8,18 +8,18 @@
   **** IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
     ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 
-source shell_auto_us_4.tcl -notrace
-Command: synth_design -top shell_auto_us_4 -part xcku115-flva1517-2-e -mode out_of_context
+source shell_auto_us_3.tcl -notrace
+Command: synth_design -top shell_auto_us_3 -part xcku115-flva1517-2-e -mode out_of_context
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xcku115'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcku115'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 8267 
+INFO: Helper process launched with PID 16886 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:22 . Memory (MB): peak = 1356.453 ; gain = 84.000 ; free physical = 5000 ; free virtual = 27108
+Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:18 . Memory (MB): peak = 1354.457 ; gain = 83.000 ; free physical = 7081 ; free virtual = 34584
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'shell_auto_us_4' [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_us_4/synth/shell_auto_us_4.v:58]
-INFO: [Synth 8-6157] synthesizing module 'axi_dwidth_converter_v2_1_16_top' [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/2c2b/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:14462]
+INFO: [Synth 8-6157] synthesizing module 'shell_auto_us_3' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_us_3/synth/shell_auto_us_3.v:58]
+INFO: [Synth 8-6157] synthesizing module 'axi_dwidth_converter_v2_1_16_top' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/2c2b/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:14462]
 	Parameter C_FAMILY bound to: kintexu - type: string 
 	Parameter C_AXI_PROTOCOL bound to: 0 - type: integer 
 	Parameter C_S_AXI_ID_WIDTH bound to: 4 - type: integer 
@@ -45,11 +45,11 @@ INFO: [Synth 8-6157] synthesizing module 'axi_dwidth_converter_v2_1_16_top' [/nf
 	Parameter P_AXILITE bound to: 2 - type: integer 
 	Parameter P_CONVERSION bound to: 2 - type: integer 
 	Parameter P_MAX_SPLIT_BEATS bound to: 16 - type: integer 
-INFO: [Synth 8-5534] Detected attribute (* KEEP = "TRUE" *) [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/2c2b/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:14513]
-INFO: [Synth 8-5534] Detected attribute (* KEEP = "TRUE" *) [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/2c2b/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:14514]
-INFO: [Synth 8-5534] Detected attribute (* KEEP = "TRUE" *) [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/2c2b/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:14562]
-INFO: [Synth 8-5534] Detected attribute (* KEEP = "TRUE" *) [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/2c2b/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:14563]
-INFO: [Synth 8-6157] synthesizing module 'axi_dwidth_converter_v2_1_16_axi_upsizer' [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/2c2b/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:7038]
+INFO: [Synth 8-5534] Detected attribute (* KEEP = "TRUE" *) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/2c2b/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:14513]
+INFO: [Synth 8-5534] Detected attribute (* KEEP = "TRUE" *) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/2c2b/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:14514]
+INFO: [Synth 8-5534] Detected attribute (* KEEP = "TRUE" *) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/2c2b/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:14562]
+INFO: [Synth 8-5534] Detected attribute (* KEEP = "TRUE" *) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/2c2b/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:14563]
+INFO: [Synth 8-6157] synthesizing module 'axi_dwidth_converter_v2_1_16_axi_upsizer' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/2c2b/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:7038]
 	Parameter C_FAMILY bound to: kintexu - type: string 
 	Parameter C_AXI_PROTOCOL bound to: 0 - type: integer 
 	Parameter C_S_AXI_ID_WIDTH bound to: 4 - type: integer 
@@ -89,7 +89,7 @@ INFO: [Synth 8-6157] synthesizing module 'axi_dwidth_converter_v2_1_16_axi_upsiz
 	Parameter C_S_AXI_R_REGISTER bound to: 0 - type: integer 
 	Parameter C_M_AXI_R_REGISTER bound to: 1 - type: integer 
 	Parameter P_RID_QUEUE bound to: 1 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'axi_dwidth_converter_v2_1_16_w_upsizer' [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/2c2b/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:5563]
+INFO: [Synth 8-6157] synthesizing module 'axi_dwidth_converter_v2_1_16_w_upsizer' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/2c2b/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:5563]
 	Parameter C_FAMILY bound to: rtl - type: string 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 256 - type: integer 
 	Parameter C_M_AXI_DATA_WIDTH bound to: 512 - type: integer 
@@ -102,8 +102,8 @@ INFO: [Synth 8-6157] synthesizing module 'axi_dwidth_converter_v2_1_16_w_upsizer
 	Parameter C_NEVER_PACK bound to: 0 - type: integer 
 	Parameter C_DEFAULT_PACK bound to: 1 - type: integer 
 	Parameter C_ALWAYS_PACK bound to: 2 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_dwidth_converter_v2_1_16_w_upsizer' (1#1) [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/2c2b/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:5563]
-INFO: [Synth 8-6157] synthesizing module 'axi_dwidth_converter_v2_1_16_a_upsizer' [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/2c2b/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:3603]
+INFO: [Synth 8-6155] done synthesizing module 'axi_dwidth_converter_v2_1_16_w_upsizer' (1#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/2c2b/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:5563]
+INFO: [Synth 8-6157] synthesizing module 'axi_dwidth_converter_v2_1_16_a_upsizer' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/2c2b/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:3603]
 	Parameter C_FAMILY bound to: rtl - type: string 
 	Parameter C_AXI_PROTOCOL bound to: 0 - type: integer 
 	Parameter C_AXI_ID_WIDTH bound to: 4 - type: integer 
@@ -131,22 +131,22 @@ INFO: [Synth 8-6157] synthesizing module 'axi_dwidth_converter_v2_1_16_a_upsizer
 	Parameter C_BURST_BYTES_LOG bound to: 9 - type: integer 
 	Parameter C_SI_UNUSED_LOG bound to: 59 - type: integer 
 	Parameter C_MI_UNUSED_LOG bound to: 58 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_command_fifo' [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:655]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_command_fifo' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:655]
 	Parameter C_FAMILY bound to: rtl - type: string 
 	Parameter C_ENABLE_S_VALID_CARRY bound to: 0 - type: integer 
 	Parameter C_ENABLE_REGISTERED_OUTPUT bound to: 1 - type: integer 
 	Parameter C_FIFO_DEPTH_LOG bound to: 5 - type: integer 
 	Parameter C_FIFO_WIDTH bound to: 4 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_command_fifo' (2#1) [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:655]
-INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_command_fifo__parameterized0' [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:655]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_command_fifo' (2#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:655]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_command_fifo__parameterized0' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:655]
 	Parameter C_FAMILY bound to: rtl - type: string 
 	Parameter C_ENABLE_S_VALID_CARRY bound to: 1 - type: integer 
 	Parameter C_ENABLE_REGISTERED_OUTPUT bound to: 1 - type: integer 
 	Parameter C_FIFO_DEPTH_LOG bound to: 5 - type: integer 
 	Parameter C_FIFO_WIDTH bound to: 48 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_command_fifo__parameterized0' (2#1) [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:655]
-INFO: [Synth 8-6155] done synthesizing module 'axi_dwidth_converter_v2_1_16_a_upsizer' (3#1) [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/2c2b/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:3603]
-INFO: [Synth 8-6157] synthesizing module 'axi_dwidth_converter_v2_1_16_r_upsizer' [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/2c2b/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:4653]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_command_fifo__parameterized0' (2#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:655]
+INFO: [Synth 8-6155] done synthesizing module 'axi_dwidth_converter_v2_1_16_a_upsizer' (3#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/2c2b/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:3603]
+INFO: [Synth 8-6157] synthesizing module 'axi_dwidth_converter_v2_1_16_r_upsizer' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/2c2b/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:4653]
 	Parameter C_FAMILY bound to: rtl - type: string 
 	Parameter C_AXI_ID_WIDTH bound to: 4 - type: integer 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 256 - type: integer 
@@ -160,8 +160,8 @@ INFO: [Synth 8-6157] synthesizing module 'axi_dwidth_converter_v2_1_16_r_upsizer
 	Parameter C_NEVER_PACK bound to: 0 - type: integer 
 	Parameter C_DEFAULT_PACK bound to: 1 - type: integer 
 	Parameter C_ALWAYS_PACK bound to: 2 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_dwidth_converter_v2_1_16_r_upsizer' (4#1) [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/2c2b/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:4653]
-INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_16_axi_register_slice' [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/0cde/hdl/axi_register_slice_v2_1_vl_rfs.v:2413]
+INFO: [Synth 8-6155] done synthesizing module 'axi_dwidth_converter_v2_1_16_r_upsizer' (4#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/2c2b/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:4653]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_16_axi_register_slice' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/0cde/hdl/axi_register_slice_v2_1_vl_rfs.v:2413]
 	Parameter C_FAMILY bound to: kintexu - type: string 
 	Parameter C_AXI_PROTOCOL bound to: 0 - type: integer 
 	Parameter C_AXI_ID_WIDTH bound to: 1 - type: integer 
@@ -272,27 +272,27 @@ INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_16_axi_registe
 	Parameter G_AXI_RUSER_INDEX bound to: 516 - type: integer 
 	Parameter G_AXI_RUSER_WIDTH bound to: 0 - type: integer 
 	Parameter G_AXI_RPAYLOAD_WIDTH bound to: 516 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_16_axic_register_slice' [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/0cde/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_16_axic_register_slice' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/0cde/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
 	Parameter C_FAMILY bound to: kintexu - type: string 
 	Parameter C_DATA_WIDTH bound to: 94 - type: integer 
 	Parameter C_REG_CONFIG bound to: 7 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_16_axic_register_slice' (5#1) [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/0cde/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
-INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_16_axic_register_slice__parameterized0' [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/0cde/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_16_axic_register_slice' (5#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/0cde/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_16_axic_register_slice__parameterized0' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/0cde/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
 	Parameter C_FAMILY bound to: kintexu - type: string 
 	Parameter C_DATA_WIDTH bound to: 577 - type: integer 
 	Parameter C_REG_CONFIG bound to: 1 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_16_axic_register_slice__parameterized0' (5#1) [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/0cde/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
-INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_16_axic_register_slice__parameterized1' [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/0cde/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_16_axic_register_slice__parameterized0' (5#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/0cde/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_16_axic_register_slice__parameterized1' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/0cde/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
 	Parameter C_FAMILY bound to: kintexu - type: string 
 	Parameter C_DATA_WIDTH bound to: 3 - type: integer 
 	Parameter C_REG_CONFIG bound to: 7 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_16_axic_register_slice__parameterized1' (5#1) [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/0cde/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
-INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_16_axic_register_slice__parameterized2' [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/0cde/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_16_axic_register_slice__parameterized1' (5#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/0cde/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_16_axic_register_slice__parameterized2' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/0cde/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
 	Parameter C_FAMILY bound to: kintexu - type: string 
 	Parameter C_DATA_WIDTH bound to: 516 - type: integer 
 	Parameter C_REG_CONFIG bound to: 1 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_16_axic_register_slice__parameterized2' (5#1) [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/0cde/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
-INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_16_axic_register_slice__parameterized2' (5#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/0cde/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
+INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:60]
 	Parameter C_AXI_PROTOCOL bound to: 0 - type: integer 
 	Parameter C_AXI_ID_WIDTH bound to: 1 - type: integer 
 	Parameter C_AXI_ADDR_WIDTH bound to: 64 - type: integer 
@@ -384,8 +384,8 @@ INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' 
 	Parameter G_AXI_RUSER_INDEX bound to: 516 - type: integer 
 	Parameter G_AXI_RUSER_WIDTH bound to: 0 - type: integer 
 	Parameter G_AXI_RPAYLOAD_WIDTH bound to: 516 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' (6#1) [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:60]
-INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:474]
+INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' (6#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:60]
+INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:474]
 	Parameter C_AXI_PROTOCOL bound to: 0 - type: integer 
 	Parameter C_AXI_ID_WIDTH bound to: 1 - type: integer 
 	Parameter C_AXI_ADDR_WIDTH bound to: 64 - type: integer 
@@ -477,10 +477,10 @@ INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' 
 	Parameter G_AXI_RUSER_INDEX bound to: 516 - type: integer 
 	Parameter G_AXI_RUSER_WIDTH bound to: 0 - type: integer 
 	Parameter G_AXI_RPAYLOAD_WIDTH bound to: 516 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' (7#1) [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:474]
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_16_axi_register_slice' (8#1) [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/0cde/hdl/axi_register_slice_v2_1_vl_rfs.v:2413]
-WARNING: [Synth 8-350] instance 'mi_register_slice_inst' of module 'axi_register_slice_v2_1_16_axi_register_slice' requires 93 connections, but only 92 given [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/2c2b/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:8475]
-INFO: [Synth 8-6157] synthesizing module 'axi_dwidth_converter_v2_1_16_a_upsizer__parameterized0' [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/2c2b/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:3603]
+INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' (7#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:474]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_16_axi_register_slice' (8#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/0cde/hdl/axi_register_slice_v2_1_vl_rfs.v:2413]
+WARNING: [Synth 8-350] instance 'mi_register_slice_inst' of module 'axi_register_slice_v2_1_16_axi_register_slice' requires 93 connections, but only 92 given [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/2c2b/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:8475]
+INFO: [Synth 8-6157] synthesizing module 'axi_dwidth_converter_v2_1_16_a_upsizer__parameterized0' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/2c2b/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:3603]
 	Parameter C_FAMILY bound to: rtl - type: string 
 	Parameter C_AXI_PROTOCOL bound to: 0 - type: integer 
 	Parameter C_AXI_ID_WIDTH bound to: 4 - type: integer 
@@ -508,8 +508,8 @@ INFO: [Synth 8-6157] synthesizing module 'axi_dwidth_converter_v2_1_16_a_upsizer
 	Parameter C_BURST_BYTES_LOG bound to: 9 - type: integer 
 	Parameter C_SI_UNUSED_LOG bound to: 59 - type: integer 
 	Parameter C_MI_UNUSED_LOG bound to: 58 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_dwidth_converter_v2_1_16_a_upsizer__parameterized0' (8#1) [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/2c2b/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:3603]
-INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_16_axi_register_slice__parameterized0' [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/0cde/hdl/axi_register_slice_v2_1_vl_rfs.v:2413]
+INFO: [Synth 8-6155] done synthesizing module 'axi_dwidth_converter_v2_1_16_a_upsizer__parameterized0' (8#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/2c2b/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:3603]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_16_axi_register_slice__parameterized0' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/0cde/hdl/axi_register_slice_v2_1_vl_rfs.v:2413]
 	Parameter C_FAMILY bound to: kintexu - type: string 
 	Parameter C_AXI_PROTOCOL bound to: 0 - type: integer 
 	Parameter C_AXI_ID_WIDTH bound to: 4 - type: integer 
@@ -620,27 +620,27 @@ INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_16_axi_registe
 	Parameter G_AXI_RUSER_INDEX bound to: 263 - type: integer 
 	Parameter G_AXI_RUSER_WIDTH bound to: 0 - type: integer 
 	Parameter G_AXI_RPAYLOAD_WIDTH bound to: 263 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_16_axic_register_slice__parameterized3' [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/0cde/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_16_axic_register_slice__parameterized3' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/0cde/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
 	Parameter C_FAMILY bound to: kintexu - type: string 
 	Parameter C_DATA_WIDTH bound to: 97 - type: integer 
 	Parameter C_REG_CONFIG bound to: 7 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_16_axic_register_slice__parameterized3' (8#1) [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/0cde/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
-INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_16_axic_register_slice__parameterized4' [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/0cde/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_16_axic_register_slice__parameterized3' (8#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/0cde/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_16_axic_register_slice__parameterized4' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/0cde/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
 	Parameter C_FAMILY bound to: kintexu - type: string 
 	Parameter C_DATA_WIDTH bound to: 289 - type: integer 
 	Parameter C_REG_CONFIG bound to: 1 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_16_axic_register_slice__parameterized4' (8#1) [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/0cde/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
-INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_16_axic_register_slice__parameterized5' [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/0cde/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_16_axic_register_slice__parameterized4' (8#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/0cde/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_16_axic_register_slice__parameterized5' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/0cde/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
 	Parameter C_FAMILY bound to: kintexu - type: string 
 	Parameter C_DATA_WIDTH bound to: 6 - type: integer 
 	Parameter C_REG_CONFIG bound to: 7 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_16_axic_register_slice__parameterized5' (8#1) [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/0cde/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
-INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_16_axic_register_slice__parameterized6' [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/0cde/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_16_axic_register_slice__parameterized5' (8#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/0cde/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_16_axic_register_slice__parameterized6' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/0cde/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
 	Parameter C_FAMILY bound to: kintexu - type: string 
 	Parameter C_DATA_WIDTH bound to: 263 - type: integer 
 	Parameter C_REG_CONFIG bound to: 1 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_16_axic_register_slice__parameterized6' (8#1) [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/0cde/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
-INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_axi2vector__parameterized0' [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_16_axic_register_slice__parameterized6' (8#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/0cde/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
+INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_axi2vector__parameterized0' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:60]
 	Parameter C_AXI_PROTOCOL bound to: 0 - type: integer 
 	Parameter C_AXI_ID_WIDTH bound to: 4 - type: integer 
 	Parameter C_AXI_ADDR_WIDTH bound to: 64 - type: integer 
@@ -732,8 +732,8 @@ INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_axi2vector__
 	Parameter G_AXI_RUSER_INDEX bound to: 263 - type: integer 
 	Parameter G_AXI_RUSER_WIDTH bound to: 0 - type: integer 
 	Parameter G_AXI_RPAYLOAD_WIDTH bound to: 263 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_axi2vector__parameterized0' (8#1) [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:60]
-INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_vector2axi__parameterized0' [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:474]
+INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_axi2vector__parameterized0' (8#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:60]
+INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_vector2axi__parameterized0' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:474]
 	Parameter C_AXI_PROTOCOL bound to: 0 - type: integer 
 	Parameter C_AXI_ID_WIDTH bound to: 4 - type: integer 
 	Parameter C_AXI_ADDR_WIDTH bound to: 64 - type: integer 
@@ -825,12 +825,12 @@ INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_vector2axi__
 	Parameter G_AXI_RUSER_INDEX bound to: 263 - type: integer 
 	Parameter G_AXI_RUSER_WIDTH bound to: 0 - type: integer 
 	Parameter G_AXI_RPAYLOAD_WIDTH bound to: 263 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_vector2axi__parameterized0' (8#1) [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:474]
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_16_axi_register_slice__parameterized0' (8#1) [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/0cde/hdl/axi_register_slice_v2_1_vl_rfs.v:2413]
-WARNING: [Synth 8-350] instance 'si_register_slice_inst' of module 'axi_register_slice_v2_1_16_axi_register_slice' requires 93 connections, but only 92 given [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/2c2b/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:7379]
-INFO: [Synth 8-6155] done synthesizing module 'axi_dwidth_converter_v2_1_16_axi_upsizer' (9#1) [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/2c2b/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:7038]
-INFO: [Synth 8-6155] done synthesizing module 'axi_dwidth_converter_v2_1_16_top' (10#1) [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/2c2b/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:14462]
-INFO: [Synth 8-6155] done synthesizing module 'shell_auto_us_4' (11#1) [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_us_4/synth/shell_auto_us_4.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_vector2axi__parameterized0' (8#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:474]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_16_axi_register_slice__parameterized0' (8#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/0cde/hdl/axi_register_slice_v2_1_vl_rfs.v:2413]
+WARNING: [Synth 8-350] instance 'si_register_slice_inst' of module 'axi_register_slice_v2_1_16_axi_register_slice' requires 93 connections, but only 92 given [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/2c2b/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:7379]
+INFO: [Synth 8-6155] done synthesizing module 'axi_dwidth_converter_v2_1_16_axi_upsizer' (9#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/2c2b/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:7038]
+INFO: [Synth 8-6155] done synthesizing module 'axi_dwidth_converter_v2_1_16_top' (10#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/2c2b/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:14462]
+INFO: [Synth 8-6155] done synthesizing module 'shell_auto_us_3' (11#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_us_3/synth/shell_auto_us_3.v:58]
 WARNING: [Synth 8-3331] design axi_infrastructure_v1_1_0_vector2axi__parameterized0 has unconnected port m_axi_buser[0]
 WARNING: [Synth 8-3331] design axi_infrastructure_v1_1_0_vector2axi__parameterized0 has unconnected port m_axi_ruser[0]
 WARNING: [Synth 8-3331] design axi_infrastructure_v1_1_0_axi2vector__parameterized0 has unconnected port s_axi_awuser[0]
@@ -853,7 +853,7 @@ WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_axi_upsizer has unco
 WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_axi_upsizer has unconnected port m_axi_aresetn
 WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_axi_upsizer has unconnected port m_axi_aclk
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:01:19 ; elapsed = 00:01:41 . Memory (MB): peak = 1516.062 ; gain = 243.609 ; free physical = 2551 ; free virtual = 25182
+Finished RTL Elaboration : Time (s): cpu = 00:00:52 ; elapsed = 00:01:10 . Memory (MB): peak = 1515.066 ; gain = 243.609 ; free physical = 7325 ; free virtual = 34501
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -866,111 +866,111 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:20 ; elapsed = 00:01:42 . Memory (MB): peak = 1516.062 ; gain = 243.609 ; free physical = 2532 ; free virtual = 25154
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:52 ; elapsed = 00:01:10 . Memory (MB): peak = 1515.066 ; gain = 243.609 ; free physical = 7308 ; free virtual = 34484
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:20 ; elapsed = 00:01:42 . Memory (MB): peak = 1516.062 ; gain = 243.609 ; free physical = 2532 ; free virtual = 25154
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:52 ; elapsed = 00:01:10 . Memory (MB): peak = 1515.066 ; gain = 243.609 ; free physical = 7308 ; free virtual = 34484
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xcku115-flva1517-2-e
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_us_4/shell_auto_us_4_ooc.xdc] for cell 'inst'
-Finished Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_us_4/shell_auto_us_4_ooc.xdc] for cell 'inst'
-Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.runs/shell_auto_us_4_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.runs/shell_auto_us_4_synth_1/dont_touch.xdc]
+Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_us_3/shell_auto_us_3_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_us_3/shell_auto_us_3_ooc.xdc] for cell 'inst'
+Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.runs/shell_auto_us_3_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.runs/shell_auto_us_3_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.28 ; elapsed = 00:00:00.15 . Memory (MB): peak = 2137.754 ; gain = 1.000 ; free physical = 3277 ; free virtual = 26029
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.26 ; elapsed = 00:00:00.12 . Memory (MB): peak = 2136.758 ; gain = 2.000 ; free physical = 7447 ; free virtual = 34622
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:01:39 ; elapsed = 00:02:10 . Memory (MB): peak = 2137.754 ; gain = 865.301 ; free physical = 9354 ; free virtual = 32101
+Finished Constraint Validation : Time (s): cpu = 00:01:09 ; elapsed = 00:01:35 . Memory (MB): peak = 2136.758 ; gain = 865.301 ; free physical = 7194 ; free virtual = 34369
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xcku115-flva1517-2-e
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:01:39 ; elapsed = 00:02:10 . Memory (MB): peak = 2137.754 ; gain = 865.301 ; free physical = 9354 ; free virtual = 32101
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:09 ; elapsed = 00:01:35 . Memory (MB): peak = 2136.758 ; gain = 865.301 ; free physical = 7194 ; free virtual = 34369
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property DONT_TOUCH = true for inst. (constraint file  /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.runs/shell_auto_us_4_synth_1/dont_touch.xdc, line 9).
+Applied set_property DONT_TOUCH = true for inst. (constraint file  /nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.runs/shell_auto_us_3_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:39 ; elapsed = 00:02:10 . Memory (MB): peak = 2137.754 ; gain = 865.301 ; free physical = 9354 ; free virtual = 32101
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:09 ; elapsed = 00:01:35 . Memory (MB): peak = 2136.758 ; gain = 865.301 ; free physical = 7194 ; free virtual = 34369
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:868]
-WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[31] was removed.  [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
-WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[30] was removed.  [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
-WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[29] was removed.  [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
-WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[28] was removed.  [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
-WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[27] was removed.  [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
-WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[26] was removed.  [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
-WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[25] was removed.  [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
-WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[24] was removed.  [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
-WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[23] was removed.  [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
-WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[22] was removed.  [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
-WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[21] was removed.  [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
-WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[20] was removed.  [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
-WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[19] was removed.  [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
-WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[18] was removed.  [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
-WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[17] was removed.  [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
-WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[16] was removed.  [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
-WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[15] was removed.  [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
-WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[14] was removed.  [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
-WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[13] was removed.  [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
-WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[12] was removed.  [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
-WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[11] was removed.  [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
-WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[10] was removed.  [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
-WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[9] was removed.  [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
-WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[8] was removed.  [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
-WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[7] was removed.  [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
-WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[6] was removed.  [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
-WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[5] was removed.  [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
-WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[4] was removed.  [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
-WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[3] was removed.  [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
-WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[2] was removed.  [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
-WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[1] was removed.  [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
-WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[0] was removed.  [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:868]
-WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[31] was removed.  [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
-WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[30] was removed.  [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
-WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[29] was removed.  [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
-WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[28] was removed.  [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
-WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[27] was removed.  [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
-WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[26] was removed.  [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
-WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[25] was removed.  [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
-WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[24] was removed.  [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
-WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[23] was removed.  [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
-WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[22] was removed.  [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
-WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[21] was removed.  [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
-WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[20] was removed.  [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
-WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[19] was removed.  [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
-WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[18] was removed.  [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
-WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[17] was removed.  [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
-WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[16] was removed.  [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
-WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[15] was removed.  [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
-WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[14] was removed.  [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
-WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[13] was removed.  [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
-WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[12] was removed.  [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
-WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[11] was removed.  [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
-WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[10] was removed.  [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
-WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[9] was removed.  [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
-WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[8] was removed.  [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
-WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[7] was removed.  [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
-WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[6] was removed.  [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
-WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[5] was removed.  [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
-WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[4] was removed.  [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
-WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[3] was removed.  [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
-WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[2] was removed.  [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
-WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[1] was removed.  [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
-WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[0] was removed.  [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:868]
+WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[31] was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[30] was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[29] was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[28] was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[27] was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[26] was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[25] was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[24] was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[23] was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[22] was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[21] was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[20] was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[19] was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[18] was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[17] was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[16] was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[15] was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[14] was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[13] was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[12] was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[11] was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[10] was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[9] was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[8] was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[7] was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[6] was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[5] was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[4] was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[3] was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[2] was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[1] was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[0] was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:868]
+WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[31] was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[30] was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[29] was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[28] was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[27] was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[26] was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[25] was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[24] was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[23] was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[22] was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[21] was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[20] was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[19] was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[18] was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[17] was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[16] was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[15] was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[14] was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[13] was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[12] was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[11] was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[10] was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[9] was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[8] was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[7] was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[6] was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[5] was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[4] was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[3] was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[2] was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[1] was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
+WARNING: [Synth 8-6014] Unused sequential element USE_RTL_FIFO.data_srl_reg[0] was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:933]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:42 ; elapsed = 00:02:13 . Memory (MB): peak = 2137.754 ; gain = 865.301 ; free physical = 9232 ; free virtual = 31981
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:11 ; elapsed = 00:01:36 . Memory (MB): peak = 2136.758 ; gain = 865.301 ; free physical = 7190 ; free virtual = 34366
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1315,7 +1315,7 @@ INFO: [Synth 8-3332] Sequential element (w.w_pipe/skid_buffer_reg[487]) is unuse
 INFO: [Synth 8-3332] Sequential element (w.w_pipe/skid_buffer_reg[486]) is unused and will be removed from module axi_register_slice_v2_1_16_axi_register_slice.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:52 ; elapsed = 00:02:24 . Memory (MB): peak = 2137.754 ; gain = 865.301 ; free physical = 9009 ; free virtual = 31835
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:18 ; elapsed = 00:01:44 . Memory (MB): peak = 2136.758 ; gain = 865.301 ; free physical = 8301 ; free virtual = 35483
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1327,13 +1327,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:04 ; elapsed = 00:02:54 . Memory (MB): peak = 2266.191 ; gain = 993.738 ; free physical = 7601 ; free virtual = 30646
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:28 ; elapsed = 00:02:09 . Memory (MB): peak = 2265.195 ; gain = 993.738 ; free physical = 7685 ; free virtual = 34868
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:02:07 ; elapsed = 00:02:57 . Memory (MB): peak = 2328.801 ; gain = 1056.348 ; free physical = 7514 ; free virtual = 30562
+Finished Timing Optimization : Time (s): cpu = 00:01:30 ; elapsed = 00:02:11 . Memory (MB): peak = 2327.805 ; gain = 1056.348 ; free physical = 7622 ; free virtual = 34805
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1345,7 +1345,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:02:09 ; elapsed = 00:02:59 . Memory (MB): peak = 2339.824 ; gain = 1067.371 ; free physical = 7352 ; free virtual = 30311
+Finished Technology Mapping : Time (s): cpu = 00:01:32 ; elapsed = 00:02:13 . Memory (MB): peak = 2337.820 ; gain = 1066.363 ; free physical = 7586 ; free virtual = 34769
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1369,7 +1369,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:02:10 ; elapsed = 00:03:00 . Memory (MB): peak = 2339.824 ; gain = 1067.371 ; free physical = 7342 ; free virtual = 30308
+Finished IO Insertion : Time (s): cpu = 00:01:32 ; elapsed = 00:02:14 . Memory (MB): peak = 2337.820 ; gain = 1066.363 ; free physical = 7315 ; free virtual = 34499
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1382,7 +1382,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:02:10 ; elapsed = 00:03:00 . Memory (MB): peak = 2339.824 ; gain = 1067.371 ; free physical = 7338 ; free virtual = 30306
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:33 ; elapsed = 00:02:14 . Memory (MB): peak = 2337.820 ; gain = 1066.363 ; free physical = 7292 ; free virtual = 34475
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1394,25 +1394,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:10 ; elapsed = 00:03:00 . Memory (MB): peak = 2339.824 ; gain = 1067.371 ; free physical = 7331 ; free virtual = 30285
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:33 ; elapsed = 00:02:14 . Memory (MB): peak = 2337.820 ; gain = 1066.363 ; free physical = 7362 ; free virtual = 34545
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:02:10 ; elapsed = 00:03:00 . Memory (MB): peak = 2339.824 ; gain = 1067.371 ; free physical = 7331 ; free virtual = 30284
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:33 ; elapsed = 00:02:14 . Memory (MB): peak = 2337.820 ; gain = 1066.363 ; free physical = 7362 ; free virtual = 34545
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:02:11 ; elapsed = 00:03:01 . Memory (MB): peak = 2339.824 ; gain = 1067.371 ; free physical = 7299 ; free virtual = 30255
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:33 ; elapsed = 00:02:14 . Memory (MB): peak = 2337.820 ; gain = 1066.363 ; free physical = 7359 ; free virtual = 34543
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:02:11 ; elapsed = 00:03:01 . Memory (MB): peak = 2339.824 ; gain = 1067.371 ; free physical = 7306 ; free virtual = 30263
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:33 ; elapsed = 00:02:14 . Memory (MB): peak = 2337.820 ; gain = 1066.363 ; free physical = 7359 ; free virtual = 34542
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -1477,11 +1477,11 @@ Report Instance Areas:
 |16    |        \aw.aw_pipe                                            |axi_register_slice_v2_1_16_axic_register_slice__parameterized3_0 |   233|
 +------+---------------------------------------------------------------+-----------------------------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:02:11 ; elapsed = 00:03:01 . Memory (MB): peak = 2339.824 ; gain = 1067.371 ; free physical = 7306 ; free virtual = 30263
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:33 ; elapsed = 00:02:14 . Memory (MB): peak = 2337.820 ; gain = 1066.363 ; free physical = 7359 ; free virtual = 34542
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 85 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:02:00 ; elapsed = 00:02:42 . Memory (MB): peak = 2339.824 ; gain = 445.680 ; free physical = 7328 ; free virtual = 30285
-Synthesis Optimization Complete : Time (s): cpu = 00:02:11 ; elapsed = 00:03:01 . Memory (MB): peak = 2339.832 ; gain = 1067.371 ; free physical = 7338 ; free virtual = 30295
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:24 ; elapsed = 00:01:58 . Memory (MB): peak = 2337.820 ; gain = 444.672 ; free physical = 7380 ; free virtual = 34564
+Synthesis Optimization Complete : Time (s): cpu = 00:01:33 ; elapsed = 00:02:14 . Memory (MB): peak = 2337.828 ; gain = 1066.363 ; free physical = 7389 ; free virtual = 34573
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -1493,5 +1493,5 @@ No Unisim elements were transformed.
 INFO: [Common 17-83] Releasing license: Synthesis
 166 Infos, 108 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:02:14 ; elapsed = 00:03:04 . Memory (MB): peak = 2389.473 ; gain = 1148.594 ; free physical = 7307 ; free virtual = 30282
-INFO: [Common 17-1381] The checkpoint '/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.runs/shell_auto_us_4_synth_1/shell_auto_us_4.dcp' has been generated.
+synth_design: Time (s): cpu = 00:01:36 ; elapsed = 00:02:17 . Memory (MB): peak = 2388.469 ; gain = 1148.586 ; free physical = 7310 ; free virtual = 34493
+INFO: [Common 17-1381] The checkpoint '/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.runs/shell_auto_us_3_synth_1/shell_auto_us_3.dcp' has been generated.

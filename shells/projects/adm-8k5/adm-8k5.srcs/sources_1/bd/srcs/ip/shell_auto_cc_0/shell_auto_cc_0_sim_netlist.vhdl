@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
--- Date        : Thu May  3 12:07:16 2018
+-- Date        : Fri May 11 11:58:53 2018
 -- Host        : ug238 running 64-bit Debian GNU/Linux 9.4 (stretch)
--- Command     : write_vhdl -force -mode funcsim -rename_top shell_auto_cc_0 -prefix
---               shell_auto_cc_0_ shell_auto_cc_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim
+--               /nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_cc_0/shell_auto_cc_0_sim_netlist.vhdl
 -- Design      : shell_auto_cc_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -25,6 +25,8 @@ entity shell_auto_cc_0_xpm_cdc_single is
   attribute DEST_SYNC_FF of shell_auto_cc_0_xpm_cdc_single : entity is 3;
   attribute INIT_SYNC_FF : integer;
   attribute INIT_SYNC_FF of shell_auto_cc_0_xpm_cdc_single : entity is 0;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of shell_auto_cc_0_xpm_cdc_single : entity is "xpm_cdc_single";
   attribute SIM_ASSERT_CHK : integer;
   attribute SIM_ASSERT_CHK of shell_auto_cc_0_xpm_cdc_single : entity is 0;
   attribute SRC_INPUT_REG : integer;
@@ -769,6 +771,8 @@ entity shell_auto_cc_0_xpm_cdc_handshake is
   attribute DEST_SYNC_FF of shell_auto_cc_0_xpm_cdc_handshake : entity is 3;
   attribute INIT_SYNC_FF : integer;
   attribute INIT_SYNC_FF of shell_auto_cc_0_xpm_cdc_handshake : entity is 0;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of shell_auto_cc_0_xpm_cdc_handshake : entity is "xpm_cdc_handshake";
   attribute SIM_ASSERT_CHK : integer;
   attribute SIM_ASSERT_CHK of shell_auto_cc_0_xpm_cdc_handshake : entity is 0;
   attribute SRC_SYNC_FF : integer;
@@ -5128,6 +5132,8 @@ entity shell_auto_cc_0_axi_clock_converter_v2_1_15_lite_async is
     m_axi_arready : in STD_LOGIC;
     s_axi_arvalid : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of shell_auto_cc_0_axi_clock_converter_v2_1_15_lite_async : entity is "axi_clock_converter_v2_1_15_lite_async";
 end shell_auto_cc_0_axi_clock_converter_v2_1_15_lite_async;
 
 architecture STRUCTURE of shell_auto_cc_0_axi_clock_converter_v2_1_15_lite_async is
@@ -6959,6 +6965,8 @@ entity shell_auto_cc_0_axi_clock_converter_v2_1_15_axi_clock_converter is
   attribute C_W_WIDTH of shell_auto_cc_0_axi_clock_converter_v2_1_15_axi_clock_converter : entity is 72;
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of shell_auto_cc_0_axi_clock_converter_v2_1_15_axi_clock_converter : entity is "yes";
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of shell_auto_cc_0_axi_clock_converter_v2_1_15_axi_clock_converter : entity is "axi_clock_converter_v2_1_15_axi_clock_converter";
   attribute P_ACLK_RATIO : integer;
   attribute P_ACLK_RATIO of shell_auto_cc_0_axi_clock_converter_v2_1_15_axi_clock_converter : entity is 2;
   attribute P_AXI3 : integer;

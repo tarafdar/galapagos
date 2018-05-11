@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:hls:axiStreamGate:1.0
-// IP Revision: 1805031148
+// IP Revision: 1805111139
 
 (* X_CORE_INFO = "axiStreamGate,Vivado 2018.1" *)
 (* CHECK_LICENSE_TYPE = "shell_axiStreamGate_0_0,axiStreamGate,{}" *)
-(* CORE_GENERATION_INFO = "shell_axiStreamGate_0_0,axiStreamGate,{x_ipProduct=Vivado 2018.1,x_ipVendor=xilinx.com,x_ipLibrary=hls,x_ipName=axiStreamGate,x_ipVersion=1.0,x_ipCoreRevision=1805031148,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S_AXI_AXILITES_ADDR_WIDTH=5,C_S_AXI_AXILITES_DATA_WIDTH=32}" *)
+(* CORE_GENERATION_INFO = "shell_axiStreamGate_0_0,axiStreamGate,{x_ipProduct=Vivado 2018.1,x_ipVendor=xilinx.com,x_ipLibrary=hls,x_ipName=axiStreamGate,x_ipVersion=1.0,x_ipCoreRevision=1805111139,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S_AXI_AXILITES_ADDR_WIDTH=5,C_S_AXI_AXILITES_DATA_WIDTH=32}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module shell_axiStreamGate_0_0 (
   s_axi_AXILiteS_AWADDR,

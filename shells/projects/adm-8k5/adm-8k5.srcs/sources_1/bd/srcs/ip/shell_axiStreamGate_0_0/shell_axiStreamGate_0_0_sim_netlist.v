@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
-// Date        : Thu May  3 11:57:39 2018
+// Date        : Fri May 11 11:49:22 2018
 // Host        : ug238 running 64-bit Debian GNU/Linux 9.4 (stretch)
-// Command     : write_verilog -force -mode funcsim -rename_top shell_axiStreamGate_0_0 -prefix
-//               shell_axiStreamGate_0_0_ shell_axiStreamGate_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim
+//               /nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axiStreamGate_0_0/shell_axiStreamGate_0_0_sim_netlist.v
 // Design      : shell_axiStreamGate_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,10 +12,145 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
+(* CHECK_LICENSE_TYPE = "shell_axiStreamGate_0_0,axiStreamGate,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "axiStreamGate,Vivado 2018.1" *) 
+(* hls_module = "yes" *) 
+(* NotValidForBitStream *)
+module shell_axiStreamGate_0_0
+   (s_axi_AXILiteS_AWADDR,
+    s_axi_AXILiteS_AWVALID,
+    s_axi_AXILiteS_AWREADY,
+    s_axi_AXILiteS_WDATA,
+    s_axi_AXILiteS_WSTRB,
+    s_axi_AXILiteS_WVALID,
+    s_axi_AXILiteS_WREADY,
+    s_axi_AXILiteS_BRESP,
+    s_axi_AXILiteS_BVALID,
+    s_axi_AXILiteS_BREADY,
+    s_axi_AXILiteS_ARADDR,
+    s_axi_AXILiteS_ARVALID,
+    s_axi_AXILiteS_ARREADY,
+    s_axi_AXILiteS_RDATA,
+    s_axi_AXILiteS_RRESP,
+    s_axi_AXILiteS_RVALID,
+    s_axi_AXILiteS_RREADY,
+    ap_clk,
+    ap_rst_n,
+    packetIn_TVALID,
+    packetIn_TREADY,
+    packetIn_TDATA,
+    packetIn_TKEEP,
+    packetIn_TLAST,
+    packetOut_TVALID,
+    packetOut_TREADY,
+    packetOut_TDATA,
+    packetOut_TKEEP,
+    packetOut_TLAST);
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS AWADDR" *) input [4:0]s_axi_AXILiteS_AWADDR;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS AWVALID" *) input s_axi_AXILiteS_AWVALID;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS AWREADY" *) output s_axi_AXILiteS_AWREADY;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS WDATA" *) input [31:0]s_axi_AXILiteS_WDATA;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS WSTRB" *) input [3:0]s_axi_AXILiteS_WSTRB;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS WVALID" *) input s_axi_AXILiteS_WVALID;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS WREADY" *) output s_axi_AXILiteS_WREADY;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS BRESP" *) output [1:0]s_axi_AXILiteS_BRESP;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS BVALID" *) output s_axi_AXILiteS_BVALID;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS BREADY" *) input s_axi_AXILiteS_BREADY;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS ARADDR" *) input [4:0]s_axi_AXILiteS_ARADDR;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS ARVALID" *) input s_axi_AXILiteS_ARVALID;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS ARREADY" *) output s_axi_AXILiteS_ARREADY;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS RDATA" *) output [31:0]s_axi_AXILiteS_RDATA;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS RRESP" *) output [1:0]s_axi_AXILiteS_RRESP;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS RVALID" *) output s_axi_AXILiteS_RVALID;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS RREADY" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axi_AXILiteS, ADDR_WIDTH 5, DATA_WIDTH 32, PROTOCOL AXI4LITE, READ_WRITE_MODE READ_WRITE, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}, FREQ_HZ 156250000, ID_WIDTH 0, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN bd_01e2_xpcs_0_txusrclk2_out, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0" *) input s_axi_AXILiteS_RREADY;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 ap_clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME ap_clk, ASSOCIATED_BUSIF s_axi_AXILiteS:packetIn:packetOut, ASSOCIATED_RESET ap_rst_n, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}, FREQ_HZ 156250000, PHASE 0.000, CLK_DOMAIN bd_01e2_xpcs_0_txusrclk2_out" *) input ap_clk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 ap_rst_n RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME ap_rst_n, POLARITY ACTIVE_LOW, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {RST {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}" *) input ap_rst_n;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 packetIn TVALID" *) input packetIn_TVALID;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 packetIn TREADY" *) output packetIn_TREADY;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 packetIn TDATA" *) input [63:0]packetIn_TDATA;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 packetIn TKEEP" *) input [7:0]packetIn_TKEEP;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 packetIn TLAST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME packetIn, TDATA_NUM_BYTES 8, TUSER_WIDTH 0, LAYERED_METADATA undef, TDEST_WIDTH 0, TID_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 156250000, PHASE 0.000, CLK_DOMAIN bd_01e2_xpcs_0_txusrclk2_out" *) input [0:0]packetIn_TLAST;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 packetOut TVALID" *) output packetOut_TVALID;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 packetOut TREADY" *) input packetOut_TREADY;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 packetOut TDATA" *) output [63:0]packetOut_TDATA;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 packetOut TKEEP" *) output [7:0]packetOut_TKEEP;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 packetOut TLAST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME packetOut, TDATA_NUM_BYTES 8, TUSER_WIDTH 0, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} TDATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 64} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}} TDATA_WIDTH 64}, TDEST_WIDTH 0, TID_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 156250000, PHASE 0.000, CLK_DOMAIN bd_01e2_xpcs_0_txusrclk2_out" *) output [0:0]packetOut_TLAST;
+
+  wire ap_clk;
+  wire ap_rst_n;
+  wire [63:0]packetIn_TDATA;
+  wire [7:0]packetIn_TKEEP;
+  wire [0:0]packetIn_TLAST;
+  wire packetIn_TREADY;
+  wire packetIn_TVALID;
+  wire [63:0]packetOut_TDATA;
+  wire [7:0]packetOut_TKEEP;
+  wire [0:0]packetOut_TLAST;
+  wire packetOut_TREADY;
+  wire packetOut_TVALID;
+  wire [4:0]s_axi_AXILiteS_ARADDR;
+  wire s_axi_AXILiteS_ARREADY;
+  wire s_axi_AXILiteS_ARVALID;
+  wire [4:0]s_axi_AXILiteS_AWADDR;
+  wire s_axi_AXILiteS_AWREADY;
+  wire s_axi_AXILiteS_AWVALID;
+  wire s_axi_AXILiteS_BREADY;
+  wire [1:0]s_axi_AXILiteS_BRESP;
+  wire s_axi_AXILiteS_BVALID;
+  wire [31:0]s_axi_AXILiteS_RDATA;
+  wire s_axi_AXILiteS_RREADY;
+  wire [1:0]s_axi_AXILiteS_RRESP;
+  wire s_axi_AXILiteS_RVALID;
+  wire [31:0]s_axi_AXILiteS_WDATA;
+  wire s_axi_AXILiteS_WREADY;
+  wire [3:0]s_axi_AXILiteS_WSTRB;
+  wire s_axi_AXILiteS_WVALID;
+
+  (* C_S_AXI_AXILITES_ADDR_WIDTH = "5" *) 
+  (* C_S_AXI_AXILITES_DATA_WIDTH = "32" *) 
+  (* C_S_AXI_AXILITES_WSTRB_WIDTH = "4" *) 
+  (* C_S_AXI_DATA_WIDTH = "32" *) 
+  (* C_S_AXI_WSTRB_WIDTH = "4" *) 
+  (* ap_ST_fsm_state1 = "5'b00001" *) 
+  (* ap_ST_fsm_state2 = "5'b00010" *) 
+  (* ap_ST_fsm_state3 = "5'b00100" *) 
+  (* ap_ST_fsm_state4 = "5'b01000" *) 
+  (* ap_ST_fsm_state5 = "5'b10000" *) 
+  shell_axiStreamGate_0_0_axiStreamGate inst
+       (.ap_clk(ap_clk),
+        .ap_rst_n(ap_rst_n),
+        .packetIn_TDATA(packetIn_TDATA),
+        .packetIn_TKEEP(packetIn_TKEEP),
+        .packetIn_TLAST(packetIn_TLAST),
+        .packetIn_TREADY(packetIn_TREADY),
+        .packetIn_TVALID(packetIn_TVALID),
+        .packetOut_TDATA(packetOut_TDATA),
+        .packetOut_TKEEP(packetOut_TKEEP),
+        .packetOut_TLAST(packetOut_TLAST),
+        .packetOut_TREADY(packetOut_TREADY),
+        .packetOut_TVALID(packetOut_TVALID),
+        .s_axi_AXILiteS_ARADDR(s_axi_AXILiteS_ARADDR),
+        .s_axi_AXILiteS_ARREADY(s_axi_AXILiteS_ARREADY),
+        .s_axi_AXILiteS_ARVALID(s_axi_AXILiteS_ARVALID),
+        .s_axi_AXILiteS_AWADDR(s_axi_AXILiteS_AWADDR),
+        .s_axi_AXILiteS_AWREADY(s_axi_AXILiteS_AWREADY),
+        .s_axi_AXILiteS_AWVALID(s_axi_AXILiteS_AWVALID),
+        .s_axi_AXILiteS_BREADY(s_axi_AXILiteS_BREADY),
+        .s_axi_AXILiteS_BRESP(s_axi_AXILiteS_BRESP),
+        .s_axi_AXILiteS_BVALID(s_axi_AXILiteS_BVALID),
+        .s_axi_AXILiteS_RDATA(s_axi_AXILiteS_RDATA),
+        .s_axi_AXILiteS_RREADY(s_axi_AXILiteS_RREADY),
+        .s_axi_AXILiteS_RRESP(s_axi_AXILiteS_RRESP),
+        .s_axi_AXILiteS_RVALID(s_axi_AXILiteS_RVALID),
+        .s_axi_AXILiteS_WDATA(s_axi_AXILiteS_WDATA),
+        .s_axi_AXILiteS_WREADY(s_axi_AXILiteS_WREADY),
+        .s_axi_AXILiteS_WSTRB(s_axi_AXILiteS_WSTRB),
+        .s_axi_AXILiteS_WVALID(s_axi_AXILiteS_WVALID));
+endmodule
+
 (* C_S_AXI_AXILITES_ADDR_WIDTH = "5" *) (* C_S_AXI_AXILITES_DATA_WIDTH = "32" *) (* C_S_AXI_AXILITES_WSTRB_WIDTH = "4" *) 
-(* C_S_AXI_DATA_WIDTH = "32" *) (* C_S_AXI_WSTRB_WIDTH = "4" *) (* ap_ST_fsm_state1 = "5'b00001" *) 
-(* ap_ST_fsm_state2 = "5'b00010" *) (* ap_ST_fsm_state3 = "5'b00100" *) (* ap_ST_fsm_state4 = "5'b01000" *) 
-(* ap_ST_fsm_state5 = "5'b10000" *) (* hls_module = "yes" *) 
+(* C_S_AXI_DATA_WIDTH = "32" *) (* C_S_AXI_WSTRB_WIDTH = "4" *) (* ORIG_REF_NAME = "axiStreamGate" *) 
+(* ap_ST_fsm_state1 = "5'b00001" *) (* ap_ST_fsm_state2 = "5'b00010" *) (* ap_ST_fsm_state3 = "5'b00100" *) 
+(* ap_ST_fsm_state4 = "5'b01000" *) (* ap_ST_fsm_state5 = "5'b10000" *) (* hls_module = "yes" *) 
 module shell_axiStreamGate_0_0_axiStreamGate
    (ap_clk,
     ap_rst_n,
@@ -2047,6 +2182,7 @@ module shell_axiStreamGate_0_0_axiStreamGate
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "axiStreamGate_AXILiteS_s_axi" *) 
 module shell_axiStreamGate_0_0_axiStreamGate_AXILiteS_s_axi
    (out,
     s_axi_AXILiteS_RVALID,
@@ -3290,141 +3426,6 @@ module shell_axiStreamGate_0_0_axiStreamGate_AXILiteS_s_axi
         .D(s_axi_AXILiteS_AWADDR[4]),
         .Q(\waddr_reg_n_0_[4] ),
         .R(1'b0));
-endmodule
-
-(* CHECK_LICENSE_TYPE = "shell_axiStreamGate_0_0,axiStreamGate,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "axiStreamGate,Vivado 2018.1" *) 
-(* hls_module = "yes" *) 
-(* NotValidForBitStream *)
-module shell_axiStreamGate_0_0
-   (s_axi_AXILiteS_AWADDR,
-    s_axi_AXILiteS_AWVALID,
-    s_axi_AXILiteS_AWREADY,
-    s_axi_AXILiteS_WDATA,
-    s_axi_AXILiteS_WSTRB,
-    s_axi_AXILiteS_WVALID,
-    s_axi_AXILiteS_WREADY,
-    s_axi_AXILiteS_BRESP,
-    s_axi_AXILiteS_BVALID,
-    s_axi_AXILiteS_BREADY,
-    s_axi_AXILiteS_ARADDR,
-    s_axi_AXILiteS_ARVALID,
-    s_axi_AXILiteS_ARREADY,
-    s_axi_AXILiteS_RDATA,
-    s_axi_AXILiteS_RRESP,
-    s_axi_AXILiteS_RVALID,
-    s_axi_AXILiteS_RREADY,
-    ap_clk,
-    ap_rst_n,
-    packetIn_TVALID,
-    packetIn_TREADY,
-    packetIn_TDATA,
-    packetIn_TKEEP,
-    packetIn_TLAST,
-    packetOut_TVALID,
-    packetOut_TREADY,
-    packetOut_TDATA,
-    packetOut_TKEEP,
-    packetOut_TLAST);
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS AWADDR" *) input [4:0]s_axi_AXILiteS_AWADDR;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS AWVALID" *) input s_axi_AXILiteS_AWVALID;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS AWREADY" *) output s_axi_AXILiteS_AWREADY;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS WDATA" *) input [31:0]s_axi_AXILiteS_WDATA;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS WSTRB" *) input [3:0]s_axi_AXILiteS_WSTRB;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS WVALID" *) input s_axi_AXILiteS_WVALID;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS WREADY" *) output s_axi_AXILiteS_WREADY;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS BRESP" *) output [1:0]s_axi_AXILiteS_BRESP;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS BVALID" *) output s_axi_AXILiteS_BVALID;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS BREADY" *) input s_axi_AXILiteS_BREADY;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS ARADDR" *) input [4:0]s_axi_AXILiteS_ARADDR;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS ARVALID" *) input s_axi_AXILiteS_ARVALID;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS ARREADY" *) output s_axi_AXILiteS_ARREADY;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS RDATA" *) output [31:0]s_axi_AXILiteS_RDATA;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS RRESP" *) output [1:0]s_axi_AXILiteS_RRESP;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS RVALID" *) output s_axi_AXILiteS_RVALID;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_AXILiteS RREADY" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axi_AXILiteS, ADDR_WIDTH 5, DATA_WIDTH 32, PROTOCOL AXI4LITE, READ_WRITE_MODE READ_WRITE, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}, FREQ_HZ 156250000, ID_WIDTH 0, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN bd_01e2_xpcs_0_txusrclk2_out, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0" *) input s_axi_AXILiteS_RREADY;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 ap_clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME ap_clk, ASSOCIATED_BUSIF s_axi_AXILiteS:packetIn:packetOut, ASSOCIATED_RESET ap_rst_n, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}, FREQ_HZ 156250000, PHASE 0.000, CLK_DOMAIN bd_01e2_xpcs_0_txusrclk2_out" *) input ap_clk;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 ap_rst_n RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME ap_rst_n, POLARITY ACTIVE_LOW, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {RST {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}" *) input ap_rst_n;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 packetIn TVALID" *) input packetIn_TVALID;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 packetIn TREADY" *) output packetIn_TREADY;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 packetIn TDATA" *) input [63:0]packetIn_TDATA;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 packetIn TKEEP" *) input [7:0]packetIn_TKEEP;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 packetIn TLAST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME packetIn, TDATA_NUM_BYTES 8, TUSER_WIDTH 0, LAYERED_METADATA undef, TDEST_WIDTH 0, TID_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 156250000, PHASE 0.000, CLK_DOMAIN bd_01e2_xpcs_0_txusrclk2_out" *) input [0:0]packetIn_TLAST;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 packetOut TVALID" *) output packetOut_TVALID;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 packetOut TREADY" *) input packetOut_TREADY;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 packetOut TDATA" *) output [63:0]packetOut_TDATA;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 packetOut TKEEP" *) output [7:0]packetOut_TKEEP;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 packetOut TLAST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME packetOut, TDATA_NUM_BYTES 8, TUSER_WIDTH 0, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} TDATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 64} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}} TDATA_WIDTH 64}, TDEST_WIDTH 0, TID_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 156250000, PHASE 0.000, CLK_DOMAIN bd_01e2_xpcs_0_txusrclk2_out" *) output [0:0]packetOut_TLAST;
-
-  wire ap_clk;
-  wire ap_rst_n;
-  wire [63:0]packetIn_TDATA;
-  wire [7:0]packetIn_TKEEP;
-  wire [0:0]packetIn_TLAST;
-  wire packetIn_TREADY;
-  wire packetIn_TVALID;
-  wire [63:0]packetOut_TDATA;
-  wire [7:0]packetOut_TKEEP;
-  wire [0:0]packetOut_TLAST;
-  wire packetOut_TREADY;
-  wire packetOut_TVALID;
-  wire [4:0]s_axi_AXILiteS_ARADDR;
-  wire s_axi_AXILiteS_ARREADY;
-  wire s_axi_AXILiteS_ARVALID;
-  wire [4:0]s_axi_AXILiteS_AWADDR;
-  wire s_axi_AXILiteS_AWREADY;
-  wire s_axi_AXILiteS_AWVALID;
-  wire s_axi_AXILiteS_BREADY;
-  wire [1:0]s_axi_AXILiteS_BRESP;
-  wire s_axi_AXILiteS_BVALID;
-  wire [31:0]s_axi_AXILiteS_RDATA;
-  wire s_axi_AXILiteS_RREADY;
-  wire [1:0]s_axi_AXILiteS_RRESP;
-  wire s_axi_AXILiteS_RVALID;
-  wire [31:0]s_axi_AXILiteS_WDATA;
-  wire s_axi_AXILiteS_WREADY;
-  wire [3:0]s_axi_AXILiteS_WSTRB;
-  wire s_axi_AXILiteS_WVALID;
-
-  (* C_S_AXI_AXILITES_ADDR_WIDTH = "5" *) 
-  (* C_S_AXI_AXILITES_DATA_WIDTH = "32" *) 
-  (* C_S_AXI_AXILITES_WSTRB_WIDTH = "4" *) 
-  (* C_S_AXI_DATA_WIDTH = "32" *) 
-  (* C_S_AXI_WSTRB_WIDTH = "4" *) 
-  (* ap_ST_fsm_state1 = "5'b00001" *) 
-  (* ap_ST_fsm_state2 = "5'b00010" *) 
-  (* ap_ST_fsm_state3 = "5'b00100" *) 
-  (* ap_ST_fsm_state4 = "5'b01000" *) 
-  (* ap_ST_fsm_state5 = "5'b10000" *) 
-  shell_axiStreamGate_0_0_axiStreamGate inst
-       (.ap_clk(ap_clk),
-        .ap_rst_n(ap_rst_n),
-        .packetIn_TDATA(packetIn_TDATA),
-        .packetIn_TKEEP(packetIn_TKEEP),
-        .packetIn_TLAST(packetIn_TLAST),
-        .packetIn_TREADY(packetIn_TREADY),
-        .packetIn_TVALID(packetIn_TVALID),
-        .packetOut_TDATA(packetOut_TDATA),
-        .packetOut_TKEEP(packetOut_TKEEP),
-        .packetOut_TLAST(packetOut_TLAST),
-        .packetOut_TREADY(packetOut_TREADY),
-        .packetOut_TVALID(packetOut_TVALID),
-        .s_axi_AXILiteS_ARADDR(s_axi_AXILiteS_ARADDR),
-        .s_axi_AXILiteS_ARREADY(s_axi_AXILiteS_ARREADY),
-        .s_axi_AXILiteS_ARVALID(s_axi_AXILiteS_ARVALID),
-        .s_axi_AXILiteS_AWADDR(s_axi_AXILiteS_AWADDR),
-        .s_axi_AXILiteS_AWREADY(s_axi_AXILiteS_AWREADY),
-        .s_axi_AXILiteS_AWVALID(s_axi_AXILiteS_AWVALID),
-        .s_axi_AXILiteS_BREADY(s_axi_AXILiteS_BREADY),
-        .s_axi_AXILiteS_BRESP(s_axi_AXILiteS_BRESP),
-        .s_axi_AXILiteS_BVALID(s_axi_AXILiteS_BVALID),
-        .s_axi_AXILiteS_RDATA(s_axi_AXILiteS_RDATA),
-        .s_axi_AXILiteS_RREADY(s_axi_AXILiteS_RREADY),
-        .s_axi_AXILiteS_RRESP(s_axi_AXILiteS_RRESP),
-        .s_axi_AXILiteS_RVALID(s_axi_AXILiteS_RVALID),
-        .s_axi_AXILiteS_WDATA(s_axi_AXILiteS_WDATA),
-        .s_axi_AXILiteS_WREADY(s_axi_AXILiteS_WREADY),
-        .s_axi_AXILiteS_WSTRB(s_axi_AXILiteS_WSTRB),
-        .s_axi_AXILiteS_WVALID(s_axi_AXILiteS_WVALID));
 endmodule
 `ifndef GLBL
 `define GLBL

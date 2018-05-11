@@ -1,26 +1,79 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu May 10 15:02:45 2018" VIVADOVERSION="2018.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri May 11 11:45:15 2018" VIVADOVERSION="2018.1">
 
   <SYSTEMINFO ARCH="kintexu" DEVICE="xcku115" NAME="bd_01e2" PACKAGE="flva1517" SPEEDGRADE="-2"/>
 
   <EXTERNALPORTS>
-    <PORT DIR="I" LEFT="63" NAME="s_axis_tx_tdata" RIGHT="0" SIGIS="undef"/>
-    <PORT DIR="I" LEFT="7" NAME="s_axis_tx_tkeep" RIGHT="0" SIGIS="undef"/>
-    <PORT DIR="I" NAME="s_axis_tx_tlast" SIGIS="undef"/>
-    <PORT DIR="O" NAME="s_axis_tx_tready" SIGIS="undef"/>
-    <PORT DIR="I" LEFT="0" NAME="s_axis_tx_tuser" RIGHT="0" SIGIS="undef"/>
-    <PORT DIR="I" NAME="s_axis_tx_tvalid" SIGIS="undef"/>
-    <PORT DIR="O" LEFT="63" NAME="m_axis_rx_tdata" RIGHT="0" SIGIS="undef"/>
-    <PORT DIR="O" LEFT="7" NAME="m_axis_rx_tkeep" RIGHT="0" SIGIS="undef"/>
-    <PORT DIR="O" NAME="m_axis_rx_tlast" SIGIS="undef"/>
-    <PORT DIR="O" NAME="m_axis_rx_tuser" SIGIS="undef"/>
-    <PORT DIR="O" NAME="m_axis_rx_tvalid" SIGIS="undef"/>
-    <PORT DIR="I" LEFT="15" NAME="s_axis_pause_tdata" RIGHT="0" SIGIS="undef"/>
-    <PORT DIR="I" NAME="s_axis_pause_tvalid" SIGIS="undef"/>
-    <PORT DIR="O" NAME="tx_statistics_valid" SIGIS="undef"/>
-    <PORT DIR="O" LEFT="25" NAME="tx_statistics_vector" RIGHT="0" SIGIS="undef"/>
-    <PORT DIR="O" NAME="rx_statistics_valid" SIGIS="undef"/>
-    <PORT DIR="O" LEFT="29" NAME="rx_statistics_vector" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="I" NAME="tx_axis_aresetn" SIGIS="rst" SIGNAME="External_Ports_tx_axis_aresetn">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xmac" PORT="tx_axis_aresetn"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="rx_axis_aresetn" SIGIS="rst" SIGNAME="External_Ports_rx_axis_aresetn">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xmac" PORT="rx_axis_aresetn"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="7" NAME="tx_ifg_delay" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_tx_ifg_delay">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xmac" PORT="tx_ifg_delay"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="dclk" SIGIS="clk" SIGNAME="External_Ports_dclk">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xpcs" PORT="dclk"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="txp" SIGIS="undef" SIGNAME="xpcs_txp">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xpcs" PORT="txp"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="txn" SIGIS="undef" SIGNAME="xpcs_txn">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xpcs" PORT="txn"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="rxp" SIGIS="undef" SIGNAME="External_Ports_rxp">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xpcs" PORT="rxp"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="rxn" SIGIS="undef" SIGNAME="External_Ports_rxn">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xpcs" PORT="rxn"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="signal_detect" SIGIS="undef" SIGNAME="External_Ports_signal_detect">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xpcs" PORT="signal_detect"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="tx_fault" SIGIS="undef" SIGNAME="External_Ports_tx_fault">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xpcs" PORT="tx_fault"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="tx_disable" SIGIS="undef" SIGNAME="xpcs_tx_disable">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xpcs" PORT="tx_disable"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="7" NAME="pcspma_status" RIGHT="0" SIGIS="undef" SIGNAME="xpcs_core_status">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xpcs" PORT="core_status"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="sim_speedup_control" SIGIS="undef" SIGNAME="External_Ports_sim_speedup_control">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xpcs" PORT="sim_speedup_control"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="156250000" DIR="O" NAME="rxrecclk_out" SIGIS="clk" SIGNAME="xpcs_rxrecclk_out">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xpcs" PORT="rxrecclk_out"/>
+      </CONNECTIONS>
+    </PORT>
     <PORT DIR="I" LEFT="79" NAME="mac_tx_configuration_vector" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_mac_tx_configuration_vector">
       <CONNECTIONS>
         <CONNECTION INSTANCE="xmac" PORT="tx_configuration_vector"/>
@@ -46,125 +99,9 @@
         <CONNECTION INSTANCE="xpcs" PORT="status_vector"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" NAME="tx_axis_aresetn" SIGIS="rst" SIGNAME="External_Ports_tx_axis_aresetn">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="xmac" PORT="tx_axis_aresetn"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" LEFT="7" NAME="tx_ifg_delay" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_tx_ifg_delay">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="xmac" PORT="tx_ifg_delay"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="rx_axis_aresetn" SIGIS="rst" SIGNAME="External_Ports_rx_axis_aresetn">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="xmac" PORT="rx_axis_aresetn"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="sim_speedup_control" SIGIS="undef" SIGNAME="External_Ports_sim_speedup_control">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="xpcs" PORT="sim_speedup_control"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="rxp" SIGIS="undef" SIGNAME="External_Ports_rxp">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="xpcs" PORT="rxp"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="rxn" SIGIS="undef" SIGNAME="External_Ports_rxn">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="xpcs" PORT="rxn"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="txp" SIGIS="undef" SIGNAME="xpcs_txp">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="xpcs" PORT="txp"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="txn" SIGIS="undef" SIGNAME="xpcs_txn">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="xpcs" PORT="txn"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="tx_disable" SIGIS="undef" SIGNAME="xpcs_tx_disable">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="xpcs" PORT="tx_disable"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT CLKFREQUENCY="156250000" DIR="O" NAME="rxrecclk_out" SIGIS="clk" SIGNAME="xpcs_rxrecclk_out">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="xpcs" PORT="rxrecclk_out"/>
-      </CONNECTIONS>
-    </PORT>
     <PORT DIR="O" NAME="areset_datapathclk_out" SIGIS="rst" SIGNAME="xpcs_areset_datapathclk_out">
       <CONNECTIONS>
         <CONNECTION INSTANCE="xpcs" PORT="areset_datapathclk_out"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="areset_coreclk_out" SIGIS="rst" SIGNAME="xpcs_areset_coreclk_out">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="xpcs" PORT="areset_coreclk_out"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT CLKFREQUENCY="156250000" DIR="O" NAME="coreclk_out" SIGIS="clk" SIGNAME="xpcs_coreclk_out">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="xpcs" PORT="coreclk_out"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="reset" SIGIS="rst" SIGNAME="External_Ports_reset">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="xpcs" PORT="reset"/>
-        <CONNECTION INSTANCE="xmac" PORT="reset"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="refclk_p" SIGIS="undef" SIGNAME="External_Ports_refclk_p">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="xpcs" PORT="refclk_p"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="refclk_n" SIGIS="undef" SIGNAME="External_Ports_refclk_n">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="xpcs" PORT="refclk_n"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="resetdone_out" SIGIS="undef" SIGNAME="xpcs_resetdone_out">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="xpcs" PORT="resetdone_out"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="signal_detect" SIGIS="undef" SIGNAME="External_Ports_signal_detect">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="xpcs" PORT="signal_detect"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="tx_fault" SIGIS="undef" SIGNAME="External_Ports_tx_fault">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="xpcs" PORT="tx_fault"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="qpll0lock_out" SIGIS="undef" SIGNAME="xpcs_qpll0lock_out">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="xpcs" PORT="qpll0lock_out"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT CLKFREQUENCY="156250000" DIR="O" NAME="qpll0outclk_out" SIGIS="clk" SIGNAME="xpcs_qpll0outclk_out">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="xpcs" PORT="qpll0outclk_out"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT CLKFREQUENCY="156250000" DIR="O" NAME="qpll0outrefclk_out" SIGIS="clk" SIGNAME="xpcs_qpll0outrefclk_out">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="xpcs" PORT="qpll0outrefclk_out"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" LEFT="7" NAME="pcspma_status" RIGHT="0" SIGIS="undef" SIGNAME="xpcs_core_status">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="xpcs" PORT="core_status"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="reset_counter_done_out" SIGIS="undef" SIGNAME="xpcs_reset_counter_done_out">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="xpcs" PORT="reset_counter_done_out"/>
       </CONNECTIONS>
     </PORT>
     <PORT CLKFREQUENCY="312500000" DIR="O" NAME="txusrclk_out" SIGIS="clk" SIGNAME="xpcs_txusrclk_out">
@@ -192,11 +129,74 @@
         <CONNECTION INSTANCE="xpcs" PORT="txuserrdy_out"/>
       </CONNECTIONS>
     </PORT>
-    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="dclk" SIGIS="clk" SIGNAME="External_Ports_dclk">
+    <PORT CLKFREQUENCY="156250000" DIR="O" NAME="coreclk_out" SIGIS="clk" SIGNAME="xpcs_coreclk_out">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="xpcs" PORT="dclk"/>
+        <CONNECTION INSTANCE="xpcs" PORT="coreclk_out"/>
       </CONNECTIONS>
     </PORT>
+    <PORT DIR="O" NAME="resetdone_out" SIGIS="undef" SIGNAME="xpcs_resetdone_out">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xpcs" PORT="resetdone_out"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="reset_counter_done_out" SIGIS="undef" SIGNAME="xpcs_reset_counter_done_out">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xpcs" PORT="reset_counter_done_out"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="qpll0lock_out" SIGIS="undef" SIGNAME="xpcs_qpll0lock_out">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xpcs" PORT="qpll0lock_out"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="156250000" DIR="O" NAME="qpll0outclk_out" SIGIS="clk" SIGNAME="xpcs_qpll0outclk_out">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xpcs" PORT="qpll0outclk_out"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="156250000" DIR="O" NAME="qpll0outrefclk_out" SIGIS="clk" SIGNAME="xpcs_qpll0outrefclk_out">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xpcs" PORT="qpll0outrefclk_out"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="areset_coreclk_out" SIGIS="rst" SIGNAME="xpcs_areset_coreclk_out">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xpcs" PORT="areset_coreclk_out"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="refclk_p" SIGIS="undef" SIGNAME="External_Ports_refclk_p">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xpcs" PORT="refclk_p"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="refclk_n" SIGIS="undef" SIGNAME="External_Ports_refclk_n">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xpcs" PORT="refclk_n"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="reset" SIGIS="rst" SIGNAME="External_Ports_reset">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xpcs" PORT="reset"/>
+        <CONNECTION INSTANCE="xmac" PORT="reset"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="63" NAME="s_axis_tx_tdata" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="I" LEFT="7" NAME="s_axis_tx_tkeep" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="I" NAME="s_axis_tx_tlast" SIGIS="undef"/>
+    <PORT DIR="O" NAME="s_axis_tx_tready" SIGIS="undef"/>
+    <PORT DIR="I" LEFT="0" NAME="s_axis_tx_tuser" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="I" NAME="s_axis_tx_tvalid" SIGIS="undef"/>
+    <PORT DIR="I" LEFT="15" NAME="s_axis_pause_tdata" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="I" NAME="s_axis_pause_tvalid" SIGIS="undef"/>
+    <PORT DIR="O" LEFT="63" NAME="m_axis_rx_tdata" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="O" LEFT="7" NAME="m_axis_rx_tkeep" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="O" NAME="m_axis_rx_tlast" SIGIS="undef"/>
+    <PORT DIR="O" NAME="m_axis_rx_tuser" SIGIS="undef"/>
+    <PORT DIR="O" NAME="m_axis_rx_tvalid" SIGIS="undef"/>
+    <PORT DIR="O" NAME="tx_statistics_valid" SIGIS="undef"/>
+    <PORT DIR="O" LEFT="25" NAME="tx_statistics_vector" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="O" NAME="rx_statistics_valid" SIGIS="undef"/>
+    <PORT DIR="O" LEFT="29" NAME="rx_statistics_vector" RIGHT="0" SIGIS="undef"/>
   </EXTERNALPORTS>
 
   <EXTERNALINTERFACES>

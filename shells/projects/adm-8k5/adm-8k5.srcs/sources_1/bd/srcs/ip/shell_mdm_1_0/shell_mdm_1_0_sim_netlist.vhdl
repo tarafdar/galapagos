@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
--- Date        : Thu May  3 11:58:08 2018
+-- Date        : Fri May 11 11:49:53 2018
 -- Host        : ug238 running 64-bit Debian GNU/Linux 9.4 (stretch)
--- Command     : write_vhdl -force -mode funcsim -rename_top shell_mdm_1_0 -prefix
---               shell_mdm_1_0_ shell_mdm_1_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim
+--               /nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_mdm_1_0/shell_mdm_1_0_sim_netlist.vhdl
 -- Design      : shell_mdm_1_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -42,6 +42,8 @@ entity shell_mdm_1_0_MB_BSCANE2 is
     \Use_Serial_Unified_Completion.count_reg[1]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     \Use_Serial_Unified_Completion.sample_1_reg[15]\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of shell_mdm_1_0_MB_BSCANE2 : entity is "MB_BSCANE2";
 end shell_mdm_1_0_MB_BSCANE2;
 
 architecture STRUCTURE of shell_mdm_1_0_MB_BSCANE2 is
@@ -179,6 +181,8 @@ entity shell_mdm_1_0_MB_BUFG is
     Dbg_Clk_31 : out STD_LOGIC;
     drck_i : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of shell_mdm_1_0_MB_BUFG : entity is "MB_BUFG";
 end shell_mdm_1_0_MB_BUFG;
 
 architecture STRUCTURE of shell_mdm_1_0_MB_BUFG is
@@ -250,6 +254,8 @@ entity shell_mdm_1_0_MB_FDC_1 is
     completion_ctrl : in STD_LOGIC;
     in0 : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of shell_mdm_1_0_MB_FDC_1 : entity is "MB_FDC_1";
 end shell_mdm_1_0_MB_FDC_1;
 
 architecture STRUCTURE of shell_mdm_1_0_MB_FDC_1 is
@@ -796,6 +802,8 @@ entity shell_mdm_1_0_MB_FDRE is
     tx_Buffer_Empty : in STD_LOGIC;
     S_AXI_ACLK : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of shell_mdm_1_0_MB_FDRE : entity is "MB_FDRE";
 end shell_mdm_1_0_MB_FDRE;
 
 architecture STRUCTURE of shell_mdm_1_0_MB_FDRE is
@@ -840,6 +848,8 @@ entity shell_mdm_1_0_MB_FDRE_1 is
     \Using_FPGA.Native_0\ : in STD_LOGIC;
     \Use_BSCAN.command_reg[6]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of shell_mdm_1_0_MB_FDRE_1 : entity is "MB_FDRE_1";
 end shell_mdm_1_0_MB_FDRE_1;
 
 architecture STRUCTURE of shell_mdm_1_0_MB_FDRE_1 is
@@ -1511,6 +1521,8 @@ entity shell_mdm_1_0_MB_FDRSE is
     S_AXI_ACLK : in STD_LOGIC;
     set_Ext_BRK : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of shell_mdm_1_0_MB_FDRSE : entity is "MB_FDRSE";
 end shell_mdm_1_0_MB_FDRSE;
 
 architecture STRUCTURE of shell_mdm_1_0_MB_FDRSE is
@@ -1570,6 +1582,8 @@ entity shell_mdm_1_0_MB_MUXCY_XORCY is
     lopt_8 : out STD_LOGIC;
     lopt_9 : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of shell_mdm_1_0_MB_MUXCY_XORCY : entity is "MB_MUXCY_XORCY";
 end shell_mdm_1_0_MB_MUXCY_XORCY;
 
 architecture STRUCTURE of shell_mdm_1_0_MB_MUXCY_XORCY is
@@ -1828,6 +1842,8 @@ entity shell_mdm_1_0_MB_SRL16E is
     Q : in STD_LOGIC_VECTOR ( 3 downto 0 );
     \Use_BSCAN.PORT_Selector_reg[0]\ : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of shell_mdm_1_0_MB_SRL16E : entity is "MB_SRL16E";
 end shell_mdm_1_0_MB_SRL16E;
 
 architecture STRUCTURE of shell_mdm_1_0_MB_SRL16E is
@@ -2668,6 +2684,8 @@ entity shell_mdm_1_0_MB_XORCY is
     LO : in STD_LOGIC;
     lopt : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of shell_mdm_1_0_MB_XORCY : entity is "MB_XORCY";
 end shell_mdm_1_0_MB_XORCY;
 
 architecture STRUCTURE of shell_mdm_1_0_MB_XORCY is
@@ -2706,6 +2724,8 @@ entity shell_mdm_1_0_pselect_f is
     ce_expnd_i_3 : out STD_LOGIC;
     Q : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of shell_mdm_1_0_pselect_f : entity is "pselect_f";
 end shell_mdm_1_0_pselect_f;
 
 architecture STRUCTURE of shell_mdm_1_0_pselect_f is
@@ -2768,6 +2788,8 @@ entity shell_mdm_1_0_SRL_FIFO is
     Bus_RNW_reg : in STD_LOGIC;
     \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg\ : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of shell_mdm_1_0_SRL_FIFO : entity is "SRL_FIFO";
 end shell_mdm_1_0_SRL_FIFO;
 
 architecture STRUCTURE of shell_mdm_1_0_SRL_FIFO is
@@ -3325,6 +3347,8 @@ entity shell_mdm_1_0_address_decoder is
     bus2ip_rnw_i : in STD_LOGIC;
     Q : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of shell_mdm_1_0_address_decoder : entity is "address_decoder";
 end shell_mdm_1_0_address_decoder;
 
 architecture STRUCTURE of shell_mdm_1_0_address_decoder is
@@ -3784,6 +3808,8 @@ entity shell_mdm_1_0_JTAG_CONTROL is
     D : in STD_LOGIC_VECTOR ( 0 to 0 );
     \shift_Count_reg[0]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of shell_mdm_1_0_JTAG_CONTROL : entity is "JTAG_CONTROL";
 end shell_mdm_1_0_JTAG_CONTROL;
 
 architecture STRUCTURE of shell_mdm_1_0_JTAG_CONTROL is
@@ -5799,6 +5825,8 @@ entity shell_mdm_1_0_slave_attachment is
     S_AXI_AWADDR : in STD_LOGIC_VECTOR ( 1 downto 0 );
     S_AXI_ARESETN : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of shell_mdm_1_0_slave_attachment : entity is "slave_attachment";
 end shell_mdm_1_0_slave_attachment;
 
 architecture STRUCTURE of shell_mdm_1_0_slave_attachment is
@@ -6248,6 +6276,8 @@ entity shell_mdm_1_0_MDM_Core is
     AR : in STD_LOGIC_VECTOR ( 0 to 0 );
     \Use_BSCAN.command_reg[5]\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of shell_mdm_1_0_MDM_Core : entity is "MDM_Core";
 end shell_mdm_1_0_MDM_Core;
 
 architecture STRUCTURE of shell_mdm_1_0_MDM_Core is
@@ -6944,6 +6974,8 @@ entity shell_mdm_1_0_axi_lite_ipif is
     S_AXI_AWADDR : in STD_LOGIC_VECTOR ( 1 downto 0 );
     S_AXI_ARESETN : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of shell_mdm_1_0_axi_lite_ipif : entity is "axi_lite_ipif";
 end shell_mdm_1_0_axi_lite_ipif;
 
 architecture STRUCTURE of shell_mdm_1_0_axi_lite_ipif is
@@ -8571,6 +8603,8 @@ entity shell_mdm_1_0_MDM is
   attribute C_USE_CROSS_TRIGGER of shell_mdm_1_0_MDM : entity is 0;
   attribute C_USE_UART : integer;
   attribute C_USE_UART of shell_mdm_1_0_MDM : entity is 1;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of shell_mdm_1_0_MDM : entity is "MDM";
 end shell_mdm_1_0_MDM;
 
 architecture STRUCTURE of shell_mdm_1_0_MDM is

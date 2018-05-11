@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'reverseEndian64'" level="0">
-<item name = "Date">Thu May  3 11:49:22 2018
+<item name = "Date">Fri May 11 11:39:37 2018
 </item>
 <item name = "Version">2018.1 (Build 2188600 on Wed Apr 04 19:04:02 MDT 2018)</item>
 <item name = "Project">reverseEndian64</item>

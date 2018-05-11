@@ -2,10 +2,10 @@ set C_TypeInfoList {{
 "fireWall64_2" : [[], { "return": [[], "void"]} , [{"ExternC" : 0}], [ {"stream_in": [[],"0"] }, {"stream_out": [[],"0"] }, {"stream_garbage": [[],"0"] }, {"match_in": [[],{ "pointer": "1"}] }],[],""], 
 "0": [ "stream<ap_axis>", {"hls_type": {"stream": [[[[],"2"]],"3"]}}], 
 "2": [ "ap_axis", {"struct": [[],[],[{ "data": [[], "4"]},{ "dest": [[], "5"]},{ "last": [[], "6"]}],""]}], 
-"1": [ "ap_int<1>", {"hls_type": {"ap_int": [[[[], {"scalar": { "int": 1}}]],""]}}], 
-"5": [ "ap_uint<8>", {"hls_type": {"ap_uint": [[[[], {"scalar": { "int": 8}}]],""]}}], 
+"4": [ "ap_int<64>", {"hls_type": {"ap_int": [[[[], {"scalar": { "int": 64}}]],""]}}], 
 "6": [ "ap_uint<1>", {"hls_type": {"ap_uint": [[[[], {"scalar": { "int": 1}}]],""]}}], 
-"4": [ "ap_int<64>", {"hls_type": {"ap_int": [[[[], {"scalar": { "int": 64}}]],""]}}],
+"5": [ "ap_uint<8>", {"hls_type": {"ap_uint": [[[[], {"scalar": { "int": 8}}]],""]}}], 
+"1": [ "ap_int<1>", {"hls_type": {"ap_int": [[[[], {"scalar": { "int": 1}}]],""]}}],
 "3": ["hls", ""]
 }}
 set moduleName fireWall64_2

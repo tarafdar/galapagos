@@ -8,14 +8,14 @@ Copyright (C) 1986-2018 Xilinx, Inc. All Rights Reserved.
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
 INFO: [HLS 200-10] Analyzing design file '../hlsSources/srcs/packetFormatter_hardcode_64.cpp' ...
 INFO: [HLS 200-10] Validating synthesis directives ...
-INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:03:06 ; elapsed = 00:02:23 . Memory (MB): peak = 604.453 ; gain = 260.113 ; free physical = 8049 ; free virtual = 39034
-INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:03:07 ; elapsed = 00:02:24 . Memory (MB): peak = 604.453 ; gain = 260.113 ; free physical = 8034 ; free virtual = 39035
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:03:09 ; elapsed = 00:02:25 . Memory (MB): peak = 604.453 ; gain = 260.113 ; free physical = 12011 ; free virtual = 39279
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:03:10 ; elapsed = 00:02:26 . Memory (MB): peak = 604.453 ; gain = 260.113 ; free physical = 12009 ; free virtual = 39278
 INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:03:08 ; elapsed = 00:02:25 . Memory (MB): peak = 604.453 ; gain = 260.113 ; free physical = 8029 ; free virtual = 39034
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:03:11 ; elapsed = 00:02:27 . Memory (MB): peak = 604.453 ; gain = 260.113 ; free physical = 12009 ; free virtual = 39278
 INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:03:09 ; elapsed = 00:02:26 . Memory (MB): peak = 604.453 ; gain = 260.113 ; free physical = 8027 ; free virtual = 39033
-INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:03:10 ; elapsed = 00:02:27 . Memory (MB): peak = 604.453 ; gain = 260.113 ; free physical = 7996 ; free virtual = 39007
-INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:03:10 ; elapsed = 00:02:28 . Memory (MB): peak = 604.453 ; gain = 260.113 ; free physical = 7992 ; free virtual = 39004
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:03:11 ; elapsed = 00:02:27 . Memory (MB): peak = 604.453 ; gain = 260.113 ; free physical = 12008 ; free virtual = 39277
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:03:12 ; elapsed = 00:02:29 . Memory (MB): peak = 604.453 ; gain = 260.113 ; free physical = 11982 ; free virtual = 39251
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:03:13 ; elapsed = 00:02:29 . Memory (MB): peak = 604.453 ; gain = 260.113 ; free physical = 11979 ; free virtual = 39248
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-10] Synthesizing 'packetFormatter_hardcode_64' ...
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -23,13 +23,13 @@ INFO: [HLS 200-42] -- Implementing module 'packetFormatter_hardcode_64'
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 26.49 seconds; current allocated memory: 209.704 MB.
+INFO: [HLS 200-111]  Elapsed time: 26.96 seconds; current allocated memory: 210.828 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 209.896 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 211.019 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'packetFormatter_hardcode_64'
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -44,10 +44,10 @@ INFO: [RTGEN 206-500] Setting interface mode on port 'packetFormatter_hardcode_6
 INFO: [RTGEN 206-500] Setting interface mode on port 'packetFormatter_hardcode_64/packetOut_V_keep_V' to 'axis' (register, both mode).
 INFO: [RTGEN 206-500] Setting interface mode on function 'packetFormatter_hardcode_64' to 'ap_ctrl_none'.
 INFO: [RTGEN 206-100] Finished creating RTL model for 'packetFormatter_hardcode_64'.
-INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 210.635 MB.
-INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:03:11 ; elapsed = 00:02:28 . Memory (MB): peak = 604.453 ; gain = 260.113 ; free physical = 7990 ; free virtual = 39005
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 211.758 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:03:14 ; elapsed = 00:02:30 . Memory (MB): peak = 604.453 ; gain = 260.113 ; free physical = 11978 ; free virtual = 39247
 INFO: [SYSC 207-301] Generating SystemC RTL for packetFormatter_hardcode_64.
 INFO: [VHDL 208-304] Generating VHDL RTL for packetFormatter_hardcode_64.
 INFO: [VLOG 209-307] Generating Verilog RTL for packetFormatter_hardcode_64.
 INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
-INFO: [HLS 200-112] Total elapsed time: 158.84 seconds; peak allocated memory: 210.635 MB.
+INFO: [HLS 200-112] Total elapsed time: 160.78 seconds; peak allocated memory: 211.758 MB.

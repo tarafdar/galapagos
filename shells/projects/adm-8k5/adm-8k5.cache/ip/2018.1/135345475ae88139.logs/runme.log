@@ -14,12 +14,12 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xcku115'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcku115'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 7400 
+INFO: Helper process launched with PID 15667 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:20 . Memory (MB): peak = 1351.449 ; gain = 79.000 ; free physical = 437 ; free virtual = 27304
+Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:18 . Memory (MB): peak = 1349.453 ; gain = 78.000 ; free physical = 2683 ; free virtual = 30443
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'shell_auto_cc_3' [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_cc_3/synth/shell_auto_cc_3.v:58]
-INFO: [Synth 8-6157] synthesizing module 'axi_clock_converter_v2_1_15_axi_clock_converter' [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d371/hdl/axi_clock_converter_v2_1_vl_rfs.v:654]
+INFO: [Synth 8-6157] synthesizing module 'shell_auto_cc_3' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_cc_3/synth/shell_auto_cc_3.v:58]
+INFO: [Synth 8-6157] synthesizing module 'axi_clock_converter_v2_1_15_axi_clock_converter' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d371/hdl/axi_clock_converter_v2_1_vl_rfs.v:654]
 	Parameter C_FAMILY bound to: kintexu - type: string 
 	Parameter C_AXI_ID_WIDTH bound to: 2 - type: integer 
 	Parameter C_AXI_ADDR_WIDTH bound to: 32 - type: integer 
@@ -126,10 +126,10 @@ INFO: [Synth 8-6157] synthesizing module 'axi_clock_converter_v2_1_15_axi_clock_
 	Parameter C_RID_WIDTH bound to: 2 - type: integer 
 	Parameter C_R_WIDTH bound to: 517 - type: integer 
 	Parameter C_FIFO_R_WIDTH bound to: 517 - type: integer 
-INFO: [Synth 8-5534] Detected attribute (* KEEP = "TRUE" *) [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d371/hdl/axi_clock_converter_v2_1_vl_rfs.v:690]
-INFO: [Synth 8-5534] Detected attribute (* KEEP = "TRUE" *) [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d371/hdl/axi_clock_converter_v2_1_vl_rfs.v:691]
-INFO: [Synth 8-5534] Detected attribute (* KEEP = "TRUE" *) [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d371/hdl/axi_clock_converter_v2_1_vl_rfs.v:749]
-INFO: [Synth 8-5534] Detected attribute (* KEEP = "TRUE" *) [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d371/hdl/axi_clock_converter_v2_1_vl_rfs.v:750]
+INFO: [Synth 8-5534] Detected attribute (* KEEP = "TRUE" *) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d371/hdl/axi_clock_converter_v2_1_vl_rfs.v:690]
+INFO: [Synth 8-5534] Detected attribute (* KEEP = "TRUE" *) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d371/hdl/axi_clock_converter_v2_1_vl_rfs.v:691]
+INFO: [Synth 8-5534] Detected attribute (* KEEP = "TRUE" *) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d371/hdl/axi_clock_converter_v2_1_vl_rfs.v:749]
+INFO: [Synth 8-5534] Detected attribute (* KEEP = "TRUE" *) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d371/hdl/axi_clock_converter_v2_1_vl_rfs.v:750]
 INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_async_rst' [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1171]
 INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1222]
 INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_async_rst' (1#1) [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1171]
@@ -139,8 +139,8 @@ INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_single' (2#1) [/cad1/Xili
 INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray' [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:284]
 INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:358]
 INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_gray' (7#1) [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:284]
-INFO: [Synth 8-6155] done synthesizing module 'axi_clock_converter_v2_1_15_axi_clock_converter' (22#1) [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d371/hdl/axi_clock_converter_v2_1_vl_rfs.v:654]
-INFO: [Synth 8-6155] done synthesizing module 'shell_auto_cc_3' (23#1) [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_cc_3/synth/shell_auto_cc_3.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'axi_clock_converter_v2_1_15_axi_clock_converter' (22#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d371/hdl/axi_clock_converter_v2_1_vl_rfs.v:654]
+INFO: [Synth 8-6155] done synthesizing module 'shell_auto_cc_3' (23#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_cc_3/synth/shell_auto_cc_3.v:58]
 WARNING: [Synth 8-3331] design wr_status_flags_as has unconnected port WR_RST
 WARNING: [Synth 8-3331] design wr_status_flags_as has unconnected port SRST
 WARNING: [Synth 8-3331] design wr_status_flags_as has unconnected port SAFETY_CKT_WR_RST
@@ -243,7 +243,7 @@ WARNING: [Synth 8-3331] design input_blk__parameterized2 has unconnected port PR
 WARNING: [Synth 8-3331] design input_blk__parameterized2 has unconnected port PROG_EMPTY_THRESH[2]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:20 ; elapsed = 00:00:43 . Memory (MB): peak = 1491.059 ; gain = 218.609 ; free physical = 243 ; free virtual = 25577
+Finished RTL Elaboration : Time (s): cpu = 00:00:16 ; elapsed = 00:00:33 . Memory (MB): peak = 1489.062 ; gain = 217.609 ; free physical = 2464 ; free virtual = 30224
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -256,20 +256,20 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:44 . Memory (MB): peak = 1491.059 ; gain = 218.609 ; free physical = 193 ; free virtual = 25532
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:34 . Memory (MB): peak = 1489.062 ; gain = 217.609 ; free physical = 2241 ; free virtual = 30001
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:44 . Memory (MB): peak = 1491.059 ; gain = 218.609 ; free physical = 193 ; free virtual = 25532
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:34 . Memory (MB): peak = 1489.062 ; gain = 217.609 ; free physical = 2241 ; free virtual = 30001
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xcku115-flva1517-2-e
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_cc_3/shell_auto_cc_3_ooc.xdc] for cell 'inst'
-Finished Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_cc_3/shell_auto_cc_3_ooc.xdc] for cell 'inst'
-Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.runs/shell_auto_cc_3_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.runs/shell_auto_cc_3_synth_1/dont_touch.xdc]
+Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_cc_3/shell_auto_cc_3_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_cc_3/shell_auto_cc_3_ooc.xdc] for cell 'inst'
+Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.runs/shell_auto_cc_3_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.runs/shell_auto_cc_3_synth_1/dont_touch.xdc]
 Sourcing Tcl File [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.rst_rd_reg2_inst'
 Finished Sourcing Tcl File [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.rst_rd_reg2_inst'
 Sourcing Tcl File [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
@@ -341,22 +341,21 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:04 . Memory (MB): peak = 2117.664 ; gain = 1.000 ; free physical = 149 ; free virtual = 22708
-rdi::get_data_dir: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 2117.664 ; gain = 0.000 ; free physical = 164 ; free virtual = 21587
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.08 . Memory (MB): peak = 2115.668 ; gain = 1.000 ; free physical = 1418 ; free virtual = 29183
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:42 ; elapsed = 00:15:21 . Memory (MB): peak = 2117.664 ; gain = 845.215 ; free physical = 163 ; free virtual = 21783
+Finished Constraint Validation : Time (s): cpu = 00:00:35 ; elapsed = 00:01:00 . Memory (MB): peak = 2115.668 ; gain = 844.215 ; free physical = 1144 ; free virtual = 28974
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xcku115-flva1517-2-e
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:42 ; elapsed = 00:15:21 . Memory (MB): peak = 2117.664 ; gain = 845.215 ; free physical = 173 ; free virtual = 21790
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:35 ; elapsed = 00:01:00 . Memory (MB): peak = 2115.668 ; gain = 844.215 ; free physical = 1144 ; free virtual = 28974
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property DONT_TOUCH = true for inst. (constraint file  /nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.runs/shell_auto_cc_3_synth_1/dont_touch.xdc, line 9).
+Applied set_property DONT_TOUCH = true for inst. (constraint file  /nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.runs/shell_auto_cc_3_synth_1/dont_touch.xdc, line 9).
 Applied set_property DONT_TOUCH = true for inst/\gen_clock_conv.gen_async_conv.asyncfifo_axi /inst_fifo_gen/\gaxi_full_lite.gwrite_ch.gwach2.axi_wach /\grf.rf /rstblk/\ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.rst_rd_reg2_inst . (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for inst/\gen_clock_conv.gen_async_conv.asyncfifo_axi /inst_fifo_gen/\gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch /\grf.rf /rstblk/\ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.rst_rd_reg2_inst . (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for inst/\gen_clock_conv.gen_async_conv.asyncfifo_axi /inst_fifo_gen/\gaxi_full_lite.gwrite_ch.gwrch2.axi_wrch /\grf.rf /rstblk/\ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.rst_rd_reg2_inst . (constraint file  auto generated constraint, line ).
@@ -388,11 +387,11 @@ Applied set_property DONT_TOUCH = true for inst/\gen_clock_conv.gen_async_conv.a
 Applied set_property DONT_TOUCH = true for inst/\gen_clock_conv.gen_async_conv.asyncfifo_axi /inst_fifo_gen/\gaxi_full_lite.gread_ch.grach2.axi_rach /\grf.rf /rstblk/\ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd . (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for inst/\gen_clock_conv.gen_async_conv.asyncfifo_axi /inst_fifo_gen/\gaxi_full_lite.gread_ch.grdch2.axi_rdch /\grf.rf /rstblk/\ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd . (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:42 ; elapsed = 00:15:23 . Memory (MB): peak = 2117.664 ; gain = 845.215 ; free physical = 160 ; free virtual = 21801
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:01:00 . Memory (MB): peak = 2115.668 ; gain = 844.215 ; free physical = 1143 ; free virtual = 28973
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5544] ROM "leaving_empty_fwft" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:43 ; elapsed = 00:15:24 . Memory (MB): peak = 2117.664 ; gain = 845.215 ; free physical = 150 ; free virtual = 21800
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:36 ; elapsed = 00:01:02 . Memory (MB): peak = 2115.668 ; gain = 844.215 ; free physical = 1115 ; free virtual = 28946
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -559,7 +558,7 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:45 ; elapsed = 00:15:27 . Memory (MB): peak = 2117.664 ; gain = 845.215 ; free physical = 163 ; free virtual = 21788
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:01:04 . Memory (MB): peak = 2115.668 ; gain = 844.215 ; free physical = 1029 ; free virtual = 28863
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -590,13 +589,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:56 ; elapsed = 00:16:59 . Memory (MB): peak = 2256.102 ; gain = 983.652 ; free physical = 4410 ; free virtual = 26332
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:53 ; elapsed = 00:01:43 . Memory (MB): peak = 2254.105 ; gain = 982.652 ; free physical = 501 ; free virtual = 27782
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:56 ; elapsed = 00:16:59 . Memory (MB): peak = 2264.102 ; gain = 991.652 ; free physical = 4382 ; free virtual = 26308
+Finished Timing Optimization : Time (s): cpu = 00:00:54 ; elapsed = 00:01:44 . Memory (MB): peak = 2262.105 ; gain = 990.652 ; free physical = 471 ; free virtual = 27757
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -626,7 +625,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:57 ; elapsed = 00:17:00 . Memory (MB): peak = 2279.594 ; gain = 1007.145 ; free physical = 4354 ; free virtual = 26281
+Finished Technology Mapping : Time (s): cpu = 00:00:56 ; elapsed = 00:01:46 . Memory (MB): peak = 2280.184 ; gain = 1008.730 ; free physical = 463 ; free virtual = 27744
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -650,7 +649,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:58 ; elapsed = 00:17:01 . Memory (MB): peak = 2279.594 ; gain = 1007.145 ; free physical = 4322 ; free virtual = 26249
+Finished IO Insertion : Time (s): cpu = 00:00:56 ; elapsed = 00:01:47 . Memory (MB): peak = 2280.184 ; gain = 1008.730 ; free physical = 446 ; free virtual = 27734
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -663,7 +662,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:58 ; elapsed = 00:17:01 . Memory (MB): peak = 2279.594 ; gain = 1007.145 ; free physical = 4322 ; free virtual = 26249
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:56 ; elapsed = 00:01:47 . Memory (MB): peak = 2280.184 ; gain = 1008.730 ; free physical = 446 ; free virtual = 27734
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -675,25 +674,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:59 ; elapsed = 00:17:02 . Memory (MB): peak = 2279.594 ; gain = 1007.145 ; free physical = 4317 ; free virtual = 26244
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:57 ; elapsed = 00:01:47 . Memory (MB): peak = 2280.184 ; gain = 1008.730 ; free physical = 427 ; free virtual = 27714
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:59 ; elapsed = 00:17:02 . Memory (MB): peak = 2279.594 ; gain = 1007.145 ; free physical = 4317 ; free virtual = 26244
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:57 ; elapsed = 00:01:47 . Memory (MB): peak = 2280.184 ; gain = 1008.730 ; free physical = 426 ; free virtual = 27714
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:59 ; elapsed = 00:17:02 . Memory (MB): peak = 2279.594 ; gain = 1007.145 ; free physical = 4317 ; free virtual = 26244
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:57 ; elapsed = 00:01:47 . Memory (MB): peak = 2280.184 ; gain = 1008.730 ; free physical = 424 ; free virtual = 27712
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:59 ; elapsed = 00:17:02 . Memory (MB): peak = 2279.594 ; gain = 1007.145 ; free physical = 4317 ; free virtual = 26244
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:57 ; elapsed = 00:01:47 . Memory (MB): peak = 2280.184 ; gain = 1008.730 ; free physical = 424 ; free virtual = 27711
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -826,11 +825,11 @@ Report Instance Areas:
 |99    |              \ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr  |xpm_cdc_single__10                              |     5|
 +------+---------------------------------------------------------------------------------------+------------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:59 ; elapsed = 00:17:02 . Memory (MB): peak = 2279.594 ; gain = 1007.145 ; free physical = 4317 ; free virtual = 26244
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:57 ; elapsed = 00:01:47 . Memory (MB): peak = 2280.184 ; gain = 1008.730 ; free physical = 423 ; free virtual = 27711
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 201 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:46 ; elapsed = 00:06:19 . Memory (MB): peak = 2279.594 ; gain = 380.539 ; free physical = 4338 ; free virtual = 26265
-Synthesis Optimization Complete : Time (s): cpu = 00:00:59 ; elapsed = 00:17:02 . Memory (MB): peak = 2279.602 ; gain = 1007.145 ; free physical = 4349 ; free virtual = 26276
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:48 ; elapsed = 00:01:31 . Memory (MB): peak = 2280.184 ; gain = 382.125 ; free physical = 442 ; free virtual = 27730
+Synthesis Optimization Complete : Time (s): cpu = 00:00:57 ; elapsed = 00:01:47 . Memory (MB): peak = 2280.191 ; gain = 1008.730 ; free physical = 451 ; free virtual = 27739
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 90 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -904,5 +903,5 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 34 Infos, 100 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:03 ; elapsed = 00:17:08 . Memory (MB): peak = 2553.469 ; gain = 1312.594 ; free physical = 4013 ; free virtual = 26045
-INFO: [Common 17-1381] The checkpoint '/nfs/ug/thesis/thesis0/pc/Quinn/galapagos/shells/projects/adm-8k5/adm-8k5.runs/shell_auto_cc_3_synth_1/shell_auto_cc_3.dcp' has been generated.
+synth_design: Time (s): cpu = 00:01:01 ; elapsed = 00:01:53 . Memory (MB): peak = 2552.059 ; gain = 1312.180 ; free physical = 210 ; free virtual = 27573
+INFO: [Common 17-1381] The checkpoint '/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.runs/shell_auto_cc_3_synth_1/shell_auto_cc_3.dcp' has been generated.

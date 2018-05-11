@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:hls:axiStreamGate:1.0
-// IP Revision: 1805031148
+// IP Revision: 1805111139
 
 `timescale 1ns/1ps
 

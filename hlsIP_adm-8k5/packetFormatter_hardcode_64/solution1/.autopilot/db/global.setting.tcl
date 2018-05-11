@@ -43,7 +43,7 @@ set SCTraceOption "all"
 set TargetInfo "xcku115:-flva1517:-2-e"
 set SourceFiles {sc {} c ../../../hlsSources/srcs/packetFormatter_hardcode_64.cpp}
 set SourceFlags {sc {} c {{}}}
-set DirectiveFile {/nfs/ug/thesis/thesis0/pc/Graham/galapagos/hlsIP_adm-8k5/packetFormatter_hardcode_64/solution1/solution1.directive}
+set DirectiveFile {/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/hlsIP_adm-8k5/packetFormatter_hardcode_64/solution1/solution1.directive}
 set TBFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
 set SpecLanguage "C"
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}

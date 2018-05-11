@@ -1,0 +1,424 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Fri May 11 12:12:59 2018
+# Process ID: 20752
+# Current directory: /nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.runs/shell_auto_ds_1_synth_1
+# Command line: vivado -log shell_auto_ds_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source shell_auto_ds_1.tcl
+# Log file: /nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.runs/shell_auto_ds_1_synth_1/shell_auto_ds_1.vds
+# Journal file: /nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.runs/shell_auto_ds_1_synth_1/vivado.jou
+#-----------------------------------------------------------
+source shell_auto_ds_1.tcl -notrace
+Command: synth_design -top shell_auto_ds_1 -part xcku115-flva1517-2-e -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xcku115'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcku115'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 20842 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:18 . Memory (MB): peak = 1355.453 ; gain = 84.000 ; free physical = 7222 ; free virtual = 34557
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'shell_auto_ds_1' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_ds_1/synth/shell_auto_ds_1.v:58]
+INFO: [Synth 8-6157] synthesizing module 'axi_dwidth_converter_v2_1_16_top' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/2c2b/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:14462]
+	Parameter C_FAMILY bound to: kintexu - type: string 
+	Parameter C_AXI_PROTOCOL bound to: 2 - type: integer 
+	Parameter C_S_AXI_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_SUPPORTS_ID bound to: 0 - type: integer 
+	Parameter C_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_M_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_AXI_SUPPORTS_WRITE bound to: 1 - type: integer 
+	Parameter C_AXI_SUPPORTS_READ bound to: 1 - type: integer 
+	Parameter C_FIFO_MODE bound to: 0 - type: integer 
+	Parameter C_S_AXI_ACLK_RATIO bound to: 1 - type: integer 
+	Parameter C_M_AXI_ACLK_RATIO bound to: 2 - type: integer 
+	Parameter C_AXI_IS_ACLK_ASYNC bound to: 0 - type: integer 
+	Parameter C_MAX_SPLIT_BEATS bound to: 16 - type: integer 
+	Parameter C_PACKING_LEVEL bound to: 1 - type: integer 
+	Parameter C_SYNCHRONIZER_STAGE bound to: 3 - type: integer 
+	Parameter C_S_AXI_BYTES_LOG bound to: 3 - type: integer 
+	Parameter C_M_AXI_BYTES_LOG bound to: 2 - type: integer 
+	Parameter C_RATIO bound to: 2 - type: integer 
+	Parameter C_RATIO_LOG bound to: 1 - type: integer 
+	Parameter P_AXI4 bound to: 0 - type: integer 
+	Parameter P_AXI3 bound to: 1 - type: integer 
+	Parameter P_AXILITE bound to: 2 - type: integer 
+	Parameter P_CONVERSION bound to: 2 - type: integer 
+	Parameter P_MAX_SPLIT_BEATS bound to: 16 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* KEEP = "TRUE" *) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/2c2b/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:14513]
+INFO: [Synth 8-5534] Detected attribute (* KEEP = "TRUE" *) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/2c2b/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:14514]
+INFO: [Synth 8-5534] Detected attribute (* KEEP = "TRUE" *) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/2c2b/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:14562]
+INFO: [Synth 8-5534] Detected attribute (* KEEP = "TRUE" *) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/2c2b/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:14563]
+INFO: [Synth 8-6157] synthesizing module 'axi_dwidth_converter_v2_1_16_axi4lite_downsizer' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/2c2b/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:3003]
+	Parameter C_FAMILY bound to: kintexu - type: string 
+	Parameter C_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_AXI_SUPPORTS_WRITE bound to: 1 - type: integer 
+	Parameter C_AXI_SUPPORTS_READ bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'axi_dwidth_converter_v2_1_16_axi4lite_downsizer' (1#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/2c2b/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:3003]
+INFO: [Synth 8-6155] done synthesizing module 'axi_dwidth_converter_v2_1_16_top' (2#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/2c2b/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:14462]
+INFO: [Synth 8-6155] done synthesizing module 'shell_auto_ds_1' (3#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_ds_1/synth/shell_auto_ds_1.v:58]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_awid[0]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_awlen[7]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_awlen[6]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_awlen[5]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_awlen[4]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_awlen[3]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_awlen[2]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_awlen[1]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_awlen[0]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_awsize[2]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_awsize[1]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_awsize[0]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_awburst[1]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_awburst[0]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_awlock[0]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_awcache[3]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_awcache[2]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_awcache[1]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_awcache[0]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_awregion[3]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_awregion[2]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_awregion[1]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_awregion[0]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_awqos[3]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_awqos[2]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_awqos[1]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_awqos[0]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_wlast
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_arid[0]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_arlen[7]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_arlen[6]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_arlen[5]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_arlen[4]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_arlen[3]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_arlen[2]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_arlen[1]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_arlen[0]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_arsize[2]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_arsize[1]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_arsize[0]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_arburst[1]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_arburst[0]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_arlock[0]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_arcache[3]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_arcache[2]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_arcache[1]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_arcache[0]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_arregion[3]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_arregion[2]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_arregion[1]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_arregion[0]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_arqos[3]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_arqos[2]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_arqos[1]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_arqos[0]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port m_axi_rlast
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:50 ; elapsed = 00:01:07 . Memory (MB): peak = 1486.062 ; gain = 214.609 ; free physical = 8828 ; free virtual = 36160
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:50 ; elapsed = 00:01:07 . Memory (MB): peak = 1486.062 ; gain = 214.609 ; free physical = 8821 ; free virtual = 36154
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:50 ; elapsed = 00:01:07 . Memory (MB): peak = 1486.062 ; gain = 214.609 ; free physical = 8821 ; free virtual = 36154
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xcku115-flva1517-2-e
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_ds_1/shell_auto_ds_1_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_ds_1/shell_auto_ds_1_ooc.xdc] for cell 'inst'
+Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.runs/shell_auto_ds_1_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.runs/shell_auto_ds_1_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2088.754 ; gain = 1.000 ; free physical = 7764 ; free virtual = 35096
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:01:05 ; elapsed = 00:01:29 . Memory (MB): peak = 2088.754 ; gain = 817.301 ; free physical = 7799 ; free virtual = 35133
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xcku115-flva1517-2-e
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:05 ; elapsed = 00:01:29 . Memory (MB): peak = 2088.754 ; gain = 817.301 ; free physical = 7799 ; free virtual = 35133
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for inst. (constraint file  /nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.runs/shell_auto_ds_1_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:05 ; elapsed = 00:01:29 . Memory (MB): peak = 2088.754 ; gain = 817.301 ; free physical = 7798 ; free virtual = 35133
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:05 ; elapsed = 00:01:29 . Memory (MB): peak = 2088.754 ; gain = 817.301 ; free physical = 7788 ; free virtual = 35123
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 19    
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 3     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 16    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module axi_dwidth_converter_v2_1_16_axi4lite_downsizer 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 19    
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 3     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 16    
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 5520 (col length:120)
+BRAMs: 4320 (col length: RAMB18 240 RAMB36 120)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_awid[0]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_awlen[7]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_awlen[6]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_awlen[5]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_awlen[4]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_awlen[3]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_awlen[2]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_awlen[1]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_awlen[0]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_awsize[2]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_awsize[1]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_awsize[0]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_awburst[1]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_awburst[0]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_awlock[0]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_awcache[3]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_awcache[2]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_awcache[1]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_awcache[0]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_awregion[3]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_awregion[2]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_awregion[1]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_awregion[0]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_awqos[3]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_awqos[2]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_awqos[1]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_awqos[0]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_wlast
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_arid[0]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_arlen[7]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_arlen[6]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_arlen[5]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_arlen[4]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_arlen[3]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_arlen[2]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_arlen[1]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_arlen[0]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_arsize[2]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_arsize[1]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_arsize[0]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_arburst[1]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_arburst[0]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_arlock[0]
+WARNING: [Synth 8-3331] design axi_dwidth_converter_v2_1_16_top has unconnected port s_axi_arcache[3]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:06 ; elapsed = 00:01:30 . Memory (MB): peak = 2088.754 ; gain = 817.301 ; free physical = 7766 ; free virtual = 35103
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:15 ; elapsed = 00:01:55 . Memory (MB): peak = 2243.191 ; gain = 971.738 ; free physical = 7056 ; free virtual = 34393
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:15 ; elapsed = 00:01:55 . Memory (MB): peak = 2265.223 ; gain = 993.770 ; free physical = 7050 ; free virtual = 34387
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:15 ; elapsed = 00:01:55 . Memory (MB): peak = 2273.230 ; gain = 1001.777 ; free physical = 7048 ; free virtual = 34385
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:16 ; elapsed = 00:01:55 . Memory (MB): peak = 2273.230 ; gain = 1001.777 ; free physical = 7043 ; free virtual = 34380
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:16 ; elapsed = 00:01:55 . Memory (MB): peak = 2273.230 ; gain = 1001.777 ; free physical = 7046 ; free virtual = 34383
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:16 ; elapsed = 00:01:55 . Memory (MB): peak = 2273.230 ; gain = 1001.777 ; free physical = 7044 ; free virtual = 34382
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:16 ; elapsed = 00:01:55 . Memory (MB): peak = 2273.230 ; gain = 1001.777 ; free physical = 7044 ; free virtual = 34381
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:16 ; elapsed = 00:01:55 . Memory (MB): peak = 2273.230 ; gain = 1001.777 ; free physical = 7043 ; free virtual = 34381
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:16 ; elapsed = 00:01:55 . Memory (MB): peak = 2273.230 ; gain = 1001.777 ; free physical = 7043 ; free virtual = 34380
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT1 |     2|
+|2     |LUT2 |     3|
+|3     |LUT3 |    69|
+|4     |LUT4 |     4|
+|5     |LUT5 |     6|
+|6     |LUT6 |    59|
+|7     |FDRE |    55|
++------+-----+------+
+
+Report Instance Areas: 
++------+-----------------------------------------------------------+------------------------------------------------+------+
+|      |Instance                                                   |Module                                          |Cells |
++------+-----------------------------------------------------------+------------------------------------------------+------+
+|1     |top                                                        |                                                |   198|
+|2     |  inst                                                     |axi_dwidth_converter_v2_1_16_top                |   198|
+|3     |    \gen_downsizer.gen_lite_downsizer.lite_downsizer_inst  |axi_dwidth_converter_v2_1_16_axi4lite_downsizer |   197|
++------+-----------------------------------------------------------+------------------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:16 ; elapsed = 00:01:55 . Memory (MB): peak = 2273.230 ; gain = 1001.777 ; free physical = 7043 ; free virtual = 34380
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 56 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:08 ; elapsed = 00:01:41 . Memory (MB): peak = 2273.230 ; gain = 399.086 ; free physical = 7062 ; free virtual = 34400
+Synthesis Optimization Complete : Time (s): cpu = 00:01:16 ; elapsed = 00:01:55 . Memory (MB): peak = 2273.238 ; gain = 1001.777 ; free physical = 7071 ; free virtual = 34408
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+20 Infos, 100 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:18 ; elapsed = 00:01:58 . Memory (MB): peak = 2329.879 ; gain = 1090.000 ; free physical = 8264 ; free virtual = 35599
+INFO: [Common 17-1381] The checkpoint '/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.runs/shell_auto_ds_1_synth_1/shell_auto_ds_1.dcp' has been generated.
+INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP /nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_ds_1/shell_auto_ds_1.xci
+INFO: [Coretcl 2-1174] Renamed 2 cell refs.
+INFO: [Common 17-1381] The checkpoint '/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.runs/shell_auto_ds_1_synth_1/shell_auto_ds_1.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file shell_auto_ds_1_utilization_synth.rpt -pb shell_auto_ds_1_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00.48 ; elapsed = 00:00:00.51 . Memory (MB): peak = 2353.891 ; gain = 0.000 ; free physical = 8137 ; free virtual = 35473
+INFO: [Common 17-206] Exiting Vivado at Fri May 11 12:15:08 2018...

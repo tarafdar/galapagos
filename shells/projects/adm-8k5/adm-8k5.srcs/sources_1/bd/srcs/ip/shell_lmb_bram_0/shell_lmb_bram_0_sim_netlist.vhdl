@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
--- Date        : Thu May  3 12:02:04 2018
+-- Date        : Fri May 11 11:53:43 2018
 -- Host        : ug238 running 64-bit Debian GNU/Linux 9.4 (stretch)
--- Command     : write_vhdl -force -mode funcsim -rename_top shell_lmb_bram_0 -prefix
---               shell_lmb_bram_0_ shell_lmb_bram_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim
+--               /nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_lmb_bram_0/shell_lmb_bram_0_sim_netlist.vhdl
 -- Design      : shell_lmb_bram_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -32,6 +32,8 @@ entity shell_lmb_bram_0_blk_mem_gen_prim_wrapper is
     wea : in STD_LOGIC_VECTOR ( 1 downto 0 );
     web : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of shell_lmb_bram_0_blk_mem_gen_prim_wrapper : entity is "blk_mem_gen_prim_wrapper";
 end shell_lmb_bram_0_blk_mem_gen_prim_wrapper;
 
 architecture STRUCTURE of shell_lmb_bram_0_blk_mem_gen_prim_wrapper is
@@ -686,6 +688,8 @@ entity shell_lmb_bram_0_blk_mem_gen_prim_width is
     wea : in STD_LOGIC_VECTOR ( 1 downto 0 );
     web : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of shell_lmb_bram_0_blk_mem_gen_prim_width : entity is "blk_mem_gen_prim_width";
 end shell_lmb_bram_0_blk_mem_gen_prim_width;
 
 architecture STRUCTURE of shell_lmb_bram_0_blk_mem_gen_prim_width is
@@ -1014,6 +1018,8 @@ entity shell_lmb_bram_0_blk_mem_gen_generic_cstr is
     rstb : in STD_LOGIC;
     enb : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of shell_lmb_bram_0_blk_mem_gen_generic_cstr : entity is "blk_mem_gen_generic_cstr";
 end shell_lmb_bram_0_blk_mem_gen_generic_cstr;
 
 architecture STRUCTURE of shell_lmb_bram_0_blk_mem_gen_generic_cstr is
@@ -1089,6 +1095,8 @@ entity shell_lmb_bram_0_blk_mem_gen_top is
     rstb : in STD_LOGIC;
     enb : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of shell_lmb_bram_0_blk_mem_gen_top : entity is "blk_mem_gen_top";
 end shell_lmb_bram_0_blk_mem_gen_top;
 
 architecture STRUCTURE of shell_lmb_bram_0_blk_mem_gen_top is
@@ -1138,6 +1146,8 @@ entity shell_lmb_bram_0_blk_mem_gen_v8_4_1_synth is
     rstb : in STD_LOGIC;
     enb : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of shell_lmb_bram_0_blk_mem_gen_v8_4_1_synth : entity is "blk_mem_gen_v8_4_1_synth";
 end shell_lmb_bram_0_blk_mem_gen_v8_4_1_synth;
 
 architecture STRUCTURE of shell_lmb_bram_0_blk_mem_gen_v8_4_1_synth is
@@ -1379,6 +1389,8 @@ entity shell_lmb_bram_0_blk_mem_gen_v8_4_1 is
   attribute C_WRITE_WIDTH_B of shell_lmb_bram_0_blk_mem_gen_v8_4_1 : entity is 32;
   attribute C_XDEVICEFAMILY : string;
   attribute C_XDEVICEFAMILY of shell_lmb_bram_0_blk_mem_gen_v8_4_1 : entity is "kintexu";
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of shell_lmb_bram_0_blk_mem_gen_v8_4_1 : entity is "blk_mem_gen_v8_4_1";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of shell_lmb_bram_0_blk_mem_gen_v8_4_1 : entity is "yes";
 end shell_lmb_bram_0_blk_mem_gen_v8_4_1;

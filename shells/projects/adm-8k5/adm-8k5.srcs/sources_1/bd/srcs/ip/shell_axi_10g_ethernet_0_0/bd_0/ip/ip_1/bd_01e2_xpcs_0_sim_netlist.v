@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
-// Date        : Thu May  3 11:55:35 2018
+// Date        : Fri May 11 11:47:19 2018
 // Host        : ug238 running 64-bit Debian GNU/Linux 9.4 (stretch)
-// Command     : write_verilog -force -mode funcsim -rename_top bd_01e2_xpcs_0 -prefix
-//               bd_01e2_xpcs_0_ bd_01e2_xpcs_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim
+//               /nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/bd_01e2_xpcs_0_sim_netlist.v
 // Design      : bd_01e2_xpcs_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -213,6 +213,7 @@ module bd_01e2_xpcs_0
         .xgmii_txd(xgmii_txd));
 endmodule
 
+(* ORIG_REF_NAME = "bd_01e2_xpcs_0_block" *) 
 module bd_01e2_xpcs_0_bd_01e2_xpcs_0_block
    (CLK,
     xgmii_rxd,
@@ -1931,6 +1932,7 @@ module bd_01e2_xpcs_0_bd_01e2_xpcs_0_block
         .O(D));
 endmodule
 
+(* ORIG_REF_NAME = "bd_01e2_xpcs_0_cable_pull_logic" *) 
 module bd_01e2_xpcs_0_bd_01e2_xpcs_0_cable_pull_logic
    (cable_is_pulled,
     gt0_gtrxreset_c,
@@ -3374,6 +3376,7 @@ module bd_01e2_xpcs_0_bd_01e2_xpcs_0_cable_pull_logic
         .R(cable_pull_reset_rising_rxusrclk2));
 endmodule
 
+(* ORIG_REF_NAME = "bd_01e2_xpcs_0_ff_synchronizer" *) 
 module bd_01e2_xpcs_0_bd_01e2_xpcs_0_ff_synchronizer
    (\master_watchdog_reg[28] ,
     refclk_n,
@@ -4667,6 +4670,7 @@ module bd_01e2_xpcs_0_bd_01e2_xpcs_0_ff_synchronizer_8
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "bd_01e2_xpcs_0_ff_synchronizer_rst" *) 
 module bd_01e2_xpcs_0_bd_01e2_xpcs_0_ff_synchronizer_rst
    (SS,
     refclk_n,
@@ -6705,7 +6709,8 @@ module bd_01e2_xpcs_0_bd_01e2_xpcs_0_ff_synchronizer_rst__parameterized0_15
         .Q(sync1_r[4]));
 endmodule
 
-(* CHECK_LICENSE_TYPE = "bd_01e2_xpcs_0_gt,bd_01e2_xpcs_0_gt_gtwizard_top,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "bd_01e2_xpcs_0_gt_gtwizard_top,Vivado 2018.1" *) 
+(* CHECK_LICENSE_TYPE = "bd_01e2_xpcs_0_gt,bd_01e2_xpcs_0_gt_gtwizard_top,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* ORIG_REF_NAME = "bd_01e2_xpcs_0_gt" *) 
+(* X_CORE_INFO = "bd_01e2_xpcs_0_gt_gtwizard_top,Vivado 2018.1" *) 
 module bd_01e2_xpcs_0_bd_01e2_xpcs_0_gt
    (gtwiz_userclk_tx_active_in,
     gtwiz_userclk_rx_active_in,
@@ -7760,6 +7765,7 @@ module bd_01e2_xpcs_0_bd_01e2_xpcs_0_gt
         .ubtxuart_out(NLW_inst_ubtxuart_out_UNCONNECTED[0]));
 endmodule
 
+(* ORIG_REF_NAME = "bd_01e2_xpcs_0_gt_common" *) 
 module bd_01e2_xpcs_0_bd_01e2_xpcs_0_gt_common
    (qpll0lock_out,
     qpll0outclk_out,
@@ -7790,6 +7796,7 @@ module bd_01e2_xpcs_0_bd_01e2_xpcs_0_gt_common
         .refclk(refclk));
 endmodule
 
+(* ORIG_REF_NAME = "bd_01e2_xpcs_0_gt_common_wrapper" *) 
 module bd_01e2_xpcs_0_bd_01e2_xpcs_0_gt_common_wrapper
    (qpll0lock_out,
     qpll0outclk_out,
@@ -7820,6 +7827,7 @@ module bd_01e2_xpcs_0_bd_01e2_xpcs_0_gt_common_wrapper
         .refclk(refclk));
 endmodule
 
+(* ORIG_REF_NAME = "bd_01e2_xpcs_0_gt_gthe3_channel_wrapper" *) 
 module bd_01e2_xpcs_0_bd_01e2_xpcs_0_gt_gthe3_channel_wrapper
    (cpllfbclklost_out,
     cplllock_out,
@@ -9170,6 +9178,7 @@ module bd_01e2_xpcs_0_bd_01e2_xpcs_0_gt_gthe3_channel_wrapper
         .txusrclk_in(txusrclk_in));
 endmodule
 
+(* ORIG_REF_NAME = "bd_01e2_xpcs_0_gt_gtwizard_gthe3" *) 
 module bd_01e2_xpcs_0_bd_01e2_xpcs_0_gt_gtwizard_gthe3
    (gtpowergood_out,
     rxcdrlock_out,
@@ -10613,7 +10622,7 @@ endmodule
 (* C_TX_PLL_TYPE = "0" *) (* C_TX_REFCLK_FREQUENCY = "156.250000" *) (* C_TX_USER_CLOCKING_CONTENTS = "0" *) 
 (* C_TX_USER_CLOCKING_INSTANCE_CTRL = "0" *) (* C_TX_USER_CLOCKING_RATIO_FSRC_FUSRCLK = "1" *) (* C_TX_USER_CLOCKING_RATIO_FUSRCLK_FUSRCLK2 = "2" *) 
 (* C_TX_USER_CLOCKING_SOURCE = "0" *) (* C_TX_USER_DATA_WIDTH = "64" *) (* C_TX_USRCLK2_FREQUENCY = "156.250000" *) 
-(* C_TX_USRCLK_FREQUENCY = "312.500000" *) (* C_USER_GTPOWERGOOD_DELAY_EN = "0" *) 
+(* C_TX_USRCLK_FREQUENCY = "312.500000" *) (* C_USER_GTPOWERGOOD_DELAY_EN = "0" *) (* ORIG_REF_NAME = "bd_01e2_xpcs_0_gt_gtwizard_top" *) 
 module bd_01e2_xpcs_0_bd_01e2_xpcs_0_gt_gtwizard_top
    (gtwiz_userclk_tx_reset_in,
     gtwiz_userclk_tx_active_in,
@@ -12561,6 +12570,7 @@ module bd_01e2_xpcs_0_bd_01e2_xpcs_0_gt_gtwizard_top
         .txusrclk_in(txusrclk_in));
 endmodule
 
+(* ORIG_REF_NAME = "bd_01e2_xpcs_0_local_clock_and_reset" *) 
 module bd_01e2_xpcs_0_bd_01e2_xpcs_0_local_clock_and_reset
    (rxusrclk_in,
     CLK,
@@ -12732,6 +12742,7 @@ module bd_01e2_xpcs_0_bd_01e2_xpcs_0_local_clock_and_reset
         .reset(reset));
 endmodule
 
+(* ORIG_REF_NAME = "bd_01e2_xpcs_0_shared_clock_and_reset" *) 
 module bd_01e2_xpcs_0_bd_01e2_xpcs_0_shared_clock_and_reset
    (refclk,
     coreclk_out,
@@ -13071,7 +13082,7 @@ module bd_01e2_xpcs_0_bd_01e2_xpcs_0_shared_clock_and_reset
         .O(CLK));
 endmodule
 
-(* DowngradeIPIdentifiedWarnings = "yes" *) 
+(* DowngradeIPIdentifiedWarnings = "yes" *) (* ORIG_REF_NAME = "bd_01e2_xpcs_0_support" *) 
 module bd_01e2_xpcs_0_bd_01e2_xpcs_0_support
    (refclk_p,
     refclk_n,
@@ -13760,6 +13771,7 @@ module bd_01e2_xpcs_0_bd_01e2_xpcs_0_support
         .txusrclk_out(txusrclk_out));
 endmodule
 
+(* ORIG_REF_NAME = "gtwizard_ultrascale_v1_7_3_bit_synchronizer" *) 
 module bd_01e2_xpcs_0_gtwizard_ultrascale_v1_7_3_bit_synchronizer
    (\gen_gtwizard_gthe3.gen_reset_controller_internal.gen_single_instance.rxresetdone_sync ,
     rxresetdone_out,
@@ -15084,6 +15096,7 @@ module bd_01e2_xpcs_0_gtwizard_ultrascale_v1_7_3_bit_synchronizer_46
         .O(sm_reset_rx_cdr_to_clr_i_2_n_0));
 endmodule
 
+(* ORIG_REF_NAME = "gtwizard_ultrascale_v1_7_3_gthe3_channel" *) 
 module bd_01e2_xpcs_0_gtwizard_ultrascale_v1_7_3_gthe3_channel
    (cpllfbclklost_out,
     cplllock_out,
@@ -16835,6 +16848,7 @@ module bd_01e2_xpcs_0_gtwizard_ultrascale_v1_7_3_gthe3_channel
         .TXUSRCLK2(txusrclk2_in));
 endmodule
 
+(* ORIG_REF_NAME = "gtwizard_ultrascale_v1_7_3_gthe3_common" *) 
 module bd_01e2_xpcs_0_gtwizard_ultrascale_v1_7_3_gthe3_common
    (qpll0lock_out,
     qpll0outclk_out,
@@ -17067,6 +17081,7 @@ module bd_01e2_xpcs_0_gtwizard_ultrascale_v1_7_3_gthe3_common
         .O(AR));
 endmodule
 
+(* ORIG_REF_NAME = "gtwizard_ultrascale_v1_7_3_gtwiz_reset" *) 
 module bd_01e2_xpcs_0_gtwizard_ultrascale_v1_7_3_gtwiz_reset
    (\gen_gtwizard_gthe3.txprogdivreset_int ,
     gtwiz_reset_tx_done_out,
@@ -18901,6 +18916,7 @@ module bd_01e2_xpcs_0_gtwizard_ultrascale_v1_7_3_gtwiz_reset
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "gtwizard_ultrascale_v1_7_3_reset_inv_synchronizer" *) 
 module bd_01e2_xpcs_0_gtwizard_ultrascale_v1_7_3_reset_inv_synchronizer
    (gtwiz_reset_rx_done_out,
     rxusrclk2_in,
@@ -19046,6 +19062,7 @@ module bd_01e2_xpcs_0_gtwizard_ultrascale_v1_7_3_reset_inv_synchronizer_53
         .Q(rst_in_sync3));
 endmodule
 
+(* ORIG_REF_NAME = "gtwizard_ultrascale_v1_7_3_reset_synchronizer" *) 
 module bd_01e2_xpcs_0_gtwizard_ultrascale_v1_7_3_reset_synchronizer
    (gtwiz_reset_all_sync,
     gtwiz_reset_clk_freerun_in,
@@ -19746,7 +19763,7 @@ endmodule
 (* C_GTTYPE = "2" *) (* C_HAS_AN = "1'b0" *) (* C_HAS_FEC = "1'b0" *) 
 (* C_HAS_MDIO = "1'b0" *) (* C_IS_32BIT = "1'b0" *) (* C_IS_KR = "1'b0" *) 
 (* C_NO_EBUFF = "1'b0" *) (* C_REFCLKRATE = "156" *) (* C_SPEED10_25 = "10" *) 
-(* DowngradeIPIdentifiedWarnings = "yes" *) 
+(* DowngradeIPIdentifiedWarnings = "yes" *) (* ORIG_REF_NAME = "ten_gig_eth_pcs_pma_v6_0_12" *) 
 module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12
    (reset,
     areset_coreclk,
@@ -20671,7 +20688,7 @@ module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12
         .xgmii_txd(xgmii_txd));
 endmodule
 
-(* DowngradeIPIdentifiedWarnings = "yes" *) (* WIDTH = "74" *) 
+(* DowngradeIPIdentifiedWarnings = "yes" *) (* ORIG_REF_NAME = "ten_gig_eth_pcs_pma_v6_0_12_asynch_fifo" *) (* WIDTH = "74" *) 
 module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_asynch_fifo
    (wr_clk,
     wr_clk_en,
@@ -22028,6 +22045,7 @@ module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_asynch_fifo
         .S(wr_reset));
 endmodule
 
+(* ORIG_REF_NAME = "ten_gig_eth_pcs_pma_v6_0_12_baser_gen" *) 
 module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_baser_gen
    (status_vector,
     core_status,
@@ -22190,6 +22208,7 @@ module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_baser_gen
         .O(pcs_rx_link_up_core_int));
 endmodule
 
+(* ORIG_REF_NAME = "ten_gig_eth_pcs_pma_v6_0_12_baser_top" *) 
 module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_baser_top
    (status_vector,
     core_status,
@@ -26172,6 +26191,7 @@ module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_baser_top
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "ten_gig_eth_pcs_pma_v6_0_12_coherent_resyncs_en" *) 
 module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_coherent_resyncs_en
    (out,
     rxusrclk2,
@@ -26831,6 +26851,7 @@ module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_coherent_resyncs_en__parameter
         .q(d4[3]));
 endmodule
 
+(* ORIG_REF_NAME = "ten_gig_eth_pcs_pma_v6_0_12_common_ieee_registers" *) 
 module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_common_ieee_registers
    (status_vector,
     reset_local_reg,
@@ -26994,6 +27015,7 @@ module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_common_ieee_registers
         .re_prev(re_prev_0));
 endmodule
 
+(* ORIG_REF_NAME = "ten_gig_eth_pcs_pma_v6_0_12_cs_ipif_access" *) 
 module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_cs_ipif_access
    (out,
     prbs31_rx_enable_core_int,
@@ -27300,6 +27322,7 @@ module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_cs_ipif_access
         .R(reset));
 endmodule
 
+(* ORIG_REF_NAME = "ten_gig_eth_pcs_pma_v6_0_12_dp_ram" *) 
 module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_dp_ram
    (E,
     rd_data,
@@ -28131,6 +28154,7 @@ module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_dp_ram
         .O(E));
 endmodule
 
+(* ORIG_REF_NAME = "ten_gig_eth_pcs_pma_v6_0_12_drp_ipif" *) 
 module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_drp_ipif
    (drp_ack,
     drp_den,
@@ -28426,6 +28450,7 @@ module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_drp_ipif
         .\prbs31_err_count_reg[15] (Q));
 endmodule
 
+(* ORIG_REF_NAME = "ten_gig_eth_pcs_pma_v6_0_12_elastic_buffer" *) 
 module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_elastic_buffer
    (xgmii_rxd,
     xgmii_rxc,
@@ -28627,6 +28652,7 @@ module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_elastic_buffer
         .\xgmii_txd_reg2_reg[63] (\xgmii_txd_reg2_reg[63] ));
 endmodule
 
+(* ORIG_REF_NAME = "ten_gig_eth_pcs_pma_v6_0_12_elastic_buffer_wrapper" *) 
 module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_elastic_buffer_wrapper
    (xgmii_rxd,
     xgmii_rxc,
@@ -28729,6 +28755,7 @@ module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_elastic_buffer_wrapper
         .\xgmii_txd_reg2_reg[63] (\xgmii_txd_reg2_reg[63] ));
 endmodule
 
+(* ORIG_REF_NAME = "ten_gig_eth_pcs_pma_v6_0_12_g_register" *) 
 module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_g_register
    (status_vector,
     coreclk,
@@ -29538,6 +29565,7 @@ module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_g_register__parameterized5_76
         .R(\q_reg[0]_0 ));
 endmodule
 
+(* ORIG_REF_NAME = "ten_gig_eth_pcs_pma_v6_0_12_g_resyncs" *) 
 module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_g_resyncs
    (core_status,
     pcs_hi_ber_core_int,
@@ -29949,6 +29977,7 @@ module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_g_resyncs__parameterized0
         .\tx_test_patt_seed_sel_reg[0]_9 (\tx_test_patt_seed_sel_reg[0]_9 ));
 endmodule
 
+(* ORIG_REF_NAME = "ten_gig_eth_pcs_pma_v6_0_12_g_resyncs_en" *) 
 module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_g_resyncs_en
    (q,
     rxusrclk2,
@@ -29968,6 +29997,7 @@ module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_g_resyncs_en
         .q(q));
 endmodule
 
+(* ORIG_REF_NAME = "ten_gig_eth_pcs_pma_v6_0_12_idle_delete" *) 
 module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_idle_delete
    (wr_en,
     wr_data,
@@ -32068,6 +32098,7 @@ module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_idle_delete
         .comp_2_7(comp_2_7));
 endmodule
 
+(* ORIG_REF_NAME = "ten_gig_eth_pcs_pma_v6_0_12_idle_detect" *) 
 module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_idle_detect
    (D,
     comp_0,
@@ -32283,6 +32314,7 @@ module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_idle_detect_83
         .S({NLW_muxcy_i8_CARRY4_CARRY8_S_UNCONNECTED[7:1],comp_8_2}));
 endmodule
 
+(* ORIG_REF_NAME = "ten_gig_eth_pcs_pma_v6_0_12_idle_insert" *) 
 module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_idle_insert
    (rd_en,
     xgmii_rxd,
@@ -34583,6 +34615,7 @@ module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_idle_insert
         .O(xgmii_rxd[9]));
 endmodule
 
+(* ORIG_REF_NAME = "ten_gig_eth_pcs_pma_v6_0_12_ieee_counters" *) 
 module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_ieee_counters
    (D,
     \q_reg[5] ,
@@ -35165,6 +35198,7 @@ module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_ieee_counters
         .O(D[9]));
 endmodule
 
+(* ORIG_REF_NAME = "ten_gig_eth_pcs_pma_v6_0_12_ieee_registers" *) 
 module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_ieee_registers
    (status_vector,
     reset_local_reg,
@@ -35247,6 +35281,7 @@ module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_ieee_registers
         .status_vector(status_vector));
 endmodule
 
+(* ORIG_REF_NAME = "ten_gig_eth_pcs_pma_v6_0_12_management_cs" *) 
 module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_management_cs
    (out,
     prbs31_rx_enable_core_int,
@@ -35293,6 +35328,7 @@ module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_management_cs
         .reset(reset));
 endmodule
 
+(* ORIG_REF_NAME = "ten_gig_eth_pcs_pma_v6_0_12_management_top" *) 
 module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_management_top
    (status_vector,
     prbs31_rx_enable_core_int,
@@ -35579,6 +35615,7 @@ module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_management_top
         .R(reset));
 endmodule
 
+(* ORIG_REF_NAME = "ten_gig_eth_pcs_pma_v6_0_12_pcs_descramble" *) 
 module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_pcs_descramble
    (rx_66_enc,
     Q,
@@ -36448,6 +36485,7 @@ module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_pcs_descramble
         .O(rx_66_enc[7]));
 endmodule
 
+(* ORIG_REF_NAME = "ten_gig_eth_pcs_pma_v6_0_12_pcs_scramble" *) 
 module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_pcs_scramble
    (\scr_reg_reg[57]_0 ,
     \scr_reg_reg[56]_0 ,
@@ -38516,6 +38554,7 @@ module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_pcs_scramble
         .R(\tx_test_patt_seed_sel[1]_i_1_n_0 ));
 endmodule
 
+(* ORIG_REF_NAME = "ten_gig_eth_pcs_pma_v6_0_12_pcs_top" *) 
 module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_pcs_top
    (in0,
     gt_slip_int,
@@ -38935,6 +38974,7 @@ module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_pcs_top
         .tx_66_enc_out(tx_66_enc_out));
 endmodule
 
+(* ORIG_REF_NAME = "ten_gig_eth_pcs_pma_v6_0_12_pulse_synchronizer" *) 
 module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_pulse_synchronizer
    (counter_sync_1,
     counter_sync_extra_reg,
@@ -40134,6 +40174,7 @@ module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_pulse_synchronizer_71
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "ten_gig_eth_pcs_pma_v6_0_12_rx_ber_mon_fsm" *) 
 module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_rx_ber_mon_fsm
    (ber_count_inc,
     d1_reg,
@@ -40811,6 +40852,7 @@ module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_rx_ber_mon_fsm
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "ten_gig_eth_pcs_pma_v6_0_12_rx_block_lock_fsm" *) 
 module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_rx_block_lock_fsm
    (b_lock_mod,
     gt_slip_int,
@@ -41347,6 +41389,7 @@ module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_rx_block_lock_fsm
         .R(SR));
 endmodule
 
+(* ORIG_REF_NAME = "ten_gig_eth_pcs_pma_v6_0_12_rx_decoder" *) 
 module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_rx_decoder
    (\b_lock_count_reg[0] ,
     r_type,
@@ -47778,6 +47821,7 @@ module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_rx_decoder
         .O(rx_ebuff_data_t[9]));
 endmodule
 
+(* ORIG_REF_NAME = "ten_gig_eth_pcs_pma_v6_0_12_rx_pcs" *) 
 module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_rx_pcs
    (b_lock_mod_r_reg,
     gt_slip_int,
@@ -48480,6 +48524,7 @@ module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_rx_pcs
         .signal_ok_reg(signal_ok_reg));
 endmodule
 
+(* ORIG_REF_NAME = "ten_gig_eth_pcs_pma_v6_0_12_rx_pcs_fsm" *) 
 module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_rx_pcs_fsm
    (out,
     b_lock_mod_r_reg_0,
@@ -49790,6 +49835,7 @@ module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_rx_pcs_fsm
         .R(\state_eq_c_count[2]_i_1_n_0 ));
 endmodule
 
+(* ORIG_REF_NAME = "ten_gig_eth_pcs_pma_v6_0_12_rx_pcs_test" *) 
 module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_rx_pcs_test
    (mcp1_ignore_next_mismatch,
     err_block_count_inc,
@@ -50434,6 +50480,7 @@ module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_rx_pcs_test
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "ten_gig_eth_pcs_pma_v6_0_12_rxusrclk2_coreclk_counter_resync" *) 
 module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_rxusrclk2_coreclk_counter_resync
    (counter_out,
     rxusrclk2,
@@ -50778,6 +50825,7 @@ module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_rxusrclk2_coreclk_counter_resy
         .rxusrclk2(rxusrclk2));
 endmodule
 
+(* ORIG_REF_NAME = "ten_gig_eth_pcs_pma_v6_0_12_seq_detect" *) 
 module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_seq_detect
    (D,
     comp_0_3,
@@ -50845,6 +50893,7 @@ module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_seq_detect_84
         .S({NLW_muxcy_i0_CARRY4_CARRY8_S_UNCONNECTED[7:3],comp_2_7,comp_1_6,comp_0_5}));
 endmodule
 
+(* ORIG_REF_NAME = "ten_gig_eth_pcs_pma_v6_0_12_synchronizer" *) 
 module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_synchronizer
    (pcs_rxreset_int,
     in0,
@@ -52875,6 +52924,7 @@ module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_synchronizer_86
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "ten_gig_eth_pcs_pma_v6_0_12_synchronizer_enable" *) 
 module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_synchronizer_enable
    (clk,
     d,
@@ -54680,6 +54730,7 @@ module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_synchronizer_enable__9
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "ten_gig_eth_pcs_pma_v6_0_12_toggle_synchronizer" *) 
 module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_toggle_synchronizer
    (ipif_cs_dclk,
     ipif_addr_dclk0,
@@ -55104,6 +55155,7 @@ module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_toggle_synchronizer__parameter
         .toggle_rdclk_reg(toggle_rdclk_reg));
 endmodule
 
+(* ORIG_REF_NAME = "ten_gig_eth_pcs_pma_v6_0_12_tx_encoder" *) 
 module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_tx_encoder
    (D,
     \FSM_sequential_state_reg[2] ,
@@ -62230,6 +62282,7 @@ module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_tx_encoder
         .R(tx_xgmii_valid_code1__11));
 endmodule
 
+(* ORIG_REF_NAME = "ten_gig_eth_pcs_pma_v6_0_12_tx_pcs" *) 
 module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_tx_pcs
    (\scr_reg_reg[57] ,
     \scr_reg_reg[56] ,
@@ -62540,6 +62593,7 @@ module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_tx_pcs
         .\tx_encoded_data_reg[65] (tx_66_enc_out_t));
 endmodule
 
+(* ORIG_REF_NAME = "ten_gig_eth_pcs_pma_v6_0_12_tx_pcs_fsm" *) 
 module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_tx_pcs_fsm
    (out,
     \tx_66_enc_out_reg[0]_0 ,
@@ -63021,6 +63075,7 @@ module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_tx_pcs_fsm
         .R(SR));
 endmodule
 
+(* ORIG_REF_NAME = "ten_gig_eth_pcs_pma_v6_0_12_wrapper" *) 
 module bd_01e2_xpcs_0_ten_gig_eth_pcs_pma_v6_0_12_wrapper
    (status_vector,
     core_status,

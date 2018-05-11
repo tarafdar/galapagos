@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
--- Date        : Thu May  3 12:17:02 2018
+-- Date        : Fri May 11 12:15:08 2018
 -- Host        : ug238 running 64-bit Debian GNU/Linux 9.4 (stretch)
--- Command     : write_vhdl -force -mode funcsim -rename_top shell_auto_ds_1 -prefix
---               shell_auto_ds_1_ shell_auto_ds_1_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim
+--               /nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_ds_1/shell_auto_ds_1_sim_netlist.vhdl
 -- Design      : shell_auto_ds_1
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -52,6 +52,8 @@ entity shell_auto_ds_1_axi_dwidth_converter_v2_1_16_axi4lite_downsizer is
     \split_aw2__2\ : in STD_LOGIC;
     s_axi_wdata : in STD_LOGIC_VECTOR ( 63 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of shell_auto_ds_1_axi_dwidth_converter_v2_1_16_axi4lite_downsizer : entity is "axi_dwidth_converter_v2_1_16_axi4lite_downsizer";
 end shell_auto_ds_1_axi_dwidth_converter_v2_1_16_axi4lite_downsizer;
 
 architecture STRUCTURE of shell_auto_ds_1_axi_dwidth_converter_v2_1_16_axi4lite_downsizer is
@@ -2394,6 +2396,8 @@ entity shell_auto_ds_1_axi_dwidth_converter_v2_1_16_top is
   attribute C_S_AXI_ID_WIDTH of shell_auto_ds_1_axi_dwidth_converter_v2_1_16_top : entity is 1;
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of shell_auto_ds_1_axi_dwidth_converter_v2_1_16_top : entity is "yes";
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of shell_auto_ds_1_axi_dwidth_converter_v2_1_16_top : entity is "axi_dwidth_converter_v2_1_16_top";
   attribute P_AXI3 : integer;
   attribute P_AXI3 of shell_auto_ds_1_axi_dwidth_converter_v2_1_16_top : entity is 1;
   attribute P_AXI4 : integer;
