@@ -18,7 +18,8 @@ userIP: ${USERIP_DIR}/* ${USERIP_DIR}/generate_hls_ip.tcl
 	mkdir -p userIP
 	vivado_hls -f ${USERIPTCL}
 
-shell: hlsShell shells/projects/${BOARD}/${DCP}
+#shell: hlsShell shells/projects/${BOARD}/${DCP}
+shell: shells/projects/${BOARD}/${DCP}
 
 hlsShell:
 	mkdir -p hlsIP_${BOARD}
@@ -39,7 +40,7 @@ clean_shell:
 shells/projects/${BOARD}/${DCP}:
 	mkdir -p shells
 	mkdir -p shells/projects
-	vivado -mode gui -source tclScripts/createShell_${BOARD}.tcl -tclargs ${DCP}
+	vivado -mode batch -source tclScripts/createShell_${BOARD}.tcl -tclargs ${DCP}
 	mkdir -p shells/${BOARD}/dcps
 	cp shells/projects/${BOARD}/${DCP} shells/${BOARD}/dcps
 

@@ -2,12 +2,12 @@
 # Vivado v2018.1 (64-bit)
 # SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018
 # IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
-# Start of session at: Fri May 11 11:57:01 2018
-# Process ID: 15462
-# Current directory: /nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.runs/shell_auto_cc_0_synth_1
+# Start of session at: Sun May 13 23:04:01 2018
+# Process ID: 16270
+# Current directory: /home/tarafdar/workDir/galapagos/shells/projects/adm-8k5/adm-8k5.runs/shell_auto_cc_0_synth_1
 # Command line: vivado -log shell_auto_cc_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source shell_auto_cc_0.tcl
-# Log file: /nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.runs/shell_auto_cc_0_synth_1/shell_auto_cc_0.vds
-# Journal file: /nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.runs/shell_auto_cc_0_synth_1/vivado.jou
+# Log file: /home/tarafdar/workDir/galapagos/shells/projects/adm-8k5/adm-8k5.runs/shell_auto_cc_0_synth_1/shell_auto_cc_0.vds
+# Journal file: /home/tarafdar/workDir/galapagos/shells/projects/adm-8k5/adm-8k5.runs/shell_auto_cc_0_synth_1/vivado.jou
 #-----------------------------------------------------------
 source shell_auto_cc_0.tcl -notrace
 Command: synth_design -top shell_auto_cc_0 -part xcku115-flva1517-2-e -mode out_of_context
@@ -15,16 +15,16 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xcku115'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcku115'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 15596 
+INFO: Helper process launched with PID 16412 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:18 . Memory (MB): peak = 1349.457 ; gain = 78.000 ; free physical = 3485 ; free virtual = 31244
+Starting RTL Elaboration : Time (s): cpu = 00:00:15 ; elapsed = 00:00:38 . Memory (MB): peak = 1362.551 ; gain = 79.000 ; free physical = 9503 ; free virtual = 47122
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'shell_auto_cc_0' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_cc_0/synth/shell_auto_cc_0.v:58]
-INFO: [Synth 8-6157] synthesizing module 'axi_clock_converter_v2_1_15_axi_clock_converter' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d371/hdl/axi_clock_converter_v2_1_vl_rfs.v:654]
+INFO: [Synth 8-6157] synthesizing module 'shell_auto_cc_0' [/home/tarafdar/workDir/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_cc_0/synth/shell_auto_cc_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'axi_clock_converter_v2_1_15_axi_clock_converter' [/home/tarafdar/workDir/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d371/hdl/axi_clock_converter_v2_1_vl_rfs.v:654]
 	Parameter C_FAMILY bound to: kintexu - type: string 
 	Parameter C_AXI_ID_WIDTH bound to: 1 - type: integer 
 	Parameter C_AXI_ADDR_WIDTH bound to: 32 - type: integer 
-	Parameter C_AXI_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S_AXI_ACLK_RATIO bound to: 1 - type: integer 
 	Parameter C_M_AXI_ACLK_RATIO bound to: 2 - type: integer 
 	Parameter C_AXI_IS_ACLK_ASYNC bound to: 1 - type: integer 
@@ -76,13 +76,13 @@ INFO: [Synth 8-6157] synthesizing module 'axi_clock_converter_v2_1_15_axi_clock_
 	Parameter C_WLAST_RIGHT bound to: 0 - type: integer 
 	Parameter C_WLAST_WIDTH bound to: 0 - type: integer 
 	Parameter C_WSTRB_RIGHT bound to: 0 - type: integer 
-	Parameter C_WSTRB_WIDTH bound to: 8 - type: integer 
-	Parameter C_WDATA_RIGHT bound to: 8 - type: integer 
-	Parameter C_WDATA_WIDTH bound to: 64 - type: integer 
-	Parameter C_WID_RIGHT bound to: 72 - type: integer 
+	Parameter C_WSTRB_WIDTH bound to: 4 - type: integer 
+	Parameter C_WDATA_RIGHT bound to: 4 - type: integer 
+	Parameter C_WDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_WID_RIGHT bound to: 36 - type: integer 
 	Parameter C_WID_WIDTH bound to: 0 - type: integer 
-	Parameter C_W_WIDTH bound to: 72 - type: integer 
-	Parameter C_FIFO_W_WIDTH bound to: 72 - type: integer 
+	Parameter C_W_WIDTH bound to: 36 - type: integer 
+	Parameter C_FIFO_W_WIDTH bound to: 36 - type: integer 
 	Parameter C_BUSER_RIGHT bound to: 0 - type: integer 
 	Parameter C_BUSER_WIDTH bound to: 0 - type: integer 
 	Parameter C_BRESP_RIGHT bound to: 0 - type: integer 
@@ -122,20 +122,20 @@ INFO: [Synth 8-6157] synthesizing module 'axi_clock_converter_v2_1_15_axi_clock_
 	Parameter C_RRESP_RIGHT bound to: 0 - type: integer 
 	Parameter C_RRESP_WIDTH bound to: 2 - type: integer 
 	Parameter C_RDATA_RIGHT bound to: 2 - type: integer 
-	Parameter C_RDATA_WIDTH bound to: 64 - type: integer 
-	Parameter C_RID_RIGHT bound to: 66 - type: integer 
+	Parameter C_RDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_RID_RIGHT bound to: 34 - type: integer 
 	Parameter C_RID_WIDTH bound to: 0 - type: integer 
-	Parameter C_R_WIDTH bound to: 66 - type: integer 
-	Parameter C_FIFO_R_WIDTH bound to: 66 - type: integer 
-INFO: [Synth 8-5534] Detected attribute (* KEEP = "TRUE" *) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d371/hdl/axi_clock_converter_v2_1_vl_rfs.v:690]
-INFO: [Synth 8-5534] Detected attribute (* KEEP = "TRUE" *) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d371/hdl/axi_clock_converter_v2_1_vl_rfs.v:691]
-INFO: [Synth 8-5534] Detected attribute (* KEEP = "TRUE" *) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d371/hdl/axi_clock_converter_v2_1_vl_rfs.v:749]
-INFO: [Synth 8-5534] Detected attribute (* KEEP = "TRUE" *) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d371/hdl/axi_clock_converter_v2_1_vl_rfs.v:750]
-INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:60]
+	Parameter C_R_WIDTH bound to: 34 - type: integer 
+	Parameter C_FIFO_R_WIDTH bound to: 34 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* KEEP = "TRUE" *) [/home/tarafdar/workDir/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d371/hdl/axi_clock_converter_v2_1_vl_rfs.v:690]
+INFO: [Synth 8-5534] Detected attribute (* KEEP = "TRUE" *) [/home/tarafdar/workDir/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d371/hdl/axi_clock_converter_v2_1_vl_rfs.v:691]
+INFO: [Synth 8-5534] Detected attribute (* KEEP = "TRUE" *) [/home/tarafdar/workDir/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d371/hdl/axi_clock_converter_v2_1_vl_rfs.v:749]
+INFO: [Synth 8-5534] Detected attribute (* KEEP = "TRUE" *) [/home/tarafdar/workDir/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d371/hdl/axi_clock_converter_v2_1_vl_rfs.v:750]
+INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' [/home/tarafdar/workDir/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:60]
 	Parameter C_AXI_PROTOCOL bound to: 2 - type: integer 
 	Parameter C_AXI_ID_WIDTH bound to: 1 - type: integer 
 	Parameter C_AXI_ADDR_WIDTH bound to: 32 - type: integer 
-	Parameter C_AXI_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_AXI_SUPPORTS_USER_SIGNALS bound to: 0 - type: integer 
 	Parameter C_AXI_SUPPORTS_REGION_SIGNALS bound to: 0 - type: integer 
 	Parameter C_AXI_AWUSER_WIDTH bound to: 1 - type: integer 
@@ -144,10 +144,10 @@ INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' 
 	Parameter C_AXI_ARUSER_WIDTH bound to: 1 - type: integer 
 	Parameter C_AXI_RUSER_WIDTH bound to: 1 - type: integer 
 	Parameter C_AWPAYLOAD_WIDTH bound to: 35 - type: integer 
-	Parameter C_WPAYLOAD_WIDTH bound to: 72 - type: integer 
+	Parameter C_WPAYLOAD_WIDTH bound to: 36 - type: integer 
 	Parameter C_BPAYLOAD_WIDTH bound to: 2 - type: integer 
 	Parameter C_ARPAYLOAD_WIDTH bound to: 35 - type: integer 
-	Parameter C_RPAYLOAD_WIDTH bound to: 66 - type: integer 
+	Parameter C_RPAYLOAD_WIDTH bound to: 34 - type: integer 
 	Parameter G_AXI_AWADDR_INDEX bound to: 0 - type: integer 
 	Parameter G_AXI_AWADDR_WIDTH bound to: 32 - type: integer 
 	Parameter G_AXI_AWPROT_INDEX bound to: 32 - type: integer 
@@ -195,16 +195,16 @@ INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' 
 	Parameter G_AXI_ARUSER_WIDTH bound to: 0 - type: integer 
 	Parameter G_AXI_ARPAYLOAD_WIDTH bound to: 35 - type: integer 
 	Parameter G_AXI_WDATA_INDEX bound to: 0 - type: integer 
-	Parameter G_AXI_WDATA_WIDTH bound to: 64 - type: integer 
-	Parameter G_AXI_WSTRB_INDEX bound to: 64 - type: integer 
-	Parameter G_AXI_WSTRB_WIDTH bound to: 8 - type: integer 
-	Parameter G_AXI_WLAST_INDEX bound to: 72 - type: integer 
+	Parameter G_AXI_WDATA_WIDTH bound to: 32 - type: integer 
+	Parameter G_AXI_WSTRB_INDEX bound to: 32 - type: integer 
+	Parameter G_AXI_WSTRB_WIDTH bound to: 4 - type: integer 
+	Parameter G_AXI_WLAST_INDEX bound to: 36 - type: integer 
 	Parameter G_AXI_WLAST_WIDTH bound to: 0 - type: integer 
-	Parameter G_AXI_WID_INDEX bound to: 72 - type: integer 
+	Parameter G_AXI_WID_INDEX bound to: 36 - type: integer 
 	Parameter G_AXI_WID_WIDTH bound to: 0 - type: integer 
-	Parameter G_AXI_WUSER_INDEX bound to: 72 - type: integer 
+	Parameter G_AXI_WUSER_INDEX bound to: 36 - type: integer 
 	Parameter G_AXI_WUSER_WIDTH bound to: 0 - type: integer 
-	Parameter G_AXI_WPAYLOAD_WIDTH bound to: 72 - type: integer 
+	Parameter G_AXI_WPAYLOAD_WIDTH bound to: 36 - type: integer 
 	Parameter G_AXI_BRESP_INDEX bound to: 0 - type: integer 
 	Parameter G_AXI_BRESP_WIDTH bound to: 2 - type: integer 
 	Parameter G_AXI_BID_INDEX bound to: 2 - type: integer 
@@ -213,18 +213,18 @@ INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' 
 	Parameter G_AXI_BUSER_WIDTH bound to: 0 - type: integer 
 	Parameter G_AXI_BPAYLOAD_WIDTH bound to: 2 - type: integer 
 	Parameter G_AXI_RDATA_INDEX bound to: 0 - type: integer 
-	Parameter G_AXI_RDATA_WIDTH bound to: 64 - type: integer 
-	Parameter G_AXI_RRESP_INDEX bound to: 64 - type: integer 
+	Parameter G_AXI_RDATA_WIDTH bound to: 32 - type: integer 
+	Parameter G_AXI_RRESP_INDEX bound to: 32 - type: integer 
 	Parameter G_AXI_RRESP_WIDTH bound to: 2 - type: integer 
-	Parameter G_AXI_RLAST_INDEX bound to: 66 - type: integer 
+	Parameter G_AXI_RLAST_INDEX bound to: 34 - type: integer 
 	Parameter G_AXI_RLAST_WIDTH bound to: 0 - type: integer 
-	Parameter G_AXI_RID_INDEX bound to: 66 - type: integer 
+	Parameter G_AXI_RID_INDEX bound to: 34 - type: integer 
 	Parameter G_AXI_RID_WIDTH bound to: 0 - type: integer 
-	Parameter G_AXI_RUSER_INDEX bound to: 66 - type: integer 
+	Parameter G_AXI_RUSER_INDEX bound to: 34 - type: integer 
 	Parameter G_AXI_RUSER_WIDTH bound to: 0 - type: integer 
-	Parameter G_AXI_RPAYLOAD_WIDTH bound to: 66 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' (1#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:60]
-INFO: [Synth 8-6157] synthesizing module 'axi_clock_converter_v2_1_15_lite_async' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d371/hdl/axi_clock_converter_v2_1_vl_rfs.v:517]
+	Parameter G_AXI_RPAYLOAD_WIDTH bound to: 34 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' (1#1) [/home/tarafdar/workDir/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:60]
+INFO: [Synth 8-6157] synthesizing module 'axi_clock_converter_v2_1_15_lite_async' [/home/tarafdar/workDir/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d371/hdl/axi_clock_converter_v2_1_vl_rfs.v:517]
 	Parameter C_DEST_SYNC_FF bound to: 3 - type: integer 
 	Parameter C_SRC_SYNC_FF bound to: 3 - type: integer 
 	Parameter C_WIDTH bound to: 35 - type: integer 
@@ -234,7 +234,7 @@ INFO: [Synth 8-6157] synthesizing module 'axi_clock_converter_v2_1_15_lite_async
 	Parameter DEST_IDLE bound to: 2'b00 
 	Parameter DEST_DRV_VALID bound to: 2'b01 
 	Parameter DEST_DRV_ACK bound to: 2'b10 
-INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_handshake' [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:469]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_handshake' [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:469]
 	Parameter DEST_EXT_HSK bound to: 1 - type: integer 
 	Parameter DEST_SYNC_FF bound to: 3 - type: integer 
 	Parameter INIT_SYNC_FF bound to: 0 - type: integer 
@@ -242,42 +242,42 @@ INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_handshake' [/cad1/Xilinx/Vivad
 	Parameter SRC_SYNC_FF bound to: 3 - type: integer 
 	Parameter VERSION bound to: 0 - type: integer 
 	Parameter WIDTH bound to: 35 - type: integer 
-INFO: [Synth 8-5534] Detected attribute (* DIRECT_ENABLE = "yes" *) [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:560]
-INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_single' [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:153]
+INFO: [Synth 8-5534] Detected attribute (* DIRECT_ENABLE = "yes" *) [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:560]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_single' [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:153]
 	Parameter DEST_SYNC_FF bound to: 3 - type: integer 
 	Parameter INIT_SYNC_FF bound to: 0 - type: integer 
 	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
 	Parameter SRC_INPUT_REG bound to: 0 - type: integer 
 	Parameter VERSION bound to: 0 - type: integer 
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:205]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_single' (2#1) [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:153]
-INFO: [Synth 8-4471] merging register 'dest_req_ext_ff_reg' into 'dest_req_ff_reg' [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:623]
-WARNING: [Synth 8-6014] Unused sequential element dest_req_ext_ff_reg was removed.  [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:623]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_handshake' (3#1) [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:469]
-INFO: [Synth 8-6155] done synthesizing module 'axi_clock_converter_v2_1_15_lite_async' (4#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d371/hdl/axi_clock_converter_v2_1_vl_rfs.v:517]
-INFO: [Synth 8-6157] synthesizing module 'axi_clock_converter_v2_1_15_lite_async__parameterized0' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d371/hdl/axi_clock_converter_v2_1_vl_rfs.v:517]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:205]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_single' (2#1) [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:153]
+INFO: [Synth 8-4471] merging register 'dest_req_ext_ff_reg' into 'dest_req_ff_reg' [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:623]
+WARNING: [Synth 8-6014] Unused sequential element dest_req_ext_ff_reg was removed.  [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:623]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_handshake' (3#1) [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:469]
+INFO: [Synth 8-6155] done synthesizing module 'axi_clock_converter_v2_1_15_lite_async' (4#1) [/home/tarafdar/workDir/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d371/hdl/axi_clock_converter_v2_1_vl_rfs.v:517]
+INFO: [Synth 8-6157] synthesizing module 'axi_clock_converter_v2_1_15_lite_async__parameterized0' [/home/tarafdar/workDir/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d371/hdl/axi_clock_converter_v2_1_vl_rfs.v:517]
 	Parameter C_DEST_SYNC_FF bound to: 3 - type: integer 
 	Parameter C_SRC_SYNC_FF bound to: 3 - type: integer 
-	Parameter C_WIDTH bound to: 72 - type: integer 
+	Parameter C_WIDTH bound to: 36 - type: integer 
 	Parameter SRC_IDLE bound to: 2'b00 
 	Parameter SRC_DRV_SEND bound to: 2'b01 
 	Parameter SRC_WAIT_RCV_DONE bound to: 2'b10 
 	Parameter DEST_IDLE bound to: 2'b00 
 	Parameter DEST_DRV_VALID bound to: 2'b01 
 	Parameter DEST_DRV_ACK bound to: 2'b10 
-INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_handshake__parameterized0' [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:469]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_handshake__parameterized0' [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:469]
 	Parameter DEST_EXT_HSK bound to: 1 - type: integer 
 	Parameter DEST_SYNC_FF bound to: 3 - type: integer 
 	Parameter INIT_SYNC_FF bound to: 0 - type: integer 
 	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
 	Parameter SRC_SYNC_FF bound to: 3 - type: integer 
 	Parameter VERSION bound to: 0 - type: integer 
-	Parameter WIDTH bound to: 72 - type: integer 
-INFO: [Synth 8-4471] merging register 'dest_req_ext_ff_reg' into 'dest_req_ff_reg' [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:623]
-WARNING: [Synth 8-6014] Unused sequential element dest_req_ext_ff_reg was removed.  [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:623]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_handshake__parameterized0' (4#1) [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:469]
-INFO: [Synth 8-6155] done synthesizing module 'axi_clock_converter_v2_1_15_lite_async__parameterized0' (4#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d371/hdl/axi_clock_converter_v2_1_vl_rfs.v:517]
-INFO: [Synth 8-6157] synthesizing module 'axi_clock_converter_v2_1_15_lite_async__parameterized1' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d371/hdl/axi_clock_converter_v2_1_vl_rfs.v:517]
+	Parameter WIDTH bound to: 36 - type: integer 
+INFO: [Synth 8-4471] merging register 'dest_req_ext_ff_reg' into 'dest_req_ff_reg' [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:623]
+WARNING: [Synth 8-6014] Unused sequential element dest_req_ext_ff_reg was removed.  [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:623]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_handshake__parameterized0' (4#1) [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:469]
+INFO: [Synth 8-6155] done synthesizing module 'axi_clock_converter_v2_1_15_lite_async__parameterized0' (4#1) [/home/tarafdar/workDir/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d371/hdl/axi_clock_converter_v2_1_vl_rfs.v:517]
+INFO: [Synth 8-6157] synthesizing module 'axi_clock_converter_v2_1_15_lite_async__parameterized1' [/home/tarafdar/workDir/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d371/hdl/axi_clock_converter_v2_1_vl_rfs.v:517]
 	Parameter C_DEST_SYNC_FF bound to: 3 - type: integer 
 	Parameter C_SRC_SYNC_FF bound to: 3 - type: integer 
 	Parameter C_WIDTH bound to: 2 - type: integer 
@@ -287,7 +287,7 @@ INFO: [Synth 8-6157] synthesizing module 'axi_clock_converter_v2_1_15_lite_async
 	Parameter DEST_IDLE bound to: 2'b00 
 	Parameter DEST_DRV_VALID bound to: 2'b01 
 	Parameter DEST_DRV_ACK bound to: 2'b10 
-INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_handshake__parameterized1' [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:469]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_handshake__parameterized1' [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:469]
 	Parameter DEST_EXT_HSK bound to: 1 - type: integer 
 	Parameter DEST_SYNC_FF bound to: 3 - type: integer 
 	Parameter INIT_SYNC_FF bound to: 0 - type: integer 
@@ -295,37 +295,37 @@ INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_handshake__parameterized1' [/c
 	Parameter SRC_SYNC_FF bound to: 3 - type: integer 
 	Parameter VERSION bound to: 0 - type: integer 
 	Parameter WIDTH bound to: 2 - type: integer 
-INFO: [Synth 8-4471] merging register 'dest_req_ext_ff_reg' into 'dest_req_ff_reg' [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:623]
-WARNING: [Synth 8-6014] Unused sequential element dest_req_ext_ff_reg was removed.  [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:623]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_handshake__parameterized1' (4#1) [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:469]
-INFO: [Synth 8-6155] done synthesizing module 'axi_clock_converter_v2_1_15_lite_async__parameterized1' (4#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d371/hdl/axi_clock_converter_v2_1_vl_rfs.v:517]
-INFO: [Synth 8-6157] synthesizing module 'axi_clock_converter_v2_1_15_lite_async__parameterized2' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d371/hdl/axi_clock_converter_v2_1_vl_rfs.v:517]
+INFO: [Synth 8-4471] merging register 'dest_req_ext_ff_reg' into 'dest_req_ff_reg' [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:623]
+WARNING: [Synth 8-6014] Unused sequential element dest_req_ext_ff_reg was removed.  [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:623]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_handshake__parameterized1' (4#1) [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:469]
+INFO: [Synth 8-6155] done synthesizing module 'axi_clock_converter_v2_1_15_lite_async__parameterized1' (4#1) [/home/tarafdar/workDir/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d371/hdl/axi_clock_converter_v2_1_vl_rfs.v:517]
+INFO: [Synth 8-6157] synthesizing module 'axi_clock_converter_v2_1_15_lite_async__parameterized2' [/home/tarafdar/workDir/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d371/hdl/axi_clock_converter_v2_1_vl_rfs.v:517]
 	Parameter C_DEST_SYNC_FF bound to: 3 - type: integer 
 	Parameter C_SRC_SYNC_FF bound to: 3 - type: integer 
-	Parameter C_WIDTH bound to: 66 - type: integer 
+	Parameter C_WIDTH bound to: 34 - type: integer 
 	Parameter SRC_IDLE bound to: 2'b00 
 	Parameter SRC_DRV_SEND bound to: 2'b01 
 	Parameter SRC_WAIT_RCV_DONE bound to: 2'b10 
 	Parameter DEST_IDLE bound to: 2'b00 
 	Parameter DEST_DRV_VALID bound to: 2'b01 
 	Parameter DEST_DRV_ACK bound to: 2'b10 
-INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_handshake__parameterized2' [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:469]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_handshake__parameterized2' [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:469]
 	Parameter DEST_EXT_HSK bound to: 1 - type: integer 
 	Parameter DEST_SYNC_FF bound to: 3 - type: integer 
 	Parameter INIT_SYNC_FF bound to: 0 - type: integer 
 	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
 	Parameter SRC_SYNC_FF bound to: 3 - type: integer 
 	Parameter VERSION bound to: 0 - type: integer 
-	Parameter WIDTH bound to: 66 - type: integer 
-INFO: [Synth 8-4471] merging register 'dest_req_ext_ff_reg' into 'dest_req_ff_reg' [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:623]
-WARNING: [Synth 8-6014] Unused sequential element dest_req_ext_ff_reg was removed.  [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:623]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_handshake__parameterized2' (4#1) [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:469]
-INFO: [Synth 8-6155] done synthesizing module 'axi_clock_converter_v2_1_15_lite_async__parameterized2' (4#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d371/hdl/axi_clock_converter_v2_1_vl_rfs.v:517]
-INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:474]
+	Parameter WIDTH bound to: 34 - type: integer 
+INFO: [Synth 8-4471] merging register 'dest_req_ext_ff_reg' into 'dest_req_ff_reg' [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:623]
+WARNING: [Synth 8-6014] Unused sequential element dest_req_ext_ff_reg was removed.  [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:623]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_handshake__parameterized2' (4#1) [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:469]
+INFO: [Synth 8-6155] done synthesizing module 'axi_clock_converter_v2_1_15_lite_async__parameterized2' (4#1) [/home/tarafdar/workDir/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d371/hdl/axi_clock_converter_v2_1_vl_rfs.v:517]
+INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' [/home/tarafdar/workDir/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:474]
 	Parameter C_AXI_PROTOCOL bound to: 2 - type: integer 
 	Parameter C_AXI_ID_WIDTH bound to: 1 - type: integer 
 	Parameter C_AXI_ADDR_WIDTH bound to: 32 - type: integer 
-	Parameter C_AXI_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_AXI_SUPPORTS_USER_SIGNALS bound to: 0 - type: integer 
 	Parameter C_AXI_SUPPORTS_REGION_SIGNALS bound to: 0 - type: integer 
 	Parameter C_AXI_AWUSER_WIDTH bound to: 1 - type: integer 
@@ -334,10 +334,10 @@ INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' 
 	Parameter C_AXI_ARUSER_WIDTH bound to: 1 - type: integer 
 	Parameter C_AXI_RUSER_WIDTH bound to: 1 - type: integer 
 	Parameter C_AWPAYLOAD_WIDTH bound to: 35 - type: integer 
-	Parameter C_WPAYLOAD_WIDTH bound to: 72 - type: integer 
+	Parameter C_WPAYLOAD_WIDTH bound to: 36 - type: integer 
 	Parameter C_BPAYLOAD_WIDTH bound to: 2 - type: integer 
 	Parameter C_ARPAYLOAD_WIDTH bound to: 35 - type: integer 
-	Parameter C_RPAYLOAD_WIDTH bound to: 66 - type: integer 
+	Parameter C_RPAYLOAD_WIDTH bound to: 34 - type: integer 
 	Parameter G_AXI_AWADDR_INDEX bound to: 0 - type: integer 
 	Parameter G_AXI_AWADDR_WIDTH bound to: 32 - type: integer 
 	Parameter G_AXI_AWPROT_INDEX bound to: 32 - type: integer 
@@ -385,16 +385,16 @@ INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' 
 	Parameter G_AXI_ARUSER_WIDTH bound to: 0 - type: integer 
 	Parameter G_AXI_ARPAYLOAD_WIDTH bound to: 35 - type: integer 
 	Parameter G_AXI_WDATA_INDEX bound to: 0 - type: integer 
-	Parameter G_AXI_WDATA_WIDTH bound to: 64 - type: integer 
-	Parameter G_AXI_WSTRB_INDEX bound to: 64 - type: integer 
-	Parameter G_AXI_WSTRB_WIDTH bound to: 8 - type: integer 
-	Parameter G_AXI_WLAST_INDEX bound to: 72 - type: integer 
+	Parameter G_AXI_WDATA_WIDTH bound to: 32 - type: integer 
+	Parameter G_AXI_WSTRB_INDEX bound to: 32 - type: integer 
+	Parameter G_AXI_WSTRB_WIDTH bound to: 4 - type: integer 
+	Parameter G_AXI_WLAST_INDEX bound to: 36 - type: integer 
 	Parameter G_AXI_WLAST_WIDTH bound to: 0 - type: integer 
-	Parameter G_AXI_WID_INDEX bound to: 72 - type: integer 
+	Parameter G_AXI_WID_INDEX bound to: 36 - type: integer 
 	Parameter G_AXI_WID_WIDTH bound to: 0 - type: integer 
-	Parameter G_AXI_WUSER_INDEX bound to: 72 - type: integer 
+	Parameter G_AXI_WUSER_INDEX bound to: 36 - type: integer 
 	Parameter G_AXI_WUSER_WIDTH bound to: 0 - type: integer 
-	Parameter G_AXI_WPAYLOAD_WIDTH bound to: 72 - type: integer 
+	Parameter G_AXI_WPAYLOAD_WIDTH bound to: 36 - type: integer 
 	Parameter G_AXI_BRESP_INDEX bound to: 0 - type: integer 
 	Parameter G_AXI_BRESP_WIDTH bound to: 2 - type: integer 
 	Parameter G_AXI_BID_INDEX bound to: 2 - type: integer 
@@ -403,19 +403,19 @@ INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' 
 	Parameter G_AXI_BUSER_WIDTH bound to: 0 - type: integer 
 	Parameter G_AXI_BPAYLOAD_WIDTH bound to: 2 - type: integer 
 	Parameter G_AXI_RDATA_INDEX bound to: 0 - type: integer 
-	Parameter G_AXI_RDATA_WIDTH bound to: 64 - type: integer 
-	Parameter G_AXI_RRESP_INDEX bound to: 64 - type: integer 
+	Parameter G_AXI_RDATA_WIDTH bound to: 32 - type: integer 
+	Parameter G_AXI_RRESP_INDEX bound to: 32 - type: integer 
 	Parameter G_AXI_RRESP_WIDTH bound to: 2 - type: integer 
-	Parameter G_AXI_RLAST_INDEX bound to: 66 - type: integer 
+	Parameter G_AXI_RLAST_INDEX bound to: 34 - type: integer 
 	Parameter G_AXI_RLAST_WIDTH bound to: 0 - type: integer 
-	Parameter G_AXI_RID_INDEX bound to: 66 - type: integer 
+	Parameter G_AXI_RID_INDEX bound to: 34 - type: integer 
 	Parameter G_AXI_RID_WIDTH bound to: 0 - type: integer 
-	Parameter G_AXI_RUSER_INDEX bound to: 66 - type: integer 
+	Parameter G_AXI_RUSER_INDEX bound to: 34 - type: integer 
 	Parameter G_AXI_RUSER_WIDTH bound to: 0 - type: integer 
-	Parameter G_AXI_RPAYLOAD_WIDTH bound to: 66 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' (5#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:474]
-INFO: [Synth 8-6155] done synthesizing module 'axi_clock_converter_v2_1_15_axi_clock_converter' (6#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d371/hdl/axi_clock_converter_v2_1_vl_rfs.v:654]
-INFO: [Synth 8-6155] done synthesizing module 'shell_auto_cc_0' (7#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_cc_0/synth/shell_auto_cc_0.v:58]
+	Parameter G_AXI_RPAYLOAD_WIDTH bound to: 34 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' (5#1) [/home/tarafdar/workDir/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:474]
+INFO: [Synth 8-6155] done synthesizing module 'axi_clock_converter_v2_1_15_axi_clock_converter' (6#1) [/home/tarafdar/workDir/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d371/hdl/axi_clock_converter_v2_1_vl_rfs.v:654]
+INFO: [Synth 8-6155] done synthesizing module 'shell_auto_cc_0' (7#1) [/home/tarafdar/workDir/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_cc_0/synth/shell_auto_cc_0.v:58]
 WARNING: [Synth 8-3331] design axi_infrastructure_v1_1_0_vector2axi has unconnected port m_axi_bid[0]
 WARNING: [Synth 8-3331] design axi_infrastructure_v1_1_0_vector2axi has unconnected port m_axi_buser[0]
 WARNING: [Synth 8-3331] design axi_infrastructure_v1_1_0_vector2axi has unconnected port m_axi_rid[0]
@@ -518,7 +518,7 @@ WARNING: [Synth 8-3331] design axi_clock_converter_v2_1_15_axi_clock_converter h
 WARNING: [Synth 8-3331] design axi_clock_converter_v2_1_15_axi_clock_converter has unconnected port s_axi_arregion[1]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:16 ; elapsed = 00:00:33 . Memory (MB): peak = 1480.066 ; gain = 208.609 ; free physical = 2738 ; free virtual = 30497
+Finished RTL Elaboration : Time (s): cpu = 00:00:23 ; elapsed = 00:00:55 . Memory (MB): peak = 1493.160 ; gain = 209.609 ; free physical = 9354 ; free virtual = 47007
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -531,74 +531,74 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:33 . Memory (MB): peak = 1480.066 ; gain = 208.609 ; free physical = 2737 ; free virtual = 30497
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:55 . Memory (MB): peak = 1493.160 ; gain = 209.609 ; free physical = 9365 ; free virtual = 47002
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:33 . Memory (MB): peak = 1480.066 ; gain = 208.609 ; free physical = 2737 ; free virtual = 30497
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:55 . Memory (MB): peak = 1493.160 ; gain = 209.609 ; free physical = 9365 ; free virtual = 47002
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xcku115-flva1517-2-e
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_cc_0/shell_auto_cc_0_ooc.xdc] for cell 'inst'
-Finished Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_cc_0/shell_auto_cc_0_ooc.xdc] for cell 'inst'
-Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.runs/shell_auto_cc_0_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.runs/shell_auto_cc_0_synth_1/dont_touch.xdc]
-Sourcing Tcl File [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake'
-Finished Sourcing Tcl File [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake'
-Sourcing Tcl File [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake'
-Finished Sourcing Tcl File [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake'
-Sourcing Tcl File [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake'
-Finished Sourcing Tcl File [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake'
-Sourcing Tcl File [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake'
-Finished Sourcing Tcl File [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake'
-Sourcing Tcl File [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake'
-Finished Sourcing Tcl File [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake'
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/shell_auto_cc_0_propImpl.xdc].
+Parsing XDC File [/home/tarafdar/workDir/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_cc_0/shell_auto_cc_0_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/tarafdar/workDir/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_cc_0/shell_auto_cc_0_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/tarafdar/workDir/galapagos/shells/projects/adm-8k5/adm-8k5.runs/shell_auto_cc_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/tarafdar/workDir/galapagos/shells/projects/adm-8k5/adm-8k5.runs/shell_auto_cc_0_synth_1/dont_touch.xdc]
+Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake'
+Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake'
+Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake'
+Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake'
+Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake'
+Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake'
+Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake'
+Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake'
+Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake'
+Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/shell_auto_cc_0_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/shell_auto_cc_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Sourcing Tcl File [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/xpm_cdc_single_dest2src_inst'
-Finished Sourcing Tcl File [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/xpm_cdc_single_dest2src_inst'
-Sourcing Tcl File [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/xpm_cdc_single_src2dest_inst'
-Finished Sourcing Tcl File [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/xpm_cdc_single_src2dest_inst'
-Sourcing Tcl File [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/xpm_cdc_single_dest2src_inst'
-Finished Sourcing Tcl File [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/xpm_cdc_single_dest2src_inst'
-Sourcing Tcl File [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/xpm_cdc_single_src2dest_inst'
-Finished Sourcing Tcl File [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/xpm_cdc_single_src2dest_inst'
-Sourcing Tcl File [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/xpm_cdc_single_dest2src_inst'
-Finished Sourcing Tcl File [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/xpm_cdc_single_dest2src_inst'
-Sourcing Tcl File [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/xpm_cdc_single_src2dest_inst'
-Finished Sourcing Tcl File [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/xpm_cdc_single_src2dest_inst'
-Sourcing Tcl File [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/xpm_cdc_single_dest2src_inst'
-Finished Sourcing Tcl File [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/xpm_cdc_single_dest2src_inst'
-Sourcing Tcl File [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/xpm_cdc_single_src2dest_inst'
-Finished Sourcing Tcl File [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/xpm_cdc_single_src2dest_inst'
-Sourcing Tcl File [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/xpm_cdc_single_dest2src_inst'
-Finished Sourcing Tcl File [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/xpm_cdc_single_dest2src_inst'
-Sourcing Tcl File [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/xpm_cdc_single_src2dest_inst'
-Finished Sourcing Tcl File [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/xpm_cdc_single_src2dest_inst'
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/shell_auto_cc_0_propImpl.xdc].
+Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/xpm_cdc_single_src2dest_inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/shell_auto_cc_0_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/shell_auto_cc_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2088.758 ; gain = 1.000 ; free physical = 2031 ; free virtual = 29791
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2100.641 ; gain = 0.000 ; free physical = 9766 ; free virtual = 47364
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:31 ; elapsed = 00:00:55 . Memory (MB): peak = 2088.758 ; gain = 817.301 ; free physical = 1858 ; free virtual = 29621
+Finished Constraint Validation : Time (s): cpu = 00:00:41 ; elapsed = 00:01:19 . Memory (MB): peak = 2100.641 ; gain = 817.090 ; free physical = 9040 ; free virtual = 46642
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xcku115-flva1517-2-e
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:31 ; elapsed = 00:00:55 . Memory (MB): peak = 2088.758 ; gain = 817.301 ; free physical = 1858 ; free virtual = 29620
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:41 ; elapsed = 00:01:19 . Memory (MB): peak = 2100.641 ; gain = 817.090 ; free physical = 9040 ; free virtual = 46642
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property DONT_TOUCH = true for inst. (constraint file  /nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.runs/shell_auto_cc_0_synth_1/dont_touch.xdc, line 9).
+Applied set_property DONT_TOUCH = true for inst. (constraint file  /home/tarafdar/workDir/galapagos/shells/projects/adm-8k5/adm-8k5.runs/shell_auto_cc_0_synth_1/dont_touch.xdc, line 9).
 Applied set_property DONT_TOUCH = true for inst/\gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw /handshake. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for inst/\gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar /handshake. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for inst/\gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w /handshake. (constraint file  auto generated constraint, line ).
@@ -615,7 +615,7 @@ Applied set_property DONT_TOUCH = true for inst/\gen_clock_conv.gen_async_lite_c
 Applied set_property DONT_TOUCH = true for inst/\gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b /handshake/xpm_cdc_single_src2dest_inst. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for inst/\gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r /handshake/xpm_cdc_single_src2dest_inst. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:56 . Memory (MB): peak = 2088.758 ; gain = 817.301 ; free physical = 1860 ; free virtual = 29622
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:41 ; elapsed = 00:01:19 . Memory (MB): peak = 2100.641 ; gain = 817.090 ; free physical = 9040 ; free virtual = 46641
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'src_state_reg' in module 'axi_clock_converter_v2_1_15_lite_async__xdcDup__1'
 INFO: [Synth 8-802] inferred FSM for state register 'dest_state_reg' in module 'axi_clock_converter_v2_1_15_lite_async__xdcDup__1'
@@ -728,7 +728,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'src_state_reg' using encod
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'dest_state_reg' using encoding 'sequential' in module 'axi_clock_converter_v2_1_15_lite_async__parameterized2'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:31 ; elapsed = 00:00:56 . Memory (MB): peak = 2088.758 ; gain = 817.301 ; free physical = 1681 ; free virtual = 29443
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:42 ; elapsed = 00:01:20 . Memory (MB): peak = 2100.641 ; gain = 817.090 ; free physical = 9020 ; free virtual = 46622
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -741,9 +741,9 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Registers : 
-	               72 Bit    Registers := 2     
-	               66 Bit    Registers := 2     
+	               36 Bit    Registers := 2     
 	               35 Bit    Registers := 4     
+	               34 Bit    Registers := 2     
 	                4 Bit    Registers := 10    
 	                3 Bit    Registers := 10    
 	                2 Bit    Registers := 2     
@@ -797,7 +797,7 @@ Detailed RTL Component Info :
 Module xpm_cdc_handshake__parameterized0 
 Detailed RTL Component Info : 
 +---Registers : 
-	               72 Bit    Registers := 2     
+	               36 Bit    Registers := 2     
 	                1 Bit    Registers := 2     
 Module axi_clock_converter_v2_1_15_lite_async__parameterized0 
 Detailed RTL Component Info : 
@@ -827,7 +827,7 @@ Detailed RTL Component Info :
 Module xpm_cdc_handshake__parameterized2 
 Detailed RTL Component Info : 
 +---Registers : 
-	               66 Bit    Registers := 2     
+	               34 Bit    Registers := 2     
 	                1 Bit    Registers := 2     
 Module axi_clock_converter_v2_1_15_lite_async__parameterized2 
 Detailed RTL Component Info : 
@@ -888,7 +888,7 @@ INFO: [Synth 8-3886] merging instance 'inst/gen_clock_conv.gen_async_lite_conv.c
 INFO: [Synth 8-3886] merging instance 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/m_areset_dly_reg[3]' (FD) to 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/s_areset_dly_reg[3]'
 INFO: [Synth 8-3886] merging instance 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/s_areset_dly_reg[3]' (FD) to 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/s_areset_dly_reg[3]'
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:57 . Memory (MB): peak = 2088.758 ; gain = 817.301 ; free physical = 1598 ; free virtual = 29363
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:42 ; elapsed = 00:01:20 . Memory (MB): peak = 2100.641 ; gain = 817.090 ; free physical = 8997 ; free virtual = 46601
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -900,13 +900,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:46 ; elapsed = 00:01:33 . Memory (MB): peak = 2242.195 ; gain = 970.738 ; free physical = 257 ; free virtual = 28092
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:56 ; elapsed = 00:01:48 . Memory (MB): peak = 2256.078 ; gain = 972.527 ; free physical = 7641 ; free virtual = 45266
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:46 ; elapsed = 00:01:33 . Memory (MB): peak = 2242.195 ; gain = 970.738 ; free physical = 255 ; free virtual = 28090
+Finished Timing Optimization : Time (s): cpu = 00:00:56 ; elapsed = 00:01:48 . Memory (MB): peak = 2256.078 ; gain = 972.527 ; free physical = 7640 ; free virtual = 45265
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -918,7 +918,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:46 ; elapsed = 00:01:33 . Memory (MB): peak = 2262.227 ; gain = 990.770 ; free physical = 243 ; free virtual = 28078
+Finished Technology Mapping : Time (s): cpu = 00:00:56 ; elapsed = 00:01:48 . Memory (MB): peak = 2275.109 ; gain = 991.559 ; free physical = 7640 ; free virtual = 45265
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -942,7 +942,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:47 ; elapsed = 00:01:34 . Memory (MB): peak = 2262.227 ; gain = 990.770 ; free physical = 215 ; free virtual = 28051
+Finished IO Insertion : Time (s): cpu = 00:00:56 ; elapsed = 00:01:49 . Memory (MB): peak = 2275.109 ; gain = 991.559 ; free physical = 7634 ; free virtual = 45259
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -955,7 +955,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:47 ; elapsed = 00:01:34 . Memory (MB): peak = 2262.227 ; gain = 990.770 ; free physical = 215 ; free virtual = 28050
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:56 ; elapsed = 00:01:49 . Memory (MB): peak = 2275.109 ; gain = 991.559 ; free physical = 7634 ; free virtual = 45259
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -967,25 +967,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:47 ; elapsed = 00:01:34 . Memory (MB): peak = 2262.227 ; gain = 990.770 ; free physical = 215 ; free virtual = 28050
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:56 ; elapsed = 00:01:49 . Memory (MB): peak = 2275.109 ; gain = 991.559 ; free physical = 7634 ; free virtual = 45259
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:47 ; elapsed = 00:01:34 . Memory (MB): peak = 2262.227 ; gain = 990.770 ; free physical = 215 ; free virtual = 28050
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:56 ; elapsed = 00:01:49 . Memory (MB): peak = 2275.109 ; gain = 991.559 ; free physical = 7634 ; free virtual = 45259
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:47 ; elapsed = 00:01:34 . Memory (MB): peak = 2262.227 ; gain = 990.770 ; free physical = 213 ; free virtual = 28048
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:56 ; elapsed = 00:01:49 . Memory (MB): peak = 2275.109 ; gain = 991.559 ; free physical = 7634 ; free virtual = 45259
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:47 ; elapsed = 00:01:34 . Memory (MB): peak = 2262.227 ; gain = 990.770 ; free physical = 213 ; free virtual = 28048
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:56 ; elapsed = 00:01:49 . Memory (MB): peak = 2275.109 ; gain = 991.559 ; free physical = 7634 ; free virtual = 45259
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1007,15 +1007,15 @@ Report Cell Usage:
 |4     |LUT4 |    15|
 |5     |LUT5 |    15|
 |6     |LUT6 |     5|
-|7     |FDRE |   508|
+|7     |FDRE |   372|
 +------+-----+------+
 
 Report Instance Areas: 
 +------+----------------------------------------------------------------+-------------------------------------------------------+------+
 |      |Instance                                                        |Module                                                 |Cells |
 +------+----------------------------------------------------------------+-------------------------------------------------------+------+
-|1     |top                                                             |                                                       |   576|
-|2     |  inst                                                          |axi_clock_converter_v2_1_15_axi_clock_converter        |   576|
+|1     |top                                                             |                                                       |   440|
+|2     |  inst                                                          |axi_clock_converter_v2_1_15_axi_clock_converter        |   440|
 |3     |    \gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar  |axi_clock_converter_v2_1_15_lite_async                 |    98|
 |4     |      handshake                                                 |xpm_cdc_handshake                                      |    80|
 |5     |        xpm_cdc_single_src2dest_inst                            |xpm_cdc_single__4                                      |     3|
@@ -1024,57 +1024,57 @@ Report Instance Areas:
 |8     |      handshake                                                 |xpm_cdc_handshake__xdcDup__1                           |    80|
 |9     |        xpm_cdc_single_src2dest_inst                            |xpm_cdc_single__2                                      |     3|
 |10    |        xpm_cdc_single_dest2src_inst                            |xpm_cdc_single__3                                      |     3|
-|11    |    \gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w   |axi_clock_converter_v2_1_15_lite_async__parameterized0 |   172|
-|12    |      handshake                                                 |xpm_cdc_handshake__parameterized0                      |   154|
+|11    |    \gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w   |axi_clock_converter_v2_1_15_lite_async__parameterized0 |   100|
+|12    |      handshake                                                 |xpm_cdc_handshake__parameterized0                      |    82|
 |13    |        xpm_cdc_single_src2dest_inst                            |xpm_cdc_single__6                                      |     3|
 |14    |        xpm_cdc_single_dest2src_inst                            |xpm_cdc_single__7                                      |     3|
 |15    |    \gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b  |axi_clock_converter_v2_1_15_lite_async__parameterized1 |    32|
 |16    |      handshake                                                 |xpm_cdc_handshake__parameterized1                      |    14|
 |17    |        xpm_cdc_single_src2dest_inst                            |xpm_cdc_single__8                                      |     3|
 |18    |        xpm_cdc_single_dest2src_inst                            |xpm_cdc_single__9                                      |     3|
-|19    |    \gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r  |axi_clock_converter_v2_1_15_lite_async__parameterized2 |   160|
-|20    |      handshake                                                 |xpm_cdc_handshake__parameterized2                      |   142|
+|19    |    \gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r  |axi_clock_converter_v2_1_15_lite_async__parameterized2 |    96|
+|20    |      handshake                                                 |xpm_cdc_handshake__parameterized2                      |    78|
 |21    |        xpm_cdc_single_src2dest_inst                            |xpm_cdc_single__10                                     |     3|
 |22    |        xpm_cdc_single_dest2src_inst                            |xpm_cdc_single                                         |     3|
 +------+----------------------------------------------------------------+-------------------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:47 ; elapsed = 00:01:34 . Memory (MB): peak = 2262.227 ; gain = 990.770 ; free physical = 213 ; free virtual = 28048
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:56 ; elapsed = 00:01:49 . Memory (MB): peak = 2275.109 ; gain = 991.559 ; free physical = 7634 ; free virtual = 45259
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 65 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:39 ; elapsed = 00:01:19 . Memory (MB): peak = 2262.227 ; gain = 382.078 ; free physical = 234 ; free virtual = 28069
-Synthesis Optimization Complete : Time (s): cpu = 00:00:47 ; elapsed = 00:01:34 . Memory (MB): peak = 2262.234 ; gain = 990.770 ; free physical = 243 ; free virtual = 28078
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:47 ; elapsed = 00:01:34 . Memory (MB): peak = 2275.109 ; gain = 384.078 ; free physical = 7653 ; free virtual = 45279
+Synthesis Optimization Complete : Time (s): cpu = 00:00:56 ; elapsed = 00:01:49 . Memory (MB): peak = 2275.117 ; gain = 991.559 ; free physical = 7653 ; free virtual = 45279
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Project 1-570] Preparing netlist for logic optimization
-Sourcing Tcl File [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake'
-Finished Sourcing Tcl File [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake'
-Sourcing Tcl File [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake'
-Finished Sourcing Tcl File [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake'
-Sourcing Tcl File [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake'
-Finished Sourcing Tcl File [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake'
-Sourcing Tcl File [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake'
-Finished Sourcing Tcl File [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake'
-Sourcing Tcl File [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake'
-Finished Sourcing Tcl File [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake'
-Sourcing Tcl File [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/xpm_cdc_single_dest2src_inst'
-Finished Sourcing Tcl File [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/xpm_cdc_single_dest2src_inst'
-Sourcing Tcl File [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/xpm_cdc_single_src2dest_inst'
-Finished Sourcing Tcl File [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/xpm_cdc_single_src2dest_inst'
-Sourcing Tcl File [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/xpm_cdc_single_src2dest_inst'
-Finished Sourcing Tcl File [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/xpm_cdc_single_src2dest_inst'
-Sourcing Tcl File [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/xpm_cdc_single_dest2src_inst'
-Finished Sourcing Tcl File [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/xpm_cdc_single_dest2src_inst'
-Sourcing Tcl File [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/xpm_cdc_single_src2dest_inst'
-Finished Sourcing Tcl File [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/xpm_cdc_single_src2dest_inst'
-Sourcing Tcl File [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/xpm_cdc_single_dest2src_inst'
-Finished Sourcing Tcl File [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/xpm_cdc_single_dest2src_inst'
-Sourcing Tcl File [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/xpm_cdc_single_src2dest_inst'
-Finished Sourcing Tcl File [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/xpm_cdc_single_src2dest_inst'
-Sourcing Tcl File [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/xpm_cdc_single_dest2src_inst'
-Finished Sourcing Tcl File [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/xpm_cdc_single_dest2src_inst'
-Sourcing Tcl File [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/xpm_cdc_single_src2dest_inst'
-Finished Sourcing Tcl File [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/xpm_cdc_single_src2dest_inst'
-Sourcing Tcl File [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/xpm_cdc_single_dest2src_inst'
-Finished Sourcing Tcl File [/cad1/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake'
+Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake'
+Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake'
+Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake'
+Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake'
+Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake'
+Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake'
+Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake'
+Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake'
+Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake'
+Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake/xpm_cdc_single_dest2src_inst'
+Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/xpm_cdc_single_src2dest_inst'
+Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/xpm_cdc_single_src2dest_inst'
+Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/xpm_cdc_single_dest2src_inst'
+Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake/xpm_cdc_single_dest2src_inst'
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
@@ -1082,11 +1082,11 @@ No Unisim elements were transformed.
 INFO: [Common 17-83] Releasing license: Synthesis
 100 Infos, 104 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:50 ; elapsed = 00:01:39 . Memory (MB): peak = 2523.656 ; gain = 1283.773 ; free physical = 214 ; free virtual = 27929
-INFO: [Common 17-1381] The checkpoint '/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.runs/shell_auto_cc_0_synth_1/shell_auto_cc_0.dcp' has been generated.
-INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP /nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_cc_0/shell_auto_cc_0.xci
+synth_design: Time (s): cpu = 00:00:59 ; elapsed = 00:01:52 . Memory (MB): peak = 2536.539 ; gain = 1286.594 ; free physical = 7575 ; free virtual = 45214
+INFO: [Common 17-1381] The checkpoint '/home/tarafdar/workDir/galapagos/shells/projects/adm-8k5/adm-8k5.runs/shell_auto_cc_0_synth_1/shell_auto_cc_0.dcp' has been generated.
+INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP /home/tarafdar/workDir/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_cc_0/shell_auto_cc_0.xci
 INFO: [Coretcl 2-1174] Renamed 21 cell refs.
-INFO: [Common 17-1381] The checkpoint '/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.runs/shell_auto_cc_0_synth_1/shell_auto_cc_0.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint '/home/tarafdar/workDir/galapagos/shells/projects/adm-8k5/adm-8k5.runs/shell_auto_cc_0_synth_1/shell_auto_cc_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file shell_auto_cc_0_utilization_synth.rpt -pb shell_auto_cc_0_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00.73 ; elapsed = 00:00:00.78 . Memory (MB): peak = 2547.668 ; gain = 0.000 ; free physical = 178 ; free virtual = 27516
-INFO: [Common 17-206] Exiting Vivado at Fri May 11 11:58:53 2018...
+report_utilization: Time (s): cpu = 00:00:00.88 ; elapsed = 00:00:00.97 . Memory (MB): peak = 2560.551 ; gain = 0.000 ; free physical = 7550 ; free virtual = 45195
+INFO: [Common 17-206] Exiting Vivado at Sun May 13 23:06:23 2018...

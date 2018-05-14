@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
-| Date         : Fri May 11 12:03:46 2018
-| Host         : ug238 running 64-bit Debian GNU/Linux 9.4 (stretch)
+| Date         : Sun May 13 22:57:31 2018
+| Host         : batcomputer running 64-bit Ubuntu 16.04.2 LTS
 | Command      : report_utilization -file shell_xbar_2_utilization_synth.rpt -pb shell_xbar_2_utilization_synth.pb
 | Design       : shell_xbar_2
 | Device       : xcku115flva1517-2
@@ -35,11 +35,11 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| CLB LUTs*               |  251 |     0 |    663360 |  0.04 |
-|   LUT as Logic          |  251 |     0 |    663360 |  0.04 |
+| CLB LUTs*               |  157 |     0 |    663360 |  0.02 |
+|   LUT as Logic          |  157 |     0 |    663360 |  0.02 |
 |   LUT as Memory         |    0 |     0 |    293760 |  0.00 |
-| CLB Registers           |  197 |     0 |   1326720 |  0.01 |
-|   Register as Flip Flop |  197 |     0 |   1326720 |  0.01 |
+| CLB Registers           |  130 |     0 |   1326720 | <0.01 |
+|   Register as Flip Flop |  130 |     0 |   1326720 | <0.01 |
 |   Register as Latch     |    0 |     0 |   1326720 |  0.00 |
 | CARRY8                  |    0 |     0 |     82920 |  0.00 |
 | F7 Muxes                |    0 |     0 |    331680 |  0.00 |
@@ -64,7 +64,7 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 197   |          Yes |       Reset |            - |
+| 130   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -159,12 +159,12 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |  197 |            Register |
-| LUT5     |   97 |                 CLB |
-| LUT6     |   92 |                 CLB |
-| LUT4     |   56 |                 CLB |
-| LUT2     |   18 |                 CLB |
-| LUT3     |    8 |                 CLB |
+| FDRE     |  130 |            Register |
+| LUT4     |   86 |                 CLB |
+| LUT6     |   49 |                 CLB |
+| LUT5     |   23 |                 CLB |
+| LUT2     |   10 |                 CLB |
+| LUT3     |    4 |                 CLB |
 | LUT1     |    2 |                 CLB |
 +----------+------+---------------------+
 

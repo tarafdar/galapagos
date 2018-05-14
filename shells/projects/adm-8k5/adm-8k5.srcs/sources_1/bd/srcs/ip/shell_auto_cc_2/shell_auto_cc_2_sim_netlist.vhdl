@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
--- Date        : Fri May 11 12:13:49 2018
--- Host        : ug238 running 64-bit Debian GNU/Linux 9.4 (stretch)
+-- Date        : Sun May 13 23:05:02 2018
+-- Host        : batcomputer running 64-bit Ubuntu 16.04.2 LTS
 -- Command     : write_vhdl -force -mode funcsim
---               /nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_cc_2/shell_auto_cc_2_sim_netlist.vhdl
+--               /home/tarafdar/workDir/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_cc_2/shell_auto_cc_2_sim_netlist.vhdl
 -- Design      : shell_auto_cc_2
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -757,11 +757,11 @@ use UNISIM.VCOMPONENTS.ALL;
 entity shell_auto_cc_2_xpm_cdc_handshake is
   port (
     src_clk : in STD_LOGIC;
-    src_in : in STD_LOGIC_VECTOR ( 34 downto 0 );
+    src_in : in STD_LOGIC_VECTOR ( 3 downto 0 );
     src_send : in STD_LOGIC;
     src_rcv : out STD_LOGIC;
     dest_clk : in STD_LOGIC;
-    dest_out : out STD_LOGIC_VECTOR ( 34 downto 0 );
+    dest_out : out STD_LOGIC_VECTOR ( 3 downto 0 );
     dest_req : out STD_LOGIC;
     dest_ack : in STD_LOGIC
   );
@@ -780,7 +780,7 @@ entity shell_auto_cc_2_xpm_cdc_handshake is
   attribute VERSION : integer;
   attribute VERSION of shell_auto_cc_2_xpm_cdc_handshake : entity is 0;
   attribute WIDTH : integer;
-  attribute WIDTH of shell_auto_cc_2_xpm_cdc_handshake : entity is 35;
+  attribute WIDTH of shell_auto_cc_2_xpm_cdc_handshake : entity is 4;
   attribute XPM_MODULE : string;
   attribute XPM_MODULE of shell_auto_cc_2_xpm_cdc_handshake : entity is "TRUE";
   attribute xpm_cdc : string;
@@ -791,86 +791,24 @@ architecture STRUCTURE of shell_auto_cc_2_xpm_cdc_handshake is
   signal dest_hsdata_en : STD_LOGIC;
   attribute DIRECT_ENABLE : boolean;
   attribute DIRECT_ENABLE of dest_hsdata_en : signal is std.standard.true;
-  signal dest_hsdata_ff : STD_LOGIC_VECTOR ( 34 downto 0 );
+  signal dest_hsdata_ff : STD_LOGIC_VECTOR ( 3 downto 0 );
   attribute RTL_KEEP : string;
   attribute RTL_KEEP of dest_hsdata_ff : signal is "true";
   attribute xpm_cdc of dest_hsdata_ff : signal is "HANDSHAKE";
   signal \^dest_req\ : STD_LOGIC;
   signal dest_req_nxt : STD_LOGIC;
   signal p_0_in : STD_LOGIC;
-  signal src_hsdata_ff : STD_LOGIC_VECTOR ( 34 downto 0 );
+  signal src_hsdata_ff : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal src_sendd_ff : STD_LOGIC;
   attribute KEEP : string;
   attribute KEEP of \dest_hsdata_ff_reg[0]\ : label is "true";
   attribute XPM_CDC of \dest_hsdata_ff_reg[0]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[10]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[10]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[11]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[11]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[12]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[12]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[13]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[13]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[14]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[14]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[15]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[15]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[16]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[16]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[17]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[17]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[18]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[18]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[19]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[19]\ : label is "HANDSHAKE";
   attribute KEEP of \dest_hsdata_ff_reg[1]\ : label is "true";
   attribute XPM_CDC of \dest_hsdata_ff_reg[1]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[20]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[20]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[21]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[21]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[22]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[22]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[23]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[23]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[24]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[24]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[25]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[25]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[26]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[26]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[27]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[27]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[28]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[28]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[29]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[29]\ : label is "HANDSHAKE";
   attribute KEEP of \dest_hsdata_ff_reg[2]\ : label is "true";
   attribute XPM_CDC of \dest_hsdata_ff_reg[2]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[30]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[30]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[31]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[31]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[32]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[32]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[33]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[33]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[34]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[34]\ : label is "HANDSHAKE";
   attribute KEEP of \dest_hsdata_ff_reg[3]\ : label is "true";
   attribute XPM_CDC of \dest_hsdata_ff_reg[3]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[4]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[4]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[5]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[5]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[6]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[6]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[7]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[7]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[8]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[8]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[9]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[9]\ : label is "HANDSHAKE";
   attribute DEST_SYNC_FF of xpm_cdc_single_dest2src_inst : label is 3;
   attribute INIT_SYNC_FF of xpm_cdc_single_dest2src_inst : label is 0;
   attribute SIM_ASSERT_CHK of xpm_cdc_single_dest2src_inst : label is 0;
@@ -887,7 +825,7 @@ architecture STRUCTURE of shell_auto_cc_2_xpm_cdc_handshake is
   attribute XPM_CDC of xpm_cdc_single_src2dest_inst : label is "SINGLE";
   attribute XPM_MODULE of xpm_cdc_single_src2dest_inst : label is "TRUE";
 begin
-  dest_out(34 downto 0) <= dest_hsdata_ff(34 downto 0);
+  dest_out(3 downto 0) <= dest_hsdata_ff(3 downto 0);
   dest_req <= \^dest_req\;
 dest_hsdata_en_inferred_i_1: unisim.vcomponents.LUT2
     generic map(
@@ -906,172 +844,12 @@ dest_hsdata_en_inferred_i_1: unisim.vcomponents.LUT2
       Q => dest_hsdata_ff(0),
       R => '0'
     );
-\dest_hsdata_ff_reg[10]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(10),
-      Q => dest_hsdata_ff(10),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[11]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(11),
-      Q => dest_hsdata_ff(11),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[12]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(12),
-      Q => dest_hsdata_ff(12),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[13]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(13),
-      Q => dest_hsdata_ff(13),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[14]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(14),
-      Q => dest_hsdata_ff(14),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[15]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(15),
-      Q => dest_hsdata_ff(15),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[16]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(16),
-      Q => dest_hsdata_ff(16),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[17]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(17),
-      Q => dest_hsdata_ff(17),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[18]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(18),
-      Q => dest_hsdata_ff(18),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[19]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(19),
-      Q => dest_hsdata_ff(19),
-      R => '0'
-    );
 \dest_hsdata_ff_reg[1]\: unisim.vcomponents.FDRE
      port map (
       C => dest_clk,
       CE => dest_hsdata_en,
       D => src_hsdata_ff(1),
       Q => dest_hsdata_ff(1),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[20]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(20),
-      Q => dest_hsdata_ff(20),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[21]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(21),
-      Q => dest_hsdata_ff(21),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[22]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(22),
-      Q => dest_hsdata_ff(22),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[23]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(23),
-      Q => dest_hsdata_ff(23),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[24]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(24),
-      Q => dest_hsdata_ff(24),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[25]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(25),
-      Q => dest_hsdata_ff(25),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[26]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(26),
-      Q => dest_hsdata_ff(26),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[27]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(27),
-      Q => dest_hsdata_ff(27),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[28]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(28),
-      Q => dest_hsdata_ff(28),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[29]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(29),
-      Q => dest_hsdata_ff(29),
       R => '0'
     );
 \dest_hsdata_ff_reg[2]\: unisim.vcomponents.FDRE
@@ -1082,100 +860,12 @@ dest_hsdata_en_inferred_i_1: unisim.vcomponents.LUT2
       Q => dest_hsdata_ff(2),
       R => '0'
     );
-\dest_hsdata_ff_reg[30]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(30),
-      Q => dest_hsdata_ff(30),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[31]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(31),
-      Q => dest_hsdata_ff(31),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[32]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(32),
-      Q => dest_hsdata_ff(32),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[33]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(33),
-      Q => dest_hsdata_ff(33),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[34]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(34),
-      Q => dest_hsdata_ff(34),
-      R => '0'
-    );
 \dest_hsdata_ff_reg[3]\: unisim.vcomponents.FDRE
      port map (
       C => dest_clk,
       CE => dest_hsdata_en,
       D => src_hsdata_ff(3),
       Q => dest_hsdata_ff(3),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[4]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(4),
-      Q => dest_hsdata_ff(4),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[5]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(5),
-      Q => dest_hsdata_ff(5),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[6]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(6),
-      Q => dest_hsdata_ff(6),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[7]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(7),
-      Q => dest_hsdata_ff(7),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[8]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(8),
-      Q => dest_hsdata_ff(8),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[9]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(9),
-      Q => dest_hsdata_ff(9),
       R => '0'
     );
 dest_req_ff_reg: unisim.vcomponents.FDRE
@@ -1186,7 +876,7 @@ dest_req_ff_reg: unisim.vcomponents.FDRE
       Q => \^dest_req\,
       R => '0'
     );
-\src_hsdata_ff[34]_i_1\: unisim.vcomponents.LUT1
+\src_hsdata_ff[3]_i_1\: unisim.vcomponents.LUT1
     generic map(
       INIT => X"1"
     )
@@ -1202,172 +892,12 @@ dest_req_ff_reg: unisim.vcomponents.FDRE
       Q => src_hsdata_ff(0),
       R => '0'
     );
-\src_hsdata_ff_reg[10]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(10),
-      Q => src_hsdata_ff(10),
-      R => '0'
-    );
-\src_hsdata_ff_reg[11]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(11),
-      Q => src_hsdata_ff(11),
-      R => '0'
-    );
-\src_hsdata_ff_reg[12]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(12),
-      Q => src_hsdata_ff(12),
-      R => '0'
-    );
-\src_hsdata_ff_reg[13]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(13),
-      Q => src_hsdata_ff(13),
-      R => '0'
-    );
-\src_hsdata_ff_reg[14]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(14),
-      Q => src_hsdata_ff(14),
-      R => '0'
-    );
-\src_hsdata_ff_reg[15]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(15),
-      Q => src_hsdata_ff(15),
-      R => '0'
-    );
-\src_hsdata_ff_reg[16]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(16),
-      Q => src_hsdata_ff(16),
-      R => '0'
-    );
-\src_hsdata_ff_reg[17]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(17),
-      Q => src_hsdata_ff(17),
-      R => '0'
-    );
-\src_hsdata_ff_reg[18]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(18),
-      Q => src_hsdata_ff(18),
-      R => '0'
-    );
-\src_hsdata_ff_reg[19]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(19),
-      Q => src_hsdata_ff(19),
-      R => '0'
-    );
 \src_hsdata_ff_reg[1]\: unisim.vcomponents.FDRE
      port map (
       C => src_clk,
       CE => p_0_in,
       D => src_in(1),
       Q => src_hsdata_ff(1),
-      R => '0'
-    );
-\src_hsdata_ff_reg[20]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(20),
-      Q => src_hsdata_ff(20),
-      R => '0'
-    );
-\src_hsdata_ff_reg[21]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(21),
-      Q => src_hsdata_ff(21),
-      R => '0'
-    );
-\src_hsdata_ff_reg[22]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(22),
-      Q => src_hsdata_ff(22),
-      R => '0'
-    );
-\src_hsdata_ff_reg[23]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(23),
-      Q => src_hsdata_ff(23),
-      R => '0'
-    );
-\src_hsdata_ff_reg[24]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(24),
-      Q => src_hsdata_ff(24),
-      R => '0'
-    );
-\src_hsdata_ff_reg[25]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(25),
-      Q => src_hsdata_ff(25),
-      R => '0'
-    );
-\src_hsdata_ff_reg[26]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(26),
-      Q => src_hsdata_ff(26),
-      R => '0'
-    );
-\src_hsdata_ff_reg[27]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(27),
-      Q => src_hsdata_ff(27),
-      R => '0'
-    );
-\src_hsdata_ff_reg[28]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(28),
-      Q => src_hsdata_ff(28),
-      R => '0'
-    );
-\src_hsdata_ff_reg[29]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(29),
-      Q => src_hsdata_ff(29),
       R => '0'
     );
 \src_hsdata_ff_reg[2]\: unisim.vcomponents.FDRE
@@ -1378,100 +908,12 @@ dest_req_ff_reg: unisim.vcomponents.FDRE
       Q => src_hsdata_ff(2),
       R => '0'
     );
-\src_hsdata_ff_reg[30]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(30),
-      Q => src_hsdata_ff(30),
-      R => '0'
-    );
-\src_hsdata_ff_reg[31]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(31),
-      Q => src_hsdata_ff(31),
-      R => '0'
-    );
-\src_hsdata_ff_reg[32]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(32),
-      Q => src_hsdata_ff(32),
-      R => '0'
-    );
-\src_hsdata_ff_reg[33]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(33),
-      Q => src_hsdata_ff(33),
-      R => '0'
-    );
-\src_hsdata_ff_reg[34]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(34),
-      Q => src_hsdata_ff(34),
-      R => '0'
-    );
 \src_hsdata_ff_reg[3]\: unisim.vcomponents.FDRE
      port map (
       C => src_clk,
       CE => p_0_in,
       D => src_in(3),
       Q => src_hsdata_ff(3),
-      R => '0'
-    );
-\src_hsdata_ff_reg[4]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(4),
-      Q => src_hsdata_ff(4),
-      R => '0'
-    );
-\src_hsdata_ff_reg[5]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(5),
-      Q => src_hsdata_ff(5),
-      R => '0'
-    );
-\src_hsdata_ff_reg[6]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(6),
-      Q => src_hsdata_ff(6),
-      R => '0'
-    );
-\src_hsdata_ff_reg[7]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(7),
-      Q => src_hsdata_ff(7),
-      R => '0'
-    );
-\src_hsdata_ff_reg[8]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(8),
-      Q => src_hsdata_ff(8),
-      R => '0'
-    );
-\src_hsdata_ff_reg[9]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(9),
-      Q => src_hsdata_ff(9),
       R => '0'
     );
 src_sendd_ff_reg: unisim.vcomponents.FDRE
@@ -1504,11 +946,11 @@ use UNISIM.VCOMPONENTS.ALL;
 entity \shell_auto_cc_2_xpm_cdc_handshake__parameterized0\ is
   port (
     src_clk : in STD_LOGIC;
-    src_in : in STD_LOGIC_VECTOR ( 71 downto 0 );
+    src_in : in STD_LOGIC_VECTOR ( 35 downto 0 );
     src_send : in STD_LOGIC;
     src_rcv : out STD_LOGIC;
     dest_clk : in STD_LOGIC;
-    dest_out : out STD_LOGIC_VECTOR ( 71 downto 0 );
+    dest_out : out STD_LOGIC_VECTOR ( 35 downto 0 );
     dest_req : out STD_LOGIC;
     dest_ack : in STD_LOGIC
   );
@@ -1527,7 +969,7 @@ entity \shell_auto_cc_2_xpm_cdc_handshake__parameterized0\ is
   attribute VERSION : integer;
   attribute VERSION of \shell_auto_cc_2_xpm_cdc_handshake__parameterized0\ : entity is 0;
   attribute WIDTH : integer;
-  attribute WIDTH of \shell_auto_cc_2_xpm_cdc_handshake__parameterized0\ : entity is 72;
+  attribute WIDTH of \shell_auto_cc_2_xpm_cdc_handshake__parameterized0\ : entity is 36;
   attribute XPM_MODULE : string;
   attribute XPM_MODULE of \shell_auto_cc_2_xpm_cdc_handshake__parameterized0\ : entity is "TRUE";
   attribute xpm_cdc : string;
@@ -1538,14 +980,14 @@ architecture STRUCTURE of \shell_auto_cc_2_xpm_cdc_handshake__parameterized0\ is
   signal dest_hsdata_en : STD_LOGIC;
   attribute DIRECT_ENABLE : boolean;
   attribute DIRECT_ENABLE of dest_hsdata_en : signal is std.standard.true;
-  signal dest_hsdata_ff : STD_LOGIC_VECTOR ( 71 downto 0 );
+  signal dest_hsdata_ff : STD_LOGIC_VECTOR ( 35 downto 0 );
   attribute RTL_KEEP : string;
   attribute RTL_KEEP of dest_hsdata_ff : signal is "true";
   attribute xpm_cdc of dest_hsdata_ff : signal is "HANDSHAKE";
   signal \^dest_req\ : STD_LOGIC;
   signal dest_req_nxt : STD_LOGIC;
   signal p_0_in : STD_LOGIC;
-  signal src_hsdata_ff : STD_LOGIC_VECTOR ( 71 downto 0 );
+  signal src_hsdata_ff : STD_LOGIC_VECTOR ( 35 downto 0 );
   signal src_sendd_ff : STD_LOGIC;
   attribute KEEP : string;
   attribute KEEP of \dest_hsdata_ff_reg[0]\ : label is "true";
@@ -1606,86 +1048,14 @@ architecture STRUCTURE of \shell_auto_cc_2_xpm_cdc_handshake__parameterized0\ is
   attribute XPM_CDC of \dest_hsdata_ff_reg[34]\ : label is "HANDSHAKE";
   attribute KEEP of \dest_hsdata_ff_reg[35]\ : label is "true";
   attribute XPM_CDC of \dest_hsdata_ff_reg[35]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[36]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[36]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[37]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[37]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[38]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[38]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[39]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[39]\ : label is "HANDSHAKE";
   attribute KEEP of \dest_hsdata_ff_reg[3]\ : label is "true";
   attribute XPM_CDC of \dest_hsdata_ff_reg[3]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[40]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[40]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[41]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[41]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[42]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[42]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[43]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[43]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[44]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[44]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[45]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[45]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[46]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[46]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[47]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[47]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[48]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[48]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[49]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[49]\ : label is "HANDSHAKE";
   attribute KEEP of \dest_hsdata_ff_reg[4]\ : label is "true";
   attribute XPM_CDC of \dest_hsdata_ff_reg[4]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[50]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[50]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[51]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[51]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[52]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[52]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[53]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[53]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[54]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[54]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[55]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[55]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[56]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[56]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[57]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[57]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[58]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[58]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[59]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[59]\ : label is "HANDSHAKE";
   attribute KEEP of \dest_hsdata_ff_reg[5]\ : label is "true";
   attribute XPM_CDC of \dest_hsdata_ff_reg[5]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[60]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[60]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[61]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[61]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[62]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[62]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[63]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[63]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[64]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[64]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[65]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[65]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[66]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[66]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[67]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[67]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[68]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[68]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[69]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[69]\ : label is "HANDSHAKE";
   attribute KEEP of \dest_hsdata_ff_reg[6]\ : label is "true";
   attribute XPM_CDC of \dest_hsdata_ff_reg[6]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[70]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[70]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[71]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[71]\ : label is "HANDSHAKE";
   attribute KEEP of \dest_hsdata_ff_reg[7]\ : label is "true";
   attribute XPM_CDC of \dest_hsdata_ff_reg[7]\ : label is "HANDSHAKE";
   attribute KEEP of \dest_hsdata_ff_reg[8]\ : label is "true";
@@ -1708,7 +1078,7 @@ architecture STRUCTURE of \shell_auto_cc_2_xpm_cdc_handshake__parameterized0\ is
   attribute XPM_CDC of xpm_cdc_single_src2dest_inst : label is "SINGLE";
   attribute XPM_MODULE of xpm_cdc_single_src2dest_inst : label is "TRUE";
 begin
-  dest_out(71 downto 0) <= dest_hsdata_ff(71 downto 0);
+  dest_out(35 downto 0) <= dest_hsdata_ff(35 downto 0);
   dest_req <= \^dest_req\;
 dest_hsdata_en_inferred_i_1: unisim.vcomponents.LUT2
     generic map(
@@ -1951,124 +1321,12 @@ dest_hsdata_en_inferred_i_1: unisim.vcomponents.LUT2
       Q => dest_hsdata_ff(35),
       R => '0'
     );
-\dest_hsdata_ff_reg[36]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(36),
-      Q => dest_hsdata_ff(36),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[37]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(37),
-      Q => dest_hsdata_ff(37),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[38]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(38),
-      Q => dest_hsdata_ff(38),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[39]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(39),
-      Q => dest_hsdata_ff(39),
-      R => '0'
-    );
 \dest_hsdata_ff_reg[3]\: unisim.vcomponents.FDRE
      port map (
       C => dest_clk,
       CE => dest_hsdata_en,
       D => src_hsdata_ff(3),
       Q => dest_hsdata_ff(3),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[40]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(40),
-      Q => dest_hsdata_ff(40),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[41]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(41),
-      Q => dest_hsdata_ff(41),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[42]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(42),
-      Q => dest_hsdata_ff(42),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[43]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(43),
-      Q => dest_hsdata_ff(43),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[44]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(44),
-      Q => dest_hsdata_ff(44),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[45]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(45),
-      Q => dest_hsdata_ff(45),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[46]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(46),
-      Q => dest_hsdata_ff(46),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[47]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(47),
-      Q => dest_hsdata_ff(47),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[48]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(48),
-      Q => dest_hsdata_ff(48),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[49]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(49),
-      Q => dest_hsdata_ff(49),
       R => '0'
     );
 \dest_hsdata_ff_reg[4]\: unisim.vcomponents.FDRE
@@ -2079,86 +1337,6 @@ dest_hsdata_en_inferred_i_1: unisim.vcomponents.LUT2
       Q => dest_hsdata_ff(4),
       R => '0'
     );
-\dest_hsdata_ff_reg[50]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(50),
-      Q => dest_hsdata_ff(50),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[51]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(51),
-      Q => dest_hsdata_ff(51),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[52]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(52),
-      Q => dest_hsdata_ff(52),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[53]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(53),
-      Q => dest_hsdata_ff(53),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[54]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(54),
-      Q => dest_hsdata_ff(54),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[55]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(55),
-      Q => dest_hsdata_ff(55),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[56]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(56),
-      Q => dest_hsdata_ff(56),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[57]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(57),
-      Q => dest_hsdata_ff(57),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[58]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(58),
-      Q => dest_hsdata_ff(58),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[59]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(59),
-      Q => dest_hsdata_ff(59),
-      R => '0'
-    );
 \dest_hsdata_ff_reg[5]\: unisim.vcomponents.FDRE
      port map (
       C => dest_clk,
@@ -2167,108 +1345,12 @@ dest_hsdata_en_inferred_i_1: unisim.vcomponents.LUT2
       Q => dest_hsdata_ff(5),
       R => '0'
     );
-\dest_hsdata_ff_reg[60]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(60),
-      Q => dest_hsdata_ff(60),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[61]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(61),
-      Q => dest_hsdata_ff(61),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[62]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(62),
-      Q => dest_hsdata_ff(62),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[63]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(63),
-      Q => dest_hsdata_ff(63),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[64]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(64),
-      Q => dest_hsdata_ff(64),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[65]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(65),
-      Q => dest_hsdata_ff(65),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[66]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(66),
-      Q => dest_hsdata_ff(66),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[67]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(67),
-      Q => dest_hsdata_ff(67),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[68]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(68),
-      Q => dest_hsdata_ff(68),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[69]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(69),
-      Q => dest_hsdata_ff(69),
-      R => '0'
-    );
 \dest_hsdata_ff_reg[6]\: unisim.vcomponents.FDRE
      port map (
       C => dest_clk,
       CE => dest_hsdata_en,
       D => src_hsdata_ff(6),
       Q => dest_hsdata_ff(6),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[70]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(70),
-      Q => dest_hsdata_ff(70),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[71]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(71),
-      Q => dest_hsdata_ff(71),
       R => '0'
     );
 \dest_hsdata_ff_reg[7]\: unisim.vcomponents.FDRE
@@ -2303,7 +1385,7 @@ dest_req_ff_reg: unisim.vcomponents.FDRE
       Q => \^dest_req\,
       R => '0'
     );
-\src_hsdata_ff[71]_i_1\: unisim.vcomponents.LUT1
+\src_hsdata_ff[35]_i_1\: unisim.vcomponents.LUT1
     generic map(
       INIT => X"1"
     )
@@ -2543,124 +1625,12 @@ dest_req_ff_reg: unisim.vcomponents.FDRE
       Q => src_hsdata_ff(35),
       R => '0'
     );
-\src_hsdata_ff_reg[36]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(36),
-      Q => src_hsdata_ff(36),
-      R => '0'
-    );
-\src_hsdata_ff_reg[37]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(37),
-      Q => src_hsdata_ff(37),
-      R => '0'
-    );
-\src_hsdata_ff_reg[38]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(38),
-      Q => src_hsdata_ff(38),
-      R => '0'
-    );
-\src_hsdata_ff_reg[39]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(39),
-      Q => src_hsdata_ff(39),
-      R => '0'
-    );
 \src_hsdata_ff_reg[3]\: unisim.vcomponents.FDRE
      port map (
       C => src_clk,
       CE => p_0_in,
       D => src_in(3),
       Q => src_hsdata_ff(3),
-      R => '0'
-    );
-\src_hsdata_ff_reg[40]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(40),
-      Q => src_hsdata_ff(40),
-      R => '0'
-    );
-\src_hsdata_ff_reg[41]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(41),
-      Q => src_hsdata_ff(41),
-      R => '0'
-    );
-\src_hsdata_ff_reg[42]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(42),
-      Q => src_hsdata_ff(42),
-      R => '0'
-    );
-\src_hsdata_ff_reg[43]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(43),
-      Q => src_hsdata_ff(43),
-      R => '0'
-    );
-\src_hsdata_ff_reg[44]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(44),
-      Q => src_hsdata_ff(44),
-      R => '0'
-    );
-\src_hsdata_ff_reg[45]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(45),
-      Q => src_hsdata_ff(45),
-      R => '0'
-    );
-\src_hsdata_ff_reg[46]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(46),
-      Q => src_hsdata_ff(46),
-      R => '0'
-    );
-\src_hsdata_ff_reg[47]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(47),
-      Q => src_hsdata_ff(47),
-      R => '0'
-    );
-\src_hsdata_ff_reg[48]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(48),
-      Q => src_hsdata_ff(48),
-      R => '0'
-    );
-\src_hsdata_ff_reg[49]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(49),
-      Q => src_hsdata_ff(49),
       R => '0'
     );
 \src_hsdata_ff_reg[4]\: unisim.vcomponents.FDRE
@@ -2671,86 +1641,6 @@ dest_req_ff_reg: unisim.vcomponents.FDRE
       Q => src_hsdata_ff(4),
       R => '0'
     );
-\src_hsdata_ff_reg[50]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(50),
-      Q => src_hsdata_ff(50),
-      R => '0'
-    );
-\src_hsdata_ff_reg[51]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(51),
-      Q => src_hsdata_ff(51),
-      R => '0'
-    );
-\src_hsdata_ff_reg[52]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(52),
-      Q => src_hsdata_ff(52),
-      R => '0'
-    );
-\src_hsdata_ff_reg[53]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(53),
-      Q => src_hsdata_ff(53),
-      R => '0'
-    );
-\src_hsdata_ff_reg[54]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(54),
-      Q => src_hsdata_ff(54),
-      R => '0'
-    );
-\src_hsdata_ff_reg[55]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(55),
-      Q => src_hsdata_ff(55),
-      R => '0'
-    );
-\src_hsdata_ff_reg[56]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(56),
-      Q => src_hsdata_ff(56),
-      R => '0'
-    );
-\src_hsdata_ff_reg[57]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(57),
-      Q => src_hsdata_ff(57),
-      R => '0'
-    );
-\src_hsdata_ff_reg[58]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(58),
-      Q => src_hsdata_ff(58),
-      R => '0'
-    );
-\src_hsdata_ff_reg[59]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(59),
-      Q => src_hsdata_ff(59),
-      R => '0'
-    );
 \src_hsdata_ff_reg[5]\: unisim.vcomponents.FDRE
      port map (
       C => src_clk,
@@ -2759,108 +1649,12 @@ dest_req_ff_reg: unisim.vcomponents.FDRE
       Q => src_hsdata_ff(5),
       R => '0'
     );
-\src_hsdata_ff_reg[60]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(60),
-      Q => src_hsdata_ff(60),
-      R => '0'
-    );
-\src_hsdata_ff_reg[61]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(61),
-      Q => src_hsdata_ff(61),
-      R => '0'
-    );
-\src_hsdata_ff_reg[62]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(62),
-      Q => src_hsdata_ff(62),
-      R => '0'
-    );
-\src_hsdata_ff_reg[63]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(63),
-      Q => src_hsdata_ff(63),
-      R => '0'
-    );
-\src_hsdata_ff_reg[64]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(64),
-      Q => src_hsdata_ff(64),
-      R => '0'
-    );
-\src_hsdata_ff_reg[65]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(65),
-      Q => src_hsdata_ff(65),
-      R => '0'
-    );
-\src_hsdata_ff_reg[66]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(66),
-      Q => src_hsdata_ff(66),
-      R => '0'
-    );
-\src_hsdata_ff_reg[67]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(67),
-      Q => src_hsdata_ff(67),
-      R => '0'
-    );
-\src_hsdata_ff_reg[68]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(68),
-      Q => src_hsdata_ff(68),
-      R => '0'
-    );
-\src_hsdata_ff_reg[69]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(69),
-      Q => src_hsdata_ff(69),
-      R => '0'
-    );
 \src_hsdata_ff_reg[6]\: unisim.vcomponents.FDRE
      port map (
       C => src_clk,
       CE => p_0_in,
       D => src_in(6),
       Q => src_hsdata_ff(6),
-      R => '0'
-    );
-\src_hsdata_ff_reg[70]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(70),
-      Q => src_hsdata_ff(70),
-      R => '0'
-    );
-\src_hsdata_ff_reg[71]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(71),
-      Q => src_hsdata_ff(71),
       R => '0'
     );
 \src_hsdata_ff_reg[7]\: unisim.vcomponents.FDRE
@@ -3070,11 +1864,11 @@ use UNISIM.VCOMPONENTS.ALL;
 entity \shell_auto_cc_2_xpm_cdc_handshake__parameterized2\ is
   port (
     src_clk : in STD_LOGIC;
-    src_in : in STD_LOGIC_VECTOR ( 65 downto 0 );
+    src_in : in STD_LOGIC_VECTOR ( 33 downto 0 );
     src_send : in STD_LOGIC;
     src_rcv : out STD_LOGIC;
     dest_clk : in STD_LOGIC;
-    dest_out : out STD_LOGIC_VECTOR ( 65 downto 0 );
+    dest_out : out STD_LOGIC_VECTOR ( 33 downto 0 );
     dest_req : out STD_LOGIC;
     dest_ack : in STD_LOGIC
   );
@@ -3093,7 +1887,7 @@ entity \shell_auto_cc_2_xpm_cdc_handshake__parameterized2\ is
   attribute VERSION : integer;
   attribute VERSION of \shell_auto_cc_2_xpm_cdc_handshake__parameterized2\ : entity is 0;
   attribute WIDTH : integer;
-  attribute WIDTH of \shell_auto_cc_2_xpm_cdc_handshake__parameterized2\ : entity is 66;
+  attribute WIDTH of \shell_auto_cc_2_xpm_cdc_handshake__parameterized2\ : entity is 34;
   attribute XPM_MODULE : string;
   attribute XPM_MODULE of \shell_auto_cc_2_xpm_cdc_handshake__parameterized2\ : entity is "TRUE";
   attribute xpm_cdc : string;
@@ -3104,14 +1898,14 @@ architecture STRUCTURE of \shell_auto_cc_2_xpm_cdc_handshake__parameterized2\ is
   signal dest_hsdata_en : STD_LOGIC;
   attribute DIRECT_ENABLE : boolean;
   attribute DIRECT_ENABLE of dest_hsdata_en : signal is std.standard.true;
-  signal dest_hsdata_ff : STD_LOGIC_VECTOR ( 65 downto 0 );
+  signal dest_hsdata_ff : STD_LOGIC_VECTOR ( 33 downto 0 );
   attribute RTL_KEEP : string;
   attribute RTL_KEEP of dest_hsdata_ff : signal is "true";
   attribute xpm_cdc of dest_hsdata_ff : signal is "HANDSHAKE";
   signal \^dest_req\ : STD_LOGIC;
   signal dest_req_nxt : STD_LOGIC;
   signal p_0_in : STD_LOGIC;
-  signal src_hsdata_ff : STD_LOGIC_VECTOR ( 65 downto 0 );
+  signal src_hsdata_ff : STD_LOGIC_VECTOR ( 33 downto 0 );
   signal src_sendd_ff : STD_LOGIC;
   attribute KEEP : string;
   attribute KEEP of \dest_hsdata_ff_reg[0]\ : label is "true";
@@ -3168,76 +1962,12 @@ architecture STRUCTURE of \shell_auto_cc_2_xpm_cdc_handshake__parameterized2\ is
   attribute XPM_CDC of \dest_hsdata_ff_reg[32]\ : label is "HANDSHAKE";
   attribute KEEP of \dest_hsdata_ff_reg[33]\ : label is "true";
   attribute XPM_CDC of \dest_hsdata_ff_reg[33]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[34]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[34]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[35]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[35]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[36]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[36]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[37]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[37]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[38]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[38]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[39]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[39]\ : label is "HANDSHAKE";
   attribute KEEP of \dest_hsdata_ff_reg[3]\ : label is "true";
   attribute XPM_CDC of \dest_hsdata_ff_reg[3]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[40]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[40]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[41]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[41]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[42]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[42]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[43]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[43]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[44]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[44]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[45]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[45]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[46]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[46]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[47]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[47]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[48]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[48]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[49]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[49]\ : label is "HANDSHAKE";
   attribute KEEP of \dest_hsdata_ff_reg[4]\ : label is "true";
   attribute XPM_CDC of \dest_hsdata_ff_reg[4]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[50]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[50]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[51]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[51]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[52]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[52]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[53]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[53]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[54]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[54]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[55]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[55]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[56]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[56]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[57]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[57]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[58]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[58]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[59]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[59]\ : label is "HANDSHAKE";
   attribute KEEP of \dest_hsdata_ff_reg[5]\ : label is "true";
   attribute XPM_CDC of \dest_hsdata_ff_reg[5]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[60]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[60]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[61]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[61]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[62]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[62]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[63]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[63]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[64]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[64]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[65]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[65]\ : label is "HANDSHAKE";
   attribute KEEP of \dest_hsdata_ff_reg[6]\ : label is "true";
   attribute XPM_CDC of \dest_hsdata_ff_reg[6]\ : label is "HANDSHAKE";
   attribute KEEP of \dest_hsdata_ff_reg[7]\ : label is "true";
@@ -3262,7 +1992,7 @@ architecture STRUCTURE of \shell_auto_cc_2_xpm_cdc_handshake__parameterized2\ is
   attribute XPM_CDC of xpm_cdc_single_src2dest_inst : label is "SINGLE";
   attribute XPM_MODULE of xpm_cdc_single_src2dest_inst : label is "TRUE";
 begin
-  dest_out(65 downto 0) <= dest_hsdata_ff(65 downto 0);
+  dest_out(33 downto 0) <= dest_hsdata_ff(33 downto 0);
   dest_req <= \^dest_req\;
 dest_hsdata_en_inferred_i_1: unisim.vcomponents.LUT2
     generic map(
@@ -3489,140 +2219,12 @@ dest_hsdata_en_inferred_i_1: unisim.vcomponents.LUT2
       Q => dest_hsdata_ff(33),
       R => '0'
     );
-\dest_hsdata_ff_reg[34]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(34),
-      Q => dest_hsdata_ff(34),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[35]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(35),
-      Q => dest_hsdata_ff(35),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[36]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(36),
-      Q => dest_hsdata_ff(36),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[37]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(37),
-      Q => dest_hsdata_ff(37),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[38]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(38),
-      Q => dest_hsdata_ff(38),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[39]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(39),
-      Q => dest_hsdata_ff(39),
-      R => '0'
-    );
 \dest_hsdata_ff_reg[3]\: unisim.vcomponents.FDRE
      port map (
       C => dest_clk,
       CE => dest_hsdata_en,
       D => src_hsdata_ff(3),
       Q => dest_hsdata_ff(3),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[40]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(40),
-      Q => dest_hsdata_ff(40),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[41]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(41),
-      Q => dest_hsdata_ff(41),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[42]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(42),
-      Q => dest_hsdata_ff(42),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[43]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(43),
-      Q => dest_hsdata_ff(43),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[44]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(44),
-      Q => dest_hsdata_ff(44),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[45]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(45),
-      Q => dest_hsdata_ff(45),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[46]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(46),
-      Q => dest_hsdata_ff(46),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[47]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(47),
-      Q => dest_hsdata_ff(47),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[48]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(48),
-      Q => dest_hsdata_ff(48),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[49]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(49),
-      Q => dest_hsdata_ff(49),
       R => '0'
     );
 \dest_hsdata_ff_reg[4]\: unisim.vcomponents.FDRE
@@ -3633,140 +2235,12 @@ dest_hsdata_en_inferred_i_1: unisim.vcomponents.LUT2
       Q => dest_hsdata_ff(4),
       R => '0'
     );
-\dest_hsdata_ff_reg[50]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(50),
-      Q => dest_hsdata_ff(50),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[51]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(51),
-      Q => dest_hsdata_ff(51),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[52]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(52),
-      Q => dest_hsdata_ff(52),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[53]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(53),
-      Q => dest_hsdata_ff(53),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[54]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(54),
-      Q => dest_hsdata_ff(54),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[55]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(55),
-      Q => dest_hsdata_ff(55),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[56]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(56),
-      Q => dest_hsdata_ff(56),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[57]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(57),
-      Q => dest_hsdata_ff(57),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[58]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(58),
-      Q => dest_hsdata_ff(58),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[59]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(59),
-      Q => dest_hsdata_ff(59),
-      R => '0'
-    );
 \dest_hsdata_ff_reg[5]\: unisim.vcomponents.FDRE
      port map (
       C => dest_clk,
       CE => dest_hsdata_en,
       D => src_hsdata_ff(5),
       Q => dest_hsdata_ff(5),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[60]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(60),
-      Q => dest_hsdata_ff(60),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[61]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(61),
-      Q => dest_hsdata_ff(61),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[62]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(62),
-      Q => dest_hsdata_ff(62),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[63]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(63),
-      Q => dest_hsdata_ff(63),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[64]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(64),
-      Q => dest_hsdata_ff(64),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[65]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(65),
-      Q => dest_hsdata_ff(65),
       R => '0'
     );
 \dest_hsdata_ff_reg[6]\: unisim.vcomponents.FDRE
@@ -3809,7 +2283,7 @@ dest_req_ff_reg: unisim.vcomponents.FDRE
       Q => \^dest_req\,
       R => '0'
     );
-\src_hsdata_ff[65]_i_1\: unisim.vcomponents.LUT1
+\src_hsdata_ff[33]_i_1\: unisim.vcomponents.LUT1
     generic map(
       INIT => X"1"
     )
@@ -4033,140 +2507,12 @@ dest_req_ff_reg: unisim.vcomponents.FDRE
       Q => src_hsdata_ff(33),
       R => '0'
     );
-\src_hsdata_ff_reg[34]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(34),
-      Q => src_hsdata_ff(34),
-      R => '0'
-    );
-\src_hsdata_ff_reg[35]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(35),
-      Q => src_hsdata_ff(35),
-      R => '0'
-    );
-\src_hsdata_ff_reg[36]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(36),
-      Q => src_hsdata_ff(36),
-      R => '0'
-    );
-\src_hsdata_ff_reg[37]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(37),
-      Q => src_hsdata_ff(37),
-      R => '0'
-    );
-\src_hsdata_ff_reg[38]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(38),
-      Q => src_hsdata_ff(38),
-      R => '0'
-    );
-\src_hsdata_ff_reg[39]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(39),
-      Q => src_hsdata_ff(39),
-      R => '0'
-    );
 \src_hsdata_ff_reg[3]\: unisim.vcomponents.FDRE
      port map (
       C => src_clk,
       CE => p_0_in,
       D => src_in(3),
       Q => src_hsdata_ff(3),
-      R => '0'
-    );
-\src_hsdata_ff_reg[40]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(40),
-      Q => src_hsdata_ff(40),
-      R => '0'
-    );
-\src_hsdata_ff_reg[41]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(41),
-      Q => src_hsdata_ff(41),
-      R => '0'
-    );
-\src_hsdata_ff_reg[42]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(42),
-      Q => src_hsdata_ff(42),
-      R => '0'
-    );
-\src_hsdata_ff_reg[43]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(43),
-      Q => src_hsdata_ff(43),
-      R => '0'
-    );
-\src_hsdata_ff_reg[44]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(44),
-      Q => src_hsdata_ff(44),
-      R => '0'
-    );
-\src_hsdata_ff_reg[45]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(45),
-      Q => src_hsdata_ff(45),
-      R => '0'
-    );
-\src_hsdata_ff_reg[46]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(46),
-      Q => src_hsdata_ff(46),
-      R => '0'
-    );
-\src_hsdata_ff_reg[47]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(47),
-      Q => src_hsdata_ff(47),
-      R => '0'
-    );
-\src_hsdata_ff_reg[48]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(48),
-      Q => src_hsdata_ff(48),
-      R => '0'
-    );
-\src_hsdata_ff_reg[49]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(49),
-      Q => src_hsdata_ff(49),
       R => '0'
     );
 \src_hsdata_ff_reg[4]\: unisim.vcomponents.FDRE
@@ -4177,140 +2523,12 @@ dest_req_ff_reg: unisim.vcomponents.FDRE
       Q => src_hsdata_ff(4),
       R => '0'
     );
-\src_hsdata_ff_reg[50]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(50),
-      Q => src_hsdata_ff(50),
-      R => '0'
-    );
-\src_hsdata_ff_reg[51]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(51),
-      Q => src_hsdata_ff(51),
-      R => '0'
-    );
-\src_hsdata_ff_reg[52]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(52),
-      Q => src_hsdata_ff(52),
-      R => '0'
-    );
-\src_hsdata_ff_reg[53]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(53),
-      Q => src_hsdata_ff(53),
-      R => '0'
-    );
-\src_hsdata_ff_reg[54]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(54),
-      Q => src_hsdata_ff(54),
-      R => '0'
-    );
-\src_hsdata_ff_reg[55]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(55),
-      Q => src_hsdata_ff(55),
-      R => '0'
-    );
-\src_hsdata_ff_reg[56]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(56),
-      Q => src_hsdata_ff(56),
-      R => '0'
-    );
-\src_hsdata_ff_reg[57]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(57),
-      Q => src_hsdata_ff(57),
-      R => '0'
-    );
-\src_hsdata_ff_reg[58]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(58),
-      Q => src_hsdata_ff(58),
-      R => '0'
-    );
-\src_hsdata_ff_reg[59]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(59),
-      Q => src_hsdata_ff(59),
-      R => '0'
-    );
 \src_hsdata_ff_reg[5]\: unisim.vcomponents.FDRE
      port map (
       C => src_clk,
       CE => p_0_in,
       D => src_in(5),
       Q => src_hsdata_ff(5),
-      R => '0'
-    );
-\src_hsdata_ff_reg[60]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(60),
-      Q => src_hsdata_ff(60),
-      R => '0'
-    );
-\src_hsdata_ff_reg[61]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(61),
-      Q => src_hsdata_ff(61),
-      R => '0'
-    );
-\src_hsdata_ff_reg[62]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(62),
-      Q => src_hsdata_ff(62),
-      R => '0'
-    );
-\src_hsdata_ff_reg[63]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(63),
-      Q => src_hsdata_ff(63),
-      R => '0'
-    );
-\src_hsdata_ff_reg[64]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(64),
-      Q => src_hsdata_ff(64),
-      R => '0'
-    );
-\src_hsdata_ff_reg[65]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(65),
-      Q => src_hsdata_ff(65),
       R => '0'
     );
 \src_hsdata_ff_reg[6]\: unisim.vcomponents.FDRE
@@ -4375,11 +2593,11 @@ use UNISIM.VCOMPONENTS.ALL;
 entity \shell_auto_cc_2_xpm_cdc_handshake__xdcDup__1\ is
   port (
     src_clk : in STD_LOGIC;
-    src_in : in STD_LOGIC_VECTOR ( 34 downto 0 );
+    src_in : in STD_LOGIC_VECTOR ( 3 downto 0 );
     src_send : in STD_LOGIC;
     src_rcv : out STD_LOGIC;
     dest_clk : in STD_LOGIC;
-    dest_out : out STD_LOGIC_VECTOR ( 34 downto 0 );
+    dest_out : out STD_LOGIC_VECTOR ( 3 downto 0 );
     dest_req : out STD_LOGIC;
     dest_ack : in STD_LOGIC
   );
@@ -4398,7 +2616,7 @@ entity \shell_auto_cc_2_xpm_cdc_handshake__xdcDup__1\ is
   attribute VERSION : integer;
   attribute VERSION of \shell_auto_cc_2_xpm_cdc_handshake__xdcDup__1\ : entity is 0;
   attribute WIDTH : integer;
-  attribute WIDTH of \shell_auto_cc_2_xpm_cdc_handshake__xdcDup__1\ : entity is 35;
+  attribute WIDTH of \shell_auto_cc_2_xpm_cdc_handshake__xdcDup__1\ : entity is 4;
   attribute XPM_MODULE : string;
   attribute XPM_MODULE of \shell_auto_cc_2_xpm_cdc_handshake__xdcDup__1\ : entity is "TRUE";
   attribute xpm_cdc : string;
@@ -4409,86 +2627,24 @@ architecture STRUCTURE of \shell_auto_cc_2_xpm_cdc_handshake__xdcDup__1\ is
   signal dest_hsdata_en : STD_LOGIC;
   attribute DIRECT_ENABLE : boolean;
   attribute DIRECT_ENABLE of dest_hsdata_en : signal is std.standard.true;
-  signal dest_hsdata_ff : STD_LOGIC_VECTOR ( 34 downto 0 );
+  signal dest_hsdata_ff : STD_LOGIC_VECTOR ( 3 downto 0 );
   attribute RTL_KEEP : string;
   attribute RTL_KEEP of dest_hsdata_ff : signal is "true";
   attribute xpm_cdc of dest_hsdata_ff : signal is "HANDSHAKE";
   signal \^dest_req\ : STD_LOGIC;
   signal dest_req_nxt : STD_LOGIC;
   signal p_0_in : STD_LOGIC;
-  signal src_hsdata_ff : STD_LOGIC_VECTOR ( 34 downto 0 );
+  signal src_hsdata_ff : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal src_sendd_ff : STD_LOGIC;
   attribute KEEP : string;
   attribute KEEP of \dest_hsdata_ff_reg[0]\ : label is "true";
   attribute XPM_CDC of \dest_hsdata_ff_reg[0]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[10]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[10]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[11]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[11]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[12]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[12]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[13]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[13]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[14]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[14]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[15]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[15]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[16]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[16]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[17]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[17]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[18]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[18]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[19]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[19]\ : label is "HANDSHAKE";
   attribute KEEP of \dest_hsdata_ff_reg[1]\ : label is "true";
   attribute XPM_CDC of \dest_hsdata_ff_reg[1]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[20]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[20]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[21]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[21]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[22]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[22]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[23]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[23]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[24]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[24]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[25]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[25]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[26]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[26]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[27]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[27]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[28]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[28]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[29]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[29]\ : label is "HANDSHAKE";
   attribute KEEP of \dest_hsdata_ff_reg[2]\ : label is "true";
   attribute XPM_CDC of \dest_hsdata_ff_reg[2]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[30]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[30]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[31]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[31]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[32]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[32]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[33]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[33]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[34]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[34]\ : label is "HANDSHAKE";
   attribute KEEP of \dest_hsdata_ff_reg[3]\ : label is "true";
   attribute XPM_CDC of \dest_hsdata_ff_reg[3]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[4]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[4]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[5]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[5]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[6]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[6]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[7]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[7]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[8]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[8]\ : label is "HANDSHAKE";
-  attribute KEEP of \dest_hsdata_ff_reg[9]\ : label is "true";
-  attribute XPM_CDC of \dest_hsdata_ff_reg[9]\ : label is "HANDSHAKE";
   attribute DEST_SYNC_FF of xpm_cdc_single_dest2src_inst : label is 3;
   attribute INIT_SYNC_FF of xpm_cdc_single_dest2src_inst : label is 0;
   attribute SIM_ASSERT_CHK of xpm_cdc_single_dest2src_inst : label is 0;
@@ -4505,7 +2661,7 @@ architecture STRUCTURE of \shell_auto_cc_2_xpm_cdc_handshake__xdcDup__1\ is
   attribute XPM_CDC of xpm_cdc_single_src2dest_inst : label is "SINGLE";
   attribute XPM_MODULE of xpm_cdc_single_src2dest_inst : label is "TRUE";
 begin
-  dest_out(34 downto 0) <= dest_hsdata_ff(34 downto 0);
+  dest_out(3 downto 0) <= dest_hsdata_ff(3 downto 0);
   dest_req <= \^dest_req\;
 dest_hsdata_en_inferred_i_1: unisim.vcomponents.LUT2
     generic map(
@@ -4524,172 +2680,12 @@ dest_hsdata_en_inferred_i_1: unisim.vcomponents.LUT2
       Q => dest_hsdata_ff(0),
       R => '0'
     );
-\dest_hsdata_ff_reg[10]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(10),
-      Q => dest_hsdata_ff(10),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[11]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(11),
-      Q => dest_hsdata_ff(11),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[12]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(12),
-      Q => dest_hsdata_ff(12),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[13]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(13),
-      Q => dest_hsdata_ff(13),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[14]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(14),
-      Q => dest_hsdata_ff(14),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[15]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(15),
-      Q => dest_hsdata_ff(15),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[16]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(16),
-      Q => dest_hsdata_ff(16),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[17]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(17),
-      Q => dest_hsdata_ff(17),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[18]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(18),
-      Q => dest_hsdata_ff(18),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[19]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(19),
-      Q => dest_hsdata_ff(19),
-      R => '0'
-    );
 \dest_hsdata_ff_reg[1]\: unisim.vcomponents.FDRE
      port map (
       C => dest_clk,
       CE => dest_hsdata_en,
       D => src_hsdata_ff(1),
       Q => dest_hsdata_ff(1),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[20]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(20),
-      Q => dest_hsdata_ff(20),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[21]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(21),
-      Q => dest_hsdata_ff(21),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[22]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(22),
-      Q => dest_hsdata_ff(22),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[23]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(23),
-      Q => dest_hsdata_ff(23),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[24]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(24),
-      Q => dest_hsdata_ff(24),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[25]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(25),
-      Q => dest_hsdata_ff(25),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[26]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(26),
-      Q => dest_hsdata_ff(26),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[27]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(27),
-      Q => dest_hsdata_ff(27),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[28]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(28),
-      Q => dest_hsdata_ff(28),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[29]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(29),
-      Q => dest_hsdata_ff(29),
       R => '0'
     );
 \dest_hsdata_ff_reg[2]\: unisim.vcomponents.FDRE
@@ -4700,100 +2696,12 @@ dest_hsdata_en_inferred_i_1: unisim.vcomponents.LUT2
       Q => dest_hsdata_ff(2),
       R => '0'
     );
-\dest_hsdata_ff_reg[30]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(30),
-      Q => dest_hsdata_ff(30),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[31]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(31),
-      Q => dest_hsdata_ff(31),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[32]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(32),
-      Q => dest_hsdata_ff(32),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[33]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(33),
-      Q => dest_hsdata_ff(33),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[34]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(34),
-      Q => dest_hsdata_ff(34),
-      R => '0'
-    );
 \dest_hsdata_ff_reg[3]\: unisim.vcomponents.FDRE
      port map (
       C => dest_clk,
       CE => dest_hsdata_en,
       D => src_hsdata_ff(3),
       Q => dest_hsdata_ff(3),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[4]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(4),
-      Q => dest_hsdata_ff(4),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[5]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(5),
-      Q => dest_hsdata_ff(5),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[6]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(6),
-      Q => dest_hsdata_ff(6),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[7]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(7),
-      Q => dest_hsdata_ff(7),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[8]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(8),
-      Q => dest_hsdata_ff(8),
-      R => '0'
-    );
-\dest_hsdata_ff_reg[9]\: unisim.vcomponents.FDRE
-     port map (
-      C => dest_clk,
-      CE => dest_hsdata_en,
-      D => src_hsdata_ff(9),
-      Q => dest_hsdata_ff(9),
       R => '0'
     );
 dest_req_ff_reg: unisim.vcomponents.FDRE
@@ -4804,7 +2712,7 @@ dest_req_ff_reg: unisim.vcomponents.FDRE
       Q => \^dest_req\,
       R => '0'
     );
-\src_hsdata_ff[34]_i_1\: unisim.vcomponents.LUT1
+\src_hsdata_ff[3]_i_1\: unisim.vcomponents.LUT1
     generic map(
       INIT => X"1"
     )
@@ -4820,172 +2728,12 @@ dest_req_ff_reg: unisim.vcomponents.FDRE
       Q => src_hsdata_ff(0),
       R => '0'
     );
-\src_hsdata_ff_reg[10]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(10),
-      Q => src_hsdata_ff(10),
-      R => '0'
-    );
-\src_hsdata_ff_reg[11]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(11),
-      Q => src_hsdata_ff(11),
-      R => '0'
-    );
-\src_hsdata_ff_reg[12]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(12),
-      Q => src_hsdata_ff(12),
-      R => '0'
-    );
-\src_hsdata_ff_reg[13]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(13),
-      Q => src_hsdata_ff(13),
-      R => '0'
-    );
-\src_hsdata_ff_reg[14]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(14),
-      Q => src_hsdata_ff(14),
-      R => '0'
-    );
-\src_hsdata_ff_reg[15]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(15),
-      Q => src_hsdata_ff(15),
-      R => '0'
-    );
-\src_hsdata_ff_reg[16]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(16),
-      Q => src_hsdata_ff(16),
-      R => '0'
-    );
-\src_hsdata_ff_reg[17]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(17),
-      Q => src_hsdata_ff(17),
-      R => '0'
-    );
-\src_hsdata_ff_reg[18]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(18),
-      Q => src_hsdata_ff(18),
-      R => '0'
-    );
-\src_hsdata_ff_reg[19]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(19),
-      Q => src_hsdata_ff(19),
-      R => '0'
-    );
 \src_hsdata_ff_reg[1]\: unisim.vcomponents.FDRE
      port map (
       C => src_clk,
       CE => p_0_in,
       D => src_in(1),
       Q => src_hsdata_ff(1),
-      R => '0'
-    );
-\src_hsdata_ff_reg[20]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(20),
-      Q => src_hsdata_ff(20),
-      R => '0'
-    );
-\src_hsdata_ff_reg[21]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(21),
-      Q => src_hsdata_ff(21),
-      R => '0'
-    );
-\src_hsdata_ff_reg[22]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(22),
-      Q => src_hsdata_ff(22),
-      R => '0'
-    );
-\src_hsdata_ff_reg[23]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(23),
-      Q => src_hsdata_ff(23),
-      R => '0'
-    );
-\src_hsdata_ff_reg[24]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(24),
-      Q => src_hsdata_ff(24),
-      R => '0'
-    );
-\src_hsdata_ff_reg[25]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(25),
-      Q => src_hsdata_ff(25),
-      R => '0'
-    );
-\src_hsdata_ff_reg[26]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(26),
-      Q => src_hsdata_ff(26),
-      R => '0'
-    );
-\src_hsdata_ff_reg[27]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(27),
-      Q => src_hsdata_ff(27),
-      R => '0'
-    );
-\src_hsdata_ff_reg[28]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(28),
-      Q => src_hsdata_ff(28),
-      R => '0'
-    );
-\src_hsdata_ff_reg[29]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(29),
-      Q => src_hsdata_ff(29),
       R => '0'
     );
 \src_hsdata_ff_reg[2]\: unisim.vcomponents.FDRE
@@ -4996,100 +2744,12 @@ dest_req_ff_reg: unisim.vcomponents.FDRE
       Q => src_hsdata_ff(2),
       R => '0'
     );
-\src_hsdata_ff_reg[30]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(30),
-      Q => src_hsdata_ff(30),
-      R => '0'
-    );
-\src_hsdata_ff_reg[31]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(31),
-      Q => src_hsdata_ff(31),
-      R => '0'
-    );
-\src_hsdata_ff_reg[32]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(32),
-      Q => src_hsdata_ff(32),
-      R => '0'
-    );
-\src_hsdata_ff_reg[33]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(33),
-      Q => src_hsdata_ff(33),
-      R => '0'
-    );
-\src_hsdata_ff_reg[34]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(34),
-      Q => src_hsdata_ff(34),
-      R => '0'
-    );
 \src_hsdata_ff_reg[3]\: unisim.vcomponents.FDRE
      port map (
       C => src_clk,
       CE => p_0_in,
       D => src_in(3),
       Q => src_hsdata_ff(3),
-      R => '0'
-    );
-\src_hsdata_ff_reg[4]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(4),
-      Q => src_hsdata_ff(4),
-      R => '0'
-    );
-\src_hsdata_ff_reg[5]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(5),
-      Q => src_hsdata_ff(5),
-      R => '0'
-    );
-\src_hsdata_ff_reg[6]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(6),
-      Q => src_hsdata_ff(6),
-      R => '0'
-    );
-\src_hsdata_ff_reg[7]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(7),
-      Q => src_hsdata_ff(7),
-      R => '0'
-    );
-\src_hsdata_ff_reg[8]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(8),
-      Q => src_hsdata_ff(8),
-      R => '0'
-    );
-\src_hsdata_ff_reg[9]\: unisim.vcomponents.FDRE
-     port map (
-      C => src_clk,
-      CE => p_0_in,
-      D => src_in(9),
-      Q => src_hsdata_ff(9),
       R => '0'
     );
 src_sendd_ff_reg: unisim.vcomponents.FDRE
@@ -5121,11 +2781,11 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity shell_auto_cc_2_axi_clock_converter_v2_1_15_lite_async is
   port (
-    dest_out : out STD_LOGIC_VECTOR ( 34 downto 0 );
+    dest_out : out STD_LOGIC_VECTOR ( 3 downto 0 );
     s_axi_arready : out STD_LOGIC;
     m_axi_arvalid : out STD_LOGIC;
     \out\ : in STD_LOGIC;
-    src_in : in STD_LOGIC_VECTOR ( 34 downto 0 );
+    src_in : in STD_LOGIC_VECTOR ( 3 downto 0 );
     m_axi_aclk : in STD_LOGIC;
     SR : in STD_LOGIC_VECTOR ( 0 to 0 );
     \m_areset_dly_reg[3]\ : in STD_LOGIC_VECTOR ( 0 to 0 );
@@ -5181,7 +2841,7 @@ architecture STRUCTURE of shell_auto_cc_2_axi_clock_converter_v2_1_15_lite_async
   attribute VERSION : integer;
   attribute VERSION of handshake : label is 0;
   attribute WIDTH : integer;
-  attribute WIDTH of handshake : label is 35;
+  attribute WIDTH of handshake : label is 4;
   attribute XPM_CDC : string;
   attribute XPM_CDC of handshake : label is "HANDSHAKE";
   attribute XPM_MODULE : string;
@@ -5302,10 +2962,10 @@ handshake: entity work.shell_auto_cc_2_xpm_cdc_handshake
      port map (
       dest_ack => dest_ack_reg_n_0,
       dest_clk => m_axi_aclk,
-      dest_out(34 downto 0) => dest_out(34 downto 0),
+      dest_out(3 downto 0) => dest_out(3 downto 0),
       dest_req => dest_req,
       src_clk => \out\,
-      src_in(34 downto 0) => src_in(34 downto 0),
+      src_in(3 downto 0) => src_in(3 downto 0),
       src_rcv => src_rcv,
       src_send => src_send_reg_n_0
     );
@@ -5395,11 +3055,11 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity \shell_auto_cc_2_axi_clock_converter_v2_1_15_lite_async__parameterized0\ is
   port (
-    dest_out : out STD_LOGIC_VECTOR ( 71 downto 0 );
+    dest_out : out STD_LOGIC_VECTOR ( 35 downto 0 );
     s_axi_wready : out STD_LOGIC;
     m_axi_wvalid : out STD_LOGIC;
     \out\ : in STD_LOGIC;
-    src_in : in STD_LOGIC_VECTOR ( 71 downto 0 );
+    src_in : in STD_LOGIC_VECTOR ( 35 downto 0 );
     m_axi_aclk : in STD_LOGIC;
     SR : in STD_LOGIC_VECTOR ( 0 to 0 );
     \m_areset_dly_reg[3]\ : in STD_LOGIC_VECTOR ( 0 to 0 );
@@ -5455,7 +3115,7 @@ architecture STRUCTURE of \shell_auto_cc_2_axi_clock_converter_v2_1_15_lite_asyn
   attribute VERSION : integer;
   attribute VERSION of handshake : label is 0;
   attribute WIDTH : integer;
-  attribute WIDTH of handshake : label is 72;
+  attribute WIDTH of handshake : label is 36;
   attribute XPM_CDC : string;
   attribute XPM_CDC of handshake : label is "HANDSHAKE";
   attribute XPM_MODULE : string;
@@ -5576,10 +3236,10 @@ handshake: entity work.\shell_auto_cc_2_xpm_cdc_handshake__parameterized0\
      port map (
       dest_ack => dest_ack_reg_n_0,
       dest_clk => m_axi_aclk,
-      dest_out(71 downto 0) => dest_out(71 downto 0),
+      dest_out(35 downto 0) => dest_out(35 downto 0),
       dest_req => dest_req,
       src_clk => \out\,
-      src_in(71 downto 0) => src_in(71 downto 0),
+      src_in(35 downto 0) => src_in(35 downto 0),
       src_rcv => src_rcv,
       src_send => src_send_reg_n_0
     );
@@ -5943,11 +3603,11 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity \shell_auto_cc_2_axi_clock_converter_v2_1_15_lite_async__parameterized2\ is
   port (
-    dest_out : out STD_LOGIC_VECTOR ( 65 downto 0 );
+    dest_out : out STD_LOGIC_VECTOR ( 33 downto 0 );
     m_axi_rready : out STD_LOGIC;
     s_axi_rvalid : out STD_LOGIC;
     \out\ : in STD_LOGIC;
-    src_in : in STD_LOGIC_VECTOR ( 65 downto 0 );
+    src_in : in STD_LOGIC_VECTOR ( 33 downto 0 );
     s_axi_aclk : in STD_LOGIC;
     SR : in STD_LOGIC_VECTOR ( 0 to 0 );
     \s_areset_dly_reg[3]\ : in STD_LOGIC_VECTOR ( 0 to 0 );
@@ -6003,7 +3663,7 @@ architecture STRUCTURE of \shell_auto_cc_2_axi_clock_converter_v2_1_15_lite_asyn
   attribute VERSION : integer;
   attribute VERSION of handshake : label is 0;
   attribute WIDTH : integer;
-  attribute WIDTH of handshake : label is 66;
+  attribute WIDTH of handshake : label is 34;
   attribute XPM_CDC : string;
   attribute XPM_CDC of handshake : label is "HANDSHAKE";
   attribute XPM_MODULE : string;
@@ -6124,10 +3784,10 @@ handshake: entity work.\shell_auto_cc_2_xpm_cdc_handshake__parameterized2\
      port map (
       dest_ack => dest_ack_reg_n_0,
       dest_clk => s_axi_aclk,
-      dest_out(65 downto 0) => dest_out(65 downto 0),
+      dest_out(33 downto 0) => dest_out(33 downto 0),
       dest_req => dest_req,
       src_clk => \out\,
-      src_in(65 downto 0) => src_in(65 downto 0),
+      src_in(33 downto 0) => src_in(33 downto 0),
       src_rcv => src_rcv,
       src_send => src_send_reg_n_0
     );
@@ -6217,13 +3877,13 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity \shell_auto_cc_2_axi_clock_converter_v2_1_15_lite_async__xdcDup__1\ is
   port (
-    dest_out : out STD_LOGIC_VECTOR ( 34 downto 0 );
+    dest_out : out STD_LOGIC_VECTOR ( 3 downto 0 );
     SR : out STD_LOGIC_VECTOR ( 0 to 0 );
     \FSM_sequential_src_state_reg[1]_0\ : out STD_LOGIC_VECTOR ( 0 to 0 );
     s_axi_awready : out STD_LOGIC;
     m_axi_awvalid : out STD_LOGIC;
     \out\ : in STD_LOGIC;
-    src_in : in STD_LOGIC_VECTOR ( 34 downto 0 );
+    src_in : in STD_LOGIC_VECTOR ( 3 downto 0 );
     m_axi_aclk : in STD_LOGIC;
     m_axi_awready : in STD_LOGIC;
     s_axi_awvalid : in STD_LOGIC;
@@ -6291,20 +3951,20 @@ architecture STRUCTURE of \shell_auto_cc_2_axi_clock_converter_v2_1_15_lite_asyn
   attribute VERSION : integer;
   attribute VERSION of handshake : label is 0;
   attribute WIDTH : integer;
-  attribute WIDTH of handshake : label is 35;
+  attribute WIDTH of handshake : label is 4;
   attribute XPM_CDC : string;
   attribute XPM_CDC of handshake : label is "HANDSHAKE";
   attribute XPM_MODULE : string;
   attribute XPM_MODULE of handshake : label is "TRUE";
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \m_areset_dly[0]_i_1\ : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of \m_areset_dly[1]_i_1\ : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of \m_areset_dly[2]_i_1\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \m_areset_dly[3]_i_1\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \s_areset_dly[0]_i_1\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \s_areset_dly[1]_i_1\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \s_areset_dly[2]_i_1\ : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of \s_areset_dly[3]_i_1\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \m_areset_dly[0]_i_1\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \m_areset_dly[1]_i_1\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \m_areset_dly[2]_i_1\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \m_areset_dly[3]_i_1\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \s_areset_dly[0]_i_1\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \s_areset_dly[1]_i_1\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \s_areset_dly[2]_i_1\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \s_areset_dly[3]_i_1\ : label is "soft_lutpair2";
 begin
   \FSM_sequential_src_state_reg[1]_0\(0) <= \^fsm_sequential_src_state_reg[1]_0\(0);
   SR(0) <= \^sr\(0);
@@ -6423,10 +4083,10 @@ handshake: entity work.\shell_auto_cc_2_xpm_cdc_handshake__xdcDup__1\
      port map (
       dest_ack => dest_ack_reg_n_0,
       dest_clk => m_axi_aclk,
-      dest_out(34 downto 0) => dest_out(34 downto 0),
+      dest_out(3 downto 0) => dest_out(3 downto 0),
       dest_req => dest_req,
       src_clk => \out\,
-      src_in(34 downto 0) => src_in(34 downto 0),
+      src_in(3 downto 0) => src_in(3 downto 0),
       src_rcv => src_rcv,
       src_send => src_send_reg_n_0
     );
@@ -6677,7 +4337,7 @@ entity shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter is
     s_axi_aclk : in STD_LOGIC;
     s_axi_aresetn : in STD_LOGIC;
     s_axi_awid : in STD_LOGIC_VECTOR ( 0 to 0 );
-    s_axi_awaddr : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    s_axi_awaddr : in STD_LOGIC_VECTOR ( 0 to 0 );
     s_axi_awlen : in STD_LOGIC_VECTOR ( 7 downto 0 );
     s_axi_awsize : in STD_LOGIC_VECTOR ( 2 downto 0 );
     s_axi_awburst : in STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -6690,8 +4350,8 @@ entity shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter is
     s_axi_awvalid : in STD_LOGIC;
     s_axi_awready : out STD_LOGIC;
     s_axi_wid : in STD_LOGIC_VECTOR ( 0 to 0 );
-    s_axi_wdata : in STD_LOGIC_VECTOR ( 63 downto 0 );
-    s_axi_wstrb : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    s_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    s_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
     s_axi_wlast : in STD_LOGIC;
     s_axi_wuser : in STD_LOGIC_VECTOR ( 0 to 0 );
     s_axi_wvalid : in STD_LOGIC;
@@ -6702,7 +4362,7 @@ entity shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter is
     s_axi_bvalid : out STD_LOGIC;
     s_axi_bready : in STD_LOGIC;
     s_axi_arid : in STD_LOGIC_VECTOR ( 0 to 0 );
-    s_axi_araddr : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    s_axi_araddr : in STD_LOGIC_VECTOR ( 0 to 0 );
     s_axi_arlen : in STD_LOGIC_VECTOR ( 7 downto 0 );
     s_axi_arsize : in STD_LOGIC_VECTOR ( 2 downto 0 );
     s_axi_arburst : in STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -6715,7 +4375,7 @@ entity shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter is
     s_axi_arvalid : in STD_LOGIC;
     s_axi_arready : out STD_LOGIC;
     s_axi_rid : out STD_LOGIC_VECTOR ( 0 to 0 );
-    s_axi_rdata : out STD_LOGIC_VECTOR ( 63 downto 0 );
+    s_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
     s_axi_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
     s_axi_rlast : out STD_LOGIC;
     s_axi_ruser : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -6724,7 +4384,7 @@ entity shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter is
     m_axi_aclk : in STD_LOGIC;
     m_axi_aresetn : in STD_LOGIC;
     m_axi_awid : out STD_LOGIC_VECTOR ( 0 to 0 );
-    m_axi_awaddr : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    m_axi_awaddr : out STD_LOGIC_VECTOR ( 0 to 0 );
     m_axi_awlen : out STD_LOGIC_VECTOR ( 7 downto 0 );
     m_axi_awsize : out STD_LOGIC_VECTOR ( 2 downto 0 );
     m_axi_awburst : out STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -6737,8 +4397,8 @@ entity shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter is
     m_axi_awvalid : out STD_LOGIC;
     m_axi_awready : in STD_LOGIC;
     m_axi_wid : out STD_LOGIC_VECTOR ( 0 to 0 );
-    m_axi_wdata : out STD_LOGIC_VECTOR ( 63 downto 0 );
-    m_axi_wstrb : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    m_axi_wdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    m_axi_wstrb : out STD_LOGIC_VECTOR ( 3 downto 0 );
     m_axi_wlast : out STD_LOGIC;
     m_axi_wuser : out STD_LOGIC_VECTOR ( 0 to 0 );
     m_axi_wvalid : out STD_LOGIC;
@@ -6749,7 +4409,7 @@ entity shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter is
     m_axi_bvalid : in STD_LOGIC;
     m_axi_bready : out STD_LOGIC;
     m_axi_arid : out STD_LOGIC_VECTOR ( 0 to 0 );
-    m_axi_araddr : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    m_axi_araddr : out STD_LOGIC_VECTOR ( 0 to 0 );
     m_axi_arlen : out STD_LOGIC_VECTOR ( 7 downto 0 );
     m_axi_arsize : out STD_LOGIC_VECTOR ( 2 downto 0 );
     m_axi_arburst : out STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -6762,7 +4422,7 @@ entity shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter is
     m_axi_arvalid : out STD_LOGIC;
     m_axi_arready : in STD_LOGIC;
     m_axi_rid : in STD_LOGIC_VECTOR ( 0 to 0 );
-    m_axi_rdata : in STD_LOGIC_VECTOR ( 63 downto 0 );
+    m_axi_rdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
     m_axi_rresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
     m_axi_rlast : in STD_LOGIC;
     m_axi_ruser : in STD_LOGIC_VECTOR ( 0 to 0 );
@@ -6772,7 +4432,7 @@ entity shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter is
   attribute C_ARADDR_RIGHT : integer;
   attribute C_ARADDR_RIGHT of shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter : entity is 3;
   attribute C_ARADDR_WIDTH : integer;
-  attribute C_ARADDR_WIDTH of shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter : entity is 32;
+  attribute C_ARADDR_WIDTH of shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter : entity is 1;
   attribute C_ARBURST_RIGHT : integer;
   attribute C_ARBURST_RIGHT of shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter : entity is 3;
   attribute C_ARBURST_WIDTH : integer;
@@ -6782,7 +4442,7 @@ entity shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter is
   attribute C_ARCACHE_WIDTH : integer;
   attribute C_ARCACHE_WIDTH of shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter : entity is 0;
   attribute C_ARID_RIGHT : integer;
-  attribute C_ARID_RIGHT of shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter : entity is 35;
+  attribute C_ARID_RIGHT of shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter : entity is 4;
   attribute C_ARID_WIDTH : integer;
   attribute C_ARID_WIDTH of shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter : entity is 0;
   attribute C_ARLEN_RIGHT : integer;
@@ -6814,11 +4474,11 @@ entity shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter is
   attribute C_ARUSER_WIDTH : integer;
   attribute C_ARUSER_WIDTH of shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter : entity is 0;
   attribute C_AR_WIDTH : integer;
-  attribute C_AR_WIDTH of shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter : entity is 35;
+  attribute C_AR_WIDTH of shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter : entity is 4;
   attribute C_AWADDR_RIGHT : integer;
   attribute C_AWADDR_RIGHT of shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter : entity is 3;
   attribute C_AWADDR_WIDTH : integer;
-  attribute C_AWADDR_WIDTH of shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter : entity is 32;
+  attribute C_AWADDR_WIDTH of shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter : entity is 1;
   attribute C_AWBURST_RIGHT : integer;
   attribute C_AWBURST_RIGHT of shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter : entity is 3;
   attribute C_AWBURST_WIDTH : integer;
@@ -6828,7 +4488,7 @@ entity shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter is
   attribute C_AWCACHE_WIDTH : integer;
   attribute C_AWCACHE_WIDTH of shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter : entity is 0;
   attribute C_AWID_RIGHT : integer;
-  attribute C_AWID_RIGHT of shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter : entity is 35;
+  attribute C_AWID_RIGHT of shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter : entity is 4;
   attribute C_AWID_WIDTH : integer;
   attribute C_AWID_WIDTH of shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter : entity is 0;
   attribute C_AWLEN_RIGHT : integer;
@@ -6860,9 +4520,9 @@ entity shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter is
   attribute C_AWUSER_WIDTH : integer;
   attribute C_AWUSER_WIDTH of shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter : entity is 0;
   attribute C_AW_WIDTH : integer;
-  attribute C_AW_WIDTH of shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter : entity is 35;
+  attribute C_AW_WIDTH of shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter : entity is 4;
   attribute C_AXI_ADDR_WIDTH : integer;
-  attribute C_AXI_ADDR_WIDTH of shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter : entity is 32;
+  attribute C_AXI_ADDR_WIDTH of shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter : entity is 1;
   attribute C_AXI_ARUSER_WIDTH : integer;
   attribute C_AXI_ARUSER_WIDTH of shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter : entity is 1;
   attribute C_AXI_AWUSER_WIDTH : integer;
@@ -6870,7 +4530,7 @@ entity shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter is
   attribute C_AXI_BUSER_WIDTH : integer;
   attribute C_AXI_BUSER_WIDTH of shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter : entity is 1;
   attribute C_AXI_DATA_WIDTH : integer;
-  attribute C_AXI_DATA_WIDTH of shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter : entity is 64;
+  attribute C_AXI_DATA_WIDTH of shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter : entity is 32;
   attribute C_AXI_ID_WIDTH : integer;
   attribute C_AXI_ID_WIDTH of shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter : entity is 1;
   attribute C_AXI_IS_ACLK_ASYNC : integer;
@@ -6904,23 +4564,23 @@ entity shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter is
   attribute C_FAMILY : string;
   attribute C_FAMILY of shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter : entity is "kintexu";
   attribute C_FIFO_AR_WIDTH : integer;
-  attribute C_FIFO_AR_WIDTH of shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter : entity is 35;
+  attribute C_FIFO_AR_WIDTH of shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter : entity is 4;
   attribute C_FIFO_AW_WIDTH : integer;
-  attribute C_FIFO_AW_WIDTH of shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter : entity is 35;
+  attribute C_FIFO_AW_WIDTH of shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter : entity is 4;
   attribute C_FIFO_B_WIDTH : integer;
   attribute C_FIFO_B_WIDTH of shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter : entity is 2;
   attribute C_FIFO_R_WIDTH : integer;
-  attribute C_FIFO_R_WIDTH of shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter : entity is 66;
+  attribute C_FIFO_R_WIDTH of shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter : entity is 34;
   attribute C_FIFO_W_WIDTH : integer;
-  attribute C_FIFO_W_WIDTH of shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter : entity is 72;
+  attribute C_FIFO_W_WIDTH of shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter : entity is 36;
   attribute C_M_AXI_ACLK_RATIO : integer;
   attribute C_M_AXI_ACLK_RATIO of shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter : entity is 2;
   attribute C_RDATA_RIGHT : integer;
   attribute C_RDATA_RIGHT of shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter : entity is 2;
   attribute C_RDATA_WIDTH : integer;
-  attribute C_RDATA_WIDTH of shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter : entity is 64;
+  attribute C_RDATA_WIDTH of shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter : entity is 32;
   attribute C_RID_RIGHT : integer;
-  attribute C_RID_RIGHT of shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter : entity is 66;
+  attribute C_RID_RIGHT of shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter : entity is 34;
   attribute C_RID_WIDTH : integer;
   attribute C_RID_WIDTH of shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter : entity is 0;
   attribute C_RLAST_RIGHT : integer;
@@ -6936,17 +4596,17 @@ entity shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter is
   attribute C_RUSER_WIDTH : integer;
   attribute C_RUSER_WIDTH of shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter : entity is 0;
   attribute C_R_WIDTH : integer;
-  attribute C_R_WIDTH of shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter : entity is 66;
+  attribute C_R_WIDTH of shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter : entity is 34;
   attribute C_SYNCHRONIZER_STAGE : integer;
   attribute C_SYNCHRONIZER_STAGE of shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter : entity is 3;
   attribute C_S_AXI_ACLK_RATIO : integer;
   attribute C_S_AXI_ACLK_RATIO of shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter : entity is 1;
   attribute C_WDATA_RIGHT : integer;
-  attribute C_WDATA_RIGHT of shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter : entity is 8;
+  attribute C_WDATA_RIGHT of shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter : entity is 4;
   attribute C_WDATA_WIDTH : integer;
-  attribute C_WDATA_WIDTH of shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter : entity is 64;
+  attribute C_WDATA_WIDTH of shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter : entity is 32;
   attribute C_WID_RIGHT : integer;
-  attribute C_WID_RIGHT of shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter : entity is 72;
+  attribute C_WID_RIGHT of shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter : entity is 36;
   attribute C_WID_WIDTH : integer;
   attribute C_WID_WIDTH of shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter : entity is 0;
   attribute C_WLAST_RIGHT : integer;
@@ -6956,13 +4616,13 @@ entity shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter is
   attribute C_WSTRB_RIGHT : integer;
   attribute C_WSTRB_RIGHT of shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter : entity is 0;
   attribute C_WSTRB_WIDTH : integer;
-  attribute C_WSTRB_WIDTH of shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter : entity is 8;
+  attribute C_WSTRB_WIDTH of shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter : entity is 4;
   attribute C_WUSER_RIGHT : integer;
   attribute C_WUSER_RIGHT of shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter : entity is 0;
   attribute C_WUSER_WIDTH : integer;
   attribute C_WUSER_WIDTH of shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter : entity is 0;
   attribute C_W_WIDTH : integer;
-  attribute C_W_WIDTH of shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter : entity is 72;
+  attribute C_W_WIDTH of shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter : entity is 36;
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter : entity is "yes";
   attribute ORIG_REF_NAME : string;
@@ -7068,8 +4728,8 @@ GND: unisim.vcomponents.GND
 \gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar\: entity work.shell_auto_cc_2_axi_clock_converter_v2_1_15_lite_async
      port map (
       SR(0) => s_areset_dly(3),
-      dest_out(34 downto 32) => m_axi_arprot(2 downto 0),
-      dest_out(31 downto 0) => m_axi_araddr(31 downto 0),
+      dest_out(3 downto 1) => m_axi_arprot(2 downto 0),
+      dest_out(0) => m_axi_araddr(0),
       \m_areset_dly_reg[3]\(0) => m_areset_dly(3),
       m_axi_aclk => m_axi_aclk,
       m_axi_arready => m_axi_arready,
@@ -7077,15 +4737,15 @@ GND: unisim.vcomponents.GND
       \out\ => s_axi_aclk,
       s_axi_arready => s_axi_arready,
       s_axi_arvalid => s_axi_arvalid,
-      src_in(34 downto 32) => s_axi_arprot(2 downto 0),
-      src_in(31 downto 0) => s_axi_araddr(31 downto 0)
+      src_in(3 downto 1) => s_axi_arprot(2 downto 0),
+      src_in(0) => s_axi_araddr(0)
     );
 \gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw\: entity work.\shell_auto_cc_2_axi_clock_converter_v2_1_15_lite_async__xdcDup__1\
      port map (
       \FSM_sequential_src_state_reg[1]_0\(0) => s_areset_dly(3),
       SR(0) => m_areset_dly(3),
-      dest_out(34 downto 32) => m_axi_awprot(2 downto 0),
-      dest_out(31 downto 0) => m_axi_awaddr(31 downto 0),
+      dest_out(3 downto 1) => m_axi_awprot(2 downto 0),
+      dest_out(0) => m_axi_awaddr(0),
       m_axi_aclk => m_axi_aclk,
       m_axi_aresetn => m_axi_aresetn,
       m_axi_awready => m_axi_awready,
@@ -7094,14 +4754,14 @@ GND: unisim.vcomponents.GND
       s_axi_aresetn => s_axi_aresetn,
       s_axi_awready => s_axi_awready,
       s_axi_awvalid => s_axi_awvalid,
-      src_in(34 downto 32) => s_axi_awprot(2 downto 0),
-      src_in(31 downto 0) => s_axi_awaddr(31 downto 0)
+      src_in(3 downto 1) => s_axi_awprot(2 downto 0),
+      src_in(0) => s_axi_awaddr(0)
     );
 \gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w\: entity work.\shell_auto_cc_2_axi_clock_converter_v2_1_15_lite_async__parameterized0\
      port map (
       SR(0) => s_areset_dly(3),
-      dest_out(71 downto 64) => m_axi_wstrb(7 downto 0),
-      dest_out(63 downto 0) => m_axi_wdata(63 downto 0),
+      dest_out(35 downto 32) => m_axi_wstrb(3 downto 0),
+      dest_out(31 downto 0) => m_axi_wdata(31 downto 0),
       \m_areset_dly_reg[3]\(0) => m_areset_dly(3),
       m_axi_aclk => m_axi_aclk,
       m_axi_wready => m_axi_wready,
@@ -7109,8 +4769,8 @@ GND: unisim.vcomponents.GND
       \out\ => s_axi_aclk,
       s_axi_wready => s_axi_wready,
       s_axi_wvalid => s_axi_wvalid,
-      src_in(71 downto 64) => s_axi_wstrb(7 downto 0),
-      src_in(63 downto 0) => s_axi_wdata(63 downto 0)
+      src_in(35 downto 32) => s_axi_wstrb(3 downto 0),
+      src_in(31 downto 0) => s_axi_wdata(31 downto 0)
     );
 \gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b\: entity work.\shell_auto_cc_2_axi_clock_converter_v2_1_15_lite_async__parameterized1\
      port map (
@@ -7128,8 +4788,8 @@ GND: unisim.vcomponents.GND
 \gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r\: entity work.\shell_auto_cc_2_axi_clock_converter_v2_1_15_lite_async__parameterized2\
      port map (
       SR(0) => m_areset_dly(3),
-      dest_out(65 downto 64) => s_axi_rresp(1 downto 0),
-      dest_out(63 downto 0) => s_axi_rdata(63 downto 0),
+      dest_out(33 downto 32) => s_axi_rresp(1 downto 0),
+      dest_out(31 downto 0) => s_axi_rdata(31 downto 0),
       m_axi_rready => m_axi_rready,
       m_axi_rvalid => m_axi_rvalid,
       \out\ => m_axi_aclk,
@@ -7137,8 +4797,8 @@ GND: unisim.vcomponents.GND
       s_axi_aclk => s_axi_aclk,
       s_axi_rready => s_axi_rready,
       s_axi_rvalid => s_axi_rvalid,
-      src_in(65 downto 64) => m_axi_rresp(1 downto 0),
-      src_in(63 downto 0) => m_axi_rdata(63 downto 0)
+      src_in(33 downto 32) => m_axi_rresp(1 downto 0),
+      src_in(31 downto 0) => m_axi_rdata(31 downto 0)
     );
 end STRUCTURE;
 library IEEE;
@@ -7149,43 +4809,43 @@ entity shell_auto_cc_2 is
   port (
     s_axi_aclk : in STD_LOGIC;
     s_axi_aresetn : in STD_LOGIC;
-    s_axi_awaddr : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    s_axi_awaddr : in STD_LOGIC_VECTOR ( 0 to 0 );
     s_axi_awprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
     s_axi_awvalid : in STD_LOGIC;
     s_axi_awready : out STD_LOGIC;
-    s_axi_wdata : in STD_LOGIC_VECTOR ( 63 downto 0 );
-    s_axi_wstrb : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    s_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    s_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
     s_axi_wvalid : in STD_LOGIC;
     s_axi_wready : out STD_LOGIC;
     s_axi_bresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
     s_axi_bvalid : out STD_LOGIC;
     s_axi_bready : in STD_LOGIC;
-    s_axi_araddr : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    s_axi_araddr : in STD_LOGIC_VECTOR ( 0 to 0 );
     s_axi_arprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
     s_axi_arvalid : in STD_LOGIC;
     s_axi_arready : out STD_LOGIC;
-    s_axi_rdata : out STD_LOGIC_VECTOR ( 63 downto 0 );
+    s_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
     s_axi_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
     s_axi_rvalid : out STD_LOGIC;
     s_axi_rready : in STD_LOGIC;
     m_axi_aclk : in STD_LOGIC;
     m_axi_aresetn : in STD_LOGIC;
-    m_axi_awaddr : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    m_axi_awaddr : out STD_LOGIC_VECTOR ( 0 to 0 );
     m_axi_awprot : out STD_LOGIC_VECTOR ( 2 downto 0 );
     m_axi_awvalid : out STD_LOGIC;
     m_axi_awready : in STD_LOGIC;
-    m_axi_wdata : out STD_LOGIC_VECTOR ( 63 downto 0 );
-    m_axi_wstrb : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    m_axi_wdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    m_axi_wstrb : out STD_LOGIC_VECTOR ( 3 downto 0 );
     m_axi_wvalid : out STD_LOGIC;
     m_axi_wready : in STD_LOGIC;
     m_axi_bresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
     m_axi_bvalid : in STD_LOGIC;
     m_axi_bready : out STD_LOGIC;
-    m_axi_araddr : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    m_axi_araddr : out STD_LOGIC_VECTOR ( 0 to 0 );
     m_axi_arprot : out STD_LOGIC_VECTOR ( 2 downto 0 );
     m_axi_arvalid : out STD_LOGIC;
     m_axi_arready : in STD_LOGIC;
-    m_axi_rdata : in STD_LOGIC_VECTOR ( 63 downto 0 );
+    m_axi_rdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
     m_axi_rresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
     m_axi_rvalid : in STD_LOGIC;
     m_axi_rready : out STD_LOGIC
@@ -7230,7 +4890,7 @@ architecture STRUCTURE of shell_auto_cc_2 is
   attribute C_ARADDR_RIGHT : integer;
   attribute C_ARADDR_RIGHT of inst : label is 3;
   attribute C_ARADDR_WIDTH : integer;
-  attribute C_ARADDR_WIDTH of inst : label is 32;
+  attribute C_ARADDR_WIDTH of inst : label is 1;
   attribute C_ARBURST_RIGHT : integer;
   attribute C_ARBURST_RIGHT of inst : label is 3;
   attribute C_ARBURST_WIDTH : integer;
@@ -7240,7 +4900,7 @@ architecture STRUCTURE of shell_auto_cc_2 is
   attribute C_ARCACHE_WIDTH : integer;
   attribute C_ARCACHE_WIDTH of inst : label is 0;
   attribute C_ARID_RIGHT : integer;
-  attribute C_ARID_RIGHT of inst : label is 35;
+  attribute C_ARID_RIGHT of inst : label is 4;
   attribute C_ARID_WIDTH : integer;
   attribute C_ARID_WIDTH of inst : label is 0;
   attribute C_ARLEN_RIGHT : integer;
@@ -7272,11 +4932,11 @@ architecture STRUCTURE of shell_auto_cc_2 is
   attribute C_ARUSER_WIDTH : integer;
   attribute C_ARUSER_WIDTH of inst : label is 0;
   attribute C_AR_WIDTH : integer;
-  attribute C_AR_WIDTH of inst : label is 35;
+  attribute C_AR_WIDTH of inst : label is 4;
   attribute C_AWADDR_RIGHT : integer;
   attribute C_AWADDR_RIGHT of inst : label is 3;
   attribute C_AWADDR_WIDTH : integer;
-  attribute C_AWADDR_WIDTH of inst : label is 32;
+  attribute C_AWADDR_WIDTH of inst : label is 1;
   attribute C_AWBURST_RIGHT : integer;
   attribute C_AWBURST_RIGHT of inst : label is 3;
   attribute C_AWBURST_WIDTH : integer;
@@ -7286,7 +4946,7 @@ architecture STRUCTURE of shell_auto_cc_2 is
   attribute C_AWCACHE_WIDTH : integer;
   attribute C_AWCACHE_WIDTH of inst : label is 0;
   attribute C_AWID_RIGHT : integer;
-  attribute C_AWID_RIGHT of inst : label is 35;
+  attribute C_AWID_RIGHT of inst : label is 4;
   attribute C_AWID_WIDTH : integer;
   attribute C_AWID_WIDTH of inst : label is 0;
   attribute C_AWLEN_RIGHT : integer;
@@ -7318,9 +4978,9 @@ architecture STRUCTURE of shell_auto_cc_2 is
   attribute C_AWUSER_WIDTH : integer;
   attribute C_AWUSER_WIDTH of inst : label is 0;
   attribute C_AW_WIDTH : integer;
-  attribute C_AW_WIDTH of inst : label is 35;
+  attribute C_AW_WIDTH of inst : label is 4;
   attribute C_AXI_ADDR_WIDTH : integer;
-  attribute C_AXI_ADDR_WIDTH of inst : label is 32;
+  attribute C_AXI_ADDR_WIDTH of inst : label is 1;
   attribute C_AXI_ARUSER_WIDTH : integer;
   attribute C_AXI_ARUSER_WIDTH of inst : label is 1;
   attribute C_AXI_AWUSER_WIDTH : integer;
@@ -7328,7 +4988,7 @@ architecture STRUCTURE of shell_auto_cc_2 is
   attribute C_AXI_BUSER_WIDTH : integer;
   attribute C_AXI_BUSER_WIDTH of inst : label is 1;
   attribute C_AXI_DATA_WIDTH : integer;
-  attribute C_AXI_DATA_WIDTH of inst : label is 64;
+  attribute C_AXI_DATA_WIDTH of inst : label is 32;
   attribute C_AXI_ID_WIDTH : integer;
   attribute C_AXI_ID_WIDTH of inst : label is 1;
   attribute C_AXI_IS_ACLK_ASYNC : integer;
@@ -7362,23 +5022,23 @@ architecture STRUCTURE of shell_auto_cc_2 is
   attribute C_FAMILY : string;
   attribute C_FAMILY of inst : label is "kintexu";
   attribute C_FIFO_AR_WIDTH : integer;
-  attribute C_FIFO_AR_WIDTH of inst : label is 35;
+  attribute C_FIFO_AR_WIDTH of inst : label is 4;
   attribute C_FIFO_AW_WIDTH : integer;
-  attribute C_FIFO_AW_WIDTH of inst : label is 35;
+  attribute C_FIFO_AW_WIDTH of inst : label is 4;
   attribute C_FIFO_B_WIDTH : integer;
   attribute C_FIFO_B_WIDTH of inst : label is 2;
   attribute C_FIFO_R_WIDTH : integer;
-  attribute C_FIFO_R_WIDTH of inst : label is 66;
+  attribute C_FIFO_R_WIDTH of inst : label is 34;
   attribute C_FIFO_W_WIDTH : integer;
-  attribute C_FIFO_W_WIDTH of inst : label is 72;
+  attribute C_FIFO_W_WIDTH of inst : label is 36;
   attribute C_M_AXI_ACLK_RATIO : integer;
   attribute C_M_AXI_ACLK_RATIO of inst : label is 2;
   attribute C_RDATA_RIGHT : integer;
   attribute C_RDATA_RIGHT of inst : label is 2;
   attribute C_RDATA_WIDTH : integer;
-  attribute C_RDATA_WIDTH of inst : label is 64;
+  attribute C_RDATA_WIDTH of inst : label is 32;
   attribute C_RID_RIGHT : integer;
-  attribute C_RID_RIGHT of inst : label is 66;
+  attribute C_RID_RIGHT of inst : label is 34;
   attribute C_RID_WIDTH : integer;
   attribute C_RID_WIDTH of inst : label is 0;
   attribute C_RLAST_RIGHT : integer;
@@ -7394,17 +5054,17 @@ architecture STRUCTURE of shell_auto_cc_2 is
   attribute C_RUSER_WIDTH : integer;
   attribute C_RUSER_WIDTH of inst : label is 0;
   attribute C_R_WIDTH : integer;
-  attribute C_R_WIDTH of inst : label is 66;
+  attribute C_R_WIDTH of inst : label is 34;
   attribute C_SYNCHRONIZER_STAGE : integer;
   attribute C_SYNCHRONIZER_STAGE of inst : label is 3;
   attribute C_S_AXI_ACLK_RATIO : integer;
   attribute C_S_AXI_ACLK_RATIO of inst : label is 1;
   attribute C_WDATA_RIGHT : integer;
-  attribute C_WDATA_RIGHT of inst : label is 8;
+  attribute C_WDATA_RIGHT of inst : label is 4;
   attribute C_WDATA_WIDTH : integer;
-  attribute C_WDATA_WIDTH of inst : label is 64;
+  attribute C_WDATA_WIDTH of inst : label is 32;
   attribute C_WID_RIGHT : integer;
-  attribute C_WID_RIGHT of inst : label is 72;
+  attribute C_WID_RIGHT of inst : label is 36;
   attribute C_WID_WIDTH : integer;
   attribute C_WID_WIDTH of inst : label is 0;
   attribute C_WLAST_RIGHT : integer;
@@ -7414,13 +5074,13 @@ architecture STRUCTURE of shell_auto_cc_2 is
   attribute C_WSTRB_RIGHT : integer;
   attribute C_WSTRB_RIGHT of inst : label is 0;
   attribute C_WSTRB_WIDTH : integer;
-  attribute C_WSTRB_WIDTH of inst : label is 8;
+  attribute C_WSTRB_WIDTH of inst : label is 4;
   attribute C_WUSER_RIGHT : integer;
   attribute C_WUSER_RIGHT of inst : label is 0;
   attribute C_WUSER_WIDTH : integer;
   attribute C_WUSER_WIDTH of inst : label is 0;
   attribute C_W_WIDTH : integer;
-  attribute C_W_WIDTH of inst : label is 72;
+  attribute C_W_WIDTH of inst : label is 36;
   attribute DowngradeIPIdentifiedWarnings of inst : label is "yes";
   attribute P_ACLK_RATIO : integer;
   attribute P_ACLK_RATIO of inst : label is 2;
@@ -7443,7 +5103,7 @@ architecture STRUCTURE of shell_auto_cc_2 is
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of m_axi_aclk : signal is "xilinx.com:signal:clock:1.0 MI_CLK CLK";
   attribute X_INTERFACE_PARAMETER : string;
-  attribute X_INTERFACE_PARAMETER of m_axi_aclk : signal is "XIL_INTERFACENAME MI_CLK, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN shell_clk_wiz_0_0_clk_out1, ASSOCIATED_BUSIF M_AXI, ASSOCIATED_RESET M_AXI_ARESETN";
+  attribute X_INTERFACE_PARAMETER of m_axi_aclk : signal is "XIL_INTERFACENAME MI_CLK, FREQ_HZ 156250000, PHASE 0.000, CLK_DOMAIN bd_01e2_xpcs_0_txusrclk2_out, ASSOCIATED_BUSIF M_AXI, ASSOCIATED_RESET M_AXI_ARESETN";
   attribute X_INTERFACE_INFO of m_axi_aresetn : signal is "xilinx.com:signal:reset:1.0 MI_RST RST";
   attribute X_INTERFACE_PARAMETER of m_axi_aresetn : signal is "XIL_INTERFACENAME MI_RST, POLARITY ACTIVE_LOW, TYPE INTERCONNECT";
   attribute X_INTERFACE_INFO of m_axi_arready : signal is "xilinx.com:interface:aximm:1.0 M_AXI ARREADY";
@@ -7453,12 +5113,12 @@ architecture STRUCTURE of shell_auto_cc_2 is
   attribute X_INTERFACE_INFO of m_axi_bready : signal is "xilinx.com:interface:aximm:1.0 M_AXI BREADY";
   attribute X_INTERFACE_INFO of m_axi_bvalid : signal is "xilinx.com:interface:aximm:1.0 M_AXI BVALID";
   attribute X_INTERFACE_INFO of m_axi_rready : signal is "xilinx.com:interface:aximm:1.0 M_AXI RREADY";
-  attribute X_INTERFACE_PARAMETER of m_axi_rready : signal is "XIL_INTERFACENAME M_AXI, DATA_WIDTH 64, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN shell_clk_wiz_0_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0";
+  attribute X_INTERFACE_PARAMETER of m_axi_rready : signal is "XIL_INTERFACENAME M_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 156250000, ID_WIDTH 0, ADDR_WIDTH 1, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN bd_01e2_xpcs_0_txusrclk2_out, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0";
   attribute X_INTERFACE_INFO of m_axi_rvalid : signal is "xilinx.com:interface:aximm:1.0 M_AXI RVALID";
   attribute X_INTERFACE_INFO of m_axi_wready : signal is "xilinx.com:interface:aximm:1.0 M_AXI WREADY";
   attribute X_INTERFACE_INFO of m_axi_wvalid : signal is "xilinx.com:interface:aximm:1.0 M_AXI WVALID";
   attribute X_INTERFACE_INFO of s_axi_aclk : signal is "xilinx.com:signal:clock:1.0 SI_CLK CLK";
-  attribute X_INTERFACE_PARAMETER of s_axi_aclk : signal is "XIL_INTERFACENAME SI_CLK, FREQ_HZ 250000000, PHASE 0.000, CLK_DOMAIN shell_xdma_0_0_axi_aclk, ASSOCIATED_BUSIF S_AXI, ASSOCIATED_RESET S_AXI_ARESETN";
+  attribute X_INTERFACE_PARAMETER of s_axi_aclk : signal is "XIL_INTERFACENAME SI_CLK, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN shell_clk_wiz_0_0_clk_out1, ASSOCIATED_BUSIF S_AXI, ASSOCIATED_RESET S_AXI_ARESETN";
   attribute X_INTERFACE_INFO of s_axi_aresetn : signal is "xilinx.com:signal:reset:1.0 SI_RST RST";
   attribute X_INTERFACE_PARAMETER of s_axi_aresetn : signal is "XIL_INTERFACENAME SI_RST, POLARITY ACTIVE_LOW, TYPE INTERCONNECT";
   attribute X_INTERFACE_INFO of s_axi_arready : signal is "xilinx.com:interface:aximm:1.0 S_AXI ARREADY";
@@ -7468,7 +5128,7 @@ architecture STRUCTURE of shell_auto_cc_2 is
   attribute X_INTERFACE_INFO of s_axi_bready : signal is "xilinx.com:interface:aximm:1.0 S_AXI BREADY";
   attribute X_INTERFACE_INFO of s_axi_bvalid : signal is "xilinx.com:interface:aximm:1.0 S_AXI BVALID";
   attribute X_INTERFACE_INFO of s_axi_rready : signal is "xilinx.com:interface:aximm:1.0 S_AXI RREADY";
-  attribute X_INTERFACE_PARAMETER of s_axi_rready : signal is "XIL_INTERFACENAME S_AXI, DATA_WIDTH 64, PROTOCOL AXI4LITE, FREQ_HZ 250000000, ID_WIDTH 0, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN shell_xdma_0_0_axi_aclk, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0";
+  attribute X_INTERFACE_PARAMETER of s_axi_rready : signal is "XIL_INTERFACENAME S_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 1, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN shell_clk_wiz_0_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0";
   attribute X_INTERFACE_INFO of s_axi_rvalid : signal is "xilinx.com:interface:aximm:1.0 S_AXI RVALID";
   attribute X_INTERFACE_INFO of s_axi_wready : signal is "xilinx.com:interface:aximm:1.0 S_AXI WREADY";
   attribute X_INTERFACE_INFO of s_axi_wvalid : signal is "xilinx.com:interface:aximm:1.0 S_AXI WVALID";
@@ -7494,7 +5154,7 @@ begin
 inst: entity work.shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter
      port map (
       m_axi_aclk => m_axi_aclk,
-      m_axi_araddr(31 downto 0) => m_axi_araddr(31 downto 0),
+      m_axi_araddr(0) => m_axi_araddr(0),
       m_axi_arburst(1 downto 0) => NLW_inst_m_axi_arburst_UNCONNECTED(1 downto 0),
       m_axi_arcache(3 downto 0) => NLW_inst_m_axi_arcache_UNCONNECTED(3 downto 0),
       m_axi_aresetn => m_axi_aresetn,
@@ -7508,7 +5168,7 @@ inst: entity work.shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converte
       m_axi_arsize(2 downto 0) => NLW_inst_m_axi_arsize_UNCONNECTED(2 downto 0),
       m_axi_aruser(0) => NLW_inst_m_axi_aruser_UNCONNECTED(0),
       m_axi_arvalid => m_axi_arvalid,
-      m_axi_awaddr(31 downto 0) => m_axi_awaddr(31 downto 0),
+      m_axi_awaddr(0) => m_axi_awaddr(0),
       m_axi_awburst(1 downto 0) => NLW_inst_m_axi_awburst_UNCONNECTED(1 downto 0),
       m_axi_awcache(3 downto 0) => NLW_inst_m_axi_awcache_UNCONNECTED(3 downto 0),
       m_axi_awid(0) => NLW_inst_m_axi_awid_UNCONNECTED(0),
@@ -7526,22 +5186,22 @@ inst: entity work.shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converte
       m_axi_bresp(1 downto 0) => m_axi_bresp(1 downto 0),
       m_axi_buser(0) => '0',
       m_axi_bvalid => m_axi_bvalid,
-      m_axi_rdata(63 downto 0) => m_axi_rdata(63 downto 0),
+      m_axi_rdata(31 downto 0) => m_axi_rdata(31 downto 0),
       m_axi_rid(0) => '0',
       m_axi_rlast => '1',
       m_axi_rready => m_axi_rready,
       m_axi_rresp(1 downto 0) => m_axi_rresp(1 downto 0),
       m_axi_ruser(0) => '0',
       m_axi_rvalid => m_axi_rvalid,
-      m_axi_wdata(63 downto 0) => m_axi_wdata(63 downto 0),
+      m_axi_wdata(31 downto 0) => m_axi_wdata(31 downto 0),
       m_axi_wid(0) => NLW_inst_m_axi_wid_UNCONNECTED(0),
       m_axi_wlast => NLW_inst_m_axi_wlast_UNCONNECTED,
       m_axi_wready => m_axi_wready,
-      m_axi_wstrb(7 downto 0) => m_axi_wstrb(7 downto 0),
+      m_axi_wstrb(3 downto 0) => m_axi_wstrb(3 downto 0),
       m_axi_wuser(0) => NLW_inst_m_axi_wuser_UNCONNECTED(0),
       m_axi_wvalid => m_axi_wvalid,
       s_axi_aclk => s_axi_aclk,
-      s_axi_araddr(31 downto 0) => s_axi_araddr(31 downto 0),
+      s_axi_araddr(0) => s_axi_araddr(0),
       s_axi_arburst(1 downto 0) => B"01",
       s_axi_arcache(3 downto 0) => B"0000",
       s_axi_aresetn => s_axi_aresetn,
@@ -7555,7 +5215,7 @@ inst: entity work.shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converte
       s_axi_arsize(2 downto 0) => B"000",
       s_axi_aruser(0) => '0',
       s_axi_arvalid => s_axi_arvalid,
-      s_axi_awaddr(31 downto 0) => s_axi_awaddr(31 downto 0),
+      s_axi_awaddr(0) => s_axi_awaddr(0),
       s_axi_awburst(1 downto 0) => B"01",
       s_axi_awcache(3 downto 0) => B"0000",
       s_axi_awid(0) => '0',
@@ -7573,18 +5233,18 @@ inst: entity work.shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converte
       s_axi_bresp(1 downto 0) => s_axi_bresp(1 downto 0),
       s_axi_buser(0) => NLW_inst_s_axi_buser_UNCONNECTED(0),
       s_axi_bvalid => s_axi_bvalid,
-      s_axi_rdata(63 downto 0) => s_axi_rdata(63 downto 0),
+      s_axi_rdata(31 downto 0) => s_axi_rdata(31 downto 0),
       s_axi_rid(0) => NLW_inst_s_axi_rid_UNCONNECTED(0),
       s_axi_rlast => NLW_inst_s_axi_rlast_UNCONNECTED,
       s_axi_rready => s_axi_rready,
       s_axi_rresp(1 downto 0) => s_axi_rresp(1 downto 0),
       s_axi_ruser(0) => NLW_inst_s_axi_ruser_UNCONNECTED(0),
       s_axi_rvalid => s_axi_rvalid,
-      s_axi_wdata(63 downto 0) => s_axi_wdata(63 downto 0),
+      s_axi_wdata(31 downto 0) => s_axi_wdata(31 downto 0),
       s_axi_wid(0) => '0',
       s_axi_wlast => '1',
       s_axi_wready => s_axi_wready,
-      s_axi_wstrb(7 downto 0) => s_axi_wstrb(7 downto 0),
+      s_axi_wstrb(3 downto 0) => s_axi_wstrb(3 downto 0),
       s_axi_wuser(0) => '0',
       s_axi_wvalid => s_axi_wvalid
     );

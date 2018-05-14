@@ -159,36 +159,6 @@ proc create_root_design { parentCell } {
   set_property -dict [ list \
    CONFIG.FREQ_HZ {156250000} \
    ] $M_AXIS
-  set S_AXI [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:aximm_rtl:1.0 S_AXI ]
-  set_property -dict [ list \
-   CONFIG.ADDR_WIDTH {16} \
-   CONFIG.ARUSER_WIDTH {0} \
-   CONFIG.AWUSER_WIDTH {0} \
-   CONFIG.BUSER_WIDTH {0} \
-   CONFIG.DATA_WIDTH {64} \
-   CONFIG.HAS_BRESP {1} \
-   CONFIG.HAS_BURST {1} \
-   CONFIG.HAS_CACHE {1} \
-   CONFIG.HAS_LOCK {1} \
-   CONFIG.HAS_PROT {1} \
-   CONFIG.HAS_QOS {0} \
-   CONFIG.HAS_REGION {0} \
-   CONFIG.HAS_RRESP {1} \
-   CONFIG.HAS_WSTRB {1} \
-   CONFIG.ID_WIDTH {0} \
-   CONFIG.MAX_BURST_LENGTH {256} \
-   CONFIG.NUM_READ_OUTSTANDING {2} \
-   CONFIG.NUM_READ_THREADS {1} \
-   CONFIG.NUM_WRITE_OUTSTANDING {2} \
-   CONFIG.NUM_WRITE_THREADS {1} \
-   CONFIG.PROTOCOL {AXI4} \
-   CONFIG.READ_WRITE_MODE {READ_WRITE} \
-   CONFIG.RUSER_BITS_PER_BYTE {0} \
-   CONFIG.RUSER_WIDTH {0} \
-   CONFIG.SUPPORTS_NARROW_BURST {1} \
-   CONFIG.WUSER_BITS_PER_BYTE {0} \
-   CONFIG.WUSER_WIDTH {0} \
-   ] $S_AXI
   set S_AXIS [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:axis_rtl:1.0 S_AXIS ]
   set_property -dict [ list \
    CONFIG.HAS_TKEEP {1} \
@@ -201,21 +171,59 @@ proc create_root_design { parentCell } {
    CONFIG.TID_WIDTH {0} \
    CONFIG.TUSER_WIDTH {0} \
    ] $S_AXIS
+  set S_AXI_CONTROL [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:aximm_rtl:1.0 S_AXI_CONTROL ]
+  set_property -dict [ list \
+   CONFIG.ADDR_WIDTH {16} \
+   CONFIG.ARUSER_WIDTH {0} \
+   CONFIG.AWUSER_WIDTH {0} \
+   CONFIG.BUSER_WIDTH {0} \
+   CONFIG.DATA_WIDTH {32} \
+   CONFIG.FREQ_HZ {156250000} \
+   CONFIG.HAS_BRESP {1} \
+   CONFIG.HAS_BURST {1} \
+   CONFIG.HAS_CACHE {1} \
+   CONFIG.HAS_LOCK {1} \
+   CONFIG.HAS_PROT {1} \
+   CONFIG.HAS_QOS {0} \
+   CONFIG.HAS_REGION {0} \
+   CONFIG.HAS_RRESP {1} \
+   CONFIG.HAS_WSTRB {1} \
+   CONFIG.ID_WIDTH {0} \
+   CONFIG.MAX_BURST_LENGTH {1} \
+   CONFIG.NUM_READ_OUTSTANDING {2} \
+   CONFIG.NUM_READ_THREADS {1} \
+   CONFIG.NUM_WRITE_OUTSTANDING {2} \
+   CONFIG.NUM_WRITE_THREADS {1} \
+   CONFIG.PROTOCOL {AXI4LITE} \
+   CONFIG.READ_WRITE_MODE {READ_WRITE} \
+   CONFIG.RUSER_BITS_PER_BYTE {0} \
+   CONFIG.RUSER_WIDTH {0} \
+   CONFIG.SUPPORTS_NARROW_BURST {0} \
+   CONFIG.WUSER_BITS_PER_BYTE {0} \
+   CONFIG.WUSER_WIDTH {0} \
+   ] $S_AXI_CONTROL
+  set S_AXI_MEM [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:aximm_rtl:1.0 S_AXI_MEM ]
+  set_property -dict [ list \
+   CONFIG.ADDR_WIDTH {32} \
+   CONFIG.DATA_WIDTH {512} \
+   CONFIG.FREQ_HZ {156250000} \
+   CONFIG.HAS_BURST {1} \
+   CONFIG.HAS_REGION {1} \
+   CONFIG.NUM_READ_OUTSTANDING {2} \
+   CONFIG.NUM_WRITE_OUTSTANDING {2} \
+   CONFIG.PROTOCOL {AXI4} \
+   ] $S_AXI_MEM
 
   # Create ports
   set ARESETN [ create_bd_port -dir I -type rst ARESETN ]
-  set CLK_CONTROL [ create_bd_port -dir I -type clk CLK_CONTROL ]
-  set CLK_DATA [ create_bd_port -dir I -type clk CLK_DATA ]
+  set CLK [ create_bd_port -dir I -type clk CLK ]
   set_property -dict [ list \
+   CONFIG.ASSOCIATED_BUSIF {S_AXIS:M_AXIS:S_AXI_MEM:S_AXI_CONTROL} \
    CONFIG.FREQ_HZ {156250000} \
- ] $CLK_DATA
+ ] $CLK
 
-  # Create instance: axi_bram_ctrl_0, and set properties
-  set axi_bram_ctrl_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_bram_ctrl:4.0 axi_bram_ctrl_0 ]
-  set_property -dict [ list \
-   CONFIG.DATA_WIDTH {64} \
-   CONFIG.SINGLE_PORT_BRAM {1} \
- ] $axi_bram_ctrl_0
+  # Create instance: axi_dwidth_converter_0, and set properties
+  set axi_dwidth_converter_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_dwidth_converter:2.1 axi_dwidth_converter_0 ]
 
   # Create instance: axis_data_fifo_0, and set properties
   set axis_data_fifo_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axis_data_fifo:1.1 axis_data_fifo_0 ]
@@ -225,21 +233,52 @@ proc create_root_design { parentCell } {
    CONFIG.TDATA_NUM_BYTES {8} \
  ] $axis_data_fifo_0
 
-  # Create instance: blk_mem_gen_0, and set properties
-  set blk_mem_gen_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen:8.4 blk_mem_gen_0 ]
+  # Create instance: conv_layer_0, and set properties
+  set conv_layer_0 [ create_bd_cell -type ip -vlnv xilinx.com:hls:conv_layer:1.0 conv_layer_0 ]
+
+  set_property -dict [ list \
+   CONFIG.NUM_READ_OUTSTANDING {1} \
+   CONFIG.NUM_WRITE_OUTSTANDING {1} \
+ ] [get_bd_intf_pins /conv_layer_0/s_axi_CTRL_BUS]
+
+  # Create instance: pcl_axifull_bridge_0, and set properties
+  set pcl_axifull_bridge_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:pcl_axifull_bridge:1.0 pcl_axifull_bridge_0 ]
+  set_property -dict [ list \
+   CONFIG.ADDR_WIDTH {64} \
+   CONFIG.DATA_WIDTH {512} \
+   CONFIG.HAS_SLAVE_ID {false} \
+   CONFIG.M_ID_WIDTH {1} \
+   CONFIG.S_ID_WIDTH {0} \
+ ] $pcl_axifull_bridge_0
+
+  # Create instance: pcl_axilite_bridge_0, and set properties
+  set pcl_axilite_bridge_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:pcl_axilite_bridge:1.0 pcl_axilite_bridge_0 ]
+
+  set_property -dict [ list \
+   CONFIG.MAX_BURST_LENGTH {1} \
+ ] [get_bd_intf_pins /pcl_axilite_bridge_0/m_axi]
+
+  set_property -dict [ list \
+   CONFIG.NUM_READ_OUTSTANDING {1} \
+   CONFIG.NUM_WRITE_OUTSTANDING {1} \
+ ] [get_bd_intf_pins /pcl_axilite_bridge_0/s_axi]
 
   # Create interface connections
   connect_bd_intf_net -intf_net S_AXIS_1 [get_bd_intf_ports S_AXIS] [get_bd_intf_pins axis_data_fifo_0/S_AXIS]
-  connect_bd_intf_net -intf_net S_AXI_1 [get_bd_intf_ports S_AXI] [get_bd_intf_pins axi_bram_ctrl_0/S_AXI]
-  connect_bd_intf_net -intf_net axi_bram_ctrl_0_BRAM_PORTA [get_bd_intf_pins axi_bram_ctrl_0/BRAM_PORTA] [get_bd_intf_pins blk_mem_gen_0/BRAM_PORTA]
+  connect_bd_intf_net -intf_net S_AXI_CONTROL_1 [get_bd_intf_ports S_AXI_CONTROL] [get_bd_intf_pins pcl_axilite_bridge_0/s_axi]
+  connect_bd_intf_net -intf_net axi_dwidth_converter_0_M_AXI [get_bd_intf_pins axi_dwidth_converter_0/M_AXI] [get_bd_intf_pins pcl_axifull_bridge_0/s_axi]
   connect_bd_intf_net -intf_net axis_data_fifo_0_M_AXIS [get_bd_intf_ports M_AXIS] [get_bd_intf_pins axis_data_fifo_0/M_AXIS]
+  connect_bd_intf_net -intf_net conv_layer_0_m_axi_mem [get_bd_intf_pins axi_dwidth_converter_0/S_AXI] [get_bd_intf_pins conv_layer_0/m_axi_mem]
+  connect_bd_intf_net -intf_net pcl_axifull_bridge_0_m_axi [get_bd_intf_ports S_AXI_MEM] [get_bd_intf_pins pcl_axifull_bridge_0/m_axi]
+  connect_bd_intf_net -intf_net pcl_axilite_bridge_0_m_axi [get_bd_intf_pins conv_layer_0/s_axi_CTRL_BUS] [get_bd_intf_pins pcl_axilite_bridge_0/m_axi]
 
   # Create port connections
-  connect_bd_net -net s_axi_aclk_1 [get_bd_ports CLK_CONTROL] [get_bd_pins axi_bram_ctrl_0/s_axi_aclk]
-  connect_bd_net -net s_axi_aresetn_1 [get_bd_ports ARESETN] [get_bd_pins axi_bram_ctrl_0/s_axi_aresetn] [get_bd_pins axis_data_fifo_0/s_axis_aresetn]
-  connect_bd_net -net s_axis_aclk_1 [get_bd_ports CLK_DATA] [get_bd_pins axis_data_fifo_0/s_axis_aclk]
+  connect_bd_net -net s_axi_aresetn_1 [get_bd_ports ARESETN] [get_bd_pins axi_dwidth_converter_0/s_axi_aresetn] [get_bd_pins axis_data_fifo_0/s_axis_aresetn] [get_bd_pins conv_layer_0/ap_rst_n] [get_bd_pins pcl_axifull_bridge_0/aresetn] [get_bd_pins pcl_axilite_bridge_0/aresetn]
+  connect_bd_net -net s_axis_aclk_1 [get_bd_ports CLK] [get_bd_pins axi_dwidth_converter_0/s_axi_aclk] [get_bd_pins axis_data_fifo_0/s_axis_aclk] [get_bd_pins conv_layer_0/ap_clk] [get_bd_pins pcl_axifull_bridge_0/aclk] [get_bd_pins pcl_axilite_bridge_0/aclk]
 
   # Create address segments
+  create_bd_addr_seg -range 0x40000000 -offset 0x00000000 [get_bd_addr_spaces conv_layer_0/Data_m_axi_mem] [get_bd_addr_segs S_AXI_MEM/Reg] SEG_S_AXI_MEM_Reg
+  create_bd_addr_seg -range 0x00010000 -offset 0x00000000 [get_bd_addr_spaces S_AXI_CONTROL] [get_bd_addr_segs conv_layer_0/s_axi_CTRL_BUS/Reg] SEG_conv_layer_0_Reg
 
 
   # Restore current instance

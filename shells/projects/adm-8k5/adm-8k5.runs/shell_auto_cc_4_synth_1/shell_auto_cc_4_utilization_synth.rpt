@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
-| Date         : Fri May 11 12:00:53 2018
-| Host         : ug238 running 64-bit Debian GNU/Linux 9.4 (stretch)
+| Date         : Sun May 13 23:07:16 2018
+| Host         : batcomputer running 64-bit Ubuntu 16.04.2 LTS
 | Command      : report_utilization -file shell_auto_cc_4_utilization_synth.rpt -pb shell_auto_cc_4_utilization_synth.pb
 | Design       : shell_auto_cc_4
 | Device       : xcku115flva1517-2
@@ -35,13 +35,13 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| CLB LUTs*                  |  959 |     0 |    663360 |  0.14 |
+| CLB LUTs*                  |  927 |     0 |    663360 |  0.14 |
 |   LUT as Logic             |  207 |     0 |    663360 |  0.03 |
-|   LUT as Memory            |  752 |     0 |    293760 |  0.26 |
-|     LUT as Distributed RAM |  752 |     0 |           |       |
+|   LUT as Memory            |  720 |     0 |    293760 |  0.25 |
+|     LUT as Distributed RAM |  720 |     0 |           |       |
 |     LUT as Shift Register  |    0 |     0 |           |       |
-| CLB Registers              | 3058 |     0 |   1326720 |  0.23 |
-|   Register as Flip Flop    | 3058 |     0 |   1326720 |  0.23 |
+| CLB Registers              | 2942 |     0 |   1326720 |  0.22 |
+|   Register as Flip Flop    | 2942 |     0 |   1326720 |  0.22 |
 |   Register as Latch        |    0 |     0 |   1326720 |  0.00 |
 | CARRY8                     |    0 |     0 |     82920 |  0.00 |
 | F7 Muxes                   |    0 |     0 |    331680 |  0.00 |
@@ -66,7 +66,7 @@ Table of Contents
 | 110   |          Yes |           - |          Set |
 | 130   |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 2818  |          Yes |       Reset |            - |
+| 2702  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -161,9 +161,9 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     | 2818 |            Register |
-| RAMD32   | 1316 |                 CLB |
-| RAMS32   |  188 |                 CLB |
+| FDRE     | 2702 |            Register |
+| RAMD32   | 1260 |                 CLB |
+| RAMS32   |  180 |                 CLB |
 | FDCE     |  130 |            Register |
 | FDPE     |  110 |            Register |
 | LUT2     |   66 |                 CLB |

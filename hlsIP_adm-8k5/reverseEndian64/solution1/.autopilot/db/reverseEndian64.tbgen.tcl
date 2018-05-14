@@ -2,9 +2,9 @@ set C_TypeInfoList {{
 "reverseEndian64" : [[], { "return": [[], "void"]} , [{"ExternC" : 0}], [ {"stream_in": [[],{ "pointer": "0"}] }, {"stream_out": [[],{ "pointer": "0"}] }],[],""], 
 "0": [ "stream<ap_axis>", {"hls_type": {"stream": [[[[],"1"]],"2"]}}], 
 "1": [ "ap_axis", {"struct": [[],[],[{ "data": [[], "3"]},{ "last": [[], "4"]},{ "tkeep": [[], "5"]}],""]}], 
+"4": [ "ap_uint<1>", {"hls_type": {"ap_uint": [[[[], {"scalar": { "int": 1}}]],""]}}], 
 "5": [ "ap_uint<8>", {"hls_type": {"ap_uint": [[[[], {"scalar": { "int": 8}}]],""]}}], 
-"3": [ "ap_int<64>", {"hls_type": {"ap_int": [[[[], {"scalar": { "int": 64}}]],""]}}], 
-"4": [ "ap_uint<1>", {"hls_type": {"ap_uint": [[[[], {"scalar": { "int": 1}}]],""]}}],
+"3": [ "ap_int<64>", {"hls_type": {"ap_int": [[[[], {"scalar": { "int": 64}}]],""]}}],
 "2": ["hls", ""]
 }}
 set moduleName reverseEndian64

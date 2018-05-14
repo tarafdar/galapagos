@@ -71,6 +71,7 @@ class kernelObj:
     clk = ''
     aresetn = ''
     id_port = 'id_V'
+    mem_interface = ''
     def __init__(self):
         self.num=''
         self.interfaces = []
@@ -82,6 +83,7 @@ class kernelObj:
         self.clk = 'ap_clk'
         self.aresetn = 'ap_rst_n'
         self.id_port = 'id_V'
+        self.mem_interface = ''
 class packetFormatterObj:
     port = ''
     dest = ''
@@ -104,6 +106,7 @@ class fpgaObj:
     MAC_addr = ''
     schedulers = []
     board_name = ''
+    mem_interfaces = []
     def __init__(self):
         self.num = ''
         self.MAC_addr = ''
@@ -190,6 +193,12 @@ def readKernelsFile(logicalKernelsFile):
         id_port = ''
         if idElement != None:
             id_port = idElement.text.replace(" ", "")
+        
+        memElement = kernelElement.find('mem_interface')
+        mem_port = ''
+        if idElement != None:
+            mem_port = idElement.text.replace(" ", "")
+
 
         repElement = kernelElement.find('rep')
         #kernType = kernelElement.find('type').text.replace(" ","")
@@ -204,6 +213,7 @@ def readKernelsFile(logicalKernelsFile):
                 kernel.aresetn = aresetn
                 kernel.num = int(num) + i - 1
                 kernel.id_port = id_port
+                kernel.mem_interface = mem_port
                 print "kernelName is "  + kernelName
                 print "kernelnum is "  + str(kernel.num)
                 interfaceElementArray = kernelElement.findall('interface')

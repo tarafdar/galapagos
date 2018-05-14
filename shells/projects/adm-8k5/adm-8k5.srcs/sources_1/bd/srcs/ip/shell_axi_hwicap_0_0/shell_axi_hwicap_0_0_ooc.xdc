@@ -49,9 +49,9 @@
 # User should update the correct clock period before proceeding further
 
  create_clock -name s_axi_lite_aclk -period 20 [get_ports s_axi_aclk]
-# IP uses only S_AXI_ACLK in sync mode
-# create_clock -name icap_clk -period 20 [get_ports icap_clk]
+ create_clock -name icap_clk -period 40 [get_ports icap_clk]
 
 # This is needed for timing report when IP is implemented in OOC
 ## set_property HD.CLK_SRC BUFGCTRL_X0Y0 [get_ports s_axi_aclk]
+## set_property HD.CLK_SRC BUFGCTRL_X0Y1 [get_ports icap_clk]
 

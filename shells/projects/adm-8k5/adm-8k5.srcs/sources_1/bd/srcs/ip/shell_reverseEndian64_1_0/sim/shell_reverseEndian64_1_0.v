@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:hls:reverseEndian64:1.0
-// IP Revision: 1805111139
+// IP Revision: 1805121524
 
 `timescale 1ns/1ps
 
@@ -83,9 +83,7 @@ output wire stream_in_TREADY;
 input wire [63 : 0] stream_in_TDATA;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 stream_in TKEEP" *)
 input wire [7 : 0] stream_in_TKEEP;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME stream_in, TDATA_NUM_BYTES 8, TUSER_WIDTH 0, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} TDATA {datatype {name {attribs {resolve_type immediate dependency {\
-} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 64} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}} TDATA_WIDTH 64}, TDEST_WIDTH 0, TID_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 156250000, PHASE 0.000, CLK_DO\
-MAIN bd_01e2_xpcs_0_txusrclk2_out" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME stream_in, TDATA_NUM_BYTES 8, TUSER_WIDTH 0, LAYERED_METADATA undef, TDEST_WIDTH 0, TID_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 156250000, PHASE 0.000, CLK_DOMAIN bd_01e2_xpcs_0_txusrclk2_out" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 stream_in TLAST" *)
 input wire [0 : 0] stream_in_TLAST;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 stream_out TVALID" *)

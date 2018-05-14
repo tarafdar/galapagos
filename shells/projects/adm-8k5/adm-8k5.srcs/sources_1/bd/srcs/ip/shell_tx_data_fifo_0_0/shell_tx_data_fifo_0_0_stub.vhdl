@@ -1,8 +1,8 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
--- Date        : Fri May 11 11:59:40 2018
--- Host        : ug238 running 64-bit Debian GNU/Linux 9.4 (stretch)
+-- Date        : Sun May 13 23:04:49 2018
+-- Host        : batcomputer running 64-bit Ubuntu 16.04.2 LTS
 -- Command     : write_vhdl -force -mode synth_stub -rename_top shell_tx_data_fifo_0_0 -prefix
 --               shell_tx_data_fifo_0_0_ shell_rx_data_fifo_1_0_stub.vhdl
 -- Design      : shell_rx_data_fifo_1_0

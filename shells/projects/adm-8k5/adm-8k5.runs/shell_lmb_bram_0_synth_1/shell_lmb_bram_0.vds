@@ -2,12 +2,12 @@
 # Vivado v2018.1 (64-bit)
 # SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018
 # IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
-# Start of session at: Fri May 11 11:51:19 2018
-# Process ID: 13080
-# Current directory: /nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.runs/shell_lmb_bram_0_synth_1
+# Start of session at: Sun May 13 22:54:58 2018
+# Process ID: 11302
+# Current directory: /home/tarafdar/workDir/galapagos/shells/projects/adm-8k5/adm-8k5.runs/shell_lmb_bram_0_synth_1
 # Command line: vivado -log shell_lmb_bram_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source shell_lmb_bram_0.tcl
-# Log file: /nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.runs/shell_lmb_bram_0_synth_1/shell_lmb_bram_0.vds
-# Journal file: /nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.runs/shell_lmb_bram_0_synth_1/vivado.jou
+# Log file: /home/tarafdar/workDir/galapagos/shells/projects/adm-8k5/adm-8k5.runs/shell_lmb_bram_0_synth_1/shell_lmb_bram_0.vds
+# Journal file: /home/tarafdar/workDir/galapagos/shells/projects/adm-8k5/adm-8k5.runs/shell_lmb_bram_0_synth_1/vivado.jou
 #-----------------------------------------------------------
 source shell_lmb_bram_0.tcl -notrace
 Command: synth_design -top shell_lmb_bram_0 -part xcku115-flva1517-2-e -mode out_of_context
@@ -15,11 +15,11 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xcku115'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcku115'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 13239 
+INFO: Helper process launched with PID 11560 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:17 . Memory (MB): peak = 1347.449 ; gain = 77.000 ; free physical = 8374 ; free virtual = 35856
+Starting RTL Elaboration : Time (s): cpu = 00:00:16 ; elapsed = 00:00:26 . Memory (MB): peak = 1361.551 ; gain = 78.000 ; free physical = 12017 ; free virtual = 50170
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'shell_lmb_bram_0' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_lmb_bram_0/synth/shell_lmb_bram_0.vhd:80]
+INFO: [Synth 8-638] synthesizing module 'shell_lmb_bram_0' [/home/tarafdar/workDir/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_lmb_bram_0/synth/shell_lmb_bram_0.vhd:80]
 	Parameter C_FAMILY bound to: kintexu - type: string 
 	Parameter C_XDEVICEFAMILY bound to: kintexu - type: string 
 	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
@@ -93,8 +93,8 @@ INFO: [Synth 8-638] synthesizing module 'shell_lmb_bram_0' [/nfs/ug/thesis/thesi
 	Parameter C_COUNT_36K_BRAM bound to: 2 - type: string 
 	Parameter C_COUNT_18K_BRAM bound to: 0 - type: string 
 	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     1.31328 mW - type: string 
-INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_1' declared at '/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/67d8/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195313' bound to instance 'U0' of component 'blk_mem_gen_v8_4_1' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_lmb_bram_0/synth/shell_lmb_bram_0.vhd:253]
-INFO: [Synth 8-256] done synthesizing module 'shell_lmb_bram_0' (9#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_lmb_bram_0/synth/shell_lmb_bram_0.vhd:80]
+INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_1' declared at '/home/tarafdar/workDir/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/67d8/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195313' bound to instance 'U0' of component 'blk_mem_gen_v8_4_1' [/home/tarafdar/workDir/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_lmb_bram_0/synth/shell_lmb_bram_0.vhd:253]
+INFO: [Synth 8-256] done synthesizing module 'shell_lmb_bram_0' (9#1) [/home/tarafdar/workDir/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_lmb_bram_0/synth/shell_lmb_bram_0.vhd:80]
 WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper__parameterized0 has unconnected port SSRA
 WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper__parameterized0 has unconnected port SSRB
 WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper__parameterized0 has unconnected port INJECTSBITERR
@@ -197,7 +197,7 @@ WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth has unconnected port S_A
 WARNING: [Synth 8-3331] design blk_mem_gen_v8_4_1_synth has unconnected port S_AXI_AWADDR[12]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:01:05 ; elapsed = 00:01:21 . Memory (MB): peak = 1558.598 ; gain = 288.148 ; free physical = 7328 ; free virtual = 34822
+Finished RTL Elaboration : Time (s): cpu = 00:01:49 ; elapsed = 00:02:13 . Memory (MB): peak = 1571.699 ; gain = 288.148 ; free physical = 9833 ; free virtual = 48006
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -210,45 +210,45 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:05 ; elapsed = 00:01:21 . Memory (MB): peak = 1558.598 ; gain = 288.148 ; free physical = 7331 ; free virtual = 34825
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:49 ; elapsed = 00:02:14 . Memory (MB): peak = 1571.699 ; gain = 288.148 ; free physical = 9935 ; free virtual = 48108
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:05 ; elapsed = 00:01:21 . Memory (MB): peak = 1558.598 ; gain = 288.148 ; free physical = 7331 ; free virtual = 34825
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:49 ; elapsed = 00:02:14 . Memory (MB): peak = 1571.699 ; gain = 288.148 ; free physical = 9935 ; free virtual = 48109
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xcku115-flva1517-2-e
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_lmb_bram_0/shell_lmb_bram_0_ooc.xdc] for cell 'U0'
-Finished Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_lmb_bram_0/shell_lmb_bram_0_ooc.xdc] for cell 'U0'
-Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.runs/shell_lmb_bram_0_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.runs/shell_lmb_bram_0_synth_1/dont_touch.xdc]
+Parsing XDC File [/home/tarafdar/workDir/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_lmb_bram_0/shell_lmb_bram_0_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [/home/tarafdar/workDir/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_lmb_bram_0/shell_lmb_bram_0_ooc.xdc] for cell 'U0'
+Parsing XDC File [/home/tarafdar/workDir/galapagos/shells/projects/adm-8k5/adm-8k5.runs/shell_lmb_bram_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/tarafdar/workDir/galapagos/shells/projects/adm-8k5/adm-8k5.runs/shell_lmb_bram_0_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2019.078 ; gain = 1.000 ; free physical = 7258 ; free virtual = 34751
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2032.398 ; gain = 1.000 ; free physical = 10442 ; free virtual = 48622
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:01:21 ; elapsed = 00:01:45 . Memory (MB): peak = 2019.078 ; gain = 748.629 ; free physical = 6923 ; free virtual = 34418
+Finished Constraint Validation : Time (s): cpu = 00:02:14 ; elapsed = 00:02:57 . Memory (MB): peak = 2032.398 ; gain = 748.848 ; free physical = 10553 ; free virtual = 48741
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xcku115-flva1517-2-e
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:01:21 ; elapsed = 00:01:45 . Memory (MB): peak = 2019.078 ; gain = 748.629 ; free physical = 6923 ; free virtual = 34418
+Finished Loading Part and Timing Information : Time (s): cpu = 00:02:14 ; elapsed = 00:02:57 . Memory (MB): peak = 2032.398 ; gain = 748.848 ; free physical = 10554 ; free virtual = 48741
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property DONT_TOUCH = true for U0. (constraint file  /nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.runs/shell_lmb_bram_0_synth_1/dont_touch.xdc, line 9).
+Applied set_property DONT_TOUCH = true for U0. (constraint file  /home/tarafdar/workDir/galapagos/shells/projects/adm-8k5/adm-8k5.runs/shell_lmb_bram_0_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:21 ; elapsed = 00:01:45 . Memory (MB): peak = 2019.078 ; gain = 748.629 ; free physical = 6922 ; free virtual = 34417
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:02:14 ; elapsed = 00:02:57 . Memory (MB): peak = 2032.398 ; gain = 748.848 ; free physical = 10543 ; free virtual = 48730
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:21 ; elapsed = 00:01:45 . Memory (MB): peak = 2019.078 ; gain = 748.629 ; free physical = 6911 ; free virtual = 34406
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:02:14 ; elapsed = 00:02:58 . Memory (MB): peak = 2032.398 ; gain = 748.848 ; free physical = 10508 ; free virtual = 48696
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -321,7 +321,7 @@ INFO: [Synth 8-3886] merging instance 'U0/inst_blk_mem_gen/gnbram.gnative_mem_ma
 INFO: [Synth 8-3886] merging instance 'U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/SAFETY_CKT_GEN.nSPRAM_RST_BUSY.RSTB_BUSY_NO_REG.RSTB_BUSY_reg' (FD) to 'U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[1].ram.r/SAFETY_CKT_GEN.nSPRAM_RST_BUSY.RSTB_BUSY_NO_REG.RSTB_BUSY_reg'
 INFO: [Synth 8-3886] merging instance 'U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/SAFETY_CKT_GEN.RSTA_BUSY_NO_REG.RSTA_BUSY_reg' (FD) to 'U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[1].ram.r/SAFETY_CKT_GEN.RSTA_BUSY_NO_REG.RSTA_BUSY_reg'
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:22 ; elapsed = 00:01:45 . Memory (MB): peak = 2019.078 ; gain = 748.629 ; free physical = 6865 ; free virtual = 34366
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:15 ; elapsed = 00:02:59 . Memory (MB): peak = 2032.398 ; gain = 748.848 ; free physical = 10436 ; free virtual = 48629
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -333,13 +333,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:31 ; elapsed = 00:02:11 . Memory (MB): peak = 2244.359 ; gain = 973.910 ; free physical = 6888 ; free virtual = 34389
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:32 ; elapsed = 00:03:53 . Memory (MB): peak = 2257.680 ; gain = 974.129 ; free physical = 7289 ; free virtual = 45591
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:31 ; elapsed = 00:02:11 . Memory (MB): peak = 2253.375 ; gain = 982.926 ; free physical = 6887 ; free virtual = 34388
+Finished Timing Optimization : Time (s): cpu = 00:02:32 ; elapsed = 00:03:53 . Memory (MB): peak = 2267.695 ; gain = 984.145 ; free physical = 7285 ; free virtual = 45587
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -351,7 +351,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:31 ; elapsed = 00:02:11 . Memory (MB): peak = 2253.375 ; gain = 982.926 ; free physical = 6886 ; free virtual = 34388
+Finished Technology Mapping : Time (s): cpu = 00:02:32 ; elapsed = 00:03:53 . Memory (MB): peak = 2267.695 ; gain = 984.145 ; free physical = 7280 ; free virtual = 45582
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -375,7 +375,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:32 ; elapsed = 00:02:11 . Memory (MB): peak = 2253.375 ; gain = 982.926 ; free physical = 6883 ; free virtual = 34384
+Finished IO Insertion : Time (s): cpu = 00:02:33 ; elapsed = 00:03:54 . Memory (MB): peak = 2267.695 ; gain = 984.145 ; free physical = 7463 ; free virtual = 45766
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -388,7 +388,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:32 ; elapsed = 00:02:11 . Memory (MB): peak = 2253.375 ; gain = 982.926 ; free physical = 6883 ; free virtual = 34384
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:33 ; elapsed = 00:03:54 . Memory (MB): peak = 2267.695 ; gain = 984.145 ; free physical = 7463 ; free virtual = 45766
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -400,25 +400,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:32 ; elapsed = 00:02:11 . Memory (MB): peak = 2253.375 ; gain = 982.926 ; free physical = 6883 ; free virtual = 34384
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:33 ; elapsed = 00:03:54 . Memory (MB): peak = 2267.695 ; gain = 984.145 ; free physical = 7435 ; free virtual = 45737
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:32 ; elapsed = 00:02:11 . Memory (MB): peak = 2253.375 ; gain = 982.926 ; free physical = 6883 ; free virtual = 34384
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:33 ; elapsed = 00:03:54 . Memory (MB): peak = 2267.695 ; gain = 984.145 ; free physical = 7434 ; free virtual = 45737
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:32 ; elapsed = 00:02:11 . Memory (MB): peak = 2253.375 ; gain = 982.926 ; free physical = 6883 ; free virtual = 34384
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:33 ; elapsed = 00:03:54 . Memory (MB): peak = 2267.695 ; gain = 984.145 ; free physical = 7433 ; free virtual = 45736
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:32 ; elapsed = 00:02:11 . Memory (MB): peak = 2253.375 ; gain = 982.926 ; free physical = 6883 ; free virtual = 34384
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:33 ; elapsed = 00:03:54 . Memory (MB): peak = 2267.695 ; gain = 984.145 ; free physical = 7433 ; free virtual = 45736
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -470,11 +470,11 @@ Report Instance Areas:
 |9     |            \prim_noinit.ram                                  |blk_mem_gen_prim_wrapper__parameterized0 |     5|
 +------+--------------------------------------------------------------+-----------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:32 ; elapsed = 00:02:11 . Memory (MB): peak = 2253.375 ; gain = 982.926 ; free physical = 6883 ; free virtual = 34384
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:33 ; elapsed = 00:03:54 . Memory (MB): peak = 2267.695 ; gain = 984.145 ; free physical = 7433 ; free virtual = 45736
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 193 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:23 ; elapsed = 00:01:56 . Memory (MB): peak = 2253.375 ; gain = 522.445 ; free physical = 6905 ; free virtual = 34406
-Synthesis Optimization Complete : Time (s): cpu = 00:01:32 ; elapsed = 00:02:11 . Memory (MB): peak = 2253.383 ; gain = 982.926 ; free physical = 6915 ; free virtual = 34416
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:19 ; elapsed = 00:03:30 . Memory (MB): peak = 2267.695 ; gain = 523.445 ; free physical = 7473 ; free virtual = 45776
+Synthesis Optimization Complete : Time (s): cpu = 00:02:33 ; elapsed = 00:03:55 . Memory (MB): peak = 2267.703 ; gain = 984.145 ; free physical = 7472 ; free virtual = 45775
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -484,11 +484,11 @@ No Unisim elements were transformed.
 INFO: [Common 17-83] Releasing license: Synthesis
 31 Infos, 100 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:34 ; elapsed = 00:02:13 . Memory (MB): peak = 2294.086 ; gain = 1055.211 ; free physical = 6887 ; free virtual = 34388
-INFO: [Common 17-1381] The checkpoint '/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.runs/shell_lmb_bram_0_synth_1/shell_lmb_bram_0.dcp' has been generated.
-INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP /nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_lmb_bram_0/shell_lmb_bram_0.xci
+synth_design: Time (s): cpu = 00:02:35 ; elapsed = 00:03:57 . Memory (MB): peak = 2307.172 ; gain = 1057.227 ; free physical = 7451 ; free virtual = 45754
+INFO: [Common 17-1381] The checkpoint '/home/tarafdar/workDir/galapagos/shells/projects/adm-8k5/adm-8k5.runs/shell_lmb_bram_0_synth_1/shell_lmb_bram_0.dcp' has been generated.
+INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP /home/tarafdar/workDir/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_lmb_bram_0/shell_lmb_bram_0.xci
 INFO: [Coretcl 2-1174] Renamed 8 cell refs.
-INFO: [Common 17-1381] The checkpoint '/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.runs/shell_lmb_bram_0_synth_1/shell_lmb_bram_0.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint '/home/tarafdar/workDir/galapagos/shells/projects/adm-8k5/adm-8k5.runs/shell_lmb_bram_0_synth_1/shell_lmb_bram_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file shell_lmb_bram_0_utilization_synth.rpt -pb shell_lmb_bram_0_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00.49 ; elapsed = 00:00:00.54 . Memory (MB): peak = 2294.086 ; gain = 0.000 ; free physical = 6796 ; free virtual = 34311
-INFO: [Common 17-206] Exiting Vivado at Fri May 11 11:53:44 2018...
+report_utilization: Time (s): cpu = 00:00:00.94 ; elapsed = 00:00:02 . Memory (MB): peak = 2307.172 ; gain = 0.000 ; free physical = 7250 ; free virtual = 45555
+INFO: [Common 17-206] Exiting Vivado at Sun May 13 22:59:16 2018...

@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
-| Date         : Fri May 11 11:51:41 2018
-| Host         : ug238 running 64-bit Debian GNU/Linux 9.4 (stretch)
+| Date         : Sun May 13 22:54:41 2018
+| Host         : batcomputer running 64-bit Ubuntu 16.04.2 LTS
 | Command      : report_utilization -file shell_xbar_0_utilization_synth.rpt -pb shell_xbar_0_utilization_synth.pb
 | Design       : shell_xbar_0
 | Device       : xcku115flva1517-2
@@ -35,13 +35,13 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| CLB LUTs*                  | 1450 |     0 |    663360 |  0.22 |
-|   LUT as Logic             | 1446 |     0 |    663360 |  0.22 |
+| CLB LUTs*                  | 1449 |     0 |    663360 |  0.22 |
+|   LUT as Logic             | 1445 |     0 |    663360 |  0.22 |
 |   LUT as Memory            |    4 |     0 |    293760 | <0.01 |
 |     LUT as Distributed RAM |    0 |     0 |           |       |
 |     LUT as Shift Register  |    4 |     0 |           |       |
-| CLB Registers              | 1393 |     0 |   1326720 |  0.10 |
-|   Register as Flip Flop    | 1393 |     0 |   1326720 |  0.10 |
+| CLB Registers              | 1391 |     0 |   1326720 |  0.10 |
+|   Register as Flip Flop    | 1391 |     0 |   1326720 |  0.10 |
 |   Register as Latch        |    0 |     0 |   1326720 |  0.00 |
 | CARRY8                     |    0 |     0 |     82920 |  0.00 |
 | F7 Muxes                   |    0 |     0 |    331680 |  0.00 |
@@ -65,7 +65,7 @@ Table of Contents
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
-| 21    |          Yes |         Set |            - |
+| 19    |          Yes |         Set |            - |
 | 1372  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
@@ -162,13 +162,13 @@ Table of Contents
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
 | FDRE     | 1372 |            Register |
-| LUT3     | 1327 |                 CLB |
-| LUT2     | 1057 |                 CLB |
-| LUT6     |  114 |                 CLB |
-| LUT4     |   69 |                 CLB |
-| LUT5     |   61 |                 CLB |
-| LUT1     |   27 |                 CLB |
-| FDSE     |   21 |            Register |
+| LUT3     | 1335 |                 CLB |
+| LUT2     | 1053 |                 CLB |
+| LUT6     |  105 |                 CLB |
+| LUT5     |   70 |                 CLB |
+| LUT4     |   68 |                 CLB |
+| LUT1     |   28 |                 CLB |
+| FDSE     |   19 |            Register |
 | SRLC32E  |    4 |                 CLB |
 +----------+------+---------------------+
 

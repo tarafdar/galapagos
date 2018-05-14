@@ -7,20 +7,20 @@
 # 
 
 if [ -z "$PATH" ]; then
-  PATH=/cad1/Xilinx/SDK/2018.1/bin:/cad1/Xilinx/Vivado/2018.1/ids_lite/ISE/bin/lin64:/cad1/Xilinx/Vivado/2018.1/bin
+  PATH=/opt/Xilinx/SDK/2018.1/bin:/opt/Xilinx/Vivado/2018.1/ids_lite/ISE/bin/lin64:/opt/Xilinx/Vivado/2018.1/bin
 else
-  PATH=/cad1/Xilinx/SDK/2018.1/bin:/cad1/Xilinx/Vivado/2018.1/ids_lite/ISE/bin/lin64:/cad1/Xilinx/Vivado/2018.1/bin:$PATH
+  PATH=/opt/Xilinx/SDK/2018.1/bin:/opt/Xilinx/Vivado/2018.1/ids_lite/ISE/bin/lin64:/opt/Xilinx/Vivado/2018.1/bin:$PATH
 fi
 export PATH
 
 if [ -z "$LD_LIBRARY_PATH" ]; then
-  LD_LIBRARY_PATH=/cad1/Xilinx/Vivado/2018.1/ids_lite/ISE/lib/lin64
+  LD_LIBRARY_PATH=/opt/Xilinx/Vivado/2018.1/ids_lite/ISE/lib/lin64
 else
-  LD_LIBRARY_PATH=/cad1/Xilinx/Vivado/2018.1/ids_lite/ISE/lib/lin64:$LD_LIBRARY_PATH
+  LD_LIBRARY_PATH=/opt/Xilinx/Vivado/2018.1/ids_lite/ISE/lib/lin64:$LD_LIBRARY_PATH
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.runs/shell_reverseEndian64_0_0_synth_1'
+HD_PWD='/home/tarafdar/workDir/galapagos/shells/projects/adm-8k5/adm-8k5.runs/shell_reverseEndian64_0_0_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

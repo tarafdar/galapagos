@@ -68,7 +68,7 @@
 //*****************************************************************************
 
 `timescale 1ns/1ps
-(* CORE_GENERATION_INFO = "DDR4_SDRAM, DDR4_SDRAM,{x_ipProduct=Vivado 2017.2.0,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=DDR4_SDRAM,x_ipVersion=2.2, Controller_Type = DDR4_SDRAM, Time_Period = 833, Input_Clock_Period = 13328, Memory_Type = Components, Memory_Part = MT40A512M8RH-075E, Ecc = false, Cas_Latency = 17, Cas_Write_Latency = 12, DQ_Width = 64, Chip_Select = true, Data_Mask = DM_NO_DBI, MEM_ADDR_ORDER = ROW_COLUMN_BANK,  Is_AXI_Enabled = true , Slot_cofiguration =  Single , Clamshell_cofiguration =  false ,IS_FASTER_SPEED_RAM = No, Is_custom_part = false, Memory_Voltage = 1.2V, Phy_Only = Complete_Memory_Controller, Debug_Port = Disable, Burst_Length = 8, System_Clock = Differential, AXI_Selection = true, AXI_Data_Width = 512,  AXI_ArbitrationScheme = RD_PRI_REG, AXI_Narrow_Burst = true, Simulation_Mode = BFM, Debug_Mode = Disable, Example_TG = SIMPLE_TG, Self_Refresh = false, Save_Restore = false, MicroBlaze_ECC = false,  Specify_MandD = false, CLKBOUT_MULT = 16, DIVCLK_DIVIDE = 1, CLKOUT0_DIVIDE = 4}" *) 
+(* CORE_GENERATION_INFO = "DDR4_SDRAM, DDR4_SDRAM,{x_ipProduct=Vivado 2017.2.0,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=DDR4_SDRAM,x_ipVersion=2.2, Controller_Type = DDR4_SDRAM, Time_Period = 939, Input_Clock_Period = 3338, Memory_Type = Components, Memory_Part = CUSTOM_DBI_MT40A1G8PM-083E, Ecc = false, Cas_Latency = 18, Cas_Write_Latency = 11, DQ_Width = 64, Chip_Select = true, Data_Mask = DM_NO_DBI, MEM_ADDR_ORDER = ROW_COLUMN_BANK,  Is_AXI_Enabled = true , Slot_cofiguration =  Single , Clamshell_cofiguration =  false ,IS_FASTER_SPEED_RAM = No, Is_custom_part = true, Memory_Voltage = 1.2V, Phy_Only = Complete_Memory_Controller, Debug_Port = Disable, Burst_Length = 8, System_Clock = Differential, AXI_Selection = true, AXI_Data_Width = 512,  AXI_ArbitrationScheme = RD_PRI_REG, AXI_Narrow_Burst = true, Simulation_Mode = Unisim, Debug_Mode = Disable, Example_TG = SIMPLE_TG, Self_Refresh = false, Save_Restore = false, MicroBlaze_ECC = false,  Specify_MandD = false, CLKBOUT_MULT = 8, DIVCLK_DIVIDE = 3, CLKOUT0_DIVIDE = 3}" *) 
 (* X_CORE_INFO = "ddr4_v2_2_4,Vivado 2018.1" *)
 module shell_ddr4_0_0
    (
@@ -101,7 +101,7 @@ module shell_ddr4_0_0
    // Slave Interface Write Address Ports
    input                 c0_ddr4_aresetn,
    input  [1:0]      c0_ddr4_s_axi_awid,
-   input  [31:0]    c0_ddr4_s_axi_awaddr,
+   input  [32:0]    c0_ddr4_s_axi_awaddr,
    input  [7:0]                       c0_ddr4_s_axi_awlen,
    input  [2:0]                       c0_ddr4_s_axi_awsize,
    input  [1:0]                       c0_ddr4_s_axi_awburst,
@@ -124,7 +124,7 @@ module shell_ddr4_0_0
    output                             c0_ddr4_s_axi_bvalid,
    // Slave Interface Read Address Ports
    input  [1:0]      c0_ddr4_s_axi_arid,
-   input  [31:0]    c0_ddr4_s_axi_araddr,
+   input  [32:0]    c0_ddr4_s_axi_araddr,
    input  [7:0]                       c0_ddr4_s_axi_arlen,
    input  [2:0]                       c0_ddr4_s_axi_arsize,
    input  [1:0]                       c0_ddr4_s_axi_arburst,

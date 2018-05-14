@@ -127,7 +127,7 @@ if {[string equal [get_filesets -quiet sources_1] ""]} {
 # Set IP repository paths
 set obj [get_filesets sources_1]
 #set_property ip_repo_paths {hlsIP_8k5 networkingIPRepo}
-set_property ip_repo_paths {hlsIP_adm-8k5 } [current_project]
+set_property ip_repo_paths {hlsIP_adm-8k5 shells/shell_ips} [current_project]
 
 # Rebuild user ip_repo's index before adding any source files
 update_ip_catalog -rebuild
@@ -137,6 +137,7 @@ set obj [get_filesets sources_1]
 set files [list \
  "[file normalize "shells/adm-8k5/srcs/shell.bd"]"\
  "[file normalize "shells/adm-8k5/srcs/shellTop.v"]"\
+ "[file normalize "shells/adm-8k5/constraints/custom_parts_2133.csv"]"\
 ]
 import_files -norecurse -fileset $obj $files
  #"[file normalize "shells/adm-8k5/srcs/pr_wrapper.v"]"\
@@ -242,6 +243,141 @@ set_property "used_in" "synthesis implementation" $file_obj
 set_property "used_in_implementation" "1" $file_obj
 set_property "used_in_synthesis" "1" $file_obj
 
+# Add/Import constrs file and set constrs file properties
+set file "[file normalize "shells/adm-8k5/constraints/ddr4_test.xdc"]"
+set file_imported [import_files -fileset constrs_1 $file]
+set file "constraints/ddr4_test.xdc"
+set file_obj [get_files -of_objects [get_filesets constrs_1] [list "*$file"]]
+set_property "file_type" "XDC" $file_obj
+set_property "is_enabled" "1" $file_obj
+set_property "is_global_include" "0" $file_obj
+set_property "library" "xil_defaultlib" $file_obj
+set_property "path_mode" "RelativeFirst" $file_obj
+set_property "processing_order" "NORMAL" $file_obj
+set_property "scoped_to_cells" "" $file_obj
+set_property "scoped_to_ref" "" $file_obj
+set_property "used_in" "synthesis implementation" $file_obj
+set_property "used_in_implementation" "1" $file_obj
+set_property "used_in_synthesis" "1" $file_obj
+
+# Add/Import constrs file and set constrs file properties
+set file "[file normalize "shells/adm-8k5/constraints/ddr4_test_axi4.xdc"]"
+set file_imported [import_files -fileset constrs_1 $file]
+set file "constraints/ddr4_test_axi4.xdc"
+set file_obj [get_files -of_objects [get_filesets constrs_1] [list "*$file"]]
+set_property "file_type" "XDC" $file_obj
+set_property "is_enabled" "1" $file_obj
+set_property "is_global_include" "0" $file_obj
+set_property "library" "xil_defaultlib" $file_obj
+set_property "path_mode" "RelativeFirst" $file_obj
+set_property "processing_order" "NORMAL" $file_obj
+set_property "scoped_to_cells" "" $file_obj
+set_property "scoped_to_ref" "" $file_obj
+set_property "used_in" "synthesis implementation" $file_obj
+set_property "used_in_implementation" "1" $file_obj
+set_property "used_in_synthesis" "1" $file_obj
+
+# Add/Import constrs file and set constrs file properties
+set file "[file normalize "shells/adm-8k5/constraints/ddr4sdram_b0_lane8.xdc"]"
+set file_imported [import_files -fileset constrs_1 $file]
+set file "constraints/ddr4sdram_b0_lane8.xdc"
+set file_obj [get_files -of_objects [get_filesets constrs_1] [list "*$file"]]
+set_property "file_type" "XDC" $file_obj
+set_property "is_enabled" "1" $file_obj
+set_property "is_global_include" "0" $file_obj
+set_property "library" "xil_defaultlib" $file_obj
+set_property "path_mode" "RelativeFirst" $file_obj
+set_property "processing_order" "NORMAL" $file_obj
+set_property "scoped_to_cells" "" $file_obj
+set_property "scoped_to_ref" "" $file_obj
+set_property "used_in" "synthesis implementation" $file_obj
+set_property "used_in_implementation" "1" $file_obj
+set_property "used_in_synthesis" "1" $file_obj
+
+# Add/Import constrs file and set constrs file properties
+set file "[file normalize "shells/adm-8k5/constraints/ddr4sdram_b0_unused.xdc"]"
+set file_imported [import_files -fileset constrs_1 $file]
+set file "constraints/ddr4sdram_b0_unused.xdc"
+set file_obj [get_files -of_objects [get_filesets constrs_1] [list "*$file"]]
+set_property "file_type" "XDC" $file_obj
+set_property "is_enabled" "1" $file_obj
+set_property "is_global_include" "0" $file_obj
+set_property "library" "xil_defaultlib" $file_obj
+set_property "path_mode" "RelativeFirst" $file_obj
+set_property "processing_order" "NORMAL" $file_obj
+set_property "scoped_to_cells" "" $file_obj
+set_property "scoped_to_ref" "" $file_obj
+set_property "used_in" "synthesis implementation" $file_obj
+set_property "used_in_implementation" "1" $file_obj
+set_property "used_in_synthesis" "1" $file_obj
+
+# Add/Import constrs file and set constrs file properties
+set file "[file normalize "shells/adm-8k5/constraints/ddr4sdram_locs_b0_twin_die.xdc"]"
+set file_imported [import_files -fileset constrs_1 $file]
+set file "constraints/ddr4sdram_locs_b0_twin_die.xdc"
+set file_obj [get_files -of_objects [get_filesets constrs_1] [list "*$file"]]
+set_property "file_type" "XDC" $file_obj
+set_property "is_enabled" "1" $file_obj
+set_property "is_global_include" "0" $file_obj
+set_property "library" "xil_defaultlib" $file_obj
+set_property "path_mode" "RelativeFirst" $file_obj
+set_property "processing_order" "NORMAL" $file_obj
+set_property "scoped_to_cells" "" $file_obj
+set_property "scoped_to_ref" "" $file_obj
+set_property "used_in" "synthesis implementation" $file_obj
+set_property "used_in_implementation" "1" $file_obj
+set_property "used_in_synthesis" "1" $file_obj
+
+# Add/Import constrs file and set constrs file properties
+set file "[file normalize "shells/adm-8k5/constraints/ddr4sdram_locs_b0_x64.xdc"]"
+set file_imported [import_files -fileset constrs_1 $file]
+set file "constraints/ddr4sdram_locs_b0_x64.xdc"
+set file_obj [get_files -of_objects [get_filesets constrs_1] [list "*$file"]]
+set_property "file_type" "XDC" $file_obj
+set_property "is_enabled" "1" $file_obj
+set_property "is_global_include" "0" $file_obj
+set_property "library" "xil_defaultlib" $file_obj
+set_property "path_mode" "RelativeFirst" $file_obj
+set_property "processing_order" "NORMAL" $file_obj
+set_property "scoped_to_cells" "" $file_obj
+set_property "scoped_to_ref" "" $file_obj
+set_property "used_in" "synthesis implementation" $file_obj
+set_property "used_in_implementation" "1" $file_obj
+set_property "used_in_synthesis" "1" $file_obj
+
+# Add/Import constrs file and set constrs file properties
+set file "[file normalize "shells/adm-8k5/constraints/ddr4sdram_locs_b0_x72.xdc"]"
+set file_imported [import_files -fileset constrs_1 $file]
+set file "constraints/ddr4sdram_locs_b0_x72.xdc"
+set file_obj [get_files -of_objects [get_filesets constrs_1] [list "*$file"]]
+set_property "file_type" "XDC" $file_obj
+set_property "is_enabled" "1" $file_obj
+set_property "is_global_include" "0" $file_obj
+set_property "library" "xil_defaultlib" $file_obj
+set_property "path_mode" "RelativeFirst" $file_obj
+set_property "processing_order" "NORMAL" $file_obj
+set_property "scoped_to_cells" "" $file_obj
+set_property "scoped_to_ref" "" $file_obj
+set_property "used_in" "synthesis implementation" $file_obj
+set_property "used_in_implementation" "1" $file_obj
+set_property "used_in_synthesis" "1" $file_obj
+
+# Add/Import constrs file and set constrs file properties
+set file "[file normalize "shells/adm-8k5/constraints/ddr4sdram_props_b0_twin_die.xdc"]"
+set file_imported [import_files -fileset constrs_1 $file]
+set file "constraints/ddr4sdram_props_b0_twin_die.xdc"
+set file_obj [get_files -of_objects [get_filesets constrs_1] [list "*$file"]]
+set_property "file_type" "XDC" $file_obj
+set_property "is_enabled" "1" $file_obj
+set_property "is_global_include" "0" $file_obj
+set_property "library" "xil_defaultlib" $file_obj
+set_property "path_mode" "RelativeFirst" $file_obj
+set_property "processing_order" "NORMAL" $file_obj
+set_property "scoped_to_cells" "" $file_obj
+set_property "scoped_to_ref" "" $file_obj
+set_property "used_in" "synthesis implementation" $file_obj
+set_property "used_in_implementation" "1" $file_obj
+set_property "used_in_synthesis" "1" $file_obj
 
 # Add/Import constrs file and set constrs file properties
 set file "[file normalize "shells/adm-8k5/constraints/refclk200.xdc"]"

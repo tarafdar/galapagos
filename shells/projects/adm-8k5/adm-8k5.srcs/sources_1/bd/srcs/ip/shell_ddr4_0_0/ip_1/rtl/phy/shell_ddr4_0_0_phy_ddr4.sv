@@ -101,7 +101,7 @@ module shell_ddr4_0_0_phy_ddr4 #
    ,parameter integer DM_WIDTH             = 8
    ,parameter         C_FAMILY             = "kintexu"
 
-   ,parameter         tCK                  = 833
+   ,parameter         tCK                  = 939
    ,parameter real    TCQ                  = 100
 
    ,parameter         USE_DYNAMIC_DCI      = 1
@@ -144,7 +144,7 @@ module shell_ddr4_0_0_phy_ddr4 #
    ,parameter [2*BYTES-1:0] QDLY_VT_TRACK       = {(2*BYTES){1'b1}}
 
   `ifdef SIMULATION
-   ,parameter                SIM_MODE           = "BFM"
+   ,parameter                SIM_MODE           = "FULL"
    ,parameter [2*BYTES-1:0]  SELF_CALIBRATE     = {(2*BYTES){1'b0}}
   `else
    ,parameter                SIM_MODE           = "FULL"

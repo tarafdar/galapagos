@@ -2,17 +2,17 @@
 <Messages>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1312" content="Analyzing design file &apos;../hlsSources/srcs/reverseEndian64.cpp&apos; ..." tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1465" content="Validating synthesis directives ..." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Checking Pragmas Time (s): cpu = 00:01:26 ; elapsed = 00:01:04 . Memory (MB): peak = 476.852 ; gain = 132.512 ; free physical = 12080 ; free virtual = 39347" tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Linking Time (s): cpu = 00:01:28 ; elapsed = 00:01:06 . Memory (MB): peak = 476.852 ; gain = 132.512 ; free physical = 12078 ; free virtual = 39346" tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Checking Pragmas Time (s): cpu = 00:00:22 ; elapsed = 00:00:12 . Memory (MB): peak = 351.625 ; gain = 0.156 ; free physical = 17091 ; free virtual = 58515" tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Linking Time (s): cpu = 00:00:24 ; elapsed = 00:00:14 . Memory (MB): peak = 351.625 ; gain = 0.156 ; free physical = 17085 ; free virtual = 58508" tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1467" content="Starting code transformations ..." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Standard Transforms Time (s): cpu = 00:01:29 ; elapsed = 00:01:07 . Memory (MB): peak = 476.852 ; gain = 132.512 ; free physical = 12077 ; free virtual = 39345" tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Standard Transforms Time (s): cpu = 00:00:25 ; elapsed = 00:00:15 . Memory (MB): peak = 351.777 ; gain = 0.309 ; free physical = 17067 ; free virtual = 58490" tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1472" content="Checking synthesizability ..." tag=""/>
 	<Message prefix="[XFORM 203-602]" severity="INFO" keynum="794" content="Inlining function &apos;reverseEndian64_inline&apos; into &apos;reverseEndian64&apos; (../hlsSources/srcs/reverseEndian64.cpp:50) automatically." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Checking Synthesizability Time (s): cpu = 00:01:29 ; elapsed = 00:01:07 . Memory (MB): peak = 476.852 ; gain = 132.512 ; free physical = 12075 ; free virtual = 39346" tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Checking Synthesizability Time (s): cpu = 00:00:25 ; elapsed = 00:00:15 . Memory (MB): peak = 351.777 ; gain = 0.309 ; free physical = 17062 ; free virtual = 58485" tag=""/>
 	<Message prefix="[XFORM 203-602]" severity="INFO" keynum="794" content="Inlining function &apos;reverseEndian64_inline&apos; into &apos;reverseEndian64&apos; (../hlsSources/srcs/reverseEndian64.cpp:50) automatically." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Pre-synthesis Time (s): cpu = 00:01:30 ; elapsed = 00:01:08 . Memory (MB): peak = 540.453 ; gain = 196.113 ; free physical = 12056 ; free virtual = 39326" tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Pre-synthesis Time (s): cpu = 00:00:27 ; elapsed = 00:00:16 . Memory (MB): peak = 479.742 ; gain = 128.273 ; free physical = 17038 ; free virtual = 58461" tag=""/>
 	<Message prefix="[XFORM 203-561]" severity="WARNING" keynum="788" content="&apos;Loop-1&apos; (../hlsSources/srcs/reverseEndian64.cpp:55:2) in function &apos;reverseEndian64&apos; is an infinite loop." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Architecture Synthesis Time (s): cpu = 00:01:31 ; elapsed = 00:01:09 . Memory (MB): peak = 540.453 ; gain = 196.113 ; free physical = 12055 ; free virtual = 39326" tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Architecture Synthesis Time (s): cpu = 00:00:27 ; elapsed = 00:00:17 . Memory (MB): peak = 479.742 ; gain = 128.273 ; free physical = 17036 ; free virtual = 58459" tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1317" content="Starting hardware synthesis ..." tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1385" content="Synthesizing &apos;reverseEndian64&apos; ..." tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1477" content="----------------------------------------------------------------" tag=""/>
@@ -20,13 +20,13 @@
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1478" content="----------------------------------------------------------------" tag=""/>
 	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="139" content="Starting scheduling ..." tag=""/>
 	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="138" content="Finished scheduling." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 26.2 seconds; current allocated memory: 134.022 MB." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 17.12 seconds; current allocated memory: 78.004 MB." tag=""/>
 	<Message prefix="[BIND 205-100]" severity="INFO" keynum="439" content="Starting micro-architecture generation ..." tag=""/>
 	<Message prefix="[BIND 205-101]" severity="INFO" keynum="211" content="Performing variable lifetime analysis." tag=""/>
 	<Message prefix="[BIND 205-101]" severity="INFO" keynum="210" content="Exploring resource sharing." tag=""/>
 	<Message prefix="[BIND 205-101]" severity="INFO" keynum="206" content="Binding ..." tag=""/>
 	<Message prefix="[BIND 205-100]" severity="INFO" keynum="438" content="Finished micro-architecture generation." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.02 seconds; current allocated memory: 134.161 MB." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.02 seconds; current allocated memory: 78.151 MB." tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1483" content="----------------------------------------------------------------" tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1484" content="-- Generating RTL for module &apos;reverseEndian64&apos;" tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1485" content="----------------------------------------------------------------" tag=""/>
@@ -38,8 +38,8 @@
 	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;reverseEndian64/stream_out_V_tkeep_V&apos; to &apos;axis&apos; (register, both mode)." tag=""/>
 	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on function &apos;reverseEndian64&apos; to &apos;ap_ctrl_none&apos;." tag=""/>
 	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="369" content="Finished creating RTL model for &apos;reverseEndian64&apos;." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.05 seconds; current allocated memory: 134.789 MB." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished generating all RTL models Time (s): cpu = 00:01:31 ; elapsed = 00:01:09 . Memory (MB): peak = 540.453 ; gain = 196.113 ; free physical = 12055 ; free virtual = 39325" tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.03 seconds; current allocated memory: 78.850 MB." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished generating all RTL models Time (s): cpu = 00:00:28 ; elapsed = 00:00:18 . Memory (MB): peak = 479.742 ; gain = 128.273 ; free physical = 17036 ; free virtual = 58459" tag=""/>
 	<Message prefix="[SYSC 207-301]" severity="INFO" keynum="SYSC_301_1065" content="Generating SystemC RTL for reverseEndian64." tag=""/>
 	<Message prefix="[VHDL 208-304]" severity="INFO" keynum="VHDL_304_1066" content="Generating VHDL RTL for reverseEndian64." tag=""/>
 	<Message prefix="[VLOG 209-307]" severity="INFO" keynum="VLOG_307_1067" content="Generating Verilog RTL for reverseEndian64." tag=""/>

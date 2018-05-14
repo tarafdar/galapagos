@@ -17,11 +17,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri May 11 15:44:47 UTC 2018</spirit:value>
+            <spirit:value>Mon May 14 02:48:36 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:d05c2bc8</spirit:value>
+            <spirit:value>8:7396b4b1</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -36,11 +36,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri May 11 15:44:47 UTC 2018</spirit:value>
+            <spirit:value>Mon May 14 02:48:36 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:d05c2bc8</spirit:value>
+            <spirit:value>8:7396b4b1</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -56,11 +56,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri May 11 15:44:47 UTC 2018</spirit:value>
+            <spirit:value>Mon May 14 02:48:36 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:949607de</spirit:value>
+            <spirit:value>8:08e5c0db</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2592,12 +2592,12 @@
       <spirit:modelParameter>
         <spirit:name>tCK</spirit:name>
         <spirit:displayName>tCK</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.tCK">833</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.tCK">939</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter>
         <spirit:name>tXPR</spirit:name>
         <spirit:displayName>tXPR</spirit:displayName>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.tXPR">82</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.tXPR">96</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter>
         <spirit:name>nCK_PER_CLK</spirit:name>
@@ -2708,7 +2708,7 @@
       <spirit:modelParameter>
         <spirit:name>CLKIN_PERIOD</spirit:name>
         <spirit:displayName>CLKIN PERIOD</spirit:displayName>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.CLKIN_PERIOD">13328</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.CLKIN_PERIOD">3338</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter>
         <spirit:name>MEM_TYPE</spirit:name>
@@ -2808,12 +2808,12 @@
       <spirit:modelParameter>
         <spirit:name>tWR</spirit:name>
         <spirit:displayName>tWR</spirit:displayName>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.tWR">19</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.tWR">16</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter>
         <spirit:name>tRTP</spirit:name>
         <spirit:displayName>tRTP</spirit:displayName>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.tRTP">10</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.tRTP">8</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter>
         <spirit:name>RANK_WIDTH</spirit:name>
@@ -2843,7 +2843,7 @@
       <spirit:modelParameter>
         <spirit:name>IS_CUSTOM</spirit:name>
         <spirit:displayName>IS CUSTOM</spirit:displayName>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.IS_CUSTOM">false</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.IS_CUSTOM">true</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter>
         <spirit:name>Slot</spirit:name>
@@ -3071,7 +3071,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Simulation_Mode</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Simulation_Mode" spirit:order="8">BFM</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Simulation_Mode" spirit:order="8">Unisim</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PARTIAL_RECONFIG_FLOW_MIG</spirit:name>
@@ -3107,23 +3107,23 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C0.DDR4_TimePeriod</spirit:name>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C0.DDR4_TimePeriod" spirit:order="17">833</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C0.DDR4_TimePeriod" spirit:order="17">939</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C0.DDR4_InputClockPeriod</spirit:name>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C0.DDR4_InputClockPeriod" spirit:order="18">13328</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C0.DDR4_InputClockPeriod" spirit:order="18">3338</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C0.DDR4_CLKFBOUT_MULT</spirit:name>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C0.DDR4_CLKFBOUT_MULT" spirit:order="19">16</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C0.DDR4_CLKFBOUT_MULT" spirit:order="19">8</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C0.DDR4_DIVCLK_DIVIDE</spirit:name>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C0.DDR4_DIVCLK_DIVIDE" spirit:order="20">1</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C0.DDR4_DIVCLK_DIVIDE" spirit:order="20">3</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C0.DDR4_CLKOUT0_DIVIDE</spirit:name>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C0.DDR4_CLKOUT0_DIVIDE" spirit:order="21">4</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C0.DDR4_CLKOUT0_DIVIDE" spirit:order="21">3</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C0.DDR4_PhyClockRatio</spirit:name>
@@ -3135,7 +3135,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C0.DDR4_MemoryPart</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.C0.DDR4_MemoryPart" spirit:order="24">MT40A512M8RH-075E</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.C0.DDR4_MemoryPart" spirit:order="24">CUSTOM_DBI_MT40A1G8PM-083E</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C0.DDR4_Slot</spirit:name>
@@ -3159,11 +3159,11 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C0.DDR4_CasLatency</spirit:name>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C0.DDR4_CasLatency" spirit:order="30">17</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C0.DDR4_CasLatency" spirit:order="30">18</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C0.DDR4_CasWriteLatency</spirit:name>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C0.DDR4_CasWriteLatency" spirit:order="31">12</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C0.DDR4_CasWriteLatency" spirit:order="31">11</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C0.DDR4_ChipSelect</spirit:name>
@@ -3186,7 +3186,7 @@
     <spirit:parameter>
       <spirit:name>C0.DDR4_MIN_PERIOD</spirit:name>
       <spirit:displayName>Memory Min Period</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C0.DDR4_MIN_PERIOD" spirit:order="36">750</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C0.DDR4_MIN_PERIOD" spirit:order="36">833</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C0.DDR4_IS_FASTER_SPEED_RAM</spirit:name>
@@ -3208,7 +3208,9 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>CUSTOM_PART_ATTRIBUTES</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.CUSTOM_PART_ATTRIBUTES" spirit:order="41">NONE</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.CUSTOM_PART_ATTRIBUTES" spirit:order="41">CustomPart_Address__width 17$CustomPart_Bank__group__width 2$CustomPart_Bank__width 2$CustomPart_CA__Mirror 0$CustomPart_CKE__width 1$CustomPart_CK__width 1$CustomPart_CS__width 1$CustomPart_Column__width 10$CustomPart_Component__density 8Gb$CustomPart_Data__bits__per__strobe 8$CustomPart_Data__mask 1$CustomPart_Data__widths 64,72$CustomPart_IO__Voltages 1.2V$CustomPart_Max__period 1600$CustomPart_Memory__component__width 8$CustomPart_Memory__density 8Gb$CustomPart_Memory__device__width 8$Custom
+Part_Memory__speed__grade 083E$CustomPart_Min__period 833$CustomPart_ODT__width 1$CustomPart_Part__name CUSTOM_DBI_MT40A1G8PM-083E$CustomPart_Part__type Components$CustomPart_RTT__(nominal)__-__ODT RZQ/6$CustomPart_Rank 1$CustomPart_Row__width 16$CustomPart_StackHeight 1$CustomPart_burst__length 8$CustomPart_cas__latency 18$CustomPart_cas__write__latency 11$CustomPart_tCCD_3ds 0$CustomPart_tCKE 5000 ps$CustomPart_tFAW 21000 ps$CustomPart_tFAW_dlr 0$CustomPart_tMRD 8 tck$CustomPart_tRAS 32000 ps$
+CustomPart_tRCD 13320 ps$CustomPart_tREFI 7800000 ps$CustomPart_tRFC 350000 ps$CustomPart_tRFC_dlr 0$CustomPart_tRP 13320 ps$CustomPart_tRRD_L 4900 ps$CustomPart_tRRD_S 3300 ps$CustomPart_tRRD_dlr 0$CustomPart_tRTP 7500 ps$CustomPart_tWR 15000 ps$CustomPart_tWTR_L 7500 ps$CustomPart_tWTR_S 2500 ps$CustomPart_tXPR 360 ns$CustomPart_tZQCS 128 tck$CustomPart_tZQINIT 1024 tck$</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C0.DDR4_SELF_REFRESH</spirit:name>

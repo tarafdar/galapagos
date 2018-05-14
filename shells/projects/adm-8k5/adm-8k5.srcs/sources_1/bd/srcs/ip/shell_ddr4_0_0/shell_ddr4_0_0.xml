@@ -284,7 +284,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>TIMEPERIOD_PS</spirit:name>
-          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.C0_DDR4.TIMEPERIOD_PS">833</spirit:value>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.C0_DDR4.TIMEPERIOD_PS">939</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -302,7 +302,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>MEMORY_PART</spirit:name>
-          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.C0_DDR4.MEMORY_PART">MT40A512M8RH-075E</spirit:value>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.C0_DDR4.MEMORY_PART">CUSTOM_DBI_MT40A1G8PM-083E</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -347,7 +347,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>CUSTOM_PARTS</spirit:name>
-          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.C0_DDR4.CUSTOM_PARTS">no_file_loaded</spirit:value>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.C0_DDR4.CUSTOM_PARTS">../../../../../../../../adm-8k5/constraints/custom_parts_2133.csv</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -383,7 +383,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>CAS_LATENCY</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.C0_DDR4.CAS_LATENCY">17</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.C0_DDR4.CAS_LATENCY">18</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -392,7 +392,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>CAS_WRITE_LATENCY</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.C0_DDR4.CAS_WRITE_LATENCY">12</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.C0_DDR4.CAS_WRITE_LATENCY">11</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -1005,7 +1005,7 @@
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>FREQ_HZ</spirit:name>
-          <spirit:value spirit:format="float" spirit:resolve="dependent" spirit:id="BUSIFPARAM_VALUE.C0_DDR4_S_AXI_CTRL.FREQ_HZ" spirit:dependency="spirit:decode(id(&apos;MODELPARAM_VALUE.C0.DDR4_UI_CLOCK&apos;))">3e+08</spirit:value>
+          <spirit:value spirit:format="float" spirit:resolve="dependent" spirit:id="BUSIFPARAM_VALUE.C0_DDR4_S_AXI_CTRL.FREQ_HZ" spirit:dependency="spirit:decode(id(&apos;MODELPARAM_VALUE.C0.DDR4_UI_CLOCK&apos;))">2.66e+08</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>DATA_WIDTH</spirit:name>
@@ -1586,7 +1586,7 @@
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>FREQ_HZ</spirit:name>
-          <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.C0_DDR4_S_AXI.FREQ_HZ" spirit:dependency="spirit:decode(id(&apos;MODELPARAM_VALUE.C0.DDR4_UI_CLOCK&apos;))">300000000</spirit:value>
+          <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.C0_DDR4_S_AXI.FREQ_HZ" spirit:dependency="spirit:decode(id(&apos;MODELPARAM_VALUE.C0.DDR4_UI_CLOCK&apos;))">266000000</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>DATA_WIDTH</spirit:name>
@@ -1617,7 +1617,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>ADDR_WIDTH</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.C0_DDR4_S_AXI.ADDR_WIDTH">32</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.C0_DDR4_S_AXI.ADDR_WIDTH">33</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -1937,7 +1937,7 @@
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>FREQ_HZ</spirit:name>
-          <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.C0_DDR4_CLOCK.FREQ_HZ" spirit:dependency="spirit:decode(id(&apos;MODELPARAM_VALUE.C0.DDR4_UI_CLOCK&apos;))">300000000</spirit:value>
+          <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.C0_DDR4_CLOCK.FREQ_HZ" spirit:dependency="spirit:decode(id(&apos;MODELPARAM_VALUE.C0.DDR4_UI_CLOCK&apos;))">266000000</spirit:value>
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>PHASE</spirit:name>
@@ -2263,7 +2263,7 @@
       <spirit:addressBlock>
         <spirit:name>C0_DDR4_ADDRESS_BLOCK</spirit:name>
         <spirit:baseAddress spirit:format="long" spirit:resolve="dependent">0</spirit:baseAddress>
-        <spirit:range spirit:format="long" spirit:resolve="dependent" spirit:dependency="spirit:decode(id(&apos;MODELPARAM_VALUE.C0.DDR4_MEM_SIZE&apos;))">4294967296</spirit:range>
+        <spirit:range spirit:format="long" spirit:resolve="dependent" spirit:dependency="spirit:decode(id(&apos;MODELPARAM_VALUE.C0.DDR4_MEM_SIZE&apos;))">8589934592</spirit:range>
         <spirit:width spirit:format="long">32</spirit:width>
         <spirit:usage>memory</spirit:usage>
         <spirit:access>read-write</spirit:access>
@@ -2304,7 +2304,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:d1accea6</spirit:value>
+            <spirit:value>8:5de91658</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2318,11 +2318,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri May 11 15:43:11 UTC 2018</spirit:value>
+            <spirit:value>Mon May 14 02:47:06 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:d1accea6</spirit:value>
+            <spirit:value>8:5de91658</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2337,11 +2337,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri May 11 15:44:42 UTC 2018</spirit:value>
+            <spirit:value>Mon May 14 02:48:31 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:380d64b6</spirit:value>
+            <spirit:value>8:4b6d9e56</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2356,11 +2356,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri May 11 15:44:42 UTC 2018</spirit:value>
+            <spirit:value>Mon May 14 02:48:31 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:380d64b6</spirit:value>
+            <spirit:value>8:4b6d9e56</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2376,11 +2376,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri May 11 15:44:44 UTC 2018</spirit:value>
+            <spirit:value>Mon May 14 02:48:33 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:430c325b</spirit:value>
+            <spirit:value>8:eeb30a4b</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2394,11 +2394,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri May 11 15:44:44 UTC 2018</spirit:value>
+            <spirit:value>Mon May 14 02:48:33 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:380d64b6</spirit:value>
+            <spirit:value>8:4b6d9e56</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2412,11 +2412,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri May 11 16:08:39 UTC 2018</spirit:value>
+            <spirit:value>Mon May 14 03:05:35 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:380d64b6</spirit:value>
+            <spirit:value>8:4b6d9e56</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -3773,7 +3773,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="spirit:decode(id(&apos;MODELPARAM_VALUE.C0.APP_ADDR_WIDTH&apos;))-1">28</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="spirit:decode(id(&apos;MODELPARAM_VALUE.C0.APP_ADDR_WIDTH&apos;))-1">29</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -4692,7 +4692,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="( spirit:decode(id(&apos;MODELPARAM_VALUE.C0.DDR4_AXI_ADDR_WIDTH&apos;)) )-1">31</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="( spirit:decode(id(&apos;MODELPARAM_VALUE.C0.DDR4_AXI_ADDR_WIDTH&apos;)) )-1">32</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -5184,7 +5184,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C0.DDR4_AXI_ADDR_WIDTH&apos;)))-1">31</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C0.DDR4_AXI_ADDR_WIDTH&apos;)))-1">32</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -6153,7 +6153,7 @@
       <spirit:modelParameter>
         <spirit:name>C0.APP_ADDR_WIDTH</spirit:name>
         <spirit:displayName>App Address Width</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.APP_ADDR_WIDTH">29</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.APP_ADDR_WIDTH">30</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter>
         <spirit:name>C0.MEM_TYPE</spirit:name>
@@ -6238,7 +6238,7 @@
       <spirit:modelParameter>
         <spirit:name>C0.DDR4_CS_ADDR</spirit:name>
         <spirit:displayName>CS Width Check</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.DDR4_CS_ADDR">29</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.DDR4_CS_ADDR">30</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter>
         <spirit:name>C0.DDR4_VrefVoltage</spirit:name>
@@ -6293,7 +6293,7 @@
       <spirit:modelParameter>
         <spirit:name>C0.DDR4_ROW_WIDTH</spirit:name>
         <spirit:displayName>ROW WIDTH</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.DDR4_ROW_WIDTH">15</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.DDR4_ROW_WIDTH">16</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter>
         <spirit:name>C0.DDR4_ADDR_WIDTH</spirit:name>
@@ -6343,7 +6343,7 @@
       <spirit:modelParameter>
         <spirit:name>C0.DDR4_MEMORY_PART</spirit:name>
         <spirit:displayName>MEMORY PART</spirit:displayName>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.DDR4_MEMORY_PART">MT40A512M8RH-075E</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.DDR4_MEMORY_PART">CUSTOM_DBI_MT40A1G8PM-083E</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter>
         <spirit:name>C0.DDR4_DATA_MASK</spirit:name>
@@ -6358,27 +6358,27 @@
       <spirit:modelParameter>
         <spirit:name>C0.DDR4_SPEED_GRADE</spirit:name>
         <spirit:displayName>SPEED GRADE</spirit:displayName>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.DDR4_SPEED_GRADE">075E</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.DDR4_SPEED_GRADE">083E</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter>
         <spirit:name>C0.DDR4_MEM_DENSITY</spirit:name>
         <spirit:displayName>MEM DENSITY</spirit:displayName>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.DDR4_MEM_DENSITY">4Gb</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.DDR4_MEM_DENSITY">8Gb</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter>
         <spirit:name>C0.DDR4_MEM_DENSITY_MB</spirit:name>
         <spirit:displayName>MEM DENSITY MB</spirit:displayName>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.DDR4_MEM_DENSITY_MB">4096</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.DDR4_MEM_DENSITY_MB">8192</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter>
         <spirit:name>C0.DDR4_MEM_DENSITY_GB</spirit:name>
         <spirit:displayName>MEM DENSITY GB</spirit:displayName>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.DDR4_MEM_DENSITY_GB">4</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.DDR4_MEM_DENSITY_GB">8</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter>
         <spirit:name>C0.DDR4_COMP_DENSITY</spirit:name>
         <spirit:displayName>COMP DENSITY</spirit:displayName>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.DDR4_COMP_DENSITY">4Gb</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.DDR4_COMP_DENSITY">8Gb</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter>
         <spirit:name>C0.DDR4_MEM_COMP_WIDTH</spirit:name>
@@ -6393,7 +6393,7 @@
       <spirit:modelParameter>
         <spirit:name>C0.DDR4_MODEL_SPEED_GRADE</spirit:name>
         <spirit:displayName>MODEL SPEED GRADE</spirit:displayName>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.DDR4_MODEL_SPEED_GRADE">DDR4_750_Timing</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.DDR4_MODEL_SPEED_GRADE"/>
       </spirit:modelParameter>
       <spirit:modelParameter>
         <spirit:name>C0.DDR4_RANK_WIDTH</spirit:name>
@@ -6408,7 +6408,7 @@
       <spirit:modelParameter>
         <spirit:name>C0.DDR4_MIN_PERIOD</spirit:name>
         <spirit:displayName>MIN PERIOD</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.DDR4_MIN_PERIOD">750</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.DDR4_MIN_PERIOD">833</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter>
         <spirit:name>C0.DDR4_MAX_PERIOD</spirit:name>
@@ -6478,7 +6478,7 @@
       <spirit:modelParameter>
         <spirit:name>C0.DDR4_tCK</spirit:name>
         <spirit:displayName>tCK</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.DDR4_tCK">833</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.DDR4_tCK">939</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter>
         <spirit:name>C0.DDR4_Configuration</spirit:name>
@@ -6493,12 +6493,12 @@
       <spirit:modelParameter>
         <spirit:name>C0.DDR4_tFAW</spirit:name>
         <spirit:displayName>tFAW</spirit:displayName>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.DDR4_tFAW">26</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.DDR4_tFAW">23</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter>
         <spirit:name>C0.DDR4_tFAW_dlr</spirit:name>
         <spirit:displayName>tFAW_dlr</spirit:displayName>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.DDR4_tFAW_dlr">16</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.DDR4_tFAW_dlr"/>
       </spirit:modelParameter>
       <spirit:modelParameter>
         <spirit:name>C0.DDR4_tMRD</spirit:name>
@@ -6508,37 +6508,37 @@
       <spirit:modelParameter>
         <spirit:name>C0.DDR4_tRAS</spirit:name>
         <spirit:displayName>tRAS</spirit:displayName>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.DDR4_tRAS">39</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.DDR4_tRAS">35</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter>
         <spirit:name>C0.DDR4_tRCD</spirit:name>
         <spirit:displayName>tRCD</spirit:displayName>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.DDR4_tRCD">17</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.DDR4_tRCD">15</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter>
         <spirit:name>C0.DDR4_tREFI</spirit:name>
         <spirit:displayName>tREFI</spirit:displayName>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.DDR4_tREFI">9363</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.DDR4_tREFI">8306</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter>
         <spirit:name>C0.DDR4_tRFC</spirit:name>
         <spirit:displayName>tRFC</spirit:displayName>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.DDR4_tRFC">313</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.DDR4_tRFC">373</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter>
         <spirit:name>C0.DDR4_tRFC_dlr</spirit:name>
         <spirit:displayName>tRFC_dlr</spirit:displayName>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.DDR4_tRFC_dlr">109</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.DDR4_tRFC_dlr"/>
       </spirit:modelParameter>
       <spirit:modelParameter>
         <spirit:name>C0.DDR4_tRP</spirit:name>
         <spirit:displayName>tRP</spirit:displayName>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.DDR4_tRP">17</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.DDR4_tRP">15</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter>
         <spirit:name>C0.DDR4_tWR</spirit:name>
         <spirit:displayName>tWR</spirit:displayName>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.DDR4_tWR">19</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.DDR4_tWR">16</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter>
         <spirit:name>C0.DDR4_tRRD</spirit:name>
@@ -6548,7 +6548,7 @@
       <spirit:modelParameter>
         <spirit:name>C0.DDR4_tRTP</spirit:name>
         <spirit:displayName>tRTP</spirit:displayName>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.DDR4_tRTP">10</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.DDR4_tRTP">8</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter>
         <spirit:name>C0.DDR4_tRRD_S</spirit:name>
@@ -6563,7 +6563,7 @@
       <spirit:modelParameter>
         <spirit:name>C0.DDR4_tRRD_dlr</spirit:name>
         <spirit:displayName>tRRD_dlr</spirit:displayName>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.DDR4_tRRD_dlr">4</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.DDR4_tRRD_dlr"/>
       </spirit:modelParameter>
       <spirit:modelParameter>
         <spirit:name>C0.DDR4_tWTR</spirit:name>
@@ -6573,17 +6573,17 @@
       <spirit:modelParameter>
         <spirit:name>C0.DDR4_tWTR_S</spirit:name>
         <spirit:displayName>tWTR_S</spirit:displayName>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.DDR4_tWTR_S">4</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.DDR4_tWTR_S">3</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter>
         <spirit:name>C0.DDR4_tWTR_L</spirit:name>
         <spirit:displayName>tWTR_L</spirit:displayName>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.DDR4_tWTR_L">10</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.DDR4_tWTR_L">8</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter>
         <spirit:name>C0.DDR4_tXPR</spirit:name>
         <spirit:displayName>tXPR</spirit:displayName>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.DDR4_tXPR">82</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.DDR4_tXPR">96</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter>
         <spirit:name>C0.DDR4_tZQI</spirit:name>
@@ -6603,7 +6603,7 @@
       <spirit:modelParameter>
         <spirit:name>C0.DDR4_tCCD_3ds</spirit:name>
         <spirit:displayName>tCCD_3ds</spirit:displayName>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.DDR4_tCCD_3ds">5</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.DDR4_tCCD_3ds"/>
       </spirit:modelParameter>
       <spirit:modelParameter>
         <spirit:name>C0.DDR4_CLKOUTPHY_MODE</spirit:name>
@@ -6613,7 +6613,7 @@
       <spirit:modelParameter>
         <spirit:name>C0.DDR4_CLKOUT0_DIVIDE</spirit:name>
         <spirit:displayName>CLKOUT0_DIVIDE</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.DDR4_CLKOUT0_DIVIDE">4</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.DDR4_CLKOUT0_DIVIDE">3</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter>
         <spirit:name>C0.DDR4_CLKOUT1_DIVIDE</spirit:name>
@@ -6623,22 +6623,22 @@
       <spirit:modelParameter>
         <spirit:name>C0.DDR4_CLKFBOUT_MULT</spirit:name>
         <spirit:displayName>CLKFBOUT_MULT</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.DDR4_CLKFBOUT_MULT">16</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.DDR4_CLKFBOUT_MULT">8</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter>
         <spirit:name>C0.DDR4_DIVCLK_DIVIDE</spirit:name>
         <spirit:displayName>DIVCLK DIVIDE</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.DDR4_DIVCLK_DIVIDE">1</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.DDR4_DIVCLK_DIVIDE">3</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter>
         <spirit:name>CAL_INPUT_CLK_PERIOD</spirit:name>
         <spirit:displayName>Calculated Input Clock Period</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.CAL_INPUT_CLK_PERIOD">13328</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.CAL_INPUT_CLK_PERIOD">3338</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter>
         <spirit:name>C0.DDR4_CLKIN_PERIOD</spirit:name>
         <spirit:displayName>CLKIN_PERIOD</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.DDR4_CLKIN_PERIOD">13328</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.DDR4_CLKIN_PERIOD">3338</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter>
         <spirit:name>C0.DDR4_HR_MIN_FREQ</spirit:name>
@@ -6663,7 +6663,7 @@
       <spirit:modelParameter>
         <spirit:name>C0.DDR4_AXI_ADDR_WIDTH</spirit:name>
         <spirit:displayName>AXI Address Width</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.DDR4_AXI_ADDR_WIDTH">32</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.DDR4_AXI_ADDR_WIDTH">33</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter>
         <spirit:name>C0.DDR4_AXI_DATA_WIDTH</spirit:name>
@@ -6673,12 +6673,12 @@
       <spirit:modelParameter>
         <spirit:name>C0.DDR4_MEM_SIZE</spirit:name>
         <spirit:displayName>Memory Size</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.DDR4_MEM_SIZE">4294967296</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.DDR4_MEM_SIZE">8589934592</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter>
         <spirit:name>C0.DDR4_UI_CLOCK</spirit:name>
         <spirit:displayName>DDR4 UI CLOCK</spirit:displayName>
-        <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.DDR4_UI_CLOCK">300000000</spirit:value>
+        <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.DDR4_UI_CLOCK">266000000</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter>
         <spirit:name>C0.DDR4_CA_MIRROR</spirit:name>
@@ -6688,7 +6688,7 @@
       <spirit:modelParameter>
         <spirit:name>C0.DDR4_IS_CUSTOM</spirit:name>
         <spirit:displayName>IS CUSTOM</spirit:displayName>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.DDR4_IS_CUSTOM">false</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.DDR4_IS_CUSTOM">true</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter>
         <spirit:name>C0.DDR4_AUTO_AP_COL_A3</spirit:name>
@@ -6722,7 +6722,9 @@
       <spirit:modelParameter>
         <spirit:name>CUSTOM_PART_ATTRIBUTES</spirit:name>
         <spirit:displayName>custom_part_attributes</spirit:displayName>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.CUSTOM_PART_ATTRIBUTES">NONE</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.CUSTOM_PART_ATTRIBUTES">CustomPart_Address__width 17$CustomPart_Bank__group__width 2$CustomPart_Bank__width 2$CustomPart_CA__Mirror 0$CustomPart_CKE__width 1$CustomPart_CK__width 1$CustomPart_CS__width 1$CustomPart_Column__width 10$CustomPart_Component__density 8Gb$CustomPart_Data__bits__per__strobe 8$CustomPart_Data__mask 1$CustomPart_Data__widths 64,72$CustomPart_IO__Voltages 1.2V$CustomPart_Max__period 1600$CustomPart_Memory__component__width 8$CustomPart_Memory__density 8Gb$CustomPart_Memory__device__width 8$Custom
+Part_Memory__speed__grade 083E$CustomPart_Min__period 833$CustomPart_ODT__width 1$CustomPart_Part__name CUSTOM_DBI_MT40A1G8PM-083E$CustomPart_Part__type Components$CustomPart_RTT__(nominal)__-__ODT RZQ/6$CustomPart_Rank 1$CustomPart_Row__width 16$CustomPart_StackHeight 1$CustomPart_burst__length 8$CustomPart_cas__latency 18$CustomPart_cas__write__latency 11$CustomPart_tCCD_3ds 0$CustomPart_tCKE 5000 ps$CustomPart_tFAW 21000 ps$CustomPart_tFAW_dlr 0$CustomPart_tMRD 8 tck$CustomPart_tRAS 32000 ps$
+CustomPart_tRCD 13320 ps$CustomPart_tREFI 7800000 ps$CustomPart_tRFC 350000 ps$CustomPart_tRFC_dlr 0$CustomPart_tRP 13320 ps$CustomPart_tRRD_L 4900 ps$CustomPart_tRRD_S 3300 ps$CustomPart_tRRD_dlr 0$CustomPart_tRTP 7500 ps$CustomPart_tWR 15000 ps$CustomPart_tWTR_L 7500 ps$CustomPart_tWTR_S 2500 ps$CustomPart_tXPR 360 ns$CustomPart_tZQCS 128 tck$CustomPart_tZQINIT 1024 tck$</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter>
         <spirit:name>M_ADDN_UI_CLKOUT1_FREQ_HZ</spirit:name>
@@ -6801,7 +6803,7 @@
       <spirit:modelParameter>
         <spirit:name>Simulation_Mode</spirit:name>
         <spirit:displayName>Simulation Mode</spirit:displayName>
-        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.Simulation_Mode">0</spirit:value>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.Simulation_Mode">Unisim</spirit:value>
       </spirit:modelParameter>
     </spirit:modelParameters>
   </spirit:model>
@@ -6851,16 +6853,13 @@
       <spirit:enumeration>DDR4_SDRAM</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
-      <spirit:name>choice_list_28391b73</spirit:name>
-      <spirit:enumeration>1.2V</spirit:enumeration>
-    </spirit:choice>
-    <spirit:choice>
-      <spirit:name>choice_list_291719ff</spirit:name>
-      <spirit:enumeration>8</spirit:enumeration>
-      <spirit:enumeration>16</spirit:enumeration>
-      <spirit:enumeration>32</spirit:enumeration>
+      <spirit:name>choice_list_26b08305</spirit:name>
       <spirit:enumeration>64</spirit:enumeration>
       <spirit:enumeration>72</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_list_28391b73</spirit:name>
+      <spirit:enumeration>1.2V</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choice_list_2b96b8de</spirit:name>
@@ -6883,11 +6882,6 @@
       <spirit:enumeration>SODIMMs</spirit:enumeration>
       <spirit:enumeration>RDIMMs</spirit:enumeration>
       <spirit:enumeration>LRDIMMs</spirit:enumeration>
-    </spirit:choice>
-    <spirit:choice>
-      <spirit:name>choice_list_3a95db8a</spirit:name>
-      <spirit:enumeration>12</spirit:enumeration>
-      <spirit:enumeration>16</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choice_list_4665eb01</spirit:name>
@@ -6915,42 +6909,108 @@
       <spirit:enumeration>Single</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
-      <spirit:name>choice_list_6f7a14f1</spirit:name>
+      <spirit:name>choice_list_8b4f223f</spirit:name>
+      <spirit:enumeration>Strict</spirit:enumeration>
+      <spirit:enumeration>Normal</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_list_98f5c8fa</spirit:name>
+      <spirit:enumeration>RZQ/6</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_list_a07a0664</spirit:name>
+      <spirit:enumeration>33</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_list_a187d5e4</spirit:name>
+      <spirit:enumeration>512</spirit:enumeration>
+      <spirit:enumeration>1024</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_list_a85f690f</spirit:name>
+      <spirit:enumeration>18</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_list_ac75ef1e</spirit:name>
+      <spirit:enumeration>Custom</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_list_ac8b9e21</spirit:name>
+      <spirit:enumeration>11</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_list_ad101c66</spirit:name>
+      <spirit:enumeration>RZQ/7</spirit:enumeration>
+      <spirit:enumeration>RZQ/6</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_list_c1e0b709</spirit:name>
+      <spirit:enumeration>MT40A512M8RH-075E</spirit:enumeration>
+      <spirit:enumeration>MT40A1G8PM-075E</spirit:enumeration>
+      <spirit:enumeration>MT40A512M8HX-083</spirit:enumeration>
+      <spirit:enumeration>MT40A256M16GE-075E</spirit:enumeration>
+      <spirit:enumeration>EDY4016AABG-DR-F</spirit:enumeration>
+      <spirit:enumeration>MT40A512M8HX-093</spirit:enumeration>
+      <spirit:enumeration>MT40A256M16HA-093</spirit:enumeration>
+      <spirit:enumeration>MT40A512M8HX-107</spirit:enumeration>
+      <spirit:enumeration>MT40A256M16HA-107</spirit:enumeration>
+      <spirit:enumeration>MT40A2G8FSE-083E</spirit:enumeration>
+      <spirit:enumeration>MT40A2G8TRF-093E</spirit:enumeration>
+      <spirit:enumeration>MT40A1G8TRF-093E</spirit:enumeration>
+      <spirit:enumeration>MT40A512M16HA-083E</spirit:enumeration>
+      <spirit:enumeration>MT40A512M16HA-075E</spirit:enumeration>
+      <spirit:enumeration>MT40A1G8WE-075E</spirit:enumeration>
+      <spirit:enumeration>MT40A2G8HPR-083J</spirit:enumeration>
+      <spirit:enumeration>MT40A4G8KVA-083J</spirit:enumeration>
+      <spirit:enumeration>MT40A256M16GE-083E</spirit:enumeration>
+      <spirit:enumeration>MT40A1G16WBU-083E</spirit:enumeration>
+      <spirit:enumeration>CUSTOM_MT40A1G8PM-083E</spirit:enumeration>
+      <spirit:enumeration>CUSTOM_DBI_MT40A1G8PM-083E</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_list_c89503c8</spirit:name>
+      <spirit:enumeration>ROW_BANK_COLUMN</spirit:enumeration>
+      <spirit:enumeration>BANK_ROW_COLUMN</spirit:enumeration>
+      <spirit:enumeration>ROW_COLUMN_BANK</spirit:enumeration>
+      <spirit:enumeration>ROW_COLUMN_BANK_INTLV</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_list_d6556846</spirit:name>
+      <spirit:enumeration>32</spirit:enumeration>
+      <spirit:enumeration>64</spirit:enumeration>
+      <spirit:enumeration>128</spirit:enumeration>
+      <spirit:enumeration>256</spirit:enumeration>
+      <spirit:enumeration>512</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_list_d8920bdd</spirit:name>
+      <spirit:enumeration>8</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_list_ddd653dc</spirit:name>
       <spirit:enumeration>None</spirit:enumeration>
-      <spirit:enumeration>600</spirit:enumeration>
-      <spirit:enumeration>400</spirit:enumeration>
-      <spirit:enumeration>300</spirit:enumeration>
-      <spirit:enumeration>240</spirit:enumeration>
+      <spirit:enumeration>399</spirit:enumeration>
+      <spirit:enumeration>266</spirit:enumeration>
       <spirit:enumeration>200</spirit:enumeration>
-      <spirit:enumeration>171</spirit:enumeration>
-      <spirit:enumeration>150</spirit:enumeration>
+      <spirit:enumeration>160</spirit:enumeration>
       <spirit:enumeration>133</spirit:enumeration>
-      <spirit:enumeration>120</spirit:enumeration>
-      <spirit:enumeration>109</spirit:enumeration>
+      <spirit:enumeration>114</spirit:enumeration>
       <spirit:enumeration>100</spirit:enumeration>
-      <spirit:enumeration>92</spirit:enumeration>
-      <spirit:enumeration>86</spirit:enumeration>
+      <spirit:enumeration>89</spirit:enumeration>
       <spirit:enumeration>80</spirit:enumeration>
-      <spirit:enumeration>75</spirit:enumeration>
-      <spirit:enumeration>71</spirit:enumeration>
+      <spirit:enumeration>73</spirit:enumeration>
       <spirit:enumeration>67</spirit:enumeration>
-      <spirit:enumeration>63</spirit:enumeration>
-      <spirit:enumeration>60</spirit:enumeration>
+      <spirit:enumeration>61</spirit:enumeration>
       <spirit:enumeration>57</spirit:enumeration>
-      <spirit:enumeration>55</spirit:enumeration>
-      <spirit:enumeration>52</spirit:enumeration>
+      <spirit:enumeration>53</spirit:enumeration>
       <spirit:enumeration>50</spirit:enumeration>
-      <spirit:enumeration>48</spirit:enumeration>
-      <spirit:enumeration>46</spirit:enumeration>
+      <spirit:enumeration>47</spirit:enumeration>
       <spirit:enumeration>44</spirit:enumeration>
-      <spirit:enumeration>43</spirit:enumeration>
-      <spirit:enumeration>41</spirit:enumeration>
+      <spirit:enumeration>42</spirit:enumeration>
       <spirit:enumeration>40</spirit:enumeration>
-      <spirit:enumeration>39</spirit:enumeration>
       <spirit:enumeration>38</spirit:enumeration>
       <spirit:enumeration>36</spirit:enumeration>
       <spirit:enumeration>35</spirit:enumeration>
-      <spirit:enumeration>34</spirit:enumeration>
       <spirit:enumeration>33</spirit:enumeration>
       <spirit:enumeration>32</spirit:enumeration>
       <spirit:enumeration>31</spirit:enumeration>
@@ -6975,79 +7035,6 @@
       <spirit:enumeration>12</spirit:enumeration>
       <spirit:enumeration>11</spirit:enumeration>
       <spirit:enumeration>10</spirit:enumeration>
-    </spirit:choice>
-    <spirit:choice>
-      <spirit:name>choice_list_6fc15197</spirit:name>
-      <spirit:enumeration>32</spirit:enumeration>
-    </spirit:choice>
-    <spirit:choice>
-      <spirit:name>choice_list_89e3655d</spirit:name>
-      <spirit:enumeration>17</spirit:enumeration>
-      <spirit:enumeration>18</spirit:enumeration>
-    </spirit:choice>
-    <spirit:choice>
-      <spirit:name>choice_list_8b4f223f</spirit:name>
-      <spirit:enumeration>Strict</spirit:enumeration>
-      <spirit:enumeration>Normal</spirit:enumeration>
-    </spirit:choice>
-    <spirit:choice>
-      <spirit:name>choice_list_98f5c8fa</spirit:name>
-      <spirit:enumeration>RZQ/6</spirit:enumeration>
-    </spirit:choice>
-    <spirit:choice>
-      <spirit:name>choice_list_9da6e6e5</spirit:name>
-      <spirit:enumeration>MT40A512M8RH-075E</spirit:enumeration>
-      <spirit:enumeration>MT40A1G8PM-075E</spirit:enumeration>
-      <spirit:enumeration>MT40A512M8HX-083</spirit:enumeration>
-      <spirit:enumeration>MT40A256M16GE-075E</spirit:enumeration>
-      <spirit:enumeration>EDY4016AABG-DR-F</spirit:enumeration>
-      <spirit:enumeration>MT40A512M8HX-093</spirit:enumeration>
-      <spirit:enumeration>MT40A256M16HA-093</spirit:enumeration>
-      <spirit:enumeration>MT40A512M8HX-107</spirit:enumeration>
-      <spirit:enumeration>MT40A256M16HA-107</spirit:enumeration>
-      <spirit:enumeration>MT40A2G8FSE-083E</spirit:enumeration>
-      <spirit:enumeration>MT40A2G8TRF-093E</spirit:enumeration>
-      <spirit:enumeration>MT40A1G8TRF-093E</spirit:enumeration>
-      <spirit:enumeration>MT40A512M16HA-083E</spirit:enumeration>
-      <spirit:enumeration>MT40A512M16HA-075E</spirit:enumeration>
-      <spirit:enumeration>MT40A1G8WE-075E</spirit:enumeration>
-      <spirit:enumeration>MT40A2G8HPR-083J</spirit:enumeration>
-      <spirit:enumeration>MT40A4G8KVA-083J</spirit:enumeration>
-      <spirit:enumeration>MT40A256M16GE-083E</spirit:enumeration>
-      <spirit:enumeration>MT40A1G16WBU-083E</spirit:enumeration>
-    </spirit:choice>
-    <spirit:choice>
-      <spirit:name>choice_list_a187d5e4</spirit:name>
-      <spirit:enumeration>512</spirit:enumeration>
-      <spirit:enumeration>1024</spirit:enumeration>
-    </spirit:choice>
-    <spirit:choice>
-      <spirit:name>choice_list_ac75ef1e</spirit:name>
-      <spirit:enumeration>Custom</spirit:enumeration>
-    </spirit:choice>
-    <spirit:choice>
-      <spirit:name>choice_list_ad101c66</spirit:name>
-      <spirit:enumeration>RZQ/7</spirit:enumeration>
-      <spirit:enumeration>RZQ/6</spirit:enumeration>
-    </spirit:choice>
-    <spirit:choice>
-      <spirit:name>choice_list_c89503c8</spirit:name>
-      <spirit:enumeration>ROW_BANK_COLUMN</spirit:enumeration>
-      <spirit:enumeration>BANK_ROW_COLUMN</spirit:enumeration>
-      <spirit:enumeration>ROW_COLUMN_BANK</spirit:enumeration>
-      <spirit:enumeration>ROW_COLUMN_BANK_INTLV</spirit:enumeration>
-    </spirit:choice>
-    <spirit:choice>
-      <spirit:name>choice_list_d6556846</spirit:name>
-      <spirit:enumeration>32</spirit:enumeration>
-      <spirit:enumeration>64</spirit:enumeration>
-      <spirit:enumeration>128</spirit:enumeration>
-      <spirit:enumeration>256</spirit:enumeration>
-      <spirit:enumeration>512</spirit:enumeration>
-    </spirit:choice>
-    <spirit:choice>
-      <spirit:name>choice_list_d8920bdd</spirit:name>
-      <spirit:enumeration>8</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choice_list_df7e3f8b</spirit:name>
@@ -7087,93 +7074,205 @@
       <spirit:enumeration spirit:text="Physical_Layer_PingPong">Phy_Only_PingPong</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
-      <spirit:name>choice_pairs_66ac1b5b</spirit:name>
-      <spirit:enumeration spirit:text="13328 (75.03Mhz)">13328</spirit:enumeration>
-      <spirit:enumeration spirit:text="12495 (80.032Mhz)">12495</spirit:enumeration>
-      <spirit:enumeration spirit:text="12218 (81.8509Mhz)">12218</spirit:enumeration>
-      <spirit:enumeration spirit:text="11662 (85.7486Mhz)">11662</spirit:enumeration>
-      <spirit:enumeration spirit:text="11107 (90.036Mhz)">11107</spirit:enumeration>
-      <spirit:enumeration spirit:text="10830 (92.3446Mhz)">10830</spirit:enumeration>
-      <spirit:enumeration spirit:text="10829 (92.3446Mhz)">10829</spirit:enumeration>
-      <spirit:enumeration spirit:text="9996 (100.04Mhz)">9996</spirit:enumeration>
-      <spirit:enumeration spirit:text="9164 (109.135Mhz)">9164</spirit:enumeration>
-      <spirit:enumeration spirit:text="9163 (109.135Mhz)">9163</spirit:enumeration>
-      <spirit:enumeration spirit:text="8886 (112.545Mhz)">8886</spirit:enumeration>
-      <spirit:enumeration spirit:text="8330 (120.048Mhz)">8330</spirit:enumeration>
-      <spirit:enumeration spirit:text="7775 (128.623Mhz)">7775</spirit:enumeration>
-      <spirit:enumeration spirit:text="7497 (133.387Mhz)">7497</spirit:enumeration>
-      <spirit:enumeration spirit:text="7081 (141.233Mhz)">7081</spirit:enumeration>
-      <spirit:enumeration spirit:text="6664 (150.06Mhz)">6664</spirit:enumeration>
-      <spirit:enumeration spirit:text="6248 (160.064Mhz)">6248</spirit:enumeration>
-      <spirit:enumeration spirit:text="6109 (163.702Mhz)">6109</spirit:enumeration>
-      <spirit:enumeration spirit:text="5831 (171.497Mhz)">5831</spirit:enumeration>
-      <spirit:enumeration spirit:text="5554 (180.072Mhz)">5554</spirit:enumeration>
-      <spirit:enumeration spirit:text="5415 (184.689Mhz)">5415</spirit:enumeration>
-      <spirit:enumeration spirit:text="4998 (200.08Mhz)">4998</spirit:enumeration>
-      <spirit:enumeration spirit:text="4721 (211.82Mhz)">4721</spirit:enumeration>
-      <spirit:enumeration spirit:text="4583 (218.245Mhz)">4583</spirit:enumeration>
-      <spirit:enumeration spirit:text="4582 (218.269Mhz)">4582</spirit:enumeration>
-      <spirit:enumeration spirit:text="4443 (225.09Mhz)">4443</spirit:enumeration>
-      <spirit:enumeration spirit:text="4165 (240.096Mhz)">4165</spirit:enumeration>
-      <spirit:enumeration spirit:text="4074 (245.519Mhz)">4074</spirit:enumeration>
-      <spirit:enumeration spirit:text="4073 (245.553Mhz)">4073</spirit:enumeration>
-      <spirit:enumeration spirit:text="3888 (257.246Mhz)">3888</spirit:enumeration>
-      <spirit:enumeration spirit:text="3750 (266.738Mhz)">3750</spirit:enumeration>
-      <spirit:enumeration spirit:text="3749 (266.738Mhz)">3749</spirit:enumeration>
-      <spirit:enumeration spirit:text="3703 (270.108Mhz)">3703</spirit:enumeration>
-      <spirit:enumeration spirit:text="3611 (277.008Mhz)">3611</spirit:enumeration>
-      <spirit:enumeration spirit:text="3610 (277.034Mhz)">3610</spirit:enumeration>
-      <spirit:enumeration spirit:text="3541 (282.466Mhz)">3541</spirit:enumeration>
-      <spirit:enumeration spirit:text="3332 (300.12Mhz)">3332</spirit:enumeration>
-      <spirit:enumeration spirit:text="3124 (320.102Mhz)">3124</spirit:enumeration>
-      <spirit:enumeration spirit:text="3055 (327.404Mhz)">3055</spirit:enumeration>
-      <spirit:enumeration spirit:text="2963 (337.61Mhz)">2963</spirit:enumeration>
-      <spirit:enumeration spirit:text="2962 (337.635Mhz)">2962</spirit:enumeration>
-      <spirit:enumeration spirit:text="2917 (342.936Mhz)">2917</spirit:enumeration>
-      <spirit:enumeration spirit:text="2916 (342.936Mhz)">2916</spirit:enumeration>
-      <spirit:enumeration spirit:text="2777 (360.144Mhz)">2777</spirit:enumeration>
-      <spirit:enumeration spirit:text="2708 (369.379Mhz)">2708</spirit:enumeration>
-      <spirit:enumeration spirit:text="2666 (375.15Mhz)">2666</spirit:enumeration>
-      <spirit:enumeration spirit:text="2592 (385.869Mhz)">2592</spirit:enumeration>
-      <spirit:enumeration spirit:text="2499 (400.16Mhz)">2499</spirit:enumeration>
-      <spirit:enumeration spirit:text="2444 (409.255Mhz)">2444</spirit:enumeration>
-      <spirit:enumeration spirit:text="2361 (423.699Mhz)">2361</spirit:enumeration>
-      <spirit:enumeration spirit:text="2333 (428.743Mhz)">2333</spirit:enumeration>
-      <spirit:enumeration spirit:text="2292 (436.491Mhz)">2292</spirit:enumeration>
-      <spirit:enumeration spirit:text="2291 (436.491Mhz)">2291</spirit:enumeration>
-      <spirit:enumeration spirit:text="2222 (450.18Mhz)">2222</spirit:enumeration>
-      <spirit:enumeration spirit:text="2167 (461.681Mhz)">2167</spirit:enumeration>
-      <spirit:enumeration spirit:text="2166 (461.681Mhz)">2166</spirit:enumeration>
-      <spirit:enumeration spirit:text="2083 (480.077Mhz)">2083</spirit:enumeration>
-      <spirit:enumeration spirit:text="2037 (491.106Mhz)">2037</spirit:enumeration>
-      <spirit:enumeration spirit:text="2000 (500.2Mhz)">2000</spirit:enumeration>
-      <spirit:enumeration spirit:text="1944 (514.492Mhz)">1944</spirit:enumeration>
-      <spirit:enumeration spirit:text="1905 (525.21Mhz)">1905</spirit:enumeration>
-      <spirit:enumeration spirit:text="1904 (525.21Mhz)">1904</spirit:enumeration>
-      <spirit:enumeration spirit:text="1875 (533.547Mhz)">1875</spirit:enumeration>
-      <spirit:enumeration spirit:text="1852 (540.216Mhz)">1852</spirit:enumeration>
-      <spirit:enumeration spirit:text="1833 (545.673Mhz)">1833</spirit:enumeration>
-      <spirit:enumeration spirit:text="1805 (554.068Mhz)">1805</spirit:enumeration>
-      <spirit:enumeration spirit:text="1786 (560.224Mhz)">1786</spirit:enumeration>
-      <spirit:enumeration spirit:text="1785 (560.224Mhz)">1785</spirit:enumeration>
-      <spirit:enumeration spirit:text="1778 (562.725Mhz)">1778</spirit:enumeration>
-      <spirit:enumeration spirit:text="1771 (564.932Mhz)">1771</spirit:enumeration>
-      <spirit:enumeration spirit:text="1746 (572.956Mhz)">1746</spirit:enumeration>
-      <spirit:enumeration spirit:text="1666 (600.24Mhz)">1666</spirit:enumeration>
-      <spirit:enumeration spirit:text="1587 (630.252Mhz)">1587</spirit:enumeration>
-      <spirit:enumeration spirit:text="1562 (640.256Mhz)">1562</spirit:enumeration>
-      <spirit:enumeration spirit:text="1556 (643.087Mhz)">1556</spirit:enumeration>
-      <spirit:enumeration spirit:text="1555 (643.114Mhz)">1555</spirit:enumeration>
-      <spirit:enumeration spirit:text="1547 (646.412Mhz)">1547</spirit:enumeration>
-      <spirit:enumeration spirit:text="1528 (654.807Mhz)">1528</spirit:enumeration>
-      <spirit:enumeration spirit:text="1500 (666.933Mhz)">1500</spirit:enumeration>
-      <spirit:enumeration spirit:text="1482 (675.219Mhz)">1482</spirit:enumeration>
-      <spirit:enumeration spirit:text="1481 (675.27Mhz)">1481</spirit:enumeration>
-      <spirit:enumeration spirit:text="1458 (685.989Mhz)">1458</spirit:enumeration>
-      <spirit:enumeration spirit:text="1429 (700.28Mhz)">1429</spirit:enumeration>
-      <spirit:enumeration spirit:text="1428 (700.28Mhz)">1428</spirit:enumeration>
-      <spirit:enumeration spirit:text="1417 (706.165Mhz)">1417</spirit:enumeration>
-      <spirit:enumeration spirit:text="1389 (720.288Mhz)">1389</spirit:enumeration>
+      <spirit:name>choice_pairs_71d56051</spirit:name>
+      <spirit:enumeration spirit:text="14086 (70.9975Mhz)">14086</spirit:enumeration>
+      <spirit:enumeration spirit:text="14085 (70.9975Mhz)">14085</spirit:enumeration>
+      <spirit:enumeration spirit:text="14084 (70.9975Mhz)">14084</spirit:enumeration>
+      <spirit:enumeration spirit:text="13773 (72.6111Mhz)">13773</spirit:enumeration>
+      <spirit:enumeration spirit:text="13772 (72.6111Mhz)">13772</spirit:enumeration>
+      <spirit:enumeration spirit:text="13522 (73.9557Mhz)">13522</spirit:enumeration>
+      <spirit:enumeration spirit:text="13521 (73.9557Mhz)">13521</spirit:enumeration>
+      <spirit:enumeration spirit:text="13147 (76.0688Mhz)">13147</spirit:enumeration>
+      <spirit:enumeration spirit:text="13146 (76.0688Mhz)">13146</spirit:enumeration>
+      <spirit:enumeration spirit:text="13145 (76.0688Mhz)">13145</spirit:enumeration>
+      <spirit:enumeration spirit:text="12207 (81.9202Mhz)">12207</spirit:enumeration>
+      <spirit:enumeration spirit:text="12206 (81.9202Mhz)">12206</spirit:enumeration>
+      <spirit:enumeration spirit:text="12020 (83.2002Mhz)">12020</spirit:enumeration>
+      <spirit:enumeration spirit:text="12019 (83.2002Mhz)">12019</spirit:enumeration>
+      <spirit:enumeration spirit:text="12018 (83.2016Mhz)">12018</spirit:enumeration>
+      <spirit:enumeration spirit:text="11268 (88.7469Mhz)">11268</spirit:enumeration>
+      <spirit:enumeration spirit:text="11267 (88.7469Mhz)">11267</spirit:enumeration>
+      <spirit:enumeration spirit:text="10517 (95.086Mhz)">10517</spirit:enumeration>
+      <spirit:enumeration spirit:text="10516 (95.086Mhz)">10516</spirit:enumeration>
+      <spirit:enumeration spirit:text="10329 (96.8148Mhz)">10329</spirit:enumeration>
+      <spirit:enumeration spirit:text="10328 (96.8148Mhz)">10328</spirit:enumeration>
+      <spirit:enumeration spirit:text="9391 (106.496Mhz)">9391</spirit:enumeration>
+      <spirit:enumeration spirit:text="9390 (106.496Mhz)">9390</spirit:enumeration>
+      <spirit:enumeration spirit:text="9389 (106.496Mhz)">9389</spirit:enumeration>
+      <spirit:enumeration spirit:text="9015 (110.934Mhz)">9015</spirit:enumeration>
+      <spirit:enumeration spirit:text="9014 (110.934Mhz)">9014</spirit:enumeration>
+      <spirit:enumeration spirit:text="8451 (118.329Mhz)">8451</spirit:enumeration>
+      <spirit:enumeration spirit:text="8450 (118.329Mhz)">8450</spirit:enumeration>
+      <spirit:enumeration spirit:text="8264 (121.019Mhz)">8264</spirit:enumeration>
+      <spirit:enumeration spirit:text="8263 (121.019Mhz)">8263</spirit:enumeration>
+      <spirit:enumeration spirit:text="8262 (121.021Mhz)">8262</spirit:enumeration>
+      <spirit:enumeration spirit:text="7512 (133.12Mhz)">7512</spirit:enumeration>
+      <spirit:enumeration spirit:text="7511 (133.12Mhz)">7511</spirit:enumeration>
+      <spirit:enumeration spirit:text="7043 (141.995Mhz)">7043</spirit:enumeration>
+      <spirit:enumeration spirit:text="7042 (141.995Mhz)">7042</spirit:enumeration>
+      <spirit:enumeration spirit:text="6761 (147.911Mhz)">6761</spirit:enumeration>
+      <spirit:enumeration spirit:text="6760 (147.911Mhz)">6760</spirit:enumeration>
+      <spirit:enumeration spirit:text="6574 (152.138Mhz)">6574</spirit:enumeration>
+      <spirit:enumeration spirit:text="6573 (152.138Mhz)">6573</spirit:enumeration>
+      <spirit:enumeration spirit:text="6572 (152.138Mhz)">6572</spirit:enumeration>
+      <spirit:enumeration spirit:text="6104 (163.84Mhz)">6104</spirit:enumeration>
+      <spirit:enumeration spirit:text="6103 (163.84Mhz)">6103</spirit:enumeration>
+      <spirit:enumeration spirit:text="6010 (166.4Mhz)">6010</spirit:enumeration>
+      <spirit:enumeration spirit:text="6009 (166.4Mhz)">6009</spirit:enumeration>
+      <spirit:enumeration spirit:text="5634 (177.494Mhz)">5634</spirit:enumeration>
+      <spirit:enumeration spirit:text="5633 (177.494Mhz)">5633</spirit:enumeration>
+      <spirit:enumeration spirit:text="5259 (190.172Mhz)">5259</spirit:enumeration>
+      <spirit:enumeration spirit:text="5258 (190.172Mhz)">5258</spirit:enumeration>
+      <spirit:enumeration spirit:text="5257 (190.186Mhz)">5257</spirit:enumeration>
+      <spirit:enumeration spirit:text="5165 (193.63Mhz)">5165</spirit:enumeration>
+      <spirit:enumeration spirit:text="5164 (193.63Mhz)">5164</spirit:enumeration>
+      <spirit:enumeration spirit:text="4696 (212.993Mhz)">4696</spirit:enumeration>
+      <spirit:enumeration spirit:text="4695 (212.993Mhz)">4695</spirit:enumeration>
+      <spirit:enumeration spirit:text="4694 (212.993Mhz)">4694</spirit:enumeration>
+      <spirit:enumeration spirit:text="4591 (217.817Mhz)">4591</spirit:enumeration>
+      <spirit:enumeration spirit:text="4590 (217.817Mhz)">4590</spirit:enumeration>
+      <spirit:enumeration spirit:text="4508 (221.867Mhz)">4508</spirit:enumeration>
+      <spirit:enumeration spirit:text="4507 (221.867Mhz)">4507</spirit:enumeration>
+      <spirit:enumeration spirit:text="4382 (228.206Mhz)">4382</spirit:enumeration>
+      <spirit:enumeration spirit:text="4381 (228.206Mhz)">4381</spirit:enumeration>
+      <spirit:enumeration spirit:text="4226 (236.658Mhz)">4226</spirit:enumeration>
+      <spirit:enumeration spirit:text="4225 (236.658Mhz)">4225</spirit:enumeration>
+      <spirit:enumeration spirit:text="4173 (239.636Mhz)">4173</spirit:enumeration>
+      <spirit:enumeration spirit:text="4172 (239.636Mhz)">4172</spirit:enumeration>
+      <spirit:enumeration spirit:text="4133 (242.014Mhz)">4133</spirit:enumeration>
+      <spirit:enumeration spirit:text="4132 (242.037Mhz)">4132</spirit:enumeration>
+      <spirit:enumeration spirit:text="4131 (242.037Mhz)">4131</spirit:enumeration>
+      <spirit:enumeration spirit:text="4069 (245.761Mhz)">4069</spirit:enumeration>
+      <spirit:enumeration spirit:text="4068 (245.761Mhz)">4068</spirit:enumeration>
+      <spirit:enumeration spirit:text="4007 (249.601Mhz)">4007</spirit:enumeration>
+      <spirit:enumeration spirit:text="4006 (249.601Mhz)">4006</spirit:enumeration>
+      <spirit:enumeration spirit:text="4005 (249.626Mhz)">4005</spirit:enumeration>
+      <spirit:enumeration spirit:text="3756 (266.241Mhz)">3756</spirit:enumeration>
+      <spirit:enumeration spirit:text="3755 (266.241Mhz)">3755</spirit:enumeration>
+      <spirit:enumeration spirit:text="3522 (283.99Mhz)">3522</spirit:enumeration>
+      <spirit:enumeration spirit:text="3521 (283.99Mhz)">3521</spirit:enumeration>
+      <spirit:enumeration spirit:text="3506 (285.225Mhz)">3506</spirit:enumeration>
+      <spirit:enumeration spirit:text="3505 (285.225Mhz)">3505</spirit:enumeration>
+      <spirit:enumeration spirit:text="3444 (290.444Mhz)">3444</spirit:enumeration>
+      <spirit:enumeration spirit:text="3443 (290.444Mhz)">3443</spirit:enumeration>
+      <spirit:enumeration spirit:text="3381 (295.823Mhz)">3381</spirit:enumeration>
+      <spirit:enumeration spirit:text="3380 (295.858Mhz)">3380</spirit:enumeration>
+      <spirit:enumeration spirit:text="3379 (295.858Mhz)">3379</spirit:enumeration>
+      <spirit:enumeration spirit:text="3339 (299.491Mhz)">3339</spirit:enumeration>
+      <spirit:enumeration spirit:text="3338 (299.491Mhz)">3338</spirit:enumeration>
+      <spirit:enumeration spirit:text="3287 (304.275Mhz)">3287</spirit:enumeration>
+      <spirit:enumeration spirit:text="3286 (304.275Mhz)">3286</spirit:enumeration>
+      <spirit:enumeration spirit:text="3130 (319.489Mhz)">3130</spirit:enumeration>
+      <spirit:enumeration spirit:text="3129 (319.489Mhz)">3129</spirit:enumeration>
+      <spirit:enumeration spirit:text="3053 (327.654Mhz)">3053</spirit:enumeration>
+      <spirit:enumeration spirit:text="3052 (327.681Mhz)">3052</spirit:enumeration>
+      <spirit:enumeration spirit:text="3051 (327.681Mhz)">3051</spirit:enumeration>
+      <spirit:enumeration spirit:text="3005 (332.801Mhz)">3005</spirit:enumeration>
+      <spirit:enumeration spirit:text="3004 (332.801Mhz)">3004</spirit:enumeration>
+      <spirit:enumeration spirit:text="2922 (342.349Mhz)">2922</spirit:enumeration>
+      <spirit:enumeration spirit:text="2921 (342.349Mhz)">2921</spirit:enumeration>
+      <spirit:enumeration spirit:text="2855 (350.317Mhz)">2855</spirit:enumeration>
+      <spirit:enumeration spirit:text="2854 (350.317Mhz)">2854</spirit:enumeration>
+      <spirit:enumeration spirit:text="2817 (354.988Mhz)">2817</spirit:enumeration>
+      <spirit:enumeration spirit:text="2816 (354.988Mhz)">2816</spirit:enumeration>
+      <spirit:enumeration spirit:text="2755 (363.055Mhz)">2755</spirit:enumeration>
+      <spirit:enumeration spirit:text="2754 (363.108Mhz)">2754</spirit:enumeration>
+      <spirit:enumeration spirit:text="2753 (363.108Mhz)">2753</spirit:enumeration>
+      <spirit:enumeration spirit:text="2705 (369.779Mhz)">2705</spirit:enumeration>
+      <spirit:enumeration spirit:text="2704 (369.779Mhz)">2704</spirit:enumeration>
+      <spirit:enumeration spirit:text="2630 (380.344Mhz)">2630</spirit:enumeration>
+      <spirit:enumeration spirit:text="2629 (380.344Mhz)">2629</spirit:enumeration>
+      <spirit:enumeration spirit:text="2628 (380.373Mhz)">2628</spirit:enumeration>
+      <spirit:enumeration spirit:text="2583 (387.259Mhz)">2583</spirit:enumeration>
+      <spirit:enumeration spirit:text="2582 (387.259Mhz)">2582</spirit:enumeration>
+      <spirit:enumeration spirit:text="2555 (391.543Mhz)">2555</spirit:enumeration>
+      <spirit:enumeration spirit:text="2554 (391.543Mhz)">2554</spirit:enumeration>
+      <spirit:enumeration spirit:text="2504 (399.361Mhz)">2504</spirit:enumeration>
+      <spirit:enumeration spirit:text="2503 (399.361Mhz)">2503</spirit:enumeration>
+      <spirit:enumeration spirit:text="2442 (409.601Mhz)">2442</spirit:enumeration>
+      <spirit:enumeration spirit:text="2441 (409.601Mhz)">2441</spirit:enumeration>
+      <spirit:enumeration spirit:text="2404 (415.973Mhz)">2404</spirit:enumeration>
+      <spirit:enumeration spirit:text="2403 (415.973Mhz)">2403</spirit:enumeration>
+      <spirit:enumeration spirit:text="2348 (425.985Mhz)">2348</spirit:enumeration>
+      <spirit:enumeration spirit:text="2347 (425.985Mhz)">2347</spirit:enumeration>
+      <spirit:enumeration spirit:text="2254 (443.734Mhz)">2254</spirit:enumeration>
+      <spirit:enumeration spirit:text="2253 (443.734Mhz)">2253</spirit:enumeration>
+      <spirit:enumeration spirit:text="2191 (456.413Mhz)">2191</spirit:enumeration>
+      <spirit:enumeration spirit:text="2190 (456.413Mhz)">2190</spirit:enumeration>
+      <spirit:enumeration spirit:text="2113 (473.317Mhz)">2113</spirit:enumeration>
+      <spirit:enumeration spirit:text="2112 (473.317Mhz)">2112</spirit:enumeration>
+      <spirit:enumeration spirit:text="2104 (475.43Mhz)">2104</spirit:enumeration>
+      <spirit:enumeration spirit:text="2103 (475.43Mhz)">2103</spirit:enumeration>
+      <spirit:enumeration spirit:text="2088 (479.157Mhz)">2088</spirit:enumeration>
+      <spirit:enumeration spirit:text="2087 (479.157Mhz)">2087</spirit:enumeration>
+      <spirit:enumeration spirit:text="2067 (484.027Mhz)">2067</spirit:enumeration>
+      <spirit:enumeration spirit:text="2066 (484.074Mhz)">2066</spirit:enumeration>
+      <spirit:enumeration spirit:text="2065 (484.074Mhz)">2065</spirit:enumeration>
+      <spirit:enumeration spirit:text="2039 (490.436Mhz)">2039</spirit:enumeration>
+      <spirit:enumeration spirit:text="2038 (490.436Mhz)">2038</spirit:enumeration>
+      <spirit:enumeration spirit:text="2035 (491.521Mhz)">2035</spirit:enumeration>
+      <spirit:enumeration spirit:text="2034 (491.521Mhz)">2034</spirit:enumeration>
+      <spirit:enumeration spirit:text="2013 (496.983Mhz)">2013</spirit:enumeration>
+      <spirit:enumeration spirit:text="2012 (496.983Mhz)">2012</spirit:enumeration>
+      <spirit:enumeration spirit:text="2004 (499.201Mhz)">2004</spirit:enumeration>
+      <spirit:enumeration spirit:text="2003 (499.201Mhz)">2003</spirit:enumeration>
+      <spirit:enumeration spirit:text="2002 (499.251Mhz)">2002</spirit:enumeration>
+      <spirit:enumeration spirit:text="1968 (508.278Mhz)">1968</spirit:enumeration>
+      <spirit:enumeration spirit:text="1967 (508.278Mhz)">1967</spirit:enumeration>
+      <spirit:enumeration spirit:text="1954 (512.001Mhz)">1954</spirit:enumeration>
+      <spirit:enumeration spirit:text="1953 (512.033Mhz)">1953</spirit:enumeration>
+      <spirit:enumeration spirit:text="1952 (512.033Mhz)">1952</spirit:enumeration>
+      <spirit:enumeration spirit:text="1932 (517.69Mhz)">1932</spirit:enumeration>
+      <spirit:enumeration spirit:text="1931 (517.69Mhz)">1931</spirit:enumeration>
+      <spirit:enumeration spirit:text="1878 (532.481Mhz)">1878</spirit:enumeration>
+      <spirit:enumeration spirit:text="1877 (532.481Mhz)">1877</spirit:enumeration>
+      <spirit:enumeration spirit:text="1804 (554.631Mhz)">1804</spirit:enumeration>
+      <spirit:enumeration spirit:text="1803 (554.631Mhz)">1803</spirit:enumeration>
+      <spirit:enumeration spirit:text="1802 (554.668Mhz)">1802</spirit:enumeration>
+      <spirit:enumeration spirit:text="1784 (560.538Mhz)">1784</spirit:enumeration>
+      <spirit:enumeration spirit:text="1783 (560.538Mhz)">1783</spirit:enumeration>
+      <spirit:enumeration spirit:text="1761 (567.98Mhz)">1761</spirit:enumeration>
+      <spirit:enumeration spirit:text="1760 (567.98Mhz)">1760</spirit:enumeration>
+      <spirit:enumeration spirit:text="1753 (570.451Mhz)">1753</spirit:enumeration>
+      <spirit:enumeration spirit:text="1752 (570.451Mhz)">1752</spirit:enumeration>
+      <spirit:enumeration spirit:text="1744 (573.441Mhz)">1744</spirit:enumeration>
+      <spirit:enumeration spirit:text="1743 (573.441Mhz)">1743</spirit:enumeration>
+      <spirit:enumeration spirit:text="1722 (580.889Mhz)">1722</spirit:enumeration>
+      <spirit:enumeration spirit:text="1721 (580.889Mhz)">1721</spirit:enumeration>
+      <spirit:enumeration spirit:text="1718 (582.401Mhz)">1718</spirit:enumeration>
+      <spirit:enumeration spirit:text="1717 (582.411Mhz)">1717</spirit:enumeration>
+      <spirit:enumeration spirit:text="1716 (582.411Mhz)">1716</spirit:enumeration>
+      <spirit:enumeration spirit:text="1691 (591.646Mhz)">1691</spirit:enumeration>
+      <spirit:enumeration spirit:text="1690 (591.646Mhz)">1690</spirit:enumeration>
+      <spirit:enumeration spirit:text="1689 (591.716Mhz)">1689</spirit:enumeration>
+      <spirit:enumeration spirit:text="1653 (605.092Mhz)">1653</spirit:enumeration>
+      <spirit:enumeration spirit:text="1652 (605.092Mhz)">1652</spirit:enumeration>
+      <spirit:enumeration spirit:text="1644 (608.55Mhz)">1644</spirit:enumeration>
+      <spirit:enumeration spirit:text="1643 (608.55Mhz)">1643</spirit:enumeration>
+      <spirit:enumeration spirit:text="1610 (621.228Mhz)">1610</spirit:enumeration>
+      <spirit:enumeration spirit:text="1609 (621.228Mhz)">1609</spirit:enumeration>
+      <spirit:enumeration spirit:text="1565 (638.978Mhz)">1565</spirit:enumeration>
+      <spirit:enumeration spirit:text="1564 (638.978Mhz)">1564</spirit:enumeration>
+      <spirit:enumeration spirit:text="1531 (653.5Mhz)">1531</spirit:enumeration>
+      <spirit:enumeration spirit:text="1530 (653.5Mhz)">1530</spirit:enumeration>
+      <spirit:enumeration spirit:text="1526 (655.362Mhz)">1526</spirit:enumeration>
+      <spirit:enumeration spirit:text="1525 (655.362Mhz)">1525</spirit:enumeration>
+      <spirit:enumeration spirit:text="1503 (665.602Mhz)">1503</spirit:enumeration>
+      <spirit:enumeration spirit:text="1502 (665.602Mhz)">1502</spirit:enumeration>
+      <spirit:enumeration spirit:text="1476 (677.704Mhz)">1476</spirit:enumeration>
+      <spirit:enumeration spirit:text="1475 (677.704Mhz)">1475</spirit:enumeration>
+      <spirit:enumeration spirit:text="1461 (684.619Mhz)">1461</spirit:enumeration>
+      <spirit:enumeration spirit:text="1460 (684.619Mhz)">1460</spirit:enumeration>
+      <spirit:enumeration spirit:text="1428 (700.633Mhz)">1428</spirit:enumeration>
+      <spirit:enumeration spirit:text="1427 (700.633Mhz)">1427</spirit:enumeration>
+      <spirit:enumeration spirit:text="1420 (704.722Mhz)">1420</spirit:enumeration>
+      <spirit:enumeration spirit:text="1419 (704.722Mhz)">1419</spirit:enumeration>
+      <spirit:enumeration spirit:text="1409 (709.975Mhz)">1409</spirit:enumeration>
+      <spirit:enumeration spirit:text="1408 (709.975Mhz)">1408</spirit:enumeration>
+      <spirit:enumeration spirit:text="1395 (716.846Mhz)">1395</spirit:enumeration>
+      <spirit:enumeration spirit:text="1394 (716.846Mhz)">1394</spirit:enumeration>
+      <spirit:enumeration spirit:text="1392 (718.85Mhz)">1392</spirit:enumeration>
+      <spirit:enumeration spirit:text="1391 (718.85Mhz)">1391</spirit:enumeration>
     </spirit:choice>
   </spirit:choices>
   <spirit:fileSets>
@@ -8614,11 +8713,11 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C0.DDR4_TimePeriod</spirit:name>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C0.DDR4_TimePeriod" spirit:order="20" spirit:minimum="833" spirit:maximum="1600" spirit:rangeType="long">833</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C0.DDR4_TimePeriod" spirit:order="20" spirit:minimum="833" spirit:maximum="1600" spirit:rangeType="long">939</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C0.DDR4_InputClockPeriod</spirit:name>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C0.DDR4_InputClockPeriod" spirit:choiceRef="choice_pairs_66ac1b5b" spirit:order="21">13328</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C0.DDR4_InputClockPeriod" spirit:choiceRef="choice_pairs_71d56051" spirit:order="21">3338</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C0.DDR4_Specify_MandD</spirit:name>
@@ -8626,7 +8725,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C0.DDR4_CLKFBOUT_MULT</spirit:name>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C0.DDR4_CLKFBOUT_MULT" spirit:order="23" spirit:minimum="0" spirit:maximum="5000" spirit:rangeType="long">16</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C0.DDR4_CLKFBOUT_MULT" spirit:order="23" spirit:minimum="0" spirit:maximum="5000" spirit:rangeType="long">8</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -8637,7 +8736,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C0.DDR4_DIVCLK_DIVIDE</spirit:name>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C0.DDR4_DIVCLK_DIVIDE" spirit:order="24" spirit:minimum="0" spirit:maximum="5000" spirit:rangeType="long">1</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C0.DDR4_DIVCLK_DIVIDE" spirit:order="24" spirit:minimum="0" spirit:maximum="5000" spirit:rangeType="long">3</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -8648,7 +8747,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C0.DDR4_CLKOUT0_DIVIDE</spirit:name>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C0.DDR4_CLKOUT0_DIVIDE" spirit:order="25" spirit:minimum="0" spirit:maximum="5000" spirit:rangeType="long">4</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C0.DDR4_CLKOUT0_DIVIDE" spirit:order="25" spirit:minimum="0" spirit:maximum="5000" spirit:rangeType="long">3</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -8667,7 +8766,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C0.DDR4_MemoryPart</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.C0.DDR4_MemoryPart" spirit:choiceRef="choice_list_9da6e6e5" spirit:order="28">MT40A512M8RH-075E</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.C0.DDR4_MemoryPart" spirit:choiceRef="choice_list_c1e0b709" spirit:order="28">CUSTOM_DBI_MT40A1G8PM-083E</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C0.DDR4_Slot</spirit:name>
@@ -8679,7 +8778,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C0.DDR4_DataWidth</spirit:name>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C0.DDR4_DataWidth" spirit:choiceRef="choice_list_291719ff" spirit:order="31">64</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C0.DDR4_DataWidth" spirit:choiceRef="choice_list_26b08305" spirit:order="31">64</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C0.DDR4_DataMask</spirit:name>
@@ -8744,11 +8843,11 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C0.DDR4_CasLatency</spirit:name>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C0.DDR4_CasLatency" spirit:choiceRef="choice_list_89e3655d" spirit:order="42">17</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C0.DDR4_CasLatency" spirit:choiceRef="choice_list_a85f690f" spirit:order="42">18</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C0.DDR4_CasWriteLatency</spirit:name>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C0.DDR4_CasWriteLatency" spirit:choiceRef="choice_list_3a95db8a" spirit:order="43">12</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C0.DDR4_CasWriteLatency" spirit:choiceRef="choice_list_ac8b9e21" spirit:order="43">11</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C0.DDR4_ChipSelect</spirit:name>
@@ -8772,7 +8871,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C0.DDR4_AxiAddressWidth</spirit:name>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C0.DDR4_AxiAddressWidth" spirit:choiceRef="choice_list_6fc15197" spirit:order="49">32</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C0.DDR4_AxiAddressWidth" spirit:choiceRef="choice_list_a07a0664" spirit:order="49">33</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C0.DDR4_AxiIDWidth</spirit:name>
@@ -8807,19 +8906,16 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C0.DDR4_CustomParts</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.C0.DDR4_CustomParts" spirit:order="56">no_file_loaded</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.C0.DDR4_CustomParts" spirit:order="56">../../../../../../../../adm-8k5/constraints/custom_parts_2133.csv</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:parameterType>file_csv</xilinx:parameterType>
-          <xilinx:enablement>
-            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.C0.DDR4_CustomParts">false</xilinx:isEnabled>
-          </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C0.DDR4_isCustom</spirit:name>
-      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.C0.DDR4_isCustom" spirit:order="57">false</spirit:value>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.C0.DDR4_isCustom" spirit:order="57">true</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C0.DDR4_SELF_REFRESH</spirit:name>
@@ -8831,19 +8927,19 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>ADDN_UI_CLKOUT1_FREQ_HZ</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.ADDN_UI_CLKOUT1_FREQ_HZ" spirit:choiceRef="choice_list_6f7a14f1" spirit:order="60">None</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.ADDN_UI_CLKOUT1_FREQ_HZ" spirit:choiceRef="choice_list_ddd653dc" spirit:order="60">None</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>ADDN_UI_CLKOUT2_FREQ_HZ</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.ADDN_UI_CLKOUT2_FREQ_HZ" spirit:choiceRef="choice_list_6f7a14f1" spirit:order="61">None</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.ADDN_UI_CLKOUT2_FREQ_HZ" spirit:choiceRef="choice_list_ddd653dc" spirit:order="61">None</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>ADDN_UI_CLKOUT3_FREQ_HZ</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.ADDN_UI_CLKOUT3_FREQ_HZ" spirit:choiceRef="choice_list_6f7a14f1" spirit:order="62">None</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.ADDN_UI_CLKOUT3_FREQ_HZ" spirit:choiceRef="choice_list_ddd653dc" spirit:order="62">None</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>ADDN_UI_CLKOUT4_FREQ_HZ</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.ADDN_UI_CLKOUT4_FREQ_HZ" spirit:choiceRef="choice_list_6f7a14f1" spirit:order="63">None</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.ADDN_UI_CLKOUT4_FREQ_HZ" spirit:choiceRef="choice_list_ddd653dc" spirit:order="63">None</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>CLKOUT6</spirit:name>
@@ -8886,7 +8982,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Simulation_Mode</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Simulation_Mode" spirit:choiceRef="choice_list_67b045e5" spirit:order="800">BFM</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Simulation_Mode" spirit:choiceRef="choice_list_67b045e5" spirit:order="800">Unisim</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>PARTIAL_RECONFIG_FLOW_MIG</spirit:name>
@@ -9123,7 +9219,6 @@
       <xilinx:configElementInfos>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.C0_DDR4.AXI_ARBITRATION_SCHEME" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.C0_DDR4.CAS_LATENCY" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.C0_DDR4.CAS_WRITE_LATENCY" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.C0_DDR4.CUSTOM_PARTS" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.C0_DDR4.DATA_MASK_ENABLED" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.C0_DDR4.DATA_WIDTH" xilinx:valuePermission="bd"/>
@@ -9165,7 +9260,16 @@
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C0.DDR4_AxiDataWidth" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C0.DDR4_AxiIDWidth" xilinx:valueSource="propagated" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C0.DDR4_AxiNarrowBurst" xilinx:valueSource="propagated" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C0.DDR4_CasLatency" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C0.DDR4_CasWriteLatency" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C0.DDR4_CustomParts" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C0.DDR4_DataWidth" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C0.DDR4_InputClockPeriod" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C0.DDR4_MemoryPart" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C0.DDR4_TimePeriod" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.C0.DDR4_isCustom" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.Debug_Signal" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.Simulation_Mode" xilinx:valueSource="user"/>
       </xilinx:configElementInfos>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>

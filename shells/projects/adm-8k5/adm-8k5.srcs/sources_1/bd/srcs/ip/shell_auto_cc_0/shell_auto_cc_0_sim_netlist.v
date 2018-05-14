@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
-// Date        : Fri May 11 11:58:53 2018
-// Host        : ug238 running 64-bit Debian GNU/Linux 9.4 (stretch)
+// Date        : Sun May 13 23:06:22 2018
+// Host        : batcomputer running 64-bit Ubuntu 16.04.2 LTS
 // Command     : write_verilog -force -mode funcsim
-//               /nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_cc_0/shell_auto_cc_0_sim_netlist.v
+//               /home/tarafdar/workDir/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_cc_0/shell_auto_cc_0_sim_netlist.v
 // Design      : shell_auto_cc_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -63,8 +63,8 @@ module shell_auto_cc_0
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI AWPROT" *) input [2:0]s_axi_awprot;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI AWVALID" *) input s_axi_awvalid;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI AWREADY" *) output s_axi_awready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI WDATA" *) input [63:0]s_axi_wdata;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI WSTRB" *) input [7:0]s_axi_wstrb;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI WDATA" *) input [31:0]s_axi_wdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI WSTRB" *) input [3:0]s_axi_wstrb;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI WVALID" *) input s_axi_wvalid;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI WREADY" *) output s_axi_wready;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI BRESP" *) output [1:0]s_axi_bresp;
@@ -74,18 +74,18 @@ module shell_auto_cc_0
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI ARPROT" *) input [2:0]s_axi_arprot;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI ARVALID" *) input s_axi_arvalid;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI ARREADY" *) output s_axi_arready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI RDATA" *) output [63:0]s_axi_rdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI RDATA" *) output [31:0]s_axi_rdata;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI RRESP" *) output [1:0]s_axi_rresp;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI RVALID" *) output s_axi_rvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI RREADY" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXI, DATA_WIDTH 64, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN shell_clk_wiz_0_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0" *) input s_axi_rready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI RREADY" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN shell_clk_wiz_0_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0" *) input s_axi_rready;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 MI_CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME MI_CLK, FREQ_HZ 156250000, PHASE 0.000, CLK_DOMAIN bd_01e2_xpcs_0_txusrclk2_out, ASSOCIATED_BUSIF M_AXI, ASSOCIATED_RESET M_AXI_ARESETN" *) input m_axi_aclk;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 MI_RST RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME MI_RST, POLARITY ACTIVE_LOW, TYPE INTERCONNECT" *) input m_axi_aresetn;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI AWADDR" *) output [31:0]m_axi_awaddr;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI AWPROT" *) output [2:0]m_axi_awprot;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI AWVALID" *) output m_axi_awvalid;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI AWREADY" *) input m_axi_awready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI WDATA" *) output [63:0]m_axi_wdata;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI WSTRB" *) output [7:0]m_axi_wstrb;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI WDATA" *) output [31:0]m_axi_wdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI WSTRB" *) output [3:0]m_axi_wstrb;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI WVALID" *) output m_axi_wvalid;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI WREADY" *) input m_axi_wready;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI BRESP" *) input [1:0]m_axi_bresp;
@@ -95,10 +95,10 @@ module shell_auto_cc_0
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI ARPROT" *) output [2:0]m_axi_arprot;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI ARVALID" *) output m_axi_arvalid;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI ARREADY" *) input m_axi_arready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI RDATA" *) input [63:0]m_axi_rdata;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI RDATA" *) input [31:0]m_axi_rdata;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI RRESP" *) input [1:0]m_axi_rresp;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI RVALID" *) input m_axi_rvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI RREADY" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_AXI, DATA_WIDTH 64, PROTOCOL AXI4LITE, FREQ_HZ 156250000, ID_WIDTH 0, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN bd_01e2_xpcs_0_txusrclk2_out, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0" *) output m_axi_rready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI RREADY" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 156250000, ID_WIDTH 0, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN bd_01e2_xpcs_0_txusrclk2_out, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0" *) output m_axi_rready;
 
   wire m_axi_aclk;
   wire [31:0]m_axi_araddr;
@@ -113,13 +113,13 @@ module shell_auto_cc_0
   wire m_axi_bready;
   wire [1:0]m_axi_bresp;
   wire m_axi_bvalid;
-  wire [63:0]m_axi_rdata;
+  wire [31:0]m_axi_rdata;
   wire m_axi_rready;
   wire [1:0]m_axi_rresp;
   wire m_axi_rvalid;
-  wire [63:0]m_axi_wdata;
+  wire [31:0]m_axi_wdata;
   wire m_axi_wready;
-  wire [7:0]m_axi_wstrb;
+  wire [3:0]m_axi_wstrb;
   wire m_axi_wvalid;
   wire s_axi_aclk;
   wire [31:0]s_axi_araddr;
@@ -134,13 +134,13 @@ module shell_auto_cc_0
   wire s_axi_bready;
   wire [1:0]s_axi_bresp;
   wire s_axi_bvalid;
-  wire [63:0]s_axi_rdata;
+  wire [31:0]s_axi_rdata;
   wire s_axi_rready;
   wire [1:0]s_axi_rresp;
   wire s_axi_rvalid;
-  wire [63:0]s_axi_wdata;
+  wire [31:0]s_axi_wdata;
   wire s_axi_wready;
-  wire [7:0]s_axi_wstrb;
+  wire [3:0]s_axi_wstrb;
   wire s_axi_wvalid;
   wire NLW_inst_m_axi_wlast_UNCONNECTED;
   wire NLW_inst_s_axi_rlast_UNCONNECTED;
@@ -219,7 +219,7 @@ module shell_auto_cc_0
   (* C_AXI_ARUSER_WIDTH = "1" *) 
   (* C_AXI_AWUSER_WIDTH = "1" *) 
   (* C_AXI_BUSER_WIDTH = "1" *) 
-  (* C_AXI_DATA_WIDTH = "64" *) 
+  (* C_AXI_DATA_WIDTH = "32" *) 
   (* C_AXI_ID_WIDTH = "1" *) 
   (* C_AXI_IS_ACLK_ASYNC = "1" *) 
   (* C_AXI_PROTOCOL = "2" *) 
@@ -239,12 +239,12 @@ module shell_auto_cc_0
   (* C_FIFO_AR_WIDTH = "35" *) 
   (* C_FIFO_AW_WIDTH = "35" *) 
   (* C_FIFO_B_WIDTH = "2" *) 
-  (* C_FIFO_R_WIDTH = "66" *) 
-  (* C_FIFO_W_WIDTH = "72" *) 
+  (* C_FIFO_R_WIDTH = "34" *) 
+  (* C_FIFO_W_WIDTH = "36" *) 
   (* C_M_AXI_ACLK_RATIO = "2" *) 
   (* C_RDATA_RIGHT = "2" *) 
-  (* C_RDATA_WIDTH = "64" *) 
-  (* C_RID_RIGHT = "66" *) 
+  (* C_RDATA_WIDTH = "32" *) 
+  (* C_RID_RIGHT = "34" *) 
   (* C_RID_WIDTH = "0" *) 
   (* C_RLAST_RIGHT = "0" *) 
   (* C_RLAST_WIDTH = "0" *) 
@@ -252,20 +252,20 @@ module shell_auto_cc_0
   (* C_RRESP_WIDTH = "2" *) 
   (* C_RUSER_RIGHT = "0" *) 
   (* C_RUSER_WIDTH = "0" *) 
-  (* C_R_WIDTH = "66" *) 
+  (* C_R_WIDTH = "34" *) 
   (* C_SYNCHRONIZER_STAGE = "3" *) 
   (* C_S_AXI_ACLK_RATIO = "1" *) 
-  (* C_WDATA_RIGHT = "8" *) 
-  (* C_WDATA_WIDTH = "64" *) 
-  (* C_WID_RIGHT = "72" *) 
+  (* C_WDATA_RIGHT = "4" *) 
+  (* C_WDATA_WIDTH = "32" *) 
+  (* C_WID_RIGHT = "36" *) 
   (* C_WID_WIDTH = "0" *) 
   (* C_WLAST_RIGHT = "0" *) 
   (* C_WLAST_WIDTH = "0" *) 
   (* C_WSTRB_RIGHT = "0" *) 
-  (* C_WSTRB_WIDTH = "8" *) 
+  (* C_WSTRB_WIDTH = "4" *) 
   (* C_WUSER_RIGHT = "0" *) 
   (* C_WUSER_WIDTH = "0" *) 
-  (* C_W_WIDTH = "72" *) 
+  (* C_W_WIDTH = "36" *) 
   (* DowngradeIPIdentifiedWarnings = "yes" *) 
   (* P_ACLK_RATIO = "2" *) 
   (* P_AXI3 = "1" *) 
@@ -389,23 +389,23 @@ endmodule
 (* C_AWREGION_RIGHT = "0" *) (* C_AWREGION_WIDTH = "0" *) (* C_AWSIZE_RIGHT = "3" *) 
 (* C_AWSIZE_WIDTH = "0" *) (* C_AWUSER_RIGHT = "0" *) (* C_AWUSER_WIDTH = "0" *) 
 (* C_AW_WIDTH = "35" *) (* C_AXI_ADDR_WIDTH = "32" *) (* C_AXI_ARUSER_WIDTH = "1" *) 
-(* C_AXI_AWUSER_WIDTH = "1" *) (* C_AXI_BUSER_WIDTH = "1" *) (* C_AXI_DATA_WIDTH = "64" *) 
+(* C_AXI_AWUSER_WIDTH = "1" *) (* C_AXI_BUSER_WIDTH = "1" *) (* C_AXI_DATA_WIDTH = "32" *) 
 (* C_AXI_ID_WIDTH = "1" *) (* C_AXI_IS_ACLK_ASYNC = "1" *) (* C_AXI_PROTOCOL = "2" *) 
 (* C_AXI_RUSER_WIDTH = "1" *) (* C_AXI_SUPPORTS_READ = "1" *) (* C_AXI_SUPPORTS_USER_SIGNALS = "0" *) 
 (* C_AXI_SUPPORTS_WRITE = "1" *) (* C_AXI_WUSER_WIDTH = "1" *) (* C_BID_RIGHT = "2" *) 
 (* C_BID_WIDTH = "0" *) (* C_BRESP_RIGHT = "0" *) (* C_BRESP_WIDTH = "2" *) 
 (* C_BUSER_RIGHT = "0" *) (* C_BUSER_WIDTH = "0" *) (* C_B_WIDTH = "2" *) 
 (* C_FAMILY = "kintexu" *) (* C_FIFO_AR_WIDTH = "35" *) (* C_FIFO_AW_WIDTH = "35" *) 
-(* C_FIFO_B_WIDTH = "2" *) (* C_FIFO_R_WIDTH = "66" *) (* C_FIFO_W_WIDTH = "72" *) 
-(* C_M_AXI_ACLK_RATIO = "2" *) (* C_RDATA_RIGHT = "2" *) (* C_RDATA_WIDTH = "64" *) 
-(* C_RID_RIGHT = "66" *) (* C_RID_WIDTH = "0" *) (* C_RLAST_RIGHT = "0" *) 
+(* C_FIFO_B_WIDTH = "2" *) (* C_FIFO_R_WIDTH = "34" *) (* C_FIFO_W_WIDTH = "36" *) 
+(* C_M_AXI_ACLK_RATIO = "2" *) (* C_RDATA_RIGHT = "2" *) (* C_RDATA_WIDTH = "32" *) 
+(* C_RID_RIGHT = "34" *) (* C_RID_WIDTH = "0" *) (* C_RLAST_RIGHT = "0" *) 
 (* C_RLAST_WIDTH = "0" *) (* C_RRESP_RIGHT = "0" *) (* C_RRESP_WIDTH = "2" *) 
-(* C_RUSER_RIGHT = "0" *) (* C_RUSER_WIDTH = "0" *) (* C_R_WIDTH = "66" *) 
-(* C_SYNCHRONIZER_STAGE = "3" *) (* C_S_AXI_ACLK_RATIO = "1" *) (* C_WDATA_RIGHT = "8" *) 
-(* C_WDATA_WIDTH = "64" *) (* C_WID_RIGHT = "72" *) (* C_WID_WIDTH = "0" *) 
+(* C_RUSER_RIGHT = "0" *) (* C_RUSER_WIDTH = "0" *) (* C_R_WIDTH = "34" *) 
+(* C_SYNCHRONIZER_STAGE = "3" *) (* C_S_AXI_ACLK_RATIO = "1" *) (* C_WDATA_RIGHT = "4" *) 
+(* C_WDATA_WIDTH = "32" *) (* C_WID_RIGHT = "36" *) (* C_WID_WIDTH = "0" *) 
 (* C_WLAST_RIGHT = "0" *) (* C_WLAST_WIDTH = "0" *) (* C_WSTRB_RIGHT = "0" *) 
-(* C_WSTRB_WIDTH = "8" *) (* C_WUSER_RIGHT = "0" *) (* C_WUSER_WIDTH = "0" *) 
-(* C_W_WIDTH = "72" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* ORIG_REF_NAME = "axi_clock_converter_v2_1_15_axi_clock_converter" *) 
+(* C_WSTRB_WIDTH = "4" *) (* C_WUSER_RIGHT = "0" *) (* C_WUSER_WIDTH = "0" *) 
+(* C_W_WIDTH = "36" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* ORIG_REF_NAME = "axi_clock_converter_v2_1_15_axi_clock_converter" *) 
 (* P_ACLK_RATIO = "2" *) (* P_AXI3 = "1" *) (* P_AXI4 = "0" *) 
 (* P_AXILITE = "2" *) (* P_FULLY_REG = "1" *) (* P_LIGHT_WT = "0" *) 
 (* P_LUTRAM_ASYNC = "12" *) (* P_ROUNDING_OFFSET = "0" *) (* P_SI_LT_MI = "1'b1" *) 
@@ -520,8 +520,8 @@ module shell_auto_cc_0_axi_clock_converter_v2_1_15_axi_clock_converter
   input s_axi_awvalid;
   output s_axi_awready;
   input [0:0]s_axi_wid;
-  input [63:0]s_axi_wdata;
-  input [7:0]s_axi_wstrb;
+  input [31:0]s_axi_wdata;
+  input [3:0]s_axi_wstrb;
   input s_axi_wlast;
   input [0:0]s_axi_wuser;
   input s_axi_wvalid;
@@ -545,7 +545,7 @@ module shell_auto_cc_0_axi_clock_converter_v2_1_15_axi_clock_converter
   input s_axi_arvalid;
   output s_axi_arready;
   output [0:0]s_axi_rid;
-  output [63:0]s_axi_rdata;
+  output [31:0]s_axi_rdata;
   output [1:0]s_axi_rresp;
   output s_axi_rlast;
   output [0:0]s_axi_ruser;
@@ -567,8 +567,8 @@ module shell_auto_cc_0_axi_clock_converter_v2_1_15_axi_clock_converter
   output m_axi_awvalid;
   input m_axi_awready;
   output [0:0]m_axi_wid;
-  output [63:0]m_axi_wdata;
-  output [7:0]m_axi_wstrb;
+  output [31:0]m_axi_wdata;
+  output [3:0]m_axi_wstrb;
   output m_axi_wlast;
   output [0:0]m_axi_wuser;
   output m_axi_wvalid;
@@ -592,7 +592,7 @@ module shell_auto_cc_0_axi_clock_converter_v2_1_15_axi_clock_converter
   output m_axi_arvalid;
   input m_axi_arready;
   input [0:0]m_axi_rid;
-  input [63:0]m_axi_rdata;
+  input [31:0]m_axi_rdata;
   input [1:0]m_axi_rresp;
   input m_axi_rlast;
   input [0:0]m_axi_ruser;
@@ -614,13 +614,13 @@ module shell_auto_cc_0_axi_clock_converter_v2_1_15_axi_clock_converter
   wire m_axi_bready;
   wire [1:0]m_axi_bresp;
   wire m_axi_bvalid;
-  wire [63:0]m_axi_rdata;
+  wire [31:0]m_axi_rdata;
   wire m_axi_rready;
   wire [1:0]m_axi_rresp;
   wire m_axi_rvalid;
-  wire [63:0]m_axi_wdata;
+  wire [31:0]m_axi_wdata;
   wire m_axi_wready;
-  wire [7:0]m_axi_wstrb;
+  wire [3:0]m_axi_wstrb;
   wire m_axi_wvalid;
   wire [3:3]s_areset_dly;
   (* RTL_KEEP = "true" *) wire s_axi_aclk;
@@ -636,13 +636,13 @@ module shell_auto_cc_0_axi_clock_converter_v2_1_15_axi_clock_converter
   wire s_axi_bready;
   wire [1:0]s_axi_bresp;
   wire s_axi_bvalid;
-  wire [63:0]s_axi_rdata;
+  wire [31:0]s_axi_rdata;
   wire s_axi_rready;
   wire [1:0]s_axi_rresp;
   wire s_axi_rvalid;
-  wire [63:0]s_axi_wdata;
+  wire [31:0]s_axi_wdata;
   wire s_axi_wready;
-  wire [7:0]s_axi_wstrb;
+  wire [3:0]s_axi_wstrb;
   wire s_axi_wvalid;
 
   assign m_axi_arburst[1] = \<const0> ;
@@ -998,11 +998,11 @@ module shell_auto_cc_0_axi_clock_converter_v2_1_15_lite_async__parameterized0
     \m_areset_dly_reg[3] ,
     m_axi_wready,
     s_axi_wvalid);
-  output [71:0]dest_out;
+  output [35:0]dest_out;
   output s_axi_wready;
   output m_axi_wvalid;
   input out;
-  input [71:0]src_in;
+  input [35:0]src_in;
   input m_axi_aclk;
   input [0:0]SR;
   input [0:0]\m_areset_dly_reg[3] ;
@@ -1016,7 +1016,7 @@ module shell_auto_cc_0_axi_clock_converter_v2_1_15_lite_async__parameterized0
   wire [0:0]SR;
   wire dest_ack_i_1__1_n_0;
   wire dest_ack_reg_n_0;
-  wire [71:0]dest_out;
+  wire [35:0]dest_out;
   wire dest_req;
   (* RTL_KEEP = "yes" *) wire [1:0]dest_state__0;
   wire dest_state_n_0;
@@ -1029,7 +1029,7 @@ module shell_auto_cc_0_axi_clock_converter_v2_1_15_lite_async__parameterized0
   wire s_axi_wready;
   wire s_axi_wvalid;
   wire s_ready_i_i_1__1_n_0;
-  wire [71:0]src_in;
+  wire [35:0]src_in;
   wire src_rcv;
   wire src_send_i_1__1_n_0;
   wire src_send_reg_n_0;
@@ -1130,7 +1130,7 @@ module shell_auto_cc_0_axi_clock_converter_v2_1_15_lite_async__parameterized0
   (* SIM_ASSERT_CHK = "0" *) 
   (* SRC_SYNC_FF = "3" *) 
   (* VERSION = "0" *) 
-  (* WIDTH = "72" *) 
+  (* WIDTH = "36" *) 
   (* XPM_CDC = "HANDSHAKE" *) 
   (* XPM_MODULE = "TRUE" *) 
   shell_auto_cc_0_xpm_cdc_handshake__parameterized0 handshake
@@ -1430,11 +1430,11 @@ module shell_auto_cc_0_axi_clock_converter_v2_1_15_lite_async__parameterized2
     \s_areset_dly_reg[3] ,
     s_axi_rready,
     m_axi_rvalid);
-  output [65:0]dest_out;
+  output [33:0]dest_out;
   output m_axi_rready;
   output s_axi_rvalid;
   input out;
-  input [65:0]src_in;
+  input [33:0]src_in;
   input s_axi_aclk;
   input [0:0]SR;
   input [0:0]\s_areset_dly_reg[3] ;
@@ -1448,7 +1448,7 @@ module shell_auto_cc_0_axi_clock_converter_v2_1_15_lite_async__parameterized2
   wire [0:0]SR;
   wire dest_ack_i_1__3_n_0;
   wire dest_ack_reg_n_0;
-  wire [65:0]dest_out;
+  wire [33:0]dest_out;
   wire dest_req;
   (* RTL_KEEP = "yes" *) wire [1:0]dest_state__0;
   wire dest_state_n_0;
@@ -1461,7 +1461,7 @@ module shell_auto_cc_0_axi_clock_converter_v2_1_15_lite_async__parameterized2
   wire s_axi_rready;
   wire s_axi_rvalid;
   wire s_ready_i_i_1__3_n_0;
-  wire [65:0]src_in;
+  wire [33:0]src_in;
   wire src_rcv;
   wire src_send_i_1__3_n_0;
   wire src_send_reg_n_0;
@@ -1562,7 +1562,7 @@ module shell_auto_cc_0_axi_clock_converter_v2_1_15_lite_async__parameterized2
   (* SIM_ASSERT_CHK = "0" *) 
   (* SRC_SYNC_FF = "3" *) 
   (* VERSION = "0" *) 
-  (* WIDTH = "66" *) 
+  (* WIDTH = "34" *) 
   (* XPM_CDC = "HANDSHAKE" *) 
   (* XPM_MODULE = "TRUE" *) 
   shell_auto_cc_0_xpm_cdc_handshake__parameterized2 handshake
@@ -2562,7 +2562,7 @@ endmodule
 
 (* DEST_EXT_HSK = "1" *) (* DEST_SYNC_FF = "3" *) (* INIT_SYNC_FF = "0" *) 
 (* ORIG_REF_NAME = "xpm_cdc_handshake" *) (* SIM_ASSERT_CHK = "0" *) (* SRC_SYNC_FF = "3" *) 
-(* VERSION = "0" *) (* WIDTH = "72" *) (* XPM_MODULE = "TRUE" *) 
+(* VERSION = "0" *) (* WIDTH = "36" *) (* XPM_MODULE = "TRUE" *) 
 (* xpm_cdc = "HANDSHAKE" *) 
 module shell_auto_cc_0_xpm_cdc_handshake__parameterized0
    (src_clk,
@@ -2574,29 +2574,29 @@ module shell_auto_cc_0_xpm_cdc_handshake__parameterized0
     dest_req,
     dest_ack);
   input src_clk;
-  input [71:0]src_in;
+  input [35:0]src_in;
   input src_send;
   output src_rcv;
   input dest_clk;
-  output [71:0]dest_out;
+  output [35:0]dest_out;
   output dest_req;
   input dest_ack;
 
   wire dest_ack;
   wire dest_clk;
   (* DIRECT_ENABLE *) wire dest_hsdata_en;
-  (* RTL_KEEP = "true" *) (* xpm_cdc = "HANDSHAKE" *) wire [71:0]dest_hsdata_ff;
+  (* RTL_KEEP = "true" *) (* xpm_cdc = "HANDSHAKE" *) wire [35:0]dest_hsdata_ff;
   wire dest_req;
   wire dest_req_nxt;
   wire p_0_in;
   wire src_clk;
-  wire [71:0]src_hsdata_ff;
-  wire [71:0]src_in;
+  wire [35:0]src_hsdata_ff;
+  wire [35:0]src_in;
   wire src_rcv;
   wire src_send;
   wire src_sendd_ff;
 
-  assign dest_out[71:0] = dest_hsdata_ff;
+  assign dest_out[35:0] = dest_hsdata_ff;
   LUT2 #(
     .INIT(4'h2)) 
     dest_hsdata_en_inferred_i_1
@@ -2837,123 +2837,11 @@ module shell_auto_cc_0_xpm_cdc_handshake__parameterized0
         .R(1'b0));
   (* KEEP = "true" *) 
   (* XPM_CDC = "HANDSHAKE" *) 
-  FDRE \dest_hsdata_ff_reg[36] 
-       (.C(dest_clk),
-        .CE(dest_hsdata_en),
-        .D(src_hsdata_ff[36]),
-        .Q(dest_hsdata_ff[36]),
-        .R(1'b0));
-  (* KEEP = "true" *) 
-  (* XPM_CDC = "HANDSHAKE" *) 
-  FDRE \dest_hsdata_ff_reg[37] 
-       (.C(dest_clk),
-        .CE(dest_hsdata_en),
-        .D(src_hsdata_ff[37]),
-        .Q(dest_hsdata_ff[37]),
-        .R(1'b0));
-  (* KEEP = "true" *) 
-  (* XPM_CDC = "HANDSHAKE" *) 
-  FDRE \dest_hsdata_ff_reg[38] 
-       (.C(dest_clk),
-        .CE(dest_hsdata_en),
-        .D(src_hsdata_ff[38]),
-        .Q(dest_hsdata_ff[38]),
-        .R(1'b0));
-  (* KEEP = "true" *) 
-  (* XPM_CDC = "HANDSHAKE" *) 
-  FDRE \dest_hsdata_ff_reg[39] 
-       (.C(dest_clk),
-        .CE(dest_hsdata_en),
-        .D(src_hsdata_ff[39]),
-        .Q(dest_hsdata_ff[39]),
-        .R(1'b0));
-  (* KEEP = "true" *) 
-  (* XPM_CDC = "HANDSHAKE" *) 
   FDRE \dest_hsdata_ff_reg[3] 
        (.C(dest_clk),
         .CE(dest_hsdata_en),
         .D(src_hsdata_ff[3]),
         .Q(dest_hsdata_ff[3]),
-        .R(1'b0));
-  (* KEEP = "true" *) 
-  (* XPM_CDC = "HANDSHAKE" *) 
-  FDRE \dest_hsdata_ff_reg[40] 
-       (.C(dest_clk),
-        .CE(dest_hsdata_en),
-        .D(src_hsdata_ff[40]),
-        .Q(dest_hsdata_ff[40]),
-        .R(1'b0));
-  (* KEEP = "true" *) 
-  (* XPM_CDC = "HANDSHAKE" *) 
-  FDRE \dest_hsdata_ff_reg[41] 
-       (.C(dest_clk),
-        .CE(dest_hsdata_en),
-        .D(src_hsdata_ff[41]),
-        .Q(dest_hsdata_ff[41]),
-        .R(1'b0));
-  (* KEEP = "true" *) 
-  (* XPM_CDC = "HANDSHAKE" *) 
-  FDRE \dest_hsdata_ff_reg[42] 
-       (.C(dest_clk),
-        .CE(dest_hsdata_en),
-        .D(src_hsdata_ff[42]),
-        .Q(dest_hsdata_ff[42]),
-        .R(1'b0));
-  (* KEEP = "true" *) 
-  (* XPM_CDC = "HANDSHAKE" *) 
-  FDRE \dest_hsdata_ff_reg[43] 
-       (.C(dest_clk),
-        .CE(dest_hsdata_en),
-        .D(src_hsdata_ff[43]),
-        .Q(dest_hsdata_ff[43]),
-        .R(1'b0));
-  (* KEEP = "true" *) 
-  (* XPM_CDC = "HANDSHAKE" *) 
-  FDRE \dest_hsdata_ff_reg[44] 
-       (.C(dest_clk),
-        .CE(dest_hsdata_en),
-        .D(src_hsdata_ff[44]),
-        .Q(dest_hsdata_ff[44]),
-        .R(1'b0));
-  (* KEEP = "true" *) 
-  (* XPM_CDC = "HANDSHAKE" *) 
-  FDRE \dest_hsdata_ff_reg[45] 
-       (.C(dest_clk),
-        .CE(dest_hsdata_en),
-        .D(src_hsdata_ff[45]),
-        .Q(dest_hsdata_ff[45]),
-        .R(1'b0));
-  (* KEEP = "true" *) 
-  (* XPM_CDC = "HANDSHAKE" *) 
-  FDRE \dest_hsdata_ff_reg[46] 
-       (.C(dest_clk),
-        .CE(dest_hsdata_en),
-        .D(src_hsdata_ff[46]),
-        .Q(dest_hsdata_ff[46]),
-        .R(1'b0));
-  (* KEEP = "true" *) 
-  (* XPM_CDC = "HANDSHAKE" *) 
-  FDRE \dest_hsdata_ff_reg[47] 
-       (.C(dest_clk),
-        .CE(dest_hsdata_en),
-        .D(src_hsdata_ff[47]),
-        .Q(dest_hsdata_ff[47]),
-        .R(1'b0));
-  (* KEEP = "true" *) 
-  (* XPM_CDC = "HANDSHAKE" *) 
-  FDRE \dest_hsdata_ff_reg[48] 
-       (.C(dest_clk),
-        .CE(dest_hsdata_en),
-        .D(src_hsdata_ff[48]),
-        .Q(dest_hsdata_ff[48]),
-        .R(1'b0));
-  (* KEEP = "true" *) 
-  (* XPM_CDC = "HANDSHAKE" *) 
-  FDRE \dest_hsdata_ff_reg[49] 
-       (.C(dest_clk),
-        .CE(dest_hsdata_en),
-        .D(src_hsdata_ff[49]),
-        .Q(dest_hsdata_ff[49]),
         .R(1'b0));
   (* KEEP = "true" *) 
   (* XPM_CDC = "HANDSHAKE" *) 
@@ -2965,86 +2853,6 @@ module shell_auto_cc_0_xpm_cdc_handshake__parameterized0
         .R(1'b0));
   (* KEEP = "true" *) 
   (* XPM_CDC = "HANDSHAKE" *) 
-  FDRE \dest_hsdata_ff_reg[50] 
-       (.C(dest_clk),
-        .CE(dest_hsdata_en),
-        .D(src_hsdata_ff[50]),
-        .Q(dest_hsdata_ff[50]),
-        .R(1'b0));
-  (* KEEP = "true" *) 
-  (* XPM_CDC = "HANDSHAKE" *) 
-  FDRE \dest_hsdata_ff_reg[51] 
-       (.C(dest_clk),
-        .CE(dest_hsdata_en),
-        .D(src_hsdata_ff[51]),
-        .Q(dest_hsdata_ff[51]),
-        .R(1'b0));
-  (* KEEP = "true" *) 
-  (* XPM_CDC = "HANDSHAKE" *) 
-  FDRE \dest_hsdata_ff_reg[52] 
-       (.C(dest_clk),
-        .CE(dest_hsdata_en),
-        .D(src_hsdata_ff[52]),
-        .Q(dest_hsdata_ff[52]),
-        .R(1'b0));
-  (* KEEP = "true" *) 
-  (* XPM_CDC = "HANDSHAKE" *) 
-  FDRE \dest_hsdata_ff_reg[53] 
-       (.C(dest_clk),
-        .CE(dest_hsdata_en),
-        .D(src_hsdata_ff[53]),
-        .Q(dest_hsdata_ff[53]),
-        .R(1'b0));
-  (* KEEP = "true" *) 
-  (* XPM_CDC = "HANDSHAKE" *) 
-  FDRE \dest_hsdata_ff_reg[54] 
-       (.C(dest_clk),
-        .CE(dest_hsdata_en),
-        .D(src_hsdata_ff[54]),
-        .Q(dest_hsdata_ff[54]),
-        .R(1'b0));
-  (* KEEP = "true" *) 
-  (* XPM_CDC = "HANDSHAKE" *) 
-  FDRE \dest_hsdata_ff_reg[55] 
-       (.C(dest_clk),
-        .CE(dest_hsdata_en),
-        .D(src_hsdata_ff[55]),
-        .Q(dest_hsdata_ff[55]),
-        .R(1'b0));
-  (* KEEP = "true" *) 
-  (* XPM_CDC = "HANDSHAKE" *) 
-  FDRE \dest_hsdata_ff_reg[56] 
-       (.C(dest_clk),
-        .CE(dest_hsdata_en),
-        .D(src_hsdata_ff[56]),
-        .Q(dest_hsdata_ff[56]),
-        .R(1'b0));
-  (* KEEP = "true" *) 
-  (* XPM_CDC = "HANDSHAKE" *) 
-  FDRE \dest_hsdata_ff_reg[57] 
-       (.C(dest_clk),
-        .CE(dest_hsdata_en),
-        .D(src_hsdata_ff[57]),
-        .Q(dest_hsdata_ff[57]),
-        .R(1'b0));
-  (* KEEP = "true" *) 
-  (* XPM_CDC = "HANDSHAKE" *) 
-  FDRE \dest_hsdata_ff_reg[58] 
-       (.C(dest_clk),
-        .CE(dest_hsdata_en),
-        .D(src_hsdata_ff[58]),
-        .Q(dest_hsdata_ff[58]),
-        .R(1'b0));
-  (* KEEP = "true" *) 
-  (* XPM_CDC = "HANDSHAKE" *) 
-  FDRE \dest_hsdata_ff_reg[59] 
-       (.C(dest_clk),
-        .CE(dest_hsdata_en),
-        .D(src_hsdata_ff[59]),
-        .Q(dest_hsdata_ff[59]),
-        .R(1'b0));
-  (* KEEP = "true" *) 
-  (* XPM_CDC = "HANDSHAKE" *) 
   FDRE \dest_hsdata_ff_reg[5] 
        (.C(dest_clk),
         .CE(dest_hsdata_en),
@@ -3053,107 +2861,11 @@ module shell_auto_cc_0_xpm_cdc_handshake__parameterized0
         .R(1'b0));
   (* KEEP = "true" *) 
   (* XPM_CDC = "HANDSHAKE" *) 
-  FDRE \dest_hsdata_ff_reg[60] 
-       (.C(dest_clk),
-        .CE(dest_hsdata_en),
-        .D(src_hsdata_ff[60]),
-        .Q(dest_hsdata_ff[60]),
-        .R(1'b0));
-  (* KEEP = "true" *) 
-  (* XPM_CDC = "HANDSHAKE" *) 
-  FDRE \dest_hsdata_ff_reg[61] 
-       (.C(dest_clk),
-        .CE(dest_hsdata_en),
-        .D(src_hsdata_ff[61]),
-        .Q(dest_hsdata_ff[61]),
-        .R(1'b0));
-  (* KEEP = "true" *) 
-  (* XPM_CDC = "HANDSHAKE" *) 
-  FDRE \dest_hsdata_ff_reg[62] 
-       (.C(dest_clk),
-        .CE(dest_hsdata_en),
-        .D(src_hsdata_ff[62]),
-        .Q(dest_hsdata_ff[62]),
-        .R(1'b0));
-  (* KEEP = "true" *) 
-  (* XPM_CDC = "HANDSHAKE" *) 
-  FDRE \dest_hsdata_ff_reg[63] 
-       (.C(dest_clk),
-        .CE(dest_hsdata_en),
-        .D(src_hsdata_ff[63]),
-        .Q(dest_hsdata_ff[63]),
-        .R(1'b0));
-  (* KEEP = "true" *) 
-  (* XPM_CDC = "HANDSHAKE" *) 
-  FDRE \dest_hsdata_ff_reg[64] 
-       (.C(dest_clk),
-        .CE(dest_hsdata_en),
-        .D(src_hsdata_ff[64]),
-        .Q(dest_hsdata_ff[64]),
-        .R(1'b0));
-  (* KEEP = "true" *) 
-  (* XPM_CDC = "HANDSHAKE" *) 
-  FDRE \dest_hsdata_ff_reg[65] 
-       (.C(dest_clk),
-        .CE(dest_hsdata_en),
-        .D(src_hsdata_ff[65]),
-        .Q(dest_hsdata_ff[65]),
-        .R(1'b0));
-  (* KEEP = "true" *) 
-  (* XPM_CDC = "HANDSHAKE" *) 
-  FDRE \dest_hsdata_ff_reg[66] 
-       (.C(dest_clk),
-        .CE(dest_hsdata_en),
-        .D(src_hsdata_ff[66]),
-        .Q(dest_hsdata_ff[66]),
-        .R(1'b0));
-  (* KEEP = "true" *) 
-  (* XPM_CDC = "HANDSHAKE" *) 
-  FDRE \dest_hsdata_ff_reg[67] 
-       (.C(dest_clk),
-        .CE(dest_hsdata_en),
-        .D(src_hsdata_ff[67]),
-        .Q(dest_hsdata_ff[67]),
-        .R(1'b0));
-  (* KEEP = "true" *) 
-  (* XPM_CDC = "HANDSHAKE" *) 
-  FDRE \dest_hsdata_ff_reg[68] 
-       (.C(dest_clk),
-        .CE(dest_hsdata_en),
-        .D(src_hsdata_ff[68]),
-        .Q(dest_hsdata_ff[68]),
-        .R(1'b0));
-  (* KEEP = "true" *) 
-  (* XPM_CDC = "HANDSHAKE" *) 
-  FDRE \dest_hsdata_ff_reg[69] 
-       (.C(dest_clk),
-        .CE(dest_hsdata_en),
-        .D(src_hsdata_ff[69]),
-        .Q(dest_hsdata_ff[69]),
-        .R(1'b0));
-  (* KEEP = "true" *) 
-  (* XPM_CDC = "HANDSHAKE" *) 
   FDRE \dest_hsdata_ff_reg[6] 
        (.C(dest_clk),
         .CE(dest_hsdata_en),
         .D(src_hsdata_ff[6]),
         .Q(dest_hsdata_ff[6]),
-        .R(1'b0));
-  (* KEEP = "true" *) 
-  (* XPM_CDC = "HANDSHAKE" *) 
-  FDRE \dest_hsdata_ff_reg[70] 
-       (.C(dest_clk),
-        .CE(dest_hsdata_en),
-        .D(src_hsdata_ff[70]),
-        .Q(dest_hsdata_ff[70]),
-        .R(1'b0));
-  (* KEEP = "true" *) 
-  (* XPM_CDC = "HANDSHAKE" *) 
-  FDRE \dest_hsdata_ff_reg[71] 
-       (.C(dest_clk),
-        .CE(dest_hsdata_en),
-        .D(src_hsdata_ff[71]),
-        .Q(dest_hsdata_ff[71]),
         .R(1'b0));
   (* KEEP = "true" *) 
   (* XPM_CDC = "HANDSHAKE" *) 
@@ -3187,7 +2899,7 @@ module shell_auto_cc_0_xpm_cdc_handshake__parameterized0
         .R(1'b0));
   LUT1 #(
     .INIT(2'h1)) 
-    \src_hsdata_ff[71]_i_1 
+    \src_hsdata_ff[35]_i_1 
        (.I0(src_sendd_ff),
         .O(p_0_in));
   FDRE \src_hsdata_ff_reg[0] 
@@ -3364,95 +3076,11 @@ module shell_auto_cc_0_xpm_cdc_handshake__parameterized0
         .D(src_in[35]),
         .Q(src_hsdata_ff[35]),
         .R(1'b0));
-  FDRE \src_hsdata_ff_reg[36] 
-       (.C(src_clk),
-        .CE(p_0_in),
-        .D(src_in[36]),
-        .Q(src_hsdata_ff[36]),
-        .R(1'b0));
-  FDRE \src_hsdata_ff_reg[37] 
-       (.C(src_clk),
-        .CE(p_0_in),
-        .D(src_in[37]),
-        .Q(src_hsdata_ff[37]),
-        .R(1'b0));
-  FDRE \src_hsdata_ff_reg[38] 
-       (.C(src_clk),
-        .CE(p_0_in),
-        .D(src_in[38]),
-        .Q(src_hsdata_ff[38]),
-        .R(1'b0));
-  FDRE \src_hsdata_ff_reg[39] 
-       (.C(src_clk),
-        .CE(p_0_in),
-        .D(src_in[39]),
-        .Q(src_hsdata_ff[39]),
-        .R(1'b0));
   FDRE \src_hsdata_ff_reg[3] 
        (.C(src_clk),
         .CE(p_0_in),
         .D(src_in[3]),
         .Q(src_hsdata_ff[3]),
-        .R(1'b0));
-  FDRE \src_hsdata_ff_reg[40] 
-       (.C(src_clk),
-        .CE(p_0_in),
-        .D(src_in[40]),
-        .Q(src_hsdata_ff[40]),
-        .R(1'b0));
-  FDRE \src_hsdata_ff_reg[41] 
-       (.C(src_clk),
-        .CE(p_0_in),
-        .D(src_in[41]),
-        .Q(src_hsdata_ff[41]),
-        .R(1'b0));
-  FDRE \src_hsdata_ff_reg[42] 
-       (.C(src_clk),
-        .CE(p_0_in),
-        .D(src_in[42]),
-        .Q(src_hsdata_ff[42]),
-        .R(1'b0));
-  FDRE \src_hsdata_ff_reg[43] 
-       (.C(src_clk),
-        .CE(p_0_in),
-        .D(src_in[43]),
-        .Q(src_hsdata_ff[43]),
-        .R(1'b0));
-  FDRE \src_hsdata_ff_reg[44] 
-       (.C(src_clk),
-        .CE(p_0_in),
-        .D(src_in[44]),
-        .Q(src_hsdata_ff[44]),
-        .R(1'b0));
-  FDRE \src_hsdata_ff_reg[45] 
-       (.C(src_clk),
-        .CE(p_0_in),
-        .D(src_in[45]),
-        .Q(src_hsdata_ff[45]),
-        .R(1'b0));
-  FDRE \src_hsdata_ff_reg[46] 
-       (.C(src_clk),
-        .CE(p_0_in),
-        .D(src_in[46]),
-        .Q(src_hsdata_ff[46]),
-        .R(1'b0));
-  FDRE \src_hsdata_ff_reg[47] 
-       (.C(src_clk),
-        .CE(p_0_in),
-        .D(src_in[47]),
-        .Q(src_hsdata_ff[47]),
-        .R(1'b0));
-  FDRE \src_hsdata_ff_reg[48] 
-       (.C(src_clk),
-        .CE(p_0_in),
-        .D(src_in[48]),
-        .Q(src_hsdata_ff[48]),
-        .R(1'b0));
-  FDRE \src_hsdata_ff_reg[49] 
-       (.C(src_clk),
-        .CE(p_0_in),
-        .D(src_in[49]),
-        .Q(src_hsdata_ff[49]),
         .R(1'b0));
   FDRE \src_hsdata_ff_reg[4] 
        (.C(src_clk),
@@ -3460,149 +3088,17 @@ module shell_auto_cc_0_xpm_cdc_handshake__parameterized0
         .D(src_in[4]),
         .Q(src_hsdata_ff[4]),
         .R(1'b0));
-  FDRE \src_hsdata_ff_reg[50] 
-       (.C(src_clk),
-        .CE(p_0_in),
-        .D(src_in[50]),
-        .Q(src_hsdata_ff[50]),
-        .R(1'b0));
-  FDRE \src_hsdata_ff_reg[51] 
-       (.C(src_clk),
-        .CE(p_0_in),
-        .D(src_in[51]),
-        .Q(src_hsdata_ff[51]),
-        .R(1'b0));
-  FDRE \src_hsdata_ff_reg[52] 
-       (.C(src_clk),
-        .CE(p_0_in),
-        .D(src_in[52]),
-        .Q(src_hsdata_ff[52]),
-        .R(1'b0));
-  FDRE \src_hsdata_ff_reg[53] 
-       (.C(src_clk),
-        .CE(p_0_in),
-        .D(src_in[53]),
-        .Q(src_hsdata_ff[53]),
-        .R(1'b0));
-  FDRE \src_hsdata_ff_reg[54] 
-       (.C(src_clk),
-        .CE(p_0_in),
-        .D(src_in[54]),
-        .Q(src_hsdata_ff[54]),
-        .R(1'b0));
-  FDRE \src_hsdata_ff_reg[55] 
-       (.C(src_clk),
-        .CE(p_0_in),
-        .D(src_in[55]),
-        .Q(src_hsdata_ff[55]),
-        .R(1'b0));
-  FDRE \src_hsdata_ff_reg[56] 
-       (.C(src_clk),
-        .CE(p_0_in),
-        .D(src_in[56]),
-        .Q(src_hsdata_ff[56]),
-        .R(1'b0));
-  FDRE \src_hsdata_ff_reg[57] 
-       (.C(src_clk),
-        .CE(p_0_in),
-        .D(src_in[57]),
-        .Q(src_hsdata_ff[57]),
-        .R(1'b0));
-  FDRE \src_hsdata_ff_reg[58] 
-       (.C(src_clk),
-        .CE(p_0_in),
-        .D(src_in[58]),
-        .Q(src_hsdata_ff[58]),
-        .R(1'b0));
-  FDRE \src_hsdata_ff_reg[59] 
-       (.C(src_clk),
-        .CE(p_0_in),
-        .D(src_in[59]),
-        .Q(src_hsdata_ff[59]),
-        .R(1'b0));
   FDRE \src_hsdata_ff_reg[5] 
        (.C(src_clk),
         .CE(p_0_in),
         .D(src_in[5]),
         .Q(src_hsdata_ff[5]),
         .R(1'b0));
-  FDRE \src_hsdata_ff_reg[60] 
-       (.C(src_clk),
-        .CE(p_0_in),
-        .D(src_in[60]),
-        .Q(src_hsdata_ff[60]),
-        .R(1'b0));
-  FDRE \src_hsdata_ff_reg[61] 
-       (.C(src_clk),
-        .CE(p_0_in),
-        .D(src_in[61]),
-        .Q(src_hsdata_ff[61]),
-        .R(1'b0));
-  FDRE \src_hsdata_ff_reg[62] 
-       (.C(src_clk),
-        .CE(p_0_in),
-        .D(src_in[62]),
-        .Q(src_hsdata_ff[62]),
-        .R(1'b0));
-  FDRE \src_hsdata_ff_reg[63] 
-       (.C(src_clk),
-        .CE(p_0_in),
-        .D(src_in[63]),
-        .Q(src_hsdata_ff[63]),
-        .R(1'b0));
-  FDRE \src_hsdata_ff_reg[64] 
-       (.C(src_clk),
-        .CE(p_0_in),
-        .D(src_in[64]),
-        .Q(src_hsdata_ff[64]),
-        .R(1'b0));
-  FDRE \src_hsdata_ff_reg[65] 
-       (.C(src_clk),
-        .CE(p_0_in),
-        .D(src_in[65]),
-        .Q(src_hsdata_ff[65]),
-        .R(1'b0));
-  FDRE \src_hsdata_ff_reg[66] 
-       (.C(src_clk),
-        .CE(p_0_in),
-        .D(src_in[66]),
-        .Q(src_hsdata_ff[66]),
-        .R(1'b0));
-  FDRE \src_hsdata_ff_reg[67] 
-       (.C(src_clk),
-        .CE(p_0_in),
-        .D(src_in[67]),
-        .Q(src_hsdata_ff[67]),
-        .R(1'b0));
-  FDRE \src_hsdata_ff_reg[68] 
-       (.C(src_clk),
-        .CE(p_0_in),
-        .D(src_in[68]),
-        .Q(src_hsdata_ff[68]),
-        .R(1'b0));
-  FDRE \src_hsdata_ff_reg[69] 
-       (.C(src_clk),
-        .CE(p_0_in),
-        .D(src_in[69]),
-        .Q(src_hsdata_ff[69]),
-        .R(1'b0));
   FDRE \src_hsdata_ff_reg[6] 
        (.C(src_clk),
         .CE(p_0_in),
         .D(src_in[6]),
         .Q(src_hsdata_ff[6]),
-        .R(1'b0));
-  FDRE \src_hsdata_ff_reg[70] 
-       (.C(src_clk),
-        .CE(p_0_in),
-        .D(src_in[70]),
-        .Q(src_hsdata_ff[70]),
-        .R(1'b0));
-  FDRE \src_hsdata_ff_reg[71] 
-       (.C(src_clk),
-        .CE(p_0_in),
-        .D(src_in[71]),
-        .Q(src_hsdata_ff[71]),
         .R(1'b0));
   FDRE \src_hsdata_ff_reg[7] 
        (.C(src_clk),
@@ -3770,7 +3266,7 @@ endmodule
 
 (* DEST_EXT_HSK = "1" *) (* DEST_SYNC_FF = "3" *) (* INIT_SYNC_FF = "0" *) 
 (* ORIG_REF_NAME = "xpm_cdc_handshake" *) (* SIM_ASSERT_CHK = "0" *) (* SRC_SYNC_FF = "3" *) 
-(* VERSION = "0" *) (* WIDTH = "66" *) (* XPM_MODULE = "TRUE" *) 
+(* VERSION = "0" *) (* WIDTH = "34" *) (* XPM_MODULE = "TRUE" *) 
 (* xpm_cdc = "HANDSHAKE" *) 
 module shell_auto_cc_0_xpm_cdc_handshake__parameterized2
    (src_clk,
@@ -3782,29 +3278,29 @@ module shell_auto_cc_0_xpm_cdc_handshake__parameterized2
     dest_req,
     dest_ack);
   input src_clk;
-  input [65:0]src_in;
+  input [33:0]src_in;
   input src_send;
   output src_rcv;
   input dest_clk;
-  output [65:0]dest_out;
+  output [33:0]dest_out;
   output dest_req;
   input dest_ack;
 
   wire dest_ack;
   wire dest_clk;
   (* DIRECT_ENABLE *) wire dest_hsdata_en;
-  (* RTL_KEEP = "true" *) (* xpm_cdc = "HANDSHAKE" *) wire [65:0]dest_hsdata_ff;
+  (* RTL_KEEP = "true" *) (* xpm_cdc = "HANDSHAKE" *) wire [33:0]dest_hsdata_ff;
   wire dest_req;
   wire dest_req_nxt;
   wire p_0_in;
   wire src_clk;
-  wire [65:0]src_hsdata_ff;
-  wire [65:0]src_in;
+  wire [33:0]src_hsdata_ff;
+  wire [33:0]src_in;
   wire src_rcv;
   wire src_send;
   wire src_sendd_ff;
 
-  assign dest_out[65:0] = dest_hsdata_ff;
+  assign dest_out[33:0] = dest_hsdata_ff;
   LUT2 #(
     .INIT(4'h2)) 
     dest_hsdata_en_inferred_i_1
@@ -4029,139 +3525,11 @@ module shell_auto_cc_0_xpm_cdc_handshake__parameterized2
         .R(1'b0));
   (* KEEP = "true" *) 
   (* XPM_CDC = "HANDSHAKE" *) 
-  FDRE \dest_hsdata_ff_reg[34] 
-       (.C(dest_clk),
-        .CE(dest_hsdata_en),
-        .D(src_hsdata_ff[34]),
-        .Q(dest_hsdata_ff[34]),
-        .R(1'b0));
-  (* KEEP = "true" *) 
-  (* XPM_CDC = "HANDSHAKE" *) 
-  FDRE \dest_hsdata_ff_reg[35] 
-       (.C(dest_clk),
-        .CE(dest_hsdata_en),
-        .D(src_hsdata_ff[35]),
-        .Q(dest_hsdata_ff[35]),
-        .R(1'b0));
-  (* KEEP = "true" *) 
-  (* XPM_CDC = "HANDSHAKE" *) 
-  FDRE \dest_hsdata_ff_reg[36] 
-       (.C(dest_clk),
-        .CE(dest_hsdata_en),
-        .D(src_hsdata_ff[36]),
-        .Q(dest_hsdata_ff[36]),
-        .R(1'b0));
-  (* KEEP = "true" *) 
-  (* XPM_CDC = "HANDSHAKE" *) 
-  FDRE \dest_hsdata_ff_reg[37] 
-       (.C(dest_clk),
-        .CE(dest_hsdata_en),
-        .D(src_hsdata_ff[37]),
-        .Q(dest_hsdata_ff[37]),
-        .R(1'b0));
-  (* KEEP = "true" *) 
-  (* XPM_CDC = "HANDSHAKE" *) 
-  FDRE \dest_hsdata_ff_reg[38] 
-       (.C(dest_clk),
-        .CE(dest_hsdata_en),
-        .D(src_hsdata_ff[38]),
-        .Q(dest_hsdata_ff[38]),
-        .R(1'b0));
-  (* KEEP = "true" *) 
-  (* XPM_CDC = "HANDSHAKE" *) 
-  FDRE \dest_hsdata_ff_reg[39] 
-       (.C(dest_clk),
-        .CE(dest_hsdata_en),
-        .D(src_hsdata_ff[39]),
-        .Q(dest_hsdata_ff[39]),
-        .R(1'b0));
-  (* KEEP = "true" *) 
-  (* XPM_CDC = "HANDSHAKE" *) 
   FDRE \dest_hsdata_ff_reg[3] 
        (.C(dest_clk),
         .CE(dest_hsdata_en),
         .D(src_hsdata_ff[3]),
         .Q(dest_hsdata_ff[3]),
-        .R(1'b0));
-  (* KEEP = "true" *) 
-  (* XPM_CDC = "HANDSHAKE" *) 
-  FDRE \dest_hsdata_ff_reg[40] 
-       (.C(dest_clk),
-        .CE(dest_hsdata_en),
-        .D(src_hsdata_ff[40]),
-        .Q(dest_hsdata_ff[40]),
-        .R(1'b0));
-  (* KEEP = "true" *) 
-  (* XPM_CDC = "HANDSHAKE" *) 
-  FDRE \dest_hsdata_ff_reg[41] 
-       (.C(dest_clk),
-        .CE(dest_hsdata_en),
-        .D(src_hsdata_ff[41]),
-        .Q(dest_hsdata_ff[41]),
-        .R(1'b0));
-  (* KEEP = "true" *) 
-  (* XPM_CDC = "HANDSHAKE" *) 
-  FDRE \dest_hsdata_ff_reg[42] 
-       (.C(dest_clk),
-        .CE(dest_hsdata_en),
-        .D(src_hsdata_ff[42]),
-        .Q(dest_hsdata_ff[42]),
-        .R(1'b0));
-  (* KEEP = "true" *) 
-  (* XPM_CDC = "HANDSHAKE" *) 
-  FDRE \dest_hsdata_ff_reg[43] 
-       (.C(dest_clk),
-        .CE(dest_hsdata_en),
-        .D(src_hsdata_ff[43]),
-        .Q(dest_hsdata_ff[43]),
-        .R(1'b0));
-  (* KEEP = "true" *) 
-  (* XPM_CDC = "HANDSHAKE" *) 
-  FDRE \dest_hsdata_ff_reg[44] 
-       (.C(dest_clk),
-        .CE(dest_hsdata_en),
-        .D(src_hsdata_ff[44]),
-        .Q(dest_hsdata_ff[44]),
-        .R(1'b0));
-  (* KEEP = "true" *) 
-  (* XPM_CDC = "HANDSHAKE" *) 
-  FDRE \dest_hsdata_ff_reg[45] 
-       (.C(dest_clk),
-        .CE(dest_hsdata_en),
-        .D(src_hsdata_ff[45]),
-        .Q(dest_hsdata_ff[45]),
-        .R(1'b0));
-  (* KEEP = "true" *) 
-  (* XPM_CDC = "HANDSHAKE" *) 
-  FDRE \dest_hsdata_ff_reg[46] 
-       (.C(dest_clk),
-        .CE(dest_hsdata_en),
-        .D(src_hsdata_ff[46]),
-        .Q(dest_hsdata_ff[46]),
-        .R(1'b0));
-  (* KEEP = "true" *) 
-  (* XPM_CDC = "HANDSHAKE" *) 
-  FDRE \dest_hsdata_ff_reg[47] 
-       (.C(dest_clk),
-        .CE(dest_hsdata_en),
-        .D(src_hsdata_ff[47]),
-        .Q(dest_hsdata_ff[47]),
-        .R(1'b0));
-  (* KEEP = "true" *) 
-  (* XPM_CDC = "HANDSHAKE" *) 
-  FDRE \dest_hsdata_ff_reg[48] 
-       (.C(dest_clk),
-        .CE(dest_hsdata_en),
-        .D(src_hsdata_ff[48]),
-        .Q(dest_hsdata_ff[48]),
-        .R(1'b0));
-  (* KEEP = "true" *) 
-  (* XPM_CDC = "HANDSHAKE" *) 
-  FDRE \dest_hsdata_ff_reg[49] 
-       (.C(dest_clk),
-        .CE(dest_hsdata_en),
-        .D(src_hsdata_ff[49]),
-        .Q(dest_hsdata_ff[49]),
         .R(1'b0));
   (* KEEP = "true" *) 
   (* XPM_CDC = "HANDSHAKE" *) 
@@ -4173,139 +3541,11 @@ module shell_auto_cc_0_xpm_cdc_handshake__parameterized2
         .R(1'b0));
   (* KEEP = "true" *) 
   (* XPM_CDC = "HANDSHAKE" *) 
-  FDRE \dest_hsdata_ff_reg[50] 
-       (.C(dest_clk),
-        .CE(dest_hsdata_en),
-        .D(src_hsdata_ff[50]),
-        .Q(dest_hsdata_ff[50]),
-        .R(1'b0));
-  (* KEEP = "true" *) 
-  (* XPM_CDC = "HANDSHAKE" *) 
-  FDRE \dest_hsdata_ff_reg[51] 
-       (.C(dest_clk),
-        .CE(dest_hsdata_en),
-        .D(src_hsdata_ff[51]),
-        .Q(dest_hsdata_ff[51]),
-        .R(1'b0));
-  (* KEEP = "true" *) 
-  (* XPM_CDC = "HANDSHAKE" *) 
-  FDRE \dest_hsdata_ff_reg[52] 
-       (.C(dest_clk),
-        .CE(dest_hsdata_en),
-        .D(src_hsdata_ff[52]),
-        .Q(dest_hsdata_ff[52]),
-        .R(1'b0));
-  (* KEEP = "true" *) 
-  (* XPM_CDC = "HANDSHAKE" *) 
-  FDRE \dest_hsdata_ff_reg[53] 
-       (.C(dest_clk),
-        .CE(dest_hsdata_en),
-        .D(src_hsdata_ff[53]),
-        .Q(dest_hsdata_ff[53]),
-        .R(1'b0));
-  (* KEEP = "true" *) 
-  (* XPM_CDC = "HANDSHAKE" *) 
-  FDRE \dest_hsdata_ff_reg[54] 
-       (.C(dest_clk),
-        .CE(dest_hsdata_en),
-        .D(src_hsdata_ff[54]),
-        .Q(dest_hsdata_ff[54]),
-        .R(1'b0));
-  (* KEEP = "true" *) 
-  (* XPM_CDC = "HANDSHAKE" *) 
-  FDRE \dest_hsdata_ff_reg[55] 
-       (.C(dest_clk),
-        .CE(dest_hsdata_en),
-        .D(src_hsdata_ff[55]),
-        .Q(dest_hsdata_ff[55]),
-        .R(1'b0));
-  (* KEEP = "true" *) 
-  (* XPM_CDC = "HANDSHAKE" *) 
-  FDRE \dest_hsdata_ff_reg[56] 
-       (.C(dest_clk),
-        .CE(dest_hsdata_en),
-        .D(src_hsdata_ff[56]),
-        .Q(dest_hsdata_ff[56]),
-        .R(1'b0));
-  (* KEEP = "true" *) 
-  (* XPM_CDC = "HANDSHAKE" *) 
-  FDRE \dest_hsdata_ff_reg[57] 
-       (.C(dest_clk),
-        .CE(dest_hsdata_en),
-        .D(src_hsdata_ff[57]),
-        .Q(dest_hsdata_ff[57]),
-        .R(1'b0));
-  (* KEEP = "true" *) 
-  (* XPM_CDC = "HANDSHAKE" *) 
-  FDRE \dest_hsdata_ff_reg[58] 
-       (.C(dest_clk),
-        .CE(dest_hsdata_en),
-        .D(src_hsdata_ff[58]),
-        .Q(dest_hsdata_ff[58]),
-        .R(1'b0));
-  (* KEEP = "true" *) 
-  (* XPM_CDC = "HANDSHAKE" *) 
-  FDRE \dest_hsdata_ff_reg[59] 
-       (.C(dest_clk),
-        .CE(dest_hsdata_en),
-        .D(src_hsdata_ff[59]),
-        .Q(dest_hsdata_ff[59]),
-        .R(1'b0));
-  (* KEEP = "true" *) 
-  (* XPM_CDC = "HANDSHAKE" *) 
   FDRE \dest_hsdata_ff_reg[5] 
        (.C(dest_clk),
         .CE(dest_hsdata_en),
         .D(src_hsdata_ff[5]),
         .Q(dest_hsdata_ff[5]),
-        .R(1'b0));
-  (* KEEP = "true" *) 
-  (* XPM_CDC = "HANDSHAKE" *) 
-  FDRE \dest_hsdata_ff_reg[60] 
-       (.C(dest_clk),
-        .CE(dest_hsdata_en),
-        .D(src_hsdata_ff[60]),
-        .Q(dest_hsdata_ff[60]),
-        .R(1'b0));
-  (* KEEP = "true" *) 
-  (* XPM_CDC = "HANDSHAKE" *) 
-  FDRE \dest_hsdata_ff_reg[61] 
-       (.C(dest_clk),
-        .CE(dest_hsdata_en),
-        .D(src_hsdata_ff[61]),
-        .Q(dest_hsdata_ff[61]),
-        .R(1'b0));
-  (* KEEP = "true" *) 
-  (* XPM_CDC = "HANDSHAKE" *) 
-  FDRE \dest_hsdata_ff_reg[62] 
-       (.C(dest_clk),
-        .CE(dest_hsdata_en),
-        .D(src_hsdata_ff[62]),
-        .Q(dest_hsdata_ff[62]),
-        .R(1'b0));
-  (* KEEP = "true" *) 
-  (* XPM_CDC = "HANDSHAKE" *) 
-  FDRE \dest_hsdata_ff_reg[63] 
-       (.C(dest_clk),
-        .CE(dest_hsdata_en),
-        .D(src_hsdata_ff[63]),
-        .Q(dest_hsdata_ff[63]),
-        .R(1'b0));
-  (* KEEP = "true" *) 
-  (* XPM_CDC = "HANDSHAKE" *) 
-  FDRE \dest_hsdata_ff_reg[64] 
-       (.C(dest_clk),
-        .CE(dest_hsdata_en),
-        .D(src_hsdata_ff[64]),
-        .Q(dest_hsdata_ff[64]),
-        .R(1'b0));
-  (* KEEP = "true" *) 
-  (* XPM_CDC = "HANDSHAKE" *) 
-  FDRE \dest_hsdata_ff_reg[65] 
-       (.C(dest_clk),
-        .CE(dest_hsdata_en),
-        .D(src_hsdata_ff[65]),
-        .Q(dest_hsdata_ff[65]),
         .R(1'b0));
   (* KEEP = "true" *) 
   (* XPM_CDC = "HANDSHAKE" *) 
@@ -4347,7 +3587,7 @@ module shell_auto_cc_0_xpm_cdc_handshake__parameterized2
         .R(1'b0));
   LUT1 #(
     .INIT(2'h1)) 
-    \src_hsdata_ff[65]_i_1 
+    \src_hsdata_ff[33]_i_1 
        (.I0(src_sendd_ff),
         .O(p_0_in));
   FDRE \src_hsdata_ff_reg[0] 
@@ -4512,107 +3752,11 @@ module shell_auto_cc_0_xpm_cdc_handshake__parameterized2
         .D(src_in[33]),
         .Q(src_hsdata_ff[33]),
         .R(1'b0));
-  FDRE \src_hsdata_ff_reg[34] 
-       (.C(src_clk),
-        .CE(p_0_in),
-        .D(src_in[34]),
-        .Q(src_hsdata_ff[34]),
-        .R(1'b0));
-  FDRE \src_hsdata_ff_reg[35] 
-       (.C(src_clk),
-        .CE(p_0_in),
-        .D(src_in[35]),
-        .Q(src_hsdata_ff[35]),
-        .R(1'b0));
-  FDRE \src_hsdata_ff_reg[36] 
-       (.C(src_clk),
-        .CE(p_0_in),
-        .D(src_in[36]),
-        .Q(src_hsdata_ff[36]),
-        .R(1'b0));
-  FDRE \src_hsdata_ff_reg[37] 
-       (.C(src_clk),
-        .CE(p_0_in),
-        .D(src_in[37]),
-        .Q(src_hsdata_ff[37]),
-        .R(1'b0));
-  FDRE \src_hsdata_ff_reg[38] 
-       (.C(src_clk),
-        .CE(p_0_in),
-        .D(src_in[38]),
-        .Q(src_hsdata_ff[38]),
-        .R(1'b0));
-  FDRE \src_hsdata_ff_reg[39] 
-       (.C(src_clk),
-        .CE(p_0_in),
-        .D(src_in[39]),
-        .Q(src_hsdata_ff[39]),
-        .R(1'b0));
   FDRE \src_hsdata_ff_reg[3] 
        (.C(src_clk),
         .CE(p_0_in),
         .D(src_in[3]),
         .Q(src_hsdata_ff[3]),
-        .R(1'b0));
-  FDRE \src_hsdata_ff_reg[40] 
-       (.C(src_clk),
-        .CE(p_0_in),
-        .D(src_in[40]),
-        .Q(src_hsdata_ff[40]),
-        .R(1'b0));
-  FDRE \src_hsdata_ff_reg[41] 
-       (.C(src_clk),
-        .CE(p_0_in),
-        .D(src_in[41]),
-        .Q(src_hsdata_ff[41]),
-        .R(1'b0));
-  FDRE \src_hsdata_ff_reg[42] 
-       (.C(src_clk),
-        .CE(p_0_in),
-        .D(src_in[42]),
-        .Q(src_hsdata_ff[42]),
-        .R(1'b0));
-  FDRE \src_hsdata_ff_reg[43] 
-       (.C(src_clk),
-        .CE(p_0_in),
-        .D(src_in[43]),
-        .Q(src_hsdata_ff[43]),
-        .R(1'b0));
-  FDRE \src_hsdata_ff_reg[44] 
-       (.C(src_clk),
-        .CE(p_0_in),
-        .D(src_in[44]),
-        .Q(src_hsdata_ff[44]),
-        .R(1'b0));
-  FDRE \src_hsdata_ff_reg[45] 
-       (.C(src_clk),
-        .CE(p_0_in),
-        .D(src_in[45]),
-        .Q(src_hsdata_ff[45]),
-        .R(1'b0));
-  FDRE \src_hsdata_ff_reg[46] 
-       (.C(src_clk),
-        .CE(p_0_in),
-        .D(src_in[46]),
-        .Q(src_hsdata_ff[46]),
-        .R(1'b0));
-  FDRE \src_hsdata_ff_reg[47] 
-       (.C(src_clk),
-        .CE(p_0_in),
-        .D(src_in[47]),
-        .Q(src_hsdata_ff[47]),
-        .R(1'b0));
-  FDRE \src_hsdata_ff_reg[48] 
-       (.C(src_clk),
-        .CE(p_0_in),
-        .D(src_in[48]),
-        .Q(src_hsdata_ff[48]),
-        .R(1'b0));
-  FDRE \src_hsdata_ff_reg[49] 
-       (.C(src_clk),
-        .CE(p_0_in),
-        .D(src_in[49]),
-        .Q(src_hsdata_ff[49]),
         .R(1'b0));
   FDRE \src_hsdata_ff_reg[4] 
        (.C(src_clk),
@@ -4620,107 +3764,11 @@ module shell_auto_cc_0_xpm_cdc_handshake__parameterized2
         .D(src_in[4]),
         .Q(src_hsdata_ff[4]),
         .R(1'b0));
-  FDRE \src_hsdata_ff_reg[50] 
-       (.C(src_clk),
-        .CE(p_0_in),
-        .D(src_in[50]),
-        .Q(src_hsdata_ff[50]),
-        .R(1'b0));
-  FDRE \src_hsdata_ff_reg[51] 
-       (.C(src_clk),
-        .CE(p_0_in),
-        .D(src_in[51]),
-        .Q(src_hsdata_ff[51]),
-        .R(1'b0));
-  FDRE \src_hsdata_ff_reg[52] 
-       (.C(src_clk),
-        .CE(p_0_in),
-        .D(src_in[52]),
-        .Q(src_hsdata_ff[52]),
-        .R(1'b0));
-  FDRE \src_hsdata_ff_reg[53] 
-       (.C(src_clk),
-        .CE(p_0_in),
-        .D(src_in[53]),
-        .Q(src_hsdata_ff[53]),
-        .R(1'b0));
-  FDRE \src_hsdata_ff_reg[54] 
-       (.C(src_clk),
-        .CE(p_0_in),
-        .D(src_in[54]),
-        .Q(src_hsdata_ff[54]),
-        .R(1'b0));
-  FDRE \src_hsdata_ff_reg[55] 
-       (.C(src_clk),
-        .CE(p_0_in),
-        .D(src_in[55]),
-        .Q(src_hsdata_ff[55]),
-        .R(1'b0));
-  FDRE \src_hsdata_ff_reg[56] 
-       (.C(src_clk),
-        .CE(p_0_in),
-        .D(src_in[56]),
-        .Q(src_hsdata_ff[56]),
-        .R(1'b0));
-  FDRE \src_hsdata_ff_reg[57] 
-       (.C(src_clk),
-        .CE(p_0_in),
-        .D(src_in[57]),
-        .Q(src_hsdata_ff[57]),
-        .R(1'b0));
-  FDRE \src_hsdata_ff_reg[58] 
-       (.C(src_clk),
-        .CE(p_0_in),
-        .D(src_in[58]),
-        .Q(src_hsdata_ff[58]),
-        .R(1'b0));
-  FDRE \src_hsdata_ff_reg[59] 
-       (.C(src_clk),
-        .CE(p_0_in),
-        .D(src_in[59]),
-        .Q(src_hsdata_ff[59]),
-        .R(1'b0));
   FDRE \src_hsdata_ff_reg[5] 
        (.C(src_clk),
         .CE(p_0_in),
         .D(src_in[5]),
         .Q(src_hsdata_ff[5]),
-        .R(1'b0));
-  FDRE \src_hsdata_ff_reg[60] 
-       (.C(src_clk),
-        .CE(p_0_in),
-        .D(src_in[60]),
-        .Q(src_hsdata_ff[60]),
-        .R(1'b0));
-  FDRE \src_hsdata_ff_reg[61] 
-       (.C(src_clk),
-        .CE(p_0_in),
-        .D(src_in[61]),
-        .Q(src_hsdata_ff[61]),
-        .R(1'b0));
-  FDRE \src_hsdata_ff_reg[62] 
-       (.C(src_clk),
-        .CE(p_0_in),
-        .D(src_in[62]),
-        .Q(src_hsdata_ff[62]),
-        .R(1'b0));
-  FDRE \src_hsdata_ff_reg[63] 
-       (.C(src_clk),
-        .CE(p_0_in),
-        .D(src_in[63]),
-        .Q(src_hsdata_ff[63]),
-        .R(1'b0));
-  FDRE \src_hsdata_ff_reg[64] 
-       (.C(src_clk),
-        .CE(p_0_in),
-        .D(src_in[64]),
-        .Q(src_hsdata_ff[64]),
-        .R(1'b0));
-  FDRE \src_hsdata_ff_reg[65] 
-       (.C(src_clk),
-        .CE(p_0_in),
-        .D(src_in[65]),
-        .Q(src_hsdata_ff[65]),
         .R(1'b0));
   FDRE \src_hsdata_ff_reg[6] 
        (.C(src_clk),

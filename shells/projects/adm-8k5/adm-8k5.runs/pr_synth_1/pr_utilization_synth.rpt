@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
-| Date         : Fri May 11 11:45:28 2018
-| Host         : ug238 running 64-bit Debian GNU/Linux 9.4 (stretch)
+| Date         : Sun May 13 22:48:50 2018
+| Host         : batcomputer running 64-bit Ubuntu 16.04.2 LTS
 | Command      : report_utilization -file pr_utilization_synth.rpt -pb pr_utilization_synth.pb
 | Design       : pr
 | Device       : xcku115flva1517-2
@@ -35,17 +35,17 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| CLB LUTs*                  |  352 |     0 |    663360 |  0.05 |
-|   LUT as Logic             |  350 |     0 |    663360 |  0.05 |
-|   LUT as Memory            |    2 |     0 |    293760 | <0.01 |
+| CLB LUTs*                  | 4777 |     0 |    663360 |  0.72 |
+|   LUT as Logic             | 4555 |     0 |    663360 |  0.69 |
+|   LUT as Memory            |  222 |     0 |    293760 |  0.08 |
 |     LUT as Distributed RAM |    0 |     0 |           |       |
-|     LUT as Shift Register  |    2 |     0 |           |       |
-| CLB Registers              |  479 |     0 |   1326720 |  0.04 |
-|   Register as Flip Flop    |  479 |     0 |   1326720 |  0.04 |
+|     LUT as Shift Register  |  222 |     0 |           |       |
+| CLB Registers              | 8475 |     0 |   1326720 |  0.64 |
+|   Register as Flip Flop    | 8475 |     0 |   1326720 |  0.64 |
 |   Register as Latch        |    0 |     0 |   1326720 |  0.00 |
-| CARRY8                     |    8 |     0 |     82920 | <0.01 |
-| F7 Muxes                   |    0 |     0 |    331680 |  0.00 |
-| F8 Muxes                   |    0 |     0 |    165840 |  0.00 |
+| CARRY8                     |  289 |     0 |     82920 |  0.35 |
+| F7 Muxes                   |  132 |     0 |    331680 |  0.04 |
+| F8 Muxes                   |    1 |     0 |    165840 | <0.01 |
 | F9 Muxes                   |    0 |     0 |     82920 |  0.00 |
 +----------------------------+------+-------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
@@ -65,8 +65,8 @@ Table of Contents
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
-| 13    |          Yes |         Set |            - |
-| 466   |          Yes |       Reset |            - |
+| 22    |          Yes |         Set |            - |
+| 8453  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -76,11 +76,11 @@ Table of Contents
 +-------------------+------+-------+-----------+-------+
 |     Site Type     | Used | Fixed | Available | Util% |
 +-------------------+------+-------+-----------+-------+
-| Block RAM Tile    |  4.5 |     0 |      2160 |  0.21 |
-|   RAMB36/FIFO*    |    4 |     0 |      2160 |  0.19 |
-|     RAMB36E2 only |    4 |       |           |       |
-|   RAMB18          |    1 |     0 |      4320 |  0.02 |
-|     RAMB18E2 only |    1 |       |           |       |
+| Block RAM Tile    |  3.5 |     0 |      2160 |  0.16 |
+|   RAMB36/FIFO*    |    2 |     0 |      2160 |  0.09 |
+|     RAMB36E2 only |    2 |       |           |       |
+|   RAMB18          |    3 |     0 |      4320 |  0.07 |
+|     RAMB18E2 only |    3 |       |           |       |
 +-------------------+------+-------+-----------+-------+
 * Note: Each Block RAM Tile only has one FIFO logic available and therefore can accommodate only one FIFO36E2 or one FIFO18E2. However, if a FIFO18E2 occupies a Block RAM Tile, that tile can still accommodate a RAMB18E2
 
@@ -88,11 +88,12 @@ Table of Contents
 3. ARITHMETIC
 -------------
 
-+-----------+------+-------+-----------+-------+
-| Site Type | Used | Fixed | Available | Util% |
-+-----------+------+-------+-----------+-------+
-| DSPs      |    0 |     0 |      5520 |  0.00 |
-+-----------+------+-------+-----------+-------+
++----------------+------+-------+-----------+-------+
+|    Site Type   | Used | Fixed | Available | Util% |
++----------------+------+-------+-----------+-------+
+| DSPs           |   44 |     0 |      5520 |  0.80 |
+|   DSP48E2 only |   44 |       |           |       |
++----------------+------+-------+-----------+-------+
 
 
 4. I/O
@@ -163,18 +164,22 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |  466 |            Register |
-| LUT6     |  145 |                 CLB |
-| LUT3     |  107 |                 CLB |
-| LUT4     |   66 |                 CLB |
-| LUT5     |   50 |                 CLB |
-| LUT2     |   50 |                 CLB |
-| LUT1     |   13 |                 CLB |
-| FDSE     |   13 |            Register |
-| CARRY8   |    8 |                 CLB |
-| RAMB36E2 |    4 |           Block Ram |
-| SRL16E   |    2 |                 CLB |
-| RAMB18E2 |    1 |           Block Ram |
+| FDRE     | 8453 |            Register |
+| LUT3     | 1519 |                 CLB |
+| LUT2     | 1481 |                 CLB |
+| LUT5     |  945 |                 CLB |
+| LUT6     |  893 |                 CLB |
+| LUT4     |  733 |                 CLB |
+| CARRY8   |  289 |                 CLB |
+| SRL16E   |  136 |                 CLB |
+| MUXF7    |  132 |                 CLB |
+| SRLC32E  |   86 |                 CLB |
+| LUT1     |   55 |                 CLB |
+| DSP48E2  |   44 |          Arithmetic |
+| FDSE     |   22 |            Register |
+| RAMB18E2 |    3 |           Block Ram |
+| RAMB36E2 |    2 |           Block Ram |
+| MUXF8    |    1 |                 CLB |
 +----------+------+---------------------+
 
 
