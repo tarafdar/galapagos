@@ -66,9 +66,9 @@ add_cells_to_pblock pblock_pr_i [get_cells -quiet [list pr_i]]
 #v2
 resize_pblock pblock_pr_i -add {SLICE_X0Y0:SLICE_X103Y542 DSP48E2_X0Y0:DSP48E2_X18Y215 LAGUNA_X0Y0:LAGUNA_X17Y365 RAMB18_X0Y0:RAMB18_X12Y215 RAMB36_X0Y0:RAMB36_X12Y107}
 
-#set_property HD.RECONFIGURABLE 1 [get_cells pr_i]
-#set_property SNAPPING_MODE ON [get_pblocks pblock_pr_i]
-#set_property RESET_AFTER_RECONFIG 1 [get_pblocks pblock_pr_i]
+set_property HD.RECONFIGURABLE 1 [get_cells pr_i]
+set_property SNAPPING_MODE ON [get_pblocks pblock_pr_i]
+set_property RESET_AFTER_RECONFIG 1 [get_pblocks pblock_pr_i]
 
 opt_design 
 place_design -directive Explore
