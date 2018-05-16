@@ -70,3 +70,61 @@ Adding cell -- xilinx.com:ip:axis_data_fifo:1.1 - rx_data_fifo_1
 Adding cell -- xilinx.com:ip:axis_data_fifo:1.1 - tx_data_fifo_0
 Successfully read diagram <shell> from BD file </nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/shell.bd>
 update_compile_order -fileset sources_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Wed May 16 15:51:34 2018] Launched shell_pr_decoupler_0_0_synth_1, shell_axi_gpio_0_0_synth_1, shell_vio_0_0_synth_1, shell_auto_cc_6_synth_1, synth_1...
+Run output will be captured here:
+shell_pr_decoupler_0_0_synth_1: /nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/shell_pr_decoupler_0_0_synth_1/runme.log
+shell_axi_gpio_0_0_synth_1: /nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/shell_axi_gpio_0_0_synth_1/runme.log
+shell_vio_0_0_synth_1: /nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/shell_vio_0_0_synth_1/runme.log
+shell_auto_cc_6_synth_1: /nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/shell_auto_cc_6_synth_1/runme.log
+synth_1: /nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/runme.log
+[Wed May 16 15:51:35 2018] Launched impl_1...
+Run output will be captured here: /nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 4154 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.1
+INFO: [Device 21-403] Loading part xcku115-flva1517-2-e
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'shell_i/mem_interface/ddr4_0/inst/u_ddr4_mem_intfc/u_mig_ddr4_phy/cal_RESET_n[0]' is not directly connected to top level port. 'DRIVE' is ignored by Vivado but preserved for implementation tool. [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/impl_1/.Xil/Vivado-29456-ug238/29456/out/shell_ddr4_0_0_phy.0/dcp/shell_ddr4_0_0_phy_145543.edf:419775]
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'shell_i/mem_interface/ddr4_0/inst/u_ddr4_mem_intfc/u_mig_ddr4_phy/cal_RESET_n[0]' is not directly connected to top level port. 'SLEW' is ignored by Vivado but preserved for implementation tool. [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/impl_1/.Xil/Vivado-29456-ug238/29456/out/shell_ddr4_0_0_phy.0/dcp/shell_ddr4_0_0_phy_145543.edf:419776]
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'shell_i/mem_interface/ddr4_0/inst/u_ddr4_mem_intfc/u_mig_ddr4_phy/sys_clk_in' is not directly connected to top level port. 'IBUF_LOW_PWR' is ignored by Vivado but preserved for implementation tool. [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/impl_1/.Xil/Vivado-29456-ug238/29456/out/shell_ddr4_0_0_phy.0/dcp/shell_ddr4_0_0_phy_145543.edf:419746]
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 8472.797 ; gain = 147.953 ; free physical = 8581 ; free virtual = 36673
+Restored from archive | CPU: 10.360000 secs | Memory: 166.116676 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 8472.797 ; gain = 147.953 ; free physical = 8574 ; free virtual = 36666
+Generating merged BMM file for the design top 'shellTop'...
+Generating merged BMM file for the design top 'shell_ddr4_0_0'...
+INFO: [Memdata 28-144] Successfully populated the BRAM INIT strings from the following elf files: /nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_ddr4_0_0/sw/calibration_0/Debug/calibration_ddr.elf /nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_ddr4_0_0/sw/calibration_0/Debug/calibration_ddr.elf /nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_microblaze_0_0/data/mb_bootloop_le.elf 
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1201 instances were transformed.
+  DSP48E1 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD_DATA, DSP_PREADD): 8 instances
+  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD_DATA, DSP_PREADD): 39 instances
+  IBUF => IBUF (IBUFCTRL, INBUF): 1 instances
+  IBUFDS => IBUFDS (DIFFINBUF, IBUFCTRL): 1 instances
+  IOBUFDS => IOBUFDS (DIFFINBUF, IBUFCTRL, INV, OBUFT, OBUFT): 8 instances
+  IOBUFE3 => IOBUFE3 (IBUFCTRL, INBUF, OBUFT_DCIEN): 72 instances
+  LUT6_2 => LUT6_2 (LUT5, LUT6): 110 instances
+  OBUFDS => OBUFDS_DUAL_BUF (INV, OBUF, OBUF): 1 instances
+  RAM16X1D => RAM32X1D (RAMD32, RAMD32): 68 instances
+  RAM16X1S => RAM32X1S (RAMS32): 13 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 220 instances
+  RAM32M16 => RAM32M16 (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 598 instances
+  RAM32X1D => RAM32X1D (RAMD32, RAMD32): 40 instances
+  RAM64M8 => RAM64M8 (RAMD64E, RAMD64E, RAMD64E, RAMD64E, RAMD64E, RAMD64E, RAMD64E, RAMD64E): 8 instances
+  RAM64X1S => RAM64X1S (RAMS64E): 9 instances
+  SRLC16E => SRL16E: 1 instances
+  SRLC32E => SRL16E: 4 instances
+
+open_run: Time (s): cpu = 00:01:13 ; elapsed = 00:01:16 . Memory (MB): peak = 8687.578 ; gain = 884.082 ; free physical = 8417 ; free virtual = 36509
+open_report: Time (s): cpu = 00:00:27 ; elapsed = 00:00:07 . Memory (MB): peak = 8974.996 ; gain = 229.395 ; free physical = 8107 ; free virtual = 36198
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed May 16 16:28:49 2018...
