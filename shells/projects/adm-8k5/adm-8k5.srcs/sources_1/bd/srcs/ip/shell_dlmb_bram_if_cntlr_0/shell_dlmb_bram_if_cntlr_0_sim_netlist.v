@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
-// Date        : Sun May 13 22:56:10 2018
-// Host        : batcomputer running 64-bit Ubuntu 16.04.2 LTS
+// Date        : Tue May 15 12:03:44 2018
+// Host        : ug238 running 64-bit Debian GNU/Linux 9.4 (stretch)
 // Command     : write_verilog -force -mode funcsim
-//               /home/tarafdar/workDir/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_dlmb_bram_if_cntlr_0/shell_dlmb_bram_if_cntlr_0_sim_netlist.v
+//               /nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_dlmb_bram_if_cntlr_0/shell_dlmb_bram_if_cntlr_0_sim_netlist.v
 // Design      : shell_dlmb_bram_if_cntlr_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -117,7 +117,7 @@ module shell_dlmb_bram_if_cntlr_0
   (* C_INTERCONNECT = "0" *) 
   (* C_LMB_AWIDTH = "32" *) 
   (* C_LMB_DWIDTH = "32" *) 
-  (* C_MASK = "64'b0000000000000000000000000000000001000000000000000000000000000000" *) 
+  (* C_MASK = "64'b0000000000000000000000000000000001000000000010000000000000000000" *) 
   (* C_MASK1 = "64'b0000000000000000000000000000000000000000100000000000000000000000" *) 
   (* C_MASK2 = "64'b0000000000000000000000000000000000000000100000000000000000000000" *) 
   (* C_MASK3 = "64'b0000000000000000000000000000000000000000100000000000000000000000" *) 
@@ -210,7 +210,7 @@ endmodule
 (* C_CE_FAILING_REGISTERS = "0" *) (* C_ECC = "0" *) (* C_ECC_ONOFF_REGISTER = "0" *) 
 (* C_ECC_ONOFF_RESET_VALUE = "1" *) (* C_ECC_STATUS_REGISTERS = "0" *) (* C_FAMILY = "kintexu" *) 
 (* C_FAULT_INJECT = "0" *) (* C_HIGHADDR = "64'b0000000000000000000000000000000000000000000000000001111111111111" *) (* C_INTERCONNECT = "0" *) 
-(* C_LMB_AWIDTH = "32" *) (* C_LMB_DWIDTH = "32" *) (* C_MASK = "64'b0000000000000000000000000000000001000000000000000000000000000000" *) 
+(* C_LMB_AWIDTH = "32" *) (* C_LMB_DWIDTH = "32" *) (* C_MASK = "64'b0000000000000000000000000000000001000000000010000000000000000000" *) 
 (* C_MASK1 = "64'b0000000000000000000000000000000000000000100000000000000000000000" *) (* C_MASK2 = "64'b0000000000000000000000000000000000000000100000000000000000000000" *) (* C_MASK3 = "64'b0000000000000000000000000000000000000000100000000000000000000000" *) 
 (* C_NUM_LMB = "1" *) (* C_S_AXI_CTRL_ADDR_WIDTH = "32" *) (* C_S_AXI_CTRL_BASEADDR = "32'b11111111111111111111111111111111" *) 
 (* C_S_AXI_CTRL_DATA_WIDTH = "32" *) (* C_S_AXI_CTRL_HIGHADDR = "32'b00000000000000000000000000000000" *) (* C_UE_FAILING_REGISTERS = "0" *) 
@@ -544,43 +544,48 @@ module shell_dlmb_bram_if_cntlr_0_lmb_bram_if_cntlr
   assign Sl_Wait = \<const0> ;
   assign UE = \<const0> ;
   (* SOFT_HLUTNM = "soft_lutpair1" *) 
-  LUT3 #(
-    .INIT(8'h20)) 
+  LUT4 #(
+    .INIT(16'h0200)) 
     \BRAM_WEN_A[0]_INST_0 
        (.I0(LMB_BE[0]),
+        .I1(LMB_ABus[12]),
+        .I2(LMB_ABus[1]),
+        .I3(LMB_WriteStrobe),
+        .O(BRAM_WEN_A[0]));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  LUT4 #(
+    .INIT(16'h1000)) 
+    \BRAM_WEN_A[1]_INST_0 
+       (.I0(LMB_ABus[12]),
         .I1(LMB_ABus[1]),
         .I2(LMB_WriteStrobe),
-        .O(BRAM_WEN_A[0]));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
-  LUT3 #(
-    .INIT(8'h40)) 
-    \BRAM_WEN_A[1]_INST_0 
-       (.I0(LMB_ABus[1]),
-        .I1(LMB_WriteStrobe),
-        .I2(LMB_BE[1]),
+        .I3(LMB_BE[1]),
         .O(BRAM_WEN_A[1]));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
-  LUT3 #(
-    .INIT(8'h40)) 
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  LUT4 #(
+    .INIT(16'h1000)) 
     \BRAM_WEN_A[2]_INST_0 
-       (.I0(LMB_ABus[1]),
-        .I1(LMB_WriteStrobe),
-        .I2(LMB_BE[2]),
+       (.I0(LMB_ABus[12]),
+        .I1(LMB_ABus[1]),
+        .I2(LMB_WriteStrobe),
+        .I3(LMB_BE[2]),
         .O(BRAM_WEN_A[2]));
   (* SOFT_HLUTNM = "soft_lutpair0" *) 
-  LUT3 #(
-    .INIT(8'h40)) 
+  LUT4 #(
+    .INIT(16'h1000)) 
     \BRAM_WEN_A[3]_INST_0 
-       (.I0(LMB_ABus[1]),
-        .I1(LMB_WriteStrobe),
-        .I2(LMB_BE[3]),
+       (.I0(LMB_ABus[12]),
+        .I1(LMB_ABus[1]),
+        .I2(LMB_WriteStrobe),
+        .I3(LMB_BE[3]),
         .O(BRAM_WEN_A[3]));
   GND GND
        (.G(\<const0> ));
-  LUT1 #(
-    .INIT(2'h1)) 
+  LUT2 #(
+    .INIT(4'h1)) 
     \No_ECC.Sl_Rdy_i_1 
-       (.I0(LMB_ABus[1]),
+       (.I0(LMB_ABus[12]),
+        .I1(LMB_ABus[1]),
         .O(lmb_select));
   FDRE \No_ECC.Sl_Rdy_reg 
        (.C(LMB_Clk),

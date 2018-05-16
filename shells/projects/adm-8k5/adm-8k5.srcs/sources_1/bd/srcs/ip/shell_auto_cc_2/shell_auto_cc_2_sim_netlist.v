@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
-// Date        : Sun May 13 23:05:02 2018
-// Host        : batcomputer running 64-bit Ubuntu 16.04.2 LTS
+// Date        : Tue May 15 12:21:34 2018
+// Host        : ug238 running 64-bit Debian GNU/Linux 9.4 (stretch)
 // Command     : write_verilog -force -mode funcsim
-//               /home/tarafdar/workDir/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_cc_2/shell_auto_cc_2_sim_netlist.v
+//               /nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_cc_2/shell_auto_cc_2_sim_netlist.v
 // Design      : shell_auto_cc_2
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -59,7 +59,7 @@ module shell_auto_cc_2
     m_axi_rready);
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 SI_CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME SI_CLK, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN shell_clk_wiz_0_0_clk_out1, ASSOCIATED_BUSIF S_AXI, ASSOCIATED_RESET S_AXI_ARESETN" *) input s_axi_aclk;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 SI_RST RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME SI_RST, POLARITY ACTIVE_LOW, TYPE INTERCONNECT" *) input s_axi_aresetn;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI AWADDR" *) input [0:0]s_axi_awaddr;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI AWADDR" *) input [8:0]s_axi_awaddr;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI AWPROT" *) input [2:0]s_axi_awprot;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI AWVALID" *) input s_axi_awvalid;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI AWREADY" *) output s_axi_awready;
@@ -70,17 +70,17 @@ module shell_auto_cc_2
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI BRESP" *) output [1:0]s_axi_bresp;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI BVALID" *) output s_axi_bvalid;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI BREADY" *) input s_axi_bready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI ARADDR" *) input [0:0]s_axi_araddr;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI ARADDR" *) input [8:0]s_axi_araddr;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI ARPROT" *) input [2:0]s_axi_arprot;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI ARVALID" *) input s_axi_arvalid;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI ARREADY" *) output s_axi_arready;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI RDATA" *) output [31:0]s_axi_rdata;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI RRESP" *) output [1:0]s_axi_rresp;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI RVALID" *) output s_axi_rvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI RREADY" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 1, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN shell_clk_wiz_0_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0" *) input s_axi_rready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI RREADY" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 9, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN shell_clk_wiz_0_0_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0" *) input s_axi_rready;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 MI_CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME MI_CLK, FREQ_HZ 156250000, PHASE 0.000, CLK_DOMAIN bd_01e2_xpcs_0_txusrclk2_out, ASSOCIATED_BUSIF M_AXI, ASSOCIATED_RESET M_AXI_ARESETN" *) input m_axi_aclk;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 MI_RST RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME MI_RST, POLARITY ACTIVE_LOW, TYPE INTERCONNECT" *) input m_axi_aresetn;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI AWADDR" *) output [0:0]m_axi_awaddr;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI AWADDR" *) output [8:0]m_axi_awaddr;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI AWPROT" *) output [2:0]m_axi_awprot;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI AWVALID" *) output m_axi_awvalid;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI AWREADY" *) input m_axi_awready;
@@ -91,22 +91,22 @@ module shell_auto_cc_2
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI BRESP" *) input [1:0]m_axi_bresp;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI BVALID" *) input m_axi_bvalid;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI BREADY" *) output m_axi_bready;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI ARADDR" *) output [0:0]m_axi_araddr;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI ARADDR" *) output [8:0]m_axi_araddr;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI ARPROT" *) output [2:0]m_axi_arprot;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI ARVALID" *) output m_axi_arvalid;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI ARREADY" *) input m_axi_arready;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI RDATA" *) input [31:0]m_axi_rdata;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI RRESP" *) input [1:0]m_axi_rresp;
   (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI RVALID" *) input m_axi_rvalid;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI RREADY" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 156250000, ID_WIDTH 0, ADDR_WIDTH 1, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN bd_01e2_xpcs_0_txusrclk2_out, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0" *) output m_axi_rready;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI RREADY" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 156250000, ID_WIDTH 0, ADDR_WIDTH 9, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN bd_01e2_xpcs_0_txusrclk2_out, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0" *) output m_axi_rready;
 
   wire m_axi_aclk;
-  wire [0:0]m_axi_araddr;
+  wire [8:0]m_axi_araddr;
   wire m_axi_aresetn;
   wire [2:0]m_axi_arprot;
   wire m_axi_arready;
   wire m_axi_arvalid;
-  wire [0:0]m_axi_awaddr;
+  wire [8:0]m_axi_awaddr;
   wire [2:0]m_axi_awprot;
   wire m_axi_awready;
   wire m_axi_awvalid;
@@ -122,12 +122,12 @@ module shell_auto_cc_2
   wire [3:0]m_axi_wstrb;
   wire m_axi_wvalid;
   wire s_axi_aclk;
-  wire [0:0]s_axi_araddr;
+  wire [8:0]s_axi_araddr;
   wire s_axi_aresetn;
   wire [2:0]s_axi_arprot;
   wire s_axi_arready;
   wire s_axi_arvalid;
-  wire [0:0]s_axi_awaddr;
+  wire [8:0]s_axi_awaddr;
   wire [2:0]s_axi_awprot;
   wire s_axi_awready;
   wire s_axi_awvalid;
@@ -170,12 +170,12 @@ module shell_auto_cc_2
   wire [0:0]NLW_inst_s_axi_ruser_UNCONNECTED;
 
   (* C_ARADDR_RIGHT = "3" *) 
-  (* C_ARADDR_WIDTH = "1" *) 
+  (* C_ARADDR_WIDTH = "9" *) 
   (* C_ARBURST_RIGHT = "3" *) 
   (* C_ARBURST_WIDTH = "0" *) 
   (* C_ARCACHE_RIGHT = "3" *) 
   (* C_ARCACHE_WIDTH = "0" *) 
-  (* C_ARID_RIGHT = "4" *) 
+  (* C_ARID_RIGHT = "12" *) 
   (* C_ARID_WIDTH = "0" *) 
   (* C_ARLEN_RIGHT = "3" *) 
   (* C_ARLEN_WIDTH = "0" *) 
@@ -191,14 +191,14 @@ module shell_auto_cc_2
   (* C_ARSIZE_WIDTH = "0" *) 
   (* C_ARUSER_RIGHT = "0" *) 
   (* C_ARUSER_WIDTH = "0" *) 
-  (* C_AR_WIDTH = "4" *) 
+  (* C_AR_WIDTH = "12" *) 
   (* C_AWADDR_RIGHT = "3" *) 
-  (* C_AWADDR_WIDTH = "1" *) 
+  (* C_AWADDR_WIDTH = "9" *) 
   (* C_AWBURST_RIGHT = "3" *) 
   (* C_AWBURST_WIDTH = "0" *) 
   (* C_AWCACHE_RIGHT = "3" *) 
   (* C_AWCACHE_WIDTH = "0" *) 
-  (* C_AWID_RIGHT = "4" *) 
+  (* C_AWID_RIGHT = "12" *) 
   (* C_AWID_WIDTH = "0" *) 
   (* C_AWLEN_RIGHT = "3" *) 
   (* C_AWLEN_WIDTH = "0" *) 
@@ -214,8 +214,8 @@ module shell_auto_cc_2
   (* C_AWSIZE_WIDTH = "0" *) 
   (* C_AWUSER_RIGHT = "0" *) 
   (* C_AWUSER_WIDTH = "0" *) 
-  (* C_AW_WIDTH = "4" *) 
-  (* C_AXI_ADDR_WIDTH = "1" *) 
+  (* C_AW_WIDTH = "12" *) 
+  (* C_AXI_ADDR_WIDTH = "9" *) 
   (* C_AXI_ARUSER_WIDTH = "1" *) 
   (* C_AXI_AWUSER_WIDTH = "1" *) 
   (* C_AXI_BUSER_WIDTH = "1" *) 
@@ -236,8 +236,8 @@ module shell_auto_cc_2
   (* C_BUSER_WIDTH = "0" *) 
   (* C_B_WIDTH = "2" *) 
   (* C_FAMILY = "kintexu" *) 
-  (* C_FIFO_AR_WIDTH = "4" *) 
-  (* C_FIFO_AW_WIDTH = "4" *) 
+  (* C_FIFO_AR_WIDTH = "12" *) 
+  (* C_FIFO_AW_WIDTH = "12" *) 
   (* C_FIFO_B_WIDTH = "2" *) 
   (* C_FIFO_R_WIDTH = "34" *) 
   (* C_FIFO_W_WIDTH = "36" *) 
@@ -373,29 +373,29 @@ module shell_auto_cc_2
         .s_axi_wvalid(s_axi_wvalid));
 endmodule
 
-(* C_ARADDR_RIGHT = "3" *) (* C_ARADDR_WIDTH = "1" *) (* C_ARBURST_RIGHT = "3" *) 
+(* C_ARADDR_RIGHT = "3" *) (* C_ARADDR_WIDTH = "9" *) (* C_ARBURST_RIGHT = "3" *) 
 (* C_ARBURST_WIDTH = "0" *) (* C_ARCACHE_RIGHT = "3" *) (* C_ARCACHE_WIDTH = "0" *) 
-(* C_ARID_RIGHT = "4" *) (* C_ARID_WIDTH = "0" *) (* C_ARLEN_RIGHT = "3" *) 
+(* C_ARID_RIGHT = "12" *) (* C_ARID_WIDTH = "0" *) (* C_ARLEN_RIGHT = "3" *) 
 (* C_ARLEN_WIDTH = "0" *) (* C_ARLOCK_RIGHT = "3" *) (* C_ARLOCK_WIDTH = "0" *) 
 (* C_ARPROT_RIGHT = "0" *) (* C_ARPROT_WIDTH = "3" *) (* C_ARQOS_RIGHT = "0" *) 
 (* C_ARQOS_WIDTH = "0" *) (* C_ARREGION_RIGHT = "0" *) (* C_ARREGION_WIDTH = "0" *) 
 (* C_ARSIZE_RIGHT = "3" *) (* C_ARSIZE_WIDTH = "0" *) (* C_ARUSER_RIGHT = "0" *) 
-(* C_ARUSER_WIDTH = "0" *) (* C_AR_WIDTH = "4" *) (* C_AWADDR_RIGHT = "3" *) 
-(* C_AWADDR_WIDTH = "1" *) (* C_AWBURST_RIGHT = "3" *) (* C_AWBURST_WIDTH = "0" *) 
-(* C_AWCACHE_RIGHT = "3" *) (* C_AWCACHE_WIDTH = "0" *) (* C_AWID_RIGHT = "4" *) 
+(* C_ARUSER_WIDTH = "0" *) (* C_AR_WIDTH = "12" *) (* C_AWADDR_RIGHT = "3" *) 
+(* C_AWADDR_WIDTH = "9" *) (* C_AWBURST_RIGHT = "3" *) (* C_AWBURST_WIDTH = "0" *) 
+(* C_AWCACHE_RIGHT = "3" *) (* C_AWCACHE_WIDTH = "0" *) (* C_AWID_RIGHT = "12" *) 
 (* C_AWID_WIDTH = "0" *) (* C_AWLEN_RIGHT = "3" *) (* C_AWLEN_WIDTH = "0" *) 
 (* C_AWLOCK_RIGHT = "3" *) (* C_AWLOCK_WIDTH = "0" *) (* C_AWPROT_RIGHT = "0" *) 
 (* C_AWPROT_WIDTH = "3" *) (* C_AWQOS_RIGHT = "0" *) (* C_AWQOS_WIDTH = "0" *) 
 (* C_AWREGION_RIGHT = "0" *) (* C_AWREGION_WIDTH = "0" *) (* C_AWSIZE_RIGHT = "3" *) 
 (* C_AWSIZE_WIDTH = "0" *) (* C_AWUSER_RIGHT = "0" *) (* C_AWUSER_WIDTH = "0" *) 
-(* C_AW_WIDTH = "4" *) (* C_AXI_ADDR_WIDTH = "1" *) (* C_AXI_ARUSER_WIDTH = "1" *) 
+(* C_AW_WIDTH = "12" *) (* C_AXI_ADDR_WIDTH = "9" *) (* C_AXI_ARUSER_WIDTH = "1" *) 
 (* C_AXI_AWUSER_WIDTH = "1" *) (* C_AXI_BUSER_WIDTH = "1" *) (* C_AXI_DATA_WIDTH = "32" *) 
 (* C_AXI_ID_WIDTH = "1" *) (* C_AXI_IS_ACLK_ASYNC = "1" *) (* C_AXI_PROTOCOL = "2" *) 
 (* C_AXI_RUSER_WIDTH = "1" *) (* C_AXI_SUPPORTS_READ = "1" *) (* C_AXI_SUPPORTS_USER_SIGNALS = "0" *) 
 (* C_AXI_SUPPORTS_WRITE = "1" *) (* C_AXI_WUSER_WIDTH = "1" *) (* C_BID_RIGHT = "2" *) 
 (* C_BID_WIDTH = "0" *) (* C_BRESP_RIGHT = "0" *) (* C_BRESP_WIDTH = "2" *) 
 (* C_BUSER_RIGHT = "0" *) (* C_BUSER_WIDTH = "0" *) (* C_B_WIDTH = "2" *) 
-(* C_FAMILY = "kintexu" *) (* C_FIFO_AR_WIDTH = "4" *) (* C_FIFO_AW_WIDTH = "4" *) 
+(* C_FAMILY = "kintexu" *) (* C_FIFO_AR_WIDTH = "12" *) (* C_FIFO_AW_WIDTH = "12" *) 
 (* C_FIFO_B_WIDTH = "2" *) (* C_FIFO_R_WIDTH = "34" *) (* C_FIFO_W_WIDTH = "36" *) 
 (* C_M_AXI_ACLK_RATIO = "2" *) (* C_RDATA_RIGHT = "2" *) (* C_RDATA_WIDTH = "32" *) 
 (* C_RID_RIGHT = "34" *) (* C_RID_WIDTH = "0" *) (* C_RLAST_RIGHT = "0" *) 
@@ -507,7 +507,7 @@ module shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter
   (* keep = "true" *) input s_axi_aclk;
   (* keep = "true" *) input s_axi_aresetn;
   input [0:0]s_axi_awid;
-  input [0:0]s_axi_awaddr;
+  input [8:0]s_axi_awaddr;
   input [7:0]s_axi_awlen;
   input [2:0]s_axi_awsize;
   input [1:0]s_axi_awburst;
@@ -532,7 +532,7 @@ module shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter
   output s_axi_bvalid;
   input s_axi_bready;
   input [0:0]s_axi_arid;
-  input [0:0]s_axi_araddr;
+  input [8:0]s_axi_araddr;
   input [7:0]s_axi_arlen;
   input [2:0]s_axi_arsize;
   input [1:0]s_axi_arburst;
@@ -554,7 +554,7 @@ module shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter
   (* keep = "true" *) input m_axi_aclk;
   (* keep = "true" *) input m_axi_aresetn;
   output [0:0]m_axi_awid;
-  output [0:0]m_axi_awaddr;
+  output [8:0]m_axi_awaddr;
   output [7:0]m_axi_awlen;
   output [2:0]m_axi_awsize;
   output [1:0]m_axi_awburst;
@@ -579,7 +579,7 @@ module shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter
   input m_axi_bvalid;
   output m_axi_bready;
   output [0:0]m_axi_arid;
-  output [0:0]m_axi_araddr;
+  output [8:0]m_axi_araddr;
   output [7:0]m_axi_arlen;
   output [2:0]m_axi_arsize;
   output [1:0]m_axi_arburst;
@@ -602,12 +602,12 @@ module shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter
   wire \<const0> ;
   wire [3:3]m_areset_dly;
   (* RTL_KEEP = "true" *) wire m_axi_aclk;
-  wire [0:0]m_axi_araddr;
+  wire [8:0]m_axi_araddr;
   (* RTL_KEEP = "true" *) wire m_axi_aresetn;
   wire [2:0]m_axi_arprot;
   wire m_axi_arready;
   wire m_axi_arvalid;
-  wire [0:0]m_axi_awaddr;
+  wire [8:0]m_axi_awaddr;
   wire [2:0]m_axi_awprot;
   wire m_axi_awready;
   wire m_axi_awvalid;
@@ -624,12 +624,12 @@ module shell_auto_cc_2_axi_clock_converter_v2_1_15_axi_clock_converter
   wire m_axi_wvalid;
   wire [3:3]s_areset_dly;
   (* RTL_KEEP = "true" *) wire s_axi_aclk;
-  wire [0:0]s_axi_araddr;
+  wire [8:0]s_axi_araddr;
   (* RTL_KEEP = "true" *) wire s_axi_aresetn;
   wire [2:0]s_axi_arprot;
   wire s_axi_arready;
   wire s_axi_arvalid;
-  wire [0:0]s_axi_awaddr;
+  wire [8:0]s_axi_awaddr;
   wire [2:0]s_axi_awprot;
   wire s_axi_awready;
   wire s_axi_awvalid;
@@ -782,11 +782,11 @@ module shell_auto_cc_2_axi_clock_converter_v2_1_15_lite_async
     \m_areset_dly_reg[3] ,
     m_axi_arready,
     s_axi_arvalid);
-  output [3:0]dest_out;
+  output [11:0]dest_out;
   output s_axi_arready;
   output m_axi_arvalid;
   input out;
-  input [3:0]src_in;
+  input [11:0]src_in;
   input m_axi_aclk;
   input [0:0]SR;
   input [0:0]\m_areset_dly_reg[3] ;
@@ -800,7 +800,7 @@ module shell_auto_cc_2_axi_clock_converter_v2_1_15_lite_async
   wire [0:0]SR;
   wire dest_ack_i_1__0_n_0;
   wire dest_ack_reg_n_0;
-  wire [3:0]dest_out;
+  wire [11:0]dest_out;
   wire dest_req;
   (* RTL_KEEP = "yes" *) wire [1:0]dest_state__0;
   wire dest_state_n_0;
@@ -813,7 +813,7 @@ module shell_auto_cc_2_axi_clock_converter_v2_1_15_lite_async
   wire s_axi_arready;
   wire s_axi_arvalid;
   wire s_ready_i_i_1__0_n_0;
-  wire [3:0]src_in;
+  wire [11:0]src_in;
   wire src_rcv;
   wire src_send_i_1__0_n_0;
   wire src_send_reg_n_0;
@@ -914,7 +914,7 @@ module shell_auto_cc_2_axi_clock_converter_v2_1_15_lite_async
   (* SIM_ASSERT_CHK = "0" *) 
   (* SRC_SYNC_FF = "3" *) 
   (* VERSION = "0" *) 
-  (* WIDTH = "4" *) 
+  (* WIDTH = "12" *) 
   (* XPM_CDC = "HANDSHAKE" *) 
   (* XPM_MODULE = "TRUE" *) 
   shell_auto_cc_2_xpm_cdc_handshake handshake
@@ -1648,13 +1648,13 @@ module shell_auto_cc_2_axi_clock_converter_v2_1_15_lite_async__xdcDup__1
     s_axi_awvalid,
     s_axi_aresetn,
     m_axi_aresetn);
-  output [3:0]dest_out;
+  output [11:0]dest_out;
   output [0:0]SR;
   output [0:0]\FSM_sequential_src_state_reg[1]_0 ;
   output s_axi_awready;
   output m_axi_awvalid;
   input out;
-  input [3:0]src_in;
+  input [11:0]src_in;
   input m_axi_aclk;
   input m_axi_awready;
   input s_axi_awvalid;
@@ -1669,7 +1669,7 @@ module shell_auto_cc_2_axi_clock_converter_v2_1_15_lite_async__xdcDup__1
   wire [0:0]SR;
   wire dest_ack_i_1_n_0;
   wire dest_ack_reg_n_0;
-  wire [3:0]dest_out;
+  wire [11:0]dest_out;
   wire dest_req;
   (* RTL_KEEP = "yes" *) wire [1:0]dest_state__0;
   wire dest_state_n_0;
@@ -1693,7 +1693,7 @@ module shell_auto_cc_2_axi_clock_converter_v2_1_15_lite_async__xdcDup__1
   wire s_axi_awready;
   wire s_axi_awvalid;
   wire s_ready_i_i_1_n_0;
-  wire [3:0]src_in;
+  wire [11:0]src_in;
   wire src_rcv;
   wire src_send_i_1_n_0;
   wire src_send_reg_n_0;
@@ -1794,7 +1794,7 @@ module shell_auto_cc_2_axi_clock_converter_v2_1_15_lite_async__xdcDup__1
   (* SIM_ASSERT_CHK = "0" *) 
   (* SRC_SYNC_FF = "3" *) 
   (* VERSION = "0" *) 
-  (* WIDTH = "4" *) 
+  (* WIDTH = "12" *) 
   (* XPM_CDC = "HANDSHAKE" *) 
   (* XPM_MODULE = "TRUE" *) 
   shell_auto_cc_2_xpm_cdc_handshake__xdcDup__1 handshake
@@ -1986,7 +1986,7 @@ endmodule
 
 (* DEST_EXT_HSK = "1" *) (* DEST_SYNC_FF = "3" *) (* INIT_SYNC_FF = "0" *) 
 (* ORIG_REF_NAME = "xpm_cdc_handshake" *) (* SIM_ASSERT_CHK = "0" *) (* SRC_SYNC_FF = "3" *) 
-(* VERSION = "0" *) (* WIDTH = "4" *) (* XPM_MODULE = "TRUE" *) 
+(* VERSION = "0" *) (* WIDTH = "12" *) (* XPM_MODULE = "TRUE" *) 
 (* xpm_cdc = "HANDSHAKE" *) 
 module shell_auto_cc_2_xpm_cdc_handshake
    (src_clk,
@@ -1998,29 +1998,29 @@ module shell_auto_cc_2_xpm_cdc_handshake
     dest_req,
     dest_ack);
   input src_clk;
-  input [3:0]src_in;
+  input [11:0]src_in;
   input src_send;
   output src_rcv;
   input dest_clk;
-  output [3:0]dest_out;
+  output [11:0]dest_out;
   output dest_req;
   input dest_ack;
 
   wire dest_ack;
   wire dest_clk;
   (* DIRECT_ENABLE *) wire dest_hsdata_en;
-  (* RTL_KEEP = "true" *) (* xpm_cdc = "HANDSHAKE" *) wire [3:0]dest_hsdata_ff;
+  (* RTL_KEEP = "true" *) (* xpm_cdc = "HANDSHAKE" *) wire [11:0]dest_hsdata_ff;
   wire dest_req;
   wire dest_req_nxt;
   wire p_0_in;
   wire src_clk;
-  wire [3:0]src_hsdata_ff;
-  wire [3:0]src_in;
+  wire [11:0]src_hsdata_ff;
+  wire [11:0]src_in;
   wire src_rcv;
   wire src_send;
   wire src_sendd_ff;
 
-  assign dest_out[3:0] = dest_hsdata_ff;
+  assign dest_out[11:0] = dest_hsdata_ff;
   LUT2 #(
     .INIT(4'h2)) 
     dest_hsdata_en_inferred_i_1
@@ -2034,6 +2034,22 @@ module shell_auto_cc_2_xpm_cdc_handshake
         .CE(dest_hsdata_en),
         .D(src_hsdata_ff[0]),
         .Q(dest_hsdata_ff[0]),
+        .R(1'b0));
+  (* KEEP = "true" *) 
+  (* XPM_CDC = "HANDSHAKE" *) 
+  FDRE \dest_hsdata_ff_reg[10] 
+       (.C(dest_clk),
+        .CE(dest_hsdata_en),
+        .D(src_hsdata_ff[10]),
+        .Q(dest_hsdata_ff[10]),
+        .R(1'b0));
+  (* KEEP = "true" *) 
+  (* XPM_CDC = "HANDSHAKE" *) 
+  FDRE \dest_hsdata_ff_reg[11] 
+       (.C(dest_clk),
+        .CE(dest_hsdata_en),
+        .D(src_hsdata_ff[11]),
+        .Q(dest_hsdata_ff[11]),
         .R(1'b0));
   (* KEEP = "true" *) 
   (* XPM_CDC = "HANDSHAKE" *) 
@@ -2059,6 +2075,54 @@ module shell_auto_cc_2_xpm_cdc_handshake
         .D(src_hsdata_ff[3]),
         .Q(dest_hsdata_ff[3]),
         .R(1'b0));
+  (* KEEP = "true" *) 
+  (* XPM_CDC = "HANDSHAKE" *) 
+  FDRE \dest_hsdata_ff_reg[4] 
+       (.C(dest_clk),
+        .CE(dest_hsdata_en),
+        .D(src_hsdata_ff[4]),
+        .Q(dest_hsdata_ff[4]),
+        .R(1'b0));
+  (* KEEP = "true" *) 
+  (* XPM_CDC = "HANDSHAKE" *) 
+  FDRE \dest_hsdata_ff_reg[5] 
+       (.C(dest_clk),
+        .CE(dest_hsdata_en),
+        .D(src_hsdata_ff[5]),
+        .Q(dest_hsdata_ff[5]),
+        .R(1'b0));
+  (* KEEP = "true" *) 
+  (* XPM_CDC = "HANDSHAKE" *) 
+  FDRE \dest_hsdata_ff_reg[6] 
+       (.C(dest_clk),
+        .CE(dest_hsdata_en),
+        .D(src_hsdata_ff[6]),
+        .Q(dest_hsdata_ff[6]),
+        .R(1'b0));
+  (* KEEP = "true" *) 
+  (* XPM_CDC = "HANDSHAKE" *) 
+  FDRE \dest_hsdata_ff_reg[7] 
+       (.C(dest_clk),
+        .CE(dest_hsdata_en),
+        .D(src_hsdata_ff[7]),
+        .Q(dest_hsdata_ff[7]),
+        .R(1'b0));
+  (* KEEP = "true" *) 
+  (* XPM_CDC = "HANDSHAKE" *) 
+  FDRE \dest_hsdata_ff_reg[8] 
+       (.C(dest_clk),
+        .CE(dest_hsdata_en),
+        .D(src_hsdata_ff[8]),
+        .Q(dest_hsdata_ff[8]),
+        .R(1'b0));
+  (* KEEP = "true" *) 
+  (* XPM_CDC = "HANDSHAKE" *) 
+  FDRE \dest_hsdata_ff_reg[9] 
+       (.C(dest_clk),
+        .CE(dest_hsdata_en),
+        .D(src_hsdata_ff[9]),
+        .Q(dest_hsdata_ff[9]),
+        .R(1'b0));
   FDRE dest_req_ff_reg
        (.C(dest_clk),
         .CE(1'b1),
@@ -2067,7 +2131,7 @@ module shell_auto_cc_2_xpm_cdc_handshake
         .R(1'b0));
   LUT1 #(
     .INIT(2'h1)) 
-    \src_hsdata_ff[3]_i_1 
+    \src_hsdata_ff[11]_i_1 
        (.I0(src_sendd_ff),
         .O(p_0_in));
   FDRE \src_hsdata_ff_reg[0] 
@@ -2075,6 +2139,18 @@ module shell_auto_cc_2_xpm_cdc_handshake
         .CE(p_0_in),
         .D(src_in[0]),
         .Q(src_hsdata_ff[0]),
+        .R(1'b0));
+  FDRE \src_hsdata_ff_reg[10] 
+       (.C(src_clk),
+        .CE(p_0_in),
+        .D(src_in[10]),
+        .Q(src_hsdata_ff[10]),
+        .R(1'b0));
+  FDRE \src_hsdata_ff_reg[11] 
+       (.C(src_clk),
+        .CE(p_0_in),
+        .D(src_in[11]),
+        .Q(src_hsdata_ff[11]),
         .R(1'b0));
   FDRE \src_hsdata_ff_reg[1] 
        (.C(src_clk),
@@ -2093,6 +2169,42 @@ module shell_auto_cc_2_xpm_cdc_handshake
         .CE(p_0_in),
         .D(src_in[3]),
         .Q(src_hsdata_ff[3]),
+        .R(1'b0));
+  FDRE \src_hsdata_ff_reg[4] 
+       (.C(src_clk),
+        .CE(p_0_in),
+        .D(src_in[4]),
+        .Q(src_hsdata_ff[4]),
+        .R(1'b0));
+  FDRE \src_hsdata_ff_reg[5] 
+       (.C(src_clk),
+        .CE(p_0_in),
+        .D(src_in[5]),
+        .Q(src_hsdata_ff[5]),
+        .R(1'b0));
+  FDRE \src_hsdata_ff_reg[6] 
+       (.C(src_clk),
+        .CE(p_0_in),
+        .D(src_in[6]),
+        .Q(src_hsdata_ff[6]),
+        .R(1'b0));
+  FDRE \src_hsdata_ff_reg[7] 
+       (.C(src_clk),
+        .CE(p_0_in),
+        .D(src_in[7]),
+        .Q(src_hsdata_ff[7]),
+        .R(1'b0));
+  FDRE \src_hsdata_ff_reg[8] 
+       (.C(src_clk),
+        .CE(p_0_in),
+        .D(src_in[8]),
+        .Q(src_hsdata_ff[8]),
+        .R(1'b0));
+  FDRE \src_hsdata_ff_reg[9] 
+       (.C(src_clk),
+        .CE(p_0_in),
+        .D(src_in[9]),
+        .Q(src_hsdata_ff[9]),
         .R(1'b0));
   FDRE src_sendd_ff_reg
        (.C(src_clk),
@@ -3394,7 +3506,7 @@ endmodule
 
 (* DEST_EXT_HSK = "1" *) (* DEST_SYNC_FF = "3" *) (* INIT_SYNC_FF = "0" *) 
 (* ORIG_REF_NAME = "xpm_cdc_handshake" *) (* SIM_ASSERT_CHK = "0" *) (* SRC_SYNC_FF = "3" *) 
-(* VERSION = "0" *) (* WIDTH = "4" *) (* XPM_MODULE = "TRUE" *) 
+(* VERSION = "0" *) (* WIDTH = "12" *) (* XPM_MODULE = "TRUE" *) 
 (* xpm_cdc = "HANDSHAKE" *) 
 module shell_auto_cc_2_xpm_cdc_handshake__xdcDup__1
    (src_clk,
@@ -3406,29 +3518,29 @@ module shell_auto_cc_2_xpm_cdc_handshake__xdcDup__1
     dest_req,
     dest_ack);
   input src_clk;
-  input [3:0]src_in;
+  input [11:0]src_in;
   input src_send;
   output src_rcv;
   input dest_clk;
-  output [3:0]dest_out;
+  output [11:0]dest_out;
   output dest_req;
   input dest_ack;
 
   wire dest_ack;
   wire dest_clk;
   (* DIRECT_ENABLE *) wire dest_hsdata_en;
-  (* RTL_KEEP = "true" *) (* xpm_cdc = "HANDSHAKE" *) wire [3:0]dest_hsdata_ff;
+  (* RTL_KEEP = "true" *) (* xpm_cdc = "HANDSHAKE" *) wire [11:0]dest_hsdata_ff;
   wire dest_req;
   wire dest_req_nxt;
   wire p_0_in;
   wire src_clk;
-  wire [3:0]src_hsdata_ff;
-  wire [3:0]src_in;
+  wire [11:0]src_hsdata_ff;
+  wire [11:0]src_in;
   wire src_rcv;
   wire src_send;
   wire src_sendd_ff;
 
-  assign dest_out[3:0] = dest_hsdata_ff;
+  assign dest_out[11:0] = dest_hsdata_ff;
   LUT2 #(
     .INIT(4'h2)) 
     dest_hsdata_en_inferred_i_1
@@ -3442,6 +3554,22 @@ module shell_auto_cc_2_xpm_cdc_handshake__xdcDup__1
         .CE(dest_hsdata_en),
         .D(src_hsdata_ff[0]),
         .Q(dest_hsdata_ff[0]),
+        .R(1'b0));
+  (* KEEP = "true" *) 
+  (* XPM_CDC = "HANDSHAKE" *) 
+  FDRE \dest_hsdata_ff_reg[10] 
+       (.C(dest_clk),
+        .CE(dest_hsdata_en),
+        .D(src_hsdata_ff[10]),
+        .Q(dest_hsdata_ff[10]),
+        .R(1'b0));
+  (* KEEP = "true" *) 
+  (* XPM_CDC = "HANDSHAKE" *) 
+  FDRE \dest_hsdata_ff_reg[11] 
+       (.C(dest_clk),
+        .CE(dest_hsdata_en),
+        .D(src_hsdata_ff[11]),
+        .Q(dest_hsdata_ff[11]),
         .R(1'b0));
   (* KEEP = "true" *) 
   (* XPM_CDC = "HANDSHAKE" *) 
@@ -3467,6 +3595,54 @@ module shell_auto_cc_2_xpm_cdc_handshake__xdcDup__1
         .D(src_hsdata_ff[3]),
         .Q(dest_hsdata_ff[3]),
         .R(1'b0));
+  (* KEEP = "true" *) 
+  (* XPM_CDC = "HANDSHAKE" *) 
+  FDRE \dest_hsdata_ff_reg[4] 
+       (.C(dest_clk),
+        .CE(dest_hsdata_en),
+        .D(src_hsdata_ff[4]),
+        .Q(dest_hsdata_ff[4]),
+        .R(1'b0));
+  (* KEEP = "true" *) 
+  (* XPM_CDC = "HANDSHAKE" *) 
+  FDRE \dest_hsdata_ff_reg[5] 
+       (.C(dest_clk),
+        .CE(dest_hsdata_en),
+        .D(src_hsdata_ff[5]),
+        .Q(dest_hsdata_ff[5]),
+        .R(1'b0));
+  (* KEEP = "true" *) 
+  (* XPM_CDC = "HANDSHAKE" *) 
+  FDRE \dest_hsdata_ff_reg[6] 
+       (.C(dest_clk),
+        .CE(dest_hsdata_en),
+        .D(src_hsdata_ff[6]),
+        .Q(dest_hsdata_ff[6]),
+        .R(1'b0));
+  (* KEEP = "true" *) 
+  (* XPM_CDC = "HANDSHAKE" *) 
+  FDRE \dest_hsdata_ff_reg[7] 
+       (.C(dest_clk),
+        .CE(dest_hsdata_en),
+        .D(src_hsdata_ff[7]),
+        .Q(dest_hsdata_ff[7]),
+        .R(1'b0));
+  (* KEEP = "true" *) 
+  (* XPM_CDC = "HANDSHAKE" *) 
+  FDRE \dest_hsdata_ff_reg[8] 
+       (.C(dest_clk),
+        .CE(dest_hsdata_en),
+        .D(src_hsdata_ff[8]),
+        .Q(dest_hsdata_ff[8]),
+        .R(1'b0));
+  (* KEEP = "true" *) 
+  (* XPM_CDC = "HANDSHAKE" *) 
+  FDRE \dest_hsdata_ff_reg[9] 
+       (.C(dest_clk),
+        .CE(dest_hsdata_en),
+        .D(src_hsdata_ff[9]),
+        .Q(dest_hsdata_ff[9]),
+        .R(1'b0));
   FDRE dest_req_ff_reg
        (.C(dest_clk),
         .CE(1'b1),
@@ -3475,7 +3651,7 @@ module shell_auto_cc_2_xpm_cdc_handshake__xdcDup__1
         .R(1'b0));
   LUT1 #(
     .INIT(2'h1)) 
-    \src_hsdata_ff[3]_i_1 
+    \src_hsdata_ff[11]_i_1 
        (.I0(src_sendd_ff),
         .O(p_0_in));
   FDRE \src_hsdata_ff_reg[0] 
@@ -3483,6 +3659,18 @@ module shell_auto_cc_2_xpm_cdc_handshake__xdcDup__1
         .CE(p_0_in),
         .D(src_in[0]),
         .Q(src_hsdata_ff[0]),
+        .R(1'b0));
+  FDRE \src_hsdata_ff_reg[10] 
+       (.C(src_clk),
+        .CE(p_0_in),
+        .D(src_in[10]),
+        .Q(src_hsdata_ff[10]),
+        .R(1'b0));
+  FDRE \src_hsdata_ff_reg[11] 
+       (.C(src_clk),
+        .CE(p_0_in),
+        .D(src_in[11]),
+        .Q(src_hsdata_ff[11]),
         .R(1'b0));
   FDRE \src_hsdata_ff_reg[1] 
        (.C(src_clk),
@@ -3501,6 +3689,42 @@ module shell_auto_cc_2_xpm_cdc_handshake__xdcDup__1
         .CE(p_0_in),
         .D(src_in[3]),
         .Q(src_hsdata_ff[3]),
+        .R(1'b0));
+  FDRE \src_hsdata_ff_reg[4] 
+       (.C(src_clk),
+        .CE(p_0_in),
+        .D(src_in[4]),
+        .Q(src_hsdata_ff[4]),
+        .R(1'b0));
+  FDRE \src_hsdata_ff_reg[5] 
+       (.C(src_clk),
+        .CE(p_0_in),
+        .D(src_in[5]),
+        .Q(src_hsdata_ff[5]),
+        .R(1'b0));
+  FDRE \src_hsdata_ff_reg[6] 
+       (.C(src_clk),
+        .CE(p_0_in),
+        .D(src_in[6]),
+        .Q(src_hsdata_ff[6]),
+        .R(1'b0));
+  FDRE \src_hsdata_ff_reg[7] 
+       (.C(src_clk),
+        .CE(p_0_in),
+        .D(src_in[7]),
+        .Q(src_hsdata_ff[7]),
+        .R(1'b0));
+  FDRE \src_hsdata_ff_reg[8] 
+       (.C(src_clk),
+        .CE(p_0_in),
+        .D(src_in[8]),
+        .Q(src_hsdata_ff[8]),
+        .R(1'b0));
+  FDRE \src_hsdata_ff_reg[9] 
+       (.C(src_clk),
+        .CE(p_0_in),
+        .D(src_in[9]),
+        .Q(src_hsdata_ff[9]),
         .R(1'b0));
   FDRE src_sendd_ff_reg
        (.C(src_clk),

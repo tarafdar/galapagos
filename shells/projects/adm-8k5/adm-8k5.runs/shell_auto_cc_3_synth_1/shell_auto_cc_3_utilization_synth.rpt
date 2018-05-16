@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
-| Date         : Sun May 13 23:03:56 2018
-| Host         : batcomputer running 64-bit Ubuntu 16.04.2 LTS
+| Date         : Tue May 15 12:21:34 2018
+| Host         : ug238 running 64-bit Debian GNU/Linux 9.4 (stretch)
 | Command      : report_utilization -file shell_auto_cc_3_utilization_synth.rpt -pb shell_auto_cc_3_utilization_synth.pb
 | Design       : shell_auto_cc_3
 | Device       : xcku115flva1517-2
@@ -38,8 +38,8 @@ Table of Contents
 | CLB LUTs*               |   64 |     0 |    663360 | <0.01 |
 |   LUT as Logic          |   64 |     0 |    663360 | <0.01 |
 |   LUT as Memory         |    0 |     0 |    293760 |  0.00 |
-| CLB Registers           |  372 |     0 |   1326720 |  0.03 |
-|   Register as Flip Flop |  372 |     0 |   1326720 |  0.03 |
+| CLB Registers           |  248 |     0 |   1326720 |  0.02 |
+|   Register as Flip Flop |  248 |     0 |   1326720 |  0.02 |
 |   Register as Latch     |    0 |     0 |   1326720 |  0.00 |
 | CARRY8                  |    0 |     0 |     82920 |  0.00 |
 | F7 Muxes                |    0 |     0 |    331680 |  0.00 |
@@ -64,7 +64,7 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 372   |          Yes |       Reset |            - |
+| 248   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -159,7 +159,7 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |  372 |            Register |
+| FDRE     |  248 |            Register |
 | LUT5     |   15 |                 CLB |
 | LUT4     |   15 |                 CLB |
 | LUT3     |   15 |                 CLB |
