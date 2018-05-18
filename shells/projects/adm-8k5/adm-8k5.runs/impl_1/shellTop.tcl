@@ -60,43 +60,44 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config  -ruleid {10}  -id {[BD 41-1271]}  -suppress 
-set_msg_config  -ruleid {9}  -id {[BD 41-1306]}  -suppress 
+set_msg_config  -ruleid {1}  -id {[BD 41-1306]}  -suppress 
+set_msg_config  -ruleid {2}  -id {[BD 41-1271]}  -suppress 
 
 start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
+  set_param xicom.use_bs_reader 1
   create_project -in_memory -part xcku115-flva1517-2-e
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir /nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.cache/wt [current_project]
-  set_property parent.project_path /nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.xpr [current_project]
+  set_property webtalk.parent_dir /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.cache/wt [current_project]
+  set_property parent.project_path /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.xpr [current_project]
   set_property ip_repo_paths {
-  /nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/hlsIP_adm-8k5
-  /nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/shell_ips
+  /home/graham0/Vivado_Projects/galapagos_wip/hlsIP_adm-8k5
+  /home/graham0/Vivado_Projects/galapagos_wip/shells/shell_ips
 } [current_project]
-  set_property ip_output_repo /nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.cache/ip [current_project]
+  set_property ip_output_repo /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
-  add_files -quiet /nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/shellTop.dcp
+  add_files -quiet /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/shellTop.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files /nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/shell.bd
-  add_files /nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/defaultFifo/pr.bd
+  add_files /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/shell.bd
+  add_files /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/defaultFifo/pr.bd
   set_param project.isImplRun false
-  read_xdc /nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/constrs_1/imports/constraints/ad_8k5.xdc
-  read_xdc /nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/constrs_1/imports/constraints/bitstream.xdc
-  read_xdc /nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/constrs_1/imports/constraints/pcie.xdc
-  read_xdc /nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/constrs_1/imports/constraints/ddr4_test.xdc
-  read_xdc /nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/constrs_1/imports/constraints/ddr4_test_axi4.xdc
-  read_xdc /nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/constrs_1/imports/constraints/ddr4sdram_b0_lane8.xdc
-  read_xdc /nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/constrs_1/imports/constraints/ddr4sdram_b0_unused.xdc
-  read_xdc /nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/constrs_1/imports/constraints/ddr4sdram_locs_b0_twin_die.xdc
-  read_xdc /nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/constrs_1/imports/constraints/ddr4sdram_locs_b0_x64.xdc
-  read_xdc /nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/constrs_1/imports/constraints/ddr4sdram_locs_b0_x72.xdc
-  read_xdc /nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/constrs_1/imports/constraints/ddr4sdram_props_b0_twin_die.xdc
-  read_xdc /nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/constrs_1/imports/constraints/refclk200.xdc
+  read_xdc /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/constrs_1/imports/constraints/ad_8k5.xdc
+  read_xdc /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/constrs_1/imports/constraints/bitstream.xdc
+  read_xdc /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/constrs_1/imports/constraints/pcie.xdc
+  read_xdc /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/constrs_1/imports/constraints/ddr4_test.xdc
+  read_xdc /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/constrs_1/imports/constraints/ddr4_test_axi4.xdc
+  read_xdc /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/constrs_1/imports/constraints/ddr4sdram_b0_lane8.xdc
+  read_xdc /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/constrs_1/imports/constraints/ddr4sdram_b0_unused.xdc
+  read_xdc /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/constrs_1/imports/constraints/ddr4sdram_locs_b0_twin_die.xdc
+  read_xdc /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/constrs_1/imports/constraints/ddr4sdram_locs_b0_x64.xdc
+  read_xdc /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/constrs_1/imports/constraints/ddr4sdram_locs_b0_x72.xdc
+  read_xdc /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/constrs_1/imports/constraints/ddr4sdram_props_b0_twin_die.xdc
+  read_xdc /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/constrs_1/imports/constraints/refclk200.xdc
   set_param project.isImplRun true
   link_design -top shellTop -part xcku115-flva1517-2-e
   set_param project.isImplRun false

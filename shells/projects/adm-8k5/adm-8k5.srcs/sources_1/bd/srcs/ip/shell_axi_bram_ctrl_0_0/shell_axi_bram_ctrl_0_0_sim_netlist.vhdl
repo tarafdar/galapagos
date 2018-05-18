@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
--- Date        : Tue May 15 12:00:52 2018
+-- Date        : Tue May 15 12:00:51 2018
 -- Host        : ug238 running 64-bit Debian GNU/Linux 9.4 (stretch)
--- Command     : write_vhdl -force -mode funcsim
---               /nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_bram_ctrl_0_0/shell_axi_bram_ctrl_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top shell_axi_bram_ctrl_0_0 -prefix
+--               shell_axi_bram_ctrl_0_0_ shell_axi_bram_ctrl_0_0_sim_netlist.vhdl
 -- Design      : shell_axi_bram_ctrl_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -41,8 +41,6 @@ entity shell_axi_bram_ctrl_0_0_axi_lite is
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 9 downto 0 );
     s_axi_rready : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of shell_axi_bram_ctrl_0_0_axi_lite : entity is "axi_lite";
 end shell_axi_bram_ctrl_0_0_axi_lite;
 
 architecture STRUCTURE of shell_axi_bram_ctrl_0_0_axi_lite is
@@ -685,8 +683,6 @@ entity shell_axi_bram_ctrl_0_0_axi_bram_ctrl_top is
     s_axi_awid : in STD_LOGIC_VECTOR ( 0 to 0 );
     s_axi_arid : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of shell_axi_bram_ctrl_0_0_axi_bram_ctrl_top : entity is "axi_bram_ctrl_top";
 end shell_axi_bram_ctrl_0_0_axi_bram_ctrl_top;
 
 architecture STRUCTURE of shell_axi_bram_ctrl_0_0_axi_bram_ctrl_top is
@@ -859,8 +855,6 @@ entity shell_axi_bram_ctrl_0_0_axi_bram_ctrl is
   attribute C_S_AXI_PROTOCOL of shell_axi_bram_ctrl_0_0_axi_bram_ctrl : entity is "AXI4LITE";
   attribute C_S_AXI_SUPPORTS_NARROW_BURST : integer;
   attribute C_S_AXI_SUPPORTS_NARROW_BURST of shell_axi_bram_ctrl_0_0_axi_bram_ctrl : entity is 0;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of shell_axi_bram_ctrl_0_0_axi_bram_ctrl : entity is "axi_bram_ctrl";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of shell_axi_bram_ctrl_0_0_axi_bram_ctrl : entity is "yes";
 end shell_axi_bram_ctrl_0_0_axi_bram_ctrl;

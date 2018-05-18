@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="36" Path="/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.xpr">
+<Project Version="7" Minor="36" Path="/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="80b5f583b4094a41929753c452c6483f"/>
@@ -67,23 +67,11 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="shell.bd" FileRelPathName="ip/shell_clk_wiz_0_0/shell_clk_wiz_0_0.xci">
-          <Proxy FileSetName="shell_clk_wiz_0_0"/>
+        <CompFileExtendedInfo CompFileName="shell.bd" FileRelPathName="ip/shell_vio_0_0/shell_vio_0_0.xci">
+          <Proxy FileSetName="shell_vio_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="shell.bd" FileRelPathName="ip/shell_gnd_0/shell_gnd_0.xci">
-          <Proxy FileSetName="shell_gnd_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="shell.bd" FileRelPathName="ip/shell_util_vector_logic_2_0/shell_util_vector_logic_2_0.xci">
-          <Proxy FileSetName="shell_util_vector_logic_2_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="shell.bd" FileRelPathName="ip/shell_axi_bram_ctrl_0_0/shell_axi_bram_ctrl_0_0.xci">
-          <Proxy FileSetName="shell_axi_bram_ctrl_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="shell.bd" FileRelPathName="ip/shell_blk_mem_gen_0_0/shell_blk_mem_gen_0_0.xci">
-          <Proxy FileSetName="shell_blk_mem_gen_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="shell.bd" FileRelPathName="ip/shell_axi_hwicap_0_0/shell_axi_hwicap_0_0.xci">
-          <Proxy FileSetName="shell_axi_hwicap_0_0"/>
+        <CompFileExtendedInfo CompFileName="shell.bd" FileRelPathName="ip/shell_axi_gpio_0_0/shell_axi_gpio_0_0.xci">
+          <Proxy FileSetName="shell_axi_gpio_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="shell.bd" FileRelPathName="ip/shell_pr_decoupler_0_0/shell_pr_decoupler_0_0.xci">
           <Proxy FileSetName="shell_pr_decoupler_0_0"/>
@@ -91,17 +79,53 @@
         <CompFileExtendedInfo CompFileName="shell.bd" FileRelPathName="ip/shell_reverseEndian64_1_0/shell_reverseEndian64_1_0.xci">
           <Proxy FileSetName="shell_reverseEndian64_1_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="shell.bd" FileRelPathName="ip/shell_axi_gpio_0_0/shell_axi_gpio_0_0.xci">
-          <Proxy FileSetName="shell_axi_gpio_0_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="shell.bd" FileRelPathName="ip/shell_reverseEndian64_0_0/shell_reverseEndian64_0_0.xci">
           <Proxy FileSetName="shell_reverseEndian64_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="shell.bd" FileRelPathName="ip/shell_axi_hwicap_0_0/shell_axi_hwicap_0_0.xci">
+          <Proxy FileSetName="shell_axi_hwicap_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="shell.bd" FileRelPathName="ip/shell_blk_mem_gen_0_0/shell_blk_mem_gen_0_0.xci">
+          <Proxy FileSetName="shell_blk_mem_gen_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="shell.bd" FileRelPathName="ip/shell_util_vector_logic_2_0/shell_util_vector_logic_2_0.xci">
+          <Proxy FileSetName="shell_util_vector_logic_2_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="shell.bd" FileRelPathName="ip/shell_clk_wiz_0_0/shell_clk_wiz_0_0.xci">
+          <Proxy FileSetName="shell_clk_wiz_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="shell.bd" FileRelPathName="ip/shell_gnd_0/shell_gnd_0.xci">
+          <Proxy FileSetName="shell_gnd_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="shell.bd" FileRelPathName="ip/shell_proc_sys_reset_1_0/shell_proc_sys_reset_1_0.xci">
+          <Proxy FileSetName="shell_proc_sys_reset_1_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="shell.bd" FileRelPathName="ip/shell_util_vector_logic_1_0/shell_util_vector_logic_1_0.xci">
+          <Proxy FileSetName="shell_util_vector_logic_1_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="shell.bd" FileRelPathName="ip/shell_util_vector_logic_0_0/shell_util_vector_logic_0_0.xci">
           <Proxy FileSetName="shell_util_vector_logic_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="shell.bd" FileRelPathName="ip/shell_util_vector_logic_1_0/shell_util_vector_logic_1_0.xci">
-          <Proxy FileSetName="shell_util_vector_logic_1_0"/>
+        <CompFileExtendedInfo CompFileName="shell.bd" FileRelPathName="ip/shell_xbar_0/shell_xbar_0.xci">
+          <Proxy FileSetName="shell_xbar_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="shell.bd" FileRelPathName="ip/shell_xbar_1/shell_xbar_1.xci">
+          <Proxy FileSetName="shell_xbar_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="shell.bd" FileRelPathName="ip/shell_mdm_1_0/shell_mdm_1_0.xci">
+          <Proxy FileSetName="shell_mdm_1_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="shell.bd" FileRelPathName="ip/shell_rst_clk_wiz_0_100M_0/shell_rst_clk_wiz_0_100M_0.xci">
+          <Proxy FileSetName="shell_rst_clk_wiz_0_100M_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="shell.bd" FileRelPathName="ip/shell_microblaze_0_0/shell_microblaze_0_0.xci">
+          <Proxy FileSetName="shell_microblaze_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="shell.bd" FileRelPathName="ip/shell_dlmb_v10_0/shell_dlmb_v10_0.xci">
+          <Proxy FileSetName="shell_dlmb_v10_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="shell.bd" FileRelPathName="ip/shell_ilmb_v10_0/shell_ilmb_v10_0.xci">
+          <Proxy FileSetName="shell_ilmb_v10_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="shell.bd" FileRelPathName="ip/shell_dlmb_bram_if_cntlr_0/shell_dlmb_bram_if_cntlr_0.xci">
           <Proxy FileSetName="shell_dlmb_bram_if_cntlr_0"/>
@@ -145,71 +169,11 @@
         <CompFileExtendedInfo CompFileName="shell.bd" FileRelPathName="ip/shell_pcs_config_vector_0/shell_pcs_config_vector_0.xci">
           <Proxy FileSetName="shell_pcs_config_vector_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="shell.bd" FileRelPathName="ip/shell_rx_register_slice_1_0/shell_rx_register_slice_1_0.xci">
-          <Proxy FileSetName="shell_rx_register_slice_1_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="shell.bd" FileRelPathName="ip/shell_rx_data_fifo_1_0/shell_rx_data_fifo_1_0.xci">
           <Proxy FileSetName="shell_rx_data_fifo_1_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="shell.bd" FileRelPathName="ip/shell_tx_data_fifo_0_0/shell_tx_data_fifo_0_0.xci">
           <Proxy FileSetName="shell_tx_data_fifo_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="shell.bd" FileRelPathName="ip/shell_auto_cc_6/shell_auto_cc_6.xci">
-          <Proxy FileSetName="shell_auto_cc_6"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="shell.bd" FileRelPathName="ip/shell_s01_data_fifo_0/shell_s01_data_fifo_0.xci">
-          <Proxy FileSetName="shell_s01_data_fifo_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="shell.bd" FileRelPathName="ip/shell_auto_us_cc_df_0/shell_auto_us_cc_df_0.xci">
-          <Proxy FileSetName="shell_auto_us_cc_df_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="shell.bd" FileRelPathName="ip/shell_auto_cc_4/shell_auto_cc_4.xci">
-          <Proxy FileSetName="shell_auto_cc_4"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="shell.bd" FileRelPathName="ip/shell_auto_cc_3/shell_auto_cc_3.xci">
-          <Proxy FileSetName="shell_auto_cc_3"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="shell.bd" FileRelPathName="ip/shell_auto_cc_2/shell_auto_cc_2.xci">
-          <Proxy FileSetName="shell_auto_cc_2"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="shell.bd" FileRelPathName="ip/shell_auto_cc_1/shell_auto_cc_1.xci">
-          <Proxy FileSetName="shell_auto_cc_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="shell.bd" FileRelPathName="ip/shell_auto_cc_0/shell_auto_cc_0.xci">
-          <Proxy FileSetName="shell_auto_cc_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="shell.bd" FileRelPathName="ip/shell_auto_cc_5/shell_auto_cc_5.xci">
-          <Proxy FileSetName="shell_auto_cc_5"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="shell.bd" FileRelPathName="ip/shell_rst_clk_wiz_0_100M_0/shell_rst_clk_wiz_0_100M_0.xci">
-          <Proxy FileSetName="shell_rst_clk_wiz_0_100M_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="shell.bd" FileRelPathName="ip/shell_mdm_1_0/shell_mdm_1_0.xci">
-          <Proxy FileSetName="shell_mdm_1_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="shell.bd" FileRelPathName="ip/shell_xbar_1/shell_xbar_1.xci">
-          <Proxy FileSetName="shell_xbar_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="shell.bd" FileRelPathName="ip/shell_xbar_0/shell_xbar_0.xci">
-          <Proxy FileSetName="shell_xbar_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="shell.bd" FileRelPathName="ip/shell_ddr4_0_0/shell_ddr4_0_0.xci">
-          <Proxy FileSetName="shell_ddr4_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="shell.bd" FileRelPathName="ip/shell_proc_sys_reset_1_0/shell_proc_sys_reset_1_0.xci">
-          <Proxy FileSetName="shell_proc_sys_reset_1_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="shell.bd" FileRelPathName="ip/shell_vio_0_0/shell_vio_0_0.xci">
-          <Proxy FileSetName="shell_vio_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="shell.bd" FileRelPathName="ip/shell_microblaze_0_0/shell_microblaze_0_0.xci">
-          <Proxy FileSetName="shell_microblaze_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="shell.bd" FileRelPathName="ip/shell_dlmb_v10_0/shell_dlmb_v10_0.xci">
-          <Proxy FileSetName="shell_dlmb_v10_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="shell.bd" FileRelPathName="ip/shell_ilmb_v10_0/shell_ilmb_v10_0.xci">
-          <Proxy FileSetName="shell_ilmb_v10_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="shell.bd" FileRelPathName="ip/ip_0/bd_01e2_xmac_0.xci">
           <Proxy FileSetName="bd_01e2_xmac_0"/>
@@ -414,12 +378,6 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="shell_axi_bram_ctrl_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/shell_axi_bram_ctrl_0_0">
-      <Config>
-        <Option Name="TopModule" Val="shell_axi_bram_ctrl_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
     <FileSet Name="shell_blk_mem_gen_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/shell_blk_mem_gen_0_0">
       <Config>
         <Option Name="TopModule" Val="shell_blk_mem_gen_0_0"/>
@@ -465,12 +423,6 @@
     <FileSet Name="shell_proc_sys_reset_1_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/shell_proc_sys_reset_1_0">
       <Config>
         <Option Name="TopModule" Val="shell_proc_sys_reset_1_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="shell_ddr4_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/shell_ddr4_0_0">
-      <Config>
-        <Option Name="TopModule" Val="shell_ddr4_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -624,12 +576,6 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="shell_rx_register_slice_1_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/shell_rx_register_slice_1_0">
-      <Config>
-        <Option Name="TopModule" Val="shell_rx_register_slice_1_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
     <FileSet Name="shell_rx_data_fifo_1_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/shell_rx_data_fifo_1_0">
       <Config>
         <Option Name="TopModule" Val="shell_rx_data_fifo_1_0"/>
@@ -639,60 +585,6 @@
     <FileSet Name="shell_tx_data_fifo_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/shell_tx_data_fifo_0_0">
       <Config>
         <Option Name="TopModule" Val="shell_tx_data_fifo_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="shell_auto_cc_6" Type="BlockSrcs" RelSrcDir="$PSRCDIR/shell_auto_cc_6">
-      <Config>
-        <Option Name="TopModule" Val="shell_auto_cc_6"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="shell_s01_data_fifo_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/shell_s01_data_fifo_0">
-      <Config>
-        <Option Name="TopModule" Val="shell_s01_data_fifo_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="shell_auto_us_cc_df_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/shell_auto_us_cc_df_0">
-      <Config>
-        <Option Name="TopModule" Val="shell_auto_us_cc_df_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="shell_auto_cc_4" Type="BlockSrcs" RelSrcDir="$PSRCDIR/shell_auto_cc_4">
-      <Config>
-        <Option Name="TopModule" Val="shell_auto_cc_4"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="shell_auto_cc_3" Type="BlockSrcs" RelSrcDir="$PSRCDIR/shell_auto_cc_3">
-      <Config>
-        <Option Name="TopModule" Val="shell_auto_cc_3"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="shell_auto_cc_2" Type="BlockSrcs" RelSrcDir="$PSRCDIR/shell_auto_cc_2">
-      <Config>
-        <Option Name="TopModule" Val="shell_auto_cc_2"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="shell_auto_cc_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/shell_auto_cc_1">
-      <Config>
-        <Option Name="TopModule" Val="shell_auto_cc_1"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="shell_auto_cc_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/shell_auto_cc_0">
-      <Config>
-        <Option Name="TopModule" Val="shell_auto_cc_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="shell_auto_cc_5" Type="BlockSrcs" RelSrcDir="$PSRCDIR/shell_auto_cc_5">
-      <Config>
-        <Option Name="TopModule" Val="shell_auto_cc_5"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -785,15 +677,6 @@
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="shell_axi_bram_ctrl_0_0_synth_1" Type="Ft3:Synth" SrcSet="shell_axi_bram_ctrl_0_0" Part="xcku115-flva1517-2-e" ConstrsSet="shell_axi_bram_ctrl_0_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/shell_axi_bram_ctrl_0_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
     <Run Id="shell_blk_mem_gen_0_0_synth_1" Type="Ft3:Synth" SrcSet="shell_blk_mem_gen_0_0" Part="xcku115-flva1517-2-e" ConstrsSet="shell_blk_mem_gen_0_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/shell_blk_mem_gen_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
@@ -858,15 +741,6 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
     <Run Id="shell_proc_sys_reset_1_0_synth_1" Type="Ft3:Synth" SrcSet="shell_proc_sys_reset_1_0" Part="xcku115-flva1517-2-e" ConstrsSet="shell_proc_sys_reset_1_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/shell_proc_sys_reset_1_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="shell_ddr4_0_0_synth_1" Type="Ft3:Synth" SrcSet="shell_ddr4_0_0" Part="xcku115-flva1517-2-e" ConstrsSet="shell_ddr4_0_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/shell_ddr4_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design"/>
@@ -1100,15 +974,6 @@
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="shell_rx_register_slice_1_0_synth_1" Type="Ft3:Synth" SrcSet="shell_rx_register_slice_1_0" Part="xcku115-flva1517-2-e" ConstrsSet="shell_rx_register_slice_1_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/shell_rx_register_slice_1_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
     <Run Id="shell_rx_data_fifo_1_0_synth_1" Type="Ft3:Synth" SrcSet="shell_rx_data_fifo_1_0" Part="xcku115-flva1517-2-e" ConstrsSet="shell_rx_data_fifo_1_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/shell_rx_data_fifo_1_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
@@ -1119,87 +984,6 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
     <Run Id="shell_tx_data_fifo_0_0_synth_1" Type="Ft3:Synth" SrcSet="shell_tx_data_fifo_0_0" Part="xcku115-flva1517-2-e" ConstrsSet="shell_tx_data_fifo_0_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/shell_tx_data_fifo_0_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="shell_auto_cc_6_synth_1" Type="Ft3:Synth" SrcSet="shell_auto_cc_6" Part="xcku115-flva1517-2-e" ConstrsSet="shell_auto_cc_6" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/shell_auto_cc_6_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="shell_s01_data_fifo_0_synth_1" Type="Ft3:Synth" SrcSet="shell_s01_data_fifo_0" Part="xcku115-flva1517-2-e" ConstrsSet="shell_s01_data_fifo_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/shell_s01_data_fifo_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="shell_auto_us_cc_df_0_synth_1" Type="Ft3:Synth" SrcSet="shell_auto_us_cc_df_0" Part="xcku115-flva1517-2-e" ConstrsSet="shell_auto_us_cc_df_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/shell_auto_us_cc_df_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="shell_auto_cc_4_synth_1" Type="Ft3:Synth" SrcSet="shell_auto_cc_4" Part="xcku115-flva1517-2-e" ConstrsSet="shell_auto_cc_4" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/shell_auto_cc_4_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="shell_auto_cc_3_synth_1" Type="Ft3:Synth" SrcSet="shell_auto_cc_3" Part="xcku115-flva1517-2-e" ConstrsSet="shell_auto_cc_3" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/shell_auto_cc_3_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="shell_auto_cc_2_synth_1" Type="Ft3:Synth" SrcSet="shell_auto_cc_2" Part="xcku115-flva1517-2-e" ConstrsSet="shell_auto_cc_2" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/shell_auto_cc_2_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="shell_auto_cc_1_synth_1" Type="Ft3:Synth" SrcSet="shell_auto_cc_1" Part="xcku115-flva1517-2-e" ConstrsSet="shell_auto_cc_1" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/shell_auto_cc_1_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="shell_auto_cc_0_synth_1" Type="Ft3:Synth" SrcSet="shell_auto_cc_0" Part="xcku115-flva1517-2-e" ConstrsSet="shell_auto_cc_0" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/shell_auto_cc_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="shell_auto_cc_5_synth_1" Type="Ft3:Synth" SrcSet="shell_auto_cc_5" Part="xcku115-flva1517-2-e" ConstrsSet="shell_auto_cc_5" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" Dir="$PRUNDIR/shell_auto_cc_5_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design"/>
@@ -1306,22 +1090,6 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
     <Run Id="shell_util_vector_logic_2_0_impl_1" Type="Ft2:EntireDesign" Part="xcku115-flva1517-2-e" ConstrsSet="shell_util_vector_logic_2_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="shell_util_vector_logic_2_0_synth_1" IncludeInArchive="false">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="shell_axi_bram_ctrl_0_0_impl_1" Type="Ft2:EntireDesign" Part="xcku115-flva1517-2-e" ConstrsSet="shell_axi_bram_ctrl_0_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="shell_axi_bram_ctrl_0_0_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
         <Step Id="init_design"/>
@@ -1450,22 +1218,6 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
     <Run Id="shell_proc_sys_reset_1_0_impl_1" Type="Ft2:EntireDesign" Part="xcku115-flva1517-2-e" ConstrsSet="shell_proc_sys_reset_1_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="shell_proc_sys_reset_1_0_synth_1" IncludeInArchive="false">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="shell_ddr4_0_0_impl_1" Type="Ft2:EntireDesign" Part="xcku115-flva1517-2-e" ConstrsSet="shell_ddr4_0_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="shell_ddr4_0_0_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
         <Step Id="init_design"/>
@@ -1881,22 +1633,6 @@
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="shell_rx_register_slice_1_0_impl_1" Type="Ft2:EntireDesign" Part="xcku115-flva1517-2-e" ConstrsSet="shell_rx_register_slice_1_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="shell_rx_register_slice_1_0_synth_1" IncludeInArchive="false">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
     <Run Id="shell_rx_data_fifo_1_0_impl_1" Type="Ft2:EntireDesign" Part="xcku115-flva1517-2-e" ConstrsSet="shell_rx_data_fifo_1_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="shell_rx_data_fifo_1_0_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
@@ -1929,165 +1665,7 @@
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="shell_auto_cc_6_impl_1" Type="Ft2:EntireDesign" Part="xcku115-flva1517-2-e" ConstrsSet="shell_auto_cc_6" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="shell_auto_cc_6_synth_1" IncludeInArchive="false">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="shell_s01_data_fifo_0_impl_1" Type="Ft2:EntireDesign" Part="xcku115-flva1517-2-e" ConstrsSet="shell_s01_data_fifo_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="shell_s01_data_fifo_0_synth_1" IncludeInArchive="false">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="shell_auto_us_cc_df_0_impl_1" Type="Ft2:EntireDesign" Part="xcku115-flva1517-2-e" ConstrsSet="shell_auto_us_cc_df_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="shell_auto_us_cc_df_0_synth_1" IncludeInArchive="false">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="shell_auto_cc_4_impl_1" Type="Ft2:EntireDesign" Part="xcku115-flva1517-2-e" ConstrsSet="shell_auto_cc_4" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="shell_auto_cc_4_synth_1" IncludeInArchive="false">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="shell_auto_cc_3_impl_1" Type="Ft2:EntireDesign" Part="xcku115-flva1517-2-e" ConstrsSet="shell_auto_cc_3" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="shell_auto_cc_3_synth_1" IncludeInArchive="false">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="shell_auto_cc_2_impl_1" Type="Ft2:EntireDesign" Part="xcku115-flva1517-2-e" ConstrsSet="shell_auto_cc_2" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="shell_auto_cc_2_synth_1" IncludeInArchive="false">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="shell_auto_cc_1_impl_1" Type="Ft2:EntireDesign" Part="xcku115-flva1517-2-e" ConstrsSet="shell_auto_cc_1" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="shell_auto_cc_1_synth_1" IncludeInArchive="false">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="shell_auto_cc_0_impl_1" Type="Ft2:EntireDesign" Part="xcku115-flva1517-2-e" ConstrsSet="shell_auto_cc_0" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="shell_auto_cc_0_synth_1" IncludeInArchive="false">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="shell_auto_cc_5_impl_1" Type="Ft2:EntireDesign" Part="xcku115-flva1517-2-e" ConstrsSet="shell_auto_cc_5" Description="Default settings for Implementation." WriteIncrSynthDcp="false" SynthRun="shell_auto_cc_5_synth_1" IncludeInArchive="false">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
   </Runs>
-  <MsgRule>
-    <MsgAttr Name="RuleType" Val="0"/>
-    <MsgAttr Name="Limit" Val="-1"/>
-    <MsgAttr Name="NewSeverity" Val="ANY"/>
-    <MsgAttr Name="Id" Val="[BD 41-1271]"/>
-    <MsgAttr Name="Severity" Val="ANY"/>
-    <MsgAttr Name="ShowRule" Val="1"/>
-    <MsgAttr Name="RuleSource" Val="2"/>
-    <MsgAttr Name="StringIsRegExp" Val="0"/>
-    <MsgAttr Name="RuleId" Val="10"/>
-    <MsgAttr Name="Note" Val=""/>
-    <MsgAttr Name="Author" Val=""/>
-    <MsgAttr Name="CreatedTimestamp" Val=""/>
-  </MsgRule>
   <MsgRule>
     <MsgAttr Name="RuleType" Val="0"/>
     <MsgAttr Name="Limit" Val="-1"/>
@@ -2097,7 +1675,21 @@
     <MsgAttr Name="ShowRule" Val="1"/>
     <MsgAttr Name="RuleSource" Val="2"/>
     <MsgAttr Name="StringIsRegExp" Val="0"/>
-    <MsgAttr Name="RuleId" Val="9"/>
+    <MsgAttr Name="RuleId" Val="1"/>
+    <MsgAttr Name="Note" Val=""/>
+    <MsgAttr Name="Author" Val=""/>
+    <MsgAttr Name="CreatedTimestamp" Val=""/>
+  </MsgRule>
+  <MsgRule>
+    <MsgAttr Name="RuleType" Val="0"/>
+    <MsgAttr Name="Limit" Val="-1"/>
+    <MsgAttr Name="NewSeverity" Val="ANY"/>
+    <MsgAttr Name="Id" Val="[BD 41-1271]"/>
+    <MsgAttr Name="Severity" Val="ANY"/>
+    <MsgAttr Name="ShowRule" Val="1"/>
+    <MsgAttr Name="RuleSource" Val="2"/>
+    <MsgAttr Name="StringIsRegExp" Val="0"/>
+    <MsgAttr Name="RuleId" Val="2"/>
     <MsgAttr Name="Note" Val=""/>
     <MsgAttr Name="Author" Val=""/>
     <MsgAttr Name="CreatedTimestamp" Val=""/>

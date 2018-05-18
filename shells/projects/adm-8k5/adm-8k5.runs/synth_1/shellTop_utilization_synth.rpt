@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
-| Date         : Wed May 16 15:54:58 2018
-| Host         : ug238 running 64-bit Debian GNU/Linux 9.4 (stretch)
+| Date         : Thu May 17 20:58:49 2018
+| Host         : integrators running 64-bit Ubuntu 16.04.4 LTS
 | Command      : report_utilization -file shellTop_utilization_synth.rpt -pb shellTop_utilization_synth.pb
 | Design       : shellTop
 | Device       : xcku115flva1517-2
@@ -179,6 +179,7 @@ Table of Contents
 | shell_vio_0_0               |    1 |
 | shell_vcc_0                 |    1 |
 | shell_util_vector_logic_2_0 |    1 |
+| shell_util_vector_logic_1_1 |    1 |
 | shell_util_vector_logic_1_0 |    1 |
 | shell_util_vector_logic_0_0 |    1 |
 | shell_util_ds_buf_0         |    1 |

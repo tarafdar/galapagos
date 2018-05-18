@@ -58,7 +58,7 @@ set run_remote_bd_flow 1
 if { $run_remote_bd_flow == 1 } {
   # Set the reference directory for source file relative paths (by default 
   # the value is script directory path)
-  set origin_dir ./shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_ddr4_0_0/bd_0
+  set origin_dir ./adm-8k5.srcs/sources_1/bd/srcs/ip/shell_ddr4_0_0/bd_0
 
   # Use origin directory path location variable, if specified in the tcl shell
   if { [info exists ::origin_dir_loc] } {

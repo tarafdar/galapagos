@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="shell_reverseEndian64_1_0_synth_1" LaunchPart="xcku115-flva1517-2-e" LaunchTime="1526399784">
-  <File Type="RDS-RDS" Name="shell_reverseEndian64_1_0.vds"/>
-  <File Type="RDS-DCP" Name="shell_reverseEndian64_1_0.dcp"/>
   <File Type="PA-TCL" Name="shell_reverseEndian64_1_0.tcl"/>
+  <File Type="RDS-DCP" Name="shell_reverseEndian64_1_0.dcp"/>
+  <File Type="RDS-RDS" Name="shell_reverseEndian64_1_0.vds"/>
   <File Type="REPORTS-TCL" Name="shell_reverseEndian64_1_0_reports.tcl"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/shell_reverseEndian64_1_0">
     <File Path="$PSRCDIR/sources_1/bd/srcs/ip/shell_reverseEndian64_1_0/shell_reverseEndian64_1_0.xci">

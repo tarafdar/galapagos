@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
--- Date        : Tue May 15 12:22:32 2018
+-- Date        : Tue May 15 12:22:26 2018
 -- Host        : ug238 running 64-bit Debian GNU/Linux 9.4 (stretch)
--- Command     : write_vhdl -force -mode funcsim
---               /nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_us_cc_df_0/shell_auto_us_cc_df_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top shell_auto_us_cc_df_0 -prefix
+--               shell_auto_us_cc_df_0_ shell_auto_us_cc_df_0_sim_netlist.vhdl
 -- Design      : shell_auto_us_cc_df_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -345,8 +345,6 @@ entity shell_auto_us_cc_df_0_axi_register_slice_v2_1_16_axic_register_slice is
     \m_payload_i_reg[71]_0\ : in STD_LOGIC_VECTOR ( 25 downto 0 );
     m_valid_i_reg_0 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of shell_auto_us_cc_df_0_axi_register_slice_v2_1_16_axic_register_slice : entity is "axi_register_slice_v2_1_16_axic_register_slice";
 end shell_auto_us_cc_df_0_axi_register_slice_v2_1_16_axic_register_slice;
 
 architecture STRUCTURE of shell_auto_us_cc_df_0_axi_register_slice_v2_1_16_axic_register_slice is
@@ -7759,8 +7757,6 @@ entity shell_auto_us_cc_df_0_generic_baseblocks_v2_1_0_command_fifo is
     s_axi_awready : in STD_LOGIC;
     \m_payload_i_reg[88]\ : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of shell_auto_us_cc_df_0_generic_baseblocks_v2_1_0_command_fifo : entity is "generic_baseblocks_v2_1_0_command_fifo";
 end shell_auto_us_cc_df_0_generic_baseblocks_v2_1_0_command_fifo;
 
 architecture STRUCTURE of shell_auto_us_cc_df_0_generic_baseblocks_v2_1_0_command_fifo is
@@ -8269,8 +8265,6 @@ entity shell_auto_us_cc_df_0_xpm_cdc_async_rst is
   attribute INIT_SYNC_FF of shell_auto_us_cc_df_0_xpm_cdc_async_rst : entity is 0;
   attribute INV_DEF_VAL : string;
   attribute INV_DEF_VAL of shell_auto_us_cc_df_0_xpm_cdc_async_rst : entity is "1'b1";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of shell_auto_us_cc_df_0_xpm_cdc_async_rst : entity is "xpm_cdc_async_rst";
   attribute RST_ACTIVE_HIGH : integer;
   attribute RST_ACTIVE_HIGH of shell_auto_us_cc_df_0_xpm_cdc_async_rst : entity is 1;
   attribute VERSION : integer;
@@ -8966,8 +8960,6 @@ entity shell_auto_us_cc_df_0_xpm_cdc_gray is
   attribute DEST_SYNC_FF of shell_auto_us_cc_df_0_xpm_cdc_gray : entity is 3;
   attribute INIT_SYNC_FF : integer;
   attribute INIT_SYNC_FF of shell_auto_us_cc_df_0_xpm_cdc_gray : entity is 0;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of shell_auto_us_cc_df_0_xpm_cdc_gray : entity is "xpm_cdc_gray";
   attribute REG_OUTPUT : integer;
   attribute REG_OUTPUT of shell_auto_us_cc_df_0_xpm_cdc_gray : entity is 1;
   attribute SIM_ASSERT_CHK : integer;
@@ -13296,8 +13288,6 @@ entity shell_auto_us_cc_df_0_xpm_cdc_single is
   attribute DEST_SYNC_FF of shell_auto_us_cc_df_0_xpm_cdc_single : entity is 5;
   attribute INIT_SYNC_FF : integer;
   attribute INIT_SYNC_FF of shell_auto_us_cc_df_0_xpm_cdc_single : entity is 0;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of shell_auto_us_cc_df_0_xpm_cdc_single : entity is "xpm_cdc_single";
   attribute SIM_ASSERT_CHK : integer;
   attribute SIM_ASSERT_CHK of shell_auto_us_cc_df_0_xpm_cdc_single : entity is 0;
   attribute SRC_INPUT_REG : integer;
@@ -14257,8 +14247,6 @@ entity shell_auto_us_cc_df_0_blk_mem_gen_prim_wrapper is
     dina : in STD_LOGIC_VECTOR ( 71 downto 0 );
     wea : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of shell_auto_us_cc_df_0_blk_mem_gen_prim_wrapper : entity is "blk_mem_gen_prim_wrapper";
 end shell_auto_us_cc_df_0_blk_mem_gen_prim_wrapper;
 
 architecture STRUCTURE of shell_auto_us_cc_df_0_blk_mem_gen_prim_wrapper is
@@ -16644,8 +16632,6 @@ entity shell_auto_us_cc_df_0_bram_fifo_rstlogic is
     srst : in STD_LOGIC;
     clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of shell_auto_us_cc_df_0_bram_fifo_rstlogic : entity is "bram_fifo_rstlogic";
 end shell_auto_us_cc_df_0_bram_fifo_rstlogic;
 
 architecture STRUCTURE of shell_auto_us_cc_df_0_bram_fifo_rstlogic is
@@ -21243,8 +21229,6 @@ entity shell_auto_us_cc_df_0_rd_bin_cntr is
     m_aclk : in STD_LOGIC;
     \ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.sckt_rd_rst_ic_reg\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of shell_auto_us_cc_df_0_rd_bin_cntr : entity is "rd_bin_cntr";
 end shell_auto_us_cc_df_0_rd_bin_cntr;
 
 architecture STRUCTURE of shell_auto_us_cc_df_0_rd_bin_cntr is
@@ -22884,8 +22868,6 @@ entity shell_auto_us_cc_df_0_rd_fwft is
     WR_PNTR_RD : in STD_LOGIC_VECTOR ( 0 to 0 );
     Q : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of shell_auto_us_cc_df_0_rd_fwft : entity is "rd_fwft";
 end shell_auto_us_cc_df_0_rd_fwft;
 
 architecture STRUCTURE of shell_auto_us_cc_df_0_rd_fwft is
@@ -24607,8 +24589,6 @@ entity shell_auto_us_cc_df_0_rd_status_flags_as is
     m_aclk : in STD_LOGIC;
     \ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.sckt_rd_rst_ic_reg\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of shell_auto_us_cc_df_0_rd_status_flags_as : entity is "rd_status_flags_as";
 end shell_auto_us_cc_df_0_rd_status_flags_as;
 
 architecture STRUCTURE of shell_auto_us_cc_df_0_rd_status_flags_as is
@@ -24823,8 +24803,6 @@ entity shell_auto_us_cc_df_0_rd_status_flags_ss is
     ram_full_fb_i_reg : in STD_LOGIC;
     clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of shell_auto_us_cc_df_0_rd_status_flags_ss : entity is "rd_status_flags_ss";
 end shell_auto_us_cc_df_0_rd_status_flags_ss;
 
 architecture STRUCTURE of shell_auto_us_cc_df_0_rd_status_flags_ss is
@@ -24938,8 +24916,6 @@ entity shell_auto_us_cc_df_0_wr_bin_cntr is
     s_aclk : in STD_LOGIC;
     AR : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of shell_auto_us_cc_df_0_wr_bin_cntr : entity is "wr_bin_cntr";
 end shell_auto_us_cc_df_0_wr_bin_cntr;
 
 architecture STRUCTURE of shell_auto_us_cc_df_0_wr_bin_cntr is
@@ -27283,8 +27259,6 @@ entity shell_auto_us_cc_df_0_wr_status_flags_as is
     AR : in STD_LOGIC_VECTOR ( 0 to 0 );
     wr_en : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of shell_auto_us_cc_df_0_wr_status_flags_as : entity is "wr_status_flags_as";
 end shell_auto_us_cc_df_0_wr_status_flags_as;
 
 architecture STRUCTURE of shell_auto_us_cc_df_0_wr_status_flags_as is
@@ -27565,8 +27539,6 @@ entity shell_auto_us_cc_df_0_wr_status_flags_ss is
     clk : in STD_LOGIC;
     wr_en : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of shell_auto_us_cc_df_0_wr_status_flags_ss : entity is "wr_status_flags_ss";
 end shell_auto_us_cc_df_0_wr_status_flags_ss;
 
 architecture STRUCTURE of shell_auto_us_cc_df_0_wr_status_flags_ss is
@@ -27751,8 +27723,6 @@ entity shell_auto_us_cc_df_0_axi_dwidth_converter_v2_1_16_a_upsizer is
     s_axi_awready : in STD_LOGIC;
     Q : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of shell_auto_us_cc_df_0_axi_dwidth_converter_v2_1_16_a_upsizer : entity is "axi_dwidth_converter_v2_1_16_a_upsizer";
 end shell_auto_us_cc_df_0_axi_dwidth_converter_v2_1_16_a_upsizer;
 
 architecture STRUCTURE of shell_auto_us_cc_df_0_axi_dwidth_converter_v2_1_16_a_upsizer is
@@ -28023,8 +27993,6 @@ entity shell_auto_us_cc_df_0_axi_register_slice_v2_1_16_axi_register_slice is
     \m_payload_i_reg[71]\ : in STD_LOGIC_VECTOR ( 25 downto 0 );
     m_valid_i_reg : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of shell_auto_us_cc_df_0_axi_register_slice_v2_1_16_axi_register_slice : entity is "axi_register_slice_v2_1_16_axi_register_slice";
 end shell_auto_us_cc_df_0_axi_register_slice_v2_1_16_axi_register_slice;
 
 architecture STRUCTURE of shell_auto_us_cc_df_0_axi_register_slice_v2_1_16_axi_register_slice is
@@ -28377,8 +28345,6 @@ entity shell_auto_us_cc_df_0_blk_mem_gen_prim_width is
     dina : in STD_LOGIC_VECTOR ( 71 downto 0 );
     wea : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of shell_auto_us_cc_df_0_blk_mem_gen_prim_width : entity is "blk_mem_gen_prim_width";
 end shell_auto_us_cc_df_0_blk_mem_gen_prim_width;
 
 architecture STRUCTURE of shell_auto_us_cc_df_0_blk_mem_gen_prim_width is
@@ -28662,8 +28628,6 @@ entity shell_auto_us_cc_df_0_clk_x_pntrs is
     \gic0.gc0.count_d2_reg[4]\ : in STD_LOGIC_VECTOR ( 4 downto 0 );
     m_aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of shell_auto_us_cc_df_0_clk_x_pntrs : entity is "clk_x_pntrs";
 end shell_auto_us_cc_df_0_clk_x_pntrs;
 
 architecture STRUCTURE of shell_auto_us_cc_df_0_clk_x_pntrs is
@@ -32696,8 +32660,6 @@ entity shell_auto_us_cc_df_0_rd_logic is
     \dest_out_bin_ff_reg[3]_0\ : in STD_LOGIC;
     WR_PNTR_RD : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of shell_auto_us_cc_df_0_rd_logic : entity is "rd_logic";
 end shell_auto_us_cc_df_0_rd_logic;
 
 architecture STRUCTURE of shell_auto_us_cc_df_0_rd_logic is
@@ -33124,8 +33086,6 @@ entity shell_auto_us_cc_df_0_reset_blk_ramfifo is
     wr_clk : in STD_LOGIC;
     rd_clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of shell_auto_us_cc_df_0_reset_blk_ramfifo : entity is "reset_blk_ramfifo";
 end shell_auto_us_cc_df_0_reset_blk_ramfifo;
 
 architecture STRUCTURE of shell_auto_us_cc_df_0_reset_blk_ramfifo is
@@ -34487,8 +34447,6 @@ entity shell_auto_us_cc_df_0_wr_logic is
     \dest_out_bin_ff_reg[0]_0\ : in STD_LOGIC;
     RD_PNTR_WR : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of shell_auto_us_cc_df_0_wr_logic : entity is "wr_logic";
 end shell_auto_us_cc_df_0_wr_logic;
 
 architecture STRUCTURE of shell_auto_us_cc_df_0_wr_logic is
@@ -34891,8 +34849,6 @@ entity shell_auto_us_cc_df_0_blk_mem_gen_generic_cstr is
     dina : in STD_LOGIC_VECTOR ( 287 downto 0 );
     wea : in STD_LOGIC_VECTOR ( 63 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of shell_auto_us_cc_df_0_blk_mem_gen_generic_cstr : entity is "blk_mem_gen_generic_cstr";
 end shell_auto_us_cc_df_0_blk_mem_gen_generic_cstr;
 
 architecture STRUCTURE of shell_auto_us_cc_df_0_blk_mem_gen_generic_cstr is
@@ -35007,8 +34963,6 @@ entity shell_auto_us_cc_df_0_fifo_generator_ramfifo is
     rd_en : in STD_LOGIC;
     wr_en : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of shell_auto_us_cc_df_0_fifo_generator_ramfifo : entity is "fifo_generator_ramfifo";
 end shell_auto_us_cc_df_0_fifo_generator_ramfifo;
 
 architecture STRUCTURE of shell_auto_us_cc_df_0_fifo_generator_ramfifo is
@@ -35728,8 +35682,6 @@ entity shell_auto_us_cc_df_0_blk_mem_gen_top is
     dina : in STD_LOGIC_VECTOR ( 287 downto 0 );
     wea : in STD_LOGIC_VECTOR ( 63 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of shell_auto_us_cc_df_0_blk_mem_gen_top : entity is "blk_mem_gen_top";
 end shell_auto_us_cc_df_0_blk_mem_gen_top;
 
 architecture STRUCTURE of shell_auto_us_cc_df_0_blk_mem_gen_top is
@@ -35897,8 +35849,6 @@ entity shell_auto_us_cc_df_0_fifo_generator_top is
     rd_en : in STD_LOGIC;
     wr_en : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of shell_auto_us_cc_df_0_fifo_generator_top : entity is "fifo_generator_top";
 end shell_auto_us_cc_df_0_fifo_generator_top;
 
 architecture STRUCTURE of shell_auto_us_cc_df_0_fifo_generator_top is
@@ -36100,8 +36050,6 @@ entity shell_auto_us_cc_df_0_blk_mem_gen_v8_4_1_synth is
     dina : in STD_LOGIC_VECTOR ( 287 downto 0 );
     wea : in STD_LOGIC_VECTOR ( 63 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of shell_auto_us_cc_df_0_blk_mem_gen_v8_4_1_synth : entity is "blk_mem_gen_v8_4_1_synth";
 end shell_auto_us_cc_df_0_blk_mem_gen_v8_4_1_synth;
 
 architecture STRUCTURE of shell_auto_us_cc_df_0_blk_mem_gen_v8_4_1_synth is
@@ -36177,8 +36125,6 @@ entity shell_auto_us_cc_df_0_fifo_generator_v13_2_2_synth is
     rd_en : in STD_LOGIC;
     wr_en : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of shell_auto_us_cc_df_0_fifo_generator_v13_2_2_synth : entity is "fifo_generator_v13_2_2_synth";
 end shell_auto_us_cc_df_0_fifo_generator_v13_2_2_synth;
 
 architecture STRUCTURE of shell_auto_us_cc_df_0_fifo_generator_v13_2_2_synth is
@@ -36582,8 +36528,6 @@ entity shell_auto_us_cc_df_0_blk_mem_gen_v8_4_1 is
   attribute C_XDEVICEFAMILY of shell_auto_us_cc_df_0_blk_mem_gen_v8_4_1 : entity is "kintexu";
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of shell_auto_us_cc_df_0_blk_mem_gen_v8_4_1 : entity is "yes";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of shell_auto_us_cc_df_0_blk_mem_gen_v8_4_1 : entity is "blk_mem_gen_v8_4_1";
 end shell_auto_us_cc_df_0_blk_mem_gen_v8_4_1;
 
 architecture STRUCTURE of shell_auto_us_cc_df_0_blk_mem_gen_v8_4_1 is
@@ -38442,8 +38386,6 @@ entity shell_auto_us_cc_df_0_fifo_generator_v13_2_2 is
   attribute C_WR_PNTR_WIDTH_WRCH of shell_auto_us_cc_df_0_fifo_generator_v13_2_2 : entity is 4;
   attribute C_WR_RESPONSE_LATENCY : integer;
   attribute C_WR_RESPONSE_LATENCY of shell_auto_us_cc_df_0_fifo_generator_v13_2_2 : entity is 1;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of shell_auto_us_cc_df_0_fifo_generator_v13_2_2 : entity is "fifo_generator_v13_2_2";
 end shell_auto_us_cc_df_0_fifo_generator_v13_2_2;
 
 architecture STRUCTURE of shell_auto_us_cc_df_0_fifo_generator_v13_2_2 is
@@ -45405,8 +45347,6 @@ entity shell_auto_us_cc_df_0_axi_dwidth_converter_v2_1_16_w_upsizer_pktfifo is
     \m_payload_i_reg[2]_0\ : in STD_LOGIC;
     \m_payload_i_reg[2]_1\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of shell_auto_us_cc_df_0_axi_dwidth_converter_v2_1_16_w_upsizer_pktfifo : entity is "axi_dwidth_converter_v2_1_16_w_upsizer_pktfifo";
 end shell_auto_us_cc_df_0_axi_dwidth_converter_v2_1_16_w_upsizer_pktfifo;
 
 architecture STRUCTURE of shell_auto_us_cc_df_0_axi_dwidth_converter_v2_1_16_w_upsizer_pktfifo is
@@ -71876,8 +71816,6 @@ entity shell_auto_us_cc_df_0_axi_dwidth_converter_v2_1_16_r_upsizer_pktfifo is
     m_axi_rlast : in STD_LOGIC;
     m_axi_rresp : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of shell_auto_us_cc_df_0_axi_dwidth_converter_v2_1_16_r_upsizer_pktfifo : entity is "axi_dwidth_converter_v2_1_16_r_upsizer_pktfifo";
 end shell_auto_us_cc_df_0_axi_dwidth_converter_v2_1_16_r_upsizer_pktfifo;
 
 architecture STRUCTURE of shell_auto_us_cc_df_0_axi_dwidth_converter_v2_1_16_r_upsizer_pktfifo is
@@ -81810,8 +81748,6 @@ entity shell_auto_us_cc_df_0_axi_dwidth_converter_v2_1_16_axi_upsizer is
     m_axi_arready : in STD_LOGIC;
     m_axi_rlast : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of shell_auto_us_cc_df_0_axi_dwidth_converter_v2_1_16_axi_upsizer : entity is "axi_dwidth_converter_v2_1_16_axi_upsizer";
 end shell_auto_us_cc_df_0_axi_dwidth_converter_v2_1_16_axi_upsizer;
 
 architecture STRUCTURE of shell_auto_us_cc_df_0_axi_dwidth_converter_v2_1_16_axi_upsizer is
@@ -83317,8 +83253,6 @@ entity shell_auto_us_cc_df_0_axi_dwidth_converter_v2_1_16_top is
   attribute C_S_AXI_ID_WIDTH of shell_auto_us_cc_df_0_axi_dwidth_converter_v2_1_16_top : entity is 4;
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of shell_auto_us_cc_df_0_axi_dwidth_converter_v2_1_16_top : entity is "yes";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of shell_auto_us_cc_df_0_axi_dwidth_converter_v2_1_16_top : entity is "axi_dwidth_converter_v2_1_16_top";
   attribute P_AXI3 : integer;
   attribute P_AXI3 of shell_auto_us_cc_df_0_axi_dwidth_converter_v2_1_16_top : entity is 1;
   attribute P_AXI4 : integer;

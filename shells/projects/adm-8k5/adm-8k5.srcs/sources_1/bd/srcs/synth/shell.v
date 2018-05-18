@@ -1,8 +1,8 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
-//Date        : Tue May 15 11:55:28 2018
-//Host        : ug238 running 64-bit Debian GNU/Linux 9.4 (stretch)
+//Date        : Thu May 17 20:56:23 2018
+//Host        : integrators running 64-bit Ubuntu 16.04.4 LTS
 //Command     : generate_target shell.bd
 //Design      : shell
 //Purpose     : IP block netlist
@@ -4745,7 +4745,7 @@ module s01_couplers_imp_VOMHM4
         .s_axi_wvalid(s01_couplers_to_auto_cc_WVALID));
 endmodule
 
-(* CORE_GENERATION_INFO = "shell,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=shell,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=69,numReposBlks=48,numNonXlnxBlks=0,numHierBlks=21,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=2,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "shell.hwdef" *) 
+(* CORE_GENERATION_INFO = "shell,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=shell,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=70,numReposBlks=49,numNonXlnxBlks=0,numHierBlks=21,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=2,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "shell.hwdef" *) 
 module shell
    (ARESETN,
     CLK_DATA,
@@ -5296,6 +5296,7 @@ module shell
   wire reverseEndian64_1_stream_out_TVALID;
   wire rxn_1;
   wire rxp_1;
+  wire [0:0]sys_rst_1;
   wire [0:0]util_vector_logic_0_Res;
   wire [0:0]util_vector_logic_1_Res;
   wire [0:0]util_vector_logic_2_Res;
@@ -5813,7 +5814,7 @@ module shell
         .c0_sys_clk_p(c0_sys_clk_p_0_1),
         .clk156_25(network_clk_156),
         .m_axi_mm2s_aresetn(util_vector_logic_2_Res),
-        .sys_rst(util_vector_logic_2_Res));
+        .sys_rst(sys_rst_1));
   network_imp_10F7WL8 network
        (.M_AXIS_tdata(network_M_AXIS_TDATA),
         .M_AXIS_tkeep(network_M_AXIS_TKEEP),
@@ -6037,6 +6038,9 @@ module shell
        (.Op1(PCIe_axi_aresetn),
         .Op2(util_vector_logic_0_Res),
         .Res(util_vector_logic_2_Res));
+  shell_util_vector_logic_1_1 util_vector_logic_3
+       (.Op1(util_vector_logic_2_Res),
+        .Res(sys_rst_1));
   shell_vio_0_0 vio_0
        (.clk(network_clk_156),
         .probe_out0(vio_0_probe_out0));

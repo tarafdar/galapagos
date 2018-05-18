@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="35">
   <CompositeFile CompositeFileTopName="shell" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1526399777"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1526399777"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1526399777"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1526399777"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1526590606"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1526590606"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1526590606"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1526590606"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip/shell_util_vector_logic_0_0/shell_util_vector_logic_0_0.xci" Type="IP">
         <Instance HierarchyPath="util_vector_logic_0"/>
@@ -48,6 +48,7 @@
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip/shell_axi_interconnect_0_0/shell_axi_interconnect_0_0.xci" Type="IP">
+        <Instance HierarchyPath="axi_interconnect_0"/>
         <Properties IsEditable="false" IsVisible="false" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -135,6 +136,7 @@
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip/shell_mem_interconnect_0/shell_mem_interconnect_0.xci" Type="IP">
+        <Instance HierarchyPath="mem_interface/mem_interconnect"/>
         <Properties IsEditable="false" IsVisible="false" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -174,6 +176,7 @@
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip/shell_microblaze_0_axi_periph_0/shell_microblaze_0_axi_periph_0.xci" Type="IP">
+        <Instance HierarchyPath="mb_system/microblaze_0_axi_periph"/>
         <Properties IsEditable="false" IsVisible="false" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -340,6 +343,25 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
+      <File Name="synth/shell.v" Type="Verilog">
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+      </File>
+      <File Name="sim/shell.v" Type="Verilog">
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/shell_util_vector_logic_1_1/shell_util_vector_logic_1_1.xci" Type="IP">
+        <Instance HierarchyPath="util_vector_logic_3"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
       <File Name="ip/shell_auto_cc_6/shell_auto_cc_6.xci" Type="IP">
         <Instance HierarchyPath="mem_interface/mem_interconnect/m00_couplers/auto_cc"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
@@ -410,17 +432,6 @@
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="synth/shell.v" Type="Verilog">
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-      </File>
-      <File Name="sim/shell.v" Type="Verilog">
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
-        <Library Name="xil_defaultlib"/>
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="shell.bmm" Type="BMM">

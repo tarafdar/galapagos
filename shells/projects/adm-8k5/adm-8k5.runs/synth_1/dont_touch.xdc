@@ -154,6 +154,9 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==shell_rx_data_f
 # IP: bd/srcs/ip/shell_tx_data_fifo_0_0/shell_tx_data_fifo_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==shell_tx_data_fifo_0_0 || ORIG_REF_NAME==shell_tx_data_fifo_0_0} -quiet] -quiet
 
+# IP: bd/srcs/ip/shell_util_vector_logic_1_1/shell_util_vector_logic_1_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==shell_util_vector_logic_1_1 || ORIG_REF_NAME==shell_util_vector_logic_1_1} -quiet] -quiet
+
 # IP: bd/srcs/ip/shell_auto_cc_6/shell_auto_cc_6.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==shell_auto_cc_6 || ORIG_REF_NAME==shell_auto_cc_6} -quiet] -quiet
 
