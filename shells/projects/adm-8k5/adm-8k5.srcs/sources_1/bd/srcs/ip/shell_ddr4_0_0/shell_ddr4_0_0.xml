@@ -1608,7 +1608,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>ID_WIDTH</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.C0_DDR4_S_AXI.ID_WIDTH">2</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.C0_DDR4_S_AXI.ID_WIDTH">3</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -2316,35 +2316,6 @@
         </spirit:parameters>
       </spirit:view>
       <spirit:view>
-        <spirit:name>xilinx_elaborateports</spirit:name>
-        <spirit:displayName>Elaborate Ports</spirit:displayName>
-        <spirit:envIdentifier>:vivado.xilinx.com:elaborate.ports</spirit:envIdentifier>
-        <spirit:parameters>
-          <spirit:parameter>
-            <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:15b5dfc3</spirit:value>
-          </spirit:parameter>
-        </spirit:parameters>
-      </spirit:view>
-      <spirit:view>
-        <spirit:name>xilinx_elaboratesubcores</spirit:name>
-        <spirit:displayName>Elaborate Sub-Cores</spirit:displayName>
-        <spirit:envIdentifier>:vivado.xilinx.com:elaborate.subcores</spirit:envIdentifier>
-        <spirit:fileSetRef>
-          <spirit:localName>xilinx_elaboratesubcores_view_fileset</spirit:localName>
-        </spirit:fileSetRef>
-        <spirit:parameters>
-          <spirit:parameter>
-            <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed May 16 20:35:00 UTC 2018</spirit:value>
-          </spirit:parameter>
-          <spirit:parameter>
-            <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:15b5dfc3</spirit:value>
-          </spirit:parameter>
-        </spirit:parameters>
-      </spirit:view>
-      <spirit:view>
         <spirit:name>xilinx_anylanguagesynthesis</spirit:name>
         <spirit:displayName>Synthesis</spirit:displayName>
         <spirit:envIdentifier>:vivado.xilinx.com:synthesis</spirit:envIdentifier>
@@ -2417,6 +2388,35 @@
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
             <spirit:value>8:2f4e05b0</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_elaborateports</spirit:name>
+        <spirit:displayName>Elaborate Ports</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:elaborate.ports</spirit:envIdentifier>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>8:5d850d7d</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_elaboratesubcores</spirit:name>
+        <spirit:displayName>Elaborate Sub-Cores</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:elaborate.subcores</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_elaboratesubcores_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>GENtimestamp</spirit:name>
+            <spirit:value>Fri May 18 15:57:12 UTC 2018</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>8:5d850d7d</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -4666,7 +4666,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="( spirit:decode(id(&apos;MODELPARAM_VALUE.C0.DDR4_AXI_ID_WIDTH&apos;)) )-1">1</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="( spirit:decode(id(&apos;MODELPARAM_VALUE.C0.DDR4_AXI_ID_WIDTH&apos;)) )-1">2</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -5084,7 +5084,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C0.DDR4_AXI_ID_WIDTH&apos;)))-1">1</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C0.DDR4_AXI_ID_WIDTH&apos;)))-1">2</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -5158,7 +5158,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C0.DDR4_AXI_ID_WIDTH&apos;)))-1">1</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C0.DDR4_AXI_ID_WIDTH&apos;)))-1">2</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -5528,7 +5528,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C0.DDR4_AXI_ID_WIDTH&apos;)))-1">1</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C0.DDR4_AXI_ID_WIDTH&apos;)))-1">2</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -6658,7 +6658,7 @@
       <spirit:modelParameter>
         <spirit:name>C0.DDR4_AXI_ID_WIDTH</spirit:name>
         <spirit:displayName>AXI ID Width</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.DDR4_AXI_ID_WIDTH">2</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C0.DDR4_AXI_ID_WIDTH">3</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter>
         <spirit:name>C0.DDR4_AXI_ADDR_WIDTH</spirit:name>
@@ -7310,25 +7310,6 @@ CustomPart_tRCD 13320 ps$CustomPart_tREFI 7800000 ps$CustomPart_tRFC 350000 ps$C
         <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
         <spirit:userFileType>USED_IN_single_language</spirit:userFileType>
         <spirit:logicalName>xil_defaultlib</spirit:logicalName>
-      </spirit:file>
-    </spirit:fileSet>
-    <spirit:fileSet>
-      <spirit:name>xilinx_elaboratesubcores_view_fileset</spirit:name>
-      <spirit:file>
-        <spirit:name>ip_0/shell_ddr4_0_0_microblaze_mcs.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>ip_0/shell_ddr4_0_0_microblaze_mcs.xml</spirit:name>
-        <spirit:userFileType>xml</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>ip_1/shell_ddr4_0_0_phy.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>ip_1/shell_ddr4_0_0_phy.xml</spirit:name>
-        <spirit:userFileType>xml</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -8565,6 +8546,25 @@ CustomPart_tRCD 13320 ps$CustomPart_tREFI 7800000 ps$CustomPart_tRFC 350000 ps$C
         <spirit:userFileType>USED_IN_synthesis</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_elaboratesubcores_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>ip_0/shell_ddr4_0_0_microblaze_mcs.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_0/shell_ddr4_0_0_microblaze_mcs.xml</spirit:name>
+        <spirit:userFileType>xml</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_1/shell_ddr4_0_0_phy.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>ip_1/shell_ddr4_0_0_phy.xml</spirit:name>
+        <spirit:userFileType>xml</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
   </spirit:fileSets>
   <spirit:cpus>
     <spirit:cpu>
@@ -8875,7 +8875,7 @@ CustomPart_tRCD 13320 ps$CustomPart_tREFI 7800000 ps$CustomPart_tRFC 350000 ps$C
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C0.DDR4_AxiIDWidth</spirit:name>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C0.DDR4_AxiIDWidth" spirit:choiceRef="choice_list_157065e4" spirit:order="50">2</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C0.DDR4_AxiIDWidth" spirit:choiceRef="choice_list_157065e4" spirit:order="50">3</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C0.DDR4_Capacity</spirit:name>

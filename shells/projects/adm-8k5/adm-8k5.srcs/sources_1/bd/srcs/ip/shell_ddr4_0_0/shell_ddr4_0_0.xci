@@ -53,7 +53,7 @@
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.C0_DDR4_S_AXI.HAS_REGION">0</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.C0_DDR4_S_AXI.HAS_RRESP">1</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.C0_DDR4_S_AXI.HAS_WSTRB">1</spirit:configurableElementValue>
-        <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.C0_DDR4_S_AXI.ID_WIDTH">2</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.C0_DDR4_S_AXI.ID_WIDTH">3</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.C0_DDR4_S_AXI.MAX_BURST_LENGTH">256</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.C0_DDR4_S_AXI.NUM_READ_OUTSTANDING">32</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="BUSIFPARAM_VALUE.C0_DDR4_S_AXI.NUM_READ_THREADS">1</spirit:configurableElementValue>
@@ -118,7 +118,7 @@
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C0.DDR4_AUTO_AP_COL_A3">0</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C0.DDR4_AXI_ADDR_WIDTH">33</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C0.DDR4_AXI_DATA_WIDTH">512</spirit:configurableElementValue>
-        <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C0.DDR4_AXI_ID_WIDTH">2</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C0.DDR4_AXI_ID_WIDTH">3</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C0.DDR4_BANK_GROUP_WIDTH">2</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C0.DDR4_BANK_WIDTH">2</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.C0.DDR4_BURST_MODE">0</spirit:configurableElementValue>
@@ -272,7 +272,7 @@ CustomPart_tRCD 13320 ps$CustomPart_tREFI 7800000 ps$CustomPart_tRFC 350000 ps$C
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.C0.DDR4_AxiAddressWidth">33</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.C0.DDR4_AxiArbitrationScheme">RD_PRI_REG</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.C0.DDR4_AxiDataWidth">512</spirit:configurableElementValue>
-        <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.C0.DDR4_AxiIDWidth">2</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.C0.DDR4_AxiIDWidth">3</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.C0.DDR4_AxiNarrowBurst">true</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.C0.DDR4_AxiSelection">true</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.C0.DDR4_BA_SKEW_0">0</spirit:configurableElementValue>
