@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
-| Date         : Thu May 17 20:58:49 2018
+| Date         : Wed May 23 17:54:10 2018
 | Host         : integrators running 64-bit Ubuntu 16.04.4 LTS
 | Command      : report_utilization -file shellTop_utilization_synth.rpt -pb shellTop_utilization_synth.pb
 | Design       : shellTop
@@ -209,10 +209,11 @@ Table of Contents
 | shell_ddr4_0_0              |    1 |
 | shell_clk_wiz_0_0           |    1 |
 | shell_blk_mem_gen_0_0       |    1 |
-| shell_axi_hwicap_0_0        |    1 |
+| shell_axi_pr_controller_0_0 |    1 |
 | shell_axi_gpio_0_0          |    1 |
 | shell_axi_bram_ctrl_0_0     |    1 |
 | shell_axi_10g_ethernet_0_0  |    1 |
+| shell_auto_us_df_0          |    1 |
 | shell_auto_us_cc_df_0       |    1 |
 | shell_auto_cc_6             |    1 |
 | shell_auto_cc_5             |    1 |

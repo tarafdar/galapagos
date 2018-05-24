@@ -54,62 +54,62 @@ preplace inst pr_decoupler_0 -pg 1 -lvl 4 -y 260 -defaultsOSRD
 preplace inst axi_bram_ctrl_0 -pg 1 -lvl 4 -y 80 -defaultsOSRD
 preplace inst reverseEndian64_0 -pg 1 -lvl 4 -y 810 -defaultsOSRD
 preplace inst network -pg 1 -lvl 5 -y 1170 -defaultsOSRD
-preplace netloc network_txp 1 5 1 NJ
-preplace netloc mem_interface_c0_ddr4_ck_c 1 5 1 NJ
-preplace netloc util_vector_logic_0_Res 1 3 1 970
-preplace netloc refclk_p_1 1 0 5 NJ 1280 NJ 1280 NJ 1280 940J 1290 1420J
-preplace netloc axi_interconnect_0_M04_AXI 1 3 1 940
-preplace netloc vio_0_probe_out0 1 4 2 1390J 820 1800
-preplace netloc c0_sys_clk_n_0_1 1 0 5 NJ 750 NJ 750 580J 570 980J 560 NJ
-preplace netloc PCIe_axi_aclk 1 2 3 540 560 970J 550 1370J
-preplace netloc mem_interface_c0_ddr4_cs_n 1 5 1 NJ
-preplace netloc network_network_reset_done 1 2 4 610 1160 NJ 1160 1390J 1300 1800
-preplace netloc reverseEndian64_0_stream_out 1 4 1 1360
+preplace netloc sys_rst_1 1 4 1 1370
+preplace netloc pr_decoupler_0_rp_control 1 4 2 NJ 240 NJ
+preplace netloc mem_interface_c0_ddr4_cke 1 5 1 NJ
+preplace netloc mem_interface_c0_ddr4_bg 1 5 1 NJ
+preplace netloc PCIe_pcie_mgt 1 2 4 550J 540 NJ 540 1350J 350 NJ
+preplace netloc network_M_AXIS 1 2 4 610 1010 NJ 1010 NJ 1010 1800
+preplace netloc c0_sys_clk_p_0_1 1 0 5 NJ 770 230J 760 590J 580 990J 570 1360J
+preplace netloc gnd_dout 1 5 1 NJ
+preplace netloc network_txn 1 5 1 NJ
+preplace netloc rxp_1 1 0 5 NJ 1320 NJ 1320 NJ 1320 NJ 1320 1410J
+preplace netloc pr_decoupler_0_s_pr_axi_mem 1 4 1 1400
+preplace netloc axi_bram_ctrl_0_BRAM_PORTA 1 4 1 NJ
+preplace netloc microblaze_0_Clk 1 1 4 240 770 570 1020 NJ 1020 1340J
 preplace netloc rxn_1 1 0 5 NJ 1300 NJ 1300 NJ 1300 NJ 1300 1360J
+preplace netloc axi_interconnect_0_M02_AXI 1 3 1 980
+preplace netloc c0_sys_clk_n_0_1 1 0 5 NJ 750 NJ 750 580J 570 980J 560 NJ
+preplace netloc mem_interface_c0_ddr4_odt 1 5 1 NJ
+preplace netloc util_vector_logic_0_Res 1 3 1 970
+preplace netloc network_txp 1 5 1 NJ
+preplace netloc mem_interface_c0_ddr4_act_n 1 5 1 NJ
+preplace netloc refclk200_1 1 0 1 NJ
 preplace netloc diff_clock_rtl_1 1 0 2 NJ 540 NJ
 preplace netloc reverseEndian64_1_stream_out 1 3 1 960
-preplace netloc mem_interface_c0_ddr4_act_n 1 5 1 NJ
-preplace netloc S_AXI_MEM_1 1 0 4 NJ 50 NJ 50 NJ 50 1020J
-preplace netloc network_clk_156 1 2 4 600 600 1000 580 1380 1020 1810
+preplace netloc reverseEndian64_0_stream_out 1 4 1 1360
+preplace netloc vio_0_probe_out0 1 4 2 1390J 820 1800
 preplace netloc mem_interface_c0_ddr4_adr 1 5 1 NJ
-preplace netloc axi_interconnect_0_M01_AXI 1 3 1 940
-preplace netloc S01_AXI_1 1 2 1 510
-preplace netloc axi_interconnect_0_M02_AXI 1 3 1 980
-preplace netloc S_AXIS_1 1 0 4 NJ 70 NJ 70 NJ 70 960J
-preplace netloc perst_n_1 1 0 4 NJ 560 220 830 520 1220 NJ
 preplace netloc refclk_n_1 1 0 5 NJ 1260 NJ 1260 NJ 1260 990J 1280 1400J
-preplace netloc rxp_1 1 0 5 NJ 1320 NJ 1320 NJ 1320 NJ 1320 1410J
-preplace netloc PCIe_M_AXI 1 2 3 NJ 530 930J 380 1380
-preplace netloc PCIe_pcie_mgt 1 2 4 550J 540 NJ 540 1350J 350 NJ
-preplace netloc mem_interface_c0_ddr4_ck_t 1 5 1 NJ
-preplace netloc axi_bram_ctrl_0_BRAM_PORTA 1 4 1 NJ
-preplace netloc axi_pr_controller_0_m_axi 1 4 1 1360
-preplace netloc mem_interface_c0_ddr4_odt 1 5 1 NJ
-preplace netloc microblaze_0_Clk 1 1 4 240 770 570 1020 NJ 1020 1340J
+preplace netloc pr_decoupler_0_rp_stream_out 1 4 2 NJ 280 NJ
+preplace netloc axi_interconnect_0_M04_AXI 1 3 1 940
+preplace netloc mem_interface_c0_ddr4_cs_n 1 5 1 NJ
+preplace netloc network_network_reset_done 1 2 4 610 1160 NJ 1160 1390J 1300 1800
+preplace netloc pr_decoupler_0_s_stream_in 1 3 2 1020 590 1340
+preplace netloc S00_AXI_1 1 2 1 520
+preplace netloc mem_interface_c0_ddr4_reset_n 1 5 1 NJ
+preplace netloc mem_interface_c0_ddr4_ck_c 1 5 1 NJ
 preplace netloc mem_interface_c0_ddr4_ba 1 5 1 NJ
+preplace netloc perst_n_1 1 0 4 NJ 560 220 830 520 1220 NJ
+preplace netloc S_AXIS_1 1 0 4 NJ 70 NJ 70 NJ 70 960J
+preplace netloc axi_interconnect_0_M00_AXI 1 3 1 930
+preplace netloc S01_AXI_1 1 2 1 510
+preplace netloc PCIe_axi_aclk 1 2 3 540 560 970J 550 1370J
+preplace netloc axi_interconnect_0_M01_AXI 1 3 1 940
+preplace netloc PCIe_M_AXI 1 2 3 NJ 530 930J 380 1380
 preplace netloc Net 1 5 1 NJ
 preplace netloc Net1 1 5 1 NJ
-preplace netloc Net2 1 5 1 NJ
-preplace netloc pr_decoupler_0_s_stream_in 1 3 2 1020 590 1340
-preplace netloc mem_interface_c0_ddr4_reset_n 1 5 1 NJ
-preplace netloc Net3 1 5 1 NJ
-preplace netloc network_M_AXIS 1 2 4 610 1010 NJ 1010 NJ 1010 1800
-preplace netloc pr_decoupler_0_rp_control 1 4 2 NJ 240 NJ
-preplace netloc mem_interface_c0_ddr4_bg 1 5 1 NJ
-preplace netloc mem_interface_c0_ddr4_cke 1 5 1 NJ
-preplace netloc util_vector_logic_1_Res 1 4 1 1350
-preplace netloc refclk200_1 1 0 1 NJ
-preplace netloc c0_sys_clk_p_0_1 1 0 5 NJ 770 230J 760 590J 580 990J 570 1360J
-preplace netloc PCIe_axi_aresetn 1 2 2 530 550 930
-preplace netloc pr_decoupler_0_s_pr_axi_mem 1 4 1 1400
 preplace netloc util_vector_logic_2_Res 1 1 5 250 780 560 590 1010 890 1400 1030 NJ
-preplace netloc pr_decoupler_0_rp_stream_out 1 4 2 NJ 280 NJ
-preplace netloc gnd_dout 1 5 1 NJ
-preplace netloc sys_rst_1 1 4 1 1370
+preplace netloc util_vector_logic_1_Res 1 4 1 1350
+preplace netloc axi_pr_controller_0_m_axi 1 4 1 1360
+preplace netloc Net2 1 5 1 NJ
+preplace netloc network_clk_156 1 2 4 600 600 1000 580 1380 1020 1810
+preplace netloc PCIe_axi_aresetn 1 2 2 530 550 930
+preplace netloc S_AXI_MEM_1 1 0 4 NJ 50 NJ 50 NJ 50 1020J
 preplace netloc axi_interconnect_0_M03_AXI 1 3 1 950
-preplace netloc axi_interconnect_0_M00_AXI 1 3 1 930
-preplace netloc S00_AXI_1 1 2 1 520
-preplace netloc network_txn 1 5 1 NJ
+preplace netloc Net3 1 5 1 NJ
+preplace netloc mem_interface_c0_ddr4_ck_t 1 5 1 NJ
+preplace netloc refclk_p_1 1 0 5 NJ 1280 NJ 1280 NJ 1280 940J 1290 1420J
 levelinfo -pg 1 0 120 380 770 1180 1610 1830 -top 0 -bot 1420
 ",
 }

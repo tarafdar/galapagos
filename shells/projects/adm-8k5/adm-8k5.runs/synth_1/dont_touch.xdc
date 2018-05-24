@@ -52,9 +52,6 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==shell_axi_bram_
 # IP: bd/srcs/ip/shell_blk_mem_gen_0_0/shell_blk_mem_gen_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==shell_blk_mem_gen_0_0 || ORIG_REF_NAME==shell_blk_mem_gen_0_0} -quiet] -quiet
 
-# IP: bd/srcs/ip/shell_axi_hwicap_0_0/shell_axi_hwicap_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==shell_axi_hwicap_0_0 || ORIG_REF_NAME==shell_axi_hwicap_0_0} -quiet] -quiet
-
 # IP: bd/srcs/ip/shell_reverseEndian64_0_0/shell_reverseEndian64_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==shell_reverseEndian64_0_0 || ORIG_REF_NAME==shell_reverseEndian64_0_0} -quiet] -quiet
 
@@ -157,8 +154,14 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==shell_tx_data_f
 # IP: bd/srcs/ip/shell_util_vector_logic_1_1/shell_util_vector_logic_1_1.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==shell_util_vector_logic_1_1 || ORIG_REF_NAME==shell_util_vector_logic_1_1} -quiet] -quiet
 
+# IP: bd/srcs/ip/shell_axi_pr_controller_0_0/shell_axi_pr_controller_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==shell_axi_pr_controller_0_0 || ORIG_REF_NAME==shell_axi_pr_controller_0_0} -quiet] -quiet
+
 # IP: bd/srcs/ip/shell_auto_cc_6/shell_auto_cc_6.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==shell_auto_cc_6 || ORIG_REF_NAME==shell_auto_cc_6} -quiet] -quiet
+
+# IP: bd/srcs/ip/shell_auto_us_df_0/shell_auto_us_df_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==shell_auto_us_df_0 || ORIG_REF_NAME==shell_auto_us_df_0} -quiet] -quiet
 
 # IP: bd/srcs/ip/shell_s01_data_fifo_0/shell_s01_data_fifo_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==shell_s01_data_fifo_0 || ORIG_REF_NAME==shell_s01_data_fifo_0} -quiet] -quiet

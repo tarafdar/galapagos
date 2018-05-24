@@ -14,15 +14,15 @@ INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/graham0/Vivado_Projects
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/graham0/Vivado_Projects/galapagos_wip/shells/shell_ips'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2018.1/data/ip'.
 WARNING: [IP_Flow 19-3664] IP 'bd_01e2_xpcs_0' generated file not found '/home/graham0/Vivado_Projects/galapagos_wip/.Xil/Vivado-19896-ug238/coregen/bd_01e2_xpcs_0_1/elaborate/configure_gt.tcl'. Please regenerate to continue.
-add_files: Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1385.012 ; gain = 185.547 ; free physical = 12757 ; free virtual = 78190
+add_files: Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1384.984 ; gain = 186.516 ; free physical = 13667 ; free virtual = 79100
 Command: synth_design -top shellTop -part xcku115-flva1517-2-e
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xcku115'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcku115'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 13640 
+INFO: Helper process launched with PID 17865 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1875.199 ; gain = 0.000 ; free physical = 12627 ; free virtual = 78060
+Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1883.176 ; gain = 0.000 ; free physical = 13549 ; free virtual = 78982
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'shellTop' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/imports/adm-8k5/srcs/shellTop.v:8]
 INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/imports/adm-8k5/srcs/shellTop.v:76]
@@ -99,173 +99,180 @@ INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [/home/graham0/Vivad
 INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/imports/adm-8k5/srcs/shellTop.v:147]
 INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/imports/adm-8k5/srcs/shellTop.v:148]
 INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/imports/adm-8k5/srcs/shellTop.v:149]
-INFO: [Synth 8-6157] synthesizing module 'shell' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:4749]
+INFO: [Synth 8-6157] synthesizing module 'shell' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:5251]
 INFO: [Synth 8-6157] synthesizing module 'PCIe_imp_107RYSW' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:12]
-INFO: [Synth 8-6157] synthesizing module 'shell_util_ds_buf_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_util_ds_buf_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'shell_util_ds_buf_0' (1#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_util_ds_buf_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'shell_xdma_0_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_xdma_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'shell_xdma_0_0' (2#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_xdma_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'shell_util_ds_buf_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_util_ds_buf_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'shell_util_ds_buf_0' (1#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_util_ds_buf_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'shell_xdma_0_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_xdma_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'shell_xdma_0_0' (2#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_xdma_0_0_stub.v:6]
 WARNING: [Synth 8-350] instance 'xdma_0' of module 'shell_xdma_0_0' requires 71 connections, but only 64 given [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:274]
 INFO: [Synth 8-6155] done synthesizing module 'PCIe_imp_107RYSW' (3#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:12]
-INFO: [Synth 8-6157] synthesizing module 'shell_axi_bram_ctrl_0_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_axi_bram_ctrl_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'shell_axi_bram_ctrl_0_0' (4#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_axi_bram_ctrl_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'shell_axi_gpio_0_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_axi_gpio_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'shell_axi_gpio_0_0' (5#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_axi_gpio_0_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'axi_gpio_0' of module 'shell_axi_gpio_0_0' requires 22 connections, but only 20 given [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:5502]
-INFO: [Synth 8-6157] synthesizing module 'shell_axi_hwicap_0_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_axi_hwicap_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'shell_axi_hwicap_0_0' (6#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_axi_hwicap_0_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'axi_hwicap_0' of module 'shell_axi_hwicap_0_0' requires 22 connections, but only 21 given [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:5523]
-INFO: [Synth 8-6157] synthesizing module 'shell_axi_interconnect_0_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:6049]
+INFO: [Synth 8-6157] synthesizing module 'shell_axi_bram_ctrl_0_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_axi_bram_ctrl_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'shell_axi_bram_ctrl_0_0' (4#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_axi_bram_ctrl_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'shell_axi_gpio_0_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'shell_axi_gpio_0_0' (5#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_axi_gpio_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'axi_gpio_0' of module 'shell_axi_gpio_0_0' requires 22 connections, but only 20 given [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:6034]
+INFO: [Synth 8-6157] synthesizing module 'shell_axi_interconnect_0_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:6639]
 INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_17RNK4V' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:341]
-INFO: [Synth 8-6157] synthesizing module 'shell_auto_cc_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_auto_cc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'shell_auto_cc_0' (7#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_auto_cc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_17RNK4V' (8#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:341]
+INFO: [Synth 8-6157] synthesizing module 'shell_auto_cc_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_auto_cc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'shell_auto_cc_0' (6#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_auto_cc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_17RNK4V' (7#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:341]
 INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_A2B4UF' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:1095]
-INFO: [Synth 8-6157] synthesizing module 'shell_auto_cc_1' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_auto_cc_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'shell_auto_cc_1' (9#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_auto_cc_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_A2B4UF' (10#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:1095]
+INFO: [Synth 8-6157] synthesizing module 'shell_auto_cc_1' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_auto_cc_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'shell_auto_cc_1' (8#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_auto_cc_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_A2B4UF' (9#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:1095]
 INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_ERMJ3Y' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:1457]
-INFO: [Synth 8-6157] synthesizing module 'shell_auto_cc_2' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_auto_cc_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'shell_auto_cc_2' (11#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_auto_cc_2_stub.v:6]
-WARNING: [Synth 8-350] instance 'auto_cc' of module 'shell_auto_cc_2' requires 42 connections, but only 40 given [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:1620]
-INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_ERMJ3Y' (12#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:1457]
-INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_13219ZQ' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:1663]
-INFO: [Synth 8-6157] synthesizing module 'shell_auto_cc_3' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_auto_cc_3_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'shell_auto_cc_3' (13#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_auto_cc_3_stub.v:6]
-WARNING: [Synth 8-350] instance 'auto_cc' of module 'shell_auto_cc_3' requires 42 connections, but only 39 given [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:1822]
-INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_13219ZQ' (14#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:1663]
-INFO: [Synth 8-6157] synthesizing module 'm04_couplers_imp_6LBE8C' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:1864]
-INFO: [Synth 8-6157] synthesizing module 'shell_auto_cc_4' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_auto_cc_4_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'shell_auto_cc_4' (15#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_auto_cc_4_stub.v:6]
-WARNING: [Synth 8-350] instance 'auto_cc' of module 'shell_auto_cc_4' requires 42 connections, but only 40 given [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:2027]
-INFO: [Synth 8-6155] done synthesizing module 'm04_couplers_imp_6LBE8C' (16#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:1864]
-INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1KJMYX0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:3616]
-INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1KJMYX0' (17#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:3616]
-INFO: [Synth 8-6157] synthesizing module 's01_couplers_imp_VOMHM4' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:4532]
-INFO: [Synth 8-6157] synthesizing module 'shell_auto_cc_5' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_auto_cc_5_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'shell_auto_cc_5' (18#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_auto_cc_5_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 's01_couplers_imp_VOMHM4' (19#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:4532]
-INFO: [Synth 8-6157] synthesizing module 'shell_xbar_1' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_xbar_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'shell_xbar_1' (20#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_xbar_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'shell_axi_interconnect_0_0' (21#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:6049]
-INFO: [Synth 8-6157] synthesizing module 'shell_blk_mem_gen_0_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_blk_mem_gen_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'shell_blk_mem_gen_0_0' (22#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_blk_mem_gen_0_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'blk_mem_gen_0' of module 'shell_blk_mem_gen_0_0' requires 8 connections, but only 7 given [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:5688]
-INFO: [Synth 8-6157] synthesizing module 'shell_clk_wiz_0_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_clk_wiz_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'shell_clk_wiz_0_0' (23#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_clk_wiz_0_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'shell_gnd_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_gnd_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'shell_gnd_0' (24#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_gnd_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'mb_system_imp_VMXBLU' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:2070]
-INFO: [Synth 8-6157] synthesizing module 'shell_mdm_1_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_mdm_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'shell_mdm_1_0' (25#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_mdm_1_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'mdm_1' of module 'shell_mdm_1_0' requires 30 connections, but only 29 given [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:2226]
-INFO: [Synth 8-6157] synthesizing module 'shell_microblaze_0_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_microblaze_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'shell_microblaze_0_0' (26#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_microblaze_0_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'microblaze_0' of module 'shell_microblaze_0_0' requires 52 connections, but only 51 given [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:2258]
-INFO: [Synth 8-6157] synthesizing module 'shell_microblaze_0_axi_periph_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:7996]
+INFO: [Synth 8-6157] synthesizing module 'shell_auto_cc_2' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_auto_cc_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'shell_auto_cc_2' (10#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_auto_cc_2_stub.v:6]
+WARNING: [Synth 8-350] instance 'auto_cc' of module 'shell_auto_cc_2' requires 42 connections, but only 39 given [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:1616]
+INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_ERMJ3Y' (11#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:1457]
+INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_13219ZQ' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:1658]
+INFO: [Synth 8-6157] synthesizing module 'shell_auto_cc_3' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_auto_cc_3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'shell_auto_cc_3' (12#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_auto_cc_3_stub.v:6]
+WARNING: [Synth 8-350] instance 'auto_cc' of module 'shell_auto_cc_3' requires 42 connections, but only 39 given [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:1817]
+INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_13219ZQ' (13#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:1658]
+INFO: [Synth 8-6157] synthesizing module 'm04_couplers_imp_6LBE8C' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:1859]
+INFO: [Synth 8-6157] synthesizing module 'shell_auto_cc_4' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_auto_cc_4_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'shell_auto_cc_4' (14#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_auto_cc_4_stub.v:6]
+WARNING: [Synth 8-350] instance 'auto_cc' of module 'shell_auto_cc_4' requires 42 connections, but only 40 given [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:2022]
+INFO: [Synth 8-6155] done synthesizing module 'm04_couplers_imp_6LBE8C' (15#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:1859]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1KJMYX0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:3768]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1KJMYX0' (16#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:3768]
+INFO: [Synth 8-6157] synthesizing module 's01_couplers_imp_VOMHM4' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:4684]
+INFO: [Synth 8-6157] synthesizing module 'shell_auto_cc_5' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_auto_cc_5_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'shell_auto_cc_5' (17#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_auto_cc_5_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 's01_couplers_imp_VOMHM4' (18#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:4684]
+INFO: [Synth 8-6157] synthesizing module 'shell_xbar_1' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_xbar_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'shell_xbar_1' (19#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_xbar_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'shell_axi_interconnect_0_0' (20#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:6639]
+INFO: [Synth 8-6157] synthesizing module 'shell_axi_pr_controller_0_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_axi_pr_controller_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'shell_axi_pr_controller_0_0' (21#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_axi_pr_controller_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'axi_pr_controller_0' of module 'shell_axi_pr_controller_0_0' requires 52 connections, but only 49 given [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:6197]
+INFO: [Synth 8-6157] synthesizing module 'shell_blk_mem_gen_0_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_blk_mem_gen_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'shell_blk_mem_gen_0_0' (22#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_blk_mem_gen_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'blk_mem_gen_0' of module 'shell_blk_mem_gen_0_0' requires 8 connections, but only 7 given [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:6247]
+INFO: [Synth 8-6157] synthesizing module 'shell_clk_wiz_0_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_clk_wiz_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'shell_clk_wiz_0_0' (23#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_clk_wiz_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'shell_gnd_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_gnd_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'shell_gnd_0' (24#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_gnd_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'mb_system_imp_VMXBLU' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:2065]
+INFO: [Synth 8-6157] synthesizing module 'shell_mdm_1_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_mdm_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'shell_mdm_1_0' (25#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_mdm_1_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'mdm_1' of module 'shell_mdm_1_0' requires 30 connections, but only 29 given [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:2221]
+INFO: [Synth 8-6157] synthesizing module 'shell_microblaze_0_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_microblaze_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'shell_microblaze_0_0' (26#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_microblaze_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'microblaze_0' of module 'shell_microblaze_0_0' requires 52 connections, but only 51 given [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:2253]
+INFO: [Synth 8-6157] synthesizing module 'shell_microblaze_0_axi_periph_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:8815]
 INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_1KWAT1H' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:557]
 INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_1KWAT1H' (27#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:557]
 INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_WG87ZH' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:1311]
 INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_WG87ZH' (28#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:1311]
-INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1751KRY' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:3470]
-INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1751KRY' (29#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:3470]
-INFO: [Synth 8-6157] synthesizing module 'shell_xbar_2' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_xbar_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'shell_xbar_2' (30#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_xbar_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'shell_microblaze_0_axi_periph_0' (31#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:7996]
-INFO: [Synth 8-6157] synthesizing module 'microblaze_0_local_memory_imp_1HEYJGJ' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:3010]
-INFO: [Synth 8-6157] synthesizing module 'shell_dlmb_bram_if_cntlr_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_dlmb_bram_if_cntlr_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'shell_dlmb_bram_if_cntlr_0' (32#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_dlmb_bram_if_cntlr_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'shell_dlmb_v10_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_dlmb_v10_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'shell_dlmb_v10_0' (33#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_dlmb_v10_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'dlmb_v10' of module 'shell_dlmb_v10_0' requires 25 connections, but only 24 given [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:3156]
-INFO: [Synth 8-6157] synthesizing module 'shell_ilmb_bram_if_cntlr_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_ilmb_bram_if_cntlr_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'shell_ilmb_bram_if_cntlr_0' (34#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_ilmb_bram_if_cntlr_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'shell_ilmb_v10_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_ilmb_v10_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'shell_ilmb_v10_0' (35#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_ilmb_v10_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'ilmb_v10' of module 'shell_ilmb_v10_0' requires 25 connections, but only 24 given [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:3202]
-INFO: [Synth 8-6157] synthesizing module 'shell_lmb_bram_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_lmb_bram_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'shell_lmb_bram_0' (36#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_lmb_bram_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'lmb_bram' of module 'shell_lmb_bram_0' requires 16 connections, but only 14 given [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:3227]
-INFO: [Synth 8-6155] done synthesizing module 'microblaze_0_local_memory_imp_1HEYJGJ' (37#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:3010]
-INFO: [Synth 8-6157] synthesizing module 'shell_rst_clk_wiz_0_100M_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_rst_clk_wiz_0_100M_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'shell_rst_clk_wiz_0_100M_0' (38#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_rst_clk_wiz_0_100M_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'rst_clk_wiz_0_100M' of module 'shell_rst_clk_wiz_0_100M_0' requires 10 connections, but only 9 given [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:2396]
-INFO: [Synth 8-6155] done synthesizing module 'mb_system_imp_VMXBLU' (39#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:2070]
-INFO: [Synth 8-6157] synthesizing module 'mem_interface_imp_1EJ895G' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:2408]
-INFO: [Synth 8-6157] synthesizing module 'shell_ddr4_0_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_ddr4_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'shell_ddr4_0_0' (40#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_ddr4_0_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'ddr4_0' of module 'shell_ddr4_0_0' requires 60 connections, but only 57 given [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:2823]
-INFO: [Synth 8-6157] synthesizing module 'shell_mem_interconnect_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:7090]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1751KRY' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:3622]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1751KRY' (29#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:3622]
+INFO: [Synth 8-6157] synthesizing module 'shell_xbar_2' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_xbar_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'shell_xbar_2' (30#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_xbar_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'shell_microblaze_0_axi_periph_0' (31#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:8815]
+INFO: [Synth 8-6157] synthesizing module 'microblaze_0_local_memory_imp_1HEYJGJ' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:3162]
+INFO: [Synth 8-6157] synthesizing module 'shell_dlmb_bram_if_cntlr_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_dlmb_bram_if_cntlr_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'shell_dlmb_bram_if_cntlr_0' (32#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_dlmb_bram_if_cntlr_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'shell_dlmb_v10_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_dlmb_v10_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'shell_dlmb_v10_0' (33#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_dlmb_v10_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'dlmb_v10' of module 'shell_dlmb_v10_0' requires 25 connections, but only 24 given [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:3308]
+INFO: [Synth 8-6157] synthesizing module 'shell_ilmb_bram_if_cntlr_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_ilmb_bram_if_cntlr_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'shell_ilmb_bram_if_cntlr_0' (34#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_ilmb_bram_if_cntlr_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'shell_ilmb_v10_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_ilmb_v10_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'shell_ilmb_v10_0' (35#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_ilmb_v10_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'ilmb_v10' of module 'shell_ilmb_v10_0' requires 25 connections, but only 24 given [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:3354]
+INFO: [Synth 8-6157] synthesizing module 'shell_lmb_bram_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_lmb_bram_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'shell_lmb_bram_0' (36#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_lmb_bram_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'lmb_bram' of module 'shell_lmb_bram_0' requires 16 connections, but only 14 given [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:3379]
+INFO: [Synth 8-6155] done synthesizing module 'microblaze_0_local_memory_imp_1HEYJGJ' (37#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:3162]
+INFO: [Synth 8-6157] synthesizing module 'shell_rst_clk_wiz_0_100M_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_rst_clk_wiz_0_100M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'shell_rst_clk_wiz_0_100M_0' (38#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_rst_clk_wiz_0_100M_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'rst_clk_wiz_0_100M' of module 'shell_rst_clk_wiz_0_100M_0' requires 10 connections, but only 9 given [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:2391]
+INFO: [Synth 8-6155] done synthesizing module 'mb_system_imp_VMXBLU' (39#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:2065]
+INFO: [Synth 8-6157] synthesizing module 'mem_interface_imp_1EJ895G' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:2403]
+INFO: [Synth 8-6157] synthesizing module 'shell_ddr4_0_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_ddr4_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'shell_ddr4_0_0' (40#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_ddr4_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'ddr4_0' of module 'shell_ddr4_0_0' requires 60 connections, but only 57 given [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:2942]
+INFO: [Synth 8-6157] synthesizing module 'shell_mem_interconnect_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:7675]
 INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_EN5S6P' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:689]
-INFO: [Synth 8-6157] synthesizing module 'shell_auto_cc_6' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_auto_cc_6_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'shell_auto_cc_6' (41#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_auto_cc_6_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'shell_auto_cc_6' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_auto_cc_6_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'shell_auto_cc_6' (41#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_auto_cc_6_stub.v:6]
 WARNING: [Synth 8-350] instance 'auto_cc' of module 'shell_auto_cc_6' requires 82 connections, but only 80 given [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:1012]
 INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_EN5S6P' (42#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:689]
-INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_RDWXZU' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:3762]
-INFO: [Synth 8-6157] synthesizing module 'shell_auto_us_cc_df_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_auto_us_cc_df_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'shell_auto_us_cc_df_0' (43#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_auto_us_cc_df_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'auto_us_cc_df' of module 'shell_auto_us_cc_df_0' requires 78 connections, but only 76 given [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:4053]
-INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_RDWXZU' (44#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:3762]
-INFO: [Synth 8-6157] synthesizing module 's01_couplers_imp_1OUCIK2' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:4132]
-INFO: [Synth 8-6157] synthesizing module 'shell_s01_data_fifo_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_s01_data_fifo_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'shell_s01_data_fifo_0' (45#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_s01_data_fifo_0_stub.v:6]
-WARNING: [Synth 8-350] instance 's01_data_fifo' of module 'shell_s01_data_fifo_0' requires 80 connections, but only 78 given [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:4451]
-INFO: [Synth 8-6155] done synthesizing module 's01_couplers_imp_1OUCIK2' (46#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:4132]
-INFO: [Synth 8-6157] synthesizing module 'shell_xbar_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_xbar_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'shell_xbar_0' (47#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_xbar_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'shell_mem_interconnect_0' (48#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:7090]
-INFO: [Synth 8-6157] synthesizing module 'shell_proc_sys_reset_1_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_proc_sys_reset_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'shell_proc_sys_reset_1_0' (49#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_proc_sys_reset_1_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'proc_sys_reset_1' of module 'shell_proc_sys_reset_1_0' requires 10 connections, but only 6 given [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:3001]
-INFO: [Synth 8-6155] done synthesizing module 'mem_interface_imp_1EJ895G' (50#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:2408]
-INFO: [Synth 8-6157] synthesizing module 'network_imp_10F7WL8' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:3244]
-INFO: [Synth 8-6157] synthesizing module 'shell_axi_10g_ethernet_0_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_axi_10g_ethernet_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'shell_axi_10g_ethernet_0_0' (51#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_axi_10g_ethernet_0_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'axi_10g_ethernet_0' of module 'shell_axi_10g_ethernet_0_0' requires 52 connections, but only 35 given [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:3371]
-INFO: [Synth 8-6157] synthesizing module 'shell_gnd_1' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_gnd_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'shell_gnd_1' (52#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_gnd_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'shell_ifg_delay_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_ifg_delay_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'shell_ifg_delay_0' (53#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_ifg_delay_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'shell_mac_config_vector_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_mac_config_vector_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'shell_mac_config_vector_0' (54#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_mac_config_vector_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'shell_pcs_config_vector_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_pcs_config_vector_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'shell_pcs_config_vector_0' (55#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_pcs_config_vector_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'shell_rx_data_fifo_1_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_rx_data_fifo_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'shell_rx_data_fifo_1_0' (56#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_rx_data_fifo_1_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'rx_data_fifo_1' of module 'shell_rx_data_fifo_1_0' requires 15 connections, but only 11 given [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:3415]
-INFO: [Synth 8-6157] synthesizing module 'shell_rx_register_slice_1_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_rx_register_slice_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'shell_rx_register_slice_1_0' (57#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_rx_register_slice_1_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'shell_tx_data_fifo_0_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_tx_data_fifo_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'shell_tx_data_fifo_0_0' (58#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_tx_data_fifo_0_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'tx_data_fifo_0' of module 'shell_tx_data_fifo_0_0' requires 15 connections, but only 12 given [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:3438]
-INFO: [Synth 8-6157] synthesizing module 'shell_tx_ifg_tuser_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_tx_ifg_tuser_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'shell_tx_ifg_tuser_0' (59#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_tx_ifg_tuser_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'shell_tx_register_slice_0_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_tx_register_slice_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'shell_tx_register_slice_0_0' (60#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_tx_register_slice_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'shell_vcc_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_vcc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'shell_vcc_0' (61#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_vcc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'network_imp_10F7WL8' (62#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:3244]
-WARNING: [Synth 8-350] instance 'network' of module 'network_imp_10F7WL8' requires 25 connections, but only 21 given [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:5818]
-INFO: [Synth 8-6157] synthesizing module 'shell_pr_decoupler_0_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_pr_decoupler_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'shell_pr_decoupler_0_0' (63#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_pr_decoupler_0_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'pr_decoupler_0' of module 'shell_pr_decoupler_0_0' requires 165 connections, but only 163 given [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:5840]
-INFO: [Synth 8-6157] synthesizing module 'shell_reverseEndian64_0_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_reverseEndian64_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'shell_reverseEndian64_0_0' (64#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_reverseEndian64_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'shell_reverseEndian64_1_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_reverseEndian64_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'shell_reverseEndian64_1_0' (65#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_reverseEndian64_1_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'shell_util_vector_logic_0_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_util_vector_logic_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'shell_util_vector_logic_0_0' (66#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_util_vector_logic_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'shell_util_vector_logic_1_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_util_vector_logic_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'shell_util_vector_logic_1_0' (67#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_util_vector_logic_1_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'shell_util_vector_logic_2_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_util_vector_logic_2_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'shell_util_vector_logic_2_0' (68#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_util_vector_logic_2_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'shell_util_vector_logic_1_1' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_util_vector_logic_1_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'shell_util_vector_logic_1_1' (69#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_util_vector_logic_1_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'shell_vio_0_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_vio_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'shell_vio_0_0' (70#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/shell_vio_0_0_stub.v:6]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'vio_0'. This will prevent further optimization [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:6044]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'axi_gpio_0'. This will prevent further optimization [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:5502]
-INFO: [Synth 8-6155] done synthesizing module 'shell' (71#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:4749]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_RDWXZU' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:3914]
+INFO: [Synth 8-6157] synthesizing module 'shell_auto_us_cc_df_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_auto_us_cc_df_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'shell_auto_us_cc_df_0' (43#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_auto_us_cc_df_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'auto_us_cc_df' of module 'shell_auto_us_cc_df_0' requires 78 connections, but only 76 given [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:4205]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_RDWXZU' (44#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:3914]
+INFO: [Synth 8-6157] synthesizing module 's01_couplers_imp_1OUCIK2' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:4284]
+INFO: [Synth 8-6157] synthesizing module 'shell_s01_data_fifo_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_s01_data_fifo_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'shell_s01_data_fifo_0' (45#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_s01_data_fifo_0_stub.v:6]
+WARNING: [Synth 8-350] instance 's01_data_fifo' of module 'shell_s01_data_fifo_0' requires 80 connections, but only 78 given [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:4603]
+INFO: [Synth 8-6155] done synthesizing module 's01_couplers_imp_1OUCIK2' (46#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:4284]
+INFO: [Synth 8-6157] synthesizing module 's02_couplers_imp_1K3SXOR' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:4900]
+INFO: [Synth 8-6157] synthesizing module 'shell_auto_us_df_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_auto_us_df_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'shell_auto_us_df_0' (47#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_auto_us_df_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'auto_us_df' of module 'shell_auto_us_df_0' requires 76 connections, but only 72 given [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:5175]
+INFO: [Synth 8-6155] done synthesizing module 's02_couplers_imp_1K3SXOR' (48#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:4900]
+INFO: [Synth 8-6157] synthesizing module 'shell_xbar_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'shell_xbar_0' (49#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_xbar_0_stub.v:6]
+WARNING: [Synth 8-689] width (6) of port connection 's_axi_bid' does not match port width (9) of module 'shell_xbar_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:8798]
+WARNING: [Synth 8-689] width (6) of port connection 's_axi_rid' does not match port width (9) of module 'shell_xbar_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:8803]
+INFO: [Synth 8-6155] done synthesizing module 'shell_mem_interconnect_0' (50#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:7675]
+INFO: [Synth 8-6157] synthesizing module 'shell_proc_sys_reset_1_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_proc_sys_reset_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'shell_proc_sys_reset_1_0' (51#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_proc_sys_reset_1_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'proc_sys_reset_1' of module 'shell_proc_sys_reset_1_0' requires 10 connections, but only 6 given [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:3153]
+INFO: [Synth 8-6155] done synthesizing module 'mem_interface_imp_1EJ895G' (52#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:2403]
+INFO: [Synth 8-6157] synthesizing module 'network_imp_10F7WL8' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:3396]
+INFO: [Synth 8-6157] synthesizing module 'shell_axi_10g_ethernet_0_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_axi_10g_ethernet_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'shell_axi_10g_ethernet_0_0' (53#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_axi_10g_ethernet_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'axi_10g_ethernet_0' of module 'shell_axi_10g_ethernet_0_0' requires 52 connections, but only 35 given [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:3523]
+INFO: [Synth 8-6157] synthesizing module 'shell_gnd_1' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_gnd_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'shell_gnd_1' (54#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_gnd_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'shell_ifg_delay_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_ifg_delay_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'shell_ifg_delay_0' (55#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_ifg_delay_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'shell_mac_config_vector_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_mac_config_vector_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'shell_mac_config_vector_0' (56#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_mac_config_vector_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'shell_pcs_config_vector_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_pcs_config_vector_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'shell_pcs_config_vector_0' (57#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_pcs_config_vector_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'shell_rx_data_fifo_1_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_rx_data_fifo_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'shell_rx_data_fifo_1_0' (58#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_rx_data_fifo_1_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'rx_data_fifo_1' of module 'shell_rx_data_fifo_1_0' requires 15 connections, but only 11 given [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:3567]
+INFO: [Synth 8-6157] synthesizing module 'shell_rx_register_slice_1_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_rx_register_slice_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'shell_rx_register_slice_1_0' (59#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_rx_register_slice_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'shell_tx_data_fifo_0_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_tx_data_fifo_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'shell_tx_data_fifo_0_0' (60#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_tx_data_fifo_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'tx_data_fifo_0' of module 'shell_tx_data_fifo_0_0' requires 15 connections, but only 12 given [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:3590]
+INFO: [Synth 8-6157] synthesizing module 'shell_tx_ifg_tuser_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_tx_ifg_tuser_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'shell_tx_ifg_tuser_0' (61#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_tx_ifg_tuser_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'shell_tx_register_slice_0_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_tx_register_slice_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'shell_tx_register_slice_0_0' (62#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_tx_register_slice_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'shell_vcc_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_vcc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'shell_vcc_0' (63#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_vcc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'network_imp_10F7WL8' (64#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:3396]
+WARNING: [Synth 8-350] instance 'network' of module 'network_imp_10F7WL8' requires 25 connections, but only 21 given [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:6408]
+INFO: [Synth 8-6157] synthesizing module 'shell_pr_decoupler_0_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_pr_decoupler_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'shell_pr_decoupler_0_0' (65#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_pr_decoupler_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'pr_decoupler_0' of module 'shell_pr_decoupler_0_0' requires 165 connections, but only 163 given [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:6430]
+INFO: [Synth 8-6157] synthesizing module 'shell_reverseEndian64_0_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_reverseEndian64_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'shell_reverseEndian64_0_0' (66#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_reverseEndian64_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'shell_reverseEndian64_1_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_reverseEndian64_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'shell_reverseEndian64_1_0' (67#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_reverseEndian64_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'shell_util_vector_logic_0_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_util_vector_logic_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'shell_util_vector_logic_0_0' (68#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_util_vector_logic_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'shell_util_vector_logic_1_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_util_vector_logic_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'shell_util_vector_logic_1_0' (69#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_util_vector_logic_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'shell_util_vector_logic_2_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_util_vector_logic_2_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'shell_util_vector_logic_2_0' (70#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_util_vector_logic_2_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'shell_util_vector_logic_1_1' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_util_vector_logic_1_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'shell_util_vector_logic_1_1' (71#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_util_vector_logic_1_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'shell_vio_0_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_vio_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'shell_vio_0_0' (72#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/shell_vio_0_0_stub.v:6]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'vio_0'. This will prevent further optimization [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:6634]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'axi_gpio_0'. This will prevent further optimization [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:6034]
+INFO: [Synth 8-6155] done synthesizing module 'shell' (73#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v:5251]
 WARNING: [Synth 8-689] width (64) of port connection 'M_AXI_CONTROL_araddr' does not match port width (32) of module 'shell' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/imports/adm-8k5/srcs/shellTop.v:160]
 WARNING: [Synth 8-689] width (64) of port connection 'M_AXI_CONTROL_awaddr' does not match port width (32) of module 'shell' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/imports/adm-8k5/srcs/shellTop.v:171]
 WARNING: [Synth 8-689] width (32) of port connection 'M_AXI_CONTROL_wstrb' does not match port width (4) of module 'shell' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/imports/adm-8k5/srcs/shellTop.v:193]
@@ -274,8 +281,8 @@ WARNING: [Synth 8-689] width (2) of port connection 'S_AXI_MEM_awid' does not ma
 WARNING: [Synth 8-689] width (2) of port connection 'S_AXI_MEM_bid' does not match port width (1) of module 'shell' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/imports/adm-8k5/srcs/shellTop.v:222]
 WARNING: [Synth 8-689] width (2) of port connection 'S_AXI_MEM_rid' does not match port width (1) of module 'shell' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/imports/adm-8k5/srcs/shellTop.v:234]
 WARNING: [Synth 8-350] instance 'shell_i' of module 'shell' requires 106 connections, but only 105 given [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/imports/adm-8k5/srcs/shellTop.v:152]
-INFO: [Synth 8-6157] synthesizing module 'pr' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/pr_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'pr' (72#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-13549-integrators/realtime/pr_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'pr' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/pr_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'pr' (74#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/.Xil/Vivado-17775-integrators/realtime/pr_stub.v:5]
 WARNING: [Synth 8-689] width (64) of port connection 'S_AXI_CONTROL_araddr' does not match port width (32) of module 'pr' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/imports/adm-8k5/srcs/shellTop.v:284]
 WARNING: [Synth 8-689] width (64) of port connection 'S_AXI_CONTROL_awaddr' does not match port width (32) of module 'pr' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/imports/adm-8k5/srcs/shellTop.v:289]
 WARNING: [Synth 8-689] width (32) of port connection 'S_AXI_CONTROL_wstrb' does not match port width (4) of module 'pr' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/imports/adm-8k5/srcs/shellTop.v:303]
@@ -285,8 +292,12 @@ WARNING: [Synth 8-689] width (32) of port connection 'S_AXI_MEM_awaddr' does not
 WARNING: [Synth 8-689] width (2) of port connection 'S_AXI_MEM_awid' does not match port width (1) of module 'pr' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/imports/adm-8k5/srcs/shellTop.v:319]
 WARNING: [Synth 8-689] width (2) of port connection 'S_AXI_MEM_bid' does not match port width (1) of module 'pr' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/imports/adm-8k5/srcs/shellTop.v:327]
 WARNING: [Synth 8-689] width (2) of port connection 'S_AXI_MEM_rid' does not match port width (1) of module 'pr' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/imports/adm-8k5/srcs/shellTop.v:332]
-INFO: [Synth 8-6155] done synthesizing module 'shellTop' (73#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/imports/adm-8k5/srcs/shellTop.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'shellTop' (75#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/imports/adm-8k5/srcs/shellTop.v:8]
+WARNING: [Synth 8-3331] design s02_couplers_imp_1K3SXOR has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design s02_couplers_imp_1K3SXOR has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design s01_couplers_imp_1OUCIK2 has unconnected port M_AXI_bid[2]
 WARNING: [Synth 8-3331] design s01_couplers_imp_1OUCIK2 has unconnected port M_AXI_bid[1]
+WARNING: [Synth 8-3331] design s01_couplers_imp_1OUCIK2 has unconnected port M_AXI_rid[2]
 WARNING: [Synth 8-3331] design s01_couplers_imp_1OUCIK2 has unconnected port M_AXI_rid[1]
 WARNING: [Synth 8-3331] design s01_couplers_imp_1OUCIK2 has unconnected port S_ACLK
 WARNING: [Synth 8-3331] design s01_couplers_imp_1OUCIK2 has unconnected port S_ARESETN
@@ -382,13 +393,9 @@ WARNING: [Synth 8-3331] design m04_couplers_imp_6LBE8C has unconnected port S_AX
 WARNING: [Synth 8-3331] design m04_couplers_imp_6LBE8C has unconnected port S_AXI_araddr[20]
 WARNING: [Synth 8-3331] design m04_couplers_imp_6LBE8C has unconnected port S_AXI_araddr[19]
 WARNING: [Synth 8-3331] design m04_couplers_imp_6LBE8C has unconnected port S_AXI_araddr[18]
-WARNING: [Synth 8-3331] design m04_couplers_imp_6LBE8C has unconnected port S_AXI_araddr[17]
-WARNING: [Synth 8-3331] design m04_couplers_imp_6LBE8C has unconnected port S_AXI_araddr[16]
-WARNING: [Synth 8-3331] design m04_couplers_imp_6LBE8C has unconnected port S_AXI_araddr[15]
-WARNING: [Synth 8-3331] design m04_couplers_imp_6LBE8C has unconnected port S_AXI_araddr[14]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1875.199 ; gain = 0.000 ; free physical = 12624 ; free virtual = 78057
+Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1883.176 ; gain = 0.000 ; free physical = 13546 ; free virtual = 78980
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -410,10 +417,10 @@ WARNING: [Synth 8-3295] tying undriven pin shell_i:S_AXI_MEM_wid[0] to constant 
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1875.199 ; gain = 0.000 ; free physical = 12630 ; free virtual = 78063
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1883.176 ; gain = 0.000 ; free physical = 13552 ; free virtual = 78986
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1875.199 ; gain = 0.000 ; free physical = 12630 ; free virtual = 78063
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1883.176 ; gain = 0.000 ; free physical = 13552 ; free virtual = 78986
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xcku115-flva1517-2-e
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -434,8 +441,6 @@ Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/ad
 Finished Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_bram_ctrl_0_0/shell_axi_bram_ctrl_0_0/shell_axi_bram_ctrl_0_0_in_context.xdc] for cell 'shell_i/axi_bram_ctrl_0'
 Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_blk_mem_gen_0_0/shell_blk_mem_gen_0_0/shell_blk_mem_gen_0_0_in_context.xdc] for cell 'shell_i/blk_mem_gen_0'
 Finished Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_blk_mem_gen_0_0/shell_blk_mem_gen_0_0/shell_blk_mem_gen_0_0_in_context.xdc] for cell 'shell_i/blk_mem_gen_0'
-Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_hwicap_0_0/shell_axi_hwicap_0_0/shell_axi_hwicap_0_0_in_context.xdc] for cell 'shell_i/axi_hwicap_0'
-Finished Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_hwicap_0_0/shell_axi_hwicap_0_0/shell_axi_hwicap_0_0_in_context.xdc] for cell 'shell_i/axi_hwicap_0'
 Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_reverseEndian64_0_0/shell_reverseEndian64_0_0/shell_reverseEndian64_0_0_in_context.xdc] for cell 'shell_i/reverseEndian64_0'
 Finished Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_reverseEndian64_0_0/shell_reverseEndian64_0_0/shell_reverseEndian64_0_0_in_context.xdc] for cell 'shell_i/reverseEndian64_0'
 Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_reverseEndian64_1_0/shell_reverseEndian64_1_0/shell_reverseEndian64_0_0_in_context.xdc] for cell 'shell_i/reverseEndian64_1'
@@ -500,8 +505,12 @@ Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/ad
 Finished Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_tx_data_fifo_0_0/shell_tx_data_fifo_0_0/shell_rx_data_fifo_1_0_in_context.xdc] for cell 'shell_i/network/tx_data_fifo_0'
 Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_util_vector_logic_1_1/shell_util_vector_logic_1_1/shell_util_vector_logic_1_0_in_context.xdc] for cell 'shell_i/util_vector_logic_3'
 Finished Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_util_vector_logic_1_1/shell_util_vector_logic_1_1/shell_util_vector_logic_1_0_in_context.xdc] for cell 'shell_i/util_vector_logic_3'
+Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_pr_controller_0_0/shell_axi_pr_controller_0_0/shell_axi_pr_controller_0_0_in_context.xdc] for cell 'shell_i/axi_pr_controller_0'
+Finished Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_pr_controller_0_0/shell_axi_pr_controller_0_0/shell_axi_pr_controller_0_0_in_context.xdc] for cell 'shell_i/axi_pr_controller_0'
 Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_cc_6/shell_auto_cc_6/shell_auto_cc_6_in_context.xdc] for cell 'shell_i/mem_interface/mem_interconnect/m00_couplers/auto_cc'
 Finished Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_cc_6/shell_auto_cc_6/shell_auto_cc_6_in_context.xdc] for cell 'shell_i/mem_interface/mem_interconnect/m00_couplers/auto_cc'
+Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_us_df_0/shell_auto_us_df_0/shell_auto_us_df_0_in_context.xdc] for cell 'shell_i/mem_interface/mem_interconnect/s02_couplers/auto_us_df'
+Finished Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_us_df_0/shell_auto_us_df_0/shell_auto_us_df_0_in_context.xdc] for cell 'shell_i/mem_interface/mem_interconnect/s02_couplers/auto_us_df'
 Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_s01_data_fifo_0/shell_s01_data_fifo_0/shell_s01_data_fifo_0_in_context.xdc] for cell 'shell_i/mem_interface/mem_interconnect/s01_couplers/s01_data_fifo'
 Finished Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_s01_data_fifo_0/shell_s01_data_fifo_0/shell_s01_data_fifo_0_in_context.xdc] for cell 'shell_i/mem_interface/mem_interconnect/s01_couplers/s01_data_fifo'
 Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_us_cc_df_0/shell_auto_us_cc_df_0/shell_auto_us_cc_df_0_in_context.xdc] for cell 'shell_i/mem_interface/mem_interconnect/s00_couplers/auto_us_cc_df'
@@ -510,8 +519,8 @@ Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/ad
 Finished Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_cc_4/shell_auto_cc_4/shell_auto_cc_2_in_context.xdc] for cell 'shell_i/axi_interconnect_0/m04_couplers/auto_cc'
 Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_cc_3/shell_auto_cc_3/shell_auto_cc_3_in_context.xdc] for cell 'shell_i/axi_interconnect_0/m03_couplers/auto_cc'
 Finished Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_cc_3/shell_auto_cc_3/shell_auto_cc_3_in_context.xdc] for cell 'shell_i/axi_interconnect_0/m03_couplers/auto_cc'
-Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_cc_2/shell_auto_cc_2/shell_auto_cc_2_in_context.xdc] for cell 'shell_i/axi_interconnect_0/m02_couplers/auto_cc'
-Finished Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_cc_2/shell_auto_cc_2/shell_auto_cc_2_in_context.xdc] for cell 'shell_i/axi_interconnect_0/m02_couplers/auto_cc'
+Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_cc_2/shell_auto_cc_2/shell_auto_cc_1_in_context.xdc] for cell 'shell_i/axi_interconnect_0/m02_couplers/auto_cc'
+Finished Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_cc_2/shell_auto_cc_2/shell_auto_cc_1_in_context.xdc] for cell 'shell_i/axi_interconnect_0/m02_couplers/auto_cc'
 Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_cc_1/shell_auto_cc_1/shell_auto_cc_1_in_context.xdc] for cell 'shell_i/axi_interconnect_0/m01_couplers/auto_cc'
 Finished Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_cc_1/shell_auto_cc_1/shell_auto_cc_1_in_context.xdc] for cell 'shell_i/axi_interconnect_0/m01_couplers/auto_cc'
 Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_cc_0/shell_auto_cc_0/shell_auto_cc_0_in_context.xdc] for cell 'shell_i/axi_interconnect_0/m00_couplers/auto_cc'
@@ -687,9 +696,9 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2256.820 ; gain = 0.000 ; free physical = 11980 ; free virtual = 77413
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2261.816 ; gain = 0.000 ; free physical = 12864 ; free virtual = 78298
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'shell_i/axi_gpio_0' at clock pin 's_axi_aclk' is different from the actual clock period '6.400', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '40.000' specified during out-of-context synthesis of instance 'shell_i/axi_hwicap_0' at clock pin 'icap_clk' is different from the actual clock period '10.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'shell_i/axi_pr_controller_0' at clock pin 'aclk' is different from the actual clock period '6.400', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'shell_i/blk_mem_gen_0' at clock pin 'clka' is different from the actual clock period '6.400', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'shell_i/mb_system/microblaze_0_local_memory/lmb_bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '3.759' specified during out-of-context synthesis of instance 'shell_i/mem_interface/proc_sys_reset_1' at clock pin 'slowest_sync_clk' is different from the actual clock period '3.755', this can lead to different synthesis results.
@@ -698,14 +707,14 @@ WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context s
 WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'shell_i/network/rx_data_fifo_1' at clock pin 's_axis_aclk' is different from the actual clock period '6.400', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'shell_i/network/tx_data_fifo_0' at clock pin 's_axis_aclk' is different from the actual clock period '6.400', this can lead to different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:34 ; elapsed = 00:00:44 . Memory (MB): peak = 2256.820 ; gain = 381.621 ; free physical = 12089 ; free virtual = 77522
+Finished Constraint Validation : Time (s): cpu = 00:00:35 ; elapsed = 00:00:44 . Memory (MB): peak = 2261.816 ; gain = 378.641 ; free physical = 13008 ; free virtual = 78442
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xcku115-flva1517-2-e
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:34 ; elapsed = 00:00:44 . Memory (MB): peak = 2256.820 ; gain = 381.621 ; free physical = 12089 ; free virtual = 77522
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:35 ; elapsed = 00:00:44 . Memory (MB): peak = 2261.816 ; gain = 378.641 ; free physical = 13008 ; free virtual = 78442
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -1037,7 +1046,6 @@ Applied set_property DONT_TOUCH = true for shell_i/util_vector_logic_2. (constra
 Applied set_property DONT_TOUCH = true for shell_i/axi_interconnect_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for shell_i/axi_bram_ctrl_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for shell_i/blk_mem_gen_0. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for shell_i/axi_hwicap_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for shell_i/reverseEndian64_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for shell_i/reverseEndian64_1. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for shell_i/pr_decoupler_0. (constraint file  auto generated constraint, line ).
@@ -1072,7 +1080,9 @@ Applied set_property DONT_TOUCH = true for shell_i/network/rx_register_slice_1. 
 Applied set_property DONT_TOUCH = true for shell_i/network/rx_data_fifo_1. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for shell_i/network/tx_data_fifo_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for shell_i/util_vector_logic_3. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for shell_i/axi_pr_controller_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for shell_i/mem_interface/mem_interconnect/m00_couplers/auto_cc. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for shell_i/mem_interface/mem_interconnect/s02_couplers/auto_us_df. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for shell_i/mem_interface/mem_interconnect/s01_couplers/s01_data_fifo. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for shell_i/mem_interface/mem_interconnect/s00_couplers/auto_us_cc_df. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for shell_i/axi_interconnect_0/m04_couplers/auto_cc. (constraint file  auto generated constraint, line ).
@@ -1083,10 +1093,10 @@ Applied set_property DONT_TOUCH = true for shell_i/axi_interconnect_0/m00_couple
 Applied set_property DONT_TOUCH = true for shell_i/axi_interconnect_0/s01_couplers/auto_cc. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for pr_i. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:00:44 . Memory (MB): peak = 2256.820 ; gain = 381.621 ; free physical = 12090 ; free virtual = 77523
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:36 ; elapsed = 00:00:45 . Memory (MB): peak = 2261.816 ; gain = 378.641 ; free physical = 13010 ; free virtual = 78444
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:35 ; elapsed = 00:00:45 . Memory (MB): peak = 2256.820 ; gain = 381.621 ; free physical = 12089 ; free virtual = 77523
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:36 ; elapsed = 00:00:45 . Memory (MB): peak = 2261.816 ; gain = 378.641 ; free physical = 13010 ; free virtual = 78444
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1122,7 +1132,7 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:46 . Memory (MB): peak = 2256.820 ; gain = 381.621 ; free physical = 12073 ; free virtual = 77506
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:37 ; elapsed = 00:00:46 . Memory (MB): peak = 2261.816 ; gain = 378.641 ; free physical = 12993 ; free virtual = 78427
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1179,13 +1189,13 @@ WARNING: [Synth 8-565] redefining clock 'refclk200'
 WARNING: [Synth 8-565] redefining clock 'refclk200'
 INFO: [Synth 8-5819] Moved 39 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:50 ; elapsed = 00:01:17 . Memory (MB): peak = 2394.258 ; gain = 519.059 ; free physical = 11747 ; free virtual = 77180
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:52 ; elapsed = 00:01:18 . Memory (MB): peak = 2395.254 ; gain = 512.078 ; free physical = 12670 ; free virtual = 78103
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:50 ; elapsed = 00:01:17 . Memory (MB): peak = 2396.258 ; gain = 521.059 ; free physical = 11746 ; free virtual = 77179
+Finished Timing Optimization : Time (s): cpu = 00:00:52 ; elapsed = 00:01:18 . Memory (MB): peak = 2397.254 ; gain = 514.078 ; free physical = 12668 ; free virtual = 78102
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1197,7 +1207,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:51 ; elapsed = 00:01:18 . Memory (MB): peak = 2404.031 ; gain = 528.832 ; free physical = 11744 ; free virtual = 77178
+Finished Technology Mapping : Time (s): cpu = 00:00:52 ; elapsed = 00:01:18 . Memory (MB): peak = 2406.043 ; gain = 522.867 ; free physical = 12666 ; free virtual = 78100
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1230,7 +1240,7 @@ WARNING: [Synth 8-3295] tying undriven pin S_AXI_MEM_awregion_inferred:in0[2] to
 WARNING: [Synth 8-3295] tying undriven pin S_AXI_MEM_awregion_inferred:in0[1] to constant 0
 WARNING: [Synth 8-3295] tying undriven pin S_AXI_MEM_awregion_inferred:in0[0] to constant 0
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:52 ; elapsed = 00:01:19 . Memory (MB): peak = 2404.031 ; gain = 528.832 ; free physical = 11743 ; free virtual = 77177
+Finished IO Insertion : Time (s): cpu = 00:00:53 ; elapsed = 00:01:19 . Memory (MB): peak = 2406.043 ; gain = 522.867 ; free physical = 12665 ; free virtual = 78099
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1243,7 +1253,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:52 ; elapsed = 00:01:19 . Memory (MB): peak = 2404.031 ; gain = 528.832 ; free physical = 11743 ; free virtual = 77176
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:53 ; elapsed = 00:01:19 . Memory (MB): peak = 2406.043 ; gain = 522.867 ; free physical = 12665 ; free virtual = 78098
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1255,25 +1265,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:52 ; elapsed = 00:01:19 . Memory (MB): peak = 2404.031 ; gain = 528.832 ; free physical = 11741 ; free virtual = 77174
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:53 ; elapsed = 00:01:19 . Memory (MB): peak = 2406.043 ; gain = 522.867 ; free physical = 12663 ; free virtual = 78097
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:52 ; elapsed = 00:01:19 . Memory (MB): peak = 2404.031 ; gain = 528.832 ; free physical = 11741 ; free virtual = 77174
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:53 ; elapsed = 00:01:19 . Memory (MB): peak = 2406.043 ; gain = 522.867 ; free physical = 12663 ; free virtual = 78097
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:52 ; elapsed = 00:01:19 . Memory (MB): peak = 2404.031 ; gain = 528.832 ; free physical = 11741 ; free virtual = 77174
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:53 ; elapsed = 00:01:19 . Memory (MB): peak = 2406.043 ; gain = 522.867 ; free physical = 12663 ; free virtual = 78097
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:52 ; elapsed = 00:01:19 . Memory (MB): peak = 2404.031 ; gain = 528.832 ; free physical = 11741 ; free virtual = 77174
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:53 ; elapsed = 00:01:20 . Memory (MB): peak = 2406.043 ; gain = 522.867 ; free physical = 12663 ; free virtual = 78097
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1292,7 +1302,7 @@ Report BlackBoxes:
 |7     |shell_auto_cc_5             |         1|
 |8     |shell_axi_bram_ctrl_0_0     |         1|
 |9     |shell_axi_gpio_0_0          |         1|
-|10    |shell_axi_hwicap_0_0        |         1|
+|10    |shell_axi_pr_controller_0_0 |         1|
 |11    |shell_blk_mem_gen_0_0       |         1|
 |12    |shell_clk_wiz_0_0           |         1|
 |13    |shell_gnd_0                 |         1|
@@ -1319,20 +1329,21 @@ Report BlackBoxes:
 |34    |shell_auto_cc_6             |         1|
 |35    |shell_auto_us_cc_df_0       |         1|
 |36    |shell_s01_data_fifo_0       |         1|
-|37    |shell_ddr4_0_0              |         1|
-|38    |shell_proc_sys_reset_1_0    |         1|
-|39    |shell_axi_10g_ethernet_0_0  |         1|
-|40    |shell_gnd_1                 |         1|
-|41    |shell_ifg_delay_0           |         1|
-|42    |shell_mac_config_vector_0   |         1|
-|43    |shell_pcs_config_vector_0   |         1|
-|44    |shell_rx_data_fifo_1_0      |         1|
-|45    |shell_rx_register_slice_1_0 |         1|
-|46    |shell_tx_data_fifo_0_0      |         1|
-|47    |shell_tx_ifg_tuser_0        |         1|
-|48    |shell_tx_register_slice_0_0 |         1|
-|49    |shell_vcc_0                 |         1|
-|50    |pr                          |         1|
+|37    |shell_auto_us_df_0          |         1|
+|38    |shell_ddr4_0_0              |         1|
+|39    |shell_proc_sys_reset_1_0    |         1|
+|40    |shell_axi_10g_ethernet_0_0  |         1|
+|41    |shell_gnd_1                 |         1|
+|42    |shell_ifg_delay_0           |         1|
+|43    |shell_mac_config_vector_0   |         1|
+|44    |shell_pcs_config_vector_0   |         1|
+|45    |shell_rx_data_fifo_1_0      |         1|
+|46    |shell_rx_register_slice_1_0 |         1|
+|47    |shell_tx_data_fifo_0_0      |         1|
+|48    |shell_tx_ifg_tuser_0        |         1|
+|49    |shell_tx_register_slice_0_0 |         1|
+|50    |shell_vcc_0                 |         1|
+|51    |pr                          |         1|
 +------+----------------------------+----------+
 
 Report Cell Usage: 
@@ -1348,62 +1359,63 @@ Report Cell Usage:
 |7     |shell_auto_cc_5             |     1|
 |8     |shell_auto_cc_6             |     1|
 |9     |shell_auto_us_cc_df_0       |     1|
-|10    |shell_axi_10g_ethernet_0_0  |     1|
-|11    |shell_axi_bram_ctrl_0_0     |     1|
-|12    |shell_axi_gpio_0_0          |     1|
-|13    |shell_axi_hwicap_0_0        |     1|
-|14    |shell_blk_mem_gen_0_0       |     1|
-|15    |shell_clk_wiz_0_0           |     1|
-|16    |shell_ddr4_0_0              |     1|
-|17    |shell_dlmb_bram_if_cntlr_0  |     1|
-|18    |shell_dlmb_v10_0            |     1|
-|19    |shell_gnd_0                 |     1|
-|20    |shell_gnd_1                 |     1|
-|21    |shell_ifg_delay_0           |     1|
-|22    |shell_ilmb_bram_if_cntlr_0  |     1|
-|23    |shell_ilmb_v10_0            |     1|
-|24    |shell_lmb_bram_0            |     1|
-|25    |shell_mac_config_vector_0   |     1|
-|26    |shell_mdm_1_0               |     1|
-|27    |shell_microblaze_0_0        |     1|
-|28    |shell_pcs_config_vector_0   |     1|
-|29    |shell_pr_decoupler_0_0      |     1|
-|30    |shell_proc_sys_reset_1_0    |     1|
-|31    |shell_reverseEndian64_0_0   |     1|
-|32    |shell_reverseEndian64_1_0   |     1|
-|33    |shell_rst_clk_wiz_0_100M_0  |     1|
-|34    |shell_rx_data_fifo_1_0      |     1|
-|35    |shell_rx_register_slice_1_0 |     1|
-|36    |shell_s01_data_fifo_0       |     1|
-|37    |shell_tx_data_fifo_0_0      |     1|
-|38    |shell_tx_ifg_tuser_0        |     1|
-|39    |shell_tx_register_slice_0_0 |     1|
-|40    |shell_util_ds_buf_0         |     1|
-|41    |shell_util_vector_logic_0_0 |     1|
-|42    |shell_util_vector_logic_1_0 |     1|
-|43    |shell_util_vector_logic_1_1 |     1|
-|44    |shell_util_vector_logic_2_0 |     1|
-|45    |shell_vcc_0                 |     1|
-|46    |shell_vio_0_0               |     1|
-|47    |shell_xbar_0                |     1|
-|48    |shell_xbar_1                |     1|
-|49    |shell_xbar_2                |     1|
-|50    |shell_xdma_0_0              |     1|
-|51    |LUT1                        |   104|
-|52    |IBUF                        |     1|
-|53    |OBUF                        |     2|
+|10    |shell_auto_us_df_0          |     1|
+|11    |shell_axi_10g_ethernet_0_0  |     1|
+|12    |shell_axi_bram_ctrl_0_0     |     1|
+|13    |shell_axi_gpio_0_0          |     1|
+|14    |shell_axi_pr_controller_0_0 |     1|
+|15    |shell_blk_mem_gen_0_0       |     1|
+|16    |shell_clk_wiz_0_0           |     1|
+|17    |shell_ddr4_0_0              |     1|
+|18    |shell_dlmb_bram_if_cntlr_0  |     1|
+|19    |shell_dlmb_v10_0            |     1|
+|20    |shell_gnd_0                 |     1|
+|21    |shell_gnd_1                 |     1|
+|22    |shell_ifg_delay_0           |     1|
+|23    |shell_ilmb_bram_if_cntlr_0  |     1|
+|24    |shell_ilmb_v10_0            |     1|
+|25    |shell_lmb_bram_0            |     1|
+|26    |shell_mac_config_vector_0   |     1|
+|27    |shell_mdm_1_0               |     1|
+|28    |shell_microblaze_0_0        |     1|
+|29    |shell_pcs_config_vector_0   |     1|
+|30    |shell_pr_decoupler_0_0      |     1|
+|31    |shell_proc_sys_reset_1_0    |     1|
+|32    |shell_reverseEndian64_0_0   |     1|
+|33    |shell_reverseEndian64_1_0   |     1|
+|34    |shell_rst_clk_wiz_0_100M_0  |     1|
+|35    |shell_rx_data_fifo_1_0      |     1|
+|36    |shell_rx_register_slice_1_0 |     1|
+|37    |shell_s01_data_fifo_0       |     1|
+|38    |shell_tx_data_fifo_0_0      |     1|
+|39    |shell_tx_ifg_tuser_0        |     1|
+|40    |shell_tx_register_slice_0_0 |     1|
+|41    |shell_util_ds_buf_0         |     1|
+|42    |shell_util_vector_logic_0_0 |     1|
+|43    |shell_util_vector_logic_1_0 |     1|
+|44    |shell_util_vector_logic_1_1 |     1|
+|45    |shell_util_vector_logic_2_0 |     1|
+|46    |shell_vcc_0                 |     1|
+|47    |shell_vio_0_0               |     1|
+|48    |shell_xbar_0                |     1|
+|49    |shell_xbar_1                |     1|
+|50    |shell_xbar_2                |     1|
+|51    |shell_xdma_0_0              |     1|
+|52    |LUT1                        |   104|
+|53    |IBUF                        |     1|
+|54    |OBUF                        |     2|
 +------+----------------------------+------+
 
 Report Instance Areas: 
 +------+--------------------------------+--------------------------------------+------+
 |      |Instance                        |Module                                |Cells |
 +------+--------------------------------+--------------------------------------+------+
-|1     |top                             |                                      | 14198|
-|2     |  shell_i                       |shell                                 | 13213|
-|3     |    axi_interconnect_0          |shell_axi_interconnect_0_0            |  1355|
+|1     |top                             |                                      | 15800|
+|2     |  shell_i                       |shell                                 | 14815|
+|3     |    axi_interconnect_0          |shell_axi_interconnect_0_0            |  1401|
 |4     |      m00_couplers              |m00_couplers_imp_17RNK4V              |   112|
 |5     |      m01_couplers              |m01_couplers_imp_A2B4UF               |   152|
-|6     |      m02_couplers              |m02_couplers_imp_ERMJ3Y               |   106|
+|6     |      m02_couplers              |m02_couplers_imp_ERMJ3Y               |   152|
 |7     |      m03_couplers              |m03_couplers_imp_13219ZQ              |    90|
 |8     |      m04_couplers              |m04_couplers_imp_6LBE8C               |   106|
 |9     |      s01_couplers              |s01_couplers_imp_VOMHM4               |   152|
@@ -1411,19 +1423,20 @@ Report Instance Areas:
 |11    |    mb_system                   |mb_system_imp_VMXBLU                  |  1041|
 |12    |      microblaze_0_axi_periph   |shell_microblaze_0_axi_periph_0       |   263|
 |13    |      microblaze_0_local_memory |microblaze_0_local_memory_imp_1HEYJGJ |   496|
-|14    |    mem_interface               |mem_interface_imp_1EJ895G             |  6407|
-|15    |      mem_interconnect          |shell_mem_interconnect_0              |  5332|
-|16    |        m00_couplers            |m00_couplers_imp_EN5S6P               |  1236|
+|14    |    mem_interface               |mem_interface_imp_1EJ895G             |  7749|
+|15    |      mem_interconnect          |shell_mem_interconnect_0              |  6672|
+|16    |        m00_couplers            |m00_couplers_imp_EN5S6P               |  1240|
 |17    |        s00_couplers            |s00_couplers_imp_RDWXZU               |  1042|
 |18    |        s01_couplers            |s01_couplers_imp_1OUCIK2              |  1230|
-|19    |    network                     |network_imp_10F7WL8                   |  1743|
+|19    |        s02_couplers            |s02_couplers_imp_1K3SXOR              |   802|
+|20    |    network                     |network_imp_10F7WL8                   |  1743|
 +------+--------------------------------+--------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:52 ; elapsed = 00:01:19 . Memory (MB): peak = 2404.031 ; gain = 528.832 ; free physical = 11741 ; free virtual = 77174
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:53 ; elapsed = 00:01:20 . Memory (MB): peak = 2406.043 ; gain = 522.867 ; free physical = 12663 ; free virtual = 78097
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 21 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:39 ; elapsed = 00:00:59 . Memory (MB): peak = 2404.031 ; gain = 147.211 ; free physical = 11762 ; free virtual = 77196
-Synthesis Optimization Complete : Time (s): cpu = 00:00:52 ; elapsed = 00:01:19 . Memory (MB): peak = 2404.039 ; gain = 528.832 ; free physical = 11772 ; free virtual = 77205
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:40 ; elapsed = 00:00:59 . Memory (MB): peak = 2406.043 ; gain = 144.227 ; free physical = 12684 ; free virtual = 78118
+Synthesis Optimization Complete : Time (s): cpu = 00:00:53 ; elapsed = 00:01:20 . Memory (MB): peak = 2406.051 ; gain = 522.867 ; free physical = 12694 ; free virtual = 78128
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -1434,10 +1447,10 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   IBUF => IBUF (IBUFCTRL, INBUF): 1 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-291 Infos, 286 Warnings, 0 Critical Warnings and 0 Errors encountered.
+295 Infos, 289 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:58 ; elapsed = 00:01:24 . Memory (MB): peak = 2460.758 ; gain = 1075.746 ; free physical = 11746 ; free virtual = 77179
+synth_design: Time (s): cpu = 00:01:00 ; elapsed = 00:01:24 . Memory (MB): peak = 2466.145 ; gain = 1081.160 ; free physical = 12664 ; free virtual = 78098
 INFO: [Common 17-1381] The checkpoint '/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/shellTop.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file shellTop_utilization_synth.rpt -pb shellTop_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00.81 ; elapsed = 00:00:00.87 . Memory (MB): peak = 2460.758 ; gain = 0.000 ; free physical = 11743 ; free virtual = 77177
-INFO: [Common 17-206] Exiting Vivado at Thu May 17 20:58:49 2018...
+report_utilization: Time (s): cpu = 00:00:00.81 ; elapsed = 00:00:00.89 . Memory (MB): peak = 2466.145 ; gain = 0.000 ; free physical = 12664 ; free virtual = 78097
+INFO: [Common 17-206] Exiting Vivado at Wed May 23 17:54:10 2018...

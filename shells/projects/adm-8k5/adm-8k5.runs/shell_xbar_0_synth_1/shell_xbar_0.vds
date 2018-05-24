@@ -2,12 +2,12 @@
 # Vivado v2018.1 (64-bit)
 # SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018
 # IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
-# Start of session at: Tue May 15 11:59:11 2018
-# Process ID: 22444
-# Current directory: /nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/shell_xbar_0_synth_1
+# Start of session at: Wed May 23 17:42:21 2018
+# Process ID: 16782
+# Current directory: /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/shell_xbar_0_synth_1
 # Command line: vivado -log shell_xbar_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source shell_xbar_0.tcl
-# Log file: /nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/shell_xbar_0_synth_1/shell_xbar_0.vds
-# Journal file: /nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/shell_xbar_0_synth_1/vivado.jou
+# Log file: /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/shell_xbar_0_synth_1/shell_xbar_0.vds
+# Journal file: /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/shell_xbar_0_synth_1/vivado.jou
 #-----------------------------------------------------------
 source shell_xbar_0.tcl -notrace
 Command: synth_design -top shell_xbar_0 -part xcku115-flva1517-2-e -mode out_of_context
@@ -15,44 +15,44 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xcku115'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcku115'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 22540 
+INFO: Helper process launched with PID 16886 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:14 ; elapsed = 00:00:29 . Memory (MB): peak = 1355.703 ; gain = 84.000 ; free physical = 4423 ; free virtual = 32194
+Starting RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:23 . Memory (MB): peak = 1395.672 ; gain = 88.000 ; free physical = 11413 ; free virtual = 76847
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'shell_xbar_0' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_xbar_0/synth/shell_xbar_0.v:59]
-INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_17_axi_crossbar' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:4882]
+INFO: [Synth 8-6157] synthesizing module 'shell_xbar_0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_xbar_0/synth/shell_xbar_0.v:59]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_17_axi_crossbar' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:4882]
 	Parameter C_FAMILY bound to: kintexu - type: string 
-	Parameter C_NUM_SLAVE_SLOTS bound to: 2 - type: integer 
+	Parameter C_NUM_SLAVE_SLOTS bound to: 3 - type: integer 
 	Parameter C_NUM_MASTER_SLOTS bound to: 1 - type: integer 
-	Parameter C_AXI_ID_WIDTH bound to: 2 - type: integer 
+	Parameter C_AXI_ID_WIDTH bound to: 3 - type: integer 
 	Parameter C_AXI_ADDR_WIDTH bound to: 64 - type: integer 
 	Parameter C_AXI_DATA_WIDTH bound to: 512 - type: integer 
 	Parameter C_AXI_PROTOCOL bound to: 0 - type: integer 
 	Parameter C_NUM_ADDR_RANGES bound to: 1 - type: integer 
 	Parameter C_M_AXI_BASE_ADDR bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
 	Parameter C_M_AXI_ADDR_WIDTH bound to: 30 - type: integer 
-	Parameter C_S_AXI_BASE_ID bound to: 64'b0000000000000000000000000000001000000000000000000000000000000000 
-	Parameter C_S_AXI_THREAD_ID_WIDTH bound to: 64'b0000000000000000000000000000000100000000000000000000000000000000 
+	Parameter C_S_AXI_BASE_ID bound to: 96'b000000000000000000000000000001000000000000000000000000000000001000000000000000000000000000000000 
+	Parameter C_S_AXI_THREAD_ID_WIDTH bound to: 96'b000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000 
 	Parameter C_AXI_SUPPORTS_USER_SIGNALS bound to: 0 - type: integer 
 	Parameter C_AXI_AWUSER_WIDTH bound to: 1 - type: integer 
 	Parameter C_AXI_ARUSER_WIDTH bound to: 1 - type: integer 
 	Parameter C_AXI_WUSER_WIDTH bound to: 1 - type: integer 
 	Parameter C_AXI_RUSER_WIDTH bound to: 1 - type: integer 
 	Parameter C_AXI_BUSER_WIDTH bound to: 1 - type: integer 
-	Parameter C_M_AXI_WRITE_CONNECTIVITY bound to: 3 - type: integer 
-	Parameter C_M_AXI_READ_CONNECTIVITY bound to: 3 - type: integer 
+	Parameter C_M_AXI_WRITE_CONNECTIVITY bound to: 7 - type: integer 
+	Parameter C_M_AXI_READ_CONNECTIVITY bound to: 7 - type: integer 
 	Parameter C_R_REGISTER bound to: 0 - type: integer 
-	Parameter C_S_AXI_SINGLE_THREAD bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
-	Parameter C_S_AXI_WRITE_ACCEPTANCE bound to: 64'b0000000000000000000000000000010000000000000000000000000000000100 
-	Parameter C_S_AXI_READ_ACCEPTANCE bound to: 64'b0000000000000000000000000000010000000000000000000000000000000100 
+	Parameter C_S_AXI_SINGLE_THREAD bound to: 96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_S_AXI_WRITE_ACCEPTANCE bound to: 96'b000000000000000000000000000001000000000000000000000000000000010000000000000000000000000000000100 
+	Parameter C_S_AXI_READ_ACCEPTANCE bound to: 96'b000000000000000000000000000001000000000000000000000000000000010000000000000000000000000000000100 
 	Parameter C_M_AXI_WRITE_ISSUING bound to: 16 - type: integer 
 	Parameter C_M_AXI_READ_ISSUING bound to: 32 - type: integer 
-	Parameter C_S_AXI_ARB_PRIORITY bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_S_AXI_ARB_PRIORITY bound to: 96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter C_M_AXI_SECURE bound to: 0 - type: integer 
 	Parameter C_CONNECTIVITY_MODE bound to: 1 - type: integer 
 	Parameter P_ONES bound to: 65'b11111111111111111111111111111111111111111111111111111111111111111 
-	Parameter P_S_AXI_BASE_ID bound to: 128'b00000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000 
-	Parameter P_S_AXI_HIGH_ID bound to: 128'b00000000000000000000000000000000000000000000000000000000000000110000000000000000000000000000000000000000000000000000000000000000 
+	Parameter P_S_AXI_BASE_ID bound to: 192'b000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000 
+	Parameter P_S_AXI_HIGH_ID bound to: 192'b000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000110000000000000000000000000000000000000000000000000000000000000000 
 	Parameter P_AXI4 bound to: 0 - type: integer 
 	Parameter P_AXI3 bound to: 1 - type: integer 
 	Parameter P_AXILITE bound to: 2 - type: integer 
@@ -60,8 +60,8 @@ INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_17_axi_crossbar' [/n
 	Parameter P_INCR bound to: 2'b01 
 	Parameter P_M_AXI_SUPPORTS_WRITE bound to: 1'b1 
 	Parameter P_M_AXI_SUPPORTS_READ bound to: 1'b1 
-	Parameter P_S_AXI_SUPPORTS_WRITE bound to: 2'b11 
-	Parameter P_S_AXI_SUPPORTS_READ bound to: 2'b11 
+	Parameter P_S_AXI_SUPPORTS_WRITE bound to: 3'b111 
+	Parameter P_S_AXI_SUPPORTS_READ bound to: 3'b111 
 	Parameter C_DEBUG bound to: 1 - type: integer 
 	Parameter P_RANGE_CHECK bound to: 1 - type: integer 
 	Parameter P_ADDR_DECODE bound to: 1 - type: integer 
@@ -69,46 +69,46 @@ INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_17_axi_crossbar' [/n
 	Parameter P_LEN bound to: 8 - type: integer 
 	Parameter P_LOCK bound to: 1 - type: integer 
 	Parameter P_FAMILY bound to: rtl - type: string 
-INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_17_crossbar' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:2239]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_17_crossbar' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:2239]
 	Parameter C_FAMILY bound to: rtl - type: string 
-	Parameter C_NUM_SLAVE_SLOTS bound to: 2 - type: integer 
+	Parameter C_NUM_SLAVE_SLOTS bound to: 3 - type: integer 
 	Parameter C_NUM_MASTER_SLOTS bound to: 1 - type: integer 
 	Parameter C_NUM_ADDR_RANGES bound to: 1 - type: integer 
-	Parameter C_AXI_ID_WIDTH bound to: 2 - type: integer 
+	Parameter C_AXI_ID_WIDTH bound to: 3 - type: integer 
 	Parameter C_AXI_ADDR_WIDTH bound to: 64 - type: integer 
 	Parameter C_AXI_DATA_WIDTH bound to: 512 - type: integer 
 	Parameter C_AXI_PROTOCOL bound to: 0 - type: integer 
 	Parameter C_M_AXI_BASE_ADDR bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
 	Parameter C_M_AXI_HIGH_ADDR bound to: 64'b0000000000000000000000000000000000111111111111111111111111111111 
-	Parameter C_S_AXI_BASE_ID bound to: 128'b00000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000 
-	Parameter C_S_AXI_HIGH_ID bound to: 128'b00000000000000000000000000000000000000000000000000000000000000110000000000000000000000000000000000000000000000000000000000000000 
-	Parameter C_S_AXI_THREAD_ID_WIDTH bound to: 64'b0000000000000000000000000000000100000000000000000000000000000000 
+	Parameter C_S_AXI_BASE_ID bound to: 192'b000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_S_AXI_HIGH_ID bound to: 192'b000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000110000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_S_AXI_THREAD_ID_WIDTH bound to: 96'b000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000 
 	Parameter C_AXI_SUPPORTS_USER_SIGNALS bound to: 0 - type: integer 
 	Parameter C_AXI_AWUSER_WIDTH bound to: 1 - type: integer 
 	Parameter C_AXI_ARUSER_WIDTH bound to: 1 - type: integer 
 	Parameter C_AXI_WUSER_WIDTH bound to: 1 - type: integer 
 	Parameter C_AXI_RUSER_WIDTH bound to: 1 - type: integer 
 	Parameter C_AXI_BUSER_WIDTH bound to: 1 - type: integer 
-	Parameter C_S_AXI_SUPPORTS_WRITE bound to: 2'b11 
-	Parameter C_S_AXI_SUPPORTS_READ bound to: 2'b11 
+	Parameter C_S_AXI_SUPPORTS_WRITE bound to: 3'b111 
+	Parameter C_S_AXI_SUPPORTS_READ bound to: 3'b111 
 	Parameter C_M_AXI_SUPPORTS_WRITE bound to: 1'b1 
 	Parameter C_M_AXI_SUPPORTS_READ bound to: 1'b1 
-	Parameter C_M_AXI_WRITE_CONNECTIVITY bound to: 3 - type: integer 
-	Parameter C_M_AXI_READ_CONNECTIVITY bound to: 3 - type: integer 
-	Parameter C_S_AXI_SINGLE_THREAD bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
-	Parameter C_S_AXI_WRITE_ACCEPTANCE bound to: 64'b0000000000000000000000000000010000000000000000000000000000000100 
-	Parameter C_S_AXI_READ_ACCEPTANCE bound to: 64'b0000000000000000000000000000010000000000000000000000000000000100 
+	Parameter C_M_AXI_WRITE_CONNECTIVITY bound to: 7 - type: integer 
+	Parameter C_M_AXI_READ_CONNECTIVITY bound to: 7 - type: integer 
+	Parameter C_S_AXI_SINGLE_THREAD bound to: 96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_S_AXI_WRITE_ACCEPTANCE bound to: 96'b000000000000000000000000000001000000000000000000000000000000010000000000000000000000000000000100 
+	Parameter C_S_AXI_READ_ACCEPTANCE bound to: 96'b000000000000000000000000000001000000000000000000000000000000010000000000000000000000000000000100 
 	Parameter C_M_AXI_WRITE_ISSUING bound to: 16 - type: integer 
 	Parameter C_M_AXI_READ_ISSUING bound to: 32 - type: integer 
-	Parameter C_S_AXI_ARB_PRIORITY bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_S_AXI_ARB_PRIORITY bound to: 96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter C_M_AXI_SECURE bound to: 0 - type: integer 
 	Parameter C_M_AXI_ERR_MODE bound to: 32'b00000000000000000000000000000000 
 	Parameter C_RANGE_CHECK bound to: 1 - type: integer 
 	Parameter C_ADDR_DECODE bound to: 1 - type: integer 
 	Parameter C_W_ISSUE_WIDTH bound to: 64'b0000000000000000000000000000000000000000000000000000000000000100 
 	Parameter C_R_ISSUE_WIDTH bound to: 64'b0000000000000000000000000000000000000000000000000000000000000101 
-	Parameter C_W_ACCEPT_WIDTH bound to: 64'b0000000000000000000000000000001000000000000000000000000000000010 
-	Parameter C_R_ACCEPT_WIDTH bound to: 64'b0000000000000000000000000000001000000000000000000000000000000010 
+	Parameter C_W_ACCEPT_WIDTH bound to: 96'b000000000000000000000000000000100000000000000000000000000000001000000000000000000000000000000010 
+	Parameter C_R_ACCEPT_WIDTH bound to: 96'b000000000000000000000000000000100000000000000000000000000000001000000000000000000000000000000010 
 	Parameter C_DEBUG bound to: 1 - type: integer 
 	Parameter P_AXI4 bound to: 0 - type: integer 
 	Parameter P_AXI3 bound to: 1 - type: integer 
@@ -116,12 +116,12 @@ INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_17_crossbar' [/nfs/u
 	Parameter P_WRITE bound to: 0 - type: integer 
 	Parameter P_READ bound to: 1 - type: integer 
 	Parameter P_NUM_MASTER_SLOTS_LOG bound to: 0 - type: integer 
-	Parameter P_NUM_SLAVE_SLOTS_LOG bound to: 1 - type: integer 
+	Parameter P_NUM_SLAVE_SLOTS_LOG bound to: 2 - type: integer 
 	Parameter P_AXI_WID_WIDTH bound to: 1 - type: integer 
 	Parameter P_ST_AWMESG_WIDTH bound to: 11 - type: integer 
-	Parameter P_AA_AWMESG_WIDTH bound to: 97 - type: integer 
+	Parameter P_AA_AWMESG_WIDTH bound to: 98 - type: integer 
 	Parameter P_ST_ARMESG_WIDTH bound to: 11 - type: integer 
-	Parameter P_AA_ARMESG_WIDTH bound to: 97 - type: integer 
+	Parameter P_AA_ARMESG_WIDTH bound to: 98 - type: integer 
 	Parameter P_ST_BMESG_WIDTH bound to: 3 - type: integer 
 	Parameter P_ST_RMESG_WIDTH bound to: 515 - type: integer 
 	Parameter P_WR_WMESG_WIDTH bound to: 578 - type: integer 
@@ -130,14 +130,14 @@ INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_17_crossbar' [/nfs/u
 	Parameter P_SIMPLE bound to: 7 - type: integer 
 	Parameter P_M_AXI_SUPPORTS_READ bound to: 2'b11 
 	Parameter P_M_AXI_SUPPORTS_WRITE bound to: 2'b11 
-	Parameter P_M_AXI_WRITE_CONNECTIVITY bound to: 64'b1111111111111111111111111111111100000000000000000000000000000011 
-	Parameter P_M_AXI_READ_CONNECTIVITY bound to: 64'b1111111111111111111111111111111100000000000000000000000000000011 
-	Parameter P_S_AXI_WRITE_CONNECTIVITY bound to: 64'b1111111111111111111111111111111111111111111111111111111111111111 
-	Parameter P_S_AXI_READ_CONNECTIVITY bound to: 64'b1111111111111111111111111111111111111111111111111111111111111111 
+	Parameter P_M_AXI_WRITE_CONNECTIVITY bound to: 64'b1111111111111111111111111111111100000000000000000000000000000111 
+	Parameter P_M_AXI_READ_CONNECTIVITY bound to: 64'b1111111111111111111111111111111100000000000000000000000000000111 
+	Parameter P_S_AXI_WRITE_CONNECTIVITY bound to: 96'b111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111 
+	Parameter P_S_AXI_READ_CONNECTIVITY bound to: 96'b111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111 
 	Parameter P_M_AXI_READ_ISSUING bound to: 64'b0000000000000000000000000000000100000000000000000000000000100000 
 	Parameter P_M_AXI_WRITE_ISSUING bound to: 64'b0000000000000000000000000000000100000000000000000000000000010000 
 	Parameter P_DECERR bound to: 2'b11 
-INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_17_si_transactor' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:3798]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_17_si_transactor' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:3798]
 	Parameter C_FAMILY bound to: rtl - type: string 
 	Parameter C_SI bound to: 0 - type: integer 
 	Parameter C_DIR bound to: 1 - type: integer 
@@ -146,13 +146,13 @@ INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_17_si_transactor' [/
 	Parameter C_NUM_M_LOG bound to: 0 - type: integer 
 	Parameter C_ACCEPTANCE bound to: 4 - type: integer 
 	Parameter C_ACCEPTANCE_LOG bound to: 2 - type: integer 
-	Parameter C_ID_WIDTH bound to: 2 - type: integer 
+	Parameter C_ID_WIDTH bound to: 3 - type: integer 
 	Parameter C_THREAD_ID_WIDTH bound to: 0 - type: integer 
 	Parameter C_ADDR_WIDTH bound to: 64 - type: integer 
 	Parameter C_AMESG_WIDTH bound to: 11 - type: integer 
 	Parameter C_RMESG_WIDTH bound to: 515 - type: integer 
-	Parameter C_BASE_ID bound to: 2'b00 
-	Parameter C_HIGH_ID bound to: 2'b00 
+	Parameter C_BASE_ID bound to: 3'b000 
+	Parameter C_HIGH_ID bound to: 3'b000 
 	Parameter C_BASE_ADDR bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
 	Parameter C_HIGH_ADDR bound to: 64'b0000000000000000000000000000000000111111111111111111111111111111 
 	Parameter C_SINGLE_THREAD bound to: 0 - type: integer 
@@ -164,7 +164,7 @@ INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_17_si_transactor' [/
 	Parameter C_DEBUG bound to: 1 - type: integer 
 	Parameter P_WRITE bound to: 0 - type: integer 
 	Parameter P_READ bound to: 1 - type: integer 
-	Parameter P_RMUX_MESG_WIDTH bound to: 518 - type: integer 
+	Parameter P_RMUX_MESG_WIDTH bound to: 519 - type: integer 
 	Parameter P_AXILITE_ERRMODE bound to: 1 - type: integer 
 	Parameter P_NONSECURE_BIT bound to: 1 - type: integer 
 	Parameter P_NUM_M_LOG_M1 bound to: 1 - type: integer 
@@ -175,7 +175,7 @@ INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_17_si_transactor' [/
 	Parameter P_NUM_ID_VAL bound to: 1 - type: integer 
 	Parameter P_NUM_THREADS bound to: 1 - type: integer 
 	Parameter P_M_SECURE_MASK bound to: 1'b0 
-INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_17_addr_decoder' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:794]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_17_addr_decoder' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:794]
 	Parameter C_FAMILY bound to: rtl - type: string 
 	Parameter C_NUM_TARGETS bound to: 1 - type: integer 
 	Parameter C_NUM_TARGETS_LOG bound to: 1 - type: integer 
@@ -189,19 +189,19 @@ INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_17_addr_decoder' [/n
 	Parameter C_TARGET_QUAL bound to: 2'b01 
 	Parameter C_RESOLUTION bound to: 2 - type: integer 
 	Parameter C_COMPARATOR_THRESHOLD bound to: 6 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_comparator_static' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_comparator_static' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
 	Parameter C_FAMILY bound to: rtl - type: string 
 	Parameter C_VALUE bound to: 62'b00000000000000000000000000000000000000000000000000000000000000 
 	Parameter C_DATA_WIDTH bound to: 62 - type: integer 
 	Parameter C_BITS_PER_LUT bound to: 6 - type: integer 
 	Parameter C_NUM_LUT bound to: 11 - type: integer 
 	Parameter C_FIX_DATA_WIDTH bound to: 66 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_carry_and' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:62]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_carry_and' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:62]
 	Parameter C_FAMILY bound to: rtl - type: string 
-INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_carry_and' (1#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:62]
-INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_comparator_static' (2#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_17_addr_decoder' (3#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:794]
-INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_15_axic_srl_fifo' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d114/hdl/axi_data_fifo_v2_1_vl_rfs.v:698]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_carry_and' (1#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:62]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_comparator_static' (2#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_17_addr_decoder' (3#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:794]
+INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_15_axic_srl_fifo' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d114/hdl/axi_data_fifo_v2_1_vl_rfs.v:698]
 	Parameter C_FAMILY bound to: rtl - type: string 
 	Parameter C_FIFO_WIDTH bound to: 8 - type: integer 
 	Parameter C_MAX_CTRL_FANOUT bound to: 33 - type: integer 
@@ -213,27 +213,27 @@ INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_15_axic_srl_fifo' [
 	Parameter P_ALMOSTFULL_TEMP bound to: 4'b1110 
 	Parameter P_ALMOSTFULL bound to: 3'b110 
 	Parameter P_NUM_REPS bound to: 1 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_15_ndeep_srl' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d114/hdl/axi_data_fifo_v2_1_vl_rfs.v:1135]
+INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_15_ndeep_srl' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d114/hdl/axi_data_fifo_v2_1_vl_rfs.v:1135]
 	Parameter C_FAMILY bound to: rtl - type: string 
 	Parameter C_A_WIDTH bound to: 3 - type: integer 
 	Parameter P_SRLASIZE bound to: 5 - type: integer 
 	Parameter P_SRLDEPTH bound to: 32 - type: integer 
 	Parameter P_NUMSRLS bound to: 1 - type: integer 
 	Parameter P_SHIFT_DEPTH bound to: 8 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_15_ndeep_srl' (4#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d114/hdl/axi_data_fifo_v2_1_vl_rfs.v:1135]
-WARNING: [Synth 8-6014] Unused sequential element areset_d1_reg was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d114/hdl/axi_data_fifo_v2_1_vl_rfs.v:750]
-WARNING: [Synth 8-6014] Unused sequential element S_READY_i_reg was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d114/hdl/axi_data_fifo_v2_1_vl_rfs.v:789]
-INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_15_axic_srl_fifo' (5#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d114/hdl/axi_data_fifo_v2_1_vl_rfs.v:698]
-INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_mux_enc' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_15_ndeep_srl' (4#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d114/hdl/axi_data_fifo_v2_1_vl_rfs.v:1135]
+WARNING: [Synth 8-6014] Unused sequential element areset_d1_reg was removed.  [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d114/hdl/axi_data_fifo_v2_1_vl_rfs.v:750]
+WARNING: [Synth 8-6014] Unused sequential element S_READY_i_reg was removed.  [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d114/hdl/axi_data_fifo_v2_1_vl_rfs.v:789]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_15_axic_srl_fifo' (5#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d114/hdl/axi_data_fifo_v2_1_vl_rfs.v:698]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_mux_enc' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
 	Parameter C_FAMILY bound to: rtl - type: string 
 	Parameter C_RATIO bound to: 2 - type: integer 
 	Parameter C_SEL_WIDTH bound to: 1 - type: integer 
-	Parameter C_DATA_WIDTH bound to: 518 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc' (6#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
-WARNING: [Synth 8-6014] Unused sequential element gen_single_thread.debug_r_beat_cnt_i_reg was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:4190]
-WARNING: [Synth 8-6014] Unused sequential element gen_single_thread.active_id_reg was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:4148]
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_17_si_transactor' (7#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:3798]
-INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_17_si_transactor__parameterized0' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:3798]
+	Parameter C_DATA_WIDTH bound to: 519 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc' (6#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
+WARNING: [Synth 8-6014] Unused sequential element gen_single_thread.debug_r_beat_cnt_i_reg was removed.  [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:4190]
+WARNING: [Synth 8-6014] Unused sequential element gen_single_thread.active_id_reg was removed.  [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:4148]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_17_si_transactor' (7#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:3798]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_17_si_transactor__parameterized0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:3798]
 	Parameter C_FAMILY bound to: rtl - type: string 
 	Parameter C_SI bound to: 0 - type: integer 
 	Parameter C_DIR bound to: 0 - type: integer 
@@ -242,13 +242,13 @@ INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_17_si_transactor__pa
 	Parameter C_NUM_M_LOG bound to: 0 - type: integer 
 	Parameter C_ACCEPTANCE bound to: 4 - type: integer 
 	Parameter C_ACCEPTANCE_LOG bound to: 2 - type: integer 
-	Parameter C_ID_WIDTH bound to: 2 - type: integer 
+	Parameter C_ID_WIDTH bound to: 3 - type: integer 
 	Parameter C_THREAD_ID_WIDTH bound to: 0 - type: integer 
 	Parameter C_ADDR_WIDTH bound to: 64 - type: integer 
 	Parameter C_AMESG_WIDTH bound to: 11 - type: integer 
 	Parameter C_RMESG_WIDTH bound to: 3 - type: integer 
-	Parameter C_BASE_ID bound to: 2'b00 
-	Parameter C_HIGH_ID bound to: 2'b00 
+	Parameter C_BASE_ID bound to: 3'b000 
+	Parameter C_HIGH_ID bound to: 3'b000 
 	Parameter C_BASE_ADDR bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
 	Parameter C_HIGH_ADDR bound to: 64'b0000000000000000000000000000000000111111111111111111111111111111 
 	Parameter C_SINGLE_THREAD bound to: 0 - type: integer 
@@ -260,7 +260,7 @@ INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_17_si_transactor__pa
 	Parameter C_DEBUG bound to: 1 - type: integer 
 	Parameter P_WRITE bound to: 0 - type: integer 
 	Parameter P_READ bound to: 1 - type: integer 
-	Parameter P_RMUX_MESG_WIDTH bound to: 6 - type: integer 
+	Parameter P_RMUX_MESG_WIDTH bound to: 7 - type: integer 
 	Parameter P_AXILITE_ERRMODE bound to: 1 - type: integer 
 	Parameter P_NONSECURE_BIT bound to: 1 - type: integer 
 	Parameter P_NUM_M_LOG_M1 bound to: 1 - type: integer 
@@ -271,26 +271,26 @@ INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_17_si_transactor__pa
 	Parameter P_NUM_ID_VAL bound to: 1 - type: integer 
 	Parameter P_NUM_THREADS bound to: 1 - type: integer 
 	Parameter P_M_SECURE_MASK bound to: 1'b0 
-INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized0' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
 	Parameter C_FAMILY bound to: rtl - type: string 
 	Parameter C_RATIO bound to: 2 - type: integer 
 	Parameter C_SEL_WIDTH bound to: 1 - type: integer 
-	Parameter C_DATA_WIDTH bound to: 6 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized0' (7#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
-WARNING: [Synth 8-6014] Unused sequential element gen_single_thread.debug_r_beat_cnt_i_reg was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:4190]
-WARNING: [Synth 8-6014] Unused sequential element gen_single_thread.active_id_reg was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:4148]
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_17_si_transactor__parameterized0' (7#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:3798]
-INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_17_splitter' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:4459]
+	Parameter C_DATA_WIDTH bound to: 7 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized0' (7#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
+WARNING: [Synth 8-6014] Unused sequential element gen_single_thread.debug_r_beat_cnt_i_reg was removed.  [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:4190]
+WARNING: [Synth 8-6014] Unused sequential element gen_single_thread.active_id_reg was removed.  [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:4148]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_17_si_transactor__parameterized0' (7#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:3798]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_17_splitter' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:4459]
 	Parameter C_NUM_M bound to: 2 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_17_splitter' (8#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:4459]
-INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_17_wdata_router' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:4734]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_17_splitter' (8#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:4459]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_17_wdata_router' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:4734]
 	Parameter C_FAMILY bound to: rtl - type: string 
 	Parameter C_WMESG_WIDTH bound to: 578 - type: integer 
 	Parameter C_NUM_MASTER_SLOTS bound to: 2 - type: integer 
 	Parameter C_SELECT_WIDTH bound to: 1 - type: integer 
 	Parameter C_FIFO_DEPTH_LOG bound to: 2 - type: integer 
 	Parameter P_FIFO_DEPTH_LOG bound to: 2 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_15_axic_reg_srl_fifo' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d114/hdl/axi_data_fifo_v2_1_vl_rfs.v:889]
+INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_15_axic_reg_srl_fifo' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d114/hdl/axi_data_fifo_v2_1_vl_rfs.v:889]
 	Parameter C_FAMILY bound to: rtl - type: string 
 	Parameter C_FIFO_WIDTH bound to: 1 - type: integer 
 	Parameter C_MAX_CTRL_FANOUT bound to: 33 - type: integer 
@@ -305,18 +305,18 @@ INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_15_axic_reg_srl_fif
 	Parameter ZERO bound to: 2'b10 
 	Parameter ONE bound to: 2'b11 
 	Parameter TWO bound to: 2'b01 
-INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_15_ndeep_srl__parameterized0' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d114/hdl/axi_data_fifo_v2_1_vl_rfs.v:1135]
+INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_15_ndeep_srl__parameterized0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d114/hdl/axi_data_fifo_v2_1_vl_rfs.v:1135]
 	Parameter C_FAMILY bound to: rtl - type: string 
 	Parameter C_A_WIDTH bound to: 2 - type: integer 
 	Parameter P_SRLASIZE bound to: 5 - type: integer 
 	Parameter P_SRLDEPTH bound to: 32 - type: integer 
 	Parameter P_NUMSRLS bound to: 1 - type: integer 
 	Parameter P_SHIFT_DEPTH bound to: 4 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_15_ndeep_srl__parameterized0' (8#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d114/hdl/axi_data_fifo_v2_1_vl_rfs.v:1135]
-INFO: [Synth 8-155] case statement is not full and has no default [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d114/hdl/axi_data_fifo_v2_1_vl_rfs.v:986]
-INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_15_axic_reg_srl_fifo' (9#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d114/hdl/axi_data_fifo_v2_1_vl_rfs.v:889]
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_17_wdata_router' (10#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:4734]
-INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_17_si_transactor__parameterized1' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:3798]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_15_ndeep_srl__parameterized0' (8#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d114/hdl/axi_data_fifo_v2_1_vl_rfs.v:1135]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d114/hdl/axi_data_fifo_v2_1_vl_rfs.v:986]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_15_axic_reg_srl_fifo' (9#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d114/hdl/axi_data_fifo_v2_1_vl_rfs.v:889]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_17_wdata_router' (10#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:4734]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_17_si_transactor__parameterized1' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:3798]
 	Parameter C_FAMILY bound to: rtl - type: string 
 	Parameter C_SI bound to: 1 - type: integer 
 	Parameter C_DIR bound to: 1 - type: integer 
@@ -325,13 +325,13 @@ INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_17_si_transactor__pa
 	Parameter C_NUM_M_LOG bound to: 0 - type: integer 
 	Parameter C_ACCEPTANCE bound to: 4 - type: integer 
 	Parameter C_ACCEPTANCE_LOG bound to: 2 - type: integer 
-	Parameter C_ID_WIDTH bound to: 2 - type: integer 
+	Parameter C_ID_WIDTH bound to: 3 - type: integer 
 	Parameter C_THREAD_ID_WIDTH bound to: 1 - type: integer 
 	Parameter C_ADDR_WIDTH bound to: 64 - type: integer 
 	Parameter C_AMESG_WIDTH bound to: 11 - type: integer 
 	Parameter C_RMESG_WIDTH bound to: 515 - type: integer 
-	Parameter C_BASE_ID bound to: 2'b10 
-	Parameter C_HIGH_ID bound to: 2'b11 
+	Parameter C_BASE_ID bound to: 3'b010 
+	Parameter C_HIGH_ID bound to: 3'b011 
 	Parameter C_BASE_ADDR bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
 	Parameter C_HIGH_ADDR bound to: 64'b0000000000000000000000000000000000111111111111111111111111111111 
 	Parameter C_SINGLE_THREAD bound to: 0 - type: integer 
@@ -343,7 +343,7 @@ INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_17_si_transactor__pa
 	Parameter C_DEBUG bound to: 1 - type: integer 
 	Parameter P_WRITE bound to: 0 - type: integer 
 	Parameter P_READ bound to: 1 - type: integer 
-	Parameter P_RMUX_MESG_WIDTH bound to: 518 - type: integer 
+	Parameter P_RMUX_MESG_WIDTH bound to: 519 - type: integer 
 	Parameter P_AXILITE_ERRMODE bound to: 1 - type: integer 
 	Parameter P_NONSECURE_BIT bound to: 1 - type: integer 
 	Parameter P_NUM_M_LOG_M1 bound to: 1 - type: integer 
@@ -354,17 +354,17 @@ INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_17_si_transactor__pa
 	Parameter P_NUM_ID_VAL bound to: 2 - type: integer 
 	Parameter P_NUM_THREADS bound to: 2 - type: integer 
 	Parameter P_M_SECURE_MASK bound to: 1'b0 
-INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_17_arbiter_resp' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:1025]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_17_arbiter_resp' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:1025]
 	Parameter C_FAMILY bound to: rtl - type: string 
 	Parameter C_NUM_S bound to: 2 - type: integer 
 	Parameter C_NUM_S_LOG bound to: 1 - type: integer 
 	Parameter C_GRANT_ENC bound to: 1 - type: integer 
 	Parameter C_GRANT_HOT bound to: 0 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_17_arbiter_resp' (11#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:1025]
-WARNING: [Synth 8-6014] Unused sequential element gen_multi_thread.debug_r_beat_cnt_i_reg was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:4344]
-WARNING: [Synth 8-6014] Unused sequential element gen_multi_thread.debug_r_beat_cnt_i_reg was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:4344]
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_17_si_transactor__parameterized1' (11#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:3798]
-INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_17_si_transactor__parameterized2' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:3798]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_17_arbiter_resp' (11#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:1025]
+WARNING: [Synth 8-6014] Unused sequential element gen_multi_thread.debug_r_beat_cnt_i_reg was removed.  [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:4344]
+WARNING: [Synth 8-6014] Unused sequential element gen_multi_thread.debug_r_beat_cnt_i_reg was removed.  [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:4344]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_17_si_transactor__parameterized1' (11#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:3798]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_17_si_transactor__parameterized2' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:3798]
 	Parameter C_FAMILY bound to: rtl - type: string 
 	Parameter C_SI bound to: 1 - type: integer 
 	Parameter C_DIR bound to: 0 - type: integer 
@@ -373,13 +373,13 @@ INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_17_si_transactor__pa
 	Parameter C_NUM_M_LOG bound to: 0 - type: integer 
 	Parameter C_ACCEPTANCE bound to: 4 - type: integer 
 	Parameter C_ACCEPTANCE_LOG bound to: 2 - type: integer 
-	Parameter C_ID_WIDTH bound to: 2 - type: integer 
+	Parameter C_ID_WIDTH bound to: 3 - type: integer 
 	Parameter C_THREAD_ID_WIDTH bound to: 1 - type: integer 
 	Parameter C_ADDR_WIDTH bound to: 64 - type: integer 
 	Parameter C_AMESG_WIDTH bound to: 11 - type: integer 
 	Parameter C_RMESG_WIDTH bound to: 3 - type: integer 
-	Parameter C_BASE_ID bound to: 2'b10 
-	Parameter C_HIGH_ID bound to: 2'b11 
+	Parameter C_BASE_ID bound to: 3'b010 
+	Parameter C_HIGH_ID bound to: 3'b011 
 	Parameter C_BASE_ADDR bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
 	Parameter C_HIGH_ADDR bound to: 64'b0000000000000000000000000000000000111111111111111111111111111111 
 	Parameter C_SINGLE_THREAD bound to: 0 - type: integer 
@@ -391,7 +391,7 @@ INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_17_si_transactor__pa
 	Parameter C_DEBUG bound to: 1 - type: integer 
 	Parameter P_WRITE bound to: 0 - type: integer 
 	Parameter P_READ bound to: 1 - type: integer 
-	Parameter P_RMUX_MESG_WIDTH bound to: 6 - type: integer 
+	Parameter P_RMUX_MESG_WIDTH bound to: 7 - type: integer 
 	Parameter P_AXILITE_ERRMODE bound to: 1 - type: integer 
 	Parameter P_NONSECURE_BIT bound to: 1 - type: integer 
 	Parameter P_NUM_M_LOG_M1 bound to: 1 - type: integer 
@@ -402,25 +402,107 @@ INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_17_si_transactor__pa
 	Parameter P_NUM_ID_VAL bound to: 2 - type: integer 
 	Parameter P_NUM_THREADS bound to: 2 - type: integer 
 	Parameter P_M_SECURE_MASK bound to: 1'b0 
-WARNING: [Synth 8-6014] Unused sequential element gen_multi_thread.debug_r_beat_cnt_i_reg was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:4344]
-WARNING: [Synth 8-6014] Unused sequential element gen_multi_thread.debug_r_beat_cnt_i_reg was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:4344]
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_17_si_transactor__parameterized2' (11#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:3798]
-INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_17_addr_decoder__parameterized0' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:794]
+WARNING: [Synth 8-6014] Unused sequential element gen_multi_thread.debug_r_beat_cnt_i_reg was removed.  [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:4344]
+WARNING: [Synth 8-6014] Unused sequential element gen_multi_thread.debug_r_beat_cnt_i_reg was removed.  [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:4344]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_17_si_transactor__parameterized2' (11#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:3798]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_17_si_transactor__parameterized3' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:3798]
 	Parameter C_FAMILY bound to: rtl - type: string 
-	Parameter C_NUM_TARGETS bound to: 2 - type: integer 
-	Parameter C_NUM_TARGETS_LOG bound to: 1 - type: integer 
+	Parameter C_SI bound to: 2 - type: integer 
+	Parameter C_DIR bound to: 1 - type: integer 
+	Parameter C_NUM_ADDR_RANGES bound to: 1 - type: integer 
+	Parameter C_NUM_M bound to: 1 - type: integer 
+	Parameter C_NUM_M_LOG bound to: 0 - type: integer 
+	Parameter C_ACCEPTANCE bound to: 4 - type: integer 
+	Parameter C_ACCEPTANCE_LOG bound to: 2 - type: integer 
+	Parameter C_ID_WIDTH bound to: 3 - type: integer 
+	Parameter C_THREAD_ID_WIDTH bound to: 0 - type: integer 
+	Parameter C_ADDR_WIDTH bound to: 64 - type: integer 
+	Parameter C_AMESG_WIDTH bound to: 11 - type: integer 
+	Parameter C_RMESG_WIDTH bound to: 515 - type: integer 
+	Parameter C_BASE_ID bound to: 3'b100 
+	Parameter C_HIGH_ID bound to: 3'b100 
+	Parameter C_BASE_ADDR bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_HIGH_ADDR bound to: 64'b0000000000000000000000000000000000111111111111111111111111111111 
+	Parameter C_SINGLE_THREAD bound to: 0 - type: integer 
+	Parameter C_TARGET_QUAL bound to: 1'b1 
+	Parameter C_M_AXI_SECURE bound to: 0 - type: integer 
+	Parameter C_RANGE_CHECK bound to: 1 - type: integer 
+	Parameter C_ADDR_DECODE bound to: 1 - type: integer 
+	Parameter C_ERR_MODE bound to: 32'b00000000000000000000000000000000 
+	Parameter C_DEBUG bound to: 1 - type: integer 
+	Parameter P_WRITE bound to: 0 - type: integer 
+	Parameter P_READ bound to: 1 - type: integer 
+	Parameter P_RMUX_MESG_WIDTH bound to: 519 - type: integer 
+	Parameter P_AXILITE_ERRMODE bound to: 1 - type: integer 
+	Parameter P_NONSECURE_BIT bound to: 1 - type: integer 
+	Parameter P_NUM_M_LOG_M1 bound to: 1 - type: integer 
+	Parameter P_M_AXILITE bound to: 1'b0 
+	Parameter P_FIXED bound to: 2'b00 
+	Parameter P_NUM_M_DE_LOG bound to: 1 - type: integer 
+	Parameter P_THREAD_ID_WIDTH_M1 bound to: 1 - type: integer 
+	Parameter P_NUM_ID_VAL bound to: 1 - type: integer 
+	Parameter P_NUM_THREADS bound to: 1 - type: integer 
+	Parameter P_M_SECURE_MASK bound to: 1'b0 
+WARNING: [Synth 8-6014] Unused sequential element gen_single_thread.debug_r_beat_cnt_i_reg was removed.  [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:4190]
+WARNING: [Synth 8-6014] Unused sequential element gen_single_thread.active_id_reg was removed.  [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:4148]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_17_si_transactor__parameterized3' (11#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:3798]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_17_si_transactor__parameterized4' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:3798]
+	Parameter C_FAMILY bound to: rtl - type: string 
+	Parameter C_SI bound to: 2 - type: integer 
+	Parameter C_DIR bound to: 0 - type: integer 
+	Parameter C_NUM_ADDR_RANGES bound to: 1 - type: integer 
+	Parameter C_NUM_M bound to: 1 - type: integer 
+	Parameter C_NUM_M_LOG bound to: 0 - type: integer 
+	Parameter C_ACCEPTANCE bound to: 4 - type: integer 
+	Parameter C_ACCEPTANCE_LOG bound to: 2 - type: integer 
+	Parameter C_ID_WIDTH bound to: 3 - type: integer 
+	Parameter C_THREAD_ID_WIDTH bound to: 0 - type: integer 
+	Parameter C_ADDR_WIDTH bound to: 64 - type: integer 
+	Parameter C_AMESG_WIDTH bound to: 11 - type: integer 
+	Parameter C_RMESG_WIDTH bound to: 3 - type: integer 
+	Parameter C_BASE_ID bound to: 3'b100 
+	Parameter C_HIGH_ID bound to: 3'b100 
+	Parameter C_BASE_ADDR bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_HIGH_ADDR bound to: 64'b0000000000000000000000000000000000111111111111111111111111111111 
+	Parameter C_SINGLE_THREAD bound to: 0 - type: integer 
+	Parameter C_TARGET_QUAL bound to: 1'b1 
+	Parameter C_M_AXI_SECURE bound to: 0 - type: integer 
+	Parameter C_RANGE_CHECK bound to: 1 - type: integer 
+	Parameter C_ADDR_DECODE bound to: 1 - type: integer 
+	Parameter C_ERR_MODE bound to: 32'b00000000000000000000000000000000 
+	Parameter C_DEBUG bound to: 1 - type: integer 
+	Parameter P_WRITE bound to: 0 - type: integer 
+	Parameter P_READ bound to: 1 - type: integer 
+	Parameter P_RMUX_MESG_WIDTH bound to: 7 - type: integer 
+	Parameter P_AXILITE_ERRMODE bound to: 1 - type: integer 
+	Parameter P_NONSECURE_BIT bound to: 1 - type: integer 
+	Parameter P_NUM_M_LOG_M1 bound to: 1 - type: integer 
+	Parameter P_M_AXILITE bound to: 1'b0 
+	Parameter P_FIXED bound to: 2'b00 
+	Parameter P_NUM_M_DE_LOG bound to: 1 - type: integer 
+	Parameter P_THREAD_ID_WIDTH_M1 bound to: 1 - type: integer 
+	Parameter P_NUM_ID_VAL bound to: 1 - type: integer 
+	Parameter P_NUM_THREADS bound to: 1 - type: integer 
+	Parameter P_M_SECURE_MASK bound to: 1'b0 
+WARNING: [Synth 8-6014] Unused sequential element gen_single_thread.debug_r_beat_cnt_i_reg was removed.  [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:4190]
+WARNING: [Synth 8-6014] Unused sequential element gen_single_thread.active_id_reg was removed.  [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:4148]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_17_si_transactor__parameterized4' (11#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:3798]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_17_addr_decoder__parameterized0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:794]
+	Parameter C_FAMILY bound to: rtl - type: string 
+	Parameter C_NUM_TARGETS bound to: 3 - type: integer 
+	Parameter C_NUM_TARGETS_LOG bound to: 2 - type: integer 
 	Parameter C_NUM_RANGES bound to: 1 - type: integer 
-	Parameter C_ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter C_ADDR_WIDTH bound to: 3 - type: integer 
 	Parameter C_TARGET_ENC bound to: 1 - type: integer 
 	Parameter C_TARGET_HOT bound to: 1 - type: integer 
 	Parameter C_REGION_ENC bound to: 0 - type: integer 
-	Parameter C_BASE_ADDR bound to: 128'b00000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000 
-	Parameter C_HIGH_ADDR bound to: 128'b00000000000000000000000000000000000000000000000000000000000000110000000000000000000000000000000000000000000000000000000000000000 
-	Parameter C_TARGET_QUAL bound to: 3'b011 
+	Parameter C_BASE_ADDR bound to: 192'b000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_HIGH_ADDR bound to: 192'b000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000110000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_TARGET_QUAL bound to: 4'b0111 
 	Parameter C_RESOLUTION bound to: 0 - type: integer 
 	Parameter C_COMPARATOR_THRESHOLD bound to: 6 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_17_addr_decoder__parameterized0' (11#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:794]
-INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_15_axic_srl_fifo__parameterized0' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d114/hdl/axi_data_fifo_v2_1_vl_rfs.v:698]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_17_addr_decoder__parameterized0' (11#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:794]
+INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_15_axic_srl_fifo__parameterized0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d114/hdl/axi_data_fifo_v2_1_vl_rfs.v:698]
 	Parameter C_FAMILY bound to: rtl - type: string 
 	Parameter C_FIFO_WIDTH bound to: 8 - type: integer 
 	Parameter C_MAX_CTRL_FANOUT bound to: 33 - type: integer 
@@ -432,27 +514,27 @@ INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_15_axic_srl_fifo__p
 	Parameter P_ALMOSTFULL_TEMP bound to: 5'b11110 
 	Parameter P_ALMOSTFULL bound to: 4'b1110 
 	Parameter P_NUM_REPS bound to: 1 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_15_ndeep_srl__parameterized1' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d114/hdl/axi_data_fifo_v2_1_vl_rfs.v:1135]
+INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_15_ndeep_srl__parameterized1' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d114/hdl/axi_data_fifo_v2_1_vl_rfs.v:1135]
 	Parameter C_FAMILY bound to: rtl - type: string 
 	Parameter C_A_WIDTH bound to: 4 - type: integer 
 	Parameter P_SRLASIZE bound to: 5 - type: integer 
 	Parameter P_SRLDEPTH bound to: 32 - type: integer 
 	Parameter P_NUMSRLS bound to: 1 - type: integer 
 	Parameter P_SHIFT_DEPTH bound to: 16 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_15_ndeep_srl__parameterized1' (11#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d114/hdl/axi_data_fifo_v2_1_vl_rfs.v:1135]
-WARNING: [Synth 8-6014] Unused sequential element areset_d1_reg was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d114/hdl/axi_data_fifo_v2_1_vl_rfs.v:750]
-WARNING: [Synth 8-6014] Unused sequential element S_READY_i_reg was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d114/hdl/axi_data_fifo_v2_1_vl_rfs.v:789]
-INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_15_axic_srl_fifo__parameterized0' (11#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d114/hdl/axi_data_fifo_v2_1_vl_rfs.v:698]
-INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_17_wdata_mux' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:4559]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_15_ndeep_srl__parameterized1' (11#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d114/hdl/axi_data_fifo_v2_1_vl_rfs.v:1135]
+WARNING: [Synth 8-6014] Unused sequential element areset_d1_reg was removed.  [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d114/hdl/axi_data_fifo_v2_1_vl_rfs.v:750]
+WARNING: [Synth 8-6014] Unused sequential element S_READY_i_reg was removed.  [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d114/hdl/axi_data_fifo_v2_1_vl_rfs.v:789]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_15_axic_srl_fifo__parameterized0' (11#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d114/hdl/axi_data_fifo_v2_1_vl_rfs.v:698]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_17_wdata_mux' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:4559]
 	Parameter C_FAMILY bound to: rtl - type: string 
 	Parameter C_WMESG_WIDTH bound to: 578 - type: integer 
-	Parameter C_NUM_SLAVE_SLOTS bound to: 2 - type: integer 
-	Parameter C_SELECT_WIDTH bound to: 1 - type: integer 
+	Parameter C_NUM_SLAVE_SLOTS bound to: 3 - type: integer 
+	Parameter C_SELECT_WIDTH bound to: 2 - type: integer 
 	Parameter C_FIFO_DEPTH_LOG bound to: 4 - type: integer 
 	Parameter P_FIFO_DEPTH_LOG bound to: 4 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_15_axic_reg_srl_fifo__parameterized0' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d114/hdl/axi_data_fifo_v2_1_vl_rfs.v:889]
+INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_15_axic_reg_srl_fifo__parameterized0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d114/hdl/axi_data_fifo_v2_1_vl_rfs.v:889]
 	Parameter C_FAMILY bound to: rtl - type: string 
-	Parameter C_FIFO_WIDTH bound to: 1 - type: integer 
+	Parameter C_FIFO_WIDTH bound to: 2 - type: integer 
 	Parameter C_MAX_CTRL_FANOUT bound to: 33 - type: integer 
 	Parameter C_FIFO_DEPTH_LOG bound to: 4 - type: integer 
 	Parameter C_USE_FULL bound to: 0 - type: integer 
@@ -465,20 +547,20 @@ INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_15_axic_reg_srl_fif
 	Parameter ZERO bound to: 2'b10 
 	Parameter ONE bound to: 2'b11 
 	Parameter TWO bound to: 2'b01 
-INFO: [Synth 8-155] case statement is not full and has no default [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d114/hdl/axi_data_fifo_v2_1_vl_rfs.v:986]
-WARNING: [Synth 8-6014] Unused sequential element s_ready_i_reg was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d114/hdl/axi_data_fifo_v2_1_vl_rfs.v:1038]
-INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_15_axic_reg_srl_fifo__parameterized0' (11#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d114/hdl/axi_data_fifo_v2_1_vl_rfs.v:889]
-INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized1' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d114/hdl/axi_data_fifo_v2_1_vl_rfs.v:986]
+WARNING: [Synth 8-6014] Unused sequential element s_ready_i_reg was removed.  [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d114/hdl/axi_data_fifo_v2_1_vl_rfs.v:1038]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_15_axic_reg_srl_fifo__parameterized0' (11#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d114/hdl/axi_data_fifo_v2_1_vl_rfs.v:889]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized1' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
 	Parameter C_FAMILY bound to: rtl - type: string 
-	Parameter C_RATIO bound to: 2 - type: integer 
-	Parameter C_SEL_WIDTH bound to: 1 - type: integer 
+	Parameter C_RATIO bound to: 3 - type: integer 
+	Parameter C_SEL_WIDTH bound to: 2 - type: integer 
 	Parameter C_DATA_WIDTH bound to: 578 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized1' (11#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_17_wdata_mux' (12#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:4559]
-INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_16_axi_register_slice' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/0cde/hdl/axi_register_slice_v2_1_vl_rfs.v:2413]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized1' (11#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_17_wdata_mux' (12#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:4559]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_16_axi_register_slice' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/0cde/hdl/axi_register_slice_v2_1_vl_rfs.v:2413]
 	Parameter C_FAMILY bound to: rtl - type: string 
 	Parameter C_AXI_PROTOCOL bound to: 0 - type: integer 
-	Parameter C_AXI_ID_WIDTH bound to: 2 - type: integer 
+	Parameter C_AXI_ID_WIDTH bound to: 3 - type: integer 
 	Parameter C_AXI_ADDR_WIDTH bound to: 1 - type: integer 
 	Parameter C_AXI_DATA_WIDTH bound to: 512 - type: integer 
 	Parameter C_AXI_SUPPORTS_USER_SIGNALS bound to: 0 - type: integer 
@@ -526,14 +608,14 @@ INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_16_axi_registe
 	Parameter G_AXI_AWLOCK_INDEX bound to: 21 - type: integer 
 	Parameter G_AXI_AWLOCK_WIDTH bound to: 1 - type: integer 
 	Parameter G_AXI_AWID_INDEX bound to: 22 - type: integer 
-	Parameter G_AXI_AWID_WIDTH bound to: 2 - type: integer 
-	Parameter G_AXI_AWQOS_INDEX bound to: 24 - type: integer 
+	Parameter G_AXI_AWID_WIDTH bound to: 3 - type: integer 
+	Parameter G_AXI_AWQOS_INDEX bound to: 25 - type: integer 
 	Parameter G_AXI_AWQOS_WIDTH bound to: 4 - type: integer 
-	Parameter G_AXI_AWREGION_INDEX bound to: 28 - type: integer 
+	Parameter G_AXI_AWREGION_INDEX bound to: 29 - type: integer 
 	Parameter G_AXI_AWREGION_WIDTH bound to: 4 - type: integer 
-	Parameter G_AXI_AWUSER_INDEX bound to: 32 - type: integer 
+	Parameter G_AXI_AWUSER_INDEX bound to: 33 - type: integer 
 	Parameter G_AXI_AWUSER_WIDTH bound to: 0 - type: integer 
-	Parameter G_AXI_AWPAYLOAD_WIDTH bound to: 32 - type: integer 
+	Parameter G_AXI_AWPAYLOAD_WIDTH bound to: 33 - type: integer 
 	Parameter G_AXI_ARADDR_INDEX bound to: 0 - type: integer 
 	Parameter G_AXI_ARADDR_WIDTH bound to: 1 - type: integer 
 	Parameter G_AXI_ARPROT_INDEX bound to: 1 - type: integer 
@@ -549,14 +631,14 @@ INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_16_axi_registe
 	Parameter G_AXI_ARLOCK_INDEX bound to: 21 - type: integer 
 	Parameter G_AXI_ARLOCK_WIDTH bound to: 1 - type: integer 
 	Parameter G_AXI_ARID_INDEX bound to: 22 - type: integer 
-	Parameter G_AXI_ARID_WIDTH bound to: 2 - type: integer 
-	Parameter G_AXI_ARQOS_INDEX bound to: 24 - type: integer 
+	Parameter G_AXI_ARID_WIDTH bound to: 3 - type: integer 
+	Parameter G_AXI_ARQOS_INDEX bound to: 25 - type: integer 
 	Parameter G_AXI_ARQOS_WIDTH bound to: 4 - type: integer 
-	Parameter G_AXI_ARREGION_INDEX bound to: 28 - type: integer 
+	Parameter G_AXI_ARREGION_INDEX bound to: 29 - type: integer 
 	Parameter G_AXI_ARREGION_WIDTH bound to: 4 - type: integer 
-	Parameter G_AXI_ARUSER_INDEX bound to: 32 - type: integer 
+	Parameter G_AXI_ARUSER_INDEX bound to: 33 - type: integer 
 	Parameter G_AXI_ARUSER_WIDTH bound to: 0 - type: integer 
-	Parameter G_AXI_ARPAYLOAD_WIDTH bound to: 32 - type: integer 
+	Parameter G_AXI_ARPAYLOAD_WIDTH bound to: 33 - type: integer 
 	Parameter G_AXI_WDATA_INDEX bound to: 0 - type: integer 
 	Parameter G_AXI_WDATA_WIDTH bound to: 512 - type: integer 
 	Parameter G_AXI_WSTRB_INDEX bound to: 512 - type: integer 
@@ -571,10 +653,10 @@ INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_16_axi_registe
 	Parameter G_AXI_BRESP_INDEX bound to: 0 - type: integer 
 	Parameter G_AXI_BRESP_WIDTH bound to: 2 - type: integer 
 	Parameter G_AXI_BID_INDEX bound to: 2 - type: integer 
-	Parameter G_AXI_BID_WIDTH bound to: 2 - type: integer 
-	Parameter G_AXI_BUSER_INDEX bound to: 4 - type: integer 
+	Parameter G_AXI_BID_WIDTH bound to: 3 - type: integer 
+	Parameter G_AXI_BUSER_INDEX bound to: 5 - type: integer 
 	Parameter G_AXI_BUSER_WIDTH bound to: 0 - type: integer 
-	Parameter G_AXI_BPAYLOAD_WIDTH bound to: 4 - type: integer 
+	Parameter G_AXI_BPAYLOAD_WIDTH bound to: 5 - type: integer 
 	Parameter G_AXI_RDATA_INDEX bound to: 0 - type: integer 
 	Parameter G_AXI_RDATA_WIDTH bound to: 512 - type: integer 
 	Parameter G_AXI_RRESP_INDEX bound to: 512 - type: integer 
@@ -582,33 +664,33 @@ INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_16_axi_registe
 	Parameter G_AXI_RLAST_INDEX bound to: 514 - type: integer 
 	Parameter G_AXI_RLAST_WIDTH bound to: 1 - type: integer 
 	Parameter G_AXI_RID_INDEX bound to: 515 - type: integer 
-	Parameter G_AXI_RID_WIDTH bound to: 2 - type: integer 
-	Parameter G_AXI_RUSER_INDEX bound to: 517 - type: integer 
+	Parameter G_AXI_RID_WIDTH bound to: 3 - type: integer 
+	Parameter G_AXI_RUSER_INDEX bound to: 518 - type: integer 
 	Parameter G_AXI_RUSER_WIDTH bound to: 0 - type: integer 
-	Parameter G_AXI_RPAYLOAD_WIDTH bound to: 517 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_16_axic_register_slice' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/0cde/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
+	Parameter G_AXI_RPAYLOAD_WIDTH bound to: 518 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_16_axic_register_slice' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/0cde/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
 	Parameter C_FAMILY bound to: rtl - type: string 
-	Parameter C_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_DATA_WIDTH bound to: 33 - type: integer 
 	Parameter C_REG_CONFIG bound to: 0 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_16_axic_register_slice' (13#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/0cde/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
-INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_16_axic_register_slice__parameterized0' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/0cde/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_16_axic_register_slice' (13#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/0cde/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_16_axic_register_slice__parameterized0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/0cde/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
 	Parameter C_FAMILY bound to: rtl - type: string 
 	Parameter C_DATA_WIDTH bound to: 577 - type: integer 
 	Parameter C_REG_CONFIG bound to: 0 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_16_axic_register_slice__parameterized0' (13#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/0cde/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
-INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_16_axic_register_slice__parameterized1' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/0cde/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_16_axic_register_slice__parameterized0' (13#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/0cde/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_16_axic_register_slice__parameterized1' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/0cde/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
 	Parameter C_FAMILY bound to: rtl - type: string 
-	Parameter C_DATA_WIDTH bound to: 4 - type: integer 
+	Parameter C_DATA_WIDTH bound to: 5 - type: integer 
 	Parameter C_REG_CONFIG bound to: 7 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_16_axic_register_slice__parameterized1' (13#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/0cde/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
-INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_16_axic_register_slice__parameterized2' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/0cde/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_16_axic_register_slice__parameterized1' (13#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/0cde/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_16_axic_register_slice__parameterized2' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/0cde/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
 	Parameter C_FAMILY bound to: rtl - type: string 
-	Parameter C_DATA_WIDTH bound to: 517 - type: integer 
+	Parameter C_DATA_WIDTH bound to: 518 - type: integer 
 	Parameter C_REG_CONFIG bound to: 1 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_16_axic_register_slice__parameterized2' (13#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/0cde/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
-INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_16_axic_register_slice__parameterized2' (13#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/0cde/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
+INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:60]
 	Parameter C_AXI_PROTOCOL bound to: 0 - type: integer 
-	Parameter C_AXI_ID_WIDTH bound to: 2 - type: integer 
+	Parameter C_AXI_ID_WIDTH bound to: 3 - type: integer 
 	Parameter C_AXI_ADDR_WIDTH bound to: 1 - type: integer 
 	Parameter C_AXI_DATA_WIDTH bound to: 512 - type: integer 
 	Parameter C_AXI_SUPPORTS_USER_SIGNALS bound to: 0 - type: integer 
@@ -618,11 +700,11 @@ INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' 
 	Parameter C_AXI_BUSER_WIDTH bound to: 1 - type: integer 
 	Parameter C_AXI_ARUSER_WIDTH bound to: 1 - type: integer 
 	Parameter C_AXI_RUSER_WIDTH bound to: 1 - type: integer 
-	Parameter C_AWPAYLOAD_WIDTH bound to: 32 - type: integer 
+	Parameter C_AWPAYLOAD_WIDTH bound to: 33 - type: integer 
 	Parameter C_WPAYLOAD_WIDTH bound to: 577 - type: integer 
-	Parameter C_BPAYLOAD_WIDTH bound to: 4 - type: integer 
-	Parameter C_ARPAYLOAD_WIDTH bound to: 32 - type: integer 
-	Parameter C_RPAYLOAD_WIDTH bound to: 517 - type: integer 
+	Parameter C_BPAYLOAD_WIDTH bound to: 5 - type: integer 
+	Parameter C_ARPAYLOAD_WIDTH bound to: 33 - type: integer 
+	Parameter C_RPAYLOAD_WIDTH bound to: 518 - type: integer 
 	Parameter G_AXI_AWADDR_INDEX bound to: 0 - type: integer 
 	Parameter G_AXI_AWADDR_WIDTH bound to: 1 - type: integer 
 	Parameter G_AXI_AWPROT_INDEX bound to: 1 - type: integer 
@@ -638,14 +720,14 @@ INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' 
 	Parameter G_AXI_AWLOCK_INDEX bound to: 21 - type: integer 
 	Parameter G_AXI_AWLOCK_WIDTH bound to: 1 - type: integer 
 	Parameter G_AXI_AWID_INDEX bound to: 22 - type: integer 
-	Parameter G_AXI_AWID_WIDTH bound to: 2 - type: integer 
-	Parameter G_AXI_AWQOS_INDEX bound to: 24 - type: integer 
+	Parameter G_AXI_AWID_WIDTH bound to: 3 - type: integer 
+	Parameter G_AXI_AWQOS_INDEX bound to: 25 - type: integer 
 	Parameter G_AXI_AWQOS_WIDTH bound to: 4 - type: integer 
-	Parameter G_AXI_AWREGION_INDEX bound to: 28 - type: integer 
+	Parameter G_AXI_AWREGION_INDEX bound to: 29 - type: integer 
 	Parameter G_AXI_AWREGION_WIDTH bound to: 4 - type: integer 
-	Parameter G_AXI_AWUSER_INDEX bound to: 32 - type: integer 
+	Parameter G_AXI_AWUSER_INDEX bound to: 33 - type: integer 
 	Parameter G_AXI_AWUSER_WIDTH bound to: 0 - type: integer 
-	Parameter G_AXI_AWPAYLOAD_WIDTH bound to: 32 - type: integer 
+	Parameter G_AXI_AWPAYLOAD_WIDTH bound to: 33 - type: integer 
 	Parameter G_AXI_ARADDR_INDEX bound to: 0 - type: integer 
 	Parameter G_AXI_ARADDR_WIDTH bound to: 1 - type: integer 
 	Parameter G_AXI_ARPROT_INDEX bound to: 1 - type: integer 
@@ -661,14 +743,14 @@ INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' 
 	Parameter G_AXI_ARLOCK_INDEX bound to: 21 - type: integer 
 	Parameter G_AXI_ARLOCK_WIDTH bound to: 1 - type: integer 
 	Parameter G_AXI_ARID_INDEX bound to: 22 - type: integer 
-	Parameter G_AXI_ARID_WIDTH bound to: 2 - type: integer 
-	Parameter G_AXI_ARQOS_INDEX bound to: 24 - type: integer 
+	Parameter G_AXI_ARID_WIDTH bound to: 3 - type: integer 
+	Parameter G_AXI_ARQOS_INDEX bound to: 25 - type: integer 
 	Parameter G_AXI_ARQOS_WIDTH bound to: 4 - type: integer 
-	Parameter G_AXI_ARREGION_INDEX bound to: 28 - type: integer 
+	Parameter G_AXI_ARREGION_INDEX bound to: 29 - type: integer 
 	Parameter G_AXI_ARREGION_WIDTH bound to: 4 - type: integer 
-	Parameter G_AXI_ARUSER_INDEX bound to: 32 - type: integer 
+	Parameter G_AXI_ARUSER_INDEX bound to: 33 - type: integer 
 	Parameter G_AXI_ARUSER_WIDTH bound to: 0 - type: integer 
-	Parameter G_AXI_ARPAYLOAD_WIDTH bound to: 32 - type: integer 
+	Parameter G_AXI_ARPAYLOAD_WIDTH bound to: 33 - type: integer 
 	Parameter G_AXI_WDATA_INDEX bound to: 0 - type: integer 
 	Parameter G_AXI_WDATA_WIDTH bound to: 512 - type: integer 
 	Parameter G_AXI_WSTRB_INDEX bound to: 512 - type: integer 
@@ -683,10 +765,10 @@ INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' 
 	Parameter G_AXI_BRESP_INDEX bound to: 0 - type: integer 
 	Parameter G_AXI_BRESP_WIDTH bound to: 2 - type: integer 
 	Parameter G_AXI_BID_INDEX bound to: 2 - type: integer 
-	Parameter G_AXI_BID_WIDTH bound to: 2 - type: integer 
-	Parameter G_AXI_BUSER_INDEX bound to: 4 - type: integer 
+	Parameter G_AXI_BID_WIDTH bound to: 3 - type: integer 
+	Parameter G_AXI_BUSER_INDEX bound to: 5 - type: integer 
 	Parameter G_AXI_BUSER_WIDTH bound to: 0 - type: integer 
-	Parameter G_AXI_BPAYLOAD_WIDTH bound to: 4 - type: integer 
+	Parameter G_AXI_BPAYLOAD_WIDTH bound to: 5 - type: integer 
 	Parameter G_AXI_RDATA_INDEX bound to: 0 - type: integer 
 	Parameter G_AXI_RDATA_WIDTH bound to: 512 - type: integer 
 	Parameter G_AXI_RRESP_INDEX bound to: 512 - type: integer 
@@ -694,14 +776,14 @@ INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' 
 	Parameter G_AXI_RLAST_INDEX bound to: 514 - type: integer 
 	Parameter G_AXI_RLAST_WIDTH bound to: 1 - type: integer 
 	Parameter G_AXI_RID_INDEX bound to: 515 - type: integer 
-	Parameter G_AXI_RID_WIDTH bound to: 2 - type: integer 
-	Parameter G_AXI_RUSER_INDEX bound to: 517 - type: integer 
+	Parameter G_AXI_RID_WIDTH bound to: 3 - type: integer 
+	Parameter G_AXI_RUSER_INDEX bound to: 518 - type: integer 
 	Parameter G_AXI_RUSER_WIDTH bound to: 0 - type: integer 
-	Parameter G_AXI_RPAYLOAD_WIDTH bound to: 517 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' (14#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:60]
-INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:474]
+	Parameter G_AXI_RPAYLOAD_WIDTH bound to: 518 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' (14#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:60]
+INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:474]
 	Parameter C_AXI_PROTOCOL bound to: 0 - type: integer 
-	Parameter C_AXI_ID_WIDTH bound to: 2 - type: integer 
+	Parameter C_AXI_ID_WIDTH bound to: 3 - type: integer 
 	Parameter C_AXI_ADDR_WIDTH bound to: 1 - type: integer 
 	Parameter C_AXI_DATA_WIDTH bound to: 512 - type: integer 
 	Parameter C_AXI_SUPPORTS_USER_SIGNALS bound to: 0 - type: integer 
@@ -711,11 +793,11 @@ INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' 
 	Parameter C_AXI_BUSER_WIDTH bound to: 1 - type: integer 
 	Parameter C_AXI_ARUSER_WIDTH bound to: 1 - type: integer 
 	Parameter C_AXI_RUSER_WIDTH bound to: 1 - type: integer 
-	Parameter C_AWPAYLOAD_WIDTH bound to: 32 - type: integer 
+	Parameter C_AWPAYLOAD_WIDTH bound to: 33 - type: integer 
 	Parameter C_WPAYLOAD_WIDTH bound to: 577 - type: integer 
-	Parameter C_BPAYLOAD_WIDTH bound to: 4 - type: integer 
-	Parameter C_ARPAYLOAD_WIDTH bound to: 32 - type: integer 
-	Parameter C_RPAYLOAD_WIDTH bound to: 517 - type: integer 
+	Parameter C_BPAYLOAD_WIDTH bound to: 5 - type: integer 
+	Parameter C_ARPAYLOAD_WIDTH bound to: 33 - type: integer 
+	Parameter C_RPAYLOAD_WIDTH bound to: 518 - type: integer 
 	Parameter G_AXI_AWADDR_INDEX bound to: 0 - type: integer 
 	Parameter G_AXI_AWADDR_WIDTH bound to: 1 - type: integer 
 	Parameter G_AXI_AWPROT_INDEX bound to: 1 - type: integer 
@@ -731,14 +813,14 @@ INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' 
 	Parameter G_AXI_AWLOCK_INDEX bound to: 21 - type: integer 
 	Parameter G_AXI_AWLOCK_WIDTH bound to: 1 - type: integer 
 	Parameter G_AXI_AWID_INDEX bound to: 22 - type: integer 
-	Parameter G_AXI_AWID_WIDTH bound to: 2 - type: integer 
-	Parameter G_AXI_AWQOS_INDEX bound to: 24 - type: integer 
+	Parameter G_AXI_AWID_WIDTH bound to: 3 - type: integer 
+	Parameter G_AXI_AWQOS_INDEX bound to: 25 - type: integer 
 	Parameter G_AXI_AWQOS_WIDTH bound to: 4 - type: integer 
-	Parameter G_AXI_AWREGION_INDEX bound to: 28 - type: integer 
+	Parameter G_AXI_AWREGION_INDEX bound to: 29 - type: integer 
 	Parameter G_AXI_AWREGION_WIDTH bound to: 4 - type: integer 
-	Parameter G_AXI_AWUSER_INDEX bound to: 32 - type: integer 
+	Parameter G_AXI_AWUSER_INDEX bound to: 33 - type: integer 
 	Parameter G_AXI_AWUSER_WIDTH bound to: 0 - type: integer 
-	Parameter G_AXI_AWPAYLOAD_WIDTH bound to: 32 - type: integer 
+	Parameter G_AXI_AWPAYLOAD_WIDTH bound to: 33 - type: integer 
 	Parameter G_AXI_ARADDR_INDEX bound to: 0 - type: integer 
 	Parameter G_AXI_ARADDR_WIDTH bound to: 1 - type: integer 
 	Parameter G_AXI_ARPROT_INDEX bound to: 1 - type: integer 
@@ -754,14 +836,14 @@ INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' 
 	Parameter G_AXI_ARLOCK_INDEX bound to: 21 - type: integer 
 	Parameter G_AXI_ARLOCK_WIDTH bound to: 1 - type: integer 
 	Parameter G_AXI_ARID_INDEX bound to: 22 - type: integer 
-	Parameter G_AXI_ARID_WIDTH bound to: 2 - type: integer 
-	Parameter G_AXI_ARQOS_INDEX bound to: 24 - type: integer 
+	Parameter G_AXI_ARID_WIDTH bound to: 3 - type: integer 
+	Parameter G_AXI_ARQOS_INDEX bound to: 25 - type: integer 
 	Parameter G_AXI_ARQOS_WIDTH bound to: 4 - type: integer 
-	Parameter G_AXI_ARREGION_INDEX bound to: 28 - type: integer 
+	Parameter G_AXI_ARREGION_INDEX bound to: 29 - type: integer 
 	Parameter G_AXI_ARREGION_WIDTH bound to: 4 - type: integer 
-	Parameter G_AXI_ARUSER_INDEX bound to: 32 - type: integer 
+	Parameter G_AXI_ARUSER_INDEX bound to: 33 - type: integer 
 	Parameter G_AXI_ARUSER_WIDTH bound to: 0 - type: integer 
-	Parameter G_AXI_ARPAYLOAD_WIDTH bound to: 32 - type: integer 
+	Parameter G_AXI_ARPAYLOAD_WIDTH bound to: 33 - type: integer 
 	Parameter G_AXI_WDATA_INDEX bound to: 0 - type: integer 
 	Parameter G_AXI_WDATA_WIDTH bound to: 512 - type: integer 
 	Parameter G_AXI_WSTRB_INDEX bound to: 512 - type: integer 
@@ -776,10 +858,10 @@ INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' 
 	Parameter G_AXI_BRESP_INDEX bound to: 0 - type: integer 
 	Parameter G_AXI_BRESP_WIDTH bound to: 2 - type: integer 
 	Parameter G_AXI_BID_INDEX bound to: 2 - type: integer 
-	Parameter G_AXI_BID_WIDTH bound to: 2 - type: integer 
-	Parameter G_AXI_BUSER_INDEX bound to: 4 - type: integer 
+	Parameter G_AXI_BID_WIDTH bound to: 3 - type: integer 
+	Parameter G_AXI_BUSER_INDEX bound to: 5 - type: integer 
 	Parameter G_AXI_BUSER_WIDTH bound to: 0 - type: integer 
-	Parameter G_AXI_BPAYLOAD_WIDTH bound to: 4 - type: integer 
+	Parameter G_AXI_BPAYLOAD_WIDTH bound to: 5 - type: integer 
 	Parameter G_AXI_RDATA_INDEX bound to: 0 - type: integer 
 	Parameter G_AXI_RDATA_WIDTH bound to: 512 - type: integer 
 	Parameter G_AXI_RRESP_INDEX bound to: 512 - type: integer 
@@ -787,14 +869,14 @@ INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' 
 	Parameter G_AXI_RLAST_INDEX bound to: 514 - type: integer 
 	Parameter G_AXI_RLAST_WIDTH bound to: 1 - type: integer 
 	Parameter G_AXI_RID_INDEX bound to: 515 - type: integer 
-	Parameter G_AXI_RID_WIDTH bound to: 2 - type: integer 
-	Parameter G_AXI_RUSER_INDEX bound to: 517 - type: integer 
+	Parameter G_AXI_RID_WIDTH bound to: 3 - type: integer 
+	Parameter G_AXI_RUSER_INDEX bound to: 518 - type: integer 
 	Parameter G_AXI_RUSER_WIDTH bound to: 0 - type: integer 
-	Parameter G_AXI_RPAYLOAD_WIDTH bound to: 517 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' (15#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:474]
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_16_axi_register_slice' (16#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/0cde/hdl/axi_register_slice_v2_1_vl_rfs.v:2413]
-WARNING: [Synth 8-350] instance 'reg_slice_mi' of module 'axi_register_slice_v2_1_16_axi_register_slice' requires 93 connections, but only 92 given [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:3121]
-INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_15_axic_srl_fifo__parameterized1' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d114/hdl/axi_data_fifo_v2_1_vl_rfs.v:698]
+	Parameter G_AXI_RPAYLOAD_WIDTH bound to: 518 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' (15#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:474]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_16_axi_register_slice' (16#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/0cde/hdl/axi_register_slice_v2_1_vl_rfs.v:2413]
+WARNING: [Synth 8-350] instance 'reg_slice_mi' of module 'axi_register_slice_v2_1_16_axi_register_slice' requires 93 connections, but only 92 given [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:3121]
+INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_15_axic_srl_fifo__parameterized1' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d114/hdl/axi_data_fifo_v2_1_vl_rfs.v:698]
 	Parameter C_FAMILY bound to: rtl - type: string 
 	Parameter C_FIFO_WIDTH bound to: 8 - type: integer 
 	Parameter C_MAX_CTRL_FANOUT bound to: 33 - type: integer 
@@ -806,19 +888,19 @@ INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_15_axic_srl_fifo__p
 	Parameter P_ALMOSTFULL_TEMP bound to: 3'b110 
 	Parameter P_ALMOSTFULL bound to: 2'b10 
 	Parameter P_NUM_REPS bound to: 1 - type: integer 
-WARNING: [Synth 8-6014] Unused sequential element areset_d1_reg was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d114/hdl/axi_data_fifo_v2_1_vl_rfs.v:750]
-WARNING: [Synth 8-6014] Unused sequential element S_READY_i_reg was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d114/hdl/axi_data_fifo_v2_1_vl_rfs.v:789]
-INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_15_axic_srl_fifo__parameterized1' (16#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d114/hdl/axi_data_fifo_v2_1_vl_rfs.v:698]
-INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_17_wdata_mux__parameterized0' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:4559]
+WARNING: [Synth 8-6014] Unused sequential element areset_d1_reg was removed.  [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d114/hdl/axi_data_fifo_v2_1_vl_rfs.v:750]
+WARNING: [Synth 8-6014] Unused sequential element S_READY_i_reg was removed.  [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d114/hdl/axi_data_fifo_v2_1_vl_rfs.v:789]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_15_axic_srl_fifo__parameterized1' (16#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d114/hdl/axi_data_fifo_v2_1_vl_rfs.v:698]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_17_wdata_mux__parameterized0' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:4559]
 	Parameter C_FAMILY bound to: rtl - type: string 
 	Parameter C_WMESG_WIDTH bound to: 578 - type: integer 
-	Parameter C_NUM_SLAVE_SLOTS bound to: 2 - type: integer 
-	Parameter C_SELECT_WIDTH bound to: 1 - type: integer 
+	Parameter C_NUM_SLAVE_SLOTS bound to: 3 - type: integer 
+	Parameter C_SELECT_WIDTH bound to: 2 - type: integer 
 	Parameter C_FIFO_DEPTH_LOG bound to: 0 - type: integer 
 	Parameter P_FIFO_DEPTH_LOG bound to: 0 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_15_axic_reg_srl_fifo__parameterized1' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d114/hdl/axi_data_fifo_v2_1_vl_rfs.v:889]
+INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_15_axic_reg_srl_fifo__parameterized1' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d114/hdl/axi_data_fifo_v2_1_vl_rfs.v:889]
 	Parameter C_FAMILY bound to: rtl - type: string 
-	Parameter C_FIFO_WIDTH bound to: 1 - type: integer 
+	Parameter C_FIFO_WIDTH bound to: 2 - type: integer 
 	Parameter C_MAX_CTRL_FANOUT bound to: 33 - type: integer 
 	Parameter C_FIFO_DEPTH_LOG bound to: 0 - type: integer 
 	Parameter C_USE_FULL bound to: 0 - type: integer 
@@ -831,13 +913,13 @@ INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_15_axic_reg_srl_fif
 	Parameter ZERO bound to: 2'b10 
 	Parameter ONE bound to: 2'b11 
 	Parameter TWO bound to: 2'b01 
-INFO: [Synth 8-155] case statement is not full and has no default [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d114/hdl/axi_data_fifo_v2_1_vl_rfs.v:986]
-WARNING: [Synth 8-6014] Unused sequential element s_ready_i_reg was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d114/hdl/axi_data_fifo_v2_1_vl_rfs.v:1038]
-INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_15_axic_reg_srl_fifo__parameterized1' (16#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d114/hdl/axi_data_fifo_v2_1_vl_rfs.v:889]
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_17_wdata_mux__parameterized0' (16#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:4559]
-WARNING: [Synth 8-350] instance 'reg_slice_mi' of module 'axi_register_slice_v2_1_16_axi_register_slice' requires 93 connections, but only 92 given [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:3121]
-INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_17_decerr_slave' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:3500]
-	Parameter C_AXI_ID_WIDTH bound to: 2 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d114/hdl/axi_data_fifo_v2_1_vl_rfs.v:986]
+WARNING: [Synth 8-6014] Unused sequential element s_ready_i_reg was removed.  [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d114/hdl/axi_data_fifo_v2_1_vl_rfs.v:1038]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_15_axic_reg_srl_fifo__parameterized1' (16#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d114/hdl/axi_data_fifo_v2_1_vl_rfs.v:889]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_17_wdata_mux__parameterized0' (16#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:4559]
+WARNING: [Synth 8-350] instance 'reg_slice_mi' of module 'axi_register_slice_v2_1_16_axi_register_slice' requires 93 connections, but only 92 given [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:3121]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_17_decerr_slave' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:3500]
+	Parameter C_AXI_ID_WIDTH bound to: 3 - type: integer 
 	Parameter C_AXI_DATA_WIDTH bound to: 512 - type: integer 
 	Parameter C_AXI_BUSER_WIDTH bound to: 1 - type: integer 
 	Parameter C_AXI_RUSER_WIDTH bound to: 1 - type: integer 
@@ -851,38 +933,39 @@ INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_17_decerr_slave' [/n
 	Parameter P_AXI4 bound to: 0 - type: integer 
 	Parameter P_AXI3 bound to: 1 - type: integer 
 	Parameter P_AXILITE bound to: 2 - type: integer 
-INFO: [Synth 8-155] case statement is not full and has no default [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:3631]
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_17_decerr_slave' (17#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:3500]
-INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_17_addr_arbiter' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:423]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:3631]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_17_decerr_slave' (17#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:3500]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_17_addr_arbiter' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:423]
 	Parameter C_FAMILY bound to: rtl - type: string 
-	Parameter C_NUM_S bound to: 2 - type: integer 
-	Parameter C_NUM_S_LOG bound to: 1 - type: integer 
+	Parameter C_NUM_S bound to: 3 - type: integer 
+	Parameter C_NUM_S_LOG bound to: 2 - type: integer 
 	Parameter C_NUM_M bound to: 2 - type: integer 
-	Parameter C_MESG_WIDTH bound to: 97 - type: integer 
-	Parameter C_ARB_PRIORITY bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
-	Parameter P_PRIO_MASK bound to: 2'b00 
-INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized2' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
+	Parameter C_MESG_WIDTH bound to: 98 - type: integer 
+	Parameter C_ARB_PRIORITY bound to: 96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter P_PRIO_MASK bound to: 3'b000 
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized2' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
 	Parameter C_FAMILY bound to: rtl - type: string 
-	Parameter C_RATIO bound to: 2 - type: integer 
-	Parameter C_SEL_WIDTH bound to: 1 - type: integer 
-	Parameter C_DATA_WIDTH bound to: 97 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized2' (17#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
-INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized3' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
+	Parameter C_RATIO bound to: 3 - type: integer 
+	Parameter C_SEL_WIDTH bound to: 2 - type: integer 
+	Parameter C_DATA_WIDTH bound to: 98 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized2' (17#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized3' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
 	Parameter C_FAMILY bound to: rtl - type: string 
-	Parameter C_RATIO bound to: 2 - type: integer 
-	Parameter C_SEL_WIDTH bound to: 1 - type: integer 
+	Parameter C_RATIO bound to: 3 - type: integer 
+	Parameter C_SEL_WIDTH bound to: 2 - type: integer 
 	Parameter C_DATA_WIDTH bound to: 2 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized3' (17#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
-INFO: [Synth 8-3936] Found unconnected internal register 'gen_arbiter.next_rr_hot_reg' and it is trimmed from '16' to '2' bits. [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:634]
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_17_addr_arbiter' (18#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:423]
-WARNING: [Synth 8-6014] Unused sequential element gen_master_slots[0].gen_mi_write.gen_debug_w.debug_w_beat_cnt_i_reg was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:2996]
-WARNING: [Synth 8-6014] Unused sequential element gen_master_slots[1].gen_mi_write.gen_debug_w.debug_w_beat_cnt_i_reg was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:2996]
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_17_crossbar' (19#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:2239]
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_17_axi_crossbar' (20#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:4882]
-INFO: [Synth 8-6155] done synthesizing module 'shell_xbar_0' (21#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_xbar_0/synth/shell_xbar_0.v:59]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized3' (17#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
+INFO: [Synth 8-3936] Found unconnected internal register 'gen_arbiter.next_rr_hot_reg' and it is trimmed from '16' to '3' bits. [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:634]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_17_addr_arbiter' (18#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:423]
+WARNING: [Synth 8-6014] Unused sequential element gen_master_slots[0].gen_mi_write.gen_debug_w.debug_w_beat_cnt_i_reg was removed.  [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:2996]
+WARNING: [Synth 8-6014] Unused sequential element gen_master_slots[1].gen_mi_write.gen_debug_w.debug_w_beat_cnt_i_reg was removed.  [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:2996]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_17_crossbar' (19#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:2239]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_17_axi_crossbar' (20#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:4882]
+INFO: [Synth 8-6155] done synthesizing module 'shell_xbar_0' (21#1) [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_xbar_0/synth/shell_xbar_0.v:59]
 WARNING: [Synth 8-3331] design axi_infrastructure_v1_1_0_vector2axi has unconnected port m_axi_buser[0]
 WARNING: [Synth 8-3331] design axi_infrastructure_v1_1_0_vector2axi has unconnected port m_axi_ruser[0]
 WARNING: [Synth 8-3331] design axi_infrastructure_v1_1_0_axi2vector has unconnected port s_axi_awuser[0]
+WARNING: [Synth 8-3331] design axi_infrastructure_v1_1_0_axi2vector has unconnected port s_axi_wid[2]
 WARNING: [Synth 8-3331] design axi_infrastructure_v1_1_0_axi2vector has unconnected port s_axi_wid[1]
 WARNING: [Synth 8-3331] design axi_infrastructure_v1_1_0_axi2vector has unconnected port s_axi_wid[0]
 WARNING: [Synth 8-3331] design axi_infrastructure_v1_1_0_axi2vector has unconnected port s_axi_wuser[0]
@@ -894,6 +977,10 @@ WARNING: [Synth 8-3331] design axi_register_slice_v2_1_16_axic_register_slice__p
 WARNING: [Synth 8-3331] design axi_register_slice_v2_1_16_axi_register_slice has unconnected port aclk2x
 WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_addr_decoder has unconnected port ADDR[1]
 WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_addr_decoder has unconnected port ADDR[0]
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_si_transactor__parameterized4 has unconnected port S_ABURST[1]
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_si_transactor__parameterized4 has unconnected port S_ABURST[0]
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_si_transactor__parameterized3 has unconnected port S_ABURST[1]
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_si_transactor__parameterized3 has unconnected port S_ABURST[0]
 WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_si_transactor__parameterized2 has unconnected port S_ABURST[1]
 WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_si_transactor__parameterized2 has unconnected port S_ABURST[0]
 WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_si_transactor__parameterized1 has unconnected port S_ABURST[1]
@@ -902,32 +989,61 @@ WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_si_transactor__parameterized
 WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_si_transactor__parameterized0 has unconnected port S_ABURST[0]
 WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_si_transactor has unconnected port S_ABURST[1]
 WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_si_transactor has unconnected port S_ABURST[0]
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_crossbar has unconnected port S_AXI_AWID[8]
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_crossbar has unconnected port S_AXI_AWID[7]
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_crossbar has unconnected port S_AXI_AWID[6]
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_crossbar has unconnected port S_AXI_AWID[2]
 WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_crossbar has unconnected port S_AXI_AWID[1]
 WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_crossbar has unconnected port S_AXI_AWID[0]
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_crossbar has unconnected port S_AXI_WID[8]
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_crossbar has unconnected port S_AXI_WID[7]
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_crossbar has unconnected port S_AXI_WID[6]
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_crossbar has unconnected port S_AXI_WID[5]
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_crossbar has unconnected port S_AXI_WID[4]
 WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_crossbar has unconnected port S_AXI_WID[3]
 WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_crossbar has unconnected port S_AXI_WID[2]
 WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_crossbar has unconnected port S_AXI_WID[1]
 WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_crossbar has unconnected port S_AXI_WID[0]
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_crossbar has unconnected port S_AXI_ARID[8]
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_crossbar has unconnected port S_AXI_ARID[7]
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_crossbar has unconnected port S_AXI_ARID[6]
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_crossbar has unconnected port S_AXI_ARID[2]
 WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_crossbar has unconnected port S_AXI_ARID[1]
 WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_crossbar has unconnected port S_AXI_ARID[0]
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_axi_crossbar has unconnected port s_axi_awid[8]
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_axi_crossbar has unconnected port s_axi_awid[7]
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_axi_crossbar has unconnected port s_axi_awid[6]
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_axi_crossbar has unconnected port s_axi_awid[2]
 WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_axi_crossbar has unconnected port s_axi_awid[1]
 WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_axi_crossbar has unconnected port s_axi_awid[0]
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_axi_crossbar has unconnected port s_axi_awuser[2]
 WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_axi_crossbar has unconnected port s_axi_awuser[1]
 WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_axi_crossbar has unconnected port s_axi_awuser[0]
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_axi_crossbar has unconnected port s_axi_wid[8]
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_axi_crossbar has unconnected port s_axi_wid[7]
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_axi_crossbar has unconnected port s_axi_wid[6]
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_axi_crossbar has unconnected port s_axi_wid[5]
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_axi_crossbar has unconnected port s_axi_wid[4]
 WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_axi_crossbar has unconnected port s_axi_wid[3]
 WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_axi_crossbar has unconnected port s_axi_wid[2]
 WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_axi_crossbar has unconnected port s_axi_wid[1]
 WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_axi_crossbar has unconnected port s_axi_wid[0]
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_axi_crossbar has unconnected port s_axi_wuser[2]
 WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_axi_crossbar has unconnected port s_axi_wuser[1]
 WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_axi_crossbar has unconnected port s_axi_wuser[0]
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_axi_crossbar has unconnected port s_axi_arid[8]
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_axi_crossbar has unconnected port s_axi_arid[7]
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_axi_crossbar has unconnected port s_axi_arid[6]
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_axi_crossbar has unconnected port s_axi_arid[2]
 WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_axi_crossbar has unconnected port s_axi_arid[1]
 WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_axi_crossbar has unconnected port s_axi_arid[0]
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_axi_crossbar has unconnected port s_axi_aruser[2]
 WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_axi_crossbar has unconnected port s_axi_aruser[1]
 WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_axi_crossbar has unconnected port s_axi_aruser[0]
 WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_axi_crossbar has unconnected port m_axi_buser[0]
 WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_axi_crossbar has unconnected port m_axi_ruser[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:23 ; elapsed = 00:00:52 . Memory (MB): peak = 1500.312 ; gain = 228.609 ; free physical = 5801 ; free virtual = 33571
+Finished RTL Elaboration : Time (s): cpu = 00:00:21 ; elapsed = 00:00:40 . Memory (MB): peak = 1542.281 ; gain = 234.609 ; free physical = 10537 ; free virtual = 75971
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -940,64 +1056,74 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:53 . Memory (MB): peak = 1500.312 ; gain = 228.609 ; free physical = 5777 ; free virtual = 33550
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:41 . Memory (MB): peak = 1542.281 ; gain = 234.609 ; free physical = 10514 ; free virtual = 75948
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:53 . Memory (MB): peak = 1500.312 ; gain = 228.609 ; free physical = 5777 ; free virtual = 33550
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:41 . Memory (MB): peak = 1542.281 ; gain = 234.609 ; free physical = 10514 ; free virtual = 75948
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xcku115-flva1517-2-e
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_xbar_0/shell_xbar_0_ooc.xdc] for cell 'inst'
-Finished Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_xbar_0/shell_xbar_0_ooc.xdc] for cell 'inst'
-Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/shell_xbar_0_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/shell_xbar_0_synth_1/dont_touch.xdc]
+Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_xbar_0/shell_xbar_0_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_xbar_0/shell_xbar_0_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/shell_xbar_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/shell_xbar_0_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.30 ; elapsed = 00:00:00.26 . Memory (MB): peak = 2139.035 ; gain = 1.000 ; free physical = 3830 ; free virtual = 31602
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.58 ; elapsed = 00:00:00.23 . Memory (MB): peak = 2187.855 ; gain = 1.000 ; free physical = 8060 ; free virtual = 73494
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:48 ; elapsed = 00:01:30 . Memory (MB): peak = 2139.035 ; gain = 867.332 ; free physical = 4771 ; free virtual = 32543
+Finished Constraint Validation : Time (s): cpu = 00:00:45 ; elapsed = 00:01:13 . Memory (MB): peak = 2187.855 ; gain = 880.184 ; free physical = 8024 ; free virtual = 73457
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xcku115-flva1517-2-e
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:48 ; elapsed = 00:01:30 . Memory (MB): peak = 2139.035 ; gain = 867.332 ; free physical = 4771 ; free virtual = 32543
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:45 ; elapsed = 00:01:13 . Memory (MB): peak = 2187.855 ; gain = 880.184 ; free physical = 8024 ; free virtual = 73457
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property DONT_TOUCH = true for inst. (constraint file  /nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/shell_xbar_0_synth_1/dont_touch.xdc, line 9).
+Applied set_property DONT_TOUCH = true for inst. (constraint file  /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/shell_xbar_0_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:48 ; elapsed = 00:01:30 . Memory (MB): peak = 2139.035 ; gain = 867.332 ; free physical = 4770 ; free virtual = 32541
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:45 ; elapsed = 00:01:13 . Memory (MB): peak = 2187.855 ; gain = 880.184 ; free physical = 8025 ; free virtual = 73459
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-4471] merging register 'gen_axi.s_axi_rvalid_i_reg' into 'gen_axi.read_cs_reg[0:0]' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:3667]
-WARNING: [Synth 8-6014] Unused sequential element gen_axi.s_axi_rvalid_i_reg was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:3667]
+INFO: [Synth 8-4471] merging register 'gen_axi.s_axi_rvalid_i_reg' into 'gen_axi.read_cs_reg[0:0]' [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:3667]
+WARNING: [Synth 8-6014] Unused sequential element gen_axi.s_axi_rvalid_i_reg was removed.  [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:3667]
 INFO: [Synth 8-802] inferred FSM for state register 'gen_axi.write_cs_reg' in module 'axi_crossbar_v2_1_17_decerr_slave'
 INFO: [Synth 8-5546] ROM "gen_axi.read_cs" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "gen_axi.s_axi_rlast_i" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "gen_axi.s_axi_rlast_i" won't be mapped to RAM because it is too sparse
-WARNING: [Synth 8-6014] Unused sequential element gen_rtl_shifter.gen_inferred_srl.shift_reg_reg was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d114/hdl/axi_data_fifo_v2_1_vl_rfs.v:1170]
-WARNING: [Synth 8-6014] Unused sequential element gen_rtl_shifter.gen_inferred_srl.shift_reg_reg was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d114/hdl/axi_data_fifo_v2_1_vl_rfs.v:1170]
+INFO: [Synth 8-5544] ROM "f_mux_return2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "f_mux_return2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "f_mux_return1" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "f_mux_return2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "f_mux_return2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "f_mux_return1" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+WARNING: [Synth 8-6014] Unused sequential element gen_rtl_shifter.gen_inferred_srl.shift_reg_reg was removed.  [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d114/hdl/axi_data_fifo_v2_1_vl_rfs.v:1170]
+WARNING: [Synth 8-6014] Unused sequential element gen_rtl_shifter.gen_inferred_srl.shift_reg_reg was removed.  [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d114/hdl/axi_data_fifo_v2_1_vl_rfs.v:1170]
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'axi_data_fifo_v2_1_15_axic_reg_srl_fifo'
 INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "decode_address" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "decode_address0" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-WARNING: [Synth 8-6014] Unused sequential element gen_rtl_shifter.gen_inferred_srl.shift_reg_reg was removed.  [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d114/hdl/axi_data_fifo_v2_1_vl_rfs.v:1170]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d114/hdl/axi_data_fifo_v2_1_vl_rfs.v:759]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d114/hdl/axi_data_fifo_v2_1_vl_rfs.v:1024]
+INFO: [Synth 8-5544] ROM "decode_address" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "decode_address0" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "decode_address1" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+WARNING: [Synth 8-6014] Unused sequential element gen_rtl_shifter.gen_inferred_srl.shift_reg_reg was removed.  [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d114/hdl/axi_data_fifo_v2_1_vl_rfs.v:1170]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d114/hdl/axi_data_fifo_v2_1_vl_rfs.v:759]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d114/hdl/axi_data_fifo_v2_1_vl_rfs.v:1024]
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'axi_data_fifo_v2_1_15_axic_reg_srl_fifo__parameterized0'
 INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "f_mux_return2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "f_mux_return2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "f_mux_return1" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'axi_data_fifo_v2_1_15_axic_reg_srl_fifo__parameterized1'
 INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:3091]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:3086]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:3091]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ipshared/d293/hdl/axi_crossbar_v2_1_vl_rfs.v:3086]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -1037,7 +1163,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'axi_data_fifo_v2_1_15_axic_reg_srl_fifo__parameterized1'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:49 ; elapsed = 00:01:32 . Memory (MB): peak = 2139.035 ; gain = 867.332 ; free physical = 4569 ; free virtual = 32343
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:47 ; elapsed = 00:01:15 . Memory (MB): peak = 2187.855 ; gain = 880.184 ; free physical = 7934 ; free virtual = 73367
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1054,33 +1180,34 @@ Detailed RTL Component Info :
 	   2 Input      6 Bit       Adders := 1     
 	   2 Input      5 Bit       Adders := 1     
 	   2 Input      4 Bit       Adders := 2     
-	   2 Input      3 Bit       Adders := 18    
-	   2 Input      2 Bit       Adders := 7     
-	   2 Input      1 Bit       Adders := 2     
+	   2 Input      3 Bit       Adders := 22    
+	   2 Input      2 Bit       Adders := 9     
+	   2 Input      1 Bit       Adders := 4     
 +---XORs : 
-	   2 Input      1 Bit         XORs := 12    
+	   2 Input      1 Bit         XORs := 15    
 +---Registers : 
-	              517 Bit    Registers := 4     
-	               97 Bit    Registers := 2     
+	              518 Bit    Registers := 4     
+	               98 Bit    Registers := 2     
 	                8 Bit    Registers := 3     
+	                5 Bit    Registers := 2     
 	                4 Bit    Registers := 6     
-	                3 Bit    Registers := 10    
-	                2 Bit    Registers := 29    
-	                1 Bit    Registers := 45    
+	                3 Bit    Registers := 24    
+	                2 Bit    Registers := 27    
+	                1 Bit    Registers := 49    
 +---Muxes : 
-	   2 Input    517 Bit        Muxes := 4     
+	   2 Input    518 Bit        Muxes := 4     
 	   2 Input     16 Bit        Muxes := 8     
 	   2 Input      8 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 1     
-	   4 Input      4 Bit        Muxes := 4     
-	   2 Input      4 Bit        Muxes := 12    
-	   2 Input      3 Bit        Muxes := 4     
+	   4 Input      4 Bit        Muxes := 5     
+	   2 Input      4 Bit        Muxes := 15    
+	   2 Input      3 Bit        Muxes := 8     
 	   3 Input      3 Bit        Muxes := 4     
-	   2 Input      2 Bit        Muxes := 28    
+	   2 Input      2 Bit        Muxes := 31    
 	   3 Input      1 Bit        Muxes := 9     
-	   2 Input      1 Bit        Muxes := 70    
-	   4 Input      1 Bit        Muxes := 12    
+	   2 Input      1 Bit        Muxes := 110   
+	   4 Input      1 Bit        Muxes := 15    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -1094,18 +1221,27 @@ Detailed RTL Component Info :
 	   2 Input      8 Bit       Adders := 1     
 +---Registers : 
 	                8 Bit    Registers := 1     
-	                2 Bit    Registers := 2     
+	                3 Bit    Registers := 2     
 	                1 Bit    Registers := 6     
 +---Muxes : 
 	   2 Input      8 Bit        Muxes := 1     
 	   3 Input      1 Bit        Muxes := 9     
 	   2 Input      1 Bit        Muxes := 12    
+Module generic_baseblocks_v2_1_0_mux_enc__parameterized2 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module generic_baseblocks_v2_1_0_mux_enc__parameterized3 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
 Module axi_crossbar_v2_1_17_addr_arbiter 
 Detailed RTL Component Info : 
 +---Registers : 
-	               97 Bit    Registers := 1     
-	                2 Bit    Registers := 5     
-	                1 Bit    Registers := 3     
+	               98 Bit    Registers := 1     
+	                3 Bit    Registers := 4     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
 +---Muxes : 
 	   2 Input      1 Bit        Muxes := 5     
 Module axi_crossbar_v2_1_17_splitter 
@@ -1195,11 +1331,35 @@ Detailed RTL Component Info :
 	   3 Input      3 Bit        Muxes := 2     
 	   2 Input      2 Bit        Muxes := 2     
 	   2 Input      1 Bit        Muxes := 2     
+Module axi_crossbar_v2_1_17_si_transactor__parameterized3 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
+Module axi_crossbar_v2_1_17_si_transactor__parameterized4 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
 Module axi_crossbar_v2_1_17_addr_decoder__parameterized0 
 Detailed RTL Component Info : 
 +---Muxes : 
-	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
 Module axi_data_fifo_v2_1_15_axic_srl_fifo__parameterized0 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -1220,17 +1380,22 @@ Detailed RTL Component Info :
 	   2 Input      1 Bit         XORs := 1     
 +---Registers : 
 	                4 Bit    Registers := 1     
-	                1 Bit    Registers := 3     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
 +---Muxes : 
 	   4 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 3     
-	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 3     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
 	   4 Input      1 Bit        Muxes := 3     
+Module generic_baseblocks_v2_1_0_mux_enc__parameterized1 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
 Module axi_register_slice_v2_1_16_axic_register_slice__parameterized1 
 Detailed RTL Component Info : 
 +---Registers : 
-	                4 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
 	                2 Bit    Registers := 1     
 	                1 Bit    Registers := 2     
 +---Muxes : 
@@ -1238,11 +1403,11 @@ Detailed RTL Component Info :
 Module axi_register_slice_v2_1_16_axic_register_slice__parameterized2 
 Detailed RTL Component Info : 
 +---Registers : 
-	              517 Bit    Registers := 2     
+	              518 Bit    Registers := 2     
 	                2 Bit    Registers := 1     
 	                1 Bit    Registers := 2     
 +---Muxes : 
-	   2 Input    517 Bit        Muxes := 2     
+	   2 Input    518 Bit        Muxes := 2     
 Module axi_data_fifo_v2_1_15_axic_srl_fifo__parameterized1 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -1262,13 +1427,13 @@ Detailed RTL Component Info :
 +---XORs : 
 	   2 Input      1 Bit         XORs := 1     
 +---Registers : 
-	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 3     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
 +---Muxes : 
 	   4 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 3     
-	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 3     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
 	   4 Input      1 Bit        Muxes := 3     
 Module axi_crossbar_v2_1_17_crossbar 
 Detailed RTL Component Info : 
@@ -1276,7 +1441,7 @@ Detailed RTL Component Info :
 	   2 Input      8 Bit       Adders := 2     
 	   2 Input      6 Bit       Adders := 1     
 	   2 Input      5 Bit       Adders := 1     
-	   2 Input      1 Bit       Adders := 2     
+	   2 Input      1 Bit       Adders := 4     
 +---Registers : 
 	                8 Bit    Registers := 2     
 	                1 Bit    Registers := 1     
@@ -1284,8 +1449,8 @@ Detailed RTL Component Info :
 	   2 Input     16 Bit        Muxes := 4     
 	   2 Input      6 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 4     
-	   2 Input      1 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 4     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -1306,12 +1471,17 @@ INFO: [Synth 8-5546] ROM "gen_axi.s_axi_rlast_i" won't be mapped to RAM because 
 INFO: [Synth 8-5546] ROM "gen_axi.read_cs" won't be mapped to RAM because it is too sparse
 WARNING: [Synth 8-3331] design axi_register_slice_v2_1_16_axi_register_slice has unconnected port aclk2x
 WARNING: [Synth 8-3331] design axi_register_slice_v2_1_16_axi_register_slice has unconnected port s_axi_awuser[0]
+WARNING: [Synth 8-3331] design axi_register_slice_v2_1_16_axi_register_slice has unconnected port s_axi_wid[2]
 WARNING: [Synth 8-3331] design axi_register_slice_v2_1_16_axi_register_slice has unconnected port s_axi_wid[1]
 WARNING: [Synth 8-3331] design axi_register_slice_v2_1_16_axi_register_slice has unconnected port s_axi_wid[0]
 WARNING: [Synth 8-3331] design axi_register_slice_v2_1_16_axi_register_slice has unconnected port s_axi_wuser[0]
 WARNING: [Synth 8-3331] design axi_register_slice_v2_1_16_axi_register_slice has unconnected port s_axi_aruser[0]
 WARNING: [Synth 8-3331] design axi_register_slice_v2_1_16_axi_register_slice has unconnected port m_axi_buser[0]
 WARNING: [Synth 8-3331] design axi_register_slice_v2_1_16_axi_register_slice has unconnected port m_axi_ruser[0]
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_si_transactor__parameterized4 has unconnected port S_ABURST[1]
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_si_transactor__parameterized4 has unconnected port S_ABURST[0]
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_si_transactor__parameterized3 has unconnected port S_ABURST[1]
+WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_si_transactor__parameterized3 has unconnected port S_ABURST[0]
 WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_si_transactor__parameterized2 has unconnected port S_ABURST[1]
 WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_si_transactor__parameterized2 has unconnected port S_ABURST[0]
 WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_si_transactor__parameterized1 has unconnected port S_ABURST[1]
@@ -1319,35 +1489,7 @@ WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_si_transactor__parameterized
 WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_si_transactor__parameterized0 has unconnected port S_ABURST[1]
 WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_si_transactor__parameterized0 has unconnected port S_ABURST[0]
 WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_si_transactor has unconnected port S_ABURST[1]
-WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_si_transactor has unconnected port S_ABURST[0]
-WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_crossbar has unconnected port S_AXI_AWID[3]
-WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_crossbar has unconnected port S_AXI_AWID[1]
-WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_crossbar has unconnected port S_AXI_AWID[0]
-WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_crossbar has unconnected port S_AXI_WID[3]
-WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_crossbar has unconnected port S_AXI_WID[2]
-WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_crossbar has unconnected port S_AXI_WID[1]
-WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_crossbar has unconnected port S_AXI_WID[0]
-WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_crossbar has unconnected port S_AXI_ARID[3]
-WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_crossbar has unconnected port S_AXI_ARID[1]
-WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_crossbar has unconnected port S_AXI_ARID[0]
-WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_axi_crossbar has unconnected port s_axi_awid[3]
-WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_axi_crossbar has unconnected port s_axi_awid[1]
-WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_axi_crossbar has unconnected port s_axi_awid[0]
-WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_axi_crossbar has unconnected port s_axi_awuser[1]
-WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_axi_crossbar has unconnected port s_axi_awuser[0]
-WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_axi_crossbar has unconnected port s_axi_wid[3]
-WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_axi_crossbar has unconnected port s_axi_wid[2]
-WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_axi_crossbar has unconnected port s_axi_wid[1]
-WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_axi_crossbar has unconnected port s_axi_wid[0]
-WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_axi_crossbar has unconnected port s_axi_wuser[1]
-WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_axi_crossbar has unconnected port s_axi_wuser[0]
-WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_axi_crossbar has unconnected port s_axi_arid[3]
-WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_axi_crossbar has unconnected port s_axi_arid[1]
-WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_axi_crossbar has unconnected port s_axi_arid[0]
-WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_axi_crossbar has unconnected port s_axi_aruser[1]
-WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_axi_crossbar has unconnected port s_axi_aruser[0]
-WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_axi_crossbar has unconnected port m_axi_buser[0]
-WARNING: [Synth 8-3331] design axi_crossbar_v2_1_17_axi_crossbar has unconnected port m_axi_ruser[0]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_slave_slots[0].gen_si_read.si_transactor_ar/gen_single_thread.active_region_reg[3]' (FDRE) to 'inst/gen_samd.crossbar_samd/gen_slave_slots[0].gen_si_read.si_transactor_ar/gen_single_thread.active_region_reg[0]'
 INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_slave_slots[0].gen_si_read.si_transactor_ar/gen_single_thread.active_region_reg[0]' (FDRE) to 'inst/gen_samd.crossbar_samd/gen_slave_slots[0].gen_si_read.si_transactor_ar/gen_single_thread.active_region_reg[1]'
 INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_slave_slots[0].gen_si_read.si_transactor_ar/gen_single_thread.active_region_reg[1]' (FDRE) to 'inst/gen_samd.crossbar_samd/gen_slave_slots[0].gen_si_read.si_transactor_ar/gen_single_thread.active_region_reg[2]'
@@ -1360,8 +1502,13 @@ INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_slave_slo
 INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_slave_slots[1].gen_si_read.si_transactor_ar/gen_multi_thread.active_region_reg[8]' (FDRE) to 'inst/gen_samd.crossbar_samd/gen_slave_slots[1].gen_si_read.si_transactor_ar/gen_multi_thread.active_region_reg[10]'
 INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_slave_slots[1].gen_si_read.si_transactor_ar/gen_multi_thread.active_region_reg[9]' (FDRE) to 'inst/gen_samd.crossbar_samd/gen_slave_slots[1].gen_si_read.si_transactor_ar/gen_multi_thread.active_region_reg[10]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\gen_samd.crossbar_samd /\gen_slave_slots[1].gen_si_read.si_transactor_ar /\gen_multi_thread.active_region_reg[10] )
+INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_slave_slots[2].gen_si_read.si_transactor_ar/gen_single_thread.active_region_reg[3]' (FDRE) to 'inst/gen_samd.crossbar_samd/gen_slave_slots[2].gen_si_read.si_transactor_ar/gen_single_thread.active_region_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_slave_slots[2].gen_si_read.si_transactor_ar/gen_single_thread.active_region_reg[0]' (FDRE) to 'inst/gen_samd.crossbar_samd/gen_slave_slots[2].gen_si_read.si_transactor_ar/gen_single_thread.active_region_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_slave_slots[2].gen_si_read.si_transactor_ar/gen_single_thread.active_region_reg[1]' (FDRE) to 'inst/gen_samd.crossbar_samd/gen_slave_slots[2].gen_si_read.si_transactor_ar/gen_single_thread.active_region_reg[2]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\gen_samd.crossbar_samd /\gen_slave_slots[2].gen_si_read.si_transactor_ar /\gen_single_thread.active_region_reg[2] )
 INFO: [Synth 8-3886] merging instance 'axi_register_slice_v2_1_16_axi_register_slice:/r.r_pipe/aresetn_d_reg[0]' (FDR) to 'axi_register_slice_v2_1_16_axi_register_slice:/b.b_pipe/aresetn_d_reg[0]'
 INFO: [Synth 8-3886] merging instance 'axi_register_slice_v2_1_16_axi_register_slice:/r.r_pipe/aresetn_d_reg[1]' (FDR) to 'axi_register_slice_v2_1_16_axi_register_slice:/b.b_pipe/aresetn_d_reg[1]'
+INFO: [Synth 8-3886] merging instance 'axi_crossbar_v2_1_17_addr_arbiter:/gen_arbiter.last_rr_hot_reg[1]' (FDRE) to 'axi_crossbar_v2_1_17_addr_arbiter:/gen_arbiter.m_grant_enc_i_reg[0]'
 INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_slave_slots[0].gen_si_write.si_transactor_aw/gen_single_thread.active_region_reg[3]' (FDRE) to 'inst/gen_samd.crossbar_samd/gen_slave_slots[0].gen_si_write.si_transactor_aw/gen_single_thread.active_region_reg[2]'
 INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_slave_slots[0].gen_si_write.si_transactor_aw/gen_single_thread.active_region_reg[0]' (FDRE) to 'inst/gen_samd.crossbar_samd/gen_slave_slots[0].gen_si_write.si_transactor_aw/gen_single_thread.active_region_reg[2]'
 INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_slave_slots[0].gen_si_write.si_transactor_aw/gen_single_thread.active_region_reg[1]' (FDRE) to 'inst/gen_samd.crossbar_samd/gen_slave_slots[0].gen_si_write.si_transactor_aw/gen_single_thread.active_region_reg[2]'
@@ -1374,10 +1521,16 @@ INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_slave_slo
 INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_slave_slots[1].gen_si_write.si_transactor_aw/gen_multi_thread.active_region_reg[8]' (FDRE) to 'inst/gen_samd.crossbar_samd/gen_slave_slots[1].gen_si_write.si_transactor_aw/gen_multi_thread.active_region_reg[10]'
 INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_slave_slots[1].gen_si_write.si_transactor_aw/gen_multi_thread.active_region_reg[9]' (FDRE) to 'inst/gen_samd.crossbar_samd/gen_slave_slots[1].gen_si_write.si_transactor_aw/gen_multi_thread.active_region_reg[10]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\gen_samd.crossbar_samd /\gen_slave_slots[1].gen_si_write.si_transactor_aw /\gen_multi_thread.active_region_reg[10] )
+INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_slave_slots[2].gen_si_write.si_transactor_aw/gen_single_thread.active_region_reg[3]' (FDRE) to 'inst/gen_samd.crossbar_samd/gen_slave_slots[2].gen_si_write.si_transactor_aw/gen_single_thread.active_region_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_slave_slots[2].gen_si_write.si_transactor_aw/gen_single_thread.active_region_reg[0]' (FDRE) to 'inst/gen_samd.crossbar_samd/gen_slave_slots[2].gen_si_write.si_transactor_aw/gen_single_thread.active_region_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_slave_slots[2].gen_si_write.si_transactor_aw/gen_single_thread.active_region_reg[1]' (FDRE) to 'inst/gen_samd.crossbar_samd/gen_slave_slots[2].gen_si_write.si_transactor_aw/gen_single_thread.active_region_reg[2]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\gen_samd.crossbar_samd /\gen_slave_slots[2].gen_si_write.si_transactor_aw /\gen_single_thread.active_region_reg[2] )
 INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_slave_slots[0].gen_si_read.si_transactor_ar/gen_single_thread.active_target_hot_reg[1]' (FDRE) to 'inst/gen_samd.crossbar_samd/gen_slave_slots[0].gen_si_read.si_transactor_ar/gen_single_thread.active_target_enc_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_slave_slots[2].gen_si_read.si_transactor_ar/gen_single_thread.active_target_hot_reg[1]' (FDRE) to 'inst/gen_samd.crossbar_samd/gen_slave_slots[2].gen_si_read.si_transactor_ar/gen_single_thread.active_target_enc_reg[0]'
 INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_slave_slots[0].gen_si_write.si_transactor_aw/gen_single_thread.active_target_hot_reg[1]' (FDRE) to 'inst/gen_samd.crossbar_samd/gen_slave_slots[0].gen_si_write.si_transactor_aw/gen_single_thread.active_target_enc_reg[0]'
-INFO: [Synth 8-3332] Sequential element (gen_arbiter.m_mesg_i_reg[96]) is unused and will be removed from module axi_crossbar_v2_1_17_addr_arbiter.
-INFO: [Synth 8-3332] Sequential element (gen_arbiter.m_mesg_i_reg[78]) is unused and will be removed from module axi_crossbar_v2_1_17_addr_arbiter.
+INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_slave_slots[2].gen_si_write.si_transactor_aw/gen_single_thread.active_target_hot_reg[1]' (FDRE) to 'inst/gen_samd.crossbar_samd/gen_slave_slots[2].gen_si_write.si_transactor_aw/gen_single_thread.active_target_enc_reg[0]'
+INFO: [Synth 8-3332] Sequential element (gen_arbiter.m_mesg_i_reg[97]) is unused and will be removed from module axi_crossbar_v2_1_17_addr_arbiter.
+INFO: [Synth 8-3332] Sequential element (gen_arbiter.m_mesg_i_reg[79]) is unused and will be removed from module axi_crossbar_v2_1_17_addr_arbiter.
 INFO: [Synth 8-3332] Sequential element (gen_single_thread.gen_debug_r_single_thread.debug_r_seq_fifo_single_thread/gen_rep[0].fifoaddr_reg[2]) is unused and will be removed from module axi_crossbar_v2_1_17_si_transactor.
 INFO: [Synth 8-3332] Sequential element (gen_single_thread.gen_debug_r_single_thread.debug_r_seq_fifo_single_thread/gen_rep[0].fifoaddr_reg[1]) is unused and will be removed from module axi_crossbar_v2_1_17_si_transactor.
 INFO: [Synth 8-3332] Sequential element (gen_single_thread.gen_debug_r_single_thread.debug_r_seq_fifo_single_thread/gen_rep[0].fifoaddr_reg[0]) is unused and will be removed from module axi_crossbar_v2_1_17_si_transactor.
@@ -1412,7 +1565,9 @@ INFO: [Synth 8-3332] Sequential element (gen_multi_thread.active_target_reg[4]) 
 INFO: [Synth 8-3332] Sequential element (gen_multi_thread.active_target_reg[3]) is unused and will be removed from module axi_crossbar_v2_1_17_si_transactor__parameterized1.
 INFO: [Synth 8-3332] Sequential element (gen_multi_thread.active_target_reg[2]) is unused and will be removed from module axi_crossbar_v2_1_17_si_transactor__parameterized1.
 INFO: [Synth 8-3332] Sequential element (gen_multi_thread.active_target_reg[1]) is unused and will be removed from module axi_crossbar_v2_1_17_si_transactor__parameterized1.
-INFO: [Synth 8-3332] Sequential element (gen_multi_thread.active_id_reg[3]) is unused and will be removed from module axi_crossbar_v2_1_17_si_transactor__parameterized1.
+INFO: [Synth 8-3332] Sequential element (gen_multi_thread.active_id_reg[5]) is unused and will be removed from module axi_crossbar_v2_1_17_si_transactor__parameterized1.
+INFO: [Synth 8-3332] Sequential element (gen_multi_thread.active_id_reg[4]) is unused and will be removed from module axi_crossbar_v2_1_17_si_transactor__parameterized1.
+INFO: [Synth 8-3332] Sequential element (gen_multi_thread.active_id_reg[2]) is unused and will be removed from module axi_crossbar_v2_1_17_si_transactor__parameterized1.
 INFO: [Synth 8-3332] Sequential element (gen_multi_thread.active_id_reg[1]) is unused and will be removed from module axi_crossbar_v2_1_17_si_transactor__parameterized1.
 INFO: [Synth 8-3332] Sequential element (gen_multi_thread.active_cnt_reg[15]) is unused and will be removed from module axi_crossbar_v2_1_17_si_transactor__parameterized1.
 INFO: [Synth 8-3332] Sequential element (gen_multi_thread.active_cnt_reg[14]) is unused and will be removed from module axi_crossbar_v2_1_17_si_transactor__parameterized1.
@@ -1456,7 +1611,9 @@ INFO: [Synth 8-3332] Sequential element (gen_multi_thread.active_target_reg[4]) 
 INFO: [Synth 8-3332] Sequential element (gen_multi_thread.active_target_reg[3]) is unused and will be removed from module axi_crossbar_v2_1_17_si_transactor__parameterized2.
 INFO: [Synth 8-3332] Sequential element (gen_multi_thread.active_target_reg[2]) is unused and will be removed from module axi_crossbar_v2_1_17_si_transactor__parameterized2.
 INFO: [Synth 8-3332] Sequential element (gen_multi_thread.active_target_reg[1]) is unused and will be removed from module axi_crossbar_v2_1_17_si_transactor__parameterized2.
-INFO: [Synth 8-3332] Sequential element (gen_multi_thread.active_id_reg[3]) is unused and will be removed from module axi_crossbar_v2_1_17_si_transactor__parameterized2.
+INFO: [Synth 8-3332] Sequential element (gen_multi_thread.active_id_reg[5]) is unused and will be removed from module axi_crossbar_v2_1_17_si_transactor__parameterized2.
+INFO: [Synth 8-3332] Sequential element (gen_multi_thread.active_id_reg[4]) is unused and will be removed from module axi_crossbar_v2_1_17_si_transactor__parameterized2.
+INFO: [Synth 8-3332] Sequential element (gen_multi_thread.active_id_reg[2]) is unused and will be removed from module axi_crossbar_v2_1_17_si_transactor__parameterized2.
 INFO: [Synth 8-3332] Sequential element (gen_multi_thread.active_id_reg[1]) is unused and will be removed from module axi_crossbar_v2_1_17_si_transactor__parameterized2.
 INFO: [Synth 8-3332] Sequential element (gen_multi_thread.active_cnt_reg[15]) is unused and will be removed from module axi_crossbar_v2_1_17_si_transactor__parameterized2.
 INFO: [Synth 8-3332] Sequential element (gen_multi_thread.active_cnt_reg[14]) is unused and will be removed from module axi_crossbar_v2_1_17_si_transactor__parameterized2.
@@ -1472,23 +1629,19 @@ INFO: [Synth 8-3332] Sequential element (gen_multi_thread.gen_thread_loop[0].gen
 INFO: [Synth 8-3332] Sequential element (gen_multi_thread.gen_thread_loop[0].gen_debug_r_multi_thread.debug_r_seq_fifo_multi_thread/gen_rep[0].fifoaddr_reg[1]) is unused and will be removed from module axi_crossbar_v2_1_17_si_transactor__parameterized2.
 INFO: [Synth 8-3332] Sequential element (gen_multi_thread.gen_thread_loop[0].gen_debug_r_multi_thread.debug_r_seq_fifo_multi_thread/gen_rep[0].fifoaddr_reg[0]) is unused and will be removed from module axi_crossbar_v2_1_17_si_transactor__parameterized2.
 INFO: [Synth 8-3332] Sequential element (gen_multi_thread.gen_thread_loop[0].gen_debug_r_multi_thread.debug_r_seq_fifo_multi_thread/M_VALID_i_reg) is unused and will be removed from module axi_crossbar_v2_1_17_si_transactor__parameterized2.
-INFO: [Synth 8-3332] Sequential element (gen_multi_thread.gen_thread_loop[1].gen_debug_r_multi_thread.debug_r_seq_fifo_multi_thread/gen_rep[0].fifoaddr_reg[2]) is unused and will be removed from module axi_crossbar_v2_1_17_si_transactor__parameterized2.
-INFO: [Synth 8-3332] Sequential element (gen_multi_thread.gen_thread_loop[1].gen_debug_r_multi_thread.debug_r_seq_fifo_multi_thread/gen_rep[0].fifoaddr_reg[1]) is unused and will be removed from module axi_crossbar_v2_1_17_si_transactor__parameterized2.
-INFO: [Synth 8-3332] Sequential element (gen_multi_thread.gen_thread_loop[1].gen_debug_r_multi_thread.debug_r_seq_fifo_multi_thread/gen_rep[0].fifoaddr_reg[0]) is unused and will be removed from module axi_crossbar_v2_1_17_si_transactor__parameterized2.
-INFO: [Synth 8-3332] Sequential element (gen_multi_thread.gen_thread_loop[1].gen_debug_r_multi_thread.debug_r_seq_fifo_multi_thread/M_VALID_i_reg) is unused and will be removed from module axi_crossbar_v2_1_17_si_transactor__parameterized2.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/addr_arbiter_ar/gen_arbiter.m_mesg_i_reg[82]' (FDRE) to 'inst/gen_samd.crossbar_samd/addr_arbiter_ar/gen_arbiter.m_mesg_i_reg[83]'
-INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/addr_arbiter_ar/gen_arbiter.m_mesg_i_reg[83]' (FDRE) to 'inst/gen_samd.crossbar_samd/addr_arbiter_ar/gen_arbiter.m_mesg_i_reg[84]'
-INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/addr_arbiter_ar/gen_arbiter.m_mesg_i_reg[84]' (FDRE) to 'inst/gen_samd.crossbar_samd/addr_arbiter_ar/gen_arbiter.m_mesg_i_reg[85]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\gen_samd.crossbar_samd /addr_arbiter_ar/\gen_arbiter.m_mesg_i_reg[85] )
-INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/addr_arbiter_aw/gen_arbiter.m_mesg_i_reg[82]' (FDRE) to 'inst/gen_samd.crossbar_samd/addr_arbiter_aw/gen_arbiter.m_mesg_i_reg[83]'
-INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/addr_arbiter_aw/gen_arbiter.m_mesg_i_reg[83]' (FDRE) to 'inst/gen_samd.crossbar_samd/addr_arbiter_aw/gen_arbiter.m_mesg_i_reg[84]'
-INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/addr_arbiter_aw/gen_arbiter.m_mesg_i_reg[84]' (FDRE) to 'inst/gen_samd.crossbar_samd/addr_arbiter_aw/gen_arbiter.m_mesg_i_reg[85]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\gen_samd.crossbar_samd /addr_arbiter_aw/\gen_arbiter.m_mesg_i_reg[85] )
+INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/addr_arbiter_ar/gen_arbiter.m_mesg_i_reg[83]' (FDRE) to 'inst/gen_samd.crossbar_samd/addr_arbiter_ar/gen_arbiter.m_mesg_i_reg[86]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/addr_arbiter_ar/gen_arbiter.m_mesg_i_reg[84]' (FDRE) to 'inst/gen_samd.crossbar_samd/addr_arbiter_ar/gen_arbiter.m_mesg_i_reg[86]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/addr_arbiter_ar/gen_arbiter.m_mesg_i_reg[85]' (FDRE) to 'inst/gen_samd.crossbar_samd/addr_arbiter_ar/gen_arbiter.m_mesg_i_reg[86]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\gen_samd.crossbar_samd /addr_arbiter_ar/\gen_arbiter.m_mesg_i_reg[86] )
+INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/addr_arbiter_aw/gen_arbiter.m_mesg_i_reg[83]' (FDRE) to 'inst/gen_samd.crossbar_samd/addr_arbiter_aw/gen_arbiter.m_mesg_i_reg[86]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/addr_arbiter_aw/gen_arbiter.m_mesg_i_reg[84]' (FDRE) to 'inst/gen_samd.crossbar_samd/addr_arbiter_aw/gen_arbiter.m_mesg_i_reg[86]'
+INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/addr_arbiter_aw/gen_arbiter.m_mesg_i_reg[85]' (FDRE) to 'inst/gen_samd.crossbar_samd/addr_arbiter_aw/gen_arbiter.m_mesg_i_reg[86]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\gen_samd.crossbar_samd /addr_arbiter_aw/\gen_arbiter.m_mesg_i_reg[86] )
 INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_master_slots[1].reg_slice_mi/b.b_pipe/m_payload_i_reg[0]' (FDE) to 'inst/gen_samd.crossbar_samd/gen_master_slots[1].reg_slice_mi/b.b_pipe/m_payload_i_reg[1]'
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\gen_samd.crossbar_samd /\gen_master_slots[1].reg_slice_mi /\b.b_pipe/m_payload_i_reg[1] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:58 ; elapsed = 00:01:41 . Memory (MB): peak = 2139.035 ; gain = 867.332 ; free physical = 3900 ; free virtual = 31678
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:56 ; elapsed = 00:01:24 . Memory (MB): peak = 2187.855 ; gain = 880.184 ; free physical = 8912 ; free virtual = 74345
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1500,13 +1653,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:13 ; elapsed = 00:02:22 . Memory (MB): peak = 2268.473 ; gain = 996.770 ; free physical = 3557 ; free virtual = 31457
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:10 ; elapsed = 00:01:57 . Memory (MB): peak = 2313.293 ; gain = 1005.621 ; free physical = 10163 ; free virtual = 75597
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:15 ; elapsed = 00:02:25 . Memory (MB): peak = 2320.395 ; gain = 1048.691 ; free physical = 3581 ; free virtual = 31482
+Finished Timing Optimization : Time (s): cpu = 00:01:11 ; elapsed = 00:01:59 . Memory (MB): peak = 2343.324 ; gain = 1035.652 ; free physical = 10154 ; free virtual = 75588
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1520,10 +1673,11 @@ Start Technology Mapping
 INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_master_slots[1].reg_slice_mi/b.b_pipe/aresetn_d_reg[0]' (FDR) to 'inst/gen_samd.crossbar_samd/gen_master_slots[0].reg_slice_mi/b.b_pipe/aresetn_d_reg[0]'
 INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_master_slots[0].reg_slice_mi/b.b_pipe/aresetn_d_reg[1]' (FDR) to 'inst/gen_samd.crossbar_samd/gen_master_slots[1].reg_slice_mi/b.b_pipe/aresetn_d_reg[1]'
 INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/areset_d1_reg' (FD) to 'inst/gen_samd.crossbar_samd/gen_master_slots[0].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/areset_d1_reg'
-INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_master_slots[0].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/areset_d1_reg' (FD) to 'inst/gen_samd.crossbar_samd/gen_slave_slots[1].gen_si_write.wdata_router_w/wrouter_aw_fifo/areset_d1_reg'
-INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_slave_slots[0].gen_si_write.wdata_router_w/wrouter_aw_fifo/areset_d1_reg' (FD) to 'inst/gen_samd.crossbar_samd/gen_slave_slots[1].gen_si_write.wdata_router_w/wrouter_aw_fifo/areset_d1_reg'
+INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_master_slots[0].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/areset_d1_reg' (FD) to 'inst/gen_samd.crossbar_samd/gen_slave_slots[2].gen_si_write.wdata_router_w/wrouter_aw_fifo/areset_d1_reg'
+INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_slave_slots[0].gen_si_write.wdata_router_w/wrouter_aw_fifo/areset_d1_reg' (FD) to 'inst/gen_samd.crossbar_samd/gen_slave_slots[2].gen_si_write.wdata_router_w/wrouter_aw_fifo/areset_d1_reg'
+INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_slave_slots[1].gen_si_write.wdata_router_w/wrouter_aw_fifo/areset_d1_reg' (FD) to 'inst/gen_samd.crossbar_samd/gen_slave_slots[2].gen_si_write.wdata_router_w/wrouter_aw_fifo/areset_d1_reg'
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:18 ; elapsed = 00:02:27 . Memory (MB): peak = 2320.395 ; gain = 1048.691 ; free physical = 3471 ; free virtual = 31264
+Finished Technology Mapping : Time (s): cpu = 00:01:13 ; elapsed = 00:02:01 . Memory (MB): peak = 2355.566 ; gain = 1047.895 ; free physical = 10131 ; free virtual = 75564
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1547,7 +1701,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:19 ; elapsed = 00:02:28 . Memory (MB): peak = 2320.395 ; gain = 1048.691 ; free physical = 3445 ; free virtual = 31238
+Finished IO Insertion : Time (s): cpu = 00:01:14 ; elapsed = 00:02:02 . Memory (MB): peak = 2355.566 ; gain = 1047.895 ; free physical = 10139 ; free virtual = 75573
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1560,7 +1714,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:19 ; elapsed = 00:02:28 . Memory (MB): peak = 2320.395 ; gain = 1048.691 ; free physical = 3444 ; free virtual = 31238
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:14 ; elapsed = 00:02:02 . Memory (MB): peak = 2355.566 ; gain = 1047.895 ; free physical = 10139 ; free virtual = 75573
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1572,25 +1726,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:19 ; elapsed = 00:02:28 . Memory (MB): peak = 2320.395 ; gain = 1048.691 ; free physical = 3423 ; free virtual = 31217
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:15 ; elapsed = 00:02:02 . Memory (MB): peak = 2355.566 ; gain = 1047.895 ; free physical = 10138 ; free virtual = 75572
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:19 ; elapsed = 00:02:28 . Memory (MB): peak = 2320.395 ; gain = 1048.691 ; free physical = 3423 ; free virtual = 31217
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:15 ; elapsed = 00:02:02 . Memory (MB): peak = 2355.566 ; gain = 1047.895 ; free physical = 10138 ; free virtual = 75572
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:19 ; elapsed = 00:02:28 . Memory (MB): peak = 2320.395 ; gain = 1048.691 ; free physical = 3341 ; free virtual = 31136
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:15 ; elapsed = 00:02:03 . Memory (MB): peak = 2355.566 ; gain = 1047.895 ; free physical = 10134 ; free virtual = 75567
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:19 ; elapsed = 00:02:29 . Memory (MB): peak = 2320.395 ; gain = 1048.691 ; free physical = 3341 ; free virtual = 31136
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:15 ; elapsed = 00:02:03 . Memory (MB): peak = 2355.566 ; gain = 1047.895 ; free physical = 10129 ; free virtual = 75563
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -1622,60 +1776,64 @@ Report Cell Usage:
 +------+--------+------+
 |      |Cell    |Count |
 +------+--------+------+
-|1     |LUT1    |    28|
-|2     |LUT2    |  1053|
-|3     |LUT3    |  1335|
-|4     |LUT4    |    68|
-|5     |LUT5    |    70|
-|6     |LUT6    |   105|
-|7     |SRLC32E |     4|
-|8     |FDRE    |  1372|
-|9     |FDSE    |    19|
+|1     |LUT1    |    33|
+|2     |LUT2    |  1577|
+|3     |LUT3    |   595|
+|4     |LUT4    |    99|
+|5     |LUT5    |   270|
+|6     |LUT6    |   705|
+|7     |SRLC32E |     7|
+|8     |FDRE    |  1411|
+|9     |FDSE    |    22|
 +------+--------+------+
 
 Report Instance Areas: 
-+------+---------------------------------------------------------+-----------------------------------------------------------------+------+
-|      |Instance                                                 |Module                                                           |Cells |
-+------+---------------------------------------------------------+-----------------------------------------------------------------+------+
-|1     |top                                                      |                                                                 |  4054|
-|2     |  inst                                                   |axi_crossbar_v2_1_17_axi_crossbar                                |  4054|
-|3     |    \gen_samd.crossbar_samd                              |axi_crossbar_v2_1_17_crossbar                                    |  4050|
-|4     |      addr_arbiter_ar                                    |axi_crossbar_v2_1_17_addr_arbiter                                |   247|
-|5     |        \gen_arbiter.mux_mesg                            |generic_baseblocks_v2_1_0_mux_enc__parameterized2_9              |    90|
-|6     |      addr_arbiter_aw                                    |axi_crossbar_v2_1_17_addr_arbiter_0                              |   238|
-|7     |        \gen_arbiter.mux_mesg                            |generic_baseblocks_v2_1_0_mux_enc__parameterized2                |    90|
-|8     |      \gen_decerr_slave.decerr_slave_inst                |axi_crossbar_v2_1_17_decerr_slave                                |    47|
-|9     |      \gen_master_slots[0].gen_mi_write.wdata_mux_w      |axi_crossbar_v2_1_17_wdata_mux                                   |   600|
-|10    |        \gen_wmux.mux_w                                  |generic_baseblocks_v2_1_0_mux_enc__parameterized1                |   576|
-|11    |        \gen_wmux.wmux_aw_fifo                           |axi_data_fifo_v2_1_15_axic_reg_srl_fifo__parameterized0          |    23|
-|12    |      \gen_master_slots[0].reg_slice_mi                  |axi_register_slice_v2_1_16_axi_register_slice                    |  2618|
-|13    |        \b.b_pipe                                        |axi_register_slice_v2_1_16_axic_register_slice__parameterized1_7 |    27|
-|14    |        \r.r_pipe                                        |axi_register_slice_v2_1_16_axic_register_slice__parameterized2_8 |  2591|
-|15    |      \gen_master_slots[1].gen_mi_write.wdata_mux_w      |axi_crossbar_v2_1_17_wdata_mux__parameterized0                   |    27|
-|16    |        \gen_wmux.wmux_aw_fifo                           |axi_data_fifo_v2_1_15_axic_reg_srl_fifo__parameterized1          |    26|
-|17    |      \gen_master_slots[1].reg_slice_mi                  |axi_register_slice_v2_1_16_axi_register_slice_1                  |    59|
-|18    |        \b.b_pipe                                        |axi_register_slice_v2_1_16_axic_register_slice__parameterized1   |    22|
-|19    |        \r.r_pipe                                        |axi_register_slice_v2_1_16_axic_register_slice__parameterized2   |    37|
-|20    |      \gen_slave_slots[0].gen_si_read.si_transactor_ar   |axi_crossbar_v2_1_17_si_transactor                               |    19|
-|21    |      \gen_slave_slots[0].gen_si_write.si_transactor_aw  |axi_crossbar_v2_1_17_si_transactor__parameterized0               |    17|
-|22    |      \gen_slave_slots[0].gen_si_write.splitter_aw_si    |axi_crossbar_v2_1_17_splitter                                    |     5|
-|23    |      \gen_slave_slots[0].gen_si_write.wdata_router_w    |axi_crossbar_v2_1_17_wdata_router                                |    26|
-|24    |        wrouter_aw_fifo                                  |axi_data_fifo_v2_1_15_axic_reg_srl_fifo_6                        |    26|
-|25    |      \gen_slave_slots[1].gen_si_read.si_transactor_ar   |axi_crossbar_v2_1_17_si_transactor__parameterized1               |    45|
-|26    |        \gen_multi_thread.arbiter_resp_inst              |axi_crossbar_v2_1_17_arbiter_resp_5                              |     7|
-|27    |      \gen_slave_slots[1].gen_si_write.si_transactor_aw  |axi_crossbar_v2_1_17_si_transactor__parameterized2               |    42|
-|28    |        \gen_multi_thread.arbiter_resp_inst              |axi_crossbar_v2_1_17_arbiter_resp                                |     5|
-|29    |      \gen_slave_slots[1].gen_si_write.splitter_aw_si    |axi_crossbar_v2_1_17_splitter_2                                  |     6|
-|30    |      \gen_slave_slots[1].gen_si_write.wdata_router_w    |axi_crossbar_v2_1_17_wdata_router_3                              |    31|
-|31    |        wrouter_aw_fifo                                  |axi_data_fifo_v2_1_15_axic_reg_srl_fifo                          |    31|
-|32    |      splitter_aw_mi                                     |axi_crossbar_v2_1_17_splitter_4                                  |     6|
-+------+---------------------------------------------------------+-----------------------------------------------------------------+------+
++------+-------------------------------------------------------------------------+------------------------------------------------------------------+------+
+|      |Instance                                                                 |Module                                                            |Cells |
++------+-------------------------------------------------------------------------+------------------------------------------------------------------+------+
+|1     |top                                                                      |                                                                  |  4719|
+|2     |  inst                                                                   |axi_crossbar_v2_1_17_axi_crossbar                                 |  4719|
+|3     |    \gen_samd.crossbar_samd                                              |axi_crossbar_v2_1_17_crossbar                                     |  4712|
+|4     |      addr_arbiter_ar                                                    |axi_crossbar_v2_1_17_addr_arbiter                                 |   264|
+|5     |      addr_arbiter_aw                                                    |axi_crossbar_v2_1_17_addr_arbiter_0                               |   259|
+|6     |      \gen_decerr_slave.decerr_slave_inst                                |axi_crossbar_v2_1_17_decerr_slave                                 |    48|
+|7     |      \gen_master_slots[0].gen_mi_write.wdata_mux_w                      |axi_crossbar_v2_1_17_wdata_mux                                    |   612|
+|8     |        \gen_wmux.mux_w                                                  |generic_baseblocks_v2_1_0_mux_enc__parameterized1                 |   577|
+|9     |        \gen_wmux.wmux_aw_fifo                                           |axi_data_fifo_v2_1_15_axic_reg_srl_fifo__parameterized0           |    35|
+|10    |      \gen_master_slots[0].reg_slice_mi                                  |axi_register_slice_v2_1_16_axi_register_slice                     |  3150|
+|11    |        \b.b_pipe                                                        |axi_register_slice_v2_1_16_axic_register_slice__parameterized1_10 |    36|
+|12    |        \r.r_pipe                                                        |axi_register_slice_v2_1_16_axic_register_slice__parameterized2_11 |  3114|
+|13    |      \gen_master_slots[1].gen_mi_read.gen_rid_decoder.rid_decoder_inst  |axi_crossbar_v2_1_17_addr_decoder__parameterized0                 |     1|
+|14    |      \gen_master_slots[1].gen_mi_write.wdata_mux_w                      |axi_crossbar_v2_1_17_wdata_mux__parameterized0                    |    32|
+|15    |        \gen_wmux.wmux_aw_fifo                                           |axi_data_fifo_v2_1_15_axic_reg_srl_fifo__parameterized1           |    32|
+|16    |      \gen_master_slots[1].reg_slice_mi                                  |axi_register_slice_v2_1_16_axi_register_slice_1                   |    75|
+|17    |        \b.b_pipe                                                        |axi_register_slice_v2_1_16_axic_register_slice__parameterized1    |    28|
+|18    |        \r.r_pipe                                                        |axi_register_slice_v2_1_16_axic_register_slice__parameterized2    |    47|
+|19    |      \gen_slave_slots[0].gen_si_read.si_transactor_ar                   |axi_crossbar_v2_1_17_si_transactor                                |    18|
+|20    |      \gen_slave_slots[0].gen_si_write.si_transactor_aw                  |axi_crossbar_v2_1_17_si_transactor__parameterized0                |    14|
+|21    |      \gen_slave_slots[0].gen_si_write.splitter_aw_si                    |axi_crossbar_v2_1_17_splitter                                     |     5|
+|22    |      \gen_slave_slots[0].gen_si_write.wdata_router_w                    |axi_crossbar_v2_1_17_wdata_router                                 |    27|
+|23    |        wrouter_aw_fifo                                                  |axi_data_fifo_v2_1_15_axic_reg_srl_fifo_9                         |    27|
+|24    |      \gen_slave_slots[1].gen_si_read.si_transactor_ar                   |axi_crossbar_v2_1_17_si_transactor__parameterized1                |    46|
+|25    |        \gen_multi_thread.arbiter_resp_inst                              |axi_crossbar_v2_1_17_arbiter_resp_8                               |     7|
+|26    |      \gen_slave_slots[1].gen_si_write.si_transactor_aw                  |axi_crossbar_v2_1_17_si_transactor__parameterized2                |    41|
+|27    |        \gen_multi_thread.arbiter_resp_inst                              |axi_crossbar_v2_1_17_arbiter_resp                                 |     7|
+|28    |      \gen_slave_slots[1].gen_si_write.splitter_aw_si                    |axi_crossbar_v2_1_17_splitter_2                                   |     6|
+|29    |      \gen_slave_slots[1].gen_si_write.wdata_router_w                    |axi_crossbar_v2_1_17_wdata_router_3                               |    27|
+|30    |        wrouter_aw_fifo                                                  |axi_data_fifo_v2_1_15_axic_reg_srl_fifo_7                         |    27|
+|31    |      \gen_slave_slots[2].gen_si_read.si_transactor_ar                   |axi_crossbar_v2_1_17_si_transactor__parameterized3                |    18|
+|32    |      \gen_slave_slots[2].gen_si_write.si_transactor_aw                  |axi_crossbar_v2_1_17_si_transactor__parameterized4                |    14|
+|33    |      \gen_slave_slots[2].gen_si_write.splitter_aw_si                    |axi_crossbar_v2_1_17_splitter_4                                   |     5|
+|34    |      \gen_slave_slots[2].gen_si_write.wdata_router_w                    |axi_crossbar_v2_1_17_wdata_router_5                               |    27|
+|35    |        wrouter_aw_fifo                                                  |axi_data_fifo_v2_1_15_axic_reg_srl_fifo                           |    27|
+|36    |      splitter_aw_mi                                                     |axi_crossbar_v2_1_17_splitter_6                                   |     6|
++------+-------------------------------------------------------------------------+------------------------------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:19 ; elapsed = 00:02:29 . Memory (MB): peak = 2320.395 ; gain = 1048.691 ; free physical = 3341 ; free virtual = 31136
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:15 ; elapsed = 00:02:03 . Memory (MB): peak = 2355.566 ; gain = 1047.895 ; free physical = 10132 ; free virtual = 75566
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 48 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:06 ; elapsed = 00:02:03 . Memory (MB): peak = 2320.395 ; gain = 409.969 ; free physical = 3416 ; free virtual = 31211
-Synthesis Optimization Complete : Time (s): cpu = 00:01:19 ; elapsed = 00:02:29 . Memory (MB): peak = 2320.402 ; gain = 1048.691 ; free physical = 3424 ; free virtual = 31219
+Synthesis finished with 0 errors, 0 critical warnings and 86 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:01 ; elapsed = 00:01:42 . Memory (MB): peak = 2355.566 ; gain = 402.320 ; free physical = 10160 ; free virtual = 75594
+Synthesis Optimization Complete : Time (s): cpu = 00:01:15 ; elapsed = 00:02:03 . Memory (MB): peak = 2355.574 ; gain = 1047.895 ; free physical = 10160 ; free virtual = 75594
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -1683,13 +1841,13 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-259 Infos, 114 Warnings, 0 Critical Warnings and 0 Errors encountered.
+286 Infos, 128 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:23 ; elapsed = 00:02:33 . Memory (MB): peak = 2377.043 ; gain = 1131.188 ; free physical = 3197 ; free virtual = 30990
-INFO: [Common 17-1381] The checkpoint '/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/shell_xbar_0_synth_1/shell_xbar_0.dcp' has been generated.
-INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP /nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_xbar_0/shell_xbar_0.xci
-INFO: [Coretcl 2-1174] Renamed 31 cell refs.
-INFO: [Common 17-1381] The checkpoint '/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/shell_xbar_0_synth_1/shell_xbar_0.dcp' has been generated.
+synth_design: Time (s): cpu = 00:01:20 ; elapsed = 00:02:06 . Memory (MB): peak = 2409.215 ; gain = 1159.234 ; free physical = 11409 ; free virtual = 76843
+INFO: [Common 17-1381] The checkpoint '/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/shell_xbar_0_synth_1/shell_xbar_0.dcp' has been generated.
+INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_xbar_0/shell_xbar_0.xci
+INFO: [Coretcl 2-1174] Renamed 35 cell refs.
+INFO: [Common 17-1381] The checkpoint '/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/shell_xbar_0_synth_1/shell_xbar_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file shell_xbar_0_utilization_synth.rpt -pb shell_xbar_0_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00.76 ; elapsed = 00:00:00.83 . Memory (MB): peak = 2401.055 ; gain = 0.000 ; free physical = 2570 ; free virtual = 30367
-INFO: [Common 17-206] Exiting Vivado at Tue May 15 12:02:07 2018...
+report_utilization: Time (s): cpu = 00:00:00.85 ; elapsed = 00:00:00.92 . Memory (MB): peak = 2433.227 ; gain = 0.000 ; free physical = 11516 ; free virtual = 76950
+INFO: [Common 17-206] Exiting Vivado at Wed May 23 17:44:48 2018...

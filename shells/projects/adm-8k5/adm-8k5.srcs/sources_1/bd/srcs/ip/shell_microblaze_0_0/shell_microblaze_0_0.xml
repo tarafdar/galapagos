@@ -13480,7 +13480,7 @@
             </spirit:parameter>
             <spirit:parameter>
               <spirit:name>workflow</spirit:name>
-              <spirit:value spirit:id="ADDRSPACE_ADDRBLOCKPARAM_VALUE.DATA.LOCAL_MEMORY_MAP.MICROBLAZE_0.workflow">implementation</spirit:value>
+              <spirit:value spirit:id="ADDRSPACE_ADDRBLOCKPARAM_VALUE.DATA.LOCAL_MEMORY_MAP.MICROBLAZE_0.workflow">simulation</spirit:value>
             </spirit:parameter>
             <spirit:parameter>
               <spirit:name>controlpaths</spirit:name>
@@ -13488,11 +13488,11 @@
             </spirit:parameter>
             <spirit:parameter>
               <spirit:name>memorytypename</spirit:name>
-              <spirit:value spirit:id="ADDRSPACE_ADDRBLOCKPARAM_VALUE.DATA.LOCAL_MEMORY_MAP.MICROBLAZE_0.memorytypename"/>
+              <spirit:value spirit:id="ADDRSPACE_ADDRBLOCKPARAM_VALUE.DATA.LOCAL_MEMORY_MAP.MICROBLAZE_0.memorytypename">blk_mem_gen_0_MEM_DEVICE</spirit:value>
             </spirit:parameter>
             <spirit:parameter>
               <spirit:name>simmemfile</spirit:name>
-              <spirit:value spirit:id="ADDRSPACE_ADDRBLOCKPARAM_VALUE.DATA.LOCAL_MEMORY_MAP.MICROBLAZE_0.simmemfile"/>
+              <spirit:value spirit:id="ADDRSPACE_ADDRBLOCKPARAM_VALUE.DATA.LOCAL_MEMORY_MAP.MICROBLAZE_0.simmemfile">shell_blk_mem_gen_0_0.mem</spirit:value>
             </spirit:parameter>
           </spirit:parameters>
         </spirit:addressBlock>
@@ -13530,8 +13530,8 @@
         </spirit:addressBlock>
         <spirit:addressBlock>
           <spirit:name>microblaze_2</spirit:name>
-          <spirit:baseAddress spirit:format="long">0</spirit:baseAddress>
-          <spirit:range spirit:format="long">8192</spirit:range>
+          <spirit:baseAddress spirit:format="long">3221225472</spirit:baseAddress>
+          <spirit:range spirit:format="long">4096</spirit:range>
           <spirit:width spirit:format="long">32</spirit:width>
           <spirit:parameters>
             <spirit:parameter>
@@ -13544,26 +13544,26 @@
             </spirit:parameter>
             <spirit:parameter>
               <spirit:name>workflow</spirit:name>
-              <spirit:value spirit:id="ADDRSPACE_ADDRBLOCKPARAM_VALUE.DATA.LOCAL_MEMORY_MAP.MICROBLAZE_2.workflow">simulation</spirit:value>
+              <spirit:value spirit:id="ADDRSPACE_ADDRBLOCKPARAM_VALUE.DATA.LOCAL_MEMORY_MAP.MICROBLAZE_2.workflow">implementation</spirit:value>
             </spirit:parameter>
             <spirit:parameter>
               <spirit:name>controlpaths</spirit:name>
-              <spirit:value spirit:id="ADDRSPACE_ADDRBLOCKPARAM_VALUE.DATA.LOCAL_MEMORY_MAP.MICROBLAZE_2.controlpaths">mb_system/microblaze_0_local_memory/dlmb_bram_if_cntlr=mb_system/microblaze_0_local_memory/lmb_bram</spirit:value>
+              <spirit:value spirit:id="ADDRSPACE_ADDRBLOCKPARAM_VALUE.DATA.LOCAL_MEMORY_MAP.MICROBLAZE_2.controlpaths">axi_bram_ctrl_0=blk_mem_gen_0</spirit:value>
             </spirit:parameter>
             <spirit:parameter>
               <spirit:name>memorytypename</spirit:name>
-              <spirit:value spirit:id="ADDRSPACE_ADDRBLOCKPARAM_VALUE.DATA.LOCAL_MEMORY_MAP.MICROBLAZE_2.memorytypename">mb_system_microblaze_0_local_memory_lmb_bram_MEM_DEVICE</spirit:value>
+              <spirit:value spirit:id="ADDRSPACE_ADDRBLOCKPARAM_VALUE.DATA.LOCAL_MEMORY_MAP.MICROBLAZE_2.memorytypename"/>
             </spirit:parameter>
             <spirit:parameter>
               <spirit:name>simmemfile</spirit:name>
-              <spirit:value spirit:id="ADDRSPACE_ADDRBLOCKPARAM_VALUE.DATA.LOCAL_MEMORY_MAP.MICROBLAZE_2.simmemfile">shell_lmb_bram_0.mem</spirit:value>
+              <spirit:value spirit:id="ADDRSPACE_ADDRBLOCKPARAM_VALUE.DATA.LOCAL_MEMORY_MAP.MICROBLAZE_2.simmemfile"/>
             </spirit:parameter>
           </spirit:parameters>
         </spirit:addressBlock>
         <spirit:addressBlock>
           <spirit:name>microblaze_3</spirit:name>
-          <spirit:baseAddress spirit:format="long">3221225472</spirit:baseAddress>
-          <spirit:range spirit:format="long">4096</spirit:range>
+          <spirit:baseAddress spirit:format="long">0</spirit:baseAddress>
+          <spirit:range spirit:format="long">8192</spirit:range>
           <spirit:width spirit:format="long">32</spirit:width>
           <spirit:parameters>
             <spirit:parameter>
@@ -13580,15 +13580,15 @@
             </spirit:parameter>
             <spirit:parameter>
               <spirit:name>controlpaths</spirit:name>
-              <spirit:value spirit:id="ADDRSPACE_ADDRBLOCKPARAM_VALUE.DATA.LOCAL_MEMORY_MAP.MICROBLAZE_3.controlpaths">axi_bram_ctrl_0=blk_mem_gen_0</spirit:value>
+              <spirit:value spirit:id="ADDRSPACE_ADDRBLOCKPARAM_VALUE.DATA.LOCAL_MEMORY_MAP.MICROBLAZE_3.controlpaths">mb_system/microblaze_0_local_memory/dlmb_bram_if_cntlr=mb_system/microblaze_0_local_memory/lmb_bram</spirit:value>
             </spirit:parameter>
             <spirit:parameter>
               <spirit:name>memorytypename</spirit:name>
-              <spirit:value spirit:id="ADDRSPACE_ADDRBLOCKPARAM_VALUE.DATA.LOCAL_MEMORY_MAP.MICROBLAZE_3.memorytypename">blk_mem_gen_0_MEM_DEVICE</spirit:value>
+              <spirit:value spirit:id="ADDRSPACE_ADDRBLOCKPARAM_VALUE.DATA.LOCAL_MEMORY_MAP.MICROBLAZE_3.memorytypename">mb_system_microblaze_0_local_memory_lmb_bram_MEM_DEVICE</spirit:value>
             </spirit:parameter>
             <spirit:parameter>
               <spirit:name>simmemfile</spirit:name>
-              <spirit:value spirit:id="ADDRSPACE_ADDRBLOCKPARAM_VALUE.DATA.LOCAL_MEMORY_MAP.MICROBLAZE_3.simmemfile">shell_blk_mem_gen_0_0.mem</spirit:value>
+              <spirit:value spirit:id="ADDRSPACE_ADDRBLOCKPARAM_VALUE.DATA.LOCAL_MEMORY_MAP.MICROBLAZE_3.simmemfile">shell_lmb_bram_0.mem</spirit:value>
             </spirit:parameter>
           </spirit:parameters>
         </spirit:addressBlock>

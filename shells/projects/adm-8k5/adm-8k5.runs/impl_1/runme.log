@@ -14,14 +14,14 @@ INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/graham0/Vivado_Projects
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/graham0/Vivado_Projects/galapagos_wip/shells/shell_ips'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2018.1/data/ip'.
 WARNING: [IP_Flow 19-3664] IP 'bd_01e2_xpcs_0' generated file not found '/home/graham0/Vivado_Projects/galapagos_wip/.Xil/Vivado-19896-ug238/coregen/bd_01e2_xpcs_0_1/elaborate/configure_gt.tcl'. Please regenerate to continue.
-add_files: Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1386.723 ; gain = 183.258 ; free physical = 12735 ; free virtual = 78168
+add_files: Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1386.891 ; gain = 184.422 ; free physical = 13640 ; free virtual = 79074
 Command: link_design -top shellTop -part xcku115-flva1517-2-e
 Design is defaulting to srcset: sources_1
 Design is defaulting to constrset: constrs_1
 INFO: [Project 1-454] Reading design checkpoint '/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/defaultFifo/pr.dcp' for cell 'pr_i'
 INFO: [Project 1-454] Reading design checkpoint '/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_bram_ctrl_0_0/shell_axi_bram_ctrl_0_0.dcp' for cell 'shell_i/axi_bram_ctrl_0'
 INFO: [Project 1-454] Reading design checkpoint '/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_gpio_0_0/shell_axi_gpio_0_0.dcp' for cell 'shell_i/axi_gpio_0'
-INFO: [Project 1-454] Reading design checkpoint '/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_hwicap_0_0/shell_axi_hwicap_0_0.dcp' for cell 'shell_i/axi_hwicap_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_pr_controller_0_0/shell_axi_pr_controller_0_0.dcp' for cell 'shell_i/axi_pr_controller_0'
 INFO: [Project 1-454] Reading design checkpoint '/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_blk_mem_gen_0_0/shell_blk_mem_gen_0_0.dcp' for cell 'shell_i/blk_mem_gen_0'
 INFO: [Project 1-454] Reading design checkpoint '/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_clk_wiz_0_0/shell_clk_wiz_0_0.dcp' for cell 'shell_i/clk_wiz_0'
 INFO: [Project 1-454] Reading design checkpoint '/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_gnd_0/shell_gnd_0.dcp' for cell 'shell_i/gnd'
@@ -57,6 +57,7 @@ INFO: [Project 1-454] Reading design checkpoint '/home/graham0/Vivado_Projects/g
 INFO: [Project 1-454] Reading design checkpoint '/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_cc_6/shell_auto_cc_6.dcp' for cell 'shell_i/mem_interface/mem_interconnect/m00_couplers/auto_cc'
 INFO: [Project 1-454] Reading design checkpoint '/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_us_cc_df_0/shell_auto_us_cc_df_0.dcp' for cell 'shell_i/mem_interface/mem_interconnect/s00_couplers/auto_us_cc_df'
 INFO: [Project 1-454] Reading design checkpoint '/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_s01_data_fifo_0/shell_s01_data_fifo_0.dcp' for cell 'shell_i/mem_interface/mem_interconnect/s01_couplers/s01_data_fifo'
+INFO: [Project 1-454] Reading design checkpoint '/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_us_df_0/shell_auto_us_df_0.dcp' for cell 'shell_i/mem_interface/mem_interconnect/s02_couplers/auto_us_df'
 INFO: [Project 1-454] Reading design checkpoint '/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/shell_axi_10g_ethernet_0_0.dcp' for cell 'shell_i/network/axi_10g_ethernet_0'
 INFO: [Project 1-454] Reading design checkpoint '/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_gnd_1/shell_gnd_1.dcp' for cell 'shell_i/network/gnd'
 INFO: [Project 1-454] Reading design checkpoint '/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_ifg_delay_0/shell_ifg_delay_0.dcp' for cell 'shell_i/network/ifg_delay'
@@ -72,7 +73,7 @@ INFO: [Project 1-454] Reading design checkpoint '/home/graham0/Vivado_Projects/g
 INFO: [Project 1-454] Reading design checkpoint '/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_3/bd_01e2_pma_pmd_type_driver_0.dcp' for cell 'shell_i/network/axi_10g_ethernet_0/inst/pma_pmd_type_driver'
 INFO: [Project 1-454] Reading design checkpoint '/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_0/bd_01e2_xmac_0.dcp' for cell 'shell_i/network/axi_10g_ethernet_0/inst/xmac'
 INFO: [Project 1-454] Reading design checkpoint '/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/bd_01e2_xpcs_0.dcp' for cell 'shell_i/network/axi_10g_ethernet_0/inst/xpcs'
-INFO: [Netlist 29-17] Analyzing 4258 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 4542 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2018.1
 INFO: [Device 21-403] Loading part xcku115-flva1517-2-e
@@ -84,10 +85,8 @@ Finished Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/pr
 Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_clk_wiz_0_0/shell_clk_wiz_0_0.xdc] for cell 'shell_i/clk_wiz_0/inst'
 INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_clk_wiz_0_0/shell_clk_wiz_0_0.xdc:57]
 INFO: [Timing 38-2] Deriving generated clocks [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_clk_wiz_0_0/shell_clk_wiz_0_0.xdc:57]
-get_clocks: Time (s): cpu = 00:00:22 ; elapsed = 00:00:15 . Memory (MB): peak = 3178.262 ; gain = 549.211 ; free physical = 11110 ; free virtual = 76544
+get_clocks: Time (s): cpu = 00:00:23 ; elapsed = 00:00:15 . Memory (MB): peak = 3234.727 ; gain = 561.312 ; free physical = 11929 ; free virtual = 77363
 Finished Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_clk_wiz_0_0/shell_clk_wiz_0_0.xdc] for cell 'shell_i/clk_wiz_0/inst'
-Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_hwicap_0_0/shell_axi_hwicap_0_0.xdc] for cell 'shell_i/axi_hwicap_0/U0'
-Finished Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_hwicap_0_0/shell_axi_hwicap_0_0.xdc] for cell 'shell_i/axi_hwicap_0/U0'
 Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_pr_decoupler_0_0/shell_pr_decoupler_0_0.xdc] for cell 'shell_i/pr_decoupler_0/U0'
 Finished Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_pr_decoupler_0_0/shell_pr_decoupler_0_0.xdc] for cell 'shell_i/pr_decoupler_0/U0'
 Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_gpio_0_0/shell_axi_gpio_0_0_board.xdc] for cell 'shell_i/axi_gpio_0/U0'
@@ -149,12 +148,16 @@ Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/ad
 Finished Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/ip_0/synth/bd_01e2_xpcs_0_gt.xdc] for cell 'shell_i/network/axi_10g_ethernet_0/inst/xpcs/inst/ten_gig_eth_pcs_pma_block_i/bd_01e2_xpcs_0_gt_i/inst'
 Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/synth/bd_01e2_xpcs_0.xdc] for cell 'shell_i/network/axi_10g_ethernet_0/inst/xpcs/inst'
 INFO: [Timing 38-2] Deriving generated clocks [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/synth/bd_01e2_xpcs_0.xdc:55]
-all_fanin: Time (s): cpu = 00:00:13 ; elapsed = 00:00:05 . Memory (MB): peak = 3216.262 ; gain = 31.000 ; free physical = 11076 ; free virtual = 76509
+all_fanin: Time (s): cpu = 00:00:14 ; elapsed = 00:00:06 . Memory (MB): peak = 3272.727 ; gain = 30.000 ; free physical = 11895 ; free virtual = 77328
 Finished Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/synth/bd_01e2_xpcs_0.xdc] for cell 'shell_i/network/axi_10g_ethernet_0/inst/xpcs/inst'
 Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_rx_data_fifo_1_0/shell_rx_data_fifo_1_0/shell_rx_data_fifo_1_0.xdc] for cell 'shell_i/network/rx_data_fifo_1/inst'
 Finished Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_rx_data_fifo_1_0/shell_rx_data_fifo_1_0/shell_rx_data_fifo_1_0.xdc] for cell 'shell_i/network/rx_data_fifo_1/inst'
 Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_tx_data_fifo_0_0/shell_tx_data_fifo_0_0/shell_tx_data_fifo_0_0.xdc] for cell 'shell_i/network/tx_data_fifo_0/inst'
 Finished Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_tx_data_fifo_0_0/shell_tx_data_fifo_0_0/shell_tx_data_fifo_0_0.xdc] for cell 'shell_i/network/tx_data_fifo_0/inst'
+Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_pr_controller_0_0/src/axis_data_fifo_0.xdc] for cell 'shell_i/axi_pr_controller_0/inst'
+Finished Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_pr_controller_0_0/src/axis_data_fifo_0.xdc] for cell 'shell_i/axi_pr_controller_0/inst'
+Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_pr_controller_0_0/src/axi_datamover_0.xdc] for cell 'shell_i/axi_pr_controller_0/inst'
+Finished Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_pr_controller_0_0/src/axi_datamover_0.xdc] for cell 'shell_i/axi_pr_controller_0/inst'
 Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/defaultFifo/ip/pr_axis_data_fifo_0_0/pr_axis_data_fifo_0_0/pr_axis_data_fifo_0_0.xdc] for cell 'pr_i/axis_data_fifo_0/inst'
 Finished Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/defaultFifo/ip/pr_axis_data_fifo_0_0/pr_axis_data_fifo_0_0/pr_axis_data_fifo_0_0.xdc] for cell 'pr_i/axis_data_fifo_0/inst'
 Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/constrs_1/imports/constraints/ad_8k5.xdc]
@@ -516,11 +519,12 @@ Finished Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/pr
 Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/constrs_1/imports/constraints/refclk200.xdc]
 WARNING: [Constraints 18-619] A clock with name 'refclk200' already exists, overwriting the previous clock with the same name. [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/constrs_1/imports/constraints/refclk200.xdc:7]
 Finished Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/constrs_1/imports/constraints/refclk200.xdc]
-INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp '/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_hwicap_0_0/shell_axi_hwicap_0_0.dcp'
 INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp '/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_xdma_0_0/shell_xdma_0_0.dcp'
 INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp '/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_rx_data_fifo_1_0/shell_rx_data_fifo_1_0.dcp'
 INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp '/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_tx_data_fifo_0_0/shell_tx_data_fifo_0_0.dcp'
+INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp '/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_pr_controller_0_0/shell_axi_pr_controller_0_0.dcp'
 INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp '/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_cc_6/shell_auto_cc_6.dcp'
+INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp '/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_us_df_0/shell_auto_us_df_0.dcp'
 INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp '/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_s01_data_fifo_0/shell_s01_data_fifo_0.dcp'
 INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp '/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_us_cc_df_0/shell_auto_us_cc_df_0.dcp'
 INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp '/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_cc_4/shell_auto_cc_4.dcp'
@@ -530,16 +534,18 @@ INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC const
 INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp '/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_cc_0/shell_auto_cc_0.dcp'
 INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp '/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_cc_5/shell_auto_cc_5.dcp'
 INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp '/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/defaultFifo/pr.dcp'
-Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_hwicap_0_0/shell_axi_hwicap_0_0_clocks.xdc] for cell 'shell_i/axi_hwicap_0/U0'
-Finished Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_hwicap_0_0/shell_axi_hwicap_0_0_clocks.xdc] for cell 'shell_i/axi_hwicap_0/U0'
 Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_tx_register_slice_0_0/shell_tx_register_slice_0_0_clocks.xdc] for cell 'shell_i/network/tx_register_slice_0/inst'
 Finished Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_tx_register_slice_0_0/shell_tx_register_slice_0_0_clocks.xdc] for cell 'shell_i/network/tx_register_slice_0/inst'
 Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/synth/bd_01e2_xpcs_0_clocks.xdc] for cell 'shell_i/network/axi_10g_ethernet_0/inst/xpcs/inst'
 Finished Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_10g_ethernet_0_0/bd_0/ip/ip_1/synth/bd_01e2_xpcs_0_clocks.xdc] for cell 'shell_i/network/axi_10g_ethernet_0/inst/xpcs/inst'
 Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_rx_register_slice_1_0/shell_rx_register_slice_1_0_clocks.xdc] for cell 'shell_i/network/rx_register_slice_1/inst'
 Finished Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_rx_register_slice_1_0/shell_rx_register_slice_1_0_clocks.xdc] for cell 'shell_i/network/rx_register_slice_1/inst'
+Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_pr_controller_0_0/src/axi_datamover_0_clocks.xdc] for cell 'shell_i/axi_pr_controller_0/inst'
+Finished Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_pr_controller_0_0/src/axi_datamover_0_clocks.xdc] for cell 'shell_i/axi_pr_controller_0/inst'
 Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_cc_6/shell_auto_cc_6_clocks.xdc] for cell 'shell_i/mem_interface/mem_interconnect/m00_couplers/auto_cc/inst'
 Finished Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_cc_6/shell_auto_cc_6_clocks.xdc] for cell 'shell_i/mem_interface/mem_interconnect/m00_couplers/auto_cc/inst'
+Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_us_df_0/shell_auto_us_df_0_clocks.xdc] for cell 'shell_i/mem_interface/mem_interconnect/s02_couplers/auto_us_df/inst'
+Finished Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_us_df_0/shell_auto_us_df_0_clocks.xdc] for cell 'shell_i/mem_interface/mem_interconnect/s02_couplers/auto_us_df/inst'
 Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_us_cc_df_0/shell_auto_us_cc_df_0_clocks.xdc] for cell 'shell_i/mem_interface/mem_interconnect/s00_couplers/auto_us_cc_df/inst'
 Finished Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_us_cc_df_0/shell_auto_us_cc_df_0_clocks.xdc] for cell 'shell_i/mem_interface/mem_interconnect/s00_couplers/auto_us_cc_df/inst'
 Parsing XDC File [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_cc_4/shell_auto_cc_4_clocks.xdc] for cell 'shell_i/axi_interconnect_0/m04_couplers/auto_cc/inst'
@@ -596,6 +602,10 @@ Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_asy
 Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'shell_i/mem_interface/mem_interconnect/s00_couplers/auto_us_cc_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.gen_b_clk_conv.gen_b_async_conv.dw_fifogen_b_async/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwrch2.axi_wrch/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
 Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'shell_i/mem_interface/mem_interconnect/s00_couplers/auto_us_cc_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.gen_b_clk_conv.gen_b_async_conv.dw_fifogen_b_async/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwrch2.axi_wrch/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.rst_rd_reg2_inst'
 Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'shell_i/mem_interface/mem_interconnect/s00_couplers/auto_us_cc_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.gen_b_clk_conv.gen_b_async_conv.dw_fifogen_b_async/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwrch2.axi_wrch/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.rst_rd_reg2_inst'
+Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'shell_i/mem_interface/mem_interconnect/s02_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/dw_fifogen_ar/inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'shell_i/mem_interface/mem_interconnect/s02_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/dw_fifogen_ar/inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'shell_i/mem_interface/mem_interconnect/s02_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.gen_pktfifo_w_upsizer.pktfifo_write_data_inst/dw_fifogen_aw/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'shell_i/mem_interface/mem_interconnect/s02_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.gen_pktfifo_w_upsizer.pktfifo_write_data_inst/dw_fifogen_aw/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
 Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'shell_i/network/rx_data_fifo_1/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/reset_gen_cc.rstblk_cc/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
 Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'shell_i/network/rx_data_fifo_1/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/reset_gen_cc.rstblk_cc/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
 Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'shell_i/mem_interface/mem_interconnect/s01_couplers/s01_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.gaxi_arvld.rach_pkt_reg_slice/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
@@ -654,22 +664,6 @@ Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gra
 Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'shell_i/mem_interface/mem_interconnect/s00_couplers/auto_us_cc_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/dw_fifogen_rresp/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
 Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'shell_i/mem_interface/mem_interconnect/s00_couplers/auto_us_cc_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/dw_fifogen_rresp/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
 Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'shell_i/mem_interface/mem_interconnect/s00_couplers/auto_us_cc_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/dw_fifogen_rresp/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
-Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'shell_i/axi_hwicap_0/U0/ICAP_NOT_SHARED.HWICAP_CTRL_I/IPIC_IF_I/WRFIFO.WRDATA_FIFO_I/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst'
-Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'shell_i/axi_hwicap_0/U0/ICAP_NOT_SHARED.HWICAP_CTRL_I/IPIC_IF_I/WRFIFO.WRDATA_FIFO_I/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst'
-Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'shell_i/axi_hwicap_0/U0/ICAP_NOT_SHARED.HWICAP_CTRL_I/IPIC_IF_I/WRFIFO.WRDATA_FIFO_I/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst'
-Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'shell_i/axi_hwicap_0/U0/ICAP_NOT_SHARED.HWICAP_CTRL_I/IPIC_IF_I/WRFIFO.WRDATA_FIFO_I/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst'
-Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'shell_i/axi_hwicap_0/U0/ICAP_NOT_SHARED.HWICAP_CTRL_I/IPIC_IF_I/RD_FIFO.RDDATA_FIFO_I/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst'
-Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'shell_i/axi_hwicap_0/U0/ICAP_NOT_SHARED.HWICAP_CTRL_I/IPIC_IF_I/RD_FIFO.RDDATA_FIFO_I/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst'
-Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'shell_i/axi_hwicap_0/U0/ICAP_NOT_SHARED.HWICAP_CTRL_I/IPIC_IF_I/WRFIFO.WRDATA_FIFO_I/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst'
-Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'shell_i/axi_hwicap_0/U0/ICAP_NOT_SHARED.HWICAP_CTRL_I/IPIC_IF_I/WRFIFO.WRDATA_FIFO_I/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst'
-Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'shell_i/axi_hwicap_0/U0/ICAP_NOT_SHARED.HWICAP_CTRL_I/IPIC_IF_I/WRFIFO.WRDATA_FIFO_I/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst'
-Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'shell_i/axi_hwicap_0/U0/ICAP_NOT_SHARED.HWICAP_CTRL_I/IPIC_IF_I/WRFIFO.WRDATA_FIFO_I/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst'
-Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'shell_i/axi_hwicap_0/U0/ICAP_NOT_SHARED.HWICAP_CTRL_I/IPIC_IF_I/RD_FIFO.RDDATA_FIFO_I/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst'
-Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'shell_i/axi_hwicap_0/U0/ICAP_NOT_SHARED.HWICAP_CTRL_I/IPIC_IF_I/RD_FIFO.RDDATA_FIFO_I/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst'
-Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'shell_i/axi_hwicap_0/U0/ICAP_NOT_SHARED.HWICAP_CTRL_I/IPIC_IF_I/RD_FIFO.RDDATA_FIFO_I/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst'
-Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'shell_i/axi_hwicap_0/U0/ICAP_NOT_SHARED.HWICAP_CTRL_I/IPIC_IF_I/RD_FIFO.RDDATA_FIFO_I/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst'
-Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'shell_i/axi_hwicap_0/U0/ICAP_NOT_SHARED.HWICAP_CTRL_I/IPIC_IF_I/RD_FIFO.RDDATA_FIFO_I/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst'
-Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'shell_i/axi_hwicap_0/U0/ICAP_NOT_SHARED.HWICAP_CTRL_I/IPIC_IF_I/RD_FIFO.RDDATA_FIFO_I/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst'
 Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'shell_i/axi_interconnect_0/m00_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake'
 Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'shell_i/axi_interconnect_0/m00_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake'
 Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl] for cell 'shell_i/axi_interconnect_0/m00_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake'
@@ -894,14 +888,8 @@ Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sin
 Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'shell_i/PCIe/xdma_0/inst/udma_wrapper/dma_top/base/IRQ_INST/usr_irq_xpm_cdc'
 Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'pr_i/axis_data_fifo_0/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.xpm_cdc_sync_rst_inst_wrst'
 Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'pr_i/axis_data_fifo_0/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.xpm_cdc_sync_rst_inst_wrst'
-Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'shell_i/axi_hwicap_0/U0/ICAP_NOT_SHARED.HWICAP_CTRL_I/IPIC_IF_I/RD_FIFO.RDDATA_FIFO_I/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.rrst_wr_inst'
-Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'shell_i/axi_hwicap_0/U0/ICAP_NOT_SHARED.HWICAP_CTRL_I/IPIC_IF_I/RD_FIFO.RDDATA_FIFO_I/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.rrst_wr_inst'
-Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'shell_i/axi_hwicap_0/U0/ICAP_NOT_SHARED.HWICAP_CTRL_I/IPIC_IF_I/WRFIFO.WRDATA_FIFO_I/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.wrst_rd_inst'
-Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'shell_i/axi_hwicap_0/U0/ICAP_NOT_SHARED.HWICAP_CTRL_I/IPIC_IF_I/WRFIFO.WRDATA_FIFO_I/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.wrst_rd_inst'
-Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'shell_i/axi_hwicap_0/U0/ICAP_NOT_SHARED.HWICAP_CTRL_I/IPIC_IF_I/WRFIFO.WRDATA_FIFO_I/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.rrst_wr_inst'
-Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'shell_i/axi_hwicap_0/U0/ICAP_NOT_SHARED.HWICAP_CTRL_I/IPIC_IF_I/WRFIFO.WRDATA_FIFO_I/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.rrst_wr_inst'
-Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'shell_i/axi_hwicap_0/U0/ICAP_NOT_SHARED.HWICAP_CTRL_I/IPIC_IF_I/RD_FIFO.RDDATA_FIFO_I/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.wrst_rd_inst'
-Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'shell_i/axi_hwicap_0/U0/ICAP_NOT_SHARED.HWICAP_CTRL_I/IPIC_IF_I/RD_FIFO.RDDATA_FIFO_I/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.wrst_rd_inst'
+Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'shell_i/axi_pr_controller_0/inst/pr_rw_inst/icap_controler_inst/axis_fifo_inst/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.xpm_cdc_sync_rst_inst_wrst'
+Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'shell_i/axi_pr_controller_0/inst/pr_rw_inst/icap_controler_inst/axis_fifo_inst/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.xpm_cdc_sync_rst_inst_wrst'
 Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'shell_i/network/rx_data_fifo_1/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.xpm_cdc_sync_rst_inst_wrst'
 Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'shell_i/network/rx_data_fifo_1/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.xpm_cdc_sync_rst_inst_wrst'
 Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'shell_i/mem_interface/mem_interconnect/s01_couplers/s01_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.xpm_cdc_sync_rst_inst_wrst'
@@ -910,17 +898,19 @@ Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_syn
 Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'shell_i/mem_interface/mem_interconnect/s01_couplers/s01_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.xpm_cdc_sync_rst_inst_wrst'
 Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'shell_i/network/tx_data_fifo_0/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.xpm_cdc_sync_rst_inst_wrst'
 Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'shell_i/network/tx_data_fifo_0/inst/gen_fifo_generator.fifo_generator_inst/inst_fifo_gen/gaxis_fifo.gaxisf.axisf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.xpm_cdc_sync_rst_inst_wrst'
-Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl] for cell 'shell_i/axi_hwicap_0/U0/ICAP_NOT_SHARED.HWICAP_CTRL_I/IPIC_IF_I/WRFIFO.WRDATA_FIFO_I/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst'
-Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl] for cell 'shell_i/axi_hwicap_0/U0/ICAP_NOT_SHARED.HWICAP_CTRL_I/IPIC_IF_I/WRFIFO.WRDATA_FIFO_I/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst'
-Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl] for cell 'shell_i/axi_hwicap_0/U0/ICAP_NOT_SHARED.HWICAP_CTRL_I/IPIC_IF_I/RD_FIFO.RDDATA_FIFO_I/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst'
-Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl] for cell 'shell_i/axi_hwicap_0/U0/ICAP_NOT_SHARED.HWICAP_CTRL_I/IPIC_IF_I/RD_FIFO.RDDATA_FIFO_I/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst'
+Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl] for cell 'shell_i/axi_pr_controller_0/inst/datamover_inst/U0/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst'
+Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl] for cell 'shell_i/axi_pr_controller_0/inst/datamover_inst/U0/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst'
+Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl] for cell 'shell_i/axi_pr_controller_0/inst/datamover_inst/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_INCLUDE_GP_SF.I_S2MM_GP_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst'
+Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl] for cell 'shell_i/axi_pr_controller_0/inst/datamover_inst/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_INCLUDE_GP_SF.I_S2MM_GP_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst'
+Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl] for cell 'shell_i/axi_pr_controller_0/inst/axi_intf_inst/fifo_inst/xpm_fifo_sync_inst/xpm_fifo_base_inst'
+Finished Sourcing Tcl File [/opt/Xilinx/Vivado/2018.1/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl] for cell 'shell_i/axi_pr_controller_0/inst/axi_intf_inst/fifo_inst/xpm_fifo_sync_inst/xpm_fifo_base_inst'
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell shell_i/mb_system/microblaze_0_local_memory/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
 INFO: [Opt 31-422] The CLOCK_DOMAINS attribute on the BRAM cell shell_i/mb_system/microblaze_0_local_memory/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has been changed from INDEPENDENT to COMMON to match the clocking topology used for the BRAM.
 Generating merged BMM file for the design top 'shellTop'...
 INFO: [Memdata 28-144] Successfully populated the BRAM INIT strings from the following elf files: /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_ddr4_0_0/sw/calibration_0/Debug/calibration_ddr.elf /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_microblaze_0_0/data/mb_bootloop_le.elf 
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 1238 instances were transformed.
+  A total of 1262 instances were transformed.
   DSP48E1 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD_DATA, DSP_PREADD): 8 instances
   DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD_DATA, DSP_PREADD): 39 instances
   IBUF => IBUF (IBUFCTRL, INBUF): 1 instances
@@ -933,14 +923,14 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM16X1D => RAM32X1D (RAMD32, RAMD32): 68 instances
   RAM16X1S => RAM32X1S (RAMS32): 13 instances
   RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 220 instances
-  RAM32M16 => RAM32M16 (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 606 instances
+  RAM32M16 => RAM32M16 (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 622 instances
   RAM32X1D => RAM32X1D (RAMD32, RAMD32): 40 instances
-  RAM64M8 => RAM64M8 (RAMD64E, RAMD64E, RAMD64E, RAMD64E, RAMD64E, RAMD64E, RAMD64E, RAMD64E): 8 instances
+  RAM64M8 => RAM64M8 (RAMD64E, RAMD64E, RAMD64E, RAMD64E, RAMD64E, RAMD64E, RAMD64E, RAMD64E): 16 instances
   RAM64X1S => RAM64X1S (RAMS64E): 9 instances
 
-88 Infos, 116 Warnings, 111 Critical Warnings and 0 Errors encountered.
+90 Infos, 116 Warnings, 111 Critical Warnings and 0 Errors encountered.
 link_design completed successfully
-link_design: Time (s): cpu = 00:01:57 ; elapsed = 00:01:39 . Memory (MB): peak = 3752.504 ; gain = 2365.781 ; free physical = 11239 ; free virtual = 76672
+link_design: Time (s): cpu = 00:02:04 ; elapsed = 00:01:45 . Memory (MB): peak = 3809.973 ; gain = 2423.082 ; free physical = 12083 ; free virtual = 77517
 Command: opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xcku115'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xcku115'
@@ -951,85 +941,85 @@ INFO: [DRC 23-27] Running DRC with 8 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 3752.504 ; gain = 0.000 ; free physical = 11233 ; free virtual = 76666
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 3809.973 ; gain = 0.000 ; free physical = 12075 ; free virtual = 77509
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Starting Logic Optimization Task
 
 Phase 1 Generate And Synthesize MIG Cores
 INFO: [Mig 66-111] Re-using generated and synthesized IP, "xilinx.com:ip:ddr4_phy:2.2", from Vivado IP cache entry "b25667bd0ffac183".
-get_clocks: Time (s): cpu = 00:00:17 ; elapsed = 00:00:06 . Memory (MB): peak = 3752.504 ; gain = 0.000 ; free physical = 10992 ; free virtual = 76425
-all_fanin: Time (s): cpu = 00:00:13 ; elapsed = 00:00:06 . Memory (MB): peak = 3752.504 ; gain = 0.000 ; free physical = 10974 ; free virtual = 76407
-read_xdc: Time (s): cpu = 00:00:46 ; elapsed = 00:00:21 . Memory (MB): peak = 3752.504 ; gain = 0.000 ; free physical = 10948 ; free virtual = 76382
-Netlist sorting complete. Time (s): cpu = 00:00:00.38 ; elapsed = 00:00:00.38 . Memory (MB): peak = 3752.504 ; gain = 0.000 ; free physical = 10943 ; free virtual = 76376
-Phase 1 Generate And Synthesize MIG Cores | Checksum: 1c481b3db
+get_clocks: Time (s): cpu = 00:00:18 ; elapsed = 00:00:06 . Memory (MB): peak = 3809.973 ; gain = 0.000 ; free physical = 11814 ; free virtual = 77248
+all_fanin: Time (s): cpu = 00:00:14 ; elapsed = 00:00:06 . Memory (MB): peak = 3809.973 ; gain = 0.000 ; free physical = 11793 ; free virtual = 77227
+read_xdc: Time (s): cpu = 00:00:47 ; elapsed = 00:00:21 . Memory (MB): peak = 3809.973 ; gain = 0.000 ; free physical = 11762 ; free virtual = 77196
+Netlist sorting complete. Time (s): cpu = 00:00:00.39 ; elapsed = 00:00:00.40 . Memory (MB): peak = 3809.973 ; gain = 0.000 ; free physical = 11758 ; free virtual = 77192
+Phase 1 Generate And Synthesize MIG Cores | Checksum: 1d75cd204
 
-Time (s): cpu = 00:01:13 ; elapsed = 00:00:48 . Memory (MB): peak = 3752.504 ; gain = 0.000 ; free physical = 10942 ; free virtual = 76376
+Time (s): cpu = 00:01:14 ; elapsed = 00:00:48 . Memory (MB): peak = 3809.973 ; gain = 0.000 ; free physical = 11758 ; free virtual = 77192
 
 Phase 2 Generate And Synthesize Debug Cores
 INFO: [Chipscope 16-329] Generating Script for core instance : dbg_hub 
 INFO: [IP_Flow 19-3806] Processing IP xilinx.com:ip:xsdbm:3.0 for cell dbg_hub_CV.
 INFO: [Chipscope 16-220] Re-using generated and synthesized IP, "xilinx.com:ip:xsdbm:3.0", from Vivado IP cache entry "7457572e6a5d49ee".
-get_clocks: Time (s): cpu = 00:00:21 ; elapsed = 00:00:08 . Memory (MB): peak = 3752.504 ; gain = 0.000 ; free physical = 10927 ; free virtual = 76360
-Netlist sorting complete. Time (s): cpu = 00:00:00.47 ; elapsed = 00:00:00.48 . Memory (MB): peak = 3752.504 ; gain = 0.000 ; free physical = 10927 ; free virtual = 76360
-Phase 2 Generate And Synthesize Debug Cores | Checksum: 18460eff9
+get_clocks: Time (s): cpu = 00:00:23 ; elapsed = 00:00:08 . Memory (MB): peak = 3809.973 ; gain = 0.000 ; free physical = 11707 ; free virtual = 77141
+Netlist sorting complete. Time (s): cpu = 00:00:00.49 ; elapsed = 00:00:00.52 . Memory (MB): peak = 3809.973 ; gain = 0.000 ; free physical = 11707 ; free virtual = 77140
+Phase 2 Generate And Synthesize Debug Cores | Checksum: 18037bfb6
 
-Time (s): cpu = 00:01:59 ; elapsed = 00:01:29 . Memory (MB): peak = 3752.504 ; gain = 0.000 ; free physical = 10926 ; free virtual = 76360
+Time (s): cpu = 00:02:01 ; elapsed = 00:01:29 . Memory (MB): peak = 3809.973 ; gain = 0.000 ; free physical = 11706 ; free virtual = 77140
 
 Phase 3 Retarget
-INFO: [Opt 31-138] Pushed 81 inverter(s) to 11875 load pin(s).
+INFO: [Opt 31-138] Pushed 90 inverter(s) to 13248 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 3 Retarget | Checksum: 1fe4e619a
+Phase 3 Retarget | Checksum: 15d8225ff
 
-Time (s): cpu = 00:02:24 ; elapsed = 00:01:46 . Memory (MB): peak = 3752.504 ; gain = 0.000 ; free physical = 11078 ; free virtual = 76511
+Time (s): cpu = 00:02:28 ; elapsed = 00:01:46 . Memory (MB): peak = 3809.973 ; gain = 0.000 ; free physical = 11887 ; free virtual = 77320
 INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
 
 Phase 4 Constant propagation
-INFO: [Opt 31-138] Pushed 38 inverter(s) to 67 load pin(s).
-Phase 4 Constant propagation | Checksum: 1bc214487
+INFO: [Opt 31-138] Pushed 45 inverter(s) to 78 load pin(s).
+Phase 4 Constant propagation | Checksum: 12d68386b
 
-Time (s): cpu = 00:02:30 ; elapsed = 00:01:52 . Memory (MB): peak = 3752.504 ; gain = 0.000 ; free physical = 11089 ; free virtual = 76522
-INFO: [Opt 31-389] Phase Constant propagation created 2118 cells and removed 5064 cells
+Time (s): cpu = 00:02:34 ; elapsed = 00:01:53 . Memory (MB): peak = 3809.973 ; gain = 0.000 ; free physical = 11886 ; free virtual = 77320
+INFO: [Opt 31-389] Phase Constant propagation created 2221 cells and removed 5464 cells
 
 Phase 5 Sweep
 INFO: [Opt 31-120] Instance shell_i/network/axi_10g_ethernet_0/inst/xpcs/inst/ten_gig_eth_pcs_pma_block_i/gt0_rxresetdone_reg_sync_i (bd_01e2_xpcs_0_bd_01e2_xpcs_0_ff_synchronizer_7) has been optimized to an empty box cell during sweep but it has constraints that prevent its removal. Empty box cells do not impact the implementation flow but they have no functional relevance.
 Resolution: If this is not expected, please check for DONT_TOUCH properties or timing constraint set on the empty box cell or on nets connected to the cell. If found, remove the relevant DONT_TOUCH property or timing constraint and re-run opt_design.
-Phase 5 Sweep | Checksum: 12cff8e8f
+Phase 5 Sweep | Checksum: 15a56c549
 
-Time (s): cpu = 00:02:48 ; elapsed = 00:02:10 . Memory (MB): peak = 3752.504 ; gain = 0.000 ; free physical = 11090 ; free virtual = 76523
-INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 5647 cells
+Time (s): cpu = 00:02:57 ; elapsed = 00:02:16 . Memory (MB): peak = 3809.973 ; gain = 0.000 ; free physical = 11890 ; free virtual = 77324
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 9009 cells
 
 Phase 6 BUFG optimization
-Phase 6 BUFG optimization | Checksum: 1c4ae3970
+Phase 6 BUFG optimization | Checksum: 12e291ee3
 
-Time (s): cpu = 00:02:54 ; elapsed = 00:02:16 . Memory (MB): peak = 3752.504 ; gain = 0.000 ; free physical = 11092 ; free virtual = 76526
+Time (s): cpu = 00:03:03 ; elapsed = 00:02:22 . Memory (MB): peak = 3809.973 ; gain = 0.000 ; free physical = 11892 ; free virtual = 77326
 INFO: [Opt 31-389] Phase BUFG optimization created 1 cells and removed 2 cells
 
 Phase 7 Shift Register Optimization
-Phase 7 Shift Register Optimization | Checksum: 1c4ae3970
+Phase 7 Shift Register Optimization | Checksum: 12e291ee3
 
-Time (s): cpu = 00:03:03 ; elapsed = 00:02:24 . Memory (MB): peak = 3752.504 ; gain = 0.000 ; free physical = 11089 ; free virtual = 76522
+Time (s): cpu = 00:03:12 ; elapsed = 00:02:31 . Memory (MB): peak = 3809.973 ; gain = 0.000 ; free physical = 11891 ; free virtual = 77325
 INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
 
 Phase 8 Post Processing Netlist
-Phase 8 Post Processing Netlist | Checksum: 14e1151ed
+Phase 8 Post Processing Netlist | Checksum: 181b7b817
 
-Time (s): cpu = 00:03:06 ; elapsed = 00:02:28 . Memory (MB): peak = 3752.504 ; gain = 0.000 ; free physical = 11090 ; free virtual = 76523
+Time (s): cpu = 00:03:16 ; elapsed = 00:02:34 . Memory (MB): peak = 3809.973 ; gain = 0.000 ; free physical = 11892 ; free virtual = 77325
 INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 6 cells
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:00.51 ; elapsed = 00:00:00.51 . Memory (MB): peak = 3752.504 ; gain = 0.000 ; free physical = 11090 ; free virtual = 76523
-Ending Logic Optimization Task | Checksum: 14e1151ed
+Time (s): cpu = 00:00:00.53 ; elapsed = 00:00:00.53 . Memory (MB): peak = 3809.973 ; gain = 0.000 ; free physical = 11892 ; free virtual = 77325
+Ending Logic Optimization Task | Checksum: 181b7b817
 
-Time (s): cpu = 00:03:08 ; elapsed = 00:02:29 . Memory (MB): peak = 3752.504 ; gain = 0.000 ; free physical = 11088 ; free virtual = 76521
+Time (s): cpu = 00:03:18 ; elapsed = 00:02:36 . Memory (MB): peak = 3809.973 ; gain = 0.000 ; free physical = 11892 ; free virtual = 77326
 
 Starting Power Optimization Task
 INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [Pwropt 34-9] Applying IDT optimizations ...
 INFO: [Pwropt 34-10] Applying ODC optimizations ...
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.392 | TNS=-911.361 |
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.394 | TNS=-946.859 |
 INFO: [Power 33-23] Power model is not available for xiphy_riu_or
 INFO: [Power 33-23] Power model is not available for genVref.u_hpio_vref
 Running Vector-less Activity Propagation...
@@ -1038,35 +1028,35 @@ Finished Running Vector-less Activity Propagation
 
 
 Starting PowerOpt Patch Enables Task
-INFO: [Pwropt 34-162] WRITE_MODE attribute of 34 BRAM(s) out of a total of 158 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 39 BRAM(s) out of a total of 198 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-INFO: [Pwropt 34-201] Structural ODC has moved 17 WE to EN ports
-Number of BRAM Ports augmented: 19 newly gated: 115 Total Ports: 316
-Ending PowerOpt Patch Enables Task | Checksum: f20b8104
+INFO: [Pwropt 34-201] Structural ODC has moved 22 WE to EN ports
+Number of BRAM Ports augmented: 36 newly gated: 120 Total Ports: 396
+Ending PowerOpt Patch Enables Task | Checksum: 115946cce
 
-Time (s): cpu = 00:00:23 ; elapsed = 00:00:10 . Memory (MB): peak = 5545.945 ; gain = 0.000 ; free physical = 10340 ; free virtual = 75773
-Ending Power Optimization Task | Checksum: f20b8104
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:10 . Memory (MB): peak = 5684.934 ; gain = 0.000 ; free physical = 11152 ; free virtual = 76586
+Ending Power Optimization Task | Checksum: 115946cce
 
-Time (s): cpu = 00:03:29 ; elapsed = 00:01:55 . Memory (MB): peak = 5545.945 ; gain = 1793.441 ; free physical = 10471 ; free virtual = 75904
+Time (s): cpu = 00:03:36 ; elapsed = 00:01:55 . Memory (MB): peak = 5684.934 ; gain = 1874.961 ; free physical = 11295 ; free virtual = 76729
 INFO: [Common 17-83] Releasing license: Implementation
-129 Infos, 121 Warnings, 111 Critical Warnings and 0 Errors encountered.
+131 Infos, 121 Warnings, 111 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-opt_design: Time (s): cpu = 00:07:12 ; elapsed = 00:04:42 . Memory (MB): peak = 5545.945 ; gain = 1793.441 ; free physical = 10471 ; free virtual = 75904
+opt_design: Time (s): cpu = 00:07:31 ; elapsed = 00:04:51 . Memory (MB): peak = 5684.934 ; gain = 1874.961 ; free physical = 11295 ; free virtual = 76729
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.27 . Memory (MB): peak = 5545.945 ; gain = 0.000 ; free physical = 10435 ; free virtual = 75868
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.25 . Memory (MB): peak = 5684.934 ; gain = 0.000 ; free physical = 11259 ; free virtual = 76693
 INFO: [Common 17-1381] The checkpoint '/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/impl_1/shellTop_opt.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:01:12 ; elapsed = 00:01:05 . Memory (MB): peak = 5545.945 ; gain = 0.000 ; free physical = 10415 ; free virtual = 75848
+write_checkpoint: Time (s): cpu = 00:01:18 ; elapsed = 00:01:08 . Memory (MB): peak = 5684.934 ; gain = 0.000 ; free physical = 11231 ; free virtual = 76665
 INFO: [runtcl-4] Executing : report_drc -file shellTop_drc_opted.rpt -pb shellTop_drc_opted.pb -rpx shellTop_drc_opted.rpx
 Command: report_drc -file shellTop_drc_opted.rpt -pb shellTop_drc_opted.pb -rpx shellTop_drc_opted.rpx
 INFO: [IP_Flow 19-1839] IP Catalog is up to date.
 INFO: [DRC 23-27] Running DRC with 8 threads
 INFO: [Coretcl 2-168] The results of DRC are in file /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/impl_1/shellTop_drc_opted.rpt.
 report_drc completed successfully
-report_drc: Time (s): cpu = 00:00:21 ; elapsed = 00:00:14 . Memory (MB): peak = 5545.945 ; gain = 0.000 ; free physical = 10418 ; free virtual = 75851
+report_drc: Time (s): cpu = 00:00:20 ; elapsed = 00:00:14 . Memory (MB): peak = 5684.934 ; gain = 0.000 ; free physical = 11234 ; free virtual = 76667
 INFO: [Chipscope 16-240] Debug cores have already been implemented
 Command: place_design
 Attempting to get a license for feature 'Implementation' and/or device 'xcku115'
@@ -1085,117 +1075,117 @@ INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 
 Phase 1 Placer Initialization
 
 Phase 1.1 Placer Initialization Netlist Sorting
-Netlist sorting complete. Time (s): cpu = 00:00:00.37 ; elapsed = 00:00:00.40 . Memory (MB): peak = 5545.945 ; gain = 0.000 ; free physical = 10420 ; free virtual = 75854
-Phase 1.1 Placer Initialization Netlist Sorting | Checksum: b2470945
+Netlist sorting complete. Time (s): cpu = 00:00:00.42 ; elapsed = 00:00:00.43 . Memory (MB): peak = 5684.934 ; gain = 0.000 ; free physical = 11235 ; free virtual = 76669
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 5a66d4d1
 
-Time (s): cpu = 00:00:00.48 ; elapsed = 00:00:00.51 . Memory (MB): peak = 5545.945 ; gain = 0.000 ; free physical = 10420 ; free virtual = 75853
+Time (s): cpu = 00:00:00.55 ; elapsed = 00:00:00.56 . Memory (MB): peak = 5684.934 ; gain = 0.000 ; free physical = 11234 ; free virtual = 76668
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00.35 ; elapsed = 00:00:00.35 . Memory (MB): peak = 5545.945 ; gain = 0.000 ; free physical = 10413 ; free virtual = 75846
+Netlist sorting complete. Time (s): cpu = 00:00:00.36 ; elapsed = 00:00:00.36 . Memory (MB): peak = 5684.934 ; gain = 0.000 ; free physical = 11232 ; free virtual = 76666
 
 Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: d09674dc
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 11d3adb8a
 
-Time (s): cpu = 00:01:33 ; elapsed = 00:00:53 . Memory (MB): peak = 5545.945 ; gain = 0.000 ; free physical = 10187 ; free virtual = 75620
+Time (s): cpu = 00:01:34 ; elapsed = 00:00:55 . Memory (MB): peak = 5684.934 ; gain = 0.000 ; free physical = 11008 ; free virtual = 76442
 
 Phase 1.3 Build Placer Netlist Model
-Phase 1.3 Build Placer Netlist Model | Checksum: 1c63bba28
+Phase 1.3 Build Placer Netlist Model | Checksum: 13859d980
 
-Time (s): cpu = 00:02:41 ; elapsed = 00:01:27 . Memory (MB): peak = 5545.945 ; gain = 0.000 ; free physical = 9811 ; free virtual = 75244
+Time (s): cpu = 00:02:42 ; elapsed = 00:01:28 . Memory (MB): peak = 5684.934 ; gain = 0.000 ; free physical = 10702 ; free virtual = 76136
 
 Phase 1.4 Constrain Clocks/Macros
-Phase 1.4 Constrain Clocks/Macros | Checksum: 1c63bba28
+Phase 1.4 Constrain Clocks/Macros | Checksum: 13859d980
 
-Time (s): cpu = 00:02:42 ; elapsed = 00:01:28 . Memory (MB): peak = 5545.945 ; gain = 0.000 ; free physical = 9803 ; free virtual = 75236
-Phase 1 Placer Initialization | Checksum: 1c63bba28
+Time (s): cpu = 00:02:43 ; elapsed = 00:01:29 . Memory (MB): peak = 5684.934 ; gain = 0.000 ; free physical = 10697 ; free virtual = 76131
+Phase 1 Placer Initialization | Checksum: 13859d980
 
-Time (s): cpu = 00:02:44 ; elapsed = 00:01:29 . Memory (MB): peak = 5545.945 ; gain = 0.000 ; free physical = 9801 ; free virtual = 75234
+Time (s): cpu = 00:02:44 ; elapsed = 00:01:31 . Memory (MB): peak = 5684.934 ; gain = 0.000 ; free physical = 10695 ; free virtual = 76129
 
 Phase 2 Global Placement
-Phase 2 Global Placement | Checksum: 2623fbffa
+Phase 2 Global Placement | Checksum: 184bbf63d
 
-Time (s): cpu = 00:06:53 ; elapsed = 00:03:44 . Memory (MB): peak = 5642.047 ; gain = 96.102 ; free physical = 9491 ; free virtual = 74924
+Time (s): cpu = 00:07:19 ; elapsed = 00:03:51 . Memory (MB): peak = 5781.035 ; gain = 96.102 ; free physical = 10358 ; free virtual = 75792
 
 Phase 3 Detail Placement
 
 Phase 3.1 Commit Multi Column Macros
-Phase 3.1 Commit Multi Column Macros | Checksum: 23aaa3fbf
+Phase 3.1 Commit Multi Column Macros | Checksum: 98c9159f
 
-Time (s): cpu = 00:06:55 ; elapsed = 00:03:45 . Memory (MB): peak = 5642.047 ; gain = 96.102 ; free physical = 9486 ; free virtual = 74920
+Time (s): cpu = 00:07:21 ; elapsed = 00:03:52 . Memory (MB): peak = 5781.035 ; gain = 96.102 ; free physical = 10358 ; free virtual = 75791
 
 Phase 3.2 Commit Most Macros & LUTRAMs
-Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 20a96d87f
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 14848c05c
 
-Time (s): cpu = 00:07:21 ; elapsed = 00:03:59 . Memory (MB): peak = 5642.047 ; gain = 96.102 ; free physical = 9448 ; free virtual = 74881
+Time (s): cpu = 00:07:48 ; elapsed = 00:04:05 . Memory (MB): peak = 5781.035 ; gain = 96.102 ; free physical = 10330 ; free virtual = 75764
 
 Phase 3.3 Area Swap Optimization
-Phase 3.3 Area Swap Optimization | Checksum: 1794f9132
+Phase 3.3 Area Swap Optimization | Checksum: 1eee49e60
 
-Time (s): cpu = 00:07:24 ; elapsed = 00:04:01 . Memory (MB): peak = 5642.047 ; gain = 96.102 ; free physical = 9445 ; free virtual = 74879
+Time (s): cpu = 00:07:52 ; elapsed = 00:04:07 . Memory (MB): peak = 5781.035 ; gain = 96.102 ; free physical = 10327 ; free virtual = 75761
 
 Phase 3.4 Pipeline Register Optimization
-Phase 3.4 Pipeline Register Optimization | Checksum: 21971bc33
+Phase 3.4 Pipeline Register Optimization | Checksum: 1843ea35a
 
-Time (s): cpu = 00:07:27 ; elapsed = 00:04:04 . Memory (MB): peak = 5642.047 ; gain = 96.102 ; free physical = 9439 ; free virtual = 74872
+Time (s): cpu = 00:07:54 ; elapsed = 00:04:10 . Memory (MB): peak = 5781.035 ; gain = 96.102 ; free physical = 10322 ; free virtual = 75755
 
 Phase 3.5 IO Cut Optimizer
-Phase 3.5 IO Cut Optimizer | Checksum: 1879e9f5a
+Phase 3.5 IO Cut Optimizer | Checksum: 196e9e3e7
 
-Time (s): cpu = 00:07:29 ; elapsed = 00:04:05 . Memory (MB): peak = 5642.047 ; gain = 96.102 ; free physical = 9439 ; free virtual = 74872
+Time (s): cpu = 00:07:55 ; elapsed = 00:04:11 . Memory (MB): peak = 5781.035 ; gain = 96.102 ; free physical = 10322 ; free virtual = 75755
 
 Phase 3.6 Timing Path Optimizer
-Phase 3.6 Timing Path Optimizer | Checksum: 1879e9f5a
+Phase 3.6 Timing Path Optimizer | Checksum: 196e9e3e7
 
-Time (s): cpu = 00:07:29 ; elapsed = 00:04:06 . Memory (MB): peak = 5642.047 ; gain = 96.102 ; free physical = 9439 ; free virtual = 74872
+Time (s): cpu = 00:07:56 ; elapsed = 00:04:11 . Memory (MB): peak = 5781.035 ; gain = 96.102 ; free physical = 10322 ; free virtual = 75755
 
 Phase 3.7 Fast Optimization
-Phase 3.7 Fast Optimization | Checksum: 1d932484b
+Phase 3.7 Fast Optimization | Checksum: 16970320a
 
-Time (s): cpu = 00:07:32 ; elapsed = 00:04:09 . Memory (MB): peak = 5642.047 ; gain = 96.102 ; free physical = 9439 ; free virtual = 74872
+Time (s): cpu = 00:07:59 ; elapsed = 00:04:15 . Memory (MB): peak = 5781.035 ; gain = 96.102 ; free physical = 10321 ; free virtual = 75755
 
 Phase 3.8 Small Shape Clustering
-Phase 3.8 Small Shape Clustering | Checksum: 1f8add739
+Phase 3.8 Small Shape Clustering | Checksum: 19d8676d8
 
-Time (s): cpu = 00:08:03 ; elapsed = 00:04:36 . Memory (MB): peak = 5642.047 ; gain = 96.102 ; free physical = 9295 ; free virtual = 74728
+Time (s): cpu = 00:08:21 ; elapsed = 00:04:32 . Memory (MB): peak = 5781.035 ; gain = 96.102 ; free physical = 10221 ; free virtual = 75655
 
 Phase 3.9 DP Optimization
-Phase 3.9 DP Optimization | Checksum: 1382daa7b
+Phase 3.9 DP Optimization | Checksum: fe555d28
 
-Time (s): cpu = 00:10:34 ; elapsed = 00:05:38 . Memory (MB): peak = 5698.070 ; gain = 152.125 ; free physical = 9294 ; free virtual = 74728
+Time (s): cpu = 00:10:46 ; elapsed = 00:05:29 . Memory (MB): peak = 5837.062 ; gain = 152.129 ; free physical = 10218 ; free virtual = 75651
 
 Phase 3.10 Flow Legalize Slice Clusters
-Phase 3.10 Flow Legalize Slice Clusters | Checksum: 1a520436f
+Phase 3.10 Flow Legalize Slice Clusters | Checksum: 19a9c5d75
 
-Time (s): cpu = 00:10:38 ; elapsed = 00:05:41 . Memory (MB): peak = 5698.070 ; gain = 152.125 ; free physical = 9298 ; free virtual = 74731
+Time (s): cpu = 00:10:49 ; elapsed = 00:05:31 . Memory (MB): peak = 5837.062 ; gain = 152.129 ; free physical = 10224 ; free virtual = 75658
 
 Phase 3.11 Slice Area Swap
-Phase 3.11 Slice Area Swap | Checksum: 14caa9525
+Phase 3.11 Slice Area Swap | Checksum: 1b58067b2
 
-Time (s): cpu = 00:10:58 ; elapsed = 00:05:55 . Memory (MB): peak = 5698.070 ; gain = 152.125 ; free physical = 9207 ; free virtual = 74640
+Time (s): cpu = 00:11:08 ; elapsed = 00:05:45 . Memory (MB): peak = 5837.062 ; gain = 152.129 ; free physical = 10139 ; free virtual = 75573
 
 Phase 3.12 Commit Slice Clusters
-Phase 3.12 Commit Slice Clusters | Checksum: 1abbf00f9
+Phase 3.12 Commit Slice Clusters | Checksum: 1c0e8d8a0
 
-Time (s): cpu = 00:11:41 ; elapsed = 00:06:09 . Memory (MB): peak = 5698.070 ; gain = 152.125 ; free physical = 9207 ; free virtual = 74641
+Time (s): cpu = 00:11:52 ; elapsed = 00:05:59 . Memory (MB): peak = 5837.062 ; gain = 152.129 ; free physical = 10078 ; free virtual = 75512
 
 Phase 3.13 Re-assign LUT pins
-Phase 3.13 Re-assign LUT pins | Checksum: 1a9f86d24
+Phase 3.13 Re-assign LUT pins | Checksum: 1374661e5
 
-Time (s): cpu = 00:11:50 ; elapsed = 00:06:17 . Memory (MB): peak = 5698.070 ; gain = 152.125 ; free physical = 9319 ; free virtual = 74752
+Time (s): cpu = 00:12:01 ; elapsed = 00:06:07 . Memory (MB): peak = 5837.062 ; gain = 152.129 ; free physical = 10174 ; free virtual = 75608
 
 Phase 3.14 Pipeline Register Optimization
-Phase 3.14 Pipeline Register Optimization | Checksum: 201dec650
+Phase 3.14 Pipeline Register Optimization | Checksum: 1aa1014ff
 
-Time (s): cpu = 00:11:54 ; elapsed = 00:06:20 . Memory (MB): peak = 5698.070 ; gain = 152.125 ; free physical = 9362 ; free virtual = 74795
+Time (s): cpu = 00:12:04 ; elapsed = 00:06:10 . Memory (MB): peak = 5837.062 ; gain = 152.129 ; free physical = 10212 ; free virtual = 75646
 
 Phase 3.15 Fast Optimization
-Phase 3.15 Fast Optimization | Checksum: e333ade2
+Phase 3.15 Fast Optimization | Checksum: cefd67e4
 
-Time (s): cpu = 00:12:31 ; elapsed = 00:06:40 . Memory (MB): peak = 5698.070 ; gain = 152.125 ; free physical = 9380 ; free virtual = 74814
-Phase 3 Detail Placement | Checksum: e333ade2
+Time (s): cpu = 00:12:36 ; elapsed = 00:06:25 . Memory (MB): peak = 5837.062 ; gain = 152.129 ; free physical = 10219 ; free virtual = 75653
+Phase 3 Detail Placement | Checksum: cefd67e4
 
-Time (s): cpu = 00:12:32 ; elapsed = 00:06:41 . Memory (MB): peak = 5698.070 ; gain = 152.125 ; free physical = 9381 ; free virtual = 74814
+Time (s): cpu = 00:12:38 ; elapsed = 00:06:26 . Memory (MB): peak = 5837.062 ; gain = 152.129 ; free physical = 10217 ; free virtual = 75651
 
 Phase 4 Post Placement Optimization and Clean-Up
 
@@ -1203,68 +1193,68 @@ Phase 4.1 Post Commit Optimization
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Phase 4.1.1 Post Placement Optimization
-Post Placement Optimization Initialization | Checksum: fad01901
+Post Placement Optimization Initialization | Checksum: 17a07cdf7
 
 Phase 4.1.1.1 BUFG Insertion
 INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 8 CPUs
 INFO: [Place 46-34] Processed net shell_i/mem_interface/ddr4_0/inst/u_ddr_axi/USE_UPSIZER.upsizer_d2/ARESET, BUFG insertion was skipped due to possible timing degradation.
 INFO: [Place 46-31] BUFG insertion identified 1 candidate nets, 0 success, 0 skipped for placement/routing, 1 skipped for timing, 0 skipped for netlist change reason.
-Phase 4.1.1.1 BUFG Insertion | Checksum: fad01901
+Phase 4.1.1.1 BUFG Insertion | Checksum: 17a07cdf7
 
-Time (s): cpu = 00:14:27 ; elapsed = 00:07:18 . Memory (MB): peak = 5698.070 ; gain = 152.125 ; free physical = 9510 ; free virtual = 74944
-INFO: [Place 30-746] Post Placement Timing Summary WNS=-5.041. For the most accurate timing information please run report_timing.
+Time (s): cpu = 00:14:27 ; elapsed = 00:07:02 . Memory (MB): peak = 5837.062 ; gain = 152.129 ; free physical = 10313 ; free virtual = 75747
+INFO: [Place 30-746] Post Placement Timing Summary WNS=-5.009. For the most accurate timing information please run report_timing.
 
 Phase 4.1.1.2 Replication
 INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 8 CPUs
-INFO: [Place 46-19] Post Replication Timing Summary WNS=-5.041. For the most accurate timing information please run report_timing.
-Phase 4.1.1.2 Replication | Checksum: 151239a1c
+INFO: [Place 46-19] Post Replication Timing Summary WNS=-5.009. For the most accurate timing information please run report_timing.
+Phase 4.1.1.2 Replication | Checksum: 22aa26eae
 
-Time (s): cpu = 00:17:15 ; elapsed = 00:09:57 . Memory (MB): peak = 5698.070 ; gain = 152.125 ; free physical = 9445 ; free virtual = 74878
-Phase 4.1.1 Post Placement Optimization | Checksum: 151239a1c
+Time (s): cpu = 00:16:39 ; elapsed = 00:09:19 . Memory (MB): peak = 5837.062 ; gain = 152.129 ; free physical = 10301 ; free virtual = 75735
+Phase 4.1.1 Post Placement Optimization | Checksum: 22aa26eae
 
-Time (s): cpu = 00:17:17 ; elapsed = 00:09:58 . Memory (MB): peak = 5698.070 ; gain = 152.125 ; free physical = 9448 ; free virtual = 74882
-Phase 4.1 Post Commit Optimization | Checksum: 151239a1c
+Time (s): cpu = 00:16:40 ; elapsed = 00:09:20 . Memory (MB): peak = 5837.062 ; gain = 152.129 ; free physical = 10304 ; free virtual = 75738
+Phase 4.1 Post Commit Optimization | Checksum: 22aa26eae
 
-Time (s): cpu = 00:17:18 ; elapsed = 00:10:00 . Memory (MB): peak = 5698.070 ; gain = 152.125 ; free physical = 9448 ; free virtual = 74882
+Time (s): cpu = 00:16:41 ; elapsed = 00:09:21 . Memory (MB): peak = 5837.062 ; gain = 152.129 ; free physical = 10304 ; free virtual = 75738
 
 Phase 4.2 Post Placement Cleanup
-Phase 4.2 Post Placement Cleanup | Checksum: 151239a1c
+Phase 4.2 Post Placement Cleanup | Checksum: 22aa26eae
 
-Time (s): cpu = 00:17:39 ; elapsed = 00:10:09 . Memory (MB): peak = 5698.070 ; gain = 152.125 ; free physical = 9467 ; free virtual = 74900
+Time (s): cpu = 00:16:56 ; elapsed = 00:09:29 . Memory (MB): peak = 5837.062 ; gain = 152.129 ; free physical = 10328 ; free virtual = 75762
 
 Phase 4.3 Placer Reporting
-Phase 4.3 Placer Reporting | Checksum: 196ad52a7
+Phase 4.3 Placer Reporting | Checksum: 2e7547eb2
 
-Time (s): cpu = 00:17:44 ; elapsed = 00:10:14 . Memory (MB): peak = 5698.070 ; gain = 152.125 ; free physical = 9524 ; free virtual = 74958
+Time (s): cpu = 00:17:01 ; elapsed = 00:09:34 . Memory (MB): peak = 5837.062 ; gain = 152.129 ; free physical = 10399 ; free virtual = 75833
 
 Phase 4.4 Final Placement Cleanup
-Phase 4.4 Final Placement Cleanup | Checksum: 1476d2e30
+Phase 4.4 Final Placement Cleanup | Checksum: 3527c608d
 
-Time (s): cpu = 00:17:45 ; elapsed = 00:10:15 . Memory (MB): peak = 5698.070 ; gain = 152.125 ; free physical = 9524 ; free virtual = 74957
-Phase 4 Post Placement Optimization and Clean-Up | Checksum: 1476d2e30
+Time (s): cpu = 00:17:02 ; elapsed = 00:09:36 . Memory (MB): peak = 5837.062 ; gain = 152.129 ; free physical = 10399 ; free virtual = 75832
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 3527c608d
 
-Time (s): cpu = 00:17:46 ; elapsed = 00:10:16 . Memory (MB): peak = 5698.070 ; gain = 152.125 ; free physical = 9524 ; free virtual = 74958
-Ending Placer Task | Checksum: cfa1ba34
+Time (s): cpu = 00:17:04 ; elapsed = 00:09:37 . Memory (MB): peak = 5837.062 ; gain = 152.129 ; free physical = 10399 ; free virtual = 75832
+Ending Placer Task | Checksum: 273a7d048
 
-Time (s): cpu = 00:17:46 ; elapsed = 00:10:16 . Memory (MB): peak = 5698.070 ; gain = 152.125 ; free physical = 9756 ; free virtual = 75189
+Time (s): cpu = 00:17:04 ; elapsed = 00:09:37 . Memory (MB): peak = 5837.062 ; gain = 152.129 ; free physical = 10636 ; free virtual = 76070
 INFO: [Common 17-83] Releasing license: Implementation
-155 Infos, 121 Warnings, 111 Critical Warnings and 0 Errors encountered.
+157 Infos, 121 Warnings, 111 Critical Warnings and 0 Errors encountered.
 place_design completed successfully
-place_design: Time (s): cpu = 00:18:07 ; elapsed = 00:10:35 . Memory (MB): peak = 5698.070 ; gain = 152.125 ; free physical = 9756 ; free virtual = 75189
+place_design: Time (s): cpu = 00:17:24 ; elapsed = 00:09:56 . Memory (MB): peak = 5837.062 ; gain = 152.129 ; free physical = 10636 ; free virtual = 76070
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:23 ; elapsed = 00:00:09 . Memory (MB): peak = 5698.070 ; gain = 0.000 ; free physical = 9448 ; free virtual = 74882
+Write XDEF Complete: Time (s): cpu = 00:00:20 ; elapsed = 00:00:08 . Memory (MB): peak = 5837.062 ; gain = 0.000 ; free physical = 10399 ; free virtual = 75833
 INFO: [Common 17-1381] The checkpoint '/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/impl_1/shellTop_placed.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:01:25 ; elapsed = 00:01:08 . Memory (MB): peak = 5698.070 ; gain = 0.000 ; free physical = 9781 ; free virtual = 75214
+write_checkpoint: Time (s): cpu = 00:01:24 ; elapsed = 00:01:07 . Memory (MB): peak = 5837.062 ; gain = 0.000 ; free physical = 10530 ; free virtual = 75963
 INFO: [runtcl-4] Executing : report_io -file shellTop_io_placed.rpt
-report_io: Time (s): cpu = 00:00:00.40 ; elapsed = 00:00:00.52 . Memory (MB): peak = 5698.070 ; gain = 0.000 ; free physical = 9746 ; free virtual = 75179
+report_io: Time (s): cpu = 00:00:00.38 ; elapsed = 00:00:00.54 . Memory (MB): peak = 5837.062 ; gain = 0.000 ; free physical = 10494 ; free virtual = 75927
 INFO: [runtcl-4] Executing : report_utilization -file shellTop_utilization_placed.rpt -pb shellTop_utilization_placed.pb
-report_utilization: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 5698.070 ; gain = 0.000 ; free physical = 9794 ; free virtual = 75228
+report_utilization: Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 5837.062 ; gain = 0.000 ; free physical = 10530 ; free virtual = 75964
 INFO: [runtcl-4] Executing : report_control_sets -verbose -file shellTop_control_sets_placed.rpt
-report_control_sets: Time (s): cpu = 00:00:00.75 ; elapsed = 00:00:00.89 . Memory (MB): peak = 5698.070 ; gain = 0.000 ; free physical = 9790 ; free virtual = 75223
+report_control_sets: Time (s): cpu = 00:00:00.78 ; elapsed = 00:00:00.93 . Memory (MB): peak = 5837.062 ; gain = 0.000 ; free physical = 10527 ; free virtual = 75961
 Command: route_design
 Attempting to get a license for feature 'Implementation' and/or device 'xcku115'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xcku115'
@@ -1279,76 +1269,78 @@ INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more in
 
 Starting Routing Task
 INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 8 CPUs
-Checksum: PlaceDB: 385e19f2 ConstDB: 0 ShapeSum: 51b9e7b7 RouteDB: 4589b88b
+Checksum: PlaceDB: e0b5e833 ConstDB: 0 ShapeSum: d63fd811 RouteDB: bcb21004
 
 Phase 1 Build RT Design
-Phase 1 Build RT Design | Checksum: de4474f4
+Phase 1 Build RT Design | Checksum: 103a1b2f5
 
-Time (s): cpu = 00:02:32 ; elapsed = 00:01:25 . Memory (MB): peak = 5698.070 ; gain = 0.000 ; free physical = 9420 ; free virtual = 74854
-Post Restoration Checksum: NetGraph: 1e6cb536 NumContArr: ff725bbb Constraints: ee457eb6 Timing: 0
+Time (s): cpu = 00:02:28 ; elapsed = 00:01:23 . Memory (MB): peak = 5837.062 ; gain = 0.000 ; free physical = 10157 ; free virtual = 75591
+Post Restoration Checksum: NetGraph: 4bdfbce2 NumContArr: f6a3336a Constraints: a40a5711 Timing: 0
 
 Phase 2 Router Initialization
 
 Phase 2.1 Create Timer
-Phase 2.1 Create Timer | Checksum: 20c248fa7
+Phase 2.1 Create Timer | Checksum: 1e68d475d
 
-Time (s): cpu = 00:02:37 ; elapsed = 00:01:31 . Memory (MB): peak = 5698.070 ; gain = 0.000 ; free physical = 9416 ; free virtual = 74849
+Time (s): cpu = 00:02:33 ; elapsed = 00:01:29 . Memory (MB): peak = 5837.062 ; gain = 0.000 ; free physical = 10152 ; free virtual = 75586
 
 Phase 2.2 Fix Topology Constraints
-Phase 2.2 Fix Topology Constraints | Checksum: 20c248fa7
+Phase 2.2 Fix Topology Constraints | Checksum: 1e68d475d
 
-Time (s): cpu = 00:02:38 ; elapsed = 00:01:32 . Memory (MB): peak = 5698.070 ; gain = 0.000 ; free physical = 9323 ; free virtual = 74756
+Time (s): cpu = 00:02:34 ; elapsed = 00:01:30 . Memory (MB): peak = 5837.062 ; gain = 0.000 ; free physical = 10058 ; free virtual = 75491
 
 Phase 2.3 Pre Route Cleanup
-Phase 2.3 Pre Route Cleanup | Checksum: 20c248fa7
+Phase 2.3 Pre Route Cleanup | Checksum: 1e68d475d
 
-Time (s): cpu = 00:02:39 ; elapsed = 00:01:32 . Memory (MB): peak = 5698.070 ; gain = 0.000 ; free physical = 9323 ; free virtual = 74756
+Time (s): cpu = 00:02:34 ; elapsed = 00:01:30 . Memory (MB): peak = 5837.062 ; gain = 0.000 ; free physical = 10058 ; free virtual = 75491
 
 Phase 2.4 Global Clock Net Routing
  Number of Nodes with overlaps = 0
-Phase 2.4 Global Clock Net Routing | Checksum: 165e51aca
+Phase 2.4 Global Clock Net Routing | Checksum: 161572fce
 
-Time (s): cpu = 00:02:51 ; elapsed = 00:01:43 . Memory (MB): peak = 5698.070 ; gain = 0.000 ; free physical = 9221 ; free virtual = 74654
+Time (s): cpu = 00:02:47 ; elapsed = 00:01:41 . Memory (MB): peak = 5837.062 ; gain = 0.000 ; free physical = 9960 ; free virtual = 75394
 
 Phase 2.5 Update Timing
-Phase 2.5 Update Timing | Checksum: 30e86fbae
+Phase 2.5 Update Timing | Checksum: 17247c773
 
-Time (s): cpu = 00:04:33 ; elapsed = 00:02:12 . Memory (MB): peak = 5698.070 ; gain = 0.000 ; free physical = 9156 ; free virtual = 74589
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-4.996 | TNS=-2959.298| WHS=-1.897 | THS=-115.890|
+Time (s): cpu = 00:04:31 ; elapsed = 00:02:10 . Memory (MB): peak = 5837.062 ; gain = 0.000 ; free physical = 9876 ; free virtual = 75310
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-4.786 | TNS=-3395.488| WHS=-1.708 | THS=-114.874|
 
 
 Phase 2.6 Update Timing for Bus Skew
 
 Phase 2.6.1 Update Timing
-Phase 2.6.1 Update Timing | Checksum: 2b8df83f3
+Phase 2.6.1 Update Timing | Checksum: ef70b7fc
 
-Time (s): cpu = 00:07:07 ; elapsed = 00:02:56 . Memory (MB): peak = 5698.070 ; gain = 0.000 ; free physical = 9123 ; free virtual = 74556
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-4.996 | TNS=-3474.605| WHS=N/A    | THS=N/A    |
+Time (s): cpu = 00:07:07 ; elapsed = 00:02:54 . Memory (MB): peak = 5837.062 ; gain = 0.000 ; free physical = 9874 ; free virtual = 75308
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-4.786 | TNS=-4050.114| WHS=N/A    | THS=N/A    |
 
-Phase 2.6 Update Timing for Bus Skew | Checksum: 293f865ea
+Phase 2.6 Update Timing for Bus Skew | Checksum: 17561953e
 
-Time (s): cpu = 00:07:08 ; elapsed = 00:02:57 . Memory (MB): peak = 5698.070 ; gain = 0.000 ; free physical = 9117 ; free virtual = 74550
-Phase 2 Router Initialization | Checksum: 2825f9be3
+Time (s): cpu = 00:07:08 ; elapsed = 00:02:55 . Memory (MB): peak = 5837.062 ; gain = 0.000 ; free physical = 9867 ; free virtual = 75301
+Phase 2 Router Initialization | Checksum: 19dac52d6
 
-Time (s): cpu = 00:07:09 ; elapsed = 00:02:58 . Memory (MB): peak = 5698.070 ; gain = 0.000 ; free physical = 9117 ; free virtual = 74550
+Time (s): cpu = 00:07:08 ; elapsed = 00:02:55 . Memory (MB): peak = 5837.062 ; gain = 0.000 ; free physical = 9867 ; free virtual = 75301
 
 Phase 3 Initial Routing
 
 Phase 3.1 Global Routing
-Phase 3.1 Global Routing | Checksum: 2825f9be3
+Phase 3.1 Global Routing | Checksum: 19dac52d6
 
-Time (s): cpu = 00:07:09 ; elapsed = 00:02:58 . Memory (MB): peak = 5698.070 ; gain = 0.000 ; free physical = 9117 ; free virtual = 74550
-Phase 3 Initial Routing | Checksum: 20e2bce79
+Time (s): cpu = 00:07:08 ; elapsed = 00:02:56 . Memory (MB): peak = 5837.062 ; gain = 0.000 ; free physical = 9867 ; free virtual = 75301
+Phase 3 Initial Routing | Checksum: 1d78e6731
 
-Time (s): cpu = 00:10:36 ; elapsed = 00:04:01 . Memory (MB): peak = 5698.070 ; gain = 0.000 ; free physical = 8991 ; free virtual = 74424
+Time (s): cpu = 00:10:45 ; elapsed = 00:04:11 . Memory (MB): peak = 5837.062 ; gain = 0.000 ; free physical = 9721 ; free virtual = 75155
 
 Phase 4 Rip-up And Reroute
 
 Phase 4.1 Global Iteration 0
- Number of Nodes with overlaps = 23191
- Number of Nodes with overlaps = 1039
- Number of Nodes with overlaps = 84
- Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 26065
+ Number of Nodes with overlaps = 1328
+ Number of Nodes with overlaps = 126
+ Number of Nodes with overlaps = 12
+ Number of Nodes with overlaps = 7
+ Number of Nodes with overlaps = 4
  Number of Nodes with overlaps = 1
  Number of Nodes with overlaps = 0
 INFO: [Route 35-467] Router swapped GT pin shell_i/PCIe/xdma_0/inst/pcie3_ip_i/inst/gt_top_i/gt_wizard.gtwizard_top_i/shell_xdma_0_0_pcie3_ip_gt_i/inst/gen_gtwizard_gthe3_top.shell_xdma_0_0_pcie3_ip_gt_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_common.gen_common_container[25].gen_enabled_common.gthe3_common_wrapper_inst/common_inst/gthe3_common_gen.GTHE3_COMMON_PRIM_INST/GTREFCLK01 to physical pin GTHE3_COMMON_X1Y1/COM2_REFCLKOUT3
@@ -1356,78 +1348,93 @@ INFO: [Route 35-467] Router swapped GT pin shell_i/PCIe/xdma_0/inst/pcie3_ip_i/i
 INFO: [Route 35-467] Router swapped GT pin shell_i/PCIe/xdma_0/inst/pcie3_ip_i/inst/gt_top_i/gt_wizard.gtwizard_top_i/shell_xdma_0_0_pcie3_ip_gt_i/inst/gen_gtwizard_gthe3_top.shell_xdma_0_0_pcie3_ip_gt_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_channel_container[25].gen_enabled_channel.gthe3_channel_wrapper_inst/channel_inst/gthe3_channel_gen.gen_gthe3_channel_inst[1].GTHE3_CHANNEL_PRIM_INST/GTREFCLK0 to physical pin GTHE3_CHANNEL_X1Y5/NORTHREFCLK1
 INFO: [Route 35-467] Router swapped GT pin shell_i/PCIe/xdma_0/inst/pcie3_ip_i/inst/gt_top_i/gt_wizard.gtwizard_top_i/shell_xdma_0_0_pcie3_ip_gt_i/inst/gen_gtwizard_gthe3_top.shell_xdma_0_0_pcie3_ip_gt_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_channel_container[25].gen_enabled_channel.gthe3_channel_wrapper_inst/channel_inst/gthe3_channel_gen.gen_gthe3_channel_inst[2].GTHE3_CHANNEL_PRIM_INST/GTREFCLK0 to physical pin GTHE3_CHANNEL_X1Y6/NORTHREFCLK1
 INFO: [Route 35-467] Router swapped GT pin shell_i/PCIe/xdma_0/inst/pcie3_ip_i/inst/gt_top_i/gt_wizard.gtwizard_top_i/shell_xdma_0_0_pcie3_ip_gt_i/inst/gen_gtwizard_gthe3_top.shell_xdma_0_0_pcie3_ip_gt_gtwizard_gthe3_inst/gen_gtwizard_gthe3.gen_channel_container[25].gen_enabled_channel.gthe3_channel_wrapper_inst/channel_inst/gthe3_channel_gen.gen_gthe3_channel_inst[3].GTHE3_CHANNEL_PRIM_INST/GTREFCLK0 to physical pin GTHE3_CHANNEL_X1Y7/NORTHREFCLK1
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-5.523 | TNS=-13203.646| WHS=-0.404 | THS=-2.467 |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-5.104 | TNS=-13371.809| WHS=-0.322 | THS=-3.277 |
 
-Phase 4.1 Global Iteration 0 | Checksum: 28075340c
+Phase 4.1 Global Iteration 0 | Checksum: 1e53d0272
 
-Time (s): cpu = 00:21:02 ; elapsed = 00:07:05 . Memory (MB): peak = 5698.070 ; gain = 0.000 ; free physical = 8912 ; free virtual = 74345
+Time (s): cpu = 00:23:54 ; elapsed = 00:08:56 . Memory (MB): peak = 5837.062 ; gain = 0.000 ; free physical = 9698 ; free virtual = 75132
 
 Phase 4.2 Global Iteration 1
- Number of Nodes with overlaps = 8
+ Number of Nodes with overlaps = 37
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-5.523 | TNS=-13224.919| WHS=N/A    | THS=N/A    |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-5.104 | TNS=-13378.075| WHS=N/A    | THS=N/A    |
 
-Phase 4.2 Global Iteration 1 | Checksum: 28b15ff44
+Phase 4.2 Global Iteration 1 | Checksum: 1e8ad436a
 
-Time (s): cpu = 00:21:59 ; elapsed = 00:07:38 . Memory (MB): peak = 5698.070 ; gain = 0.000 ; free physical = 8925 ; free virtual = 74358
+Time (s): cpu = 00:26:22 ; elapsed = 00:10:54 . Memory (MB): peak = 5837.062 ; gain = 0.000 ; free physical = 9709 ; free virtual = 75143
 
 Phase 4.3 Global Iteration 2
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 1
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-5.523 | TNS=-13224.919| WHS=N/A    | THS=N/A    |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-5.104 | TNS=-13376.823| WHS=N/A    | THS=N/A    |
 
-Phase 4.3 Global Iteration 2 | Checksum: 34b507f6c
+Phase 4.3 Global Iteration 2 | Checksum: 287605103
 
-Time (s): cpu = 00:22:05 ; elapsed = 00:07:42 . Memory (MB): peak = 5698.070 ; gain = 0.000 ; free physical = 8932 ; free virtual = 74366
-Phase 4 Rip-up And Reroute | Checksum: 34b507f6c
+Time (s): cpu = 00:27:54 ; elapsed = 00:12:18 . Memory (MB): peak = 5837.062 ; gain = 0.000 ; free physical = 9705 ; free virtual = 75139
+Phase 4 Rip-up And Reroute | Checksum: 287605103
 
-Time (s): cpu = 00:22:06 ; elapsed = 00:07:43 . Memory (MB): peak = 5698.070 ; gain = 0.000 ; free physical = 8932 ; free virtual = 74366
+Time (s): cpu = 00:27:54 ; elapsed = 00:12:19 . Memory (MB): peak = 5837.062 ; gain = 0.000 ; free physical = 9705 ; free virtual = 75139
 
 Phase 5 Delay and Skew Optimization
 
 Phase 5.1 Delay CleanUp
 
 Phase 5.1.1 Update Timing
-Phase 5.1.1 Update Timing | Checksum: 3814bd37a
+Phase 5.1.1 Update Timing | Checksum: 1dd8a4da8
 
-Time (s): cpu = 00:22:52 ; elapsed = 00:08:01 . Memory (MB): peak = 5698.070 ; gain = 0.000 ; free physical = 8921 ; free virtual = 74354
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-5.523 | TNS=-13224.894| WHS=0.024  | THS=0.000  |
+Time (s): cpu = 00:28:42 ; elapsed = 00:12:38 . Memory (MB): peak = 5837.062 ; gain = 0.000 ; free physical = 9689 ; free virtual = 75123
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-5.104 | TNS=-13376.798| WHS=0.024  | THS=0.000  |
 
  Number of Nodes with overlaps = 0
  Number of Nodes with overlaps = 0
-Phase 5.1 Delay CleanUp | Checksum: 1dd154be6
+Phase 5.1 Delay CleanUp | Checksum: 248dcc11b
 
-Time (s): cpu = 00:23:09 ; elapsed = 00:08:06 . Memory (MB): peak = 5698.070 ; gain = 0.000 ; free physical = 8900 ; free virtual = 74333
+Time (s): cpu = 00:28:59 ; elapsed = 00:12:43 . Memory (MB): peak = 5837.062 ; gain = 0.000 ; free physical = 9668 ; free virtual = 75101
 
 Phase 5.2 Clock Skew Optimization
-Phase 5.2 Clock Skew Optimization | Checksum: 1dd154be6
+Phase 5.2 Clock Skew Optimization | Checksum: 248dcc11b
 
-Time (s): cpu = 00:23:10 ; elapsed = 00:08:07 . Memory (MB): peak = 5698.070 ; gain = 0.000 ; free physical = 8900 ; free virtual = 74333
-Phase 5 Delay and Skew Optimization | Checksum: 1dd154be6
+Time (s): cpu = 00:29:00 ; elapsed = 00:12:43 . Memory (MB): peak = 5837.062 ; gain = 0.000 ; free physical = 9668 ; free virtual = 75101
+Phase 5 Delay and Skew Optimization | Checksum: 248dcc11b
 
-Time (s): cpu = 00:23:10 ; elapsed = 00:08:07 . Memory (MB): peak = 5698.070 ; gain = 0.000 ; free physical = 8900 ; free virtual = 74333
+Time (s): cpu = 00:29:01 ; elapsed = 00:12:44 . Memory (MB): peak = 5837.062 ; gain = 0.000 ; free physical = 9668 ; free virtual = 75101
 
 Phase 6 Post Hold Fix
 
 Phase 6.1 Hold Fix Iter
 
 Phase 6.1.1 Update Timing
-Phase 6.1.1 Update Timing | Checksum: 28a48f27b
+Phase 6.1.1 Update Timing | Checksum: 2d1fb2177
 
-Time (s): cpu = 00:23:57 ; elapsed = 00:08:25 . Memory (MB): peak = 5698.070 ; gain = 0.000 ; free physical = 8900 ; free virtual = 74333
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-5.511 | TNS=-13165.332| WHS=0.024  | THS=0.000  |
+Time (s): cpu = 00:29:49 ; elapsed = 00:13:03 . Memory (MB): peak = 5837.062 ; gain = 0.000 ; free physical = 9662 ; free virtual = 75096
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-5.105 | TNS=-13256.815| WHS=-0.975 | THS=-20.656|
 
-Phase 6.1 Hold Fix Iter | Checksum: 1e2377fbd
+Phase 6.1 Hold Fix Iter | Checksum: 1f9cb5e17
 
-Time (s): cpu = 00:23:57 ; elapsed = 00:08:26 . Memory (MB): peak = 5698.070 ; gain = 0.000 ; free physical = 8900 ; free virtual = 74333
-Phase 6 Post Hold Fix | Checksum: 1e2377fbd
+Time (s): cpu = 00:30:18 ; elapsed = 00:13:18 . Memory (MB): peak = 5865.957 ; gain = 28.895 ; free physical = 9637 ; free virtual = 75071
+WARNING: [Route 35-468] The router encountered 18 pins that are both setup-critical and hold-critical and tried to fix hold violations at the expense of setup slack. Such pins are:
+	shell_i/axi_interconnect_0/m00_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/s_areset_dly[0]_i_1/I0
+	shell_i/axi_interconnect_0/m00_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/s_areset_dly[2]_i_1/I1
+	shell_i/axi_interconnect_0/m01_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/s_areset_dly[0]_i_1/I0
+	shell_i/axi_interconnect_0/m01_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/s_areset_dly[2]_i_1/I1
+	shell_i/axi_interconnect_0/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/s_areset_dly[0]_i_1/I0
+	shell_i/axi_interconnect_0/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/s_areset_dly[2]_i_1/I1
+	shell_i/axi_interconnect_0/m03_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/s_areset_dly[0]_i_1/I0
+	shell_i/axi_interconnect_0/m03_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/s_areset_dly[2]_i_1/I1
+	shell_i/axi_interconnect_0/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/s_areset_dly[0]_i_1/I0
+	shell_i/axi_interconnect_0/m04_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/s_areset_dly[2]_i_1/I1
+	.. and 8 more pins.
 
-Time (s): cpu = 00:23:58 ; elapsed = 00:08:26 . Memory (MB): peak = 5698.070 ; gain = 0.000 ; free physical = 8900 ; free virtual = 74333
+Phase 6 Post Hold Fix | Checksum: 1a711d523
+
+Time (s): cpu = 00:30:19 ; elapsed = 00:13:19 . Memory (MB): peak = 5865.957 ; gain = 28.895 ; free physical = 9640 ; free virtual = 75073
 
 Phase 7 Route finalize
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 3.44317 %
-  Global Horizontal Routing Utilization  = 3.01327 %
+  Global Vertical Routing Utilization    = 3.71197 %
+  Global Horizontal Routing Utilization  = 3.35555 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
@@ -1437,10 +1444,11 @@ Router Utilization Summary
   Number of Node Overlaps             = 0
 
 Congestion Report
-North Dir 1x1 Area, Max Cong = 80.0847%, No Congested Regions.
-South Dir 1x1 Area, Max Cong = 83.9662%, No Congested Regions.
-East Dir 1x1 Area, Max Cong = 75%, No Congested Regions.
-West Dir 1x1 Area, Max Cong = 74.0385%, No Congested Regions.
+North Dir 1x1 Area, Max Cong = 89.8305%, Congestion bounded by tiles (Lower Left Tile -> Upper Right Tile):
+   INT_X62Y175 -> INT_X62Y175
+South Dir 1x1 Area, Max Cong = 81.0127%, No Congested Regions.
+East Dir 1x1 Area, Max Cong = 79.8077%, No Congested Regions.
+West Dir 1x1 Area, Max Cong = 75.9615%, No Congested Regions.
 
 ------------------------------
 Reporting congestion hotspots
@@ -1448,11 +1456,11 @@ Reporting congestion hotspots
 Direction: North
 ----------------
 Congested clusters found at Level 0
-Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 1
 Direction: South
 ----------------
 Congested clusters found at Level 0
-Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 1
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
 Direction: East
 ----------------
 Congested clusters found at Level 0
@@ -1462,54 +1470,59 @@ Direction: West
 Congested clusters found at Level 0
 Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
 
-Phase 7 Route finalize | Checksum: 1bafe3b64
+Phase 7 Route finalize | Checksum: 1e81a9164
 
-Time (s): cpu = 00:24:17 ; elapsed = 00:08:34 . Memory (MB): peak = 5698.070 ; gain = 0.000 ; free physical = 8890 ; free virtual = 74323
+Time (s): cpu = 00:30:39 ; elapsed = 00:13:27 . Memory (MB): peak = 5865.957 ; gain = 28.895 ; free physical = 9701 ; free virtual = 75135
 
 Phase 8 Verifying routed nets
 
  Verification completed successfully
-Phase 8 Verifying routed nets | Checksum: 1bafe3b64
+Phase 8 Verifying routed nets | Checksum: 1e81a9164
 
-Time (s): cpu = 00:24:17 ; elapsed = 00:08:34 . Memory (MB): peak = 5698.070 ; gain = 0.000 ; free physical = 8888 ; free virtual = 74321
+Time (s): cpu = 00:30:40 ; elapsed = 00:13:28 . Memory (MB): peak = 5865.957 ; gain = 28.895 ; free physical = 9699 ; free virtual = 75133
 
 Phase 9 Depositing Routes
-Phase 9 Depositing Routes | Checksum: 1bafe3b64
+Phase 9 Depositing Routes | Checksum: 1e81a9164
 
-Time (s): cpu = 00:24:28 ; elapsed = 00:08:45 . Memory (MB): peak = 5698.070 ; gain = 0.000 ; free physical = 8871 ; free virtual = 74304
+Time (s): cpu = 00:30:51 ; elapsed = 00:13:39 . Memory (MB): peak = 5865.957 ; gain = 28.895 ; free physical = 9687 ; free virtual = 75121
 
 Phase 10 Post Router Timing
-INFO: [Route 35-57] Estimated Timing Summary | WNS=-5.511 | TNS=-13165.332| WHS=0.024  | THS=0.000  |
+
+Phase 10.1 Update Timing
+Phase 10.1 Update Timing | Checksum: 209975e44
+
+Time (s): cpu = 00:31:39 ; elapsed = 00:13:57 . Memory (MB): peak = 5865.957 ; gain = 28.895 ; free physical = 9618 ; free virtual = 75052
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-5.127 | TNS=-13301.909| WHS=0.024  | THS=0.000  |
 
 WARNING: [Route 35-328] Router estimated timing not met.
 Resolution: For a complete and accurate timing signoff, report_timing_summary must be run after route_design. Alternatively, route_design can be run with the -timing_summary option to enable a complete timing signoff at the end of route_design.
-Phase 10 Post Router Timing | Checksum: 1bafe3b64
+Phase 10 Post Router Timing | Checksum: 209975e44
 
-Time (s): cpu = 00:24:31 ; elapsed = 00:08:46 . Memory (MB): peak = 5698.070 ; gain = 0.000 ; free physical = 8880 ; free virtual = 74313
+Time (s): cpu = 00:31:39 ; elapsed = 00:13:58 . Memory (MB): peak = 5865.957 ; gain = 28.895 ; free physical = 9618 ; free virtual = 75052
 INFO: [Route 35-16] Router Completed Successfully
 
-Time (s): cpu = 00:24:31 ; elapsed = 00:08:46 . Memory (MB): peak = 5698.070 ; gain = 0.000 ; free physical = 9136 ; free virtual = 74569
+Time (s): cpu = 00:31:39 ; elapsed = 00:13:58 . Memory (MB): peak = 5865.957 ; gain = 28.895 ; free physical = 9957 ; free virtual = 75390
 
 Routing Is Done.
 INFO: [Common 17-83] Releasing license: Implementation
-183 Infos, 122 Warnings, 111 Critical Warnings and 0 Errors encountered.
+185 Infos, 123 Warnings, 111 Critical Warnings and 0 Errors encountered.
 route_design completed successfully
-route_design: Time (s): cpu = 00:24:54 ; elapsed = 00:09:04 . Memory (MB): peak = 5698.070 ; gain = 0.000 ; free physical = 9136 ; free virtual = 74569
+route_design: Time (s): cpu = 00:32:03 ; elapsed = 00:14:16 . Memory (MB): peak = 5865.957 ; gain = 28.895 ; free physical = 9957 ; free virtual = 75390
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:22 ; elapsed = 00:00:09 . Memory (MB): peak = 5699.984 ; gain = 0.000 ; free physical = 8781 ; free virtual = 74214
+Write XDEF Complete: Time (s): cpu = 00:00:23 ; elapsed = 00:00:09 . Memory (MB): peak = 5897.973 ; gain = 0.000 ; free physical = 9582 ; free virtual = 75016
 INFO: [Common 17-1381] The checkpoint '/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/impl_1/shellTop_routed.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:01:25 ; elapsed = 00:01:08 . Memory (MB): peak = 5699.984 ; gain = 1.914 ; free physical = 9015 ; free virtual = 74448
+write_checkpoint: Time (s): cpu = 00:01:26 ; elapsed = 00:01:10 . Memory (MB): peak = 5897.973 ; gain = 32.016 ; free physical = 9825 ; free virtual = 75258
 INFO: [runtcl-4] Executing : report_drc -file shellTop_drc_routed.rpt -pb shellTop_drc_routed.pb -rpx shellTop_drc_routed.rpx
 Command: report_drc -file shellTop_drc_routed.rpt -pb shellTop_drc_routed.pb -rpx shellTop_drc_routed.rpx
 INFO: [IP_Flow 19-1839] IP Catalog is up to date.
 INFO: [DRC 23-27] Running DRC with 8 threads
 INFO: [Coretcl 2-168] The results of DRC are in file /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/impl_1/shellTop_drc_routed.rpt.
 report_drc completed successfully
-report_drc: Time (s): cpu = 00:00:47 ; elapsed = 00:00:17 . Memory (MB): peak = 5788.027 ; gain = 88.043 ; free physical = 8920 ; free virtual = 74354
+report_drc: Time (s): cpu = 00:00:49 ; elapsed = 00:00:17 . Memory (MB): peak = 5986.016 ; gain = 88.043 ; free physical = 9765 ; free virtual = 75199
 INFO: [runtcl-4] Executing : report_methodology -file shellTop_methodology_drc_routed.rpt -pb shellTop_methodology_drc_routed.pb -rpx shellTop_methodology_drc_routed.rpx
 Command: report_methodology -file shellTop_methodology_drc_routed.rpt -pb shellTop_methodology_drc_routed.pb -rpx shellTop_methodology_drc_routed.rpx
 INFO: [Timing 38-35] Done setting XDC timing constraints.
@@ -1517,7 +1530,7 @@ INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [DRC 23-133] Running Methodology with 8 threads
 INFO: [Coretcl 2-1520] The results of Report Methodology are in file /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/impl_1/shellTop_methodology_drc_routed.rpt.
 report_methodology completed successfully
-report_methodology: Time (s): cpu = 00:03:22 ; elapsed = 00:00:59 . Memory (MB): peak = 6125.695 ; gain = 337.668 ; free physical = 8054 ; free virtual = 73487
+report_methodology: Time (s): cpu = 00:03:54 ; elapsed = 00:01:03 . Memory (MB): peak = 6242.824 ; gain = 256.809 ; free physical = 8864 ; free virtual = 74298
 INFO: [runtcl-4] Executing : report_power -file shellTop_power_routed.rpt -pb shellTop_power_summary_routed.pb -rpx shellTop_power_routed.rpx
 Command: report_power -file shellTop_power_routed.rpt -pb shellTop_power_summary_routed.pb -rpx shellTop_power_routed.rpx
 INFO: [Timing 38-35] Done setting XDC timing constraints.
@@ -1526,9 +1539,9 @@ Running Vector-less Activity Propagation...
 Finished Running Vector-less Activity Propagation
 WARNING: [Power 33-332] Found switching activity that implies high-fanout reset nets being asserted for excessive periods of time which may result in inaccurate power analysis.
 Resolution: To review and fix problems, please run Power Constraints Advisor in the GUI from Tools > Power Constraints Advisor or run report_power with the -advisory option to generate a text report.
-196 Infos, 123 Warnings, 111 Critical Warnings and 0 Errors encountered.
+198 Infos, 124 Warnings, 111 Critical Warnings and 0 Errors encountered.
 report_power completed successfully
-report_power: Time (s): cpu = 00:01:58 ; elapsed = 00:00:58 . Memory (MB): peak = 6305.707 ; gain = 180.012 ; free physical = 7984 ; free virtual = 73417
+report_power: Time (s): cpu = 00:02:04 ; elapsed = 00:00:56 . Memory (MB): peak = 6437.602 ; gain = 194.777 ; free physical = 8737 ; free virtual = 74171
 INFO: [runtcl-4] Executing : report_route_status -file shellTop_route_status.rpt -pb shellTop_route_status.pb
 INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -file shellTop_timing_summary_routed.rpt -pb shellTop_timing_summary_routed.pb -rpx shellTop_timing_summary_routed.rpx -warn_on_violation 
 INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Temperature grade: E, Delay Type: min_max, Timing Stage: Requireds.
@@ -1536,17 +1549,18 @@ INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum o
 CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
 WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
 WARNING: [Timing 38-453] Line(s) in the report have been truncated to keep line length below 5000 characters.
-report_timing_summary: Time (s): cpu = 00:00:51 ; elapsed = 00:00:13 . Memory (MB): peak = 6356.680 ; gain = 50.973 ; free physical = 7929 ; free virtual = 73362
+report_timing_summary: Time (s): cpu = 00:00:49 ; elapsed = 00:00:13 . Memory (MB): peak = 6499.574 ; gain = 61.973 ; free physical = 8665 ; free virtual = 74099
 INFO: [runtcl-4] Executing : report_incremental_reuse -file shellTop_incremental_reuse_routed.rpt
 INFO: [Vivado_Tcl 4-545] No incremental reuse to report, no incremental placement and routing data was found.
 INFO: [runtcl-4] Executing : report_clock_utilization -file shellTop_clock_utilization_routed.rpt
-report_clock_utilization: Time (s): cpu = 00:01:04 ; elapsed = 00:01:05 . Memory (MB): peak = 6356.680 ; gain = 0.000 ; free physical = 7914 ; free virtual = 73347
+report_clock_utilization: Time (s): cpu = 00:00:59 ; elapsed = 00:00:59 . Memory (MB): peak = 6499.574 ; gain = 0.000 ; free physical = 8658 ; free virtual = 74092
 INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file route_report_bus_skew_0.rpt -rpx route_report_bus_skew_0.rpx
 INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Temperature grade: E, Delay Type: min_max, Timing Stage: Requireds.
 INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
-INFO: [Memdata 28-208] The XPM instance: <shell_i/axi_hwicap_0/U0/ICAP_NOT_SHARED.HWICAP_CTRL_I/IPIC_IF_I/WRFIFO.WRDATA_FIFO_I/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst> is part of IP: <shell_i/axi_hwicap_0>. This XPM instance will be excluded from the .mmi because updatemem is prohibited from making changes to an XPM that is part of an IP.
-INFO: [Memdata 28-208] The XPM instance: <shell_i/axi_hwicap_0/U0/ICAP_NOT_SHARED.HWICAP_CTRL_I/IPIC_IF_I/RD_FIFO.RDDATA_FIFO_I/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst> is part of IP: <shell_i/axi_hwicap_0>. This XPM instance will be excluded from the .mmi because updatemem is prohibited from making changes to an XPM that is part of an IP.
-write_mem_info: Time (s): cpu = 00:00:49 ; elapsed = 00:00:49 . Memory (MB): peak = 6356.680 ; gain = 0.000 ; free physical = 7909 ; free virtual = 73342
+INFO: [Memdata 28-208] The XPM instance: <shell_i/axi_pr_controller_0/inst/datamover_inst/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_INCLUDE_GP_SF.I_S2MM_GP_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst> is part of IP: <shell_i/axi_pr_controller_0/inst/datamover_inst>. This XPM instance will be excluded from the .mmi because updatemem is prohibited from making changes to an XPM that is part of an IP.
+INFO: [Memdata 28-208] The XPM instance: <shell_i/axi_pr_controller_0/inst/datamover_inst/U0/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst> is part of IP: <shell_i/axi_pr_controller_0/inst/datamover_inst>. This XPM instance will be excluded from the .mmi because updatemem is prohibited from making changes to an XPM that is part of an IP.
+INFO: [Memdata 28-208] The XPM instance: <shell_i/axi_pr_controller_0/inst/axi_intf_inst/fifo_inst/xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst> is part of IP: <shell_i/axi_pr_controller_0>. This XPM instance will be excluded from the .mmi because updatemem is prohibited from making changes to an XPM that is part of an IP.
+write_mem_info: Time (s): cpu = 00:00:51 ; elapsed = 00:00:51 . Memory (MB): peak = 6499.574 ; gain = 0.000 ; free physical = 8657 ; free virtual = 74090
 Command: write_bitstream -force shellTop.bit
 Attempting to get a license for feature 'Implementation' and/or device 'xcku115'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xcku115'
@@ -1630,7 +1644,7 @@ WARNING: [DRC DPOP-4] MREG Output pipelining: DSP pr_i/conv_layer_0/inst/conv_la
 WARNING: [DRC DPREG-7] DSP48E2_PregDynOpmodeZmuxP:: The DSP48E2 cell pr_i/conv_layer_0/inst/conv_layer_fadd_3bkb_U1/conv_layer_ap_fadd_6_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/DSP with the given dynamic OPMODE[6:0] connections may lead to an unregistered asynchronous feedback path without the PREG attribute enabled. Please refer to the user guide and if one of the internal P feedback opmodes is possible for this design the PREG attribute must be set to 1, currently set to 0
 WARNING: [DRC REQP-1774] RAMB36E2_WRITE_WIDTH_A_18_doesnt_use_WEA32: The RAMB36E2 cell shell_i/mb_system/microblaze_0_local_memory/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_A set to 18. The WEA[3:2] pins should not be connected to active signal.
 WARNING: [DRC REQP-1774] RAMB36E2_WRITE_WIDTH_A_18_doesnt_use_WEA32: The RAMB36E2 cell shell_i/mb_system/microblaze_0_local_memory/lmb_bram/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_8SERIES.WITH_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.SERIES8_TDP_SP36_NO_ECC_ATTR.ram has WRITE_WIDTH_A set to 18. The WEA[3:2] pins should not be connected to active signal.
-WARNING: [DRC RTSTAT-10] No routable loads: 270 net(s) have no routable loads. The problem bus(es) and/or net(s) are shell_i/mem_interface/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/LMB_CE_riu, shell_i/mem_interface/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/LMB_UE_riu, shell_i/mem_interface/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_top/u_ddr_cal/u_xsdb_arbiter/Q[12], shell_i/mem_interface/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_top/u_ddr_cal/u_xsdb_arbiter/Q[13], shell_i/mem_interface/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_top/u_ddr_cal/u_xsdb_arbiter/Q[14], shell_i/mem_interface/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_top/u_ddr_cal/u_xsdb_arbiter/Q[15], shell_i/mem_interface/ddr4_0/inst/u_ddr4_mem_intfc/u_phy2clb_fixdly_rdy_upp/SYNC[0].sync_reg[1], shell_i/mem_interface/ddr4_0/inst/u_ddr4_mem_intfc/u_phy2clb_fixdly_rdy_low/SYNC[0].sync_reg[1], shell_i/mem_interface/ddr4_0/inst/u_ddr4_mem_intfc/u_phy2clb_phy_rdy_upp/SYNC[0].sync_reg[1], shell_i/mem_interface/ddr4_0/inst/u_ddr4_mem_intfc/u_phy2clb_phy_rdy_low/SYNC[0].sync_reg[1], shell_i/mem_interface/ddr4_0/inst/u_ddr4_mem_intfc/u_phy2clb_fixdly_rdy_low/SYNC[1].sync_reg[1], shell_i/mem_interface/ddr4_0/inst/u_ddr4_mem_intfc/u_phy2clb_phy_rdy_upp/SYNC[1].sync_reg[1], shell_i/mem_interface/ddr4_0/inst/u_ddr4_mem_intfc/u_phy2clb_phy_rdy_low/SYNC[1].sync_reg[1], shell_i/mem_interface/ddr4_0/inst/u_ddr4_mem_intfc/u_phy2clb_fixdly_rdy_upp/SYNC[1].sync_reg[1], shell_i/mem_interface/ddr4_0/inst/u_ddr4_mem_intfc/u_phy2clb_fixdly_rdy_low/SYNC[2].sync_reg[1]... and (the first 15 of 193 listed).
+WARNING: [DRC RTSTAT-10] No routable loads: 300 net(s) have no routable loads. The problem bus(es) and/or net(s) are shell_i/mem_interface/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/LMB_CE_riu, shell_i/mem_interface/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/LMB_UE_riu, shell_i/mem_interface/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_top/u_ddr_cal/u_xsdb_arbiter/Q[12], shell_i/mem_interface/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_top/u_ddr_cal/u_xsdb_arbiter/Q[13], shell_i/mem_interface/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_top/u_ddr_cal/u_xsdb_arbiter/Q[14], shell_i/mem_interface/ddr4_0/inst/u_ddr4_mem_intfc/u_ddr_cal_top/u_ddr_cal/u_xsdb_arbiter/Q[15], shell_i/mem_interface/ddr4_0/inst/u_ddr4_mem_intfc/u_phy2clb_fixdly_rdy_low/SYNC[0].sync_reg[1], shell_i/mem_interface/ddr4_0/inst/u_ddr4_mem_intfc/u_phy2clb_fixdly_rdy_upp/SYNC[0].sync_reg[1], shell_i/mem_interface/ddr4_0/inst/u_ddr4_mem_intfc/u_phy2clb_phy_rdy_low/SYNC[0].sync_reg[1], shell_i/mem_interface/ddr4_0/inst/u_ddr4_mem_intfc/u_phy2clb_phy_rdy_upp/SYNC[0].sync_reg[1], shell_i/mem_interface/ddr4_0/inst/u_ddr4_mem_intfc/u_phy2clb_fixdly_rdy_low/SYNC[1].sync_reg[1], shell_i/mem_interface/ddr4_0/inst/u_ddr4_mem_intfc/u_phy2clb_fixdly_rdy_upp/SYNC[1].sync_reg[1], shell_i/mem_interface/ddr4_0/inst/u_ddr4_mem_intfc/u_phy2clb_phy_rdy_low/SYNC[1].sync_reg[1], shell_i/mem_interface/ddr4_0/inst/u_ddr4_mem_intfc/u_phy2clb_phy_rdy_upp/SYNC[1].sync_reg[1], shell_i/mem_interface/ddr4_0/inst/u_ddr4_mem_intfc/u_phy2clb_fixdly_rdy_upp/SYNC[2].sync_reg[1]... and (the first 15 of 223 listed).
 INFO: [DRC AVAL-155] enum_AMULTSEL_BMULTSEL_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: pr_i/conv_layer_0/inst/conv_layer_fadd_3bkb_U1/conv_layer_ap_fadd_6_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.SHIFT_RND/DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 INFO: [DRC AVAL-155] enum_AMULTSEL_BMULTSEL_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: pr_i/conv_layer_0/inst/conv_layer_fmul_3cud_U2/conv_layer_ap_fmul_3_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP1/DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 INFO: [DRC AVAL-155] enum_AMULTSEL_BMULTSEL_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: pr_i/conv_layer_0/inst/conv_layer_fmul_3cud_U2/conv_layer_ap_fmul_3_max_dsp_32_u/U0/i_synth/MULT.OP/MULT/DSP48E1_SPD_SGL_VARIANT.FIX_MULT/DSP2/DSP: DSP48E2 is not using the D port (AMULTSEL = A and BMULTSEL = B). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
@@ -1638,6 +1652,22 @@ INFO: [DRC AVAL-155] enum_AMULTSEL_BMULTSEL_enum_DREG_ADREG_0_connects_CED_CEAD_
 INFO: [DRC AVAL-156] enum_USE_MULT_NONE__enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND: pr_i/conv_layer_0/inst/conv_layer_fmul_3cud_U2/conv_layer_ap_fmul_3_max_dsp_32_u/U0/i_synth/MULT.OP/R_AND_R/LAT_OPT.FULL.R_AND_R/DSP48E1_SGL_EXP_IP.OLD_ADD.ADD/DSP: DSP48E2 is not using the Multiplier (USE_MULT = NONE). For improved power characteristics, set DREG and ADREG to '1', tie CED, CEAD, and RSTD to logic '0'.
 INFO: [DRC REQP-1857] RAMB18E2_writefirst_collision_advisory: Synchronous clocking is detected for BRAM (shell_i/mem_interface/mem_interconnect/s01_couplers/s01_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
 INFO: [DRC REQP-1857] RAMB18E2_writefirst_collision_advisory: Synchronous clocking is detected for BRAM (shell_i/mem_interface/mem_interconnect/s01_couplers/s01_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [DRC REQP-1857] RAMB18E2_writefirst_collision_advisory: Synchronous clocking is detected for BRAM (shell_i/mem_interface/mem_interconnect/s02_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/gen_ramb[0].ramb_inst) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [DRC REQP-1857] RAMB18E2_writefirst_collision_advisory: Synchronous clocking is detected for BRAM (shell_i/mem_interface/mem_interconnect/s02_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/gen_ramb[10].ramb_inst) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [DRC REQP-1857] RAMB18E2_writefirst_collision_advisory: Synchronous clocking is detected for BRAM (shell_i/mem_interface/mem_interconnect/s02_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/gen_ramb[11].ramb_inst) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [DRC REQP-1857] RAMB18E2_writefirst_collision_advisory: Synchronous clocking is detected for BRAM (shell_i/mem_interface/mem_interconnect/s02_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/gen_ramb[12].ramb_inst) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [DRC REQP-1857] RAMB18E2_writefirst_collision_advisory: Synchronous clocking is detected for BRAM (shell_i/mem_interface/mem_interconnect/s02_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/gen_ramb[13].ramb_inst) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [DRC REQP-1857] RAMB18E2_writefirst_collision_advisory: Synchronous clocking is detected for BRAM (shell_i/mem_interface/mem_interconnect/s02_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/gen_ramb[14].ramb_inst) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [DRC REQP-1857] RAMB18E2_writefirst_collision_advisory: Synchronous clocking is detected for BRAM (shell_i/mem_interface/mem_interconnect/s02_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/gen_ramb[15].ramb_inst) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [DRC REQP-1857] RAMB18E2_writefirst_collision_advisory: Synchronous clocking is detected for BRAM (shell_i/mem_interface/mem_interconnect/s02_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/gen_ramb[1].ramb_inst) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [DRC REQP-1857] RAMB18E2_writefirst_collision_advisory: Synchronous clocking is detected for BRAM (shell_i/mem_interface/mem_interconnect/s02_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/gen_ramb[2].ramb_inst) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [DRC REQP-1857] RAMB18E2_writefirst_collision_advisory: Synchronous clocking is detected for BRAM (shell_i/mem_interface/mem_interconnect/s02_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/gen_ramb[3].ramb_inst) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [DRC REQP-1857] RAMB18E2_writefirst_collision_advisory: Synchronous clocking is detected for BRAM (shell_i/mem_interface/mem_interconnect/s02_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/gen_ramb[4].ramb_inst) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [DRC REQP-1857] RAMB18E2_writefirst_collision_advisory: Synchronous clocking is detected for BRAM (shell_i/mem_interface/mem_interconnect/s02_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/gen_ramb[5].ramb_inst) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [DRC REQP-1857] RAMB18E2_writefirst_collision_advisory: Synchronous clocking is detected for BRAM (shell_i/mem_interface/mem_interconnect/s02_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/gen_ramb[6].ramb_inst) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [DRC REQP-1857] RAMB18E2_writefirst_collision_advisory: Synchronous clocking is detected for BRAM (shell_i/mem_interface/mem_interconnect/s02_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/gen_ramb[7].ramb_inst) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [DRC REQP-1857] RAMB18E2_writefirst_collision_advisory: Synchronous clocking is detected for BRAM (shell_i/mem_interface/mem_interconnect/s02_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/gen_ramb[8].ramb_inst) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [DRC REQP-1857] RAMB18E2_writefirst_collision_advisory: Synchronous clocking is detected for BRAM (shell_i/mem_interface/mem_interconnect/s02_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_pktfifo_r_upsizer.pktfifo_read_data_inst/gen_ramb[9].ramb_inst) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
 INFO: [DRC REQP-1858] RAMB36E2_writefirst_collision_advisory: Synchronous clocking is detected for BRAM (shell_i/mem_interface/mem_interconnect/s01_couplers/s01_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
 INFO: [DRC REQP-1858] RAMB36E2_writefirst_collision_advisory: Synchronous clocking is detected for BRAM (shell_i/mem_interface/mem_interconnect/s01_couplers/s01_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
 INFO: [DRC REQP-1858] RAMB36E2_writefirst_collision_advisory: Synchronous clocking is detected for BRAM (shell_i/mem_interface/mem_interconnect/s01_couplers/s01_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
@@ -1653,7 +1683,26 @@ INFO: [DRC REQP-1858] RAMB36E2_writefirst_collision_advisory: Synchronous clocki
 INFO: [DRC REQP-1858] RAMB36E2_writefirst_collision_advisory: Synchronous clocking is detected for BRAM (shell_i/mem_interface/mem_interconnect/s01_couplers/s01_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
 INFO: [DRC REQP-1858] RAMB36E2_writefirst_collision_advisory: Synchronous clocking is detected for BRAM (shell_i/mem_interface/mem_interconnect/s01_couplers/s01_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
 INFO: [DRC REQP-1858] RAMB36E2_writefirst_collision_advisory: Synchronous clocking is detected for BRAM (shell_i/mem_interface/mem_interconnect/s01_couplers/s01_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
-INFO: [Vivado 12-3199] DRC finished with 0 Errors, 69 Warnings, 22 Advisories
+INFO: [DRC REQP-1858] RAMB36E2_writefirst_collision_advisory: Synchronous clocking is detected for BRAM (shell_i/mem_interface/mem_interconnect/s02_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.gen_pktfifo_w_upsizer.pktfifo_write_data_inst/w_buffer/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [DRC REQP-1858] RAMB36E2_writefirst_collision_advisory: Synchronous clocking is detected for BRAM (shell_i/mem_interface/mem_interconnect/s02_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.gen_pktfifo_w_upsizer.pktfifo_write_data_inst/w_buffer/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [DRC REQP-1858] RAMB36E2_writefirst_collision_advisory: Synchronous clocking is detected for BRAM (shell_i/mem_interface/mem_interconnect/s02_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.gen_pktfifo_w_upsizer.pktfifo_write_data_inst/w_buffer/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [DRC REQP-1858] RAMB36E2_writefirst_collision_advisory: Synchronous clocking is detected for BRAM (shell_i/mem_interface/mem_interconnect/s02_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.gen_pktfifo_w_upsizer.pktfifo_write_data_inst/w_buffer/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [DRC REQP-1858] RAMB36E2_writefirst_collision_advisory: Synchronous clocking is detected for BRAM (shell_i/mem_interface/mem_interconnect/s02_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.gen_pktfifo_w_upsizer.pktfifo_write_data_inst/w_buffer/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [DRC REQP-1858] RAMB36E2_writefirst_collision_advisory: Synchronous clocking is detected for BRAM (shell_i/mem_interface/mem_interconnect/s02_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.gen_pktfifo_w_upsizer.pktfifo_write_data_inst/w_buffer/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [DRC REQP-1858] RAMB36E2_writefirst_collision_advisory: Synchronous clocking is detected for BRAM (shell_i/mem_interface/mem_interconnect/s02_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.gen_pktfifo_w_upsizer.pktfifo_write_data_inst/w_buffer/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [DRC REQP-1858] RAMB36E2_writefirst_collision_advisory: Synchronous clocking is detected for BRAM (shell_i/mem_interface/mem_interconnect/s02_couplers/auto_us_df/inst/gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_WRITE.gen_pktfifo_w_upsizer.pktfifo_write_data_inst/w_buffer/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/prim_noinit.ram/DEVICE_8SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram) in SDP mode with WRITE_FIRST write-mode. It is strongly suggested to change this mode to NO_CHANGE for best power characteristics. However, both WRITE_FIRST and NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [DRC REQP-1934] RAMB18E2_nochange_collision_advisory: Synchronous clocking is detected for BRAM (shell_i/axi_pr_controller_0/inst/datamover_inst/U0/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_8) in SDP mode with NO_CHANGE write-mode. This is the preferred mode for best power characteristics. However, NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [DRC REQP-1934] RAMB18E2_nochange_collision_advisory: Synchronous clocking is detected for BRAM (shell_i/axi_pr_controller_0/inst/datamover_inst/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_INCLUDE_GP_SF.I_S2MM_GP_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_7) in SDP mode with NO_CHANGE write-mode. This is the preferred mode for best power characteristics. However, NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [DRC REQP-1935] RAMB36E2_nochange_collision_advisory: Synchronous clocking is detected for BRAM (shell_i/axi_pr_controller_0/inst/datamover_inst/U0/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0) in SDP mode with NO_CHANGE write-mode. This is the preferred mode for best power characteristics. However, NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [DRC REQP-1935] RAMB36E2_nochange_collision_advisory: Synchronous clocking is detected for BRAM (shell_i/axi_pr_controller_0/inst/datamover_inst/U0/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1) in SDP mode with NO_CHANGE write-mode. This is the preferred mode for best power characteristics. However, NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [DRC REQP-1935] RAMB36E2_nochange_collision_advisory: Synchronous clocking is detected for BRAM (shell_i/axi_pr_controller_0/inst/datamover_inst/U0/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_2) in SDP mode with NO_CHANGE write-mode. This is the preferred mode for best power characteristics. However, NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [DRC REQP-1935] RAMB36E2_nochange_collision_advisory: Synchronous clocking is detected for BRAM (shell_i/axi_pr_controller_0/inst/datamover_inst/U0/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_3) in SDP mode with NO_CHANGE write-mode. This is the preferred mode for best power characteristics. However, NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [DRC REQP-1935] RAMB36E2_nochange_collision_advisory: Synchronous clocking is detected for BRAM (shell_i/axi_pr_controller_0/inst/datamover_inst/U0/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_4) in SDP mode with NO_CHANGE write-mode. This is the preferred mode for best power characteristics. However, NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [DRC REQP-1935] RAMB36E2_nochange_collision_advisory: Synchronous clocking is detected for BRAM (shell_i/axi_pr_controller_0/inst/datamover_inst/U0/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_5) in SDP mode with NO_CHANGE write-mode. This is the preferred mode for best power characteristics. However, NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [DRC REQP-1935] RAMB36E2_nochange_collision_advisory: Synchronous clocking is detected for BRAM (shell_i/axi_pr_controller_0/inst/datamover_inst/U0/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_6) in SDP mode with NO_CHANGE write-mode. This is the preferred mode for best power characteristics. However, NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [DRC REQP-1935] RAMB36E2_nochange_collision_advisory: Synchronous clocking is detected for BRAM (shell_i/axi_pr_controller_0/inst/datamover_inst/U0/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_7) in SDP mode with NO_CHANGE write-mode. This is the preferred mode for best power characteristics. However, NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [DRC REQP-1935] RAMB36E2_nochange_collision_advisory: Synchronous clocking is detected for BRAM (shell_i/axi_pr_controller_0/inst/datamover_inst/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_INCLUDE_GP_SF.I_S2MM_GP_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0) in SDP mode with NO_CHANGE write-mode. This is the preferred mode for best power characteristics. However, NO_CHANGE may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+INFO: [Vivado 12-3199] DRC finished with 0 Errors, 69 Warnings, 57 Advisories
 INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
 INFO: [Designutils 20-2272] Running write_bitstream with 8 threads.
 Loading data files...
@@ -1662,14 +1711,14 @@ Loading route data...
 Processing options...
 Creating bitmap...
 Creating bitstream...
-Bitstream compression saved 165084192 bits.
-Bitstream compression saved 106004672 bits.
+Bitstream compression saved 162401856 bits.
+Bitstream compression saved 104260704 bits.
 Writing bitstream ./shellTop.bit...
 INFO: [Vivado 12-1842] Bitgen Completed Successfully.
 INFO: [Project 1-118] WebTalk data collection is enabled (User setting is ON. Install Setting is ON.).
-INFO: [Common 17-186] '/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Thu May 17 21:37:03 2018. For additional details about this file, please refer to the WebTalk help file at /opt/Xilinx/Vivado/2018.1/doc/webtalk_introduction.html.
+INFO: [Common 17-186] '/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Wed May 23 18:37:24 2018. For additional details about this file, please refer to the WebTalk help file at /opt/Xilinx/Vivado/2018.1/doc/webtalk_introduction.html.
 INFO: [Common 17-83] Releasing license: Implementation
-240 Infos, 194 Warnings, 113 Critical Warnings and 0 Errors encountered.
+278 Infos, 195 Warnings, 113 Critical Warnings and 0 Errors encountered.
 write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:02:27 ; elapsed = 00:03:46 . Memory (MB): peak = 7190.344 ; gain = 833.664 ; free physical = 7800 ; free virtual = 73234
-INFO: [Common 17-206] Exiting Vivado at Thu May 17 21:37:03 2018...
+write_bitstream: Time (s): cpu = 00:02:35 ; elapsed = 00:03:54 . Memory (MB): peak = 7338.035 ; gain = 838.461 ; free physical = 8609 ; free virtual = 74043
+INFO: [Common 17-206] Exiting Vivado at Wed May 23 18:37:24 2018...

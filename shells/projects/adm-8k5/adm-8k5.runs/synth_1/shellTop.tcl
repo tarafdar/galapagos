@@ -16,7 +16,6 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param xicom.use_bs_reader 1
 set_msg_config  -ruleid {1}  -id {[BD 41-1306]}  -suppress 
 set_msg_config  -ruleid {2}  -id {[BD 41-1271]}  -suppress 
 create_project -in_memory -part xcku115-flva1517-2-e
@@ -43,9 +42,6 @@ set_property used_in_implementation false [get_files -all /home/graham0/Vivado_P
 set_property used_in_implementation false [get_files -all /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_clk_wiz_0_0/shell_clk_wiz_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_bram_ctrl_0_0/shell_axi_bram_ctrl_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_blk_mem_gen_0_0/shell_blk_mem_gen_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_hwicap_0_0/shell_axi_hwicap_0_0.xdc]
-set_property used_in_implementation false [get_files -all /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_hwicap_0_0/shell_axi_hwicap_0_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_hwicap_0_0/shell_axi_hwicap_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_reverseEndian64_0_0/constraints/reverseEndian64_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_reverseEndian64_1_0/constraints/reverseEndian64_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_pr_decoupler_0_0/shell_pr_decoupler_0_0_ooc.xdc]
@@ -121,9 +117,18 @@ set_property used_in_implementation false [get_files -all /home/graham0/Vivado_P
 set_property used_in_implementation false [get_files -all /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_rx_data_fifo_1_0/shell_rx_data_fifo_1_0/shell_rx_data_fifo_1_0.xdc]
 set_property used_in_implementation false [get_files -all /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_tx_data_fifo_0_0/shell_tx_data_fifo_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_tx_data_fifo_0_0/shell_tx_data_fifo_0_0/shell_tx_data_fifo_0_0.xdc]
+set_property used_in_implementation false [get_files -all /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_pr_controller_0_0/src/ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_pr_controller_0_0/src/axis_data_fifo_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_pr_controller_0_0/src/axis_data_fifo_0.xdc]
+set_property used_in_implementation false [get_files -all /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_pr_controller_0_0/src/axi_datamover_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_pr_controller_0_0/src/axi_datamover_0.xdc]
+set_property used_in_implementation false [get_files -all /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_axi_pr_controller_0_0/src/axi_datamover_0_clocks.xdc]
 set_property used_in_synthesis false [get_files -all /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_cc_6/shell_auto_cc_6_clocks.xdc]
 set_property used_in_implementation false [get_files -all /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_cc_6/shell_auto_cc_6_clocks.xdc]
 set_property used_in_implementation false [get_files -all /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_cc_6/shell_auto_cc_6_ooc.xdc]
+set_property used_in_synthesis false [get_files -all /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_us_df_0/shell_auto_us_df_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_us_df_0/shell_auto_us_df_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_us_df_0/shell_auto_us_df_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_s01_data_fifo_0/shell_s01_data_fifo_0_ooc.xdc]
 set_property used_in_synthesis false [get_files -all /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_us_cc_df_0/shell_auto_us_cc_df_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_us_cc_df_0/shell_auto_us_cc_df_0_clocks.xdc]

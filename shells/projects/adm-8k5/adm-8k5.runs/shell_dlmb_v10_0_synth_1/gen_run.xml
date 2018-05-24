@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="shell_dlmb_v10_0_synth_1" LaunchPart="xcku115-flva1517-2-e" LaunchTime="1526399785">
-  <File Type="RDS-UTIL" Name="shell_dlmb_v10_0_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="shell_dlmb_v10_0_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="shell_dlmb_v10_0_utilization_synth.rpt"/>
   <File Type="RDS-RDS" Name="shell_dlmb_v10_0.vds"/>
   <File Type="RDS-DCP" Name="shell_dlmb_v10_0.dcp"/>
   <File Type="PA-TCL" Name="shell_dlmb_v10_0.tcl"/>

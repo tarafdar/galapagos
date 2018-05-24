@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="shell_rx_data_fifo_1_0_synth_1" LaunchPart="xcku115-flva1517-2-e" LaunchTime="1526399786">
-  <File Type="RDS-UTIL" Name="shell_rx_data_fifo_1_0_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="shell_rx_data_fifo_1_0_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="shell_rx_data_fifo_1_0_utilization_synth.rpt"/>
   <File Type="RDS-RDS" Name="shell_rx_data_fifo_1_0.vds"/>
   <File Type="RDS-DCP" Name="shell_rx_data_fifo_1_0.dcp"/>
   <File Type="PA-TCL" Name="shell_rx_data_fifo_1_0.tcl"/>
