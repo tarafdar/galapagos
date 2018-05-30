@@ -1,0 +1,423 @@
+
+*** Running vivado
+    with args -log shell_pr_decoupler_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source shell_pr_decoupler_0_0.tcl
+
+
+****** Vivado v2018.1 (64-bit)
+  **** SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018
+  **** IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source shell_pr_decoupler_0_0.tcl -notrace
+Command: synth_design -top shell_pr_decoupler_0_0 -part xcku115-flva1517-2-e -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xcku115'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcku115'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 28717 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1351.457 ; gain = 79.000 ; free physical = 9536 ; free virtual = 37100
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'shell_pr_decoupler_0_0' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_pr_decoupler_0_0/synth/shell_pr_decoupler_0_0.vhd:226]
+	Parameter C_XDEVICEFAMILY bound to: kintexu - type: string 
+INFO: [Synth 8-3491] module 'prd_shell_pr_decoupler_0_0' declared at '/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_pr_decoupler_0_0/prd_shell_pr_decoupler_0_0.vhd:68' bound to instance 'U0' of component 'prd_shell_pr_decoupler_0_0' [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_pr_decoupler_0_0/synth/shell_pr_decoupler_0_0.vhd:598]
+INFO: [Synth 8-256] done synthesizing module 'shell_pr_decoupler_0_0' (3#1) [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_pr_decoupler_0_0/synth/shell_pr_decoupler_0_0.vhd:226]
+WARNING: [Synth 8-3331] design axi_lite_if has unconnected port s_axi_wdata[31]
+WARNING: [Synth 8-3331] design axi_lite_if has unconnected port s_axi_wdata[30]
+WARNING: [Synth 8-3331] design axi_lite_if has unconnected port s_axi_wdata[29]
+WARNING: [Synth 8-3331] design axi_lite_if has unconnected port s_axi_wdata[28]
+WARNING: [Synth 8-3331] design axi_lite_if has unconnected port s_axi_wdata[27]
+WARNING: [Synth 8-3331] design axi_lite_if has unconnected port s_axi_wdata[26]
+WARNING: [Synth 8-3331] design axi_lite_if has unconnected port s_axi_wdata[25]
+WARNING: [Synth 8-3331] design axi_lite_if has unconnected port s_axi_wdata[24]
+WARNING: [Synth 8-3331] design axi_lite_if has unconnected port s_axi_wdata[23]
+WARNING: [Synth 8-3331] design axi_lite_if has unconnected port s_axi_wdata[22]
+WARNING: [Synth 8-3331] design axi_lite_if has unconnected port s_axi_wdata[21]
+WARNING: [Synth 8-3331] design axi_lite_if has unconnected port s_axi_wdata[20]
+WARNING: [Synth 8-3331] design axi_lite_if has unconnected port s_axi_wdata[19]
+WARNING: [Synth 8-3331] design axi_lite_if has unconnected port s_axi_wdata[18]
+WARNING: [Synth 8-3331] design axi_lite_if has unconnected port s_axi_wdata[17]
+WARNING: [Synth 8-3331] design axi_lite_if has unconnected port s_axi_wdata[16]
+WARNING: [Synth 8-3331] design axi_lite_if has unconnected port s_axi_wdata[15]
+WARNING: [Synth 8-3331] design axi_lite_if has unconnected port s_axi_wdata[14]
+WARNING: [Synth 8-3331] design axi_lite_if has unconnected port s_axi_wdata[13]
+WARNING: [Synth 8-3331] design axi_lite_if has unconnected port s_axi_wdata[12]
+WARNING: [Synth 8-3331] design axi_lite_if has unconnected port s_axi_wdata[11]
+WARNING: [Synth 8-3331] design axi_lite_if has unconnected port s_axi_wdata[10]
+WARNING: [Synth 8-3331] design axi_lite_if has unconnected port s_axi_wdata[9]
+WARNING: [Synth 8-3331] design axi_lite_if has unconnected port s_axi_wdata[8]
+WARNING: [Synth 8-3331] design axi_lite_if has unconnected port s_axi_wdata[7]
+WARNING: [Synth 8-3331] design axi_lite_if has unconnected port s_axi_wdata[6]
+WARNING: [Synth 8-3331] design axi_lite_if has unconnected port s_axi_wdata[5]
+WARNING: [Synth 8-3331] design axi_lite_if has unconnected port s_axi_wdata[4]
+WARNING: [Synth 8-3331] design axi_lite_if has unconnected port s_axi_wdata[3]
+WARNING: [Synth 8-3331] design axi_lite_if has unconnected port s_axi_wdata[2]
+WARNING: [Synth 8-3331] design axi_lite_if has unconnected port s_axi_wdata[1]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1396.066 ; gain = 123.609 ; free physical = 9468 ; free virtual = 37034
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1396.066 ; gain = 123.609 ; free physical = 9508 ; free virtual = 37077
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1396.066 ; gain = 123.609 ; free physical = 9508 ; free virtual = 37077
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xcku115-flva1517-2-e
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_pr_decoupler_0_0/shell_pr_decoupler_0_0_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_pr_decoupler_0_0/shell_pr_decoupler_0_0_ooc.xdc] for cell 'U0'
+Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_pr_decoupler_0_0/shell_pr_decoupler_0_0.xdc] for cell 'U0'
+Finished Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_pr_decoupler_0_0/shell_pr_decoupler_0_0.xdc] for cell 'U0'
+Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/shell_pr_decoupler_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/shell_pr_decoupler_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2092.398 ; gain = 1.000 ; free physical = 7632 ; free virtual = 35259
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:34 . Memory (MB): peak = 2092.398 ; gain = 819.941 ; free physical = 7746 ; free virtual = 35373
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xcku115-flva1517-2-e
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:34 . Memory (MB): peak = 2092.398 ; gain = 819.941 ; free physical = 7747 ; free virtual = 35374
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for U0. (constraint file  /nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/shell_pr_decoupler_0_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:34 . Memory (MB): peak = 2092.398 ; gain = 819.941 ; free physical = 7763 ; free virtual = 35390
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'axi_lite_if'
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 st_idle |                              000 |                              000
+                 st_read |                              100 |                              001
+            st_read_resp |                              010 |                              011
+                st_write |                              011 |                              010
+           st_write_resp |                              001 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'sequential' in module 'axi_lite_if'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:35 . Memory (MB): peak = 2092.398 ; gain = 819.941 ; free physical = 7766 ; free virtual = 35395
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   5 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 3     
+	   2 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 2     
+	   5 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module axi_lite_if 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   5 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 3     
+	   2 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 2     
+	   5 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 5520 (col length:120)
+BRAMs: 4320 (col length: RAMB18 240 RAMB36 120)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3331] design prd_shell_pr_decoupler_0_0 has unconnected port s_axi_reg_wdata[31]
+WARNING: [Synth 8-3331] design prd_shell_pr_decoupler_0_0 has unconnected port s_axi_reg_wdata[30]
+WARNING: [Synth 8-3331] design prd_shell_pr_decoupler_0_0 has unconnected port s_axi_reg_wdata[29]
+WARNING: [Synth 8-3331] design prd_shell_pr_decoupler_0_0 has unconnected port s_axi_reg_wdata[28]
+WARNING: [Synth 8-3331] design prd_shell_pr_decoupler_0_0 has unconnected port s_axi_reg_wdata[27]
+WARNING: [Synth 8-3331] design prd_shell_pr_decoupler_0_0 has unconnected port s_axi_reg_wdata[26]
+WARNING: [Synth 8-3331] design prd_shell_pr_decoupler_0_0 has unconnected port s_axi_reg_wdata[25]
+WARNING: [Synth 8-3331] design prd_shell_pr_decoupler_0_0 has unconnected port s_axi_reg_wdata[24]
+WARNING: [Synth 8-3331] design prd_shell_pr_decoupler_0_0 has unconnected port s_axi_reg_wdata[23]
+WARNING: [Synth 8-3331] design prd_shell_pr_decoupler_0_0 has unconnected port s_axi_reg_wdata[22]
+WARNING: [Synth 8-3331] design prd_shell_pr_decoupler_0_0 has unconnected port s_axi_reg_wdata[21]
+WARNING: [Synth 8-3331] design prd_shell_pr_decoupler_0_0 has unconnected port s_axi_reg_wdata[20]
+WARNING: [Synth 8-3331] design prd_shell_pr_decoupler_0_0 has unconnected port s_axi_reg_wdata[19]
+WARNING: [Synth 8-3331] design prd_shell_pr_decoupler_0_0 has unconnected port s_axi_reg_wdata[18]
+WARNING: [Synth 8-3331] design prd_shell_pr_decoupler_0_0 has unconnected port s_axi_reg_wdata[17]
+WARNING: [Synth 8-3331] design prd_shell_pr_decoupler_0_0 has unconnected port s_axi_reg_wdata[16]
+WARNING: [Synth 8-3331] design prd_shell_pr_decoupler_0_0 has unconnected port s_axi_reg_wdata[15]
+WARNING: [Synth 8-3331] design prd_shell_pr_decoupler_0_0 has unconnected port s_axi_reg_wdata[14]
+WARNING: [Synth 8-3331] design prd_shell_pr_decoupler_0_0 has unconnected port s_axi_reg_wdata[13]
+WARNING: [Synth 8-3331] design prd_shell_pr_decoupler_0_0 has unconnected port s_axi_reg_wdata[12]
+WARNING: [Synth 8-3331] design prd_shell_pr_decoupler_0_0 has unconnected port s_axi_reg_wdata[11]
+WARNING: [Synth 8-3331] design prd_shell_pr_decoupler_0_0 has unconnected port s_axi_reg_wdata[10]
+WARNING: [Synth 8-3331] design prd_shell_pr_decoupler_0_0 has unconnected port s_axi_reg_wdata[9]
+WARNING: [Synth 8-3331] design prd_shell_pr_decoupler_0_0 has unconnected port s_axi_reg_wdata[8]
+WARNING: [Synth 8-3331] design prd_shell_pr_decoupler_0_0 has unconnected port s_axi_reg_wdata[7]
+WARNING: [Synth 8-3331] design prd_shell_pr_decoupler_0_0 has unconnected port s_axi_reg_wdata[6]
+WARNING: [Synth 8-3331] design prd_shell_pr_decoupler_0_0 has unconnected port s_axi_reg_wdata[5]
+WARNING: [Synth 8-3331] design prd_shell_pr_decoupler_0_0 has unconnected port s_axi_reg_wdata[4]
+WARNING: [Synth 8-3331] design prd_shell_pr_decoupler_0_0 has unconnected port s_axi_reg_wdata[3]
+WARNING: [Synth 8-3331] design prd_shell_pr_decoupler_0_0 has unconnected port s_axi_reg_wdata[2]
+WARNING: [Synth 8-3331] design prd_shell_pr_decoupler_0_0 has unconnected port s_axi_reg_wdata[1]
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\i_axi_lite_if/s_axi_rresp_i_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\i_axi_lite_if/s_axi_rdata_i_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\i_axi_lite_if/s_axi_rdata_i_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\i_axi_lite_if/s_axi_rdata_i_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\i_axi_lite_if/s_axi_rdata_i_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\i_axi_lite_if/s_axi_rdata_i_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\i_axi_lite_if/s_axi_rdata_i_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\i_axi_lite_if/s_axi_rdata_i_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\i_axi_lite_if/s_axi_rdata_i_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\i_axi_lite_if/s_axi_rdata_i_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\i_axi_lite_if/s_axi_rdata_i_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\i_axi_lite_if/s_axi_rdata_i_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\i_axi_lite_if/s_axi_rdata_i_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\i_axi_lite_if/s_axi_rdata_i_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\i_axi_lite_if/s_axi_rdata_i_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\i_axi_lite_if/s_axi_rdata_i_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\i_axi_lite_if/s_axi_rdata_i_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\i_axi_lite_if/s_axi_rdata_i_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\i_axi_lite_if/s_axi_rdata_i_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\i_axi_lite_if/s_axi_rdata_i_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\i_axi_lite_if/s_axi_rdata_i_reg[20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\i_axi_lite_if/s_axi_rdata_i_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\i_axi_lite_if/s_axi_rdata_i_reg[22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\i_axi_lite_if/s_axi_rdata_i_reg[23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\i_axi_lite_if/s_axi_rdata_i_reg[24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\i_axi_lite_if/s_axi_rdata_i_reg[25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\i_axi_lite_if/s_axi_rdata_i_reg[26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\i_axi_lite_if/s_axi_rdata_i_reg[27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\i_axi_lite_if/s_axi_rdata_i_reg[28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\i_axi_lite_if/s_axi_rdata_i_reg[29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\i_axi_lite_if/s_axi_rdata_i_reg[30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\i_axi_lite_if/s_axi_rdata_i_reg[31] )
+INFO: [Synth 8-3332] Sequential element (i_axi_lite_if/s_axi_rdata_i_reg[31]) is unused and will be removed from module prd_shell_pr_decoupler_0_0.
+INFO: [Synth 8-3332] Sequential element (i_axi_lite_if/s_axi_rdata_i_reg[30]) is unused and will be removed from module prd_shell_pr_decoupler_0_0.
+INFO: [Synth 8-3332] Sequential element (i_axi_lite_if/s_axi_rdata_i_reg[29]) is unused and will be removed from module prd_shell_pr_decoupler_0_0.
+INFO: [Synth 8-3332] Sequential element (i_axi_lite_if/s_axi_rdata_i_reg[28]) is unused and will be removed from module prd_shell_pr_decoupler_0_0.
+INFO: [Synth 8-3332] Sequential element (i_axi_lite_if/s_axi_rdata_i_reg[27]) is unused and will be removed from module prd_shell_pr_decoupler_0_0.
+INFO: [Synth 8-3332] Sequential element (i_axi_lite_if/s_axi_rdata_i_reg[26]) is unused and will be removed from module prd_shell_pr_decoupler_0_0.
+INFO: [Synth 8-3332] Sequential element (i_axi_lite_if/s_axi_rdata_i_reg[25]) is unused and will be removed from module prd_shell_pr_decoupler_0_0.
+INFO: [Synth 8-3332] Sequential element (i_axi_lite_if/s_axi_rdata_i_reg[24]) is unused and will be removed from module prd_shell_pr_decoupler_0_0.
+INFO: [Synth 8-3332] Sequential element (i_axi_lite_if/s_axi_rdata_i_reg[23]) is unused and will be removed from module prd_shell_pr_decoupler_0_0.
+INFO: [Synth 8-3332] Sequential element (i_axi_lite_if/s_axi_rdata_i_reg[22]) is unused and will be removed from module prd_shell_pr_decoupler_0_0.
+INFO: [Synth 8-3332] Sequential element (i_axi_lite_if/s_axi_rdata_i_reg[21]) is unused and will be removed from module prd_shell_pr_decoupler_0_0.
+INFO: [Synth 8-3332] Sequential element (i_axi_lite_if/s_axi_rdata_i_reg[20]) is unused and will be removed from module prd_shell_pr_decoupler_0_0.
+INFO: [Synth 8-3332] Sequential element (i_axi_lite_if/s_axi_rdata_i_reg[19]) is unused and will be removed from module prd_shell_pr_decoupler_0_0.
+INFO: [Synth 8-3332] Sequential element (i_axi_lite_if/s_axi_rdata_i_reg[18]) is unused and will be removed from module prd_shell_pr_decoupler_0_0.
+INFO: [Synth 8-3332] Sequential element (i_axi_lite_if/s_axi_rdata_i_reg[17]) is unused and will be removed from module prd_shell_pr_decoupler_0_0.
+INFO: [Synth 8-3332] Sequential element (i_axi_lite_if/s_axi_rdata_i_reg[16]) is unused and will be removed from module prd_shell_pr_decoupler_0_0.
+INFO: [Synth 8-3332] Sequential element (i_axi_lite_if/s_axi_rdata_i_reg[15]) is unused and will be removed from module prd_shell_pr_decoupler_0_0.
+INFO: [Synth 8-3332] Sequential element (i_axi_lite_if/s_axi_rdata_i_reg[14]) is unused and will be removed from module prd_shell_pr_decoupler_0_0.
+INFO: [Synth 8-3332] Sequential element (i_axi_lite_if/s_axi_rdata_i_reg[13]) is unused and will be removed from module prd_shell_pr_decoupler_0_0.
+INFO: [Synth 8-3332] Sequential element (i_axi_lite_if/s_axi_rdata_i_reg[12]) is unused and will be removed from module prd_shell_pr_decoupler_0_0.
+INFO: [Synth 8-3332] Sequential element (i_axi_lite_if/s_axi_rdata_i_reg[11]) is unused and will be removed from module prd_shell_pr_decoupler_0_0.
+INFO: [Synth 8-3332] Sequential element (i_axi_lite_if/s_axi_rdata_i_reg[10]) is unused and will be removed from module prd_shell_pr_decoupler_0_0.
+INFO: [Synth 8-3332] Sequential element (i_axi_lite_if/s_axi_rdata_i_reg[9]) is unused and will be removed from module prd_shell_pr_decoupler_0_0.
+INFO: [Synth 8-3332] Sequential element (i_axi_lite_if/s_axi_rdata_i_reg[8]) is unused and will be removed from module prd_shell_pr_decoupler_0_0.
+INFO: [Synth 8-3332] Sequential element (i_axi_lite_if/s_axi_rdata_i_reg[7]) is unused and will be removed from module prd_shell_pr_decoupler_0_0.
+INFO: [Synth 8-3332] Sequential element (i_axi_lite_if/s_axi_rdata_i_reg[6]) is unused and will be removed from module prd_shell_pr_decoupler_0_0.
+INFO: [Synth 8-3332] Sequential element (i_axi_lite_if/s_axi_rdata_i_reg[5]) is unused and will be removed from module prd_shell_pr_decoupler_0_0.
+INFO: [Synth 8-3332] Sequential element (i_axi_lite_if/s_axi_rdata_i_reg[4]) is unused and will be removed from module prd_shell_pr_decoupler_0_0.
+INFO: [Synth 8-3332] Sequential element (i_axi_lite_if/s_axi_rdata_i_reg[3]) is unused and will be removed from module prd_shell_pr_decoupler_0_0.
+INFO: [Synth 8-3332] Sequential element (i_axi_lite_if/s_axi_rdata_i_reg[2]) is unused and will be removed from module prd_shell_pr_decoupler_0_0.
+INFO: [Synth 8-3332] Sequential element (i_axi_lite_if/s_axi_rdata_i_reg[1]) is unused and will be removed from module prd_shell_pr_decoupler_0_0.
+INFO: [Synth 8-3332] Sequential element (i_axi_lite_if/s_axi_rresp_i_reg[0]) is unused and will be removed from module prd_shell_pr_decoupler_0_0.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:35 . Memory (MB): peak = 2092.398 ; gain = 819.941 ; free physical = 7863 ; free virtual = 35499
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:01:01 . Memory (MB): peak = 2243.836 ; gain = 971.379 ; free physical = 6331 ; free virtual = 33996
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:01:01 . Memory (MB): peak = 2252.852 ; gain = 980.395 ; free physical = 6326 ; free virtual = 33990
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:34 ; elapsed = 00:01:01 . Memory (MB): peak = 2263.867 ; gain = 991.410 ; free physical = 6319 ; free virtual = 33983
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:34 ; elapsed = 00:01:02 . Memory (MB): peak = 2263.867 ; gain = 991.410 ; free physical = 6286 ; free virtual = 33951
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:34 ; elapsed = 00:01:02 . Memory (MB): peak = 2263.867 ; gain = 991.410 ; free physical = 6286 ; free virtual = 33950
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:34 ; elapsed = 00:01:02 . Memory (MB): peak = 2263.867 ; gain = 991.410 ; free physical = 6277 ; free virtual = 33942
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:34 ; elapsed = 00:01:02 . Memory (MB): peak = 2263.867 ; gain = 991.410 ; free physical = 6268 ; free virtual = 33932
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:34 ; elapsed = 00:01:02 . Memory (MB): peak = 2263.867 ; gain = 991.410 ; free physical = 6275 ; free virtual = 33940
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:34 ; elapsed = 00:01:02 . Memory (MB): peak = 2263.867 ; gain = 991.410 ; free physical = 6275 ; free virtual = 33940
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT1 |     1|
+|2     |LUT2 |    25|
+|3     |LUT3 |     2|
+|4     |LUT4 |     1|
+|5     |LUT5 |     6|
+|6     |LUT6 |     2|
+|7     |FDRE |     7|
++------+-----+------+
+
+Report Instance Areas: 
++------+------------------+---------------------------+------+
+|      |Instance          |Module                     |Cells |
++------+------------------+---------------------------+------+
+|1     |top               |                           |    44|
+|2     |  U0              |prd_shell_pr_decoupler_0_0 |    44|
+|3     |    i_axi_lite_if |axi_lite_if                |    44|
++------+------------------+---------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:34 ; elapsed = 00:01:02 . Memory (MB): peak = 2263.867 ; gain = 991.410 ; free physical = 6284 ; free virtual = 33948
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 31 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:26 ; elapsed = 00:00:44 . Memory (MB): peak = 2263.867 ; gain = 295.078 ; free physical = 6303 ; free virtual = 33968
+Synthesis Optimization Complete : Time (s): cpu = 00:00:34 ; elapsed = 00:01:02 . Memory (MB): peak = 2263.875 ; gain = 991.410 ; free physical = 6313 ; free virtual = 33977
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+81 Infos, 62 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:01:04 . Memory (MB): peak = 2330.328 ; gain = 1089.445 ; free physical = 6233 ; free virtual = 33897
+INFO: [Common 17-1381] The checkpoint '/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/shell_pr_decoupler_0_0_synth_1/shell_pr_decoupler_0_0.dcp' has been generated.

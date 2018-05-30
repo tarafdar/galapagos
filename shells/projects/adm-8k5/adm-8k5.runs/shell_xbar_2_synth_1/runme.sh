@@ -20,7 +20,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/tarafdar/workDir/galapagos/shells/projects/adm-8k5/adm-8k5.runs/shell_xbar_2_synth_1'
+HD_PWD='/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/shell_xbar_2_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

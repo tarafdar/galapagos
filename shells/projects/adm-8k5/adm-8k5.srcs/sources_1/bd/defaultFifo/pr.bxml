@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="35">
   <CompositeFile CompositeFileTopName="pr" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1526265856"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1526265856"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1526265856"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1526265856"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1526399499"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1526399499"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1526399499"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1526399499"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="pr_sim_netlist.vhdl" Type="VHDL">
         <Properties IsEditable="true" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="false"/>

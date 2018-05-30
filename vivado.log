@@ -1,0 +1,268 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Wed May 23 17:39:34 2018
+# Process ID: 15281
+# Current directory: /home/graham0/Vivado_Projects/galapagos_wip
+# Command line: vivado shells/projects/adm-8k5/adm-8k5.xpr
+# Log file: /home/graham0/Vivado_Projects/galapagos_wip/vivado.log
+# Journal file: /home/graham0/Vivado_Projects/galapagos_wip/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project shells/projects/adm-8k5/adm-8k5.xpr
+INFO: [Project 1-313] Project file moved from '/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/shells/projects/adm-8k5' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/graham0/Vivado_Projects/galapagos_wip/hlsIP_adm-8k5'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/graham0/Vivado_Projects/galapagos_wip/shells/shell_ips'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2018.1/data/ip'.
+WARNING: [IP_Flow 19-3664] IP 'bd_01e2_xpcs_0' generated file not found '/home/graham0/Vivado_Projects/galapagos_wip/.Xil/Vivado-19896-ug238/coregen/bd_01e2_xpcs_0_1/elaborate/configure_gt.tcl'. Please regenerate to continue.
+open_project: Time (s): cpu = 00:00:47 ; elapsed = 00:00:18 . Memory (MB): peak = 6541.820 ; gain = 356.883 ; free physical = 15030 ; free virtual = 80464
+open_bd_design {/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/shell.bd}
+Adding cell -- xilinx.com:ip:util_vector_logic:2.0 - util_vector_logic_0
+Adding cell -- xilinx.com:ip:util_vector_logic:2.0 - util_vector_logic_1
+Adding cell -- xilinx.com:ip:clk_wiz:6.0 - clk_wiz_0
+Adding cell -- xilinx.com:ip:xlconstant:1.1 - gnd
+Adding cell -- xilinx.com:ip:util_vector_logic:2.0 - util_vector_logic_2
+Adding cell -- xilinx.com:ip:axi_bram_ctrl:4.0 - axi_bram_ctrl_0
+Adding cell -- xilinx.com:ip:blk_mem_gen:8.4 - blk_mem_gen_0
+Adding cell -- xilinx.com:hls:reverseEndian64:1.0 - reverseEndian64_0
+Adding cell -- xilinx.com:hls:reverseEndian64:1.0 - reverseEndian64_1
+Adding cell -- xilinx.com:ip:pr_decoupler:1.0 - pr_decoupler_0
+Adding cell -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_0
+Adding cell -- xilinx.com:ip:vio:3.0 - vio_0
+Adding cell -- xilinx.com:ip:util_vector_logic:2.0 - util_vector_logic_3
+Adding cell -- pc_group:migration:axi_pr_controller:1.0 - axi_pr_controller_0
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_1
+Adding cell -- xilinx.com:ip:ddr4:2.2 - ddr4_0
+Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding cell -- xilinx.com:ip:axi_clock_converter:2.1 - auto_cc
+Adding cell -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us_df
+Adding cell -- xilinx.com:ip:axi_data_fifo:2.1 - s01_data_fifo
+Adding cell -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us_cc_df
+Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding cell -- xilinx.com:ip:axi_clock_converter:2.1 - auto_cc
+Adding cell -- xilinx.com:ip:axi_clock_converter:2.1 - auto_cc
+Adding cell -- xilinx.com:ip:axi_clock_converter:2.1 - auto_cc
+Adding cell -- xilinx.com:ip:axi_clock_converter:2.1 - auto_cc
+Adding cell -- xilinx.com:ip:axi_clock_converter:2.1 - auto_cc
+Adding cell -- xilinx.com:ip:axi_clock_converter:2.1 - auto_cc
+Adding cell -- xilinx.com:ip:mdm:3.2 - mdm_1
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_clk_wiz_0_100M
+Adding cell -- xilinx.com:ip:microblaze:10.0 - microblaze_0
+Adding cell -- xilinx.com:ip:lmb_v10:3.0 - dlmb_v10
+Adding cell -- xilinx.com:ip:lmb_v10:3.0 - ilmb_v10
+Adding cell -- xilinx.com:ip:lmb_bram_if_cntlr:4.0 - dlmb_bram_if_cntlr
+Adding cell -- xilinx.com:ip:lmb_bram_if_cntlr:4.0 - ilmb_bram_if_cntlr
+Adding cell -- xilinx.com:ip:blk_mem_gen:8.4 - lmb_bram
+Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding cell -- xilinx.com:ip:xdma:4.1 - xdma_0
+Adding cell -- xilinx.com:ip:util_ds_buf:2.1 - util_ds_buf
+Adding cell -- xilinx.com:ip:xlconstant:1.1 - gnd
+Adding cell -- xilinx.com:ip:axis_register_slice:1.1 - tx_register_slice_0
+Adding cell -- xilinx.com:ip:axi_10g_ethernet:3.1 - axi_10g_ethernet_0
+Adding cell -- xilinx.com:ip:xlconstant:1.1 - mac_config_vector
+Adding cell -- xilinx.com:ip:xlconstant:1.1 - tx_ifg_tuser
+Adding cell -- xilinx.com:ip:xlconstant:1.1 - ifg_delay
+Adding cell -- xilinx.com:ip:xlconstant:1.1 - vcc
+Adding cell -- xilinx.com:ip:xlconstant:1.1 - pcs_config_vector
+Adding cell -- xilinx.com:ip:axis_register_slice:1.1 - rx_register_slice_1
+Adding cell -- xilinx.com:ip:axis_data_fifo:1.1 - rx_data_fifo_1
+Adding cell -- xilinx.com:ip:axis_data_fifo:1.1 - tx_data_fifo_0
+Successfully read diagram <shell> from BD file </home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/shell.bd>
+open_bd_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 7716.984 ; gain = 0.000 ; free physical = 14893 ; free virtual = 80326
+update_compile_order -fileset sources_1
+reset_run synth_1
+reset_run shell_xbar_0_synth_1
+reset_run shell_dlmb_bram_if_cntlr_0_synth_1
+reset_run shell_xbar_2_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+INFO: [BD 41-1662] The design 'shell.bd' is already validated. Therefore parameter propagation will not be re-run.
+Wrote  : </home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ui/bd_d9cfc7b0.ui> 
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/mem_interface/mem_interconnect/s01_couplers/s01_data_fifo/m_axi_bid'(1) to net 's01_data_fifo_to_s01_couplers_BID'(3) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/mem_interface/mem_interconnect/s01_couplers/s01_data_fifo/m_axi_rid'(1) to net 's01_data_fifo_to_s01_couplers_RID'(3) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/mem_interface/mem_interconnect/xbar/s_axi_awid'(3) to net 's01_couplers_to_xbar_AWID'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/mem_interface/mem_interconnect/xbar/s_axi_arid'(3) to net 's01_couplers_to_xbar_ARID'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/blk_mem_gen_0/addra'(32) to net 'axi_bram_ctrl_0_BRAM_PORTA_ADDR'(12) - Only lower order bits will be connected.
+VHDL Output written to : /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.v
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/mem_interface/mem_interconnect/s01_couplers/s01_data_fifo/m_axi_bid'(1) to net 's01_data_fifo_to_s01_couplers_BID'(3) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/mem_interface/mem_interconnect/s01_couplers/s01_data_fifo/m_axi_rid'(1) to net 's01_data_fifo_to_s01_couplers_RID'(3) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/mem_interface/mem_interconnect/xbar/s_axi_awid'(3) to net 's01_couplers_to_xbar_AWID'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/mem_interface/mem_interconnect/xbar/s_axi_arid'(3) to net 's01_couplers_to_xbar_ARID'(1) - Only lower order bits will be connected.
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/blk_mem_gen_0/addra'(32) to net 'axi_bram_ctrl_0_BRAM_PORTA_ADDR'(12) - Only lower order bits will be connected.
+VHDL Output written to : /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/sim/shell.v
+VHDL Output written to : /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/hdl/shell_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_vector_logic_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_vector_logic_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block clk_wiz_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block gnd .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_vector_logic_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_bram_ctrl_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block blk_mem_gen_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block reverseEndian64_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block reverseEndian64_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block pr_decoupler_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block vio_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mem_interface/proc_sys_reset_1 .
+INFO: [Device 21-403] Loading part xcku115-flva1517-2-e
+create_bd_cell: Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 7716.984 ; gain = 0.000 ; free physical = 14544 ; free virtual = 79977
+Exporting to file /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_ddr4_0_0/bd_0/hw_handoff/shell_ddr4_0_0_microblaze_mcs.hwh
+Generated Block Design Tcl file /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_ddr4_0_0/bd_0/hw_handoff/shell_ddr4_0_0_microblaze_mcs_bd.tcl
+Generated Hardware Definition File /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_ddr4_0_0/bd_0/synth/shell_ddr4_0_0_microblaze_mcs.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mem_interface/ddr4_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mem_interface/mem_interconnect/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mb_system/mdm_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mb_system/rst_clk_wiz_0_100M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mb_system/microblaze_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mb_system/microblaze_0_local_memory/dlmb_v10 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mb_system/microblaze_0_local_memory/ilmb_v10 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mb_system/microblaze_0_local_memory/dlmb_bram_if_cntlr .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mb_system/microblaze_0_local_memory/ilmb_bram_if_cntlr .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mb_system/microblaze_0_local_memory/lmb_bram .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mb_system/microblaze_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block PCIe/xdma_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block PCIe/util_ds_buf .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block network/gnd .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block network/tx_register_slice_0 .
+INFO: [BD 41-1637] Generated targets are already up-to-date for bd-design 'bd_01e2' - hence not re-generating.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block network/axi_10g_ethernet_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block network/mac_config_vector .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block network/tx_ifg_tuser .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block network/ifg_delay .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block network/vcc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block network/pcs_config_vector .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block network/rx_register_slice_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block network/rx_data_fifo_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block network/tx_data_fifo_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block util_vector_logic_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_pr_controller_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_cc_6/shell_auto_cc_6_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mem_interface/mem_interconnect/m00_couplers/auto_cc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_us_df_0/shell_auto_us_df_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mem_interface/mem_interconnect/s02_couplers/auto_us_df .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_s01_data_fifo_0/shell_s01_data_fifo_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mem_interface/mem_interconnect/s01_couplers/s01_data_fifo .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_us_cc_df_0/shell_auto_us_cc_df_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block mem_interface/mem_interconnect/s00_couplers/auto_us_cc_df .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_cc_4/shell_auto_cc_4_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/m04_couplers/auto_cc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_cc_3/shell_auto_cc_3_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/m03_couplers/auto_cc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_cc_2/shell_auto_cc_2_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/m02_couplers/auto_cc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_cc_1/shell_auto_cc_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/m01_couplers/auto_cc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_cc_0/shell_auto_cc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/m00_couplers/auto_cc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_auto_cc_5/shell_auto_cc_5_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_interconnect_0/s01_couplers/auto_cc .
+Exporting to file /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/hw_handoff/shell.hwh
+Generated Block Design Tcl file /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/hw_handoff/shell_bd.tcl
+Generated Hardware Definition File /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/synth/shell.hwdef
+config_ip_cache: Time (s): cpu = 00:00:11 ; elapsed = 00:00:25 . Memory (MB): peak = 7716.984 ; gain = 0.000 ; free physical = 14414 ; free virtual = 79848
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP shell_s01_data_fifo_0, cache-ID = 70e518fc75f0a1d2; cache size = 185.769 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP shell_auto_us_cc_df_0, cache-ID = 9a22e4546d0f81b6; cache size = 185.769 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP shell_auto_cc_4, cache-ID = d9f82b7836fc143b; cache size = 185.769 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP shell_auto_cc_3, cache-ID = 193c9324733d1017; cache size = 185.769 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP shell_auto_cc_2, cache-ID = 2652b915b33c8476; cache size = 185.769 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP shell_auto_cc_1, cache-ID = 2652b915b33c8476; cache size = 185.769 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP shell_auto_cc_0, cache-ID = bd3b2704725f0147; cache size = 185.769 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP shell_auto_cc_5, cache-ID = 578100786b704f14; cache size = 185.769 MB.
+[Wed May 23 17:42:19 2018] Launched shell_xbar_0_synth_1, shell_dlmb_bram_if_cntlr_0_synth_1, shell_xbar_2_synth_1, shell_xbar_1_synth_1, shell_ddr4_0_0_synth_1, shell_axi_pr_controller_0_0_synth_1, shell_auto_cc_6_synth_1, shell_auto_us_df_0_synth_1, synth_1...
+Run output will be captured here:
+shell_xbar_0_synth_1: /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/shell_xbar_0_synth_1/runme.log
+shell_dlmb_bram_if_cntlr_0_synth_1: /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/shell_dlmb_bram_if_cntlr_0_synth_1/runme.log
+shell_xbar_2_synth_1: /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/shell_xbar_2_synth_1/runme.log
+shell_xbar_1_synth_1: /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/shell_xbar_1_synth_1/runme.log
+shell_ddr4_0_0_synth_1: /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/shell_ddr4_0_0_synth_1/runme.log
+shell_axi_pr_controller_0_0_synth_1: /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/shell_axi_pr_controller_0_0_synth_1/runme.log
+shell_auto_cc_6_synth_1: /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/shell_auto_cc_6_synth_1/runme.log
+shell_auto_us_df_0_synth_1: /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/shell_auto_us_df_0_synth_1/runme.log
+synth_1: /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/synth_1/runme.log
+[Wed May 23 17:42:20 2018] Launched impl_1...
+Run output will be captured here: /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:01:32 ; elapsed = 00:01:47 . Memory (MB): peak = 8181.477 ; gain = 464.492 ; free physical = 14410 ; free virtual = 79844
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 4426 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 2 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Constraints 18-550] Could not create 'DRIVE' constraint because net 'shell_i/mem_interface/ddr4_0/inst/u_ddr4_mem_intfc/u_mig_ddr4_phy/cal_RESET_n[0]' is not directly connected to top level port. 'DRIVE' is ignored by Vivado but preserved for implementation tool. [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/impl_1/.Xil/Vivado-17969-integrators/17969/out/shell_ddr4_0_0_phy.0/dcp/shell_ddr4_0_0_phy_153811.edf:419775]
+WARNING: [Constraints 18-550] Could not create 'SLEW' constraint because net 'shell_i/mem_interface/ddr4_0/inst/u_ddr4_mem_intfc/u_mig_ddr4_phy/cal_RESET_n[0]' is not directly connected to top level port. 'SLEW' is ignored by Vivado but preserved for implementation tool. [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/impl_1/.Xil/Vivado-17969-integrators/17969/out/shell_ddr4_0_0_phy.0/dcp/shell_ddr4_0_0_phy_153811.edf:419776]
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'shell_i/mem_interface/ddr4_0/inst/u_ddr4_mem_intfc/u_mig_ddr4_phy/sys_clk_in' is not directly connected to top level port. 'IBUF_LOW_PWR' is ignored by Vivado but preserved for implementation tool. [/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/impl_1/.Xil/Vivado-17969-integrators/17969/out/shell_ddr4_0_0_phy.0/dcp/shell_ddr4_0_0_phy_153811.edf:419746]
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:16 ; elapsed = 00:00:12 . Memory (MB): peak = 8825.328 ; gain = 132.551 ; free physical = 11781 ; free virtual = 77215
+Restored from archive | CPU: 16.520000 secs | Memory: 174.284668 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:16 ; elapsed = 00:00:12 . Memory (MB): peak = 8825.328 ; gain = 132.551 ; free physical = 11772 ; free virtual = 77206
+Generating merged BMM file for the design top 'shellTop'...
+Generating merged BMM file for the design top 'shell_ddr4_0_0'...
+INFO: [Memdata 28-144] Successfully populated the BRAM INIT strings from the following elf files: /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_ddr4_0_0/sw/calibration_0/Debug/calibration_ddr.elf /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_ddr4_0_0/sw/calibration_0/Debug/calibration_ddr.elf /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_microblaze_0_0/data/mb_bootloop_le.elf 
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1220 instances were transformed.
+  DSP48E1 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD_DATA, DSP_PREADD): 8 instances
+  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD_DATA, DSP_PREADD): 39 instances
+  IBUF => IBUF (IBUFCTRL, INBUF): 1 instances
+  IBUFDS => IBUFDS (DIFFINBUF, IBUFCTRL): 1 instances
+  IOBUFDS => IOBUFDS (DIFFINBUF, IBUFCTRL, INV, OBUFT, OBUFT): 8 instances
+  IOBUFE3 => IOBUFE3 (IBUFCTRL, INBUF, OBUFT_DCIEN): 72 instances
+  LUT6_2 => LUT6_2 (LUT5, LUT6): 110 instances
+  OBUFDS => OBUFDS_DUAL_BUF (INV, OBUF, OBUF): 1 instances
+  RAM16X1D => RAM32X1D (RAMD32, RAMD32): 68 instances
+  RAM16X1S => RAM32X1S (RAMS32): 13 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 220 instances
+  RAM32M16 => RAM32M16 (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 614 instances
+  RAM32X1D => RAM32X1D (RAMD32, RAMD32): 40 instances
+  RAM64M8 => RAM64M8 (RAMD64E, RAMD64E, RAMD64E, RAMD64E, RAMD64E, RAMD64E, RAMD64E, RAMD64E): 8 instances
+  RAM64X1S => RAM64X1S (RAMS64E): 9 instances
+  SRLC16E => SRL16E: 1 instances
+  SRLC32E => SRL16E: 7 instances
+
+open_run: Time (s): cpu = 00:01:41 ; elapsed = 00:01:25 . Memory (MB): peak = 9035.992 ; gain = 854.516 ; free physical = 11637 ; free virtual = 77071
+open_report: Time (s): cpu = 00:00:40 ; elapsed = 00:00:09 . Memory (MB): peak = 9288.336 ; gain = 250.348 ; free physical = 11344 ; free virtual = 76778
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+open_bd_design {/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/shell.bd}
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.1
+  **** Build date : Apr  4 2018-18:56:09
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210308A11BB4
+set_property PROGRAM.FILE {/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/impl_1/shellTop.bit} [get_hw_devices xcku115_0]
+set_property PROBES.FILE {/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/impl_1/shellTop.ltx} [get_hw_devices xcku115_0]
+set_property FULL_PROBES.FILE {/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/impl_1/shellTop.ltx} [get_hw_devices xcku115_0]
+current_hw_device [get_hw_devices xcku115_0]
+refresh_hw_device [lindex [get_hw_devices xcku115_0] 0]
+INFO: [Labtools 27-2302] Device xcku115 (JTAG device index = 0) is programmed with a design that has 1 MIG core(s).
+INFO: [Labtools 27-2302] Device xcku115 (JTAG device index = 0) is programmed with a design that has 1 VIO core(s).
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+set_property PROBES.FILE {/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/impl_1/shellTop.ltx} [get_hw_devices xcku115_0]
+set_property FULL_PROBES.FILE {/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/impl_1/shellTop.ltx} [get_hw_devices xcku115_0]
+set_property PROGRAM.FILE {/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/impl_1/shellTop.bit} [get_hw_devices xcku115_0]
+program_hw_devices [get_hw_devices xcku115_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 10597.594 ; gain = 0.000 ; free physical = 10661 ; free virtual = 76095
+refresh_hw_device [lindex [get_hw_devices xcku115_0] 0]
+WARNING: [Labtools 27-3089] Calibration is still in-progress.
+INFO: [Labtools 27-2302] Device xcku115 (JTAG device index = 0) is programmed with a design that has 1 MIG core(s).
+INFO: [Labtools 27-2302] Device xcku115 (JTAG device index = 0) is programmed with a design that has 1 VIO core(s).
+INFO: [Labtools 27-3143] Calibration status change detected, refreshing MIG_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu May 24 16:07:55 2018...

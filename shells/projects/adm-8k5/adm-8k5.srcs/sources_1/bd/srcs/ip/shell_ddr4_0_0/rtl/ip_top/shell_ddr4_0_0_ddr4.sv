@@ -244,7 +244,7 @@ module shell_ddr4_0_0_ddr4 #
     parameter         CLKOUTPHY_MODE           = "VCO_2X",
     parameter         C_FAMILY                 = "kintexu",
 
-    parameter C_S_AXI_ID_WIDTH                = 2,
+    parameter C_S_AXI_ID_WIDTH                = 3,
                                               // Width of all master and slave ID signals.
                                               // # = >= 1.
     parameter C_S_AXI_ADDR_WIDTH              = 33,

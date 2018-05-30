@@ -44,7 +44,7 @@ clean_shell:
 shells/projects/${BOARD}/${DCP}:
 	mkdir -p shells
 	mkdir -p shells/projects
-	vivado -mode batch -source tclScripts/createShell_${BOARD}.tcl -tclargs ${DCP}
+	vivado -mode gui -source tclScripts/createShell_${BOARD}.tcl -tclargs ${DCP}
 	mkdir -p shells/${BOARD}/dcps
 	cp shells/projects/${BOARD}/${DCP} shells/${BOARD}/dcps
 

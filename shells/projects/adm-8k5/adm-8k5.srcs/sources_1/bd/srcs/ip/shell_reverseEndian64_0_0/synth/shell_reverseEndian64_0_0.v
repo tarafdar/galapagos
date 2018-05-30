@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:hls:reverseEndian64:1.0
-// IP Revision: 1805121524
+// IP Revision: 1805151149
 
 (* X_CORE_INFO = "reverseEndian64,Vivado 2018.1" *)
 (* CHECK_LICENSE_TYPE = "shell_reverseEndian64_0_0,reverseEndian64,{}" *)
-(* CORE_GENERATION_INFO = "shell_reverseEndian64_0_0,reverseEndian64,{x_ipProduct=Vivado 2018.1,x_ipVendor=xilinx.com,x_ipLibrary=hls,x_ipName=reverseEndian64,x_ipVersion=1.0,x_ipCoreRevision=1805121524,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED}" *)
+(* CORE_GENERATION_INFO = "shell_reverseEndian64_0_0,reverseEndian64,{x_ipProduct=Vivado 2018.1,x_ipVendor=xilinx.com,x_ipLibrary=hls,x_ipName=reverseEndian64,x_ipVersion=1.0,x_ipCoreRevision=1805151149,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module shell_reverseEndian64_0_0 (
   ap_clk,

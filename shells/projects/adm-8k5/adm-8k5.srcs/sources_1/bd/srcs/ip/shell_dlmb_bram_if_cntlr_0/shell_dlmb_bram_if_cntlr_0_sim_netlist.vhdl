@@ -1,15 +1,62 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
--- Date        : Sun May 13 22:56:10 2018
--- Host        : batcomputer running 64-bit Ubuntu 16.04.2 LTS
+-- Date        : Wed May 23 17:43:50 2018
+-- Host        : integrators running 64-bit Ubuntu 16.04.4 LTS
 -- Command     : write_vhdl -force -mode funcsim
---               /home/tarafdar/workDir/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_dlmb_bram_if_cntlr_0/shell_dlmb_bram_if_cntlr_0_sim_netlist.vhdl
+--               /home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_dlmb_bram_if_cntlr_0/shell_dlmb_bram_if_cntlr_0_sim_netlist.vhdl
 -- Design      : shell_dlmb_bram_if_cntlr_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
 -- Device      : xcku115-flva1517-2-e
 -- --------------------------------------------------------------------------------
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity shell_dlmb_bram_if_cntlr_0_pselect_mask is
+  port (
+    lmb_select : out STD_LOGIC;
+    LMB_ABus : in STD_LOGIC_VECTOR ( 2 downto 0 )
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of shell_dlmb_bram_if_cntlr_0_pselect_mask : entity is "pselect_mask";
+end shell_dlmb_bram_if_cntlr_0_pselect_mask;
+
+architecture STRUCTURE of shell_dlmb_bram_if_cntlr_0_pselect_mask is
+begin
+\/i_\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"01"
+    )
+        port map (
+      I0 => LMB_ABus(2),
+      I1 => LMB_ABus(1),
+      I2 => LMB_ABus(0),
+      O => lmb_select
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity shell_dlmb_bram_if_cntlr_0_lmb_mux is
+  port (
+    lmb_select : out STD_LOGIC;
+    LMB_ABus : in STD_LOGIC_VECTOR ( 2 downto 0 )
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of shell_dlmb_bram_if_cntlr_0_lmb_mux : entity is "lmb_mux";
+end shell_dlmb_bram_if_cntlr_0_lmb_mux;
+
+architecture STRUCTURE of shell_dlmb_bram_if_cntlr_0_lmb_mux is
+begin
+\one_lmb.pselect_mask_lmb\: entity work.shell_dlmb_bram_if_cntlr_0_pselect_mask
+     port map (
+      LMB_ABus(2 downto 0) => LMB_ABus(2 downto 0),
+      lmb_select => lmb_select
+    );
+end STRUCTURE;
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
@@ -121,7 +168,7 @@ entity shell_dlmb_bram_if_cntlr_0_lmb_bram_if_cntlr is
   attribute C_LMB_DWIDTH : integer;
   attribute C_LMB_DWIDTH of shell_dlmb_bram_if_cntlr_0_lmb_bram_if_cntlr : entity is 32;
   attribute C_MASK : string;
-  attribute C_MASK of shell_dlmb_bram_if_cntlr_0_lmb_bram_if_cntlr : entity is "64'b0000000000000000000000000000000001000000000000000000000000000000";
+  attribute C_MASK of shell_dlmb_bram_if_cntlr_0_lmb_bram_if_cntlr : entity is "64'b0000000000000000000000000000000011000000000010000000000000000000";
   attribute C_MASK1 : string;
   attribute C_MASK1 of shell_dlmb_bram_if_cntlr_0_lmb_bram_if_cntlr : entity is "64'b0000000000000000000000000000000000000000100000000000000000000000";
   attribute C_MASK2 : string;
@@ -156,11 +203,6 @@ architecture STRUCTURE of shell_dlmb_bram_if_cntlr_0_lmb_bram_if_cntlr is
   signal Sl_Rdy : STD_LOGIC;
   signal lmb_as : STD_LOGIC;
   signal lmb_select : STD_LOGIC;
-  attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \BRAM_WEN_A[0]_INST_0\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \BRAM_WEN_A[1]_INST_0\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \BRAM_WEN_A[2]_INST_0\ : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of \BRAM_WEN_A[3]_INST_0\ : label is "soft_lutpair0";
 begin
   BRAM_Addr_A(0 to 31) <= \^lmb_abus\(0 to 31);
   BRAM_Clk_A <= \^lmb_clk\;
@@ -328,57 +370,57 @@ begin
   \^lmb_addrstrobe\ <= LMB_AddrStrobe;
   \^lmb_clk\ <= LMB_Clk;
   \^lmb_writedbus\(0 to 31) <= LMB_WriteDBus(0 to 31);
-\BRAM_WEN_A[0]_INST_0\: unisim.vcomponents.LUT3
+\BRAM_WEN_A[0]_INST_0\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"20"
+      INIT => X"00020000"
     )
         port map (
       I0 => LMB_BE(0),
-      I1 => \^lmb_abus\(1),
-      I2 => LMB_WriteStrobe,
+      I1 => \^lmb_abus\(0),
+      I2 => \^lmb_abus\(1),
+      I3 => \^lmb_abus\(12),
+      I4 => LMB_WriteStrobe,
       O => BRAM_WEN_A(0)
     );
-\BRAM_WEN_A[1]_INST_0\: unisim.vcomponents.LUT3
+\BRAM_WEN_A[1]_INST_0\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"40"
+      INIT => X"01000000"
     )
         port map (
-      I0 => \^lmb_abus\(1),
-      I1 => LMB_WriteStrobe,
-      I2 => LMB_BE(1),
+      I0 => \^lmb_abus\(0),
+      I1 => \^lmb_abus\(1),
+      I2 => \^lmb_abus\(12),
+      I3 => LMB_WriteStrobe,
+      I4 => LMB_BE(1),
       O => BRAM_WEN_A(1)
     );
-\BRAM_WEN_A[2]_INST_0\: unisim.vcomponents.LUT3
+\BRAM_WEN_A[2]_INST_0\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"40"
+      INIT => X"01000000"
     )
         port map (
-      I0 => \^lmb_abus\(1),
-      I1 => LMB_WriteStrobe,
-      I2 => LMB_BE(2),
+      I0 => \^lmb_abus\(0),
+      I1 => \^lmb_abus\(1),
+      I2 => \^lmb_abus\(12),
+      I3 => LMB_WriteStrobe,
+      I4 => LMB_BE(2),
       O => BRAM_WEN_A(2)
     );
-\BRAM_WEN_A[3]_INST_0\: unisim.vcomponents.LUT3
+\BRAM_WEN_A[3]_INST_0\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"40"
+      INIT => X"01000000"
     )
         port map (
-      I0 => \^lmb_abus\(1),
-      I1 => LMB_WriteStrobe,
-      I2 => LMB_BE(3),
+      I0 => \^lmb_abus\(0),
+      I1 => \^lmb_abus\(1),
+      I2 => \^lmb_abus\(12),
+      I3 => LMB_WriteStrobe,
+      I4 => LMB_BE(3),
       O => BRAM_WEN_A(3)
     );
 GND: unisim.vcomponents.GND
      port map (
       G => \<const0>\
-    );
-\No_ECC.Sl_Rdy_i_1\: unisim.vcomponents.LUT1
-    generic map(
-      INIT => X"1"
-    )
-        port map (
-      I0 => \^lmb_abus\(1),
-      O => lmb_select
     );
 \No_ECC.Sl_Rdy_reg\: unisim.vcomponents.FDRE
      port map (
@@ -404,6 +446,13 @@ Sl_Ready_INST_0: unisim.vcomponents.LUT2
       I0 => Sl_Rdy,
       I1 => lmb_as,
       O => Sl_Ready
+    );
+lmb_mux_I: entity work.shell_dlmb_bram_if_cntlr_0_lmb_mux
+     port map (
+      LMB_ABus(2) => \^lmb_abus\(0),
+      LMB_ABus(1) => \^lmb_abus\(1),
+      LMB_ABus(0) => \^lmb_abus\(12),
+      lmb_select => lmb_select
     );
 end STRUCTURE;
 library IEEE;
@@ -499,7 +548,7 @@ architecture STRUCTURE of shell_dlmb_bram_if_cntlr_0 is
   attribute C_LMB_DWIDTH : integer;
   attribute C_LMB_DWIDTH of U0 : label is 32;
   attribute C_MASK : string;
-  attribute C_MASK of U0 : label is "64'b0000000000000000000000000000000001000000000000000000000000000000";
+  attribute C_MASK of U0 : label is "64'b0000000000000000000000000000000011000000000010000000000000000000";
   attribute C_MASK1 : string;
   attribute C_MASK1 of U0 : label is "64'b0000000000000000000000000000000000000000100000000000000000000000";
   attribute C_MASK2 : string;

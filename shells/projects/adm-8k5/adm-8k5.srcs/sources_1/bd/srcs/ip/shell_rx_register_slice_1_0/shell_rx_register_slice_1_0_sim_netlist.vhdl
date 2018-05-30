@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.1 (lin64) Build 2188600 Wed Apr  4 18:39:19 MDT 2018
--- Date        : Sun May 13 23:01:13 2018
--- Host        : batcomputer running 64-bit Ubuntu 16.04.2 LTS
--- Command     : write_vhdl -force -mode funcsim
---               /home/tarafdar/workDir/galapagos/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/ip/shell_rx_register_slice_1_0/shell_rx_register_slice_1_0_sim_netlist.vhdl
+-- Date        : Tue May 15 12:09:00 2018
+-- Host        : ug238 running 64-bit Debian GNU/Linux 9.4 (stretch)
+-- Command     : write_vhdl -force -mode funcsim -rename_top shell_rx_register_slice_1_0 -prefix
+--               shell_rx_register_slice_1_0_ shell_rx_register_slice_1_0_sim_netlist.vhdl
 -- Design      : shell_rx_register_slice_1_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -23,8 +23,6 @@ entity shell_rx_register_slice_1_0_axis_register_slice_v1_1_16_axisc_register_sl
     aclk : in STD_LOGIC;
     s_axis_tvalid : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of shell_rx_register_slice_1_0_axis_register_slice_v1_1_16_axisc_register_slice : entity is "axis_register_slice_v1_1_16_axisc_register_slice";
 end shell_rx_register_slice_1_0_axis_register_slice_v1_1_16_axisc_register_slice;
 
 architecture STRUCTURE of shell_rx_register_slice_1_0_axis_register_slice_v1_1_16_axisc_register_slice is
@@ -716,8 +714,6 @@ entity shell_rx_register_slice_1_0_axis_register_slice_v1_1_16_axis_register_sli
   attribute G_TASK_SEVERITY_INFO of shell_rx_register_slice_1_0_axis_register_slice_v1_1_16_axis_register_slice : entity is 0;
   attribute G_TASK_SEVERITY_WARNING : integer;
   attribute G_TASK_SEVERITY_WARNING of shell_rx_register_slice_1_0_axis_register_slice_v1_1_16_axis_register_slice : entity is 1;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of shell_rx_register_slice_1_0_axis_register_slice_v1_1_16_axis_register_slice : entity is "axis_register_slice_v1_1_16_axis_register_slice";
   attribute P_TPAYLOAD_WIDTH : integer;
   attribute P_TPAYLOAD_WIDTH of shell_rx_register_slice_1_0_axis_register_slice_v1_1_16_axis_register_slice : entity is 73;
 end shell_rx_register_slice_1_0_axis_register_slice_v1_1_16_axis_register_slice;

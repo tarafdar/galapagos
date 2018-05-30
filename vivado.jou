@@ -1,0 +1,36 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Wed May 23 17:39:34 2018
+# Process ID: 15281
+# Current directory: /home/graham0/Vivado_Projects/galapagos_wip
+# Command line: vivado shells/projects/adm-8k5/adm-8k5.xpr
+# Log file: /home/graham0/Vivado_Projects/galapagos_wip/vivado.log
+# Journal file: /home/graham0/Vivado_Projects/galapagos_wip/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project shells/projects/adm-8k5/adm-8k5.xpr
+open_bd_design {/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/shell.bd}
+update_compile_order -fileset sources_1
+reset_run synth_1
+reset_run shell_xbar_0_synth_1
+reset_run shell_dlmb_bram_if_cntlr_0_synth_1
+reset_run shell_xbar_2_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+open_run impl_1
+open_bd_design {/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.srcs/sources_1/bd/srcs/shell.bd}
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/impl_1/shellTop.bit} [get_hw_devices xcku115_0]
+set_property PROBES.FILE {/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/impl_1/shellTop.ltx} [get_hw_devices xcku115_0]
+set_property FULL_PROBES.FILE {/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/impl_1/shellTop.ltx} [get_hw_devices xcku115_0]
+current_hw_device [get_hw_devices xcku115_0]
+refresh_hw_device [lindex [get_hw_devices xcku115_0] 0]
+set_property PROBES.FILE {/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/impl_1/shellTop.ltx} [get_hw_devices xcku115_0]
+set_property FULL_PROBES.FILE {/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/impl_1/shellTop.ltx} [get_hw_devices xcku115_0]
+set_property PROGRAM.FILE {/home/graham0/Vivado_Projects/galapagos_wip/shells/projects/adm-8k5/adm-8k5.runs/impl_1/shellTop.bit} [get_hw_devices xcku115_0]
+program_hw_devices [get_hw_devices xcku115_0]
+refresh_hw_device [lindex [get_hw_devices xcku115_0] 0]

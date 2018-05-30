@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="shell_xbar_1_synth_1" LaunchPart="xcku115-flva1517-2-e" LaunchTime="1526266146">
+<GenRun Id="shell_xbar_1_synth_1" LaunchPart="xcku115-flva1517-2-e" LaunchTime="1527097313">
   <File Type="VDS-TIMING-PB" Name="shell_xbar_1_timing_summary_synth.pb"/>
   <File Type="VDS-TIMINGSUMMARY" Name="shell_xbar_1_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="shell_xbar_1.dcp"/>
@@ -12,11 +12,13 @@
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/shell_xbar_1">
     <File Path="$PSRCDIR/sources_1/bd/srcs/ip/shell_xbar_1/shell_xbar_1.xci">
       <FileInfo>
+        <Attr Name="Library" Val="xil_defaultlib"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../../adm-8k5/srcs/ip/shell_xbar_1/shell_xbar_1.xci"/>
         <Attr Name="ImportTime" Val="0"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
+        <Attr Name="ProcessingOrder" Val="EARLY"/>
       </FileInfo>
     </File>
     <Config>
@@ -27,11 +29,13 @@
   <FileSet Name="constrs_in" Type="BlockSrcs" RelSrcDir="$PSRCDIR/shell_xbar_1">
     <File Path="$PSRCDIR/sources_1/bd/srcs/ip/shell_xbar_1/shell_xbar_1.xci">
       <FileInfo>
+        <Attr Name="Library" Val="xil_defaultlib"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../../adm-8k5/srcs/ip/shell_xbar_1/shell_xbar_1.xci"/>
         <Attr Name="ImportTime" Val="0"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
+        <Attr Name="ProcessingOrder" Val="EARLY"/>
       </FileInfo>
     </File>
     <Config>
