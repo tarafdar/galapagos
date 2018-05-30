@@ -124,17 +124,12 @@ void signatureMatch(
 
 
 
-
-
-
 			*match_out = match;
 			stream_out->write(packetOut);
 			*data_out = data;
 			*comp_data_out = comp_data;
 
-			//ap_wait();
 			counter = counter + 1;
-			//*counter_out = counter;
 
 		}while(!last);
 

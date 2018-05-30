@@ -60,6 +60,7 @@ class interfaceObj:
         self.fpga = ''
         self.dir_network = ''
         debug = False 
+
 class kernelObj:
     fpga = ''
     num = ''
@@ -84,6 +85,7 @@ class kernelObj:
         self.aresetn = 'ap_rst_n'
         self.id_port = 'id_V'
         self.mem_interface = ''
+
 class packetFormatterObj:
     port = ''
     dest = ''
@@ -91,6 +93,11 @@ class packetFormatterObj:
         self.port = ''
         self.dest = ''
 
+class memInterfaceObj:
+    kernelName = ''
+    def __init__(self):
+        self.kernelName = ''
+    
 
 class fpgaObj:
     typeNode = ''
@@ -196,8 +203,8 @@ def readKernelsFile(logicalKernelsFile):
         
         memElement = kernelElement.find('mem_interface')
         mem_port = ''
-        if idElement != None:
-            mem_port = idElement.text.replace(" ", "")
+        if memElement != None:
+            mem_port = memElement.text.replace(" ", "")
 
 
         repElement = kernelElement.find('rep')

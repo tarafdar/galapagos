@@ -1,11 +1,15 @@
+#Makefile for Galapagos
+#Author: Naif Tarafdar
+
 BOARD = adm-8k5
-DCP = static_routed_v2.dcp
-LOGICALFILE=hwMiddleware/packetSwitch/input/kmeans90/mpiLogical.xml
-MACFILE=hwMiddleware/packetSwitch/input/kmeans90/mpiMacAddresses
-MAPFILE=hwMiddleware/packetSwitch/input/kmeans90/mpiMap.xml
-PROJECTNAME=kmeans90
-USERIP_DIR=HMPI
-USERIPTCL=${USERIP_DIR}/generate_hls_ip.tcl
+DCP = static_routed_v3.dcp
+LOGICALFILE=hwMiddleware/packetSwitch/input/mlKernels/mpiLogical.xml
+MACFILE=hwMiddleware/packetSwitch/input/mlKernels/mpiMacAddresses
+MAPFILE=hwMiddleware/packetSwitch/input/mlKernels/mpiMap.xml
+PROJECTNAME=mlKernels
+USERHLSIP_DIR=ML_Layer/hlsSources
+USERHLSIPTCL=${USERHLSIP_DIR}/generate_hls_ip.tcl
+USERIPTCL=./ML_Layer/ipPackage/package_top.tcl
 
 
 all: userIP createCluster pr  
@@ -14,12 +18,12 @@ all: userIP createCluster pr
 createCluster: tclScripts/createCluster.tcl
 
 
-userIP: ${USERIP_DIR}/* ${USERIP_DIR}/generate_hls_ip.tcl
+userIP: ${USERHLSIP_DIR}/* ${USERHLSIP_DIR}/generate_hls_ip.tcl
 	mkdir -p userIP
-	vivado_hls -f ${USERIPTCL}
+	vivado_hls ${USERHLSIPTCL}
+	vivado -mode batch -source ${USERIPTCL} 
 
-#shell: hlsShell shells/projects/${BOARD}/${DCP}
-shell: shells/projects/${BOARD}/${DCP}
+shell: hlsShell shells/projects/${BOARD}/${DCP}
 
 hlsShell:
 	mkdir -p hlsIP_${BOARD}
