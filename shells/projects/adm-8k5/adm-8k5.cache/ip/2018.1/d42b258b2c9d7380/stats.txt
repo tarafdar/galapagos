@@ -1,3 +1,0 @@
-NumberHits:1
-Timestamp: Tue May 15 16:22:07 UTC 2018
-VLNV: xilinx.com:ip:axis_data_fifo:1.1
