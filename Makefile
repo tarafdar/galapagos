@@ -2,6 +2,8 @@
 #Author: Naif Tarafdar
 
 BOARD = adm-8k5
+PROJNAME= dariusFlatten
+FPGANUM= 0
 DCP = static_routed_v3.dcp
 LOGICALFILE=hwMiddleware/packetSwitch/input/mlKernels/mpiLogical.xml
 MACFILE=hwMiddleware/packetSwitch/input/mlKernels/mpiMacAddresses
@@ -32,7 +34,6 @@ hlsShell:
 tclScripts/createCluster.tcl: ${LOGICALFILE} ${MACFILE} ${MAPFILE} 
 	mkdir -p projects
 	python hwMiddleware/packetSwitch/globalFPGAParser.py --logicalFile=${LOGICALFILE} --macFile=${MACFILE} --mapFile=${MAPFILE} --projectName=${PROJECTNAME}
-#	touch projects/${PROJECTNAME}/cluster
 
 clean:
 	rm -rf projects/${PROJECTNAME} tclScripts/createCluster.tcl
@@ -47,6 +48,12 @@ shells/projects/${BOARD}/${DCP}:
 	vivado -mode gui -source tclScripts/createShell_${BOARD}.tcl -tclargs ${DCP}
 	mkdir -p shells/${BOARD}/dcps
 	cp shells/projects/${BOARD}/${DCP} shells/${BOARD}/dcps
+
+flatten: hlsShell 
+	vivado -mode tcl -source tclScripts/flatten_${BOARD}.tcl -tclargs ${BOARD}_flatten ${PROJNAME} ${FPGANUM} 
+
+clean_flatten:
+	rm -rf projects/${PROJNAME}/${FPGANUM}/${FPGANUM}.cache projects/${PROJNAME}/${FPGANUM}/${FPGANUM}.hw projects/${PROJNAME}/${FPGANUM}/${FPGANUM}.ip_user_files projects/${PROJNAME}/${FPGANUM}/${FPGANUM}.sim projects/${PROJNAME}/${FPGANUM}/${FPGANUM}.srcs projects/${PROJNAME}/${FPGANUM}/${FPGANUM}.runs projects/${PROJNAME}/${FPGANUM}/${FPGANUM}.xpr
 
 pr: createCluster 
 	bash ./tclScripts/createCluster.sh
