@@ -381,6 +381,11 @@ create_ip_run [get_files -of_objects [get_fileset sources_1] projects/$projName/
 launch_runs -jobs 8 pr_synth_1
 
 
+wait_on_run shell_synth_1
+wait_on_run pr_synth_1
+
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 8
 
 #source tclScripts/synthesizeShell_adm-8k5.tcl
 
