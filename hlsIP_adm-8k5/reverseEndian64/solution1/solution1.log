@@ -5,21 +5,21 @@ Copyright (C) 1986-2018 Xilinx, Inc. All Rights Reserved.
 
 ==============================================================
 
-INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
 INFO: [HLS 200-10] Setting target device to 'xcku115-flva1517-2-e'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
 INFO: [HLS 200-10] Analyzing design file '../hlsSources/srcs/reverseEndian64.cpp' ...
 INFO: [HLS 200-10] Validating synthesis directives ...
-INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:20 ; elapsed = 00:00:12 . Memory (MB): peak = 348.598 ; gain = 4.262 ; free physical = 12625 ; free virtual = 39256
-INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:21 ; elapsed = 00:00:13 . Memory (MB): peak = 348.598 ; gain = 4.262 ; free physical = 12602 ; free virtual = 39256
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:23 ; elapsed = 00:00:13 . Memory (MB): peak = 351.625 ; gain = 0.156 ; free physical = 28297 ; free virtual = 62674
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:25 ; elapsed = 00:00:14 . Memory (MB): peak = 351.625 ; gain = 0.156 ; free physical = 28292 ; free virtual = 62676
 INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:22 ; elapsed = 00:00:15 . Memory (MB): peak = 348.758 ; gain = 4.422 ; free physical = 12591 ; free virtual = 39250
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:27 ; elapsed = 00:00:16 . Memory (MB): peak = 351.777 ; gain = 0.309 ; free physical = 28248 ; free virtual = 62641
 INFO: [HLS 200-10] Checking synthesizability ...
 INFO: [XFORM 203-602] Inlining function 'reverseEndian64_inline' into 'reverseEndian64' (../hlsSources/srcs/reverseEndian64.cpp:50) automatically.
-INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:22 ; elapsed = 00:00:15 . Memory (MB): peak = 348.758 ; gain = 4.422 ; free physical = 12585 ; free virtual = 39245
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:27 ; elapsed = 00:00:16 . Memory (MB): peak = 351.777 ; gain = 0.309 ; free physical = 28239 ; free virtual = 62632
 INFO: [XFORM 203-602] Inlining function 'reverseEndian64_inline' into 'reverseEndian64' (../hlsSources/srcs/reverseEndian64.cpp:50) automatically.
-INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:23 ; elapsed = 00:00:16 . Memory (MB): peak = 476.723 ; gain = 132.387 ; free physical = 12557 ; free virtual = 39221
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:28 ; elapsed = 00:00:17 . Memory (MB): peak = 479.742 ; gain = 128.273 ; free physical = 28192 ; free virtual = 62590
 WARNING: [XFORM 203-561] 'Loop-1' (../hlsSources/srcs/reverseEndian64.cpp:55:2) in function 'reverseEndian64' is an infinite loop.
-INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:24 ; elapsed = 00:00:16 . Memory (MB): peak = 476.723 ; gain = 132.387 ; free physical = 12555 ; free virtual = 39220
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:29 ; elapsed = 00:00:18 . Memory (MB): peak = 479.742 ; gain = 128.273 ; free physical = 28189 ; free virtual = 62588
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-10] Synthesizing 'reverseEndian64' ...
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -27,13 +27,13 @@ INFO: [HLS 200-42] -- Implementing module 'reverseEndian64'
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 16.36 seconds; current allocated memory: 77.971 MB.
+INFO: [HLS 200-111]  Elapsed time: 18.05 seconds; current allocated memory: 77.694 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.03 seconds; current allocated memory: 78.134 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.01 seconds; current allocated memory: 77.857 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'reverseEndian64'
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -45,12 +45,12 @@ INFO: [RTGEN 206-500] Setting interface mode on port 'reverseEndian64/stream_out
 INFO: [RTGEN 206-500] Setting interface mode on port 'reverseEndian64/stream_out_V_tkeep_V' to 'axis' (register, both mode).
 INFO: [RTGEN 206-500] Setting interface mode on function 'reverseEndian64' to 'ap_ctrl_none'.
 INFO: [RTGEN 206-100] Finished creating RTL model for 'reverseEndian64'.
-INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 78.817 MB.
-INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:24 ; elapsed = 00:00:17 . Memory (MB): peak = 476.723 ; gain = 132.387 ; free physical = 12553 ; free virtual = 39220
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 78.539 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:29 ; elapsed = 00:00:19 . Memory (MB): peak = 479.742 ; gain = 128.273 ; free physical = 28184 ; free virtual = 62589
 INFO: [SYSC 207-301] Generating SystemC RTL for reverseEndian64.
 INFO: [VHDL 208-304] Generating VHDL RTL for reverseEndian64.
 INFO: [VLOG 209-307] Generating Verilog RTL for reverseEndian64.
 INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
-INFO: [HLS 200-10] Opening project '/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/hlsIP_adm-8k5/conv_proj'.
+INFO: [HLS 200-10] Creating and opening project '/home/tarafdar/workDir/galapagos/hlsIP_adm-8k5/conv_proj'.
 INFO: [HLS 200-10] Adding design file '../hlsTest/conv_layer.cpp' to the project
-INFO: [HLS 200-10] Opening solution '/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/hlsIP_adm-8k5/conv_proj/solution1'.
+INFO: [HLS 200-10] Opening solution '/home/tarafdar/workDir/galapagos/hlsIP_adm-8k5/conv_proj/solution1'.

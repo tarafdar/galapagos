@@ -43,7 +43,7 @@ set SCTraceOption "all"
 set TargetInfo "xcku115:-flva1517:-2-e"
 set SourceFiles {sc {} c ../../../hlsTest/conv_layer.cpp}
 set SourceFlags {sc {} c {{}}}
-set DirectiveFile {/nfs/ug/thesis/thesis0/pc/Graham/galapagos_wip/hlsIP_adm-8k5/conv_proj/solution1/solution1.directive}
+set DirectiveFile {/home/tarafdar/workDir/galapagos/hlsIP_adm-8k5/conv_proj/solution1/solution1.directive}
 set TBFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
 set SpecLanguage "C"
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}

@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'conv_layer'
 ================================================================
-* Date:           Tue May 15 11:49:33 2018
+* Date:           Thu May 31 23:08:12 2018
 
 * Version:        2018.1 (Build 2188600 on Wed Apr 04 19:04:02 MDT 2018)
 * Project:        conv_proj
@@ -565,7 +565,7 @@ ST_56 : Operation 297 [1/8] (3.45ns)   --->   "%output_element_1 = fadd float %t
 ST_56 : Operation 298 [1/1] (0.00ns)   --->   "br label %5" [../hlsTest/conv_layer.cpp:64]
 
  <State 57> : 3.48ns
-ST_57 : Operation 299 [1/1] (3.47ns)   --->   "%tmp_26 = fcmp ogt float %tmp_19, 0.000000e+00" [/cad1/Xilinx/Vivado/2018.1/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h:215->../hlsTest/conv_layer.cpp:72]   --->   Core 105 'FCmp' <Latency = 0> <II = 1> <Delay = 3.47> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+ST_57 : Operation 299 [1/1] (3.47ns)   --->   "%tmp_26 = fcmp ogt float %tmp_19, 0.000000e+00" [/opt/Xilinx/Vivado/2018.1/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h:215->../hlsTest/conv_layer.cpp:72]   --->   Core 105 'FCmp' <Latency = 0> <II = 1> <Delay = 3.47> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
 ST_57 : Operation 300 [1/1] (0.00ns)   --->   "%tmp22_cast = sext i34 %tmp22 to i64" [../hlsTest/conv_layer.cpp:72]
 ST_57 : Operation 301 [1/1] (1.57ns)   --->   "%tmp_29 = add i64 %tmp22_cast, %tmp9" [../hlsTest/conv_layer.cpp:72]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_57 : Operation 302 [1/1] (0.00ns)   --->   "%mem_addr_1 = getelementptr inbounds float* %mem, i64 %tmp_29" [../hlsTest/conv_layer.cpp:72]
@@ -577,7 +577,7 @@ ST_58 : Operation 305 [1/1] (0.00ns)   --->   "%tmp_24 = trunc i32 %tmp_33_to_in
 ST_58 : Operation 306 [1/1] (0.78ns)   --->   "%notlhs = icmp ne i8 %tmp_23, -1" [../hlsTest/conv_layer.cpp:53]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.11> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 ST_58 : Operation 307 [1/1] (1.11ns)   --->   "%notrhs = icmp eq i23 %tmp_24, 0" [../hlsTest/conv_layer.cpp:53]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.11> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 ST_58 : Operation 308 [1/1] (0.00ns) (grouped into LUT with out node tmp_28)   --->   "%tmp_25 = or i1 %notrhs, %notlhs" [../hlsTest/conv_layer.cpp:53]   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_58 : Operation 309 [1/1] (0.00ns) (grouped into LUT with out node tmp_28)   --->   "%tmp_27 = and i1 %tmp_25, %tmp_26" [/cad1/Xilinx/Vivado/2018.1/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h:215->../hlsTest/conv_layer.cpp:72]   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_58 : Operation 309 [1/1] (0.00ns) (grouped into LUT with out node tmp_28)   --->   "%tmp_27 = and i1 %tmp_25, %tmp_26" [/opt/Xilinx/Vivado/2018.1/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h:215->../hlsTest/conv_layer.cpp:72]   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
 ST_58 : Operation 310 [1/1] (0.44ns) (out node of the LUT)   --->   "%tmp_28 = select i1 %tmp_27, float %tmp_19, float 0.000000e+00" [../hlsTest/conv_layer.cpp:72]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.44> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 ST_58 : Operation 311 [1/1] (3.50ns)   --->   "%mem_addr_1_req = call i1 @_ssdm_op_WriteReq.m_axi.floatP(float* %mem_addr_1, i32 1) nounwind" [../hlsTest/conv_layer.cpp:72]   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 

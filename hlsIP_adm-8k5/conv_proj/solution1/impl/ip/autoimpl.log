@@ -7,7 +7,7 @@
 source run_ippack.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/cad1/Xilinx/Vivado/2018.1/data/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2018.1/data/ip'.
 WARNING: [IP_Flow 19-4832] The IP name 'conv_layer_ap_fadd_6_full_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
 INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'conv_layer_ap_fadd_6_full_dsp_32'...
 INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'conv_layer_ap_fadd_6_full_dsp_32'...
@@ -19,5 +19,5 @@ INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'conv_layer_ap_fmul
 INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'conv_layer_ap_fmul_3_max_dsp_32'...
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/cad1/Xilinx/Vivado/2018.1/data/ip'.
-INFO: [Common 17-206] Exiting Vivado at Tue May 15 11:49:52 2018...
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2018.1/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Thu May 31 23:08:28 2018...

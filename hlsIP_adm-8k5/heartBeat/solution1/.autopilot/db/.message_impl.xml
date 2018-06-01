@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Messages>
-	<Message prefix="[IMPL 213-8]" severity="INFO" keynum="IMPL_8_1776" content="Exporting RTL as a Vivado IP." tag=""/>
-	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1303" content="Opening project &apos;/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/hlsIP_adm-8k5/axiStreamGate&apos;." tag=""/>
-	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1358" content="Adding design file &apos;../hlsSources/srcs/axiStreamGate.cpp&apos; to the project" tag=""/>
-	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1369" content="Opening solution &apos;/nfs/ug/thesis/thesis0/pc/Graham/galapagos_test/hlsIP_adm-8k5/axiStreamGate/solution1&apos;." tag=""/>
-	<Message prefix="[SYN 201-201]" severity="INFO" keynum="23" content="Setting up clock &apos;default&apos; with a period of 5ns." tag=""/>
-</Messages>

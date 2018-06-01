@@ -59,7 +59,7 @@ set_property ip_repo_paths [concat [get_property ip_repo_paths [current_project]
 update_ip_catalog -rebuild
 #---- makes .bd
 create_bd_design "pr"
-#open_bd_design {projects/$projName/$fpgaNum/$fpgaNum.srcs/sources_1/bd/pr/pr.bd}
+open_bd_design {projects/$projName/$fpgaNum/$fpgaNum.srcs/sources_1/bd/pr/pr.bd}
 source projects/$projName/$fpgaNum/$fpgaNum.tcl
 
 # Set 'sources_1' fileset file properties for remote files

@@ -6,4 +6,4 @@
 # ==============================================================
 
 
-/cad1/Xilinx/Vivado/2018.1/bin/vivado  -notrace -mode batch -source run_ippack.tcl
+/opt/Xilinx/Vivado/2018.1/bin/vivado  -notrace -mode batch -source run_ippack.tcl
