@@ -8,16 +8,16 @@ Copyright (C) 1986-2018 Xilinx, Inc. All Rights Reserved.
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 4ns.
 INFO: [HLS 200-10] Analyzing design file '../hlsTest/conv_layer.cpp' ...
 INFO: [HLS 200-10] Validating synthesis directives ...
-INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:47 ; elapsed = 00:00:36 . Memory (MB): peak = 479.742 ; gain = 128.273 ; free physical = 28171 ; free virtual = 62587
-INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:49 ; elapsed = 00:00:37 . Memory (MB): peak = 479.742 ; gain = 128.273 ; free physical = 28170 ; free virtual = 62586
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:47 ; elapsed = 00:00:35 . Memory (MB): peak = 479.742 ; gain = 128.273 ; free physical = 26709 ; free virtual = 63143
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:49 ; elapsed = 00:00:37 . Memory (MB): peak = 479.742 ; gain = 128.273 ; free physical = 26708 ; free virtual = 63142
 INFO: [HLS 200-10] Starting code transformations ...
 INFO: [XFORM 203-603] Inlining function 'std::max<float>' into 'conv_layer' (../hlsTest/conv_layer.cpp:72).
-INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:50 ; elapsed = 00:00:39 . Memory (MB): peak = 479.742 ; gain = 128.273 ; free physical = 28169 ; free virtual = 62585
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:50 ; elapsed = 00:00:38 . Memory (MB): peak = 479.742 ; gain = 128.273 ; free physical = 26708 ; free virtual = 63142
 INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:50 ; elapsed = 00:00:39 . Memory (MB): peak = 479.742 ; gain = 128.273 ; free physical = 28169 ; free virtual = 62585
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:50 ; elapsed = 00:00:38 . Memory (MB): peak = 479.742 ; gain = 128.273 ; free physical = 26708 ; free virtual = 63142
 INFO: [XFORM 203-11] Balancing expressions in function 'conv_layer' (../hlsTest/conv_layer.cpp:5)...26 expression(s) balanced.
-INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:52 ; elapsed = 00:00:40 . Memory (MB): peak = 479.742 ; gain = 128.273 ; free physical = 28164 ; free virtual = 62579
-INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:53 ; elapsed = 00:00:41 . Memory (MB): peak = 479.742 ; gain = 128.273 ; free physical = 28162 ; free virtual = 62578
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:51 ; elapsed = 00:00:40 . Memory (MB): peak = 479.742 ; gain = 128.273 ; free physical = 26696 ; free virtual = 63129
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:52 ; elapsed = 00:00:40 . Memory (MB): peak = 479.742 ; gain = 128.273 ; free physical = 26705 ; free virtual = 63139
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO: [HLS 200-10] Synthesizing 'conv_layer' ...
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -25,13 +25,13 @@ INFO: [HLS 200-42] -- Implementing module 'conv_layer'
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 23.29 seconds; current allocated memory: 89.612 MB.
+INFO: [HLS 200-111]  Elapsed time: 23.27 seconds; current allocated memory: 89.874 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.1 seconds; current allocated memory: 90.550 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.09 seconds; current allocated memory: 90.811 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'conv_layer'
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -58,11 +58,11 @@ INFO: [RTGEN 206-100] Generating core module 'conv_layer_fcmp_3dEe': 1 instance(
 INFO: [RTGEN 206-100] Generating core module 'conv_layer_fmul_3cud': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'conv_layer_mul_32eOg': 13 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'conv_layer'.
-INFO: [HLS 200-111]  Elapsed time: 0.2 seconds; current allocated memory: 92.580 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.2 seconds; current allocated memory: 92.841 MB.
 INFO: [RTMG 210-282] Generating pipelined core: 'conv_layer_mul_32eOg_MulnS_0'
-INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:54 ; elapsed = 00:00:43 . Memory (MB): peak = 479.742 ; gain = 128.273 ; free physical = 28138 ; free virtual = 62558
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:54 ; elapsed = 00:00:42 . Memory (MB): peak = 479.742 ; gain = 128.273 ; free physical = 26724 ; free virtual = 63134
 INFO: [SYSC 207-301] Generating SystemC RTL for conv_layer.
 INFO: [VHDL 208-304] Generating VHDL RTL for conv_layer.
 INFO: [VLOG 209-307] Generating Verilog RTL for conv_layer.
 INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
-INFO: [HLS 200-112] Total elapsed time: 57.69 seconds; peak allocated memory: 92.580 MB.
+INFO: [HLS 200-112] Total elapsed time: 57.04 seconds; peak allocated memory: 92.841 MB.

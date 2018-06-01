@@ -374,13 +374,12 @@ export_ip_user_files -of_objects [get_files projects/$projName/$fpgaNum/$fpgaNum
 create_ip_run [get_files -of_objects [get_fileset sources_1] projects/$projName/$fpgaNum/$fpgaNum.srcs/sources_1/bd/srcs/shell.bd]
 launch_runs -jobs 8 shell_synth_1
 
-#update_compile_order -fileset sources_1
-#generate_target all [get_files  projects/$projName/$fpgaNum/$fpgaNum.srcs/sources_1/bd/pr/pr.bd]
-#export_ip_user_files -of_objects [get_files projects/$projName/$fpgaNum/$fpgaNum.srcs/sources_1/bd/pr/pr.bd] -no_script -sync -force -quiet
-#create_ip_run [get_files -of_objects [get_fileset sources_1] projects/$projName/$fpgaNum/$fpgaNum.srcs/sources_1/bd/pr/pr.bd]
-#launch_runs -jobs 8 pr_synth_1
-#
-#launch_runs -jobs 8 {shell_util_vector_logic_0_0_synth_1 shell_util_vector_logic_1_0_synth_1 shell_clk_wiz_0_0_synth_1 shell_gnd_0_synth_1 shell_util_vector_logic_2_0_synth_1 shell_blk_mem_gen_0_0_synth_1 shell_vio_0_0_synth_1 shell_proc_sys_reset_1_0_synth_1 shell_ddr4_0_0_synth_1 shell_xbar_0_synth_1 shell_mdm_1_0_synth_1 shell_rst_clk_wiz_0_100M_0_synth_1 shell_microblaze_0_0_synth_1 shell_dlmb_v10_0_synth_1 shell_ilmb_v10_0_synth_1 shell_ilmb_bram_if_cntlr_0_synth_1 shell_lmb_bram_0_synth_1 shell_xdma_0_0_synth_1 shell_util_ds_buf_0_synth_1 shell_gnd_1_synth_1 shell_tx_register_slice_0_0_synth_1 shell_axi_10g_ethernet_0_0_synth_1 shell_mac_config_vector_0_synth_1 shell_tx_ifg_tuser_0_synth_1 shell_ifg_delay_0_synth_1 shell_vcc_0_synth_1 shell_pcs_config_vector_0_synth_1 shell_rx_register_slice_1_0_synth_1 shell_rx_data_fifo_1_0_synth_1 shell_tx_data_fifo_0_0_synth_1 shell_util_vector_logic_1_1_synth_1 shell_auto_cc_4_synth_1 shell_s01_data_fifo_0_synth_1 shell_auto_us_cc_df_0_synth_1 shell_auto_cc_2_synth_1 shell_auto_cc_1_synth_1 shell_auto_cc_0_synth_1 shell_auto_cc_3_synth_1}
+update_compile_order -fileset sources_1
+generate_target all [get_files  projects/$projName/$fpgaNum/$fpgaNum.srcs/sources_1/bd/pr/pr.bd]
+export_ip_user_files -of_objects [get_files projects/$projName/$fpgaNum/$fpgaNum.srcs/sources_1/bd/pr/pr.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] projects/$projName/$fpgaNum/$fpgaNum.srcs/sources_1/bd/pr/pr.bd]
+launch_runs -jobs 8 pr_synth_1
+
 
 
 #source tclScripts/synthesizeShell_adm-8k5.tcl

@@ -20,7 +20,7 @@
         <library value="xilinx/kintexu/kintexu_fpv7" name="DefaultPlatform"/>
     </libraryList>
     <clockList>
-        <clock name="default" default="false" period="250MHz"/>
+        <clock default="false" name="default" period="250MHz"/>
     </clockList>
 </AutoPilot:solution>
 
