@@ -1,0 +1,107 @@
+{
+   ExpandedHierarchyInLayout: "",
+   guistr: "# # String gsaved with Nlview 6.8.5  2018-01-30 bk=1.4354 VDI=40 GEI=35 GUI=JA:1.6 TLS
+#  -string -flagsOSRD
+preplace port refclk_n -pg 1 -y 1190 -defaultsOSRD
+preplace port refclk_p -pg 1 -y 1210 -defaultsOSRD
+preplace port pcie_7x_mgt_rtl -pg 1 -y 360 -defaultsOSRD
+preplace port c0_sys_clk_n_0 -pg 1 -y 190 -defaultsOSRD
+preplace port txn -pg 1 -y 1290 -defaultsOSRD
+preplace port S_AXI_MEM -pg 1 -y 130 -defaultsOSRD
+preplace port perst_n -pg 1 -y 410 -defaultsOSRD
+preplace port txp -pg 1 -y 1270 -defaultsOSRD
+preplace port S_AXIS -pg 1 -y 820 -defaultsOSRD
+preplace port c0_ddr4_act_n_0 -pg 1 -y 110 -defaultsOSRD
+preplace port CLK_DATA -pg 1 -y 870 -defaultsOSRD
+preplace port rxn -pg 1 -y 1150 -defaultsOSRD
+preplace port M_AXIS -pg 1 -y 1100 -defaultsOSRD
+preplace port diff_clock_rtl -pg 1 -y 390 -defaultsOSRD
+preplace port c0_sys_clk_p_0 -pg 1 -y 170 -defaultsOSRD
+preplace port c0_ddr4_reset_n_0 -pg 1 -y 50 -defaultsOSRD
+preplace port refclk200 -pg 1 -y 560 -defaultsOSRD
+preplace port rxp -pg 1 -y 1170 -defaultsOSRD
+preplace port M_AXI_CONTROL -pg 1 -y 570 -defaultsOSRD
+preplace portBus c0_ddr4_dg_0 -pg 1 -y 310 -defaultsOSRD
+preplace portBus c0_ddr4_ck_c_0 -pg 1 -y 190 -defaultsOSRD
+preplace portBus c0_ddr4_dm_dbi_n_0 -pg 1 -y 250 -defaultsOSRD
+preplace portBus c0_ddr4_odt_0 -pg 1 -y 90 -defaultsOSRD
+preplace portBus c0_ddr4_dqs_c_0 -pg 1 -y 230 -defaultsOSRD
+preplace portBus c0_ddr4_bg_0 -pg 1 -y 70 -defaultsOSRD
+preplace portBus c0_ddr4_ck_t_0 -pg 1 -y 210 -defaultsOSRD
+preplace portBus ARESETN -pg 1 -y 850 -defaultsOSRD
+preplace portBus c0_ddr4_cke_0 -pg 1 -y 170 -defaultsOSRD
+preplace portBus c0_ddr4_adr_0 -pg 1 -y 130 -defaultsOSRD
+preplace portBus sfp_tx_disable -pg 1 -y 1220 -defaultsOSRD
+preplace portBus c0_ddr4_dqs_t_0 -pg 1 -y 270 -defaultsOSRD
+preplace portBus c0_ddr4_ba_0 -pg 1 -y 150 -defaultsOSRD
+preplace portBus c0_ddr4_cs_n_0 -pg 1 -y 290 -defaultsOSRD
+preplace inst vio_0 -pg 1 -lvl 5 -y 930 -defaultsOSRD
+preplace inst reverseEndian64_1 -pg 1 -lvl 5 -y 1100 -defaultsOSRD
+preplace inst mem_interface -pg 1 -lvl 3 -y 182 -defaultsOSRD
+preplace inst gnd -pg 1 -lvl 5 -y 1220 -defaultsOSRD
+preplace inst axi_gpio_0 -pg 1 -lvl 4 -y 790 -defaultsOSRD
+preplace inst PCIe -pg 1 -lvl 2 -y 400 -defaultsOSRD
+preplace inst util_vector_logic_0 -pg 1 -lvl 3 -y 1200 -defaultsOSRD
+preplace inst blk_mem_gen_0 -pg 1 -lvl 5 -y 650 -defaultsOSRD
+preplace inst mb_system -pg 1 -lvl 2 -y 570 -defaultsOSRD
+preplace inst util_vector_logic_1 -pg 1 -lvl 3 -y 1310 -defaultsOSRD
+preplace inst util_vector_logic_2 -pg 1 -lvl 4 -y 940 -defaultsOSRD
+preplace inst util_vector_logic_3 -pg 1 -lvl 2 -y 250 -defaultsOSRD
+preplace inst axi_interconnect_0 -pg 1 -lvl 3 -y 774 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 1 -y 560 -defaultsOSRD
+preplace inst axi_bram_ctrl_0 -pg 1 -lvl 4 -y 650 -defaultsOSRD
+preplace inst reverseEndian64_0 -pg 1 -lvl 3 -y 1064 -defaultsOSRD
+preplace inst network -pg 1 -lvl 4 -y 1160 -defaultsOSRD
+preplace netloc sys_rst_1 1 2 1 630J
+preplace netloc mem_interface_c0_ddr4_cke 1 3 3 1210J 170 NJ 170 NJ
+preplace netloc mem_interface_c0_ddr4_bg 1 3 3 1210J 70 NJ 70 NJ
+preplace netloc PCIe_pcie_mgt 1 2 4 630J 362 1210J 360 NJ 360 NJ
+preplace netloc network_M_AXIS 1 4 1 N
+preplace netloc c0_sys_clk_p_0_1 1 0 3 NJ 170 NJ 170 640J
+preplace netloc gnd_dout 1 5 1 NJ
+preplace netloc network_txn 1 4 2 2710J 1290 NJ
+preplace netloc rxp_1 1 0 4 NJ 1170 NJ 1170 550J 1390 1250J
+preplace netloc axi_bram_ctrl_0_BRAM_PORTA 1 4 1 NJ
+preplace netloc microblaze_0_Clk 1 1 3 220 680 590 984 1190J
+preplace netloc rxn_1 1 0 4 NJ 1150 NJ 1150 560J 1400 1240J
+preplace netloc axi_interconnect_0_M02_AXI 1 3 3 1210J 570 NJ 570 NJ
+preplace netloc c0_sys_clk_n_0_1 1 0 3 NJ 190 NJ 190 640J
+preplace netloc mem_interface_c0_ddr4_odt 1 3 3 1210J 90 NJ 90 NJ
+preplace netloc util_vector_logic_0_Res 1 3 1 1220
+preplace netloc network_txp 1 4 2 2720J 1280 3050J
+preplace netloc mem_interface_c0_ddr4_act_n 1 3 3 1210J 110 NJ 110 NJ
+preplace netloc refclk200_1 1 0 1 NJ
+preplace netloc reverseEndian64_1_stream_out 1 5 1 NJ
+preplace netloc diff_clock_rtl_1 1 0 2 NJ 390 NJ
+preplace netloc reverseEndian64_0_stream_out 1 3 1 1180
+preplace netloc vio_0_probe_out0 1 4 2 NJ 800 3050
+preplace netloc mem_interface_c0_ddr4_adr 1 3 3 1210J 130 NJ 130 NJ
+preplace netloc refclk_n_1 1 0 4 NJ 1190 NJ 1190 570J 1370 1230J
+preplace netloc mem_interface_c0_ddr4_cs_n 1 3 3 1210J 290 NJ 290 NJ
+preplace netloc network_network_reset_done 1 2 3 650 1410 NJ 1410 2700
+preplace netloc S00_AXI_1 1 2 1 610
+preplace netloc mem_interface_c0_ddr4_reset_n 1 3 3 1210J 50 NJ 50 NJ
+preplace netloc mem_interface_c0_ddr4_ck_c 1 3 3 1210J 190 NJ 190 NJ
+preplace netloc mem_interface_c0_ddr4_ba 1 3 3 1210J 150 NJ 150 NJ
+preplace netloc perst_n_1 1 0 3 NJ 410 220 490 580
+preplace netloc S_AXIS_1 1 0 3 NJ 820 NJ 820 550J
+preplace netloc axi_interconnect_0_M00_AXI 1 3 1 1240
+preplace netloc S01_AXI_1 1 2 1 630
+preplace netloc PCIe_axi_aclk 1 2 1 640
+preplace netloc axi_interconnect_0_M01_AXI 1 3 1 1240
+preplace netloc PCIe_M_AXI 1 2 1 610
+preplace netloc Net 1 3 3 1210J 310 NJ 310 NJ
+preplace netloc Net1 1 3 3 1210J 250 NJ 250 NJ
+preplace netloc util_vector_logic_2_Res 1 1 5 230 180 620 574 1200 1010 2730 850 NJ
+preplace netloc util_vector_logic_1_Res 1 3 1 1260
+preplace netloc Net2 1 3 3 1210J 230 NJ 230 NJ
+preplace netloc network_clk_156 1 2 4 650 584 1220 870 2720 870 NJ
+preplace netloc PCIe_axi_aresetn 1 2 2 600 964 1210
+preplace netloc S_AXI_MEM_1 1 0 3 NJ 130 NJ 130 650J
+preplace netloc Net3 1 3 3 1210J 270 NJ 270 NJ
+preplace netloc mem_interface_c0_ddr4_ck_t 1 3 3 1210J 210 NJ 210 NJ
+preplace netloc refclk_p_1 1 0 4 NJ 1210 NJ 1210 540J 1380 1270J
+levelinfo -pg 1 0 120 390 990 2540 2890 3070 -top -10 -bot 1450
+",
+}
+
