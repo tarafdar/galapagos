@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cluster>
+    <node>
+        <type> sw </type>
+        <kernel> 0 </kernel>
+    </node>
+    <node>
+        <board> adm-8k5-debug </board>
+        <comm> tcp </comm>
+        <type> hw </type>
+        <kernel> 1 </kernel>
+        <kernel> 2 </kernel>
+        <kernel> 3 </kernel>
+        <kernel> 4 </kernel>
+    </node>
+</cluster>

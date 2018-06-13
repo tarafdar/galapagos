@@ -282,7 +282,7 @@ def makeProjectClusterScript(projectName, allNodes):
             dirName = 'projects/' + projectName + '/' + str(nodeIndex)
             os.makedirs(dirName)
             #currently only making flattened bitstreams
-            globalConfigFile.write("vivado -mode tcl -source tclScripts/createFlatten.tcl -tclargs " + node.board + " " + projectName + " " + str(nodeIndex) + "\n")
+            globalConfigFile.write("vivado -mode batch -source tclScripts/createFlatten.tcl -tclargs " + node.board + " " + projectName + " " + str(nodeIndex) + "\n")
 
         nodeIndex = nodeIndex + 1
 

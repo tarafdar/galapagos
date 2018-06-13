@@ -62,7 +62,7 @@ def makeTCLFiles(fpga, projectName, networkBridges):
     tclMain.write('create_bd_cell -type ip -vlnv xilinx.com:hls:ip_dest_filter:1.0 ip_dest_filter_inst\n')
     tclMain.write('connect_bd_net [get_bd_ports CLK] [get_bd_pins ip_dest_filter_inst/ap_clk]\n')
     tclMain.write('connect_bd_net [get_bd_ports ARESETN] [get_bd_pins ip_dest_filter_inst/ap_rst_n]\n')
-    tclMain.write('create_bd_cell -type ip -vlnv user.org:user:TCP_bridge:1.0 TCP_bridge_inst\n')
+    tclMain.write('create_bd_cell -type ip -vlnv user.org:user:TCP_bridge_wrapper:1.0 TCP_bridge_inst\n')
     tclMain.write('connect_bd_net [get_bd_ports CLK] [get_bd_pins TCP_bridge_inst/aclk_0]\n')
     tclMain.write('connect_bd_net [get_bd_ports ARESETN] [get_bd_pins TCP_bridge_inst/aresetn_0]\n')
     #be wary of ip.coe location

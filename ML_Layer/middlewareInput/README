@@ -1,0 +1,7 @@
+Configuration 
+
+
+Conf 0 ...................... rank_0 CPU_0 , rank_1 FPGA_0
+Conf 1 ...................... rank_0 CPU_0 , rank_1-2 FPGA_0
+Conf 2 ...................... rank_0 CPU_0 , rank_1-4  FPGA_0
+Conf 3 ...................... rank_0 CPU_0 , rank_1-4  FPGA_0, rank_5-8 FPGA_1
