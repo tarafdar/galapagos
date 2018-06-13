@@ -2,16 +2,16 @@
 <Messages>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1312" content="Analyzing design file &apos;../hlsTest/conv_layer.cpp&apos; ..." tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1465" content="Validating synthesis directives ..." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Checking Pragmas Time (s): cpu = 00:00:47 ; elapsed = 00:00:35 . Memory (MB): peak = 479.742 ; gain = 128.273 ; free physical = 26709 ; free virtual = 63143" tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Linking Time (s): cpu = 00:00:49 ; elapsed = 00:00:37 . Memory (MB): peak = 479.742 ; gain = 128.273 ; free physical = 26708 ; free virtual = 63142" tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Checking Pragmas Time (s): cpu = 00:00:46 ; elapsed = 00:00:35 . Memory (MB): peak = 479.742 ; gain = 128.273 ; free physical = 19477 ; free virtual = 61155" tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Linking Time (s): cpu = 00:00:48 ; elapsed = 00:00:37 . Memory (MB): peak = 479.742 ; gain = 128.273 ; free physical = 19476 ; free virtual = 61154" tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1467" content="Starting code transformations ..." tag=""/>
 	<Message prefix="[XFORM 203-603]" severity="INFO" keynum="792" content="Inlining function &apos;std::max&lt;float&gt;&apos; into &apos;conv_layer&apos; (../hlsTest/conv_layer.cpp:72)." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Standard Transforms Time (s): cpu = 00:00:50 ; elapsed = 00:00:38 . Memory (MB): peak = 479.742 ; gain = 128.273 ; free physical = 26708 ; free virtual = 63142" tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Standard Transforms Time (s): cpu = 00:00:49 ; elapsed = 00:00:38 . Memory (MB): peak = 479.742 ; gain = 128.273 ; free physical = 19476 ; free virtual = 61154" tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1472" content="Checking synthesizability ..." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Checking Synthesizability Time (s): cpu = 00:00:50 ; elapsed = 00:00:38 . Memory (MB): peak = 479.742 ; gain = 128.273 ; free physical = 26708 ; free virtual = 63142" tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Checking Synthesizability Time (s): cpu = 00:00:49 ; elapsed = 00:00:38 . Memory (MB): peak = 479.742 ; gain = 128.273 ; free physical = 19476 ; free virtual = 61154" tag=""/>
 	<Message prefix="[XFORM 203-11]" severity="INFO" keynum="754" content="Balancing expressions in function &apos;conv_layer&apos; (../hlsTest/conv_layer.cpp:5)...26 expression(s) balanced." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Pre-synthesis Time (s): cpu = 00:00:51 ; elapsed = 00:00:40 . Memory (MB): peak = 479.742 ; gain = 128.273 ; free physical = 26696 ; free virtual = 63129" tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Architecture Synthesis Time (s): cpu = 00:00:52 ; elapsed = 00:00:40 . Memory (MB): peak = 479.742 ; gain = 128.273 ; free physical = 26705 ; free virtual = 63139" tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Pre-synthesis Time (s): cpu = 00:00:51 ; elapsed = 00:00:39 . Memory (MB): peak = 479.742 ; gain = 128.273 ; free physical = 19468 ; free virtual = 61146" tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Architecture Synthesis Time (s): cpu = 00:00:52 ; elapsed = 00:00:40 . Memory (MB): peak = 479.742 ; gain = 128.273 ; free physical = 19468 ; free virtual = 61146" tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1317" content="Starting hardware synthesis ..." tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1385" content="Synthesizing &apos;conv_layer&apos; ..." tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1477" content="----------------------------------------------------------------" tag=""/>
@@ -19,13 +19,13 @@
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1478" content="----------------------------------------------------------------" tag=""/>
 	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="139" content="Starting scheduling ..." tag=""/>
 	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="138" content="Finished scheduling." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 23.27 seconds; current allocated memory: 89.874 MB." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 23.14 seconds; current allocated memory: 89.876 MB." tag=""/>
 	<Message prefix="[BIND 205-100]" severity="INFO" keynum="439" content="Starting micro-architecture generation ..." tag=""/>
 	<Message prefix="[BIND 205-101]" severity="INFO" keynum="211" content="Performing variable lifetime analysis." tag=""/>
 	<Message prefix="[BIND 205-101]" severity="INFO" keynum="210" content="Exploring resource sharing." tag=""/>
 	<Message prefix="[BIND 205-101]" severity="INFO" keynum="206" content="Binding ..." tag=""/>
 	<Message prefix="[BIND 205-100]" severity="INFO" keynum="438" content="Finished micro-architecture generation." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.09 seconds; current allocated memory: 90.811 MB." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.09 seconds; current allocated memory: 90.813 MB." tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1483" content="----------------------------------------------------------------" tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1484" content="-- Generating RTL for module &apos;conv_layer&apos;" tag=""/>
 	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1485" content="----------------------------------------------------------------" tag=""/>
@@ -52,9 +52,9 @@
 	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="368" content="Generating core module &apos;conv_layer_fmul_3cud&apos;: 1 instance(s)." tag=""/>
 	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="368" content="Generating core module &apos;conv_layer_mul_32eOg&apos;: 13 instance(s)." tag=""/>
 	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="369" content="Finished creating RTL model for &apos;conv_layer&apos;." tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.2 seconds; current allocated memory: 92.841 MB." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.19 seconds; current allocated memory: 92.843 MB." tag=""/>
 	<Message prefix="[RTMG 210-282]" severity="INFO" keynum="RTMG_282_1796" content="Generating pipelined core: &apos;conv_layer_mul_32eOg_MulnS_0&apos;" tag=""/>
-	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished generating all RTL models Time (s): cpu = 00:00:54 ; elapsed = 00:00:42 . Memory (MB): peak = 479.742 ; gain = 128.273 ; free physical = 26724 ; free virtual = 63134" tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished generating all RTL models Time (s): cpu = 00:00:53 ; elapsed = 00:00:42 . Memory (MB): peak = 479.742 ; gain = 128.273 ; free physical = 19487 ; free virtual = 61142" tag=""/>
 	<Message prefix="[SYSC 207-301]" severity="INFO" keynum="SYSC_301_1065" content="Generating SystemC RTL for conv_layer." tag=""/>
 	<Message prefix="[VHDL 208-304]" severity="INFO" keynum="VHDL_304_1066" content="Generating VHDL RTL for conv_layer." tag=""/>
 	<Message prefix="[VLOG 209-307]" severity="INFO" keynum="VLOG_307_1067" content="Generating Verilog RTL for conv_layer." tag=""/>

@@ -47,3 +47,16 @@ There is current work in remaking this part with containers in OpenStack and wil
 This takes three files (refer to LOGICALFILE, MACFILE, MAPFILE defined in the Makefile) and partitions a large cluster logically described by the user into multiple separate FPGAs.
 This is described with XML, for now the MACFILE is a separate file but with the Cloud Provisioning Layer integrated this would be an input from the Cloud Provisioning Layer
 
+
+
+
+
+## ML Application Layer on top of MPI
+
+Look at the README in ML_Layer that specifies different configurations. Modify Makefile to point to different configurations.
+
+1. `git clone https://github.com/eskandarinariman/HMPI.git`
+2. `mkdir userIP`
+3. Download PYNQ-DL Darius IP and place in userIP
+4. `make userIP`
+5. make createCluster 

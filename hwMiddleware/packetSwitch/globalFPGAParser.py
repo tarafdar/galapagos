@@ -1,24 +1,8 @@
-import copy
-import sys
-import subprocess
+import xml.etree.ElementTree as ET
+import socket, struct
+import getopt, sys
 import os
 import shutil
-import getopt
-
-sys.path.append('hwMiddleware/packetSwitch')
-import localFPGAParser
-
-projectName = ''
-allKernels = []
-allFPGAs = []
-allSchedulers = []
-schedNum = 0
-allOutputInterfaces = []
-allInputInterfaces = []
-allFPGAsFinal = []
-allInterfaces = []
-macAddresses = []
-networkBridges=None
 
 
 class networkBridgesObj:
@@ -30,131 +14,47 @@ class networkBridgesObj:
     stream_out_to = ''
 
 
-class connectionObj:
-    conn_type = ''
-    conn_dest = ''
-    def __init__(self):
-        self.conn_type = ''
-        self.conn_dest = ''
-
-class interfaceObj:
-    fpga = ''
-    kernelNum = ''
-    direction = ''
+class controlInterfaceObj:
+    offset = 0x0
     name = ''
-    conn = ''
-    tdest = ''
-    conn_dir_tdest = ''
-    scheduler_id = ''
-    dir_network = ''
-    conn_type = ''
-    conn_dest = ''
-    debug = False
-    def __init__(self):
-        self.scheduler_id = ''
-        self.direction = ''
-        self.name =  ''
-        self.conn = ''
-        self.tdest = ''
-        self.conn_dir_tdest = ''
-        self.fpga = ''
-        self.dir_network = ''
-        debug = False 
+
 
 class kernelObj:
-    fpga = ''
-    num = ''
-    interfaces = []
-    kernType = ''
-    kernVersion = ''
-    properties = []
     name = ''
+    id_num = ''
     clk = ''
     aresetn = ''
+    ip_vendor = ''
+    ip_type = ''
+    ip_version = ''
     id_port = 'id_V'
-    mem_interface = ''
-    def __init__(self):
-        self.num=''
-        self.interfaces = []
-        self.fpga = ''
-        self.kernType = 'HLS'
-        self.kernVersion = 1.0
-        self.properties = []
-        self.name = ''
-        self.clk = 'ap_clk'
-        self.aresetn = 'ap_rst_n'
-        self.id_port = 'id_V'
-        self.mem_interface = ''
-
-class packetFormatterObj:
-    port = ''
-    dest = ''
-    def __init__(self):
-        self.port = ''
-        self.dest = ''
-
-class memInterfaceObj:
-    kernelName = ''
-    def __init__(self):
-        self.kernelName = ''
-    
-
-class fpgaObj:
-    typeNode = ''
-    globalIn = []
-    globalOut = []
-    globalOut2 = []
-    kernelToIn = []
-    inToKernels = []
-    kernelToOut = []
-    inToOut = []
-    num = ''
-    kernels = []
-    MAC_addr = ''
-    schedulers = []
-    board_name = ''
     mem_interfaces = []
-    def __init__(self):
-        self.num = ''
-        self.MAC_addr = ''
-        self.kernels = []
-        self.schedulers = []
-        self.passThroughInput = []
-        self.kernelToIn = []
-        self.kernelToOut = []
-        self.inToKernel = []
-        self.globalIn = []
-        self.globalOut = []
-        self.globalOut2 = []
+    ctrl_interface = ''
+    stream_in = ''
+    stream_out = ''
+    ip_addr = ''
 
-class schedulerObj:
-    baseAddr = ''
-    inPort = ''
-    sched_id = ''
-    sched_type = ''
-    kernelNum = []
-    tdest_out = []
-    outInterfaces = []
-    conn_type = ''
-    conn_dest = ''
+class nodeObj:
+    num = ''
+    board = ''
+    comm = ''
+    kernels = []
+    mac_addr = ''
+    ip_addr = ''
     def __init__(self):
-        self.sched_id = ''
-        self.sched_type = ''
-        self.kernelNum = []
-        self.outInterfaces = []
-        self.tdest_out = []
+        self.kernels = []
+
 
 def readKernelsFile(logicalKernelsFile):
-    global allKernels
-    global allSchedulers
-    global schedNum
-    global networkBridges
-    import xml.etree.ElementTree as ET
     
+    allKernels = []
+    networkBridges = None
+
+    #parse logical kernel xml file
     tree = ET.parse(logicalKernelsFile)
     logicalCluster = tree.getroot()
 
-
+    #read bridge information
     bridge = False
     bridgeFromElement = logicalCluster.find('bridgeFrom')
     bridgeToElement = logicalCluster.find('bridgeTo')
@@ -178,525 +78,223 @@ def readKernelsFile(logicalKernelsFile):
 
 
     for kernelElement in logicalCluster.findall('kernel'):
+        #read kernel name
         kernelName = kernelElement.text.replace(" ", "")
         kernelName = kernelName.replace("\n", "")
         kernelName = kernelName.replace("\t", "")
-        num = kernelElement.find('num').text.replace(" ", "")
-       
-        print "kernelname is " + kernelName
+
+        #read kernel id
+        kernel_id = kernelElement.find('num').text.replace(" ", "")
+        #read name of clk and resetn signals, else assign default values
         clkElement = kernelElement.find('clk')
         resetElement = kernelElement.find('aresetn')
         if clkElement != None:
             clk = clkElement.text.replace(" ", "")
-            print clk
         else:
-            clk = ''
+            clk = 'ap_clk'
         if resetElement != None:
             aresetn = resetElement.text.replace(" ", "")
         else:
-            aresetn = ''
+            aresetn = 'aresetn'
 
+
+        #read name of id_port
         idElement = kernelElement.find('id_port')
         id_port = ''
         if idElement != None:
             id_port = idElement.text.replace(" ", "")
+    
+        #memory interfaces
+        mem_interface_array = kernelElement.findall('mem_interface')
+        mem_interfaces = []
+        for mem_interface_element in mem_interface_array:
+            mem_interface = mem_interface_element.find('name').text.replace(" ", "")
+            mem_interfaces.append(mem_interface)
+           
+        #control interfaces
+        control_interface_element = kernelElement.find('ctrl_interface')
+        control_interface = None
+        if control_interface_element != None:
+            control_interface = controlInterfaceObj()
+            control_interface.name = control_interface_element.find('name').text.replace(" ","")
+            control_interface.offset = control_interface_element.find('offset').text.replace(" ","")
+
+        rep_element = kernelElement.find('rep')
+        if rep_element != None:
+            rep = int(rep_element.text.replace(" ", ""))
+        else:
+            rep = 1
         
-        memElement = kernelElement.find('mem_interface')
-        mem_port = ''
-        if memElement != None:
-            mem_port = memElement.text.replace(" ", "")
+        interfaceElementArray = kernelElement.findall('interface')
+        stream_out = ''
+        stream_in = ''
+        for interface_element in interfaceElementArray:
+            direction = interface_element.find('direction').text.replace(" ", "")
+            if direction == 'out':
+                stream_out = interface_element.find('name').text.replace(" ", "")
+            else:
+                stream_in = interface_element.find('name').text.replace(" ", "")
+
+        #making kernel object
+        kernel = kernelObj()
+        kernel.name = kernelName
+        kernel.id_num = kernel_id
+        kernel.clk = clk
+        kernel.aresetn = aresetn
+        type_element = kernelElement.find('type')
+        if type_element != None:
+            kernel.ip_type = type_element.text.replace(" ", "")
+        else:
+            kernel.ip_type = 'hls'
+        
+        version_element = kernelElement.find('version')
+        if type_element != None:
+            kernel.ip_version = str(version_element.text.replace(" ", ""))
+        else:
+            kernel.ip_version = str('1.0')
+
+        vendor_element = kernelElement.find('vendor')
+        if type_element != None:
+            kernel.ip_vendor = vendor_element.text.replace(" ", "")
+        else:
+            kernel.ip_vendor = 'xilinx.com'
+
+        kernel.id_port = id_port 
+        kernel.mem_interfaces = mem_interfaces
+        kernel.ctrl_interface = control_interface
+        kernel.stream_in = stream_in
+        kernel.stream_out = stream_out
+       
+     
+        id_num = int(kernel_id)
+        for i in range(0, rep):
+            kernel.id_num = id_num
+            allKernels.append(kernel)
+            id_num = id_num + 1
 
 
-        repElement = kernelElement.find('rep')
-        #kernType = kernelElement.find('type').text.replace(" ","")
+    return allKernels, networkBridges
 
-        if(repElement != None):
-            rep = int(repElement.text.replace(" ", ""))
-
-            for i in range(1,rep +1):
-                kernel = kernelObj()
-                kernel.name = kernelName
-                kernel.clk = clk
-                kernel.aresetn = aresetn
-                kernel.num = int(num) + i - 1
-                kernel.id_port = id_port
-                kernel.mem_interface = mem_port
-                print "kernelName is "  + kernelName
-                print "kernelnum is "  + str(kernel.num)
-                interfaceElementArray = kernelElement.findall('interface')
-                for interfaceElement in interfaceElementArray:
-                    interface = interfaceObj()
-                    interface.direction = interfaceElement.find('direction').text.replace(" ", "")
-                    interface.name = interfaceElement.find('name').text.replace(" ", "")
-                    interface.tdest = None
-                    interface.tdest = kernel.num
-                    print "interface is " + interface.name
-                    if interface.direction == 'out':
-                        debugNode = interfaceElement.find('debug')
-                        if debugNode != None:
-                            interface.debug = True
-
-
-                    interface.conn_dir_tdest = None
-                    connDirTdestElement = interfaceElement.find('conn_dir_tdest')
-                    if connDirTdestElement != None:
-                        interface.conn_dir_tdest = int(connDirTdestElement.text.replace(" ", "")) + i
-                    dirNetworkElement = interfaceElement.find('dir_network')
-                    interface.dir_network = None
-                    if dirNetworkElement != None:
-                        interface.dir_network = dirNetworkElement.text.replace(" ", "")
-
-
-                    schedulerElement = interfaceElement.find('scheduler')
-                    interface.scheduler_id = None
-                    if schedulerElement != None and i == 1:
-                        scheduler = schedulerObj()
-                        for j in range(1, rep + 1):
-                            scheduler.tdest_out.append(int(interface.tdest) + j - 1)
-                            scheduler.kernelNum.append(int(num) + j - 1)
-                        #scheduler.baseAddr=int(interface.tdest)
-                        scheduler.baseAddr=kernel.num
-
-                        scheduler.inPort = interfaceElement.find('scheduler_in').text.replace(" ","")
-                        scheduler.sched_id = schedNum
-                        scheduler.sched_type = schedulerElement.text.replace(" ", "")
-                        allSchedulers.append(scheduler)
-                        schedNum = schedNum + 1
-
-                    if schedulerElement != None:
-                        interface.scheduler_id = schedNum - 1
-                    interface.kernelNum = kernel.num
-                    kernel.interfaces.append(interface)
-
-                allKernels.append(kernel)
-
-    print allKernels
-
-
-def readFPGAMap(mapFile, macFile):
-    global allKernels
-    global allSchedulers
-    global schedNum
-    global allFPGAs
-    global macAddresses
-
-    import xml.etree.ElementTree as ET
+def readNodeMap(mapFile, macFile, ipAddrFile, allKernels):
+    
     tree = ET.parse(mapFile)
     mapCluster = tree.getroot()
-    fpgaIndex = 0
 
     with open(macFile) as f:
         macAddresses = f.readlines()
-
     macAddresses = [x.strip() for x in macAddresses]
 
+    with open(ipAddrFile) as f:
+        ipAddresses = f.readlines()
+    ipAddresses = [x.strip() for x in ipAddresses]
 
+    nodeIndex = 0
 
+    allNodes = []
+    #iterate through all nodes first populating the types, board names, mac addresses and ip addresses
     for nodeElement in mapCluster:
-        typeNode = nodeElement.find('type').text.replace(" ", "")
-       
-        print "typenode is " + typeNode
-        boardNode = nodeElement.find('board')
+        node = nodeObj()
+        typeElement = nodeElement.find('type').text.replace(" ", "")
+        boardElement = nodeElement.find('board')
+        node.type = typeElement
+        if boardElement != None:
+            node.board = boardElement.text.replace(" ", "")
+        else:
+            node.board = ''
+        commElement = nodeElement.find('comm')
+        if commElement != None:
+            node.comm = commElement.text.replace(" ", "")
+        else:
+            node.comm = ''
+
+        node.mac_addr = macAddresses[nodeIndex]
+        node.ip_addr = ipAddresses[nodeIndex]
+        node.kernels = []
+        nodeIndex = nodeIndex + 1
+        allNodes.append(node)
+
+    nodeIndex = 0
+    #iterate through all nodes again populating the kernels 
+    for nodeElement in mapCluster:
         kernelElementArray = nodeElement.findall('kernel')
-        fpga = fpgaObj()
-        fpga.typeNode = typeNode
-        if boardNode != None:
-            fpga.board_name = boardNode.text.replace(" ", "")
-        else:
-            fpga.board_name = '' 
-        fpga.MAC_addr = macAddresses[fpgaIndex]
-        fpga.num = fpgaIndex
         for kernelElement in kernelElementArray:
-            num = kernelElement.text.replace(" ", "")
+            num = int(kernelElement.text.replace(" ", ""))
+            kernelIndex = 0
             for kernel in allKernels:
-                if int(num) == int(kernel.num):
-                    kernel.fpga = fpgaIndex
-                    fpga.kernels.append(kernel)
-        allFPGAs.append(fpga)
-        fpgaIndex = fpgaIndex + 1
-        
-    print allFPGAs
+                if int(kernel.id_num) == int(num):
+                    allNodes[nodeIndex].kernels.append(kernel)
+                    allKernels[kernelIndex].ip_addr = ipAddresses[nodeIndex]
+                kernelIndex = kernelIndex + 1
+       
 
-    for scheduler in allSchedulers:
-        fpgaArray = []
-        for kernelNum in scheduler.kernelNum:
-            for kernel in allKernels:
-                if int(kernelNum) == int(kernel.num):
-                    fpgaArray.append(kernel.fpga)
+        allNodes[nodeIndex].num = nodeIndex
+        nodeIndex = nodeIndex + 1
 
 
-        scheduler.fpga = max(set(fpgaArray), key=fpgaArray.count)
-        for fpga in allFPGAs:
-            if(int(scheduler.fpga) == int(fpga.num)):
-                fpga.schedulers.append(scheduler)
-
-def createGlobalInterfaceMap():
-    global allFPGAs
-    global allInterfaces
-    global allInputInterfaces
-    global allOutputInterfaces
-
-    for fpga in allFPGAs:
-        for kernel in fpga.kernels:
-            for interface in kernel.interfaces:
-                interface.fpga = fpga.num
-                allInterfaces.append(interface)
-                if interface.direction == 'in':
-                    allInputInterfaces.append(interface)
-                    fpga.globalIn.append(interface)
-                elif interface.direction == 'out':
-                    allOutputInterfaces.append(interface)
-                    fpga.globalOut.append(interface)
-        print "fpga " 
-        print fpga
-
-    fpgaIndex = 0
-    for fpga in allFPGAs:
-        outIndex = 0
-        for outInterface in fpga.globalOut:
-            if outInterface.conn_dir_tdest != None:
-                inputIndex = 0
-                for inputInterface in allInputInterfaces:
-                    #found interface that this is directly connected to
-                    if(str(inputInterface.tdest) == str(outInterface.conn_dir_tdest)):
-                        if(int(inputInterface.fpga) ==  int(outInterface.fpga)):
-                            outInterface.conn_type = 'local'
-                            outInterface.conn_dest = inputInterface.tdest
-                        else:
-                            outInterface.conn_type = 'network'
-                            for fpga2 in allFPGAs:
-                                if int(fpga2.num) == int(inputInterface.fpga):
-                                    outInterface.conn_dest = fpga2.MAC_addr
-                    inputIndex = inputIndex + 1
-            elif outInterface.dir_network != None:
-                outInterface.conn_type = 'network'
-                outInterface.conn_dest = outInterface.dir_network
-
-            else:
-                outInterface.conn_type = 'global'
-            outIndex = outIndex + 1
-        fpgaIndex = fpgaIndex+1
-
-def placeSchedulers():
-    global allInputInterfaces
-    global allSchedulers
-    global allFPGAs
-    for inputInterface in allInputInterfaces:
-        if(inputInterface.scheduler_id != None):
-            schedulerInterface = interfaceObj()
-            schedId = inputInterface.scheduler_id
-            for scheduler in allSchedulers:
-                if schedId == scheduler.sched_id:
-                    if(scheduler.fpga == inputInterface.fpga):
-                        schedulerInterface.conn_type = 'local'
-                        schedulerInterface.conn_dest = inputInterface.tdest
-                    else:
-                        schedulerInterface.conn_type = 'network'
-                        for fpga in allFPGAs:
-                            if inputInterface.fpga == fpga.num:
-                                schedulerInterface.conn_dest = fpga.MAC_addr
-
-                    scheduler.outInterfaces.append(schedulerInterface)
+    return allNodes, allKernels
 
 
-def redoIOMappings():
-    global allInputInterfaces
-    global allFPGAs
+#for nodes that are FPGA generate tcl
+def createLocalFPGA(allNodes, projectName, networkBridges):
 
-    for fpga in allFPGAs:
-        fpga.globalIn = []
-        for inputInterface in allInputInterfaces:
-           if int(inputInterface.fpga) == int(fpga.num):
-                fpga.globalIn.append(inputInterface)
-
-        for kernel in fpga.kernels:
-            kernel.interfaces = []
-
-    for fpga in allFPGAs:
-        for interface in fpga.globalIn:
-            interface.dir_network = fpga.MAC_addr
-            fpga.inToKernels.append(interface)
-
-
-            for otherFPGA in allFPGAs:
-                if otherFPGA.num != fpga.num:
-                    otherFPGA.inToOut.append(interface)
-
-    for interface in allInputInterfaces:
-        for fpga in allFPGAs:
-            for kernel in fpga.kernels:
-                if(interface.kernelNum == kernel.num):
-                    kernel.interfaces.append(interface)
-
-
-
-    for fpga in allFPGAs:
-
-        for interface in fpga.globalOut:
-            index = 0
-            for kernel in fpga.kernels:
-                if(interface.kernelNum == kernel.num):
-                    kernel.interfaces.append(interface)
-                index = index + 1
-
-
-    for fpga in allFPGAs:
-        print 'board name ' + fpga.board_name
-        for kernel in fpga.kernels:
-            print 'kernel name ' + kernel.name + ' kernel num '+ str(kernel.num) + ' number of interfaces ' + str(len(kernel.interfaces))
-            for interface in kernel.interfaces:
-                print 'interface name ' + interface.name
-                print 'interface direction ' + interface.direction
-                if interface.direction == 'out':
-                    print 'interface type ' + interface.conn_type
-                    print 'interface dest ' + str(interface.conn_dest)
-                else:
-                    print 'interface tdest ' + str(interface.tdest)
-        for scheduler in fpga.schedulers:
-            print 'scheduler type ' + scheduler.sched_type
-            print 'scheduler id ' + str(scheduler.sched_id)
-            print 'scheduler in ' + str(scheduler.inPort)
-            for interface in scheduler.outInterfaces:
-                print 'interface type ' + interface.conn_type
-                print 'interface dest ' + str(interface.conn_dest)
-    
-
-
-def createLocalFPGA(projectName, plus16):
-
-    global macAddresses
-    global networkBridges 
-    from lxml import etree
-
-    index = 0
-    if os.path.exists('projects/' + projectName):
-        shutil.rmtree('projects/' + projectName)
-    globalConfigFile = open('tclScripts/createCluster.sh', 'w')
-
-
-    packetFormatterList = []
-    numExtra_array = []
-    schedulerList_array = []
-    listIP_array = []
-    numDebug_array = []
-    localConnections_array = []
-    inputSwitchMasters_array = []
-    inputSwitchSlaves_array = []
-    if plus16:
-        for i in range(0, len(allFPGAs)):
-            packetFormatterList.append([])
-    
-    for fpga in allFPGAs:
-        if fpga.typeNode == 'sw':
+    for node in allNodes:
+        #don't generate tcl for sw
+        if node.type == 'sw':
             continue
-        nodeElement = etree.Element('fpga')
-        for kernel in fpga.kernels:
-            ipElement = etree.Element('IP')
-            nameAttribute = etree.Element('name')
-            nameAttribute.text = kernel.name
-            ipElement.append(nameAttribute)
 
-            clkAttribute = etree.Element('clk')
-            clkAttribute.text = kernel.clk 
-            ipElement.append(clkAttribute)
-
-            idElement = etree.Element('id')
-            idElement.text = str(kernel.num)
-            ipElement.append(idElement)
-
-            startAttribute = etree.Element('start')
-            startAttribute.text = 'ap_start'
-            ipElement.append(startAttribute)
-
-            resetAttribute = etree.Element('resetn')
-            resetAttribute.text = kernel.aresetn 
-            ipElement.append(resetAttribute)
-
-            typeAttribute = etree.Element('type')
-            typeAttribute.text = 'hls'
-            ipElement.append(typeAttribute)
-
-            versionAttribute = etree.Element('version')
-            versionAttribute.text = '1.0'
-            ipElement.append(versionAttribute)
-
-            id_portAttribute = etree.Element('id_port')
-            id_portAttribute.text = kernel.id_port
-            if kernel.id_port != '':
-                ipElement.append(id_portAttribute)
-            
-            for interface in kernel.interfaces:
-                interfaceAttribute = etree.Element('interface')
-
-                interfaceDirection = etree.Element('dir')
-                interfaceDirection.text = interface.direction
-                interfaceAttribute.append(interfaceDirection)
-
-                interfaceName = etree.Element('name')
-                interfaceName.text = interface.name
-                interfaceAttribute.append(interfaceName)
-
-                
-                if(interface.direction == 'out'):
-                    interfaceConn = etree.Element('conn')
-                    interfaceConnType = etree.Element( 'type')
-                    interfaceConnType.text = interface.conn_type
-                    interfaceConn.append(interfaceConnType)
-                    if interface.debug == True:
-                        interfaceDebug = etree.Element('debug')
-                        interfaceAttribute.append(interfaceDebug)
-
-                    if(interface.conn_type != 'global'):
-                        interfaceConnDest = etree.Element('dest')
-                        interfaceConnDest.text = str(interface.conn_dest)
-                        interfaceConn.append(interfaceConnType)
-                        interfaceConn.append(interfaceConnDest)
-                    interfaceAttribute.append(interfaceConn)
-                else:
-                    tdestAttribute = etree.Element('tdest')
-                    tdestAttribute.text = str(interface.tdest)
-                    interfaceAttribute.append(tdestAttribute)
-
-                    
-                ipElement.append(interfaceAttribute)
-            nodeElement.append(ipElement)
-        for scheduler in fpga.schedulers:
-            schedulerElement = etree.Element('scheduler')
-            typeAttribute = etree.Element('type')
-            typeAttribute.text = scheduler.sched_type
-            schedulerElement.append(typeAttribute)
-            inAttribute = etree.Element('in')
-            inAttribute.text = scheduler.inPort
-            schedulerElement.append(inAttribute)
-            addrAttribute = etree.Element('addr')
-            addrAttribute.text = str(scheduler.baseAddr)
-            schedulerElement.append(addrAttribute)
-            nodeElement.append(schedulerElement)
-
-            for outInterface in scheduler.outInterfaces:
-                outAttribute = etree.Element( 'out')
-                outType = etree.Element('type')
-                outType.text = outInterface.conn_type
-                outAttribute.append(outType)
-                outDest = etree.Element('dest')
-                outDest.text = str(outInterface.conn_dest)
-                outAttribute.append(outDest)
-                schedulerElement.append(outAttribute)
-            nodeElement.append(schedulerElement)
-
-        for fpga2 in allFPGAs:
-            if(fpga2.num != fpga.num):
-                for kernel in fpga2.kernels:
-                    for interface in kernel.interfaces:
-                        if(interface.direction == 'in'):
-                            extraInputSwitchAttribute = etree.Element('extra_input_switch')
-                            portAttribute = etree.Element('port')
-                            connAttribute = etree.Element('conn')
-                            typeAttribute = etree.Element('type')
-                            typeAttribute.text='network'
-                            MACAttribute = etree.Element('MAC')
-                            MACAttribute.text=fpga2.MAC_addr
-                            connAttribute.append(typeAttribute)
-                            connAttribute.append(MACAttribute)
-                            portAttribute.append(connAttribute)
-                            destAttribute=etree.Element('dest')
-                            destAttribute.text=str(interface.tdest)
-                            portAttribute.append(destAttribute)
-                            extraInputSwitchAttribute.append(portAttribute)
-
-                            nodeElement.append(extraInputSwitchAttribute)
-
-
-
-
-        dirName = 'projects/' + projectName + '/' + str(index)
-        os.makedirs(dirName)
-        
-
-
-        s = etree.tostring(nodeElement, pretty_print=True)
-        fpgaLocalFile = open(dirName + '/fpga.xml', 'w')
-        fpgaLocalFile.write(s)
-        fpgaLocalFile.close()
-
-        outDir = dirName + '/' + str(index)
-        sourceMAC = macAddresses[index]
-        fpgaFile = dirName + '/fpga.xml'
-        
-
-        lowRange = []
-        highRange = []
-
-        for fpga in allFPGAs:
-            print "printing kernels"
-            low = fpga.kernels[0].num
-            high = fpga.kernels[0].num
-            for kernel in fpga.kernels:
-                if kernel.num < low:
-                    low = kernel.num
-                
-                if kernel.num > high:
-                    high = kernel.num
-
-            lowRange.append(low)
-            highRange.append(high)
-
-        numExtra, schedulerList, listIP, packetFormatterList, numDebug, localConnections, inputSwitchMasters, inputSwitchSlaves  = localFPGAParser.start(allFPGAs, dirName, sourceMAC, fpgaFile, fpga.board_name, index, projectName, networkBridges, len(allFPGAs), plus16, packetFormatterList) 
-        numExtra_array.append(numExtra)
-        schedulerList_array.append(schedulerList)
-        listIP_array.append(listIP)
-        numDebug_array.append(numDebug)
-        localConnections_array.append(localConnections)
-        inputSwitchMasters_array.append(inputSwitchMasters)
-        inputSwitchSlaves_array.append(inputSwitchSlaves)
-        #import tclFileGenerator
-        #tclFileGenerator.makeTCLFiles(dirName, sourceMAC, numExtra, schedulerList, listIP, localConnections, inputSwitchMasters, inputSwitchSlaves, packetFormatterList, str(index), projectName, networkBridges, len(allFPGAs), plus16, index)
-        if(index < len(allFPGAs) - 1):
-            globalConfigFile.write('vivado -mode batch -source '  + dirName + '/' + 'createLocalProject.tcl &\n')
-        else:
-            globalConfigFile.write('vivado -mode batch -source '  + dirName + '/' + 'createLocalProject.tcl\n')
-        globalConfigFile.write('echo \"$!\" >  '  + dirName + '/' + 'createLocalProject.pid\n')
-        localConfigFile = open(dirName + '/createLocalProject.tcl', 'w')
-        localConfigFile.write('source ' + dirName + '/' + 'configurationParameters.tcl\n')
-        localConfigFile.write('source hwMiddleware/packetSwitch/localPRCreate.tcl\n')
-        localConfigFile.close()
-        index = index+1
-   
-    globalConfigFile.close()
-    print packetFormatterList 
-    index = 0
-    for fpga in allFPGAs:
-        if fpga.typeNode == 'sw':
-            continue
-        sys.path.append('hwMiddleware/packetSwitch/boards/' + fpga.board_name)
-        dirName = 'projects/' + projectName + '/' + str(index)
-        outDir = dirName + '/' + str(index)
-        sourceMAC = macAddresses[index]
-        fpgaFile = dirName + '/fpga.xml'
+        sys.path.append('hwMiddleware/packetSwitch/prComm/' + node.comm)
         import tclFileGenerator
-        numExtra = numExtra_array[index]
-        schedulerList = schedulerList_array[index]
-        listIP = listIP_array[index]
-        localConnections = localConnections_array[index]
-        inputSwitchMasters= inputSwitchMasters_array[index]
-        inputSwitchSlaves = inputSwitchSlaves_array[index]
-        tclFileGenerator.makeTCLFiles(dirName, sourceMAC, numExtra, schedulerList, listIP, localConnections, inputSwitchMasters, inputSwitchSlaves, packetFormatterList, str(index), projectName, networkBridges, len(allFPGAs), plus16, index, lowRange, highRange)
-        index = index + 1
+        tclFileGenerator.makeTCLFiles(node, projectName, networkBridges) 
 
-    print packetFormatterList
+#make COE to intialize BRAM of all IP addresses
+def makeIPBRAMFile(projectName, allKernels):
+
+    ipBRAMFile = open('projects/'+ projectName + '/ip.coe', 'w')
+    ipBRAMFile.write('memory_initialization_radix=10;\n')
+    ipBRAMFile.write('memory_initialization_vector=\n')
+    kernelIndex = 0
+    #iterate through kernels in order of tdest, populating the ipaddress at that location
+    for kernel in allKernels:
+        if kernelIndex != (len(allKernels) - 1):
+            ipBRAMFile.write(str(struct.unpack("!L", socket.inet_aton(kernel.ip_addr))[0]) + ',')
+        else:
+            ipBRAMFile.write(str(struct.unpack("!L", socket.inet_aton(kernel.ip_addr))[0]) + ';')
+        kernelIndex = kernelIndex + 1
 
 try:
-    opts, args = getopt.getopt(sys.argv[1:],"", ["logicalFile=", "mapFile=", "macFile=", "projectName="])
+    opts, args = getopt.getopt(sys.argv[1:],"", ["logicalFile=", "mapFile=", "macFile=", "ipFile=", "projectName="])
 except:
     usage()
     sys.exit(2)
+
+def makeProjectClusterScript(projectName, allNodes):
+    
+    if os.path.exists('projects/' + projectName):
+        shutil.rmtree('projects/' + projectName)
+    os.makedirs('projects/' + projectName)
+
+    globalConfigFile = open('createCluster.sh', 'w')
+
+    nodeIndex = 0
+    for node in allNodes:
+        #only need vivado project for hw nodes    
+        if node.type == 'hw':
+            dirName = 'projects/' + projectName + '/' + str(nodeIndex)
+            os.makedirs(dirName)
+            #currently only making flattened bitstreams
+            globalConfigFile.write("vivado -mode tcl -source tclScripts/createFlatten.tcl -tclargs " + node.board + " " + projectName + " " + str(nodeIndex) + "\n")
+
+        nodeIndex = nodeIndex + 1
+
+
+
 
 
 logicalFile = None 
 mapFile = None
 macFile = None
+ipFile = None
 projectName = None
-plus16 = 1 
 
 for o, a in opts:
     if o in ("--logicalFile"):
@@ -705,19 +303,19 @@ for o, a in opts:
         mapFile = a
     elif o in ("--macFile"):
         macFile = a
+    elif o in ("--ipFile"):
+        ipFile = a
     elif o in ("--projectName"):
         projectName= a
-    elif o in ("--plus16"):
-        plus16 = int(a)
 
+print "Logical File: " + logicalFile
+print "Map File: " + mapFile
+print "MAC File: " +  macFile 
+print "IP Addr File: " + ipFile 
+print "Project Name: " + projectName
 
-print logicalFile, mapFile, macFile, projectName
-
-
-
-readKernelsFile(logicalFile)
-readFPGAMap(mapFile, macFile)
-createGlobalInterfaceMap()
-placeSchedulers()
-redoIOMappings()
-createLocalFPGA(projectName, plus16)
+allKernels, networkBridges = readKernelsFile(logicalFile)
+allNodes, allKernels = readNodeMap(mapFile, macFile, ipFile, allKernels)
+makeProjectClusterScript(projectName, allNodes)
+makeIPBRAMFile(projectName, allKernels)
+createLocalFPGA(allNodes, projectName, networkBridges)

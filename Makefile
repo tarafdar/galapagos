@@ -1,42 +1,58 @@
 #Makefile for Galapagos
 #Author: Naif Tarafdar
 
-BOARD = adm-8k5
-PROJNAME= dariusFlatten
-FPGANUM= 0
+
+#output static shell dcp
 DCP = static_routed_v3.dcp
-LOGICALFILE=hwMiddleware/packetSwitch/input/mlKernels/mpiLogical.xml
-MACFILE=hwMiddleware/packetSwitch/input/mlKernels/mpiMacAddresses
-MAPFILE=hwMiddleware/packetSwitch/input/mlKernels/mpiMap.xml
-PROJECTNAME=mlKernels
+
+#make userIP
+PROJECTNAME=mlKernelsTest
 USERHLSIP_DIR=ML_Layer/hlsSources
 USERHLSIPTCL=${USERHLSIP_DIR}/generate_hls_ip.tcl
 USERIPTCL=./ML_Layer/ipPackage/package_top.tcl
+USERIPTCLDEBUG=./ML_Layer/ipPackage/package_top_debug.tcl
+
+#board parameters (should take as input from middleware input files later)
+BOARD = adm-8k5
+PART = xcku115-flva1517-2-e
+FPGANUM= 1
+
+
+#input files for middleware
+LOGICALFILE=ML_Layer/middlewareInput/conf0/mpiLogical.xml
+MACFILE=ML_Layer/middlewareInput/conf0/mpiMacAddresses
+MAPFILE=ML_Layer/middlewareInput/conf0/mpiMap.xml
+IPFILE=ML_Layer/middlewareInput/conf0/mpiIPAddresses
 
 
 all: userIP createCluster pr  
 
-
-createCluster: tclScripts/createCluster.tcl
-
+createCluster: hlsShell hlsMiddleware createCluster.sh
 
 userIP: ${USERHLSIP_DIR}/* ${USERHLSIP_DIR}/generate_hls_ip.tcl
 	mkdir -p userIP
 	vivado_hls ${USERHLSIPTCL}
-	vivado -mode batch -source ${USERIPTCL} 
+	vivado -mode batch -source ${USERIPTCLDEBUG} 
 
 shell: hlsShell shells/projects/${BOARD}/${DCP}
 
-hlsShell:
+hlsShell: ./tclScripts/generate_hls_ip_shell.tcl 
 	mkdir -p hlsIP_${BOARD}
-	vivado_hls tclScripts/generate_hls_ip.tcl
+	vivado_hls tclScripts/generate_hls_ip_shell.tcl -tclargs ${BOARD} ${PART}
 
-tclScripts/createCluster.tcl: ${LOGICALFILE} ${MACFILE} ${MAPFILE} 
+hlsMiddleware:
+	mkdir -p hlsIP_${BOARD}
+	vivado_hls tclScripts/generate_hls_ip_middleware.tcl -tclargs ${BOARD} ${PART}
+
+createCluster.sh: ${LOGICALFILE} ${MACFILE} ${MAPFILE} 
 	mkdir -p projects
-	python hwMiddleware/packetSwitch/globalFPGAParser.py --logicalFile=${LOGICALFILE} --macFile=${MACFILE} --mapFile=${MAPFILE} --projectName=${PROJECTNAME}
+	mkdir -p projects/${PROJECTNAME}
+	python hwMiddleware/packetSwitch/globalFPGAParser.py --logicalFile=${LOGICALFILE} --macFile=${MACFILE} --mapFile=${MAPFILE} --ipFile=${IPFILE} --projectName=${PROJECTNAME}
+	chmod +x createCluster.sh
+	./createCluster.sh
 
 clean:
-	rm -rf projects/${PROJECTNAME} tclScripts/createCluster.tcl
+	rm -rf projects/${PROJECTNAME} createCluster.sh
 
 clean_shell:
 	rm -rf hlsIP_${BOARD}
@@ -49,14 +65,14 @@ shells/projects/${BOARD}/${DCP}:
 	mkdir -p shells/${BOARD}/dcps
 	cp shells/projects/${BOARD}/${DCP} shells/${BOARD}/dcps
 
-flatten: hlsShell 
-	vivado -mode tcl -source tclScripts/flatten_${BOARD}.tcl -tclargs ${BOARD}_flatten ${PROJNAME} ${FPGANUM} 
+flatten: hlsShell hlsMiddleware 
+	vivado -mode batch -source tclScripts/createFlatten_${BOARD}.tcl -tclargs ${BOARD} ${PROJECTNAME} ${FPGANUM} 
 
 clean_flatten:
-	rm -rf projects/${PROJNAME}/${FPGANUM}/${FPGANUM}.cache projects/${PROJNAME}/${FPGANUM}/${FPGANUM}.hw projects/${PROJNAME}/${FPGANUM}/${FPGANUM}.ip_user_files projects/${PROJNAME}/${FPGANUM}/${FPGANUM}.sim projects/${PROJNAME}/${FPGANUM}/${FPGANUM}.srcs projects/${PROJNAME}/${FPGANUM}/${FPGANUM}.runs projects/${PROJNAME}/${FPGANUM}/${FPGANUM}.xpr
+	rm -rf projects/${PROJECTNAME}/${FPGANUM}/${FPGANUM}.cache projects/${PROJECTNAME}/${FPGANUM}/${FPGANUM}.hw projects/${PROJECTNAME}/${FPGANUM}/${FPGANUM}.ip_user_files projects/${PROJECTNAME}/${FPGANUM}/${FPGANUM}.sim projects/${PROJECTNAME}/${FPGANUM}/${FPGANUM}.srcs projects/${PROJECTNAME}/${FPGANUM}/${FPGANUM}.runs projects/${PROJECTNAME}/${FPGANUM}/${FPGANUM}.xpr
 
 pr: createCluster 
-	bash ./tclScripts/createCluster.sh
+	./createCluster.sh
 	touch projects/${PROJECTNAME}/cluster	
 
 dcp:

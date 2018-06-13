@@ -3017,8 +3017,8 @@ format long minimum {} maximum {}} value 32} bitoffset {attribs {resolve_type im
       </xilinx:taxonomies>
       <xilinx:displayName>Conv_layer</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>1806011514</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2018-06-01T19:14:31Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>1806041851</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2018-06-04T22:51:45Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2018.1</xilinx:xilinxVersion>
