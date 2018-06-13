@@ -19,10 +19,11 @@ FPGANUM= 1
 
 
 #input files for middleware
-LOGICALFILE=ML_Layer/middlewareInput/conf0/mpiLogical.xml
-MACFILE=ML_Layer/middlewareInput/conf0/mpiMacAddresses
-MAPFILE=ML_Layer/middlewareInput/conf0/mpiMap.xml
-IPFILE=ML_Layer/middlewareInput/conf0/mpiIPAddresses
+ML_CONF = conf0
+LOGICALFILE=ML_Layer/middlewareInput/${ML_CONF}/mpiLogical.xml
+MACFILE=ML_Layer/middlewareInput/${ML_CONF}/mpiMacAddresses
+MAPFILE=ML_Layer/middlewareInput/${ML_CONF}/mpiMap.xml
+IPFILE=ML_Layer/middlewareInput/${ML_CONF}/mpiIPAddresses
 
 
 all: userIP createCluster pr  

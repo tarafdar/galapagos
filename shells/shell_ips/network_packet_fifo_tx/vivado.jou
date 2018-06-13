@@ -1,0 +1,56 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:54:30 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Fri Apr  6 18:07:13 2018
+# Process ID: 23615
+# Current directory: /home/madanie1/Documents/2017.4/8v3/repo/network_packet_fifo_tx
+# Command line: vivado
+# Log file: /home/madanie1/Documents/2017.4/8v3/repo/network_packet_fifo_tx/vivado.log
+# Journal file: /home/madanie1/Documents/2017.4/8v3/repo/network_packet_fifo_tx/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/madanie1/Documents/2017.4/8v3/repo/network_packet_fifo_tx/network_packet_fifo_tx.xpr
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files /home/madanie1/Documents/2017.4/8v3/repo/network_packet_fifo_tx/network_packet_fifo_tx.srcs/sources_1/imports/rtl/tx_interface.v] -no_script -reset -force -quiet
+remove_files  /home/madanie1/Documents/2017.4/8v3/repo/network_packet_fifo_tx/network_packet_fifo_tx.srcs/sources_1/imports/rtl/tx_interface.v
+file delete -force /home/madanie1/Documents/2017.4/8v3/repo/network_packet_fifo_tx/network_packet_fifo_tx.srcs/sources_1/imports/rtl/tx_interface.v
+update_compile_order -fileset sources_1
+add_files -norecurse /home/madanie1/Documents/2017.4/8v3/repo/network_packet_fifo_tx/network_packet_fifo_tx.srcs/sources_1/imports/tx_interface.sv
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files /home/madanie1/Documents/2017.4/8v3/repo/network_packet_fifo_tx/network_packet_fifo_tx.srcs/sources_1/ip/axis_sync_fifo/axis_sync_fifo.xci] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files /home/madanie1/Documents/2017.4/8v3/repo/network_packet_fifo_tx/network_packet_fifo_tx.srcs/sources_1/ip/cmd_fifo_xgemac_txif/cmd_fifo_xgemac_txif.xci] -no_script -reset -force -quiet
+remove_files  {/home/madanie1/Documents/2017.4/8v3/repo/network_packet_fifo_tx/network_packet_fifo_tx.srcs/sources_1/ip/axis_sync_fifo/axis_sync_fifo.xci /home/madanie1/Documents/2017.4/8v3/repo/network_packet_fifo_tx/network_packet_fifo_tx.srcs/sources_1/ip/cmd_fifo_xgemac_txif/cmd_fifo_xgemac_txif.xci}
+file delete -force /home/madanie1/Documents/2017.4/8v3/repo/network_packet_fifo_tx/network_packet_fifo_tx.srcs/sources_1/ip/axis_sync_fifo /home/madanie1/Documents/2017.4/8v3/repo/network_packet_fifo_tx/network_packet_fifo_tx.srcs/sources_1/ip/cmd_fifo_xgemac_txif
+create_ip -name fifo_generator -vendor xilinx.com -library ip -module_name cmd_fifo_xgemac_txif
+set_property -dict [list CONFIG.Input_Data_Width {1} CONFIG.Output_Data_Width {1} CONFIG.Reset_Type {Asynchronous_Reset} CONFIG.Full_Flags_Reset_Value {1}] [get_ips cmd_fifo_xgemac_txif]
+update_compile_order -fileset sources_1
+create_ip -name fifo_generator -vendor xilinx.com -library ip -module_name axis_sync_fifo
+set_property -dict [list CONFIG.INTERFACE_TYPE {AXI_STREAM} CONFIG.TDATA_NUM_BYTES {8} CONFIG.TUSER_WIDTH {0} CONFIG.Enable_TLAST {true} CONFIG.HAS_TKEEP {true} CONFIG.Enable_Data_Counts_axis {true} CONFIG.Reset_Type {Asynchronous_Reset} CONFIG.Full_Flags_Reset_Value {1} CONFIG.TSTRB_WIDTH {8} CONFIG.TKEEP_WIDTH {8} CONFIG.FIFO_Implementation_wach {Common_Clock_Distributed_RAM} CONFIG.Full_Threshold_Assert_Value_wach {15} CONFIG.Empty_Threshold_Assert_Value_wach {14} CONFIG.FIFO_Implementation_wrch {Common_Clock_Distributed_RAM} CONFIG.Full_Threshold_Assert_Value_wrch {15} CONFIG.Empty_Threshold_Assert_Value_wrch {14} CONFIG.FIFO_Implementation_rach {Common_Clock_Distributed_RAM} CONFIG.Full_Threshold_Assert_Value_rach {15} CONFIG.Empty_Threshold_Assert_Value_rach {14}] [get_ips axis_sync_fifo]
+update_compile_order -fileset sources_1
+set_property generate_synth_checkpoint false [get_files  {/home/madanie1/Documents/2017.4/8v3/repo/network_packet_fifo_tx/network_packet_fifo_tx.srcs/sources_1/ip/axis_sync_fifo/axis_sync_fifo.xci /home/madanie1/Documents/2017.4/8v3/repo/network_packet_fifo_tx/network_packet_fifo_tx.srcs/sources_1/ip/cmd_fifo_xgemac_txif/cmd_fifo_xgemac_txif.xci}]
+generate_target all [get_files  {/home/madanie1/Documents/2017.4/8v3/repo/network_packet_fifo_tx/network_packet_fifo_tx.srcs/sources_1/ip/axis_sync_fifo/axis_sync_fifo.xci /home/madanie1/Documents/2017.4/8v3/repo/network_packet_fifo_tx/network_packet_fifo_tx.srcs/sources_1/ip/cmd_fifo_xgemac_txif/cmd_fifo_xgemac_txif.xci}]
+export_ip_user_files -of_objects [get_files /home/madanie1/Documents/2017.4/8v3/repo/network_packet_fifo_tx/network_packet_fifo_tx.srcs/sources_1/ip/axis_sync_fifo/axis_sync_fifo.xci] -no_script -sync -force -quiet
+export_ip_user_files -of_objects [get_files /home/madanie1/Documents/2017.4/8v3/repo/network_packet_fifo_tx/network_packet_fifo_tx.srcs/sources_1/ip/cmd_fifo_xgemac_txif/cmd_fifo_xgemac_txif.xci] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/madanie1/Documents/2017.4/8v3/repo/network_packet_fifo_tx/network_packet_fifo_tx.srcs/sources_1/ip/axis_sync_fifo/axis_sync_fifo.xci] -directory /home/madanie1/Documents/2017.4/8v3/repo/network_packet_fifo_tx/network_packet_fifo_tx.ip_user_files/sim_scripts -ip_user_files_dir /home/madanie1/Documents/2017.4/8v3/repo/network_packet_fifo_tx/network_packet_fifo_tx.ip_user_files -ipstatic_source_dir /home/madanie1/Documents/2017.4/8v3/repo/network_packet_fifo_tx/network_packet_fifo_tx.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/madanie1/Documents/2017.4/8v3/repo/network_packet_fifo_tx/network_packet_fifo_tx.cache/compile_simlib/modelsim} {questa=/home/madanie1/Documents/2017.4/8v3/repo/network_packet_fifo_tx/network_packet_fifo_tx.cache/compile_simlib/questa} {ies=/home/madanie1/Documents/2017.4/8v3/repo/network_packet_fifo_tx/network_packet_fifo_tx.cache/compile_simlib/ies} {vcs=/home/madanie1/Documents/2017.4/8v3/repo/network_packet_fifo_tx/network_packet_fifo_tx.cache/compile_simlib/vcs} {riviera=/home/madanie1/Documents/2017.4/8v3/repo/network_packet_fifo_tx/network_packet_fifo_tx.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+export_simulation -of_objects [get_files /home/madanie1/Documents/2017.4/8v3/repo/network_packet_fifo_tx/network_packet_fifo_tx.srcs/sources_1/ip/cmd_fifo_xgemac_txif/cmd_fifo_xgemac_txif.xci] -directory /home/madanie1/Documents/2017.4/8v3/repo/network_packet_fifo_tx/network_packet_fifo_tx.ip_user_files/sim_scripts -ip_user_files_dir /home/madanie1/Documents/2017.4/8v3/repo/network_packet_fifo_tx/network_packet_fifo_tx.ip_user_files -ipstatic_source_dir /home/madanie1/Documents/2017.4/8v3/repo/network_packet_fifo_tx/network_packet_fifo_tx.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/madanie1/Documents/2017.4/8v3/repo/network_packet_fifo_tx/network_packet_fifo_tx.cache/compile_simlib/modelsim} {questa=/home/madanie1/Documents/2017.4/8v3/repo/network_packet_fifo_tx/network_packet_fifo_tx.cache/compile_simlib/questa} {ies=/home/madanie1/Documents/2017.4/8v3/repo/network_packet_fifo_tx/network_packet_fifo_tx.cache/compile_simlib/ies} {vcs=/home/madanie1/Documents/2017.4/8v3/repo/network_packet_fifo_tx/network_packet_fifo_tx.cache/compile_simlib/vcs} {riviera=/home/madanie1/Documents/2017.4/8v3/repo/network_packet_fifo_tx/network_packet_fifo_tx.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+ipx::open_ipxact_file /home/madanie1/Documents/2017.4/8v3/repo/network_packet_fifo_tx/component.xml
+ipx::unload_core /home/madanie1/Documents/2017.4/8v3/repo/network_packet_fifo_tx/component.xml
+export_ip_user_files -of_objects  [get_files /home/madanie1/Documents/2017.4/8v3/repo/network_packet_fifo_tx/component.xml] -no_script -reset -force -quiet
+remove_files  /home/madanie1/Documents/2017.4/8v3/repo/network_packet_fifo_tx/component.xml
+ipx::package_project -root_dir /home/madanie1/Documents/2017.4/8v3/repo/network_packet_fifo_tx -vendor user.org -library user -taxonomy /UserIP -generated_files -force
+set_property vendor dlyma.org [ipx::current_core]
+set_property library dlyma [ipx::current_core]
+set_property name network_packet_fifo_tx [ipx::current_core]
+set_property version 1.1 [ipx::current_core]
+set_property display_name {Network Packe} [ipx::current_core]
+set_property display_name {Network Packet TX FIFO for TCP/IP} [ipx::current_core]
+set_property description {Network Packet TX FIFO for TCP/IP} [ipx::current_core]
+set_property core_revision 2 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+update_ip_catalog -rebuild -repo_path /home/madanie1/Documents/2017.4/8v3/repo/network_packet_fifo_tx

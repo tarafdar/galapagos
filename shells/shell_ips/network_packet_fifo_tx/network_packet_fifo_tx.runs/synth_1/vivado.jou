@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:54:30 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Fri Apr  6 18:12:17 2018
+# Process ID: 24090
+# Current directory: /home/madanie1/Documents/2017.4/8v3/repo/network_packet_fifo_tx/network_packet_fifo_tx.runs/synth_1
+# Command line: vivado -log tx_interface_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source tx_interface_wrapper.tcl
+# Log file: /home/madanie1/Documents/2017.4/8v3/repo/network_packet_fifo_tx/network_packet_fifo_tx.runs/synth_1/tx_interface_wrapper.vds
+# Journal file: /home/madanie1/Documents/2017.4/8v3/repo/network_packet_fifo_tx/network_packet_fifo_tx.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source tx_interface_wrapper.tcl -notrace
