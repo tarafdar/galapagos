@@ -32,10 +32,6 @@
             <name> stream_out </name>
             <debug/>
         </interface>
-        <ctrl_interface>
-            <name> S_AXI_CONTROL </name>
-            <offset> 0x1000 </offset>
-        </ctrl_interface>
         <mem_interface>
             <name> M_AXI_MEM </name>
         </mem_interface> 

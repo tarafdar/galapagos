@@ -1,4 +1,5 @@
 #Makefile for Galapagos
+
 #Author: Naif Tarafdar
 
 
@@ -31,9 +32,9 @@ all: userIP createCluster pr
 createCluster: hlsShell hlsMiddleware createCluster.sh
 
 userIP: ${USERHLSIP_DIR}/* ${USERHLSIP_DIR}/generate_hls_ip.tcl
-	mkdir -p userIP
-	vivado_hls ./HMPI/generate_hls_ip.tcl
-	vivado_hls ${USERHLSIPTCL}
+#	mkdir -p userIP
+#	vivado_hls ./HMPI/generate_hls_ip.tcl
+#	vivado_hls ${USERHLSIPTCL}
 	vivado -mode batch -source ${USERIPTCLDEBUG} 
 
 shell: hlsShell shells/projects/${BOARD}/${DCP}
