@@ -7,10 +7,10 @@ DCP = static_routed_v3.dcp
 
 #make userIP
 PROJECTNAME=mlKernelsTest
-USERHLSIP_DIR=ML_Layer/hlsSources
+USERHLSIP_DIR=telepathy/hlsSources
 USERHLSIPTCL=${USERHLSIP_DIR}/generate_hls_ip.tcl
-USERIPTCL=./ML_Layer/ipPackage/package_top.tcl
-USERIPTCLDEBUG=./ML_Layer/ipPackage/package_top_debug.tcl
+USERIPTCL=./telepathy/ipPackage/package_top.tcl
+USERIPTCLDEBUG=./telepathy/ipPackage/package_top_debug.tcl
 
 #board parameters (should take as input from middleware input files later)
 BOARD = adm-8k5
@@ -20,10 +20,10 @@ FPGANUM= 1
 
 #input files for middleware
 ML_CONF = conf0
-LOGICALFILE=ML_Layer/middlewareInput/${ML_CONF}/mpiLogical.xml
-MACFILE=ML_Layer/middlewareInput/${ML_CONF}/mpiMacAddresses
-MAPFILE=ML_Layer/middlewareInput/${ML_CONF}/mpiMap.xml
-IPFILE=ML_Layer/middlewareInput/${ML_CONF}/mpiIPAddresses
+LOGICALFILE=telepathy/middlewareInput/${ML_CONF}/mpiLogical.xml
+MACFILE=telepathy/middlewareInput/${ML_CONF}/mpiMacAddresses
+MAPFILE=telepathy/middlewareInput/${ML_CONF}/mpiMap.xml
+IPFILE=telepathy/middlewareInput/${ML_CONF}/mpiIPAddresses
 
 
 all: userIP createCluster pr  

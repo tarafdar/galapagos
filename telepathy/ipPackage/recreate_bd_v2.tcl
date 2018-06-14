@@ -2,7 +2,7 @@
 create_bd_cell -type ip -vlnv xilinx.com:hls:dariusWrapper:1.0 dariusWrapper_inst
 create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 axi_interconnect_control
 create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 axi_interconnect_mem
-create_bd_cell -type ip -vlnv xilinx.com:RTLKernel:darius_v2_0:2.0 cnn_dataflow_v2_0_inst
+create_bd_cell -type ip -vlnv xilinx.com:RTLKernel:darius:2.0 cnn_dataflow_v2_0_inst
 
 #configure interconnects (control interconnect with one master) 
 #mem interconnect with four slaves for 4 memory ports
