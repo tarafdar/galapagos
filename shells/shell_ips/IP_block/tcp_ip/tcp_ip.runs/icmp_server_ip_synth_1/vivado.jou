@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:54:30 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Mon Apr  9 17:59:36 2018
+# Process ID: 25975
+# Current directory: /home/madanie1/Documents/2017.4/8v3/repo/tcp_ip/tcp_ip.runs/icmp_server_ip_synth_1
+# Command line: vivado -log icmp_server_ip.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source icmp_server_ip.tcl
+# Log file: /home/madanie1/Documents/2017.4/8v3/repo/tcp_ip/tcp_ip.runs/icmp_server_ip_synth_1/icmp_server_ip.vds
+# Journal file: /home/madanie1/Documents/2017.4/8v3/repo/tcp_ip/tcp_ip.runs/icmp_server_ip_synth_1/vivado.jou
+#-----------------------------------------------------------
+source icmp_server_ip.tcl -notrace

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="icmp_server_ip_synth_1" LaunchPart="xc7vx690tffg1157-2" LaunchTime="1523314774">
+  <File Type="RDS-UTIL" Name="icmp_server_ip_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="icmp_server_ip_utilization_synth.pb"/>
+  <File Type="RDS-RDS" Name="icmp_server_ip.vds"/>
+  <File Type="RDS-DCP" Name="icmp_server_ip.dcp"/>
+  <File Type="PA-TCL" Name="icmp_server_ip.tcl"/>
+  <File Type="REPORTS-TCL" Name="icmp_server_ip_reports.tcl"/>
+  <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/icmp_server_ip">
+    <File Path="$PSRCDIR/sources_1/ip/icmp_server_ip/icmp_server_ip.xci">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../tcp_ip.srcs/sources_1/ip/icmp_server_ip/icmp_server_ip.xci"/>
+        <Attr Name="ImportTime" Val="1519415731"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="icmp_server_ip"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="BlockSrcs" RelSrcDir="$PSRCDIR/icmp_server_ip">
+    <File Path="$PSRCDIR/sources_1/ip/icmp_server_ip/icmp_server_ip.xci">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../tcp_ip.srcs/sources_1/ip/icmp_server_ip/icmp_server_ip.xci"/>
+        <Attr Name="ImportTime" Val="1519415731"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="icmp_server_ip"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>
