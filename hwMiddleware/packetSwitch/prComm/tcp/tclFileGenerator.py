@@ -5,15 +5,10 @@ import subprocess
 import os
 
 
+#interfaces constant
+#creates the standard interfaces, same for all fpgas
 
-
-
-def makeTCLFiles(fpga, projectName, networkBridges):
-    outDir = 'projects/' + projectName + '/' + str(fpga.num)
-    tclMain = open( outDir + '/' + str(fpga.num) + '.tcl', 'w')
-#    tclMain.write('add_files -norecurse projects/' + projectName + '/ip.coe\n')
-
-    #interfaces constant
+def createStandardInterfaces(tclMain):
     tclMain.write('create_bd_port -dir I -type clk CLK\n')
     tclMain.write('set_property CONFIG.FREQ_HZ 156250000 [get_bd_ports CLK]\n')
     tclMain.write('create_bd_port -dir I -type rst ARESETN\n')
@@ -25,22 +20,141 @@ def makeTCLFiles(fpga, projectName, networkBridges):
     tclMain.write('set_property -dict [list CONFIG.NUM_WRITE_OUTSTANDING {2} CONFIG.NUM_READ_OUTSTANDING {2} CONFIG.FREQ_HZ {156250000} CONFIG.DATA_WIDTH {512}] [get_bd_intf_ports S_AXI_MEM_1]\n')
     tclMain.write('create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:axis_rtl:1.0 S_AXIS\n')
     tclMain.write('create_bd_intf_port -mode Master -vlnv xilinx.com:interface:axis_rtl:1.0 M_AXIS\n')
+
+
+def userApplicationRegion(tclMain, fpga):
+    tclMain.write('create_bd_cell -type hier applicationRegion')
+    tclMain.write('set num_local_ranks ' + str(len(fpga.kernels)) + '\n')
+    
+    
+    #iterate through all kernels on FPGA counting mem and control interfaces and instantitating them
+    for kernel in fpga.kernels:
+        instName = kernel.name + "_inst_" + str(kernel.id_num)
+        if kernel.ctrl_interface != None:
+            num_ctrl_interfaces = num_ctrl_interfaces + 1
+        num_mem_interfaces = num_mem_interfaces + len(kernel.mem_interfaces)
+        tclMain.write('create_bd_cell -type ip -vlnv ' + kernel.ip_vendor + ':'+ kernel.ip_type + ':' + kernel.name +':' +  kernel.ip_version + ' applicationRegion/' + instName + '\n')
+        tclMain.write('connect_bd_net [get_bd_ports CLK] [get_bd_pins applicationRegion/' + instName + '/' + kernel.clk + '] \n')
+
+        tclMain.write('connect_bd_net [get_bd_ports ARESETN] [get_bd_pins applicationRegion/' + instName  + '/' + kernel.aresetn + ']\n')
+        if (kernel.id_port != ''):
+            tclMain.write('create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 applicationRegion/id_' + str(kernel.id_num) + '\n')
+            tclMain.write('set_property -dict [list CONFIG.CONST_WIDTH {32}] [get_bd_cells applicationRegion/id_' + str(kernel.id_num) + ']\n')
+            tclMain.write('set_property -dict [list CONFIG.CONST_VAL {' + str(kernel.id_num) + '}] [get_bd_cells applicationRegion/id_' + str(kernel.id_num) + ']\n')
+            tclMain.write('connect_bd_net [get_bd_pins applicationRegion/id_' + str(kernel.id_num) + '/dout] [get_bd_pins applicationRegion/' + instName + '/' + kernel.id_port + ']\n')
+    
+    #initialize axi_control_interface interconnect slave side (1 slave)
+    tclMain.write('create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 applicationRegion/axi_interconnect_control\n')
+    tclMain.write('connect_bd_intf_net [get_bd_intf_ports S_AXI_CONTROL] -boundary_type upper [get_bd_intf_pins applicationRegion/axi_interconnect_control/S00_AXI]\n')
+    tclMain.write('connect_bd_net [get_bd_ports CLK] [get_bd_pins applicationRegion/axi_interconnect_control/ACLK]\n')
+    tclMain.write('connect_bd_net [get_bd_ports ARESETN] [get_bd_pins applicationRegion/axi_interconnect_control/ARESETN]\n')
+    tclMain.write('connect_bd_net [get_bd_ports CLK] [get_bd_pins applicationRegion/axi_interconnect_control/S00_ACLK]\n')
+    tclMain.write('connect_bd_net [get_bd_ports ARESETN] [get_bd_pins applicationRegion/axi_interconnect_control/S00_ARESETN]\n')
+    
+    #make dummy bram for control interface if no control interfaces
+    if(num_ctrl_interfaces == 0):
+        tclMain.write('set_property -dict [list CONFIG.NUM_MI {1}] [get_bd_cells applicationRegion/axi_interconnect_control]\n')
+        tclMain.write('create_bd_cell -type ip -vlnv xilinx.com:ip:axi_bram_ctrl:4.0 applicationRegion/axi_bram_ctrl_dummy\n')
+        tclMain.write('set_property -dict [list CONFIG.SINGLE_PORT_BRAM {1}] [get_bd_cells applicationRegion/axi_bram_ctrl_dummy]\n')
+        tclMain.write('connect_bd_net [get_bd_ports CLK] [get_bd_pins applicationRegion/axi_interconnect_control/M00_ACLK]\n')
+        tclMain.write('connect_bd_net [get_bd_ports ARESETN] [get_bd_pins applicationRegion/axi_interconnect_control/ARESETN]\n')
+        tclMain.write('connect_bd_net [get_bd_ports ARESETN] [get_bd_pins applicationRegion/axi_interconnect_control/M00_ARESETN]\n')
+        tclMain.write('create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen:8.4 applicationRegion/blk_mem_gen_dummy\n')
+        tclMain.write('connect_bd_intf_net -boundary_type upper [get_bd_intf_pins applicationRegion/axi_interconnect_control/M00_AXI] [get_bd_intf_pins applicationRegion/axi_bram_ctrl_dummy/S_AXI]\n')
+        tclMain.write('connect_bd_intf_net [get_bd_intf_pins applicationRegionaxi_bram_ctrl_dummy/BRAM_PORTA] [get_bd_intf_pins blk_mem_gen_dummy/BRAM_PORTA]\n')
+        tclMain.write('assign_bd_address [get_bd_addr_segs {axi_bram_ctrl_dummy/S_AXI/Mem0 }]\n')
+    else:
+        tclMain.write('set_property -dict [list CONFIG.NUM_MI {' + str(num_ctrl_interfaces) + '}] [get_bd_cells axi_interconnect_control]\n')
+    
+    
+    #only make switches if more than one kernel
+    if len(fpga.kernels) > 1:
+        #create input switch
+        tclMain.write('create_bd_cell -type ip -vlnv xilinx.com:ip:axis_switch:1.1 applicationRegion/input_switch\n')
+        tclMain.write('set_property -dict [list CONFIG.NUM_SI {2} CONFIG.NUM_MI ${num_local_ranks} CONFIG.DECODER_REG {1}] [get_bd_cells applicationRegion/input_switch]\n')
+        tclMain.write('connect_bd_net [get_bd_ports CLK] [get_bd_pins applicationRegion/input_switch/aclk]\n')
+        tclMain.write('connect_bd_net [get_bd_ports ARESETN] [get_bd_pins applicationRegion/input_switch/aresetn]\n')
+        #create output switch
+        tclMain.write('create_bd_cell -type ip -vlnv xilinx.com:ip:axis_switch:1.1 applicationRegion/output_switch\n')
+        tclMain.write('set_property -dict [list CONFIG.NUM_SI ${num_local_ranks} CONFIG.NUM_MI {1} CONFIG.DECODER_REG {1}] [get_bd_cells applicationRegion/output_switch]\n')
+        tclMain.write('connect_bd_net [get_bd_ports CLK] [get_bd_pins applicationRegion/output_switch/aclk]\n')
+        tclMain.write('connect_bd_net [get_bd_ports ARESETN] [get_bd_pins applicationRegion/output_switch/aresetn]\n')
+
+        num_ctrl_interfaces = 0
+        num_mem_interfaces = 0
+
+    
+
+
+    #initialize axi_mem_interface interconnect master side (1 master)
+
+    if(num_mem_interfaces > 0):
+        tclMain.write('set mem_ports_plus_one ' + str(num_mem_interfaces) + '\n')
+        tclMain.write('create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 axi_interconnect_mem\n')
+        tclMain.write('set_property -dict [list CONFIG.NUM_SI ${mem_ports_plus_one} CONFIG.NUM_MI {1}] [get_bd_cells axi_interconnect_mem]\n')
+        tclMain.write('connect_bd_net [get_bd_ports CLK] [get_bd_pins axi_interconnect_mem/ACLK]\n')
+        tclMain.write('connect_bd_net [get_bd_ports CLK] [get_bd_pins axi_interconnect_mem/M00_ACLK]\n')
+        tclMain.write('connect_bd_net [get_bd_ports ARESETN] [get_bd_pins axi_interconnect_mem/ARESETN]\n')
+        tclMain.write('connect_bd_net [get_bd_ports ARESETN] [get_bd_pins axi_interconnect_mem/M00_ARESETN]\n')
+    
+
+
+    #iterate through all kernels on FPGA connecting them to the input and output switches and their control and memory interfaces
+    ctrl_interface_index = 0
+    mem_interface_index = 0
+    kernel_index = 0
+    for kernel in fpga.kernels:
+        instName = kernel.name + "_inst_" + str(kernel.id_num)
+        kernel_index_str = "%02d"%kernel_index
+        tclMain.write('connect_bd_intf_net [get_bd_intf_pins ' + instName + '/' + kernel.stream_in  + '] [get_bd_intf_pins input_switch/M' + kernel_index_str + '_AXIS]\n')
+        if kernel.ctrl_interface != None:
+            ctrl_interface_index_str = "%02d"%ctrl_interface_index
+            tclMain.write('connect_bd_intf_net [get_bd_intf_pins ' + instName + '/' + kernel.ctrl_interface.name  + '] [get_bd_intf_pins axi_interconnect_control/M' + ctrl_interface_index_str + '_AXI]\n')
+            tclMain.write('connect_bd_net [get_bd_ports CLK] [get_bd_pins axi_interconnect_control/M' + ctrl_interface_index_str + '_ACLK]\n')
+            tclMain.write('connect_bd_net [get_bd_ports ARESETN] [get_bd_pins axi_interconnect_control/M' + ctrl_interface_index_str + '_ARESETN]\n')
+            ctrl_interface_index = ctrl_interface_index + 1
+        
+        for mem_interface in kernel.mem_interfaces:
+            mem_interface_index_str = "%02d"%mem_interface_index
+            tclMain.write('connect_bd_intf_net [get_bd_intf_pins ' + instName + '/' + mem_interface  + '] [get_bd_intf_pins axi_interconnect_mem/S' + mem_interface_index_str + '_AXI]\n')
+            tclMain.write('connect_bd_net [get_bd_ports CLK] [get_bd_pins axi_interconnect_mem/S' + mem_interface_index_str + '_ACLK]\n')
+            tclMain.write('connect_bd_net [get_bd_ports ARESETN] [get_bd_pins axi_interconnect_mem/S' + mem_interface_index_str + '_ARESETN]\n')
+            mem_interface_index = mem_interface_index + 1
+        kernel_index = kernel_index + 1
+
+
+
+    #connect mem interconnect and assign addresses, all kernels need to be 32 bit addressable
+    #connect ctrl interconnect and assign addresses
+    tclMain.write('connect_bd_intf_net [get_bd_intf_ports S_AXI_MEM_0] -boundary_type upper [get_bd_intf_pins axi_interconnect_mem/M00_AXI]\n')
+    tclMain.write('assign_bd_address [get_bd_addr_segs {S_AXI_MEM_0/Reg }]\n')
+
+    for kernel in fpga.kernels:
+        instName = kernel.name + "_inst_" + str(kernel.id_num)
+        for mem_interface in kernel.mem_interfaces:
+            tclMain.write('set_property offset 0x00000000 [get_bd_addr_segs {' + instName + '/' + mem_interface  +'/SEG_S_AXI_MEM_0_Reg}]\n')
+            tclMain.write('set_property range 4G [get_bd_addr_segs {' + instName + '/' + mem_interface +  '/SEG_S_AXI_MEM_0_Reg}]\n')
+        if kernel.ctrl_interface != None:
+            tclMain.write('assign_bd_address [get_bd_addr_segs {' + instName + '/' + kernel.ctrl_interface.name + '/Reg0 }]\n')
+   
+
+
+    #connect TCP bridge to other memory port and make it 4G addressable
+    tclMain.write('assign_bd_address [get_bd_addr_segs {S_AXI_MEM_1/Reg }]\n')
+    #tclMain.write('set_property offset 0x00000000 [get_bd_addr_segs {darius_wrapper_bd_inst_1/M_AXI_MEM/SEG_S_AXI_MEM_0_Reg}]\n')
+    #tclMain.write('set_property range 4G [get_bd_addr_segs {darius_wrapper_bd_inst_1/M_AXI_MEM/SEG_S_AXI_MEM_0_Reg}]\n')
+
+
+def makeTCLFiles(fpga, projectName, networkBridges):
+    outDir = 'projects/' + projectName + '/' + str(fpga.num)
+    tclMain = open( outDir + '/' + str(fpga.num) + '.tcl', 'w')
+#    tclMain.write('add_files -norecurse projects/' + projectName + '/ip.coe\n')
+    
     
     #input switch
-    tclMain.write('set num_local_ranks ' + str(len(fpga.kernels)) + '\n')
-
-    tclMain.write('create_bd_cell -type ip -vlnv xilinx.com:ip:axis_switch:1.1 input_switch\n')
-    tclMain.write('set_property -dict [list CONFIG.NUM_SI {2} CONFIG.NUM_MI ${num_local_ranks} CONFIG.DECODER_REG {1}] [get_bd_cells input_switch]\n')
-    tclMain.write('connect_bd_net [get_bd_ports CLK] [get_bd_pins input_switch/aclk]\n')
-    tclMain.write('connect_bd_net [get_bd_ports ARESETN] [get_bd_pins input_switch/aresetn]\n')
     
-    #output switch, only make if more than one kernel on fpga
 
     if len(fpga.kernels) > 1:
-        tclMain.write('create_bd_cell -type ip -vlnv xilinx.com:ip:axis_switch:1.1 output_switch\n')
-        tclMain.write('set_property -dict [list CONFIG.NUM_SI ${num_local_ranks} CONFIG.NUM_MI {1} CONFIG.DECODER_REG {1}] [get_bd_cells output_switch]\n')
-        tclMain.write('connect_bd_net [get_bd_ports CLK] [get_bd_pins output_switch/aclk]\n')
-        tclMain.write('connect_bd_net [get_bd_ports ARESETN] [get_bd_pins output_switch/aresetn]\n')
 
     ip_addr = fpga.ip_addr.split(".")
 
@@ -84,7 +198,10 @@ def makeTCLFiles(fpga, projectName, networkBridges):
     tclMain.write('connect_bd_net [get_bd_pins TCP_bridge_inst/mySubnet_0] [get_bd_pins ip_constant_block_inst/subnet]\n')
     
     if len(fpga.kernels) > 1:
-        tclMain.write('connect_bd_intf_net [get_bd_intf_pins output_switch/M00_AXIS] [get_bd_intf_pins ip_dest_filter_inst/stream_in]\n')
+        if networkBridges != None:
+            tclMain.write('connect_bd_intf_net [get_bd_intf_pins output_switch/M00_AXIS] [get_bd_intf_pins bridgeToNetwork/' + networkBridges.stream_in_to + ']\n')
+        else:    
+            tclMain.write('connect_bd_intf_net [get_bd_intf_pins output_switch/M00_AXIS] [get_bd_intf_pins ip_dest_filter_inst/stream_in]\n')
 
     tclMain.write('connect_bd_intf_net [get_bd_intf_pins ip_dest_filter_inst/stream_out_switch] [get_bd_intf_pins input_switch/S01_AXIS]\n')
     
@@ -101,6 +218,7 @@ def makeTCLFiles(fpga, projectName, networkBridges):
     tclMain.write('connect_bd_intf_net [get_bd_intf_ports S_AXI_MEM_1] -boundary_type upper [get_bd_intf_pins axi_interconnect_tcp_mem/M00_AXI]\n')
 
 
+    tclMain.write('connect_bd_intf_net [get_bd_intf_pins ip_dest_filter_inst/stream_out_network] [get_bd_intf_pins TCP_bridge_inst/S_AXIS_0]\n')
     if networkBridges != None:   
         #if bridges exist instantiate them
         tclMain.write('create_bd_cell -type ip -vlnv xilinx.com:hls:' + networkBridges.bridgeToLocation + ':1.0 bridgeToNetwork_inst\n')
@@ -109,122 +227,19 @@ def makeTCLFiles(fpga, projectName, networkBridges):
         tclMain.write('create_bd_cell -type ip -vlnv xilinx.com:hls:' + networkBridges.bridgeFromLocation + ':1.0 bridgeFromNetwork_inst\n')
         tclMain.write('connect_bd_net [get_bd_ports CLK] [get_bd_pins bridgeFromNetwork_inst/aclk]\n')
         tclMain.write('connect_bd_net [get_bd_ports ARESETN] [get_bd_pins bridgeFromNetwork_inst/aresetn]\n')
-        tclMain.write('connect_bd_intf_net [get_bd_intf_pins bridgeToNetwork_inst/stream_in_V] [get_bd_intf_pins ip_dest_filter_inst/stream_out_network]\n')
-        tclMain.write('connect_bd_intf_net [get_bd_intf_pins bridgeToNetwork_inst/stream_out_V] [get_bd_intf_pins TCP_bridge_inst/S_AXIS_0]\n')
+#        tclMain.write('connect_bd_intf_net [get_bd_intf_pins bridgeToNetwork_inst/stream_in_V] [get_bd_intf_pins ip_dest_filter_inst/stream_out_network]\n')
+#        tclMain.write('connect_bd_intf_net [get_bd_intf_pins bridgeToNetwork_inst/stream_out_V] [get_bd_intf_pins TCP_bridge_inst/S_AXIS_0]\n')
         tclMain.write('connect_bd_intf_net [get_bd_intf_pins TCP_bridge_inst/M_AXIS_0] [get_bd_intf_pins bridgeFromNetwork_inst/stream_in_V]\n')
-        tclMain.write('connect_bd_intf_net [get_bd_intf_pins bridgeFromNetwork_inst/stream_out_V] [get_bd_intf_pins input_switch/S00_AXIS]\n')
+
+        tclMain.write('connect_bd_intf_net [get_bd_intf_pins bridgeFromNetwork_inst/'+ networkBridges.stream_out_from + '] [get_bd_intf_pins input_switch/S00_AXIS]\n')
+#        tclMain.write('connect_bd_intf_net [get_bd_intf_pins TCP_bridge_inst/M_AXIS_0] [get_bd_intf_pins input_switch/S00_AXIS]\n')
+
     else:
-        tclMain.write('connect_bd_intf_net [get_bd_intf_pins ip_dest_filter_inst/stream_out_network] [get_bd_intf_pins TCP_bridge_inst/S_AXIS_0]\n')
         tclMain.write('connect_bd_intf_net [get_bd_intf_pins TCP_bridge_inst/M_AXIS_0] [get_bd_intf_pins input_switch/S00_AXIS]\n')
+        tclMain.write('connect_bd_intf_net [get_bd_intf_pins bridgeToNetwork_inst/stream_out_V] [get_bd_intf_pins ip_dest_filter_inst/stream_in]\n')
 
 
 
-    num_ctrl_interfaces = 0
-    num_mem_interfaces = 0
-
-    #iterate through all kernels on FPGA counting mem and control interfaces and instantitating them
-    for kernel in fpga.kernels:
-        instName = kernel.name + "_inst_" + str(kernel.id_num)
-        if kernel.ctrl_interface != None:
-            num_ctrl_interfaces = num_ctrl_interfaces + 1
-        num_mem_interfaces = num_mem_interfaces + len(kernel.mem_interfaces)
-        tclMain.write('create_bd_cell -type ip -vlnv ' + kernel.ip_vendor + ':'+ kernel.ip_type + ':' + kernel.name +':' +  kernel.ip_version + ' ' + instName + '\n')
-        tclMain.write('connect_bd_net [get_bd_ports CLK] [get_bd_pins ' + instName + '/' + kernel.clk + '] \n')
-
-        tclMain.write('connect_bd_net [get_bd_ports ARESETN] [get_bd_pins ' + instName  + '/' + kernel.aresetn + ']\n')
-        if (kernel.id_port != ''):
-            tclMain.write('create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 id_' + str(kernel.id_num) + '\n')
-            tclMain.write('set_property -dict [list CONFIG.CONST_WIDTH {32}] [get_bd_cells id_' + str(kernel.id_num) + ']\n')
-            tclMain.write('set_property -dict [list CONFIG.CONST_VAL {' + str(kernel.id_num) + '}] [get_bd_cells id_' + str(kernel.id_num) + ']\n')
-            tclMain.write('connect_bd_net [get_bd_pins id_' + str(kernel.id_num) + '/dout] [get_bd_pins ' + instName + '/' + kernel.id_port + ']\n')
-    
-    #initialize axi_control_interface interconnect slave side (1 slave)
-    tclMain.write('create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 axi_interconnect_control\n')
-    tclMain.write('connect_bd_intf_net [get_bd_intf_ports S_AXI_CONTROL] -boundary_type upper [get_bd_intf_pins axi_interconnect_control/S00_AXI]\n')
-    tclMain.write('connect_bd_net [get_bd_ports CLK] [get_bd_pins axi_interconnect_control/ACLK]\n')
-    tclMain.write('connect_bd_net [get_bd_ports ARESETN] [get_bd_pins axi_interconnect_control/ARESETN]\n')
-    tclMain.write('connect_bd_net [get_bd_ports CLK] [get_bd_pins axi_interconnect_control/S00_ACLK]\n')
-    tclMain.write('connect_bd_net [get_bd_ports ARESETN] [get_bd_pins axi_interconnect_control/S00_ARESETN]\n')
-    
-
-    #make dummy bram for control interface if no control interfaces
-    if(num_ctrl_interfaces == 0):
-        tclMain.write('set_property -dict [list CONFIG.NUM_MI {1}] [get_bd_cells axi_interconnect_control]\n')
-        tclMain.write('create_bd_cell -type ip -vlnv xilinx.com:ip:axi_bram_ctrl:4.0 axi_bram_ctrl_dummy\n')
-        tclMain.write('set_property -dict [list CONFIG.SINGLE_PORT_BRAM {1}] [get_bd_cells axi_bram_ctrl_dummy]\n')
-        tclMain.write('connect_bd_net [get_bd_ports CLK] [get_bd_pins axi_interconnect_control/M00_ACLK]\n')
-        tclMain.write('connect_bd_net [get_bd_ports ARESETN] [get_bd_pins axi_interconnect_control/ARESETN]\n')
-        tclMain.write('connect_bd_net [get_bd_ports ARESETN] [get_bd_pins axi_interconnect_control/M00_ARESETN]\n')
-        tclMain.write('create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen:8.4 blk_mem_gen_dummy\n')
-        tclMain.write('connect_bd_intf_net -boundary_type upper [get_bd_intf_pins axi_interconnect_control/M00_AXI] [get_bd_intf_pins axi_bram_ctrl_dummy/S_AXI]\n')
-        tclMain.write('connect_bd_intf_net [get_bd_intf_pins axi_bram_ctrl_dummy/BRAM_PORTA] [get_bd_intf_pins blk_mem_gen_dummy/BRAM_PORTA]\n')
-        tclMain.write('assign_bd_address [get_bd_addr_segs {axi_bram_ctrl_dummy/S_AXI/Mem0 }]\n')
-    else:
-        tclMain.write('set_property -dict [list CONFIG.NUM_MI {' + str(num_ctrl_interfaces) + '}] [get_bd_cells axi_interconnect_control]\n')
-    
-
-    #initialize axi_mem_interface interconnect master side (1 master)
-
-    if(num_mem_interfaces > 0):
-        tclMain.write('set mem_ports_plus_one ' + str(num_mem_interfaces) + '\n')
-        tclMain.write('create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 axi_interconnect_mem\n')
-        tclMain.write('set_property -dict [list CONFIG.NUM_SI ${mem_ports_plus_one} CONFIG.NUM_MI {1}] [get_bd_cells axi_interconnect_mem]\n')
-        tclMain.write('connect_bd_net [get_bd_ports CLK] [get_bd_pins axi_interconnect_mem/ACLK]\n')
-        tclMain.write('connect_bd_net [get_bd_ports CLK] [get_bd_pins axi_interconnect_mem/M00_ACLK]\n')
-        tclMain.write('connect_bd_net [get_bd_ports ARESETN] [get_bd_pins axi_interconnect_mem/ARESETN]\n')
-        tclMain.write('connect_bd_net [get_bd_ports ARESETN] [get_bd_pins axi_interconnect_mem/M00_ARESETN]\n')
-    
-
-
-    #iterate through all kernels on FPGA connecting them to the input and output switches and their control and memory interfaces
-    ctrl_interface_index = 0
-    mem_interface_index = 0
-    kernel_index = 0
-    for kernel in fpga.kernels:
-        instName = kernel.name + "_inst_" + str(kernel.id_num)
-        kernel_index_str = "%02d"%kernel_index
-        tclMain.write('connect_bd_intf_net [get_bd_intf_pins ' + instName + '/' + kernel.stream_in  + '] [get_bd_intf_pins input_switch/M' + kernel_index_str + '_AXIS]\n')
-        if len(fpga.kernels) > 1:
-            tclMain.write('connect_bd_intf_net [get_bd_intf_pins ' + instName + '/' + kernel.stream_out  + '] [get_bd_intf_pins output_switch/S' + kernel_index_str + '_AXIS]\n')
-        else:
-            tclMain.write('connect_bd_intf_net [get_bd_intf_pins ' + instName + '/' + kernel.stream_out + '] [get_bd_intf_pins ip_dest_filter_inst/stream_in]\n')
-
-        if kernel.ctrl_interface != None:
-            ctrl_interface_index_str = "%02d"%ctrl_interface_index
-            tclMain.write('connect_bd_intf_net [get_bd_intf_pins ' + instName + '/' + kernel.ctrl_interface.name  + '] [get_bd_intf_pins axi_interconnect_control/M' + ctrl_interface_index_str + '_AXI]\n')
-            tclMain.write('connect_bd_net [get_bd_ports CLK] [get_bd_pins axi_interconnect_control/M' + ctrl_interface_index_str + '_ACLK]\n')
-            tclMain.write('connect_bd_net [get_bd_ports ARESETN] [get_bd_pins axi_interconnect_control/M' + ctrl_interface_index_str + '_ARESETN]\n')
-            ctrl_interface_index = ctrl_interface_index + 1
-        
-        for mem_interface in kernel.mem_interfaces:
-            mem_interface_index_str = "%02d"%mem_interface_index
-            tclMain.write('connect_bd_intf_net [get_bd_intf_pins ' + instName + '/' + mem_interface  + '] [get_bd_intf_pins axi_interconnect_mem/S' + mem_interface_index_str + '_AXI]\n')
-            tclMain.write('connect_bd_net [get_bd_ports CLK] [get_bd_pins axi_interconnect_mem/S' + mem_interface_index_str + '_ACLK]\n')
-            tclMain.write('connect_bd_net [get_bd_ports ARESETN] [get_bd_pins axi_interconnect_mem/S' + mem_interface_index_str + '_ARESETN]\n')
-            mem_interface_index = mem_interface_index + 1
-        kernel_index = kernel_index + 1
-
-
-
-    #connect mem interconnect and assign addresses, all kernels need to be 32 bit addressable
-    #connect ctrl interconnect and assign addresses
-    tclMain.write('connect_bd_intf_net [get_bd_intf_ports S_AXI_MEM_0] -boundary_type upper [get_bd_intf_pins axi_interconnect_mem/M00_AXI]\n')
-    tclMain.write('assign_bd_address [get_bd_addr_segs {S_AXI_MEM_0/Reg }]\n')
-
-    for kernel in fpga.kernels:
-        instName = kernel.name + "_inst_" + str(kernel.id_num)
-        for mem_interface in kernel.mem_interfaces:
-            tclMain.write('set_property offset 0x00000000 [get_bd_addr_segs {' + instName + '/' + mem_interface  +'/SEG_S_AXI_MEM_0_Reg}]\n')
-            tclMain.write('set_property range 4G [get_bd_addr_segs {' + instName + '/' + mem_interface +  '/SEG_S_AXI_MEM_0_Reg}]\n')
-        if kernel.ctrl_interface != None:
-            tclMain.write('assign_bd_address [get_bd_addr_segs {' + instName + '/' + kernel.ctrl_interface.name + '/Reg0 }]\n')
-   
-
-
-    #connect TCP bridge to other memory port and make it 4G addressable
-    tclMain.write('assign_bd_address [get_bd_addr_segs {S_AXI_MEM_1/Reg }]\n')
-    #tclMain.write('set_property offset 0x00000000 [get_bd_addr_segs {darius_wrapper_bd_inst_1/M_AXI_MEM/SEG_S_AXI_MEM_0_Reg}]\n')
-    #tclMain.write('set_property range 4G [get_bd_addr_segs {darius_wrapper_bd_inst_1/M_AXI_MEM/SEG_S_AXI_MEM_0_Reg}]\n')
 
     #move all network cores in a tcp_bridge_hierarchy
     tclMain.write('create_bd_cell -type hier tcp_bridge_logic\n')

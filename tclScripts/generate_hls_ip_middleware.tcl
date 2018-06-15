@@ -5,9 +5,9 @@ cd hlsIP_${boardName}
 
 
 #creates special switch for ip packets
-open_project ip_dest_filter 
-set_top ip_dest_filter 
-add_files ../hlsSources/srcs/ip_dest_filter.cpp
+open_project ethernet_bridge 
+set_top ethernet_bridge
+add_files ../hlsSources/srcs/ethernet_bridge.cpp
 open_solution "solution1"
 #set_part {xcku115-flva1517-2-e}
 set_part ${partName}

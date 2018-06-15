@@ -7,7 +7,7 @@
 DCP = static_routed_v3.dcp
 
 #make userIP
-PROJECTNAME=mlKernelsTest
+PROJECTNAME=mlKernelsTest2
 USERHLSIP_DIR=telepathy/hlsSources
 USERHLSIPTCL=${USERHLSIP_DIR}/generate_hls_ip.tcl
 USERIPTCL=./telepathy/ipPackage/package_top.tcl
@@ -29,7 +29,8 @@ IPFILE=telepathy/middlewareInput/${ML_CONF}/mpiIPAddresses
 
 all: userIP createCluster pr  
 
-createCluster: hlsShell hlsMiddleware createCluster.sh
+#createCluster: hlsShell hlsMiddleware createCluster.sh
+#createCluster: createCluster.sh
 
 userIP: ${USERHLSIP_DIR}/* ${USERHLSIP_DIR}/generate_hls_ip.tcl
 #	mkdir -p userIP
@@ -47,12 +48,12 @@ hlsMiddleware:
 	mkdir -p hlsIP_${BOARD}
 	vivado_hls tclScripts/generate_hls_ip_middleware.tcl -tclargs ${BOARD} ${PART}
 
-createCluster.sh: ${LOGICALFILE} ${MACFILE} ${MAPFILE} 
+createCluster: ${LOGICALFILE} ${MACFILE} ${MAPFILE} 
 	mkdir -p projects
 	mkdir -p projects/${PROJECTNAME}
 	python hwMiddleware/packetSwitch/globalFPGAParser.py --logicalFile=${LOGICALFILE} --macFile=${MACFILE} --mapFile=${MAPFILE} --ipFile=${IPFILE} --projectName=${PROJECTNAME}
-	chmod +x createCluster.sh
-	./createCluster.sh
+#	chmod +x createCluster.sh
+#	./createCluster.sh
 
 clean:
 	rm -rf projects/${PROJECTNAME} createCluster.sh

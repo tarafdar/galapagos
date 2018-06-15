@@ -269,9 +269,9 @@ except:
 
 def makeProjectClusterScript(projectName, allNodes):
     
-    if os.path.exists('projects/' + projectName):
-        shutil.rmtree('projects/' + projectName)
-    os.makedirs('projects/' + projectName)
+    #if os.path.exists('projects/' + projectName):
+    #    shutil.rmtree('projects/' + projectName)
+    #os.makedirs('projects/' + projectName)
 
     globalConfigFile = open('createCluster.sh', 'w')
 
@@ -280,7 +280,7 @@ def makeProjectClusterScript(projectName, allNodes):
         #only need vivado project for hw nodes    
         if node.type == 'hw':
             dirName = 'projects/' + projectName + '/' + str(nodeIndex)
-            os.makedirs(dirName)
+            #os.makedirs(dirName)
             #currently only making flattened bitstreams
             globalConfigFile.write("vivado -mode batch -source tclScripts/createFlatten.tcl -tclargs " + node.board + " " + projectName + " " + str(nodeIndex) + "\n")
 
