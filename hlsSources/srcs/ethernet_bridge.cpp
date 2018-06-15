@@ -60,8 +60,8 @@ void eth_to_app(hls::stream <eth_axis> & from_eth,
 #pragma HLS PIPELINE II=1
 
     
-    ap_uint <2> state = 0;
-    ap_uint <16> dest;
+    static ap_uint <2> state = 0;
+    static ap_uint <16> dest;
     eth_axis eth_packet_in;
     app_axis app_packet_out;
 
