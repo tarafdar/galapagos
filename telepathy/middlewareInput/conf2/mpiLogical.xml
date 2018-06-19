@@ -19,7 +19,7 @@
         <version> 1.0 </version>
         <type> user </type>
 		<num> 1 </num>
-        <rep> 4 </rep>
+        <rep> 8 </rep>
         <clk> CLK </clk>
         <id_port> id_in_V_0 </id_port>
         <aresetn> ARESETN </aresetn>

@@ -12,25 +12,38 @@
 
 #define START 0x1
 #define DONE  0x6
-void dariusWrapper(float * mem,            // global memory pointer
-                int * darius_driver //,
+
+#define DEPTH 214783648
+#define DARIUS_DEPTH 1024
+
+//define states
+#define INIT_READ_PARAMETER_MEM_INFO 0
+#define INIT_DMA_PARAMETERS 1
+#define INIT_READ_DMA_MEM_INFO 2
+#define INIT_READ_DARIUS_INFO 3 
+#define FORWARD_PASS_0 4 
+#define FORWARD_PASS_1 5 
+#define FORWARD_PASS_2 6 
+#define FORWARD_PASS_3 7 
+#define FORWARD_PASS_4 8 
+
+void dariusWrapper(float  mem [DEPTH],            // global memory pointer
+                int  darius_driver [DARIUS_DEPTH] //,
                 //const int rank       // offset of inputs
                 )            // kernel size
 {
 //Needed for MPI support
-#pragma HLS INTERFACE axis port=stream_out
-#pragma HLS INTERFACE axis port=stream_in
+#pragma HLS resource core=AXI4Stream variable=stream_out
+#pragma HLS resource core=AXI4Stream variable=stream_in
 #pragma HLS DATA_PACK variable  = stream_out
 #pragma HLS DATA_PACK variable  = stream_in
 
 // Global memory interface
-#pragma HLS INTERFACE m_axi port=mem depth=2147483648
-
-//Driver for Darius IP
-#pragma HLS INTERFACE m_axi port=darius_driver depth=1024
-// Bind all control ports to a single bundle
-//#pragma HLS INTERFACE ap_ctrl_none port=rank 
-#pragma HLS INTERFACE ap_ctrl_none port=return bundle=CTRL_BUS
+#pragma HLS INTERFACE ap_bus port=mem
+#pragma HLS RESOURCE core=AXI4M variable=mem
+#pragma HLS INTERFACE ap_bus port=darius_driver
+#pragma AP resource core=AXI4M variable=darius_driver
+#pragma HLS INTERFACE ap_ctrl_none port=return 
     
     int rank = id_in;
     int parameter_mem_info[PARAMETER_MEM_INFO_SIZE]; //{offset in offchip memory to dma_in, size to dma_in} 
@@ -80,7 +93,7 @@ void dariusWrapper(float * mem,            // global memory pointer
         cumulative_cycle_count_float[0] = (float) cumulative_cycle_count[0];
         //send next cycle count and data to next rank    
 	    while(!MPI_Send(cumulative_cycle_count_float, 1, MPI_FLOAT, rank + 1, 0 ,MPI_COMM_WORLD));
-	    while(!MPI_Send(mem + data_mem_info[2]/sizeof(int), data_mem_info[3]/sizeof(int), MPI_INT, rank + 1, 0 ,MPI_COMM_WORLD));
+	    while(!MPI_Send(mem + data_mem_info[2]/sizeof(float), data_mem_info[3]/sizeof(int), MPI_FLOAT, rank + 1, 0 ,MPI_COMM_WORLD));
     }
 }
 

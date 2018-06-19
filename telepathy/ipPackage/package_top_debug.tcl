@@ -16,5 +16,8 @@ set_property core_revision 2 [ipx::find_open_core user.org:user:darius_wrapper_b
 ipx::create_xgui_files [ipx::find_open_core user.org:user:darius_wrapper_bd_debug:1.0]
 ipx::update_checksums [ipx::find_open_core user.org:user:darius_wrapper_bd_debug:1.0]
 ipx::save_core [ipx::find_open_core user.org:user:darius_wrapper_bd_debug:1.0]
-close_project
-file delete -force ./telepathy/projects
+
+#source ./telepathy/ipPackage/package_ip.tcl
+
+#close_project
+#file delete -force ./telepathy/projects

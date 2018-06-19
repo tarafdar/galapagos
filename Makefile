@@ -7,7 +7,7 @@
 DCP = static_routed_v3.dcp
 
 #make userIP
-PROJECTNAME=mlKernelsTest2
+PROJECTNAME=mlKernelsTest4
 USERHLSIP_DIR=telepathy/hlsSources
 USERHLSIPTCL=${USERHLSIP_DIR}/generate_hls_ip.tcl
 USERIPTCL=./telepathy/ipPackage/package_top.tcl
@@ -18,9 +18,8 @@ BOARD = adm-8k5
 PART = xcku115-flva1517-2-e
 FPGANUM= 1
 
-
 #input files for middleware
-ML_CONF = conf0
+ML_CONF = conf1
 LOGICALFILE=telepathy/middlewareInput/${ML_CONF}/mpiLogical.xml
 MACFILE=telepathy/middlewareInput/${ML_CONF}/mpiMacAddresses
 MAPFILE=telepathy/middlewareInput/${ML_CONF}/mpiMap.xml
@@ -33,9 +32,9 @@ all: userIP createCluster pr
 #createCluster: createCluster.sh
 
 userIP: ${USERHLSIP_DIR}/* ${USERHLSIP_DIR}/generate_hls_ip.tcl
-#	mkdir -p userIP
-#	vivado_hls ./HMPI/generate_hls_ip.tcl
-#	vivado_hls ${USERHLSIPTCL}
+	mkdir -p userIP
+	vivado_hls ./HMPI/generate_hls_ip.tcl
+	vivado_hls ${USERHLSIPTCL}
 	vivado -mode batch -source ${USERIPTCLDEBUG} 
 
 shell: hlsShell shells/projects/${BOARD}/${DCP}
@@ -52,8 +51,8 @@ createCluster: ${LOGICALFILE} ${MACFILE} ${MAPFILE}
 	mkdir -p projects
 	mkdir -p projects/${PROJECTNAME}
 	python hwMiddleware/packetSwitch/globalFPGAParser.py --logicalFile=${LOGICALFILE} --macFile=${MACFILE} --mapFile=${MAPFILE} --ipFile=${IPFILE} --projectName=${PROJECTNAME}
-#	chmod +x createCluster.sh
-#	./createCluster.sh
+	chmod +x createCluster.sh
+	./createCluster.sh
 
 clean:
 	rm -rf projects/${PROJECTNAME} createCluster.sh

@@ -60,10 +60,10 @@ void eth_to_app(hls::stream <eth_axis> & from_eth,
 #pragma HLS PIPELINE II=1
 
     
-    static ap_uint <2> state = 0;
+    static ap_uint <3> state = 0;
     static ap_uint <16> dest;
-    eth_axis eth_packet_in;
-    app_axis app_packet_out;
+    static eth_axis eth_packet_in;
+    static app_axis app_packet_out;
 
 	ap_int <48> observedAddress;
     switch (state)
@@ -96,8 +96,8 @@ void eth_to_app(hls::stream <eth_axis> & from_eth,
             app_packet_out.tdest = dest;
 		    if (!from_eth.empty()){
                 eth_packet_in = from_eth.read();
-                eth_packet_in.data = reverseEndian64_data(eth_packet_in.data);
-                eth_packet_in.tkeep = reverseEndian64_keep(eth_packet_in.tkeep);
+                //eth_packet_in.data = reverseEndian64_data(eth_packet_in.data);
+                //eth_packet_in.tkeep = reverseEndian64_keep(eth_packet_in.tkeep);
                 app_packet_out.tkeep = eth_packet_in.tkeep;
                 app_packet_out.data = eth_packet_in.data;
                 app_packet_out.last = eth_packet_in.last;
@@ -136,7 +136,7 @@ void app_to_eth(
 
    
     static app_axis app_packet_in;
-    eth_axis eth_packet_out;
+    static eth_axis eth_packet_out;
     static ap_uint <48> dest_mac_address;
 	static ap_uint <96> eth_dst_src;
     static ap_uint <3> state;
@@ -144,6 +144,8 @@ void app_to_eth(
 	ap_int <32> temp = eth_dst_src.range(31,0);
 	ap_int <16> temp2 = ETH_PROTOCOL;
 	ap_int <48> temp3 = temp.concat(temp2);
+    ap_uint <16> temp_dest;
+
     switch (state)
     {
         //read dest and look up mac address
@@ -158,18 +160,27 @@ void app_to_eth(
 	        eth_dst_src = dest_mac_address.concat(src_mac_address);
             eth_packet_out.tkeep = 0xff;
 	        eth_packet_out.data = eth_dst_src.range(95,32);
+            eth_packet_out.tkeep = reverseEndian64_keep(eth_packet_out.tkeep);
+            eth_packet_out.data = reverseEndian64_data(eth_packet_out.data);
             to_eth.write(eth_packet_out);
             state = HEADER_1_APP_TO_ETH;
             break;
         case HEADER_1_APP_TO_ETH:
             eth_packet_out.tkeep = 0xff;
-	        eth_packet_out.data = temp3.concat(app_packet_in.tdest);
+            temp_dest = 0;
+            temp_dest(15,8) = app_packet_in.tdest;
+	        eth_packet_out.data = temp3.concat(temp_dest);
+            eth_packet_out.tkeep = reverseEndian64_keep(eth_packet_out.tkeep);
+            eth_packet_out.data = reverseEndian64_data(eth_packet_out.data);
             to_eth.write(eth_packet_out);
             state = STREAM_FIRST_FLIT_APP_TO_ETH;
             break;
         case STREAM_FIRST_FLIT_APP_TO_ETH:
-            eth_packet_out.tkeep = reverseEndian64_keep(app_packet_in.tkeep);
-	        eth_packet_out.data = reverseEndian64_data(app_packet_in.data);
+            //eth_packet_out.tkeep = reverseEndian64_keep(app_packet_in.tkeep);
+	        //eth_packet_out.data = reverseEndian64_data(app_packet_in.data);
+            eth_packet_out.tkeep = app_packet_in.tkeep;
+            eth_packet_out.data = app_packet_in.data;
+            eth_packet_out.last = app_packet_in.last;
             to_eth.write(eth_packet_out);
             if(app_packet_in.last)
                 state = INIT_APP_TO_ETH;
@@ -179,8 +190,12 @@ void app_to_eth(
         case STREAM_APP_TO_ETH:
 		    if (!from_app.empty()){
                 app_packet_in = from_app.read();
-                eth_packet_out.tkeep = reverseEndian64_keep(app_packet_in.tkeep);
-	            eth_packet_out.data = reverseEndian64_data(app_packet_in.data);
+                //eth_packet_out.tkeep = reverseEndian64_keep(app_packet_in.tkeep);
+	            //eth_packet_out.data = reverseEndian64_data(app_packet_in.data);
+                eth_packet_out.tkeep = app_packet_in.tkeep;
+                eth_packet_out.data = app_packet_in.data;
+                eth_packet_out.last = app_packet_in.last;
+
                 to_eth.write(eth_packet_out);
                 if(app_packet_in.last)
                     state = INIT_APP_TO_ETH;
@@ -205,12 +220,27 @@ void ethernet_bridge(
 
 {
 #pragma HLS DATAFLOW
-#pragma HLS INTERFACE axis port=to_app
-#pragma HLS INTERFACE axis port=from_eth
-#pragma HLS INTERFACE axis port=from_app
-#pragma HLS INTERFACE axis port=to_eth
-#pragma HLS INTERFACE ap_ctrl_none port=mac_addr
-#pragma HLS RESOURCE variable=mac_table core=ROM_2P_BRAM
+
+#pragma HLS resource core=AXI4Stream variable=to_app
+#pragma HLS resource core=AXI4Stream variable=from_eth
+#pragma HLS resource core=AXI4Stream variable=from_app
+#pragma HLS resource core=AXI4Stream variable=to_eth
+
+#pragma HLS DATA_PACK variable=to_app
+#pragma HLS DATA_PACK variable=from_eth
+#pragma HLS DATA_PACK variable=from_app
+#pragma HLS DATA_PACK variable=to_eth
+
+
+
+
+
+// #pragma HLS INTERFACE axis port=to_app
+// #pragma HLS INTERFACE axis port=from_eth
+// #pragma HLS INTERFACE axis port=from_app
+// #pragma HLS INTERFACE axis port=to_eth
+//#pragma HLS INTERFACE ap_ctrl_none port=mac_addr
+//#pragma HLS RESOURCE variable=mac_table core=ROM_2P_BRAM
 #pragma HLS INTERFACE ap_ctrl_none port=return
 
     eth_to_app(from_eth, to_app, mac_addr);

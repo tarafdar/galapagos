@@ -3,6 +3,7 @@ import socket, struct
 import getopt, sys
 import os
 import shutil
+import tclFileGenerator
 
 
 class networkBridgesObj:
@@ -13,6 +14,13 @@ class networkBridgesObj:
     stream_in_to = ''
     stream_out_to = ''
 
+
+class appBridgeObj:
+    to_app = ''
+    from_app = ''
+    to_net = ''
+    from_net = ''
+    kernel = ''
 
 class controlInterfaceObj:
     offset = 0x0
@@ -33,6 +41,7 @@ class kernelObj:
     stream_in = ''
     stream_out = ''
     ip_addr = ''
+    mac_addr = ''
 
 class nodeObj:
     num = ''
@@ -41,6 +50,7 @@ class nodeObj:
     kernels = []
     mac_addr = ''
     ip_addr = ''
+    app_bridge = None
     def __init__(self):
         self.kernels = []
 
@@ -53,28 +63,6 @@ def readKernelsFile(logicalKernelsFile):
     #parse logical kernel xml file
     tree = ET.parse(logicalKernelsFile)
     logicalCluster = tree.getroot()
-
-    #read bridge information
-    bridge = False
-    bridgeFromElement = logicalCluster.find('bridgeFrom')
-    bridgeToElement = logicalCluster.find('bridgeTo')
-    if bridgeFromElement != None and bridgeToElement == None:
-        print "Bridge specified from network but none to network"
-        quit()
-    elif bridgeToElement != None and bridgeFromElement == None:
-        print "Bridge specified to network but none from network"
-        quit()
-    elif bridgeFromElement != None:
-        bridge = True
-
-    if bridge:
-        networkBridges = networkBridgesObj()
-        networkBridges.bridgeFromLocation = bridgeFromElement.find("location").text.replace(" ","")
-        networkBridges.bridgeToLocation = bridgeToElement.find("location").text.replace(" ","")
-        networkBridges.stream_in_from = bridgeFromElement.find("inPort").text.replace(" ","")
-        networkBridges.stream_out_from = bridgeFromElement.find("outPort").text.replace(" ","")
-        networkBridges.stream_in_to = bridgeToElement.find("inPort").text.replace(" ","")
-        networkBridges.stream_out_to = bridgeToElement.find("outPort").text.replace(" ","")
 
 
     for kernelElement in logicalCluster.findall('kernel'):
@@ -135,42 +123,42 @@ def readKernelsFile(logicalKernelsFile):
             else:
                 stream_in = interface_element.find('name').text.replace(" ", "")
 
-        #making kernel object
-        kernel = kernelObj()
-        kernel.name = kernelName
-        kernel.id_num = kernel_id
-        kernel.clk = clk
-        kernel.aresetn = aresetn
         type_element = kernelElement.find('type')
+        ip_type = 'hls'
         if type_element != None:
-            kernel.ip_type = type_element.text.replace(" ", "")
-        else:
-            kernel.ip_type = 'hls'
+            ip_type = type_element.text.replace(" ", "")
         
         version_element = kernelElement.find('version')
+        ip_version = str('1.0')
         if type_element != None:
-            kernel.ip_version = str(version_element.text.replace(" ", ""))
-        else:
-            kernel.ip_version = str('1.0')
+            ip_version = str(version_element.text.replace(" ", ""))
 
         vendor_element = kernelElement.find('vendor')
+        ip_vendor = 'xilinx.com'
         if type_element != None:
-            kernel.ip_vendor = vendor_element.text.replace(" ", "")
-        else:
-            kernel.ip_vendor = 'xilinx.com'
+            ip_vendor = vendor_element.text.replace(" ", "")
 
-        kernel.id_port = id_port 
-        kernel.mem_interfaces = mem_interfaces
-        kernel.ctrl_interface = control_interface
-        kernel.stream_in = stream_in
-        kernel.stream_out = stream_out
        
      
         id_num = int(kernel_id)
         for i in range(0, rep):
+            #making kernel object
+            kernel = kernelObj()
+            kernel.name = kernelName
+            kernel.clk = clk
+            kernel.aresetn = aresetn
+            kernel.id_port = id_port 
+            kernel.mem_interfaces = mem_interfaces
+            kernel.ctrl_interface = control_interface
+            kernel.stream_in = stream_in
+            kernel.stream_out = stream_out
             kernel.id_num = id_num
+            kernel.ip_type = ip_type 
+            kernel.ip_version = ip_version
+            kernel.ip_vendor = ip_vendor
             allKernels.append(kernel)
             id_num = id_num + 1
+
 
 
     return allKernels, networkBridges
@@ -180,13 +168,13 @@ def readNodeMap(mapFile, macFile, ipAddrFile, allKernels):
     tree = ET.parse(mapFile)
     mapCluster = tree.getroot()
 
-    with open(macFile) as f:
-        macAddresses = f.readlines()
-    macAddresses = [x.strip() for x in macAddresses]
+    #with open(macFile) as f:
+    #    macAddresses = f.readlines()
+    #macAddresses = [x.strip() for x in macAddresses]
 
-    with open(ipAddrFile) as f:
-        ipAddresses = f.readlines()
-    ipAddresses = [x.strip() for x in ipAddresses]
+    #with open(ipAddrFile) as f:
+    #    ipAddresses = f.readlines()
+    #ipAddresses = [x.strip() for x in ipAddresses]
 
     nodeIndex = 0
 
@@ -207,8 +195,61 @@ def readNodeMap(mapFile, macFile, ipAddrFile, allKernels):
         else:
             node.comm = ''
 
-        node.mac_addr = macAddresses[nodeIndex]
-        node.ip_addr = ipAddresses[nodeIndex]
+        macElement = nodeElement.find('mac_addr')
+        if macElement != None:
+            node.mac_addr = macElement.text.replace(" ", "")
+        else:
+            node.mac_addr = 'ff:ff:ff:ff:ff:ff'
+
+        ipElement = nodeElement.find('ip_addr')
+        if ipElement != None:
+            node.ip_addr = macElement.text.replace(" ", "")
+        else:
+            node.ip_addr = '1.1.1.1'
+
+        appBridgeElement = nodeElement.find('appBridge')
+
+        node.app_bridge = None
+        if appBridgeElement != None:
+            node.app_bridge = appBridgeObj()
+            node.app_bridge.kernel = kernelObj()
+            clkElement = appBridgeElement.find('clk')
+            node.app_bridge.kernel.name = appBridgeElement.find('name').text.replace(" ","")
+            node.app_bridge.to_app = appBridgeElement.find('to_app').text.replace(" ","")
+            node.app_bridge.from_app = appBridgeElement.find('from_app').text.replace(" ","")
+            node.app_bridge.to_net = appBridgeElement.find('to_net').text.replace(" ","")
+            node.app_bridge.from_net = appBridgeElement.find('from_net').text.replace(" ","")
+            if clkElement != None:
+                node.app_bridge.kernel.clk = clkElement.text.replace(" ", "")
+            else:
+                node.app_bridge.kernel.clk = 'aclk'
+
+            rstElement = appBridgeElement.find('aresetn')
+            if rstElement != None:
+                node.app_bridge.kernel.aresetn = rstElement.text.replace(" ", "")
+            else:
+                node.app_bridge.kernel.aresetn = 'aresetn'
+            
+            vendorElement = appBridgeElement.find('vendor')
+            if vendorElement != None:
+                node.app_bridge.kernel.ip_vendor = vendorElement.text.replace(" ", "")
+            else:
+                node.app_bridge.kernel.ip_vendor = 'xilinx.com'
+
+            typeElement = appBridgeElement.find('type')
+            if typeElement != None:
+                node.app_bridge.kernel.ip_type = typeElement.text.replace(" ", "")
+            else:
+                node.app_bridge.kernel.ip_type = 'hls'
+
+            versionElement = appBridgeElement.find('version')
+            if versionElement != None:
+                node.app_bridge.kernel.ip_version = versionElement.text.replace(" ", "")
+            else:
+                node.app_bridge.kernel.ip_version = '1.0'
+
+        #node.mac_addr = macAddresses[nodeIndex]
+        #node.ip_addr = ipAddresses[nodeIndex]
         node.kernels = []
         nodeIndex = nodeIndex + 1
         allNodes.append(node)
@@ -223,7 +264,10 @@ def readNodeMap(mapFile, macFile, ipAddrFile, allKernels):
             for kernel in allKernels:
                 if int(kernel.id_num) == int(num):
                     allNodes[nodeIndex].kernels.append(kernel)
-                    allKernels[kernelIndex].ip_addr = ipAddresses[nodeIndex]
+                    #allKernels[kernelIndex].ip_addr = ipAddresses[nodeIndex]
+                    #allKernels[kernelIndex].mac_addr = macAddresses[nodeIndex]
+                    allKernels[kernelIndex].ip_addr = allNodes[nodeIndex].ip_addr
+                    allKernels[kernelIndex].mac_addr = allNodes[nodeIndex].mac_addr
                 kernelIndex = kernelIndex + 1
        
 
@@ -242,9 +286,10 @@ def createLocalFPGA(allNodes, projectName, networkBridges):
         if node.type == 'sw':
             continue
 
-        sys.path.append('hwMiddleware/packetSwitch/prComm/' + node.comm)
-        import tclFileGenerator
+        #sys.path.append('hwMiddleware/packetSwitch/prComm/tcp')
         tclFileGenerator.makeTCLFiles(node, projectName, networkBridges) 
+
+
 
 #make COE to intialize BRAM of all IP addresses
 def makeIPBRAMFile(projectName, allKernels):
@@ -261,6 +306,21 @@ def makeIPBRAMFile(projectName, allKernels):
             ipBRAMFile.write(str(struct.unpack("!L", socket.inet_aton(kernel.ip_addr))[0]) + ';')
         kernelIndex = kernelIndex + 1
 
+#make COE to intialize BRAM of all IP addresses
+def makeMACBRAMFile(projectName, allKernels):
+
+    macBRAMFile = open('projects/'+ projectName + '/mac.coe', 'w')
+    macBRAMFile.write('memory_initialization_radix=16;\n')
+    macBRAMFile.write('memory_initialization_vector=\n')
+    kernelIndex = 0
+    #iterate through kernels in order of tdest, populating the ipaddress at that location
+    for kernel in allKernels:
+        if kernelIndex != (len(allKernels) - 1):
+            macBRAMFile.write(kernel.mac_addr.replace(":","") + ',')
+        else:
+            macBRAMFile.write(kernel.mac_addr.replace(":","") + ';')
+        kernelIndex = kernelIndex + 1
+
 try:
     opts, args = getopt.getopt(sys.argv[1:],"", ["logicalFile=", "mapFile=", "macFile=", "ipFile=", "projectName="])
 except:
@@ -269,9 +329,9 @@ except:
 
 def makeProjectClusterScript(projectName, allNodes):
     
-    #if os.path.exists('projects/' + projectName):
-    #    shutil.rmtree('projects/' + projectName)
-    #os.makedirs('projects/' + projectName)
+    if os.path.exists('projects/' + projectName):
+        shutil.rmtree('projects/' + projectName)
+    os.makedirs('projects/' + projectName)
 
     globalConfigFile = open('createCluster.sh', 'w')
 
@@ -280,7 +340,7 @@ def makeProjectClusterScript(projectName, allNodes):
         #only need vivado project for hw nodes    
         if node.type == 'hw':
             dirName = 'projects/' + projectName + '/' + str(nodeIndex)
-            #os.makedirs(dirName)
+            os.makedirs(dirName)
             #currently only making flattened bitstreams
             globalConfigFile.write("vivado -mode batch -source tclScripts/createFlatten.tcl -tclargs " + node.board + " " + projectName + " " + str(nodeIndex) + "\n")
 
@@ -318,4 +378,5 @@ allKernels, networkBridges = readKernelsFile(logicalFile)
 allNodes, allKernels = readNodeMap(mapFile, macFile, ipFile, allKernels)
 makeProjectClusterScript(projectName, allNodes)
 makeIPBRAMFile(projectName, allKernels)
+makeMACBRAMFile(projectName, allKernels)
 createLocalFPGA(allNodes, projectName, networkBridges)

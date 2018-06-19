@@ -1,19 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cluster>
-    <bridgeFrom> 
-        <location> NFR </location> 
-        <inPort>  stream_in_V </inPort> 
-        <outPort>  stream_out_V </outPort>
-        <clk> aclk </clk>
-        <aresetn> aresetn </aresetn>
-    </bridgeFrom>
-    <bridgeTo> 
-        <location> FNR </location> 
-        <inPort>  stream_in_V </inPort> 
-        <outPort>  stream_out_V </outPort> 
-        <clk> aclk </clk>
-        <aresetn> aresetn </aresetn>
-    </bridgeTo>
     <kernel> darius_wrapper_bd_debug
         <vendor> user.org </vendor>
         <version> 1.0 </version>
