@@ -160,7 +160,8 @@ void app_to_eth(
 	        eth_dst_src = dest_mac_address.concat(src_mac_address);
             eth_packet_out.tkeep = 0xff;
 	        eth_packet_out.data = eth_dst_src.range(95,32);
-            eth_packet_out.tkeep = reverseEndian64_keep(eth_packet_out.tkeep);
+            //eth_packet_out.tkeep = reverseEndian64_keep(eth_packet_out.tkeep);
+            eth_packet_out.last = 0;
             eth_packet_out.data = reverseEndian64_data(eth_packet_out.data);
             to_eth.write(eth_packet_out);
             state = HEADER_1_APP_TO_ETH;
@@ -170,7 +171,8 @@ void app_to_eth(
             temp_dest = 0;
             temp_dest(15,8) = app_packet_in.tdest;
 	        eth_packet_out.data = temp3.concat(temp_dest);
-            eth_packet_out.tkeep = reverseEndian64_keep(eth_packet_out.tkeep);
+            //eth_packet_out.tkeep = reverseEndian64_keep(eth_packet_out.tkeep);
+            eth_packet_out.last = 0;
             eth_packet_out.data = reverseEndian64_data(eth_packet_out.data);
             to_eth.write(eth_packet_out);
             state = STREAM_FIRST_FLIT_APP_TO_ETH;
