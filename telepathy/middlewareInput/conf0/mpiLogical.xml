@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cluster>
-    <kernel> darius_wrapper_bd_debug
-        <vendor> user.org </vendor>
+    <kernel> dariusMPI_debug
+        <vendor> galapagos.org </vendor>
         <version> 1.0 </version>
-        <type> user </type>
+        <type> galapagos </type>
 		<num> 1 </num>
         <rep> 1 </rep>
         <clk> CLK </clk>

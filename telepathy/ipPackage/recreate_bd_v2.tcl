@@ -1,5 +1,5 @@
 #create kernels
-create_bd_cell -type ip -vlnv xilinx.com:hls:dariusWrapper:1.0 dariusWrapper_inst
+create_bd_cell -type ip -vlnv xilinx.com:hls:dariusController:1.0 dariusController_inst
 create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 axi_interconnect_control
 create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 axi_interconnect_mem
 create_bd_cell -type ip -vlnv xilinx.com:RTLKernel:darius:2.0 cnn_dataflow_v2_0_inst
@@ -17,19 +17,19 @@ set_property CONFIG.FREQ_HZ 156250000 [get_bd_ports CLK]
 set_property CONFIG.POLARITY ACTIVE_LOW [get_bd_ports ARESETN]
 set_property CONFIG.ASSOCIATED_RESET {ARESETN} [get_bd_ports /CLK]
 
-#connect dariusWrapper 
-connect_bd_net [get_bd_ports CLK] [get_bd_pins dariusWrapper_inst/aclk]
-connect_bd_net [get_bd_ports ARESETN] [get_bd_pins dariusWrapper_inst/aresetn]
-make_bd_pins_external  [get_bd_pins dariusWrapper_inst/id_in_V]
-make_bd_intf_pins_external  [get_bd_intf_pins dariusWrapper_inst/stream_in_V]
+#connect dariusController 
+connect_bd_net [get_bd_ports CLK] [get_bd_pins dariusController_inst/aclk]
+connect_bd_net [get_bd_ports ARESETN] [get_bd_pins dariusController_inst/aresetn]
+make_bd_pins_external  [get_bd_pins dariusController_inst/id_in_V]
+make_bd_intf_pins_external  [get_bd_intf_pins dariusController_inst/stream_in_V]
 set_property name stream_in [get_bd_intf_ports stream_in_V_0]
-make_bd_intf_pins_external  [get_bd_intf_pins dariusWrapper_inst/stream_out_V]
+make_bd_intf_pins_external  [get_bd_intf_pins dariusController_inst/stream_out_V]
 set_property name stream_out [get_bd_intf_ports stream_out_V_0]
-#make_bd_intf_pins_external  [get_bd_intf_pins dariusWrapper_inst/s_axi_CTRL_BUS]
+#make_bd_intf_pins_external  [get_bd_intf_pins dariusController_inst/s_axi_CTRL_BUS]
 #set_property name S_AXI_CONTROL [get_bd_intf_ports s_axi_CTRL_BUS_0]
-connect_bd_intf_net [get_bd_intf_pins dariusWrapper_inst/m_axi_darius_driver] -boundary_type upper [get_bd_intf_pins axi_interconnect_control/S00_AXI]
-connect_bd_intf_net [get_bd_intf_pins dariusWrapper_inst/M_AXI_MEM] -boundary_type upper [get_bd_intf_pins axi_interconnect_mem/S00_AXI]
-assign_bd_address [get_bd_addr_segs {dariusWrapper_inst/s_axi_CTRL_BUS/Reg }]
+connect_bd_intf_net [get_bd_intf_pins dariusController_inst/m_axi_darius_driver] -boundary_type upper [get_bd_intf_pins axi_interconnect_control/S00_AXI]
+connect_bd_intf_net [get_bd_intf_pins dariusController_inst/M_AXI_MEM] -boundary_type upper [get_bd_intf_pins axi_interconnect_mem/S00_AXI]
+assign_bd_address [get_bd_addr_segs {dariusController_inst/s_axi_CTRL_BUS/Reg }]
 
 
 #connect and configure control interconnect
@@ -41,8 +41,8 @@ connect_bd_net [get_bd_ports ARESETN] [get_bd_pins axi_interconnect_control/S00_
 connect_bd_net [get_bd_ports ARESETN] [get_bd_pins axi_interconnect_control/M00_ARESETN]
 connect_bd_intf_net -boundary_type upper [get_bd_intf_pins axi_interconnect_control/M00_AXI] [get_bd_intf_pins cnn_dataflow_v2_0_inst/s_axi_control]
 assign_bd_address [get_bd_addr_segs {cnn_dataflow_v2_0_inst/s_axi_control/reg0 }]
-include_bd_addr_seg [get_bd_addr_segs -excluded dariusWrapper_inst/Data_m_axi_darius_driver/SEG_cnn_dataflow_v2_0_inst_reg0]
-set_property offset 0x0000000000000000 [get_bd_addr_segs {dariusWrapper_inst/Data_m_axi_darius_driver/SEG_cnn_dataflow_v2_0_inst_reg0}]
+include_bd_addr_seg [get_bd_addr_segs -excluded dariusController_inst/Data_m_axi_darius_driver/SEG_cnn_dataflow_v2_0_inst_reg0]
+set_property offset 0x0000000000000000 [get_bd_addr_segs {dariusController_inst/Data_m_axi_darius_driver/SEG_cnn_dataflow_v2_0_inst_reg0}]
 
 
 #connect cnn_dataflow

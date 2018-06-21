@@ -7,7 +7,7 @@
 DCP = static_routed_v3.dcp
 
 #make userIP
-PROJECTNAME=mlKernelsTest4
+PROJECTNAME=mlKernelsTest5
 USERHLSIP_DIR=telepathy/hlsSources
 USERHLSIPTCL=${USERHLSIP_DIR}/generate_hls_ip.tcl
 USERIPTCL=./telepathy/ipPackage/package_top.tcl
@@ -19,11 +19,9 @@ PART = xcku115-flva1517-2-e
 FPGANUM= 1
 
 #input files for middleware
-ML_CONF = conf1
+ML_CONF = conf0
 LOGICALFILE=telepathy/middlewareInput/${ML_CONF}/mpiLogical.xml
-MACFILE=telepathy/middlewareInput/${ML_CONF}/mpiMacAddresses
 MAPFILE=telepathy/middlewareInput/${ML_CONF}/mpiMap.xml
-IPFILE=telepathy/middlewareInput/${ML_CONF}/mpiIPAddresses
 
 
 all: userIP createCluster pr  
@@ -47,7 +45,7 @@ hlsMiddleware:
 	mkdir -p hlsIP_${BOARD}
 	vivado_hls tclScripts/generate_hls_ip_middleware.tcl -tclargs ${BOARD} ${PART}
 
-createCluster: ${LOGICALFILE} ${MACFILE} ${MAPFILE} 
+createCluster: ${LOGICALFILE} ${MAPFILE} 
 	mkdir -p projects
 	mkdir -p projects/${PROJECTNAME}
 	python hwMiddleware/packetSwitch/globalFPGAParser.py --logicalFile=${LOGICALFILE} --macFile=${MACFILE} --mapFile=${MAPFILE} --ipFile=${IPFILE} --projectName=${PROJECTNAME}

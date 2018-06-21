@@ -203,7 +203,7 @@ def readNodeMap(mapFile, macFile, ipAddrFile, allKernels):
 
         ipElement = nodeElement.find('ip_addr')
         if ipElement != None:
-            node.ip_addr = macElement.text.replace(" ", "")
+            node.ip_addr = ipElement.text.replace(" ", "")
         else:
             node.ip_addr = '1.1.1.1'
 
@@ -301,6 +301,7 @@ def makeIPBRAMFile(projectName, allKernels):
     #iterate through kernels in order of tdest, populating the ipaddress at that location
     for kernel in allKernels:
         if kernelIndex != (len(allKernels) - 1):
+            print kernel.ip_addr
             ipBRAMFile.write(str(struct.unpack("!L", socket.inet_aton(kernel.ip_addr))[0]) + ',')
         else:
             ipBRAMFile.write(str(struct.unpack("!L", socket.inet_aton(kernel.ip_addr))[0]) + ';')
@@ -342,7 +343,7 @@ def makeProjectClusterScript(projectName, allNodes):
             dirName = 'projects/' + projectName + '/' + str(nodeIndex)
             os.makedirs(dirName)
             #currently only making flattened bitstreams
-            globalConfigFile.write("vivado -mode batch -source tclScripts/createFlatten.tcl -tclargs " + node.board + " " + projectName + " " + str(nodeIndex) + "\n")
+            globalConfigFile.write("vivado -mode gui -source tclScripts/createFlatten.tcl -tclargs " + node.board + " " + projectName + " " + str(nodeIndex) + "\n")
 
         nodeIndex = nodeIndex + 1
 

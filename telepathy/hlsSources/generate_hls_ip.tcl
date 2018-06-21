@@ -4,9 +4,9 @@ cd userIP
 
 set MPI_HEADERS_DIR "../HMPI/HLS_lib/"
 
-open_project dariusWrapperHLS  
-set_top dariusWrapper
-add_files ../telepathy/hlsSources/dariusWrapper.cpp -cflags "-I ${MPI_HEADERS_DIR} "
+open_project dariusController  
+set_top dariusController
+add_files ../telepathy/hlsSources/dariusController.cpp -cflags "-I ${MPI_HEADERS_DIR} "
 open_solution "solution1"
 set_part {xcku115-flva1517-2-e}
 create_clock -period 5 -name default
