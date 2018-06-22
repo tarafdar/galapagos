@@ -1,3 +1,0 @@
-NumberHits:7
-Timestamp: Wed Jun 13 04:51:43 UTC 2018
-VLNV: user.org:user:ip_constant_block:1.0

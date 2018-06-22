@@ -1,3 +1,0 @@
-NumberHits:8
-Timestamp: Wed Jun 13 04:38:18 UTC 2018
-VLNV: xilinx.com:ip:lmb_bram_if_cntlr:4.0

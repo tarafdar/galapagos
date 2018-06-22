@@ -1,3 +1,0 @@
-NumberHits:1
-Timestamp: Fri Jun 01 03:14:23 UTC 2018
-VLNV: xilinx.com:ip:axi_gpio:2.0

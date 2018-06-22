@@ -1,3 +1,0 @@
-NumberHits:8
-Timestamp: Wed Jun 13 04:37:24 UTC 2018
-VLNV: xilinx.com:ip:xlconstant:1.1

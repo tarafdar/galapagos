@@ -1,3 +1,0 @@
-NumberHits:12
-Timestamp: Fri Jun 22 19:42:45 UTC 2018
-VLNV: xilinx.com:ip:axi_crossbar:2.1

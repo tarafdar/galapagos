@@ -48,6 +48,20 @@ This takes three files (refer to LOGICALFILE, MACFILE, MAPFILE defined in the Ma
 This is described with XML, for now the MACFILE is a separate file but with the Cloud Provisioning Layer integrated this would be an input from the Cloud Provisioning Layer
 
 
+## MPI Programming Layer 
+
+This builds an application that uses MPI to communcate on a heterogeneus cluster made by the layers below. To download heterogenous MPI (HMPI):
+`git clone https://github.com/eskandarinariman/HMPI.git` 
+
+We provide an example in ./HMPI/mpi_app_benchmarks/HMPI_kmeans/hls/kmeans5.cpp and ./HMPI/mpi_app_benchmarks/HMPI_kmeans/hls/kmeans5_0.cpp
+
+This does kmeans on 5 ranks. Lastly the result is sent to a sw rank (the last rank, rank 5). 
+
+The code for this can be seen in ./HMPI/sw_kmeans
+
+The cluster configuration is seen in ./HMPI/sw_kmeans/configuration_files
+
+You need to specify a bridge to transform AXI stream packets into MPI packets. This is defined in the mpiMap.xml file. 
 
 
 
