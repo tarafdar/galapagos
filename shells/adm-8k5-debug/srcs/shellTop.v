@@ -14,7 +14,7 @@ module shellTop
     pcie_7x_mgt_rtl_txn,
     pcie_7x_mgt_rtl_txp,
     perst_n,
-    refclk200,
+    //refclk200,
     refclk_n,
     refclk_p,
     rxn,
@@ -63,7 +63,7 @@ module shellTop
   output [7:0]pcie_7x_mgt_rtl_txn;
   output [7:0]pcie_7x_mgt_rtl_txp;
   input perst_n;
-  input refclk200;
+//  input refclk200;
   input refclk_n;
   input refclk_p;
   input rxn;
@@ -386,7 +386,7 @@ module shellTop
         .pcie_7x_mgt_rtl_txn(pcie_7x_mgt_rtl_txn),
         .pcie_7x_mgt_rtl_txp(pcie_7x_mgt_rtl_txp),
         .perst_n(perst_n),
-        .refclk200(refclk200),
+      //  .refclk200(refclk200),
         .refclk_n(refclk_n),
         .refclk_p(refclk_p),
         .rxn(rxn),

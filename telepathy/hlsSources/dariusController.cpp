@@ -1,4 +1,5 @@
 #include "MPI.h"
+#include "ap_axi_sdata.h"
 
 #define MEM_INFO_SIZE 4 
 #define PARAMETER_MEM_INFO_SIZE 2  
@@ -12,11 +13,12 @@
 #define START 0x1
 #define DONE  0x6
 
-#define DEPTH 214783648
+#define DEPTH 2147483648 
 #define DARIUS_DEPTH 1024
 
 
-void dariusController(float  mem [DEPTH],            // global memory pointer
+void dariusController(
+                float  mem [DEPTH],            // global memory pointer
                 int  darius_driver [DARIUS_DEPTH] //,
                 //const int rank       // offset of inputs
                 )            // kernel size
@@ -28,10 +30,10 @@ void dariusController(float  mem [DEPTH],            // global memory pointer
 #pragma HLS DATA_PACK variable  = stream_in
 
 // Global memory interface
-#pragma HLS INTERFACE ap_bus port=mem
-#pragma HLS RESOURCE core=AXI4M variable=mem
-#pragma HLS INTERFACE ap_bus port=darius_driver
-#pragma AP resource core=AXI4M variable=darius_driver
+#pragma HLS INTERFACE ap_bus port=mem depth=2147483648
+#pragma HLS RESOURCE core=AXI4M variable=mem 
+#pragma HLS INTERFACE ap_bus port=darius_driver 
+#pragma HLS resource core=AXI4M variable=darius_driver
 #pragma HLS INTERFACE ap_ctrl_none port=return 
     
     int rank = id_in;

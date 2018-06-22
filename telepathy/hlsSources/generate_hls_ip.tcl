@@ -14,5 +14,3 @@ config_interface -m_axi_addr64 -m_axi_offset off -register_io off -expose_global
 csynth_design
 export_design -rtl verilog -format ip_catalog
 close_project
-
-

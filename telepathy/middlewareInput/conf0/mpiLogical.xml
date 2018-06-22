@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cluster>
-    <kernel> dariusMPI_debug
+    <kernel> dariusMPI_debug_8x8
         <vendor> galapagos.org </vendor>
         <version> 1.0 </version>
         <type> galapagos </type>
@@ -20,7 +20,7 @@
         </interface>
         <mem_interface>
             <name> M_AXI_MEM </name>
-        </mem_interface> 
+        </mem_interface>
     </kernel>
 	<kernel> cpu
         <num> 0 </num>

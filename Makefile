@@ -7,33 +7,56 @@
 DCP = static_routed_v3.dcp
 
 #make userIP
+
+
+USERHLSIP_DIR = ./HMPI
 PROJECTNAME=mlKernelsTest5
-USERHLSIP_DIR=telepathy/hlsSources
-USERHLSIPTCL=${USERHLSIP_DIR}/generate_hls_ip.tcl
-USERIPTCL=./telepathy/ipPackage/package_top.tcl
-USERIPTCLDEBUG=./telepathy/ipPackage/package_top_debug.tcl
+
+#ML DIRECTORIES
+ML_USERHLSIP_DIR=telepathy/hlsSources
+ML_USERHLSIPTCL=${USERHLSIP_DIR}/generate_hls_ip.tcl
+ML_USERIPTCL=./telepathy/ipPackage/package_top.tcl
+ML_USERIPTCLDEBUG=./telepathy/ipPackage/package_top_debug.tcl
+
+#KMEANS
+KMEANS_USERHLSIP_DIR=./HMPI/mpi_app_benchmarks/HMPI_kmeans
+KMEANS_USERHLSIPTCL=${KMEANS_USERHLSIP_DIR}/generate_hls_ip.tcl
+
 
 #board parameters (should take as input from middleware input files later)
 BOARD = adm-8k5
 PART = xcku115-flva1517-2-e
 FPGANUM= 1
 
+##input files for middleware
+#ML_CONF = conf0
+#LOGICALFILE=telepathy/middlewareInput/${ML_CONF}/mpiLogical.xml
+#MAPFILE=telepathy/middlewareInput/${ML_CONF}/mpiMap.xml
+
 #input files for middleware
-ML_CONF = conf0
-LOGICALFILE=telepathy/middlewareInput/${ML_CONF}/mpiLogical.xml
-MAPFILE=telepathy/middlewareInput/${ML_CONF}/mpiMap.xml
+LOGICALFILE=./HMPI/sw_kmeans/configuration_files/mpiLogical.xml
+MAPFILE=./HMPI/sw_kmeans/configuration_files/mpiMap.xml
+
 
 
 all: userIP createCluster pr  
 
-#createCluster: hlsShell hlsMiddleware createCluster.sh
-#createCluster: createCluster.sh
 
-userIP: ${USERHLSIP_DIR}/* ${USERHLSIP_DIR}/generate_hls_ip.tcl
+#userIP: ml_userIP 
+userIP: kmeans_userIP
 	mkdir -p userIP
-	vivado_hls ./HMPI/generate_hls_ip.tcl
-	vivado_hls ${USERHLSIPTCL}
-	vivado -mode batch -source ${USERIPTCLDEBUG} 
+	vivado_hls ${USERHLSIP_DIR}/generate_hls_ip.tcl
+
+#CUSTOM USERIP ADDED FOR ML and KMEANS, ADD ACCORDINGLY
+
+ml_userIP: ${ML_USERHLSIP_DIR}/* ${ML_USERHLSIP_DIR}/generate_hls_ip.tcl
+	mkdir -p userIP
+	vivado_hls ${ML_USERHLSIPTCL}
+	vivado -mode batch -source ${ML_USERIPTCLDEBUG} 
+
+kmeans_userIP: 
+	mkdir -p userIP
+	vivado_hls ${KMEANS_USERHLSIPTCL}
 
 shell: hlsShell shells/projects/${BOARD}/${DCP}
 
