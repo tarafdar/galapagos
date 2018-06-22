@@ -1,0 +1,159 @@
+
+
+================================================================
+== Vivado HLS Report for 'eth_dest_filter'
+================================================================
+* Date:           Sun Jun 17 22:51:19 2018
+
+* Version:        2018.1 (Build 2188600 on Wed Apr 04 19:04:02 MDT 2018)
+* Project:        eth_dest_filter
+* Solution:       solution1
+* Product family: kintexu
+* Target device:  xcku115-flva1517-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   4.00|      2.91|        0.50|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+----------+
+    |  Latency  |  Interval | Pipeline |
+    | min | max | min | max |   Type   |
+    +-----+-----+-----+-----+----------+
+    |    2|    2|    1|    1| function |
+    +-----+-----+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 1
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 1
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 3
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 3
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 3, States = { 1 2 3 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+
+* FSM state operations: 
+
+ <State 1> : 1.77ns
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%mac_addr_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %mac_addr)"
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%tmp = call i1 @_ssdm_op_NbReadReq.ap_fifo.i81P(i81* %stream_in_V, i32 1)"   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "br i1 %tmp, label %1, label %._crit_edge" [../hlsSources/srcs/eth_dest_filter.cpp:43]
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%tmp22 = call i81 @_ssdm_op_Read.ap_fifo.volatile.i81P(i81* %stream_in_V)"   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%tmp_tdest_V = call i8 @_ssdm_op_PartSelect.i8.i81.i32.i32(i81 %tmp22, i32 65, i32 72)" [../hlsSources/srcs/eth_dest_filter.cpp:8->../hlsSources/srcs/eth_dest_filter.cpp:44]
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%tmp_2 = zext i8 %tmp_tdest_V to i64" [../hlsSources/srcs/eth_dest_filter.cpp:45]
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%mac_table_V_addr = getelementptr [256 x i32]* %mac_table_V, i64 0, i64 %tmp_2" [../hlsSources/srcs/eth_dest_filter.cpp:45]
+ST_1 : Operation 11 [2/2] (1.77ns)   --->   "%mac_addr_in = load i32* %mac_table_V_addr, align 4" [../hlsSources/srcs/eth_dest_filter.cpp:45]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 256> <RAM>
+
+ <State 2> : 2.91ns
+ST_2 : Operation 12 [1/2] (1.77ns)   --->   "%mac_addr_in = load i32* %mac_table_V_addr, align 4" [../hlsSources/srcs/eth_dest_filter.cpp:45]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 256> <RAM>
+ST_2 : Operation 13 [1/1] (1.14ns)   --->   "%inFPGA = icmp eq i32 %mac_addr_in, %mac_addr_read" [../hlsSources/srcs/eth_dest_filter.cpp:46]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.14> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "br i1 %inFPGA, label %2, label %3" [../hlsSources/srcs/eth_dest_filter.cpp:48]
+
+ <State 3> : 0.00ns
+ST_3 : Operation 15 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i81* %stream_out_network_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_3 : Operation 16 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i81* %stream_out_switch_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_3 : Operation 17 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i81* %stream_in_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_3 : Operation 18 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i81* %stream_out_network_V), !map !35"
+ST_3 : Operation 19 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i81* %stream_out_switch_V), !map !48"
+ST_3 : Operation 20 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i81* %stream_in_V), !map !61"
+ST_3 : Operation 21 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([256 x i32]* %mac_table_V), !map !74"
+ST_3 : Operation 22 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %mac_addr), !map !80"
+ST_3 : Operation 23 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([16 x i8]* @eth_dest_filter_str) nounwind"
+ST_3 : Operation 24 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecIFCore(i81* %stream_in_V, [1 x i8]* @p_str, [11 x i8]* @p_str1, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_3 : Operation 25 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecIFCore(i81* %stream_out_switch_V, [1 x i8]* @p_str, [11 x i8]* @p_str1, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_3 : Operation 26 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecIFCore(i81* %stream_out_network_V, [1 x i8]* @p_str, [11 x i8]* @p_str1, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_3 : Operation 27 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 0, [13 x i8]* @p_str2, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind" [../hlsSources/srcs/eth_dest_filter.cpp:33]
+ST_3 : Operation 28 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str) nounwind" [../hlsSources/srcs/eth_dest_filter.cpp:34]
+ST_3 : Operation 29 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i81P(i81* %stream_out_network_V, i81 %tmp22)"   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_3 : Operation 30 [1/1] (0.00ns)   --->   "br label %4"
+ST_3 : Operation 31 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i81P(i81* %stream_out_switch_V, i81 %tmp22)"   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_3 : Operation 32 [1/1] (0.00ns)   --->   "br label %4" [../hlsSources/srcs/eth_dest_filter.cpp:50]
+ST_3 : Operation 33 [1/1] (0.00ns)   --->   "br label %._crit_edge" [../hlsSources/srcs/eth_dest_filter.cpp:54]
+ST_3 : Operation 34 [1/1] (0.00ns)   --->   "ret void" [../hlsSources/srcs/eth_dest_filter.cpp:57]
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 4ns, clock uncertainty: 0.5ns.
+
+ <State 1>: 1.77ns
+The critical path consists of the following:
+	fifo read on port 'stream_in_V' [24]  (0 ns)
+	'getelementptr' operation ('mac_table_V_addr', ../hlsSources/srcs/eth_dest_filter.cpp:45) [27]  (0 ns)
+	'load' operation ('mac_addr_in', ../hlsSources/srcs/eth_dest_filter.cpp:45) on array 'mac_table_V' [28]  (1.77 ns)
+
+ <State 2>: 2.91ns
+The critical path consists of the following:
+	'load' operation ('mac_addr_in', ../hlsSources/srcs/eth_dest_filter.cpp:45) on array 'mac_table_V' [28]  (1.77 ns)
+	'icmp' operation ('inFPGA', ../hlsSources/srcs/eth_dest_filter.cpp:46) [29]  (1.14 ns)
+
+ <State 3>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

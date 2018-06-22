@@ -1,0 +1,10 @@
+#
+# An unexpected error has occurred (11)
+#
+Stack:
+/opt/Xilinx/Vivado/2018.1/tps/lnx64/jre/lib/amd64/server/libjvm.so(+0x923da9) [0x7f718f10cda9]
+/opt/Xilinx/Vivado/2018.1/tps/lnx64/jre/lib/amd64/server/libjvm.so(JVM_handle_linux_signal+0xb6) [0x7f718f1133f6]
+/opt/Xilinx/Vivado/2018.1/tps/lnx64/jre/lib/amd64/server/libjvm.so(+0x9209d3) [0x7f718f1099d3]
+/lib/x86_64-linux-gnu/libc.so.6(+0x354b0) [0x7f71cd6504b0]
+/opt/Xilinx/Vivado/2018.1/lib/lnx64.o/librdi_rsb.so(Java_ui_data_rsbi_RSBBase_1getName+0x3e) [0x7f719f7e0eae]
+[0x7f7180d01b31]

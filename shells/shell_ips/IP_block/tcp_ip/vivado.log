@@ -1,0 +1,28 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:54:30 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Fri May  4 12:11:14 2018
+# Process ID: 6487
+# Current directory: /home/madanie1/Documents/2017.4/8v3/repo/tcp_ip
+# Command line: vivado
+# Log file: /home/madanie1/Documents/2017.4/8v3/repo/tcp_ip/vivado.log
+# Journal file: /home/madanie1/Documents/2017.4/8v3/repo/tcp_ip/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/madanie1/Documents/2017.4/8v3/repo/tcp_ip/tcp_ip.xpr
+CRITICAL WARNING: [Project 1-19] Could not find the file '/home/madanie1/Documents/2017.4/8v3/repo/tcp_ip/tcp_ip.srcs/sources_1/ip/toe_ip/toe_ip.upgrade_log'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/madanie1/Documents/2017.4/8v3/repo'.
+WARNING: [IP_Flow 19-3656] If you move the project, the path for repository '/home/madanie1/Documents/2017.4/8v3/repo' may become invalid. A better location for the repository would be in a path adjacent to the project. (Current project location is '/home/madanie1/Documents/2017.4/8v3/repo/tcp_ip'.)
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2017.4/data/ip'.
+open_project: Time (s): cpu = 00:00:19 ; elapsed = 00:00:08 . Memory (MB): peak = 6221.066 ; gain = 118.434 ; free physical = 18085 ; free virtual = 62043
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+update_compile_order -fileset sources_1
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+config_ip_cache -clear_output_repo
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri May  4 12:12:08 2018...

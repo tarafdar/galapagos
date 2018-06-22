@@ -1,0 +1,192 @@
+
+
+================================================================
+== Vivado HLS Report for 'dummy'
+================================================================
+* Date:           Fri Jun 22 00:03:56 2018
+
+* Version:        2018.1 (Build 2188600 on Wed Apr 04 19:04:02 MDT 2018)
+* Project:        dummy
+* Solution:       solution1
+* Product family: kintexu
+* Target device:  xcku115-flva1517-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   5.00|      4.38|        0.62|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    1|    7|    1|    7|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 1
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 8
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / (!state_V_load)
+	8  / (state_V_load)
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+
+* FSM state operations: 
+
+ <State 1> : 4.38ns
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %out_r) nounwind, !map !38"
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %mem) nounwind, !map !42"
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([6 x i8]* @dummy_str) nounwind"
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 0, [13 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [../telepathy/hlsSources/dummy.cpp:11]
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %mem, [6 x i8]* @p_str2, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i64 2147483648, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [../telepathy/hlsSources/dummy.cpp:12]
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%state_V_load = load i1* @state_V, align 1" [../telepathy/hlsSources/dummy.cpp:15]
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "br i1 %state_V_load, label %1, label %0" [../telepathy/hlsSources/dummy.cpp:15]
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%mem_addr = getelementptr inbounds i32* %mem, i64 42" [../telepathy/hlsSources/dummy.cpp:16]
+ST_1 : Operation 17 [7/7] (4.37ns)   --->   "%mem_load_req = call i1 @_ssdm_op_ReadReq.m_axi.i32P(i32* %mem_addr, i32 1) nounwind" [../telepathy/hlsSources/dummy.cpp:16]   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "store i1 true, i1* @state_V, align 1" [../telepathy/hlsSources/dummy.cpp:17]
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i32P(i32* %out_r, i32 0) nounwind" [../telepathy/hlsSources/dummy.cpp:20]
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "br label %2"
+
+ <State 2> : 4.38ns
+ST_2 : Operation 21 [6/7] (4.37ns)   --->   "%mem_load_req = call i1 @_ssdm_op_ReadReq.m_axi.i32P(i32* %mem_addr, i32 1) nounwind" [../telepathy/hlsSources/dummy.cpp:16]   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+ <State 3> : 4.38ns
+ST_3 : Operation 22 [5/7] (4.37ns)   --->   "%mem_load_req = call i1 @_ssdm_op_ReadReq.m_axi.i32P(i32* %mem_addr, i32 1) nounwind" [../telepathy/hlsSources/dummy.cpp:16]   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+ <State 4> : 4.38ns
+ST_4 : Operation 23 [4/7] (4.37ns)   --->   "%mem_load_req = call i1 @_ssdm_op_ReadReq.m_axi.i32P(i32* %mem_addr, i32 1) nounwind" [../telepathy/hlsSources/dummy.cpp:16]   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+ <State 5> : 4.38ns
+ST_5 : Operation 24 [3/7] (4.37ns)   --->   "%mem_load_req = call i1 @_ssdm_op_ReadReq.m_axi.i32P(i32* %mem_addr, i32 1) nounwind" [../telepathy/hlsSources/dummy.cpp:16]   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+ <State 6> : 4.38ns
+ST_6 : Operation 25 [2/7] (4.37ns)   --->   "%mem_load_req = call i1 @_ssdm_op_ReadReq.m_axi.i32P(i32* %mem_addr, i32 1) nounwind" [../telepathy/hlsSources/dummy.cpp:16]   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+ <State 7> : 4.38ns
+ST_7 : Operation 26 [1/7] (4.37ns)   --->   "%mem_load_req = call i1 @_ssdm_op_ReadReq.m_axi.i32P(i32* %mem_addr, i32 1) nounwind" [../telepathy/hlsSources/dummy.cpp:16]   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+ <State 8> : 4.38ns
+ST_8 : Operation 27 [1/1] (4.37ns)   --->   "%mem_addr_read = call i32 @_ssdm_op_Read.m_axi.i32P(i32* %mem_addr) nounwind" [../telepathy/hlsSources/dummy.cpp:16]   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_8 : Operation 28 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.volatile.i32P(i32* %out_r, i32 %mem_addr_read) nounwind" [../telepathy/hlsSources/dummy.cpp:16]
+ST_8 : Operation 29 [1/1] (0.00ns)   --->   "br label %2" [../telepathy/hlsSources/dummy.cpp:18]
+ST_8 : Operation 30 [1/1] (0.00ns)   --->   "ret void" [../telepathy/hlsSources/dummy.cpp:23]
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5ns, clock uncertainty: 0.625ns.
+
+ <State 1>: 4.38ns
+The critical path consists of the following:
+	'getelementptr' operation ('mem_addr', ../telepathy/hlsSources/dummy.cpp:16) [12]  (0 ns)
+	bus request on port 'mem' (../telepathy/hlsSources/dummy.cpp:16) [13]  (4.38 ns)
+
+ <State 2>: 4.38ns
+The critical path consists of the following:
+	bus request on port 'mem' (../telepathy/hlsSources/dummy.cpp:16) [13]  (4.38 ns)
+
+ <State 3>: 4.38ns
+The critical path consists of the following:
+	bus request on port 'mem' (../telepathy/hlsSources/dummy.cpp:16) [13]  (4.38 ns)
+
+ <State 4>: 4.38ns
+The critical path consists of the following:
+	bus request on port 'mem' (../telepathy/hlsSources/dummy.cpp:16) [13]  (4.38 ns)
+
+ <State 5>: 4.38ns
+The critical path consists of the following:
+	bus request on port 'mem' (../telepathy/hlsSources/dummy.cpp:16) [13]  (4.38 ns)
+
+ <State 6>: 4.38ns
+The critical path consists of the following:
+	bus request on port 'mem' (../telepathy/hlsSources/dummy.cpp:16) [13]  (4.38 ns)
+
+ <State 7>: 4.38ns
+The critical path consists of the following:
+	bus request on port 'mem' (../telepathy/hlsSources/dummy.cpp:16) [13]  (4.38 ns)
+
+ <State 8>: 4.38ns
+The critical path consists of the following:
+	bus read on port 'mem' (../telepathy/hlsSources/dummy.cpp:16) [14]  (4.38 ns)
+	wire write on port 'out_r' (../telepathy/hlsSources/dummy.cpp:16) [15]  (0 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

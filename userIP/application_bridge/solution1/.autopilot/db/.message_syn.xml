@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Messages>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1312" content="Analyzing design file &apos;../HMPI/HLS_lib/application_bridge.cpp&apos; ..." tag=""/>
+	<Message prefix="[HLS 200-41]" severity="WARNING" keynum="HLS_41_1434" content="Resource core &apos;AXI4Stream&apos; on port &apos;&amp;from_app&apos; is deprecated. Please use the interface directive to specify the AXI interface." tag=""/>
+	<Message prefix="[HLS 200-41]" severity="WARNING" keynum="HLS_41_1434" content="Resource core &apos;AXI4Stream&apos; on port &apos;&amp;to_app&apos; is deprecated. Please use the interface directive to specify the AXI interface." tag=""/>
+	<Message prefix="[HLS 200-41]" severity="WARNING" keynum="HLS_41_1434" content="Resource core &apos;AXI4Stream&apos; on port &apos;&amp;from_net&apos; is deprecated. Please use the interface directive to specify the AXI interface." tag=""/>
+	<Message prefix="[HLS 200-41]" severity="WARNING" keynum="HLS_41_1434" content="Resource core &apos;AXI4Stream&apos; on port &apos;&amp;to_net&apos; is deprecated. Please use the interface directive to specify the AXI interface." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1465" content="Validating synthesis directives ..." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Checking Pragmas Time (s): cpu = 00:00:28 ; elapsed = 00:00:14 . Memory (MB): peak = 351.629 ; gain = 0.156 ; free physical = 19833 ; free virtual = 59501" tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Linking Time (s): cpu = 00:00:30 ; elapsed = 00:00:16 . Memory (MB): peak = 351.629 ; gain = 0.156 ; free physical = 19824 ; free virtual = 59492" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1467" content="Starting code transformations ..." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Standard Transforms Time (s): cpu = 00:00:31 ; elapsed = 00:00:17 . Memory (MB): peak = 351.973 ; gain = 0.500 ; free physical = 19823 ; free virtual = 59491" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1472" content="Checking synthesizability ..." tag=""/>
+	<Message prefix="[SYNCHK 200-23]" severity="WARNING" keynum="579" content="../HMPI/HLS_lib/application_bridge.cpp:117: variable-indexed range selection may cause suboptimal QoR." tag=""/>
+	<Message prefix="[SYNCHK 200-10]" severity="INFO" keynum="597" content="0 error(s), 1 warning(s)." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Checking Synthesizability Time (s): cpu = 00:00:32 ; elapsed = 00:00:17 . Memory (MB): peak = 479.902 ; gain = 128.430 ; free physical = 19816 ; free virtual = 59484" tag=""/>
+	<Message prefix="[XFORM 203-1101]" severity="INFO" keynum="909" content="Packing variable &apos;from_app.V&apos; (../HMPI/HLS_lib/application_bridge.cpp:258) into a 129-bit variable." tag=""/>
+	<Message prefix="[XFORM 203-1101]" severity="INFO" keynum="909" content="Packing variable &apos;to_app.V&apos; (../HMPI/HLS_lib/application_bridge.cpp:259) into a 129-bit variable." tag=""/>
+	<Message prefix="[XFORM 203-1101]" severity="INFO" keynum="909" content="Packing variable &apos;from_net.V&apos; (../HMPI/HLS_lib/application_bridge.cpp:260) into a 81-bit variable." tag=""/>
+	<Message prefix="[XFORM 203-1101]" severity="INFO" keynum="909" content="Packing variable &apos;to_net.V&apos; (../HMPI/HLS_lib/application_bridge.cpp:261) into a 81-bit variable." tag=""/>
+	<Message prefix="[XFORM 203-502]" severity="INFO" keynum="817" content="Unrolling all loops for pipelining in function &apos;app_to_net&apos; (../HMPI/HLS_lib/application_bridge.cpp:155)." tag=""/>
+	<Message prefix="[XFORM 203-502]" severity="INFO" keynum="817" content="Unrolling all loops for pipelining in function &apos;net_to_app&apos; (../HMPI/HLS_lib/application_bridge.cpp:53)." tag=""/>
+	<Message prefix="[XFORM 203-501]" severity="INFO" keynum="891" content="Unrolling loop &apos;Loop-1&apos; (../HMPI/HLS_lib/application_bridge.cpp:222) in function &apos;app_to_net&apos; completely." tag=""/>
+	<Message prefix="[XFORM 203-501]" severity="INFO" keynum="891" content="Unrolling loop &apos;Loop-1&apos; (../HMPI/HLS_lib/application_bridge.cpp:116) in function &apos;net_to_app&apos; completely." tag=""/>
+	<Message prefix="[XFORM 203-712]" severity="INFO" keynum="801" content="Applying dataflow to function &apos;application_bridge&apos;, detected/extracted 2 process function(s): 
+	 &apos;net_to_app&apos;
+	 &apos;app_to_net&apos;." tag=""/>
+	<Message prefix="[XFORM 203-11]" severity="INFO" keynum="754" content="Balancing expressions in function &apos;net_to_app&apos; (../HMPI/HLS_lib/application_bridge.cpp:53)...7 expression(s) balanced." tag=""/>
+	<Message prefix="[XFORM 203-11]" severity="INFO" keynum="754" content="Balancing expressions in function &apos;app_to_net&apos; (../HMPI/HLS_lib/application_bridge.cpp:155)...7 expression(s) balanced." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Pre-synthesis Time (s): cpu = 00:00:33 ; elapsed = 00:00:19 . Memory (MB): peak = 479.902 ; gain = 128.430 ; free physical = 19787 ; free virtual = 59455" tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Architecture Synthesis Time (s): cpu = 00:00:34 ; elapsed = 00:00:20 . Memory (MB): peak = 479.902 ; gain = 128.430 ; free physical = 19769 ; free virtual = 59437" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1317" content="Starting hardware synthesis ..." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1385" content="Synthesizing &apos;application_bridge&apos; ..." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1477" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-42]" severity="INFO" keynum="HLS_42_1438" content="-- Implementing module &apos;net_to_app&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1478" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="139" content="Starting scheduling ..." tag=""/>
+	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="112" content="Pipelining function &apos;net_to_app&apos;." tag=""/>
+	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="110" content="Pipelining result : Target II = 1, Final II = 1, Depth = 2." tag=""/>
+	<Message prefix="[SCHED 204-21]" severity="WARNING" keynum="137" content="Estimated clock period (16.3265ns) exceeds the target (target clock period: 6.4ns, clock uncertainty: 0.8ns, effective delay budget: 5.6ns)." tag=""/>
+	<Message prefix="[SCHED 204-21]" severity="WARNING" keynum="135" content="The critical path consists of the following:
+	&apos;load&apos; operation (&apos;byte_counter_load&apos;, ../HMPI/HLS_lib/application_bridge.cpp:118) on static variable &apos;byte_counter&apos; (0 ns)
+	&apos;add&apos; operation (&apos;tmp_5&apos;, ../HMPI/HLS_lib/application_bridge.cpp:118) (1.49 ns)
+	&apos;select&apos; operation (&apos;tmp_11_byte_counter_s&apos;, ../HMPI/HLS_lib/application_bridge.cpp:117) (0.44 ns)
+	&apos;add&apos; operation (&apos;tmp_11_1&apos;, ../HMPI/HLS_lib/application_bridge.cpp:118) (1.49 ns)
+	&apos;select&apos; operation (&apos;byte_counter_new_4&apos;, ../HMPI/HLS_lib/application_bridge.cpp:117) (0.44 ns)
+	&apos;add&apos; operation (&apos;tmp_11_2&apos;, ../HMPI/HLS_lib/application_bridge.cpp:118) (1.49 ns)
+	&apos;select&apos; operation (&apos;tmp_11_2_byte_counte&apos;, ../HMPI/HLS_lib/application_bridge.cpp:117) (0.44 ns)
+	&apos;add&apos; operation (&apos;tmp_11_3&apos;, ../HMPI/HLS_lib/application_bridge.cpp:118) (1.49 ns)
+	&apos;select&apos; operation (&apos;byte_counter_new_6&apos;, ../HMPI/HLS_lib/application_bridge.cpp:117) (0.44 ns)
+	&apos;add&apos; operation (&apos;tmp_11_4&apos;, ../HMPI/HLS_lib/application_bridge.cpp:118) (1.49 ns)
+	&apos;select&apos; operation (&apos;tmp_11_4_byte_counte&apos;, ../HMPI/HLS_lib/application_bridge.cpp:117) (0.44 ns)
+	&apos;add&apos; operation (&apos;tmp_11_5&apos;, ../HMPI/HLS_lib/application_bridge.cpp:118) (1.49 ns)
+	&apos;select&apos; operation (&apos;byte_counter_new_8&apos;, ../HMPI/HLS_lib/application_bridge.cpp:117) (0.44 ns)
+	&apos;add&apos; operation (&apos;tmp_11_6&apos;, ../HMPI/HLS_lib/application_bridge.cpp:118) (1.49 ns)
+	&apos;select&apos; operation (&apos;tmp_11_6_byte_counte&apos;, ../HMPI/HLS_lib/application_bridge.cpp:117) (0.44 ns)
+	&apos;add&apos; operation (&apos;tmp_11_7&apos;, ../HMPI/HLS_lib/application_bridge.cpp:118) (1.49 ns)
+	&apos;select&apos; operation (&apos;byte_counter_new_s&apos;, ../HMPI/HLS_lib/application_bridge.cpp:117) (0.44 ns)
+	multiplexor before &apos;phi&apos; operation (&apos;byte_counter_flag_1&apos;, ../HMPI/HLS_lib/application_bridge.cpp:117) with incoming values : (&apos;byte_counter_flag_s&apos;, ../HMPI/HLS_lib/application_bridge.cpp:117) (0.918 ns)" tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="138" content="Finished scheduling." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 20.27 seconds; current allocated memory: 109.958 MB." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="439" content="Starting micro-architecture generation ..." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="211" content="Performing variable lifetime analysis." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="210" content="Exploring resource sharing." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="206" content="Binding ..." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="438" content="Finished micro-architecture generation." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.05 seconds; current allocated memory: 110.452 MB." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1477" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-42]" severity="INFO" keynum="HLS_42_1438" content="-- Implementing module &apos;app_to_net&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1478" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="139" content="Starting scheduling ..." tag=""/>
+	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="112" content="Pipelining function &apos;app_to_net&apos;." tag=""/>
+	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="110" content="Pipelining result : Target II = 1, Final II = 1, Depth = 2." tag=""/>
+	<Message prefix="[SCHED 204-21]" severity="WARNING" keynum="137" content="Estimated clock period (17.222ns) exceeds the target (target clock period: 6.4ns, clock uncertainty: 0.8ns, effective delay budget: 5.6ns)." tag=""/>
+	<Message prefix="[SCHED 204-21]" severity="WARNING" keynum="135" content="The critical path consists of the following:
+	&apos;load&apos; operation (&apos;byte_counter_1_load&apos;, ../HMPI/HLS_lib/application_bridge.cpp:224) on static variable &apos;byte_counter_1&apos; (0 ns)
+	&apos;add&apos; operation (&apos;tmp_2&apos;, ../HMPI/HLS_lib/application_bridge.cpp:224) (1.49 ns)
+	&apos;select&apos; operation (&apos;tmp_18_byte_counter_s&apos;, ../HMPI/HLS_lib/application_bridge.cpp:223) (0.44 ns)
+	&apos;add&apos; operation (&apos;tmp_18_1&apos;, ../HMPI/HLS_lib/application_bridge.cpp:224) (1.49 ns)
+	&apos;select&apos; operation (&apos;byte_counter_1_new_1&apos;, ../HMPI/HLS_lib/application_bridge.cpp:223) (0.44 ns)
+	&apos;add&apos; operation (&apos;tmp_18_2&apos;, ../HMPI/HLS_lib/application_bridge.cpp:224) (1.49 ns)
+	&apos;select&apos; operation (&apos;tmp_18_2_byte_counte&apos;, ../HMPI/HLS_lib/application_bridge.cpp:223) (0.44 ns)
+	&apos;add&apos; operation (&apos;tmp_18_3&apos;, ../HMPI/HLS_lib/application_bridge.cpp:224) (1.49 ns)
+	&apos;select&apos; operation (&apos;byte_counter_1_new_3&apos;, ../HMPI/HLS_lib/application_bridge.cpp:223) (0.44 ns)
+	&apos;add&apos; operation (&apos;tmp_18_4&apos;, ../HMPI/HLS_lib/application_bridge.cpp:224) (1.49 ns)
+	&apos;select&apos; operation (&apos;tmp_18_4_byte_counte&apos;, ../HMPI/HLS_lib/application_bridge.cpp:223) (0.44 ns)
+	&apos;add&apos; operation (&apos;tmp_18_5&apos;, ../HMPI/HLS_lib/application_bridge.cpp:224) (1.49 ns)
+	&apos;select&apos; operation (&apos;byte_counter_1_new_5&apos;, ../HMPI/HLS_lib/application_bridge.cpp:223) (0.44 ns)
+	&apos;add&apos; operation (&apos;tmp_18_6&apos;, ../HMPI/HLS_lib/application_bridge.cpp:224) (1.49 ns)
+	&apos;select&apos; operation (&apos;tmp_18_6_byte_counte&apos;, ../HMPI/HLS_lib/application_bridge.cpp:223) (0.44 ns)
+	&apos;add&apos; operation (&apos;tmp_18_7&apos;, ../HMPI/HLS_lib/application_bridge.cpp:224) (1.49 ns)
+	&apos;select&apos; operation (&apos;byte_counter_1_new_7&apos;, ../HMPI/HLS_lib/application_bridge.cpp:223) (0.44 ns)
+	&apos;icmp&apos; operation (&apos;tmp_5&apos;, ../HMPI/HLS_lib/application_bridge.cpp:227) (1.14 ns)
+	blocking operation 0.674 ns on control path)" tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="138" content="Finished scheduling." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.19 seconds; current allocated memory: 111.603 MB." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="439" content="Starting micro-architecture generation ..." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="211" content="Performing variable lifetime analysis." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="210" content="Exploring resource sharing." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="206" content="Binding ..." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="438" content="Finished micro-architecture generation." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.04 seconds; current allocated memory: 112.120 MB." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1477" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-42]" severity="INFO" keynum="HLS_42_1438" content="-- Implementing module &apos;application_bridge&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1478" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="139" content="Starting scheduling ..." tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="138" content="Finished scheduling." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.07 seconds; current allocated memory: 112.243 MB." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="439" content="Starting micro-architecture generation ..." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="211" content="Performing variable lifetime analysis." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="210" content="Exploring resource sharing." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="206" content="Binding ..." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="438" content="Finished micro-architecture generation." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.05 seconds; current allocated memory: 112.374 MB." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1483" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1484" content="-- Generating RTL for module &apos;net_to_app&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1485" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="374" content="Register &apos;nta_state_V&apos; is power-on initialization." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="374" content="Register &apos;last_V_1&apos; is power-on initialization." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="374" content="Register &apos;byte_counter&apos; is power-on initialization." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="374" content="Register &apos;dest_V&apos; is power-on initialization." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="374" content="Register &apos;id_V&apos; is power-on initialization." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="374" content="Register &apos;user_V&apos; is power-on initialization." tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="369" content="Finished creating RTL model for &apos;net_to_app&apos;." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.11 seconds; current allocated memory: 113.250 MB." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1483" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1484" content="-- Generating RTL for module &apos;app_to_net&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1485" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="374" content="Register &apos;atn_state_V&apos; is power-on initialization." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="374" content="Register &apos;app_packet_in_data_V&apos; is power-on initialization." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="374" content="Register &apos;byte_counter_1&apos; is power-on initialization." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="374" content="Register &apos;last_V&apos; is power-on initialization." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="374" content="Register &apos;app_packet_in_last_V&apos; is power-on initialization." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="374" content="Register &apos;app_packet_in_dest_V&apos; is power-on initialization." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="374" content="Register &apos;app_packet_in_keep_V&apos; is power-on initialization." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="374" content="Register &apos;extraPayload_dest_V&apos; is power-on initialization." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="374" content="Register &apos;seq_num&apos; is power-on initialization." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="374" content="Register &apos;extraPayload_data_V&apos; is power-on initialization." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="374" content="Register &apos;extraPayload_keep_V&apos; is power-on initialization." tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="369" content="Finished creating RTL model for &apos;app_to_net&apos;." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.24 seconds; current allocated memory: 115.849 MB." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1483" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1484" content="-- Generating RTL for module &apos;application_bridge&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1485" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;application_bridge/from_app_V&apos; to &apos;ap_fifo&apos;." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;application_bridge/to_app_V&apos; to &apos;ap_fifo&apos;." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;application_bridge/from_net_V&apos; to &apos;ap_fifo&apos;." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;application_bridge/to_net_V&apos; to &apos;ap_fifo&apos;." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on function &apos;application_bridge&apos; to &apos;ap_ctrl_none&apos;." tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="369" content="Finished creating RTL model for &apos;application_bridge&apos;." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.22 seconds; current allocated memory: 117.960 MB." tag=""/>
+	<Message prefix="[IMPL 213-200]" severity="INFO" keynum="IMPL_200_1804" content="Port &apos;from_app_V.data&apos; is mapped to &apos;TDATA&apos; by default." tag=""/>
+	<Message prefix="[IMPL 213-200]" severity="INFO" keynum="IMPL_200_1804" content="Port &apos;from_app_V.dest&apos; is mapped to &apos;TDEST&apos; by default." tag=""/>
+	<Message prefix="[IMPL 213-200]" severity="INFO" keynum="IMPL_200_1804" content="Port &apos;from_app_V.last&apos; is mapped to &apos;TLAST&apos; by default." tag=""/>
+	<Message prefix="[IMPL 213-200]" severity="INFO" keynum="IMPL_200_1804" content="Port &apos;from_app_V.keep&apos; is mapped to &apos;TKEEP&apos; by default." tag=""/>
+	<Message prefix="[IMPL 213-200]" severity="INFO" keynum="IMPL_200_1804" content="Port &apos;from_app_V.id&apos; is mapped to &apos;TID&apos; by default." tag=""/>
+	<Message prefix="[IMPL 213-200]" severity="INFO" keynum="IMPL_200_1804" content="Port &apos;from_app_V.user&apos; is mapped to &apos;TUSER&apos; by default." tag=""/>
+	<Message prefix="[IMPL 213-200]" severity="INFO" keynum="IMPL_200_1804" content="Port &apos;from_net_V.data&apos; is mapped to &apos;TDATA&apos; by default." tag=""/>
+	<Message prefix="[IMPL 213-200]" severity="INFO" keynum="IMPL_200_1804" content="Port &apos;from_net_V.dest&apos; is mapped to &apos;TDEST&apos; by default." tag=""/>
+	<Message prefix="[IMPL 213-200]" severity="INFO" keynum="IMPL_200_1804" content="Port &apos;from_net_V.keep&apos; is mapped to &apos;TKEEP&apos; by default." tag=""/>
+	<Message prefix="[IMPL 213-200]" severity="INFO" keynum="IMPL_200_1804" content="Port &apos;from_net_V.last&apos; is mapped to &apos;TLAST&apos; by default." tag=""/>
+	<Message prefix="[IMPL 213-200]" severity="INFO" keynum="IMPL_200_1804" content="Port &apos;to_app_V.data&apos; is mapped to &apos;TDATA&apos; by default." tag=""/>
+	<Message prefix="[IMPL 213-200]" severity="INFO" keynum="IMPL_200_1804" content="Port &apos;to_app_V.dest&apos; is mapped to &apos;TDEST&apos; by default." tag=""/>
+	<Message prefix="[IMPL 213-200]" severity="INFO" keynum="IMPL_200_1804" content="Port &apos;to_app_V.last&apos; is mapped to &apos;TLAST&apos; by default." tag=""/>
+	<Message prefix="[IMPL 213-200]" severity="INFO" keynum="IMPL_200_1804" content="Port &apos;to_app_V.keep&apos; is mapped to &apos;TKEEP&apos; by default." tag=""/>
+	<Message prefix="[IMPL 213-200]" severity="INFO" keynum="IMPL_200_1804" content="Port &apos;to_app_V.id&apos; is mapped to &apos;TID&apos; by default." tag=""/>
+	<Message prefix="[IMPL 213-200]" severity="INFO" keynum="IMPL_200_1804" content="Port &apos;to_app_V.user&apos; is mapped to &apos;TUSER&apos; by default." tag=""/>
+	<Message prefix="[IMPL 213-200]" severity="INFO" keynum="IMPL_200_1804" content="Port &apos;to_net_V.data&apos; is mapped to &apos;TDATA&apos; by default." tag=""/>
+	<Message prefix="[IMPL 213-200]" severity="INFO" keynum="IMPL_200_1804" content="Port &apos;to_net_V.dest&apos; is mapped to &apos;TDEST&apos; by default." tag=""/>
+	<Message prefix="[IMPL 213-200]" severity="INFO" keynum="IMPL_200_1804" content="Port &apos;to_net_V.keep&apos; is mapped to &apos;TKEEP&apos; by default." tag=""/>
+	<Message prefix="[IMPL 213-200]" severity="INFO" keynum="IMPL_200_1804" content="Port &apos;to_net_V.last&apos; is mapped to &apos;TLAST&apos; by default." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished generating all RTL models Time (s): cpu = 00:00:36 ; elapsed = 00:00:22 . Memory (MB): peak = 479.902 ; gain = 128.430 ; free physical = 19758 ; free virtual = 59427" tag=""/>
+	<Message prefix="[SYSC 207-301]" severity="INFO" keynum="SYSC_301_1065" content="Generating SystemC RTL for application_bridge." tag=""/>
+	<Message prefix="[VHDL 208-304]" severity="INFO" keynum="VHDL_304_1066" content="Generating VHDL RTL for application_bridge." tag=""/>
+	<Message prefix="[VLOG 209-307]" severity="INFO" keynum="VLOG_307_1067" content="Generating Verilog RTL for application_bridge." tag=""/>
+</Messages>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="ethernet_bridge" xd:componentRef="ethernet_bridge" xd:initiationInterval="3" xd:clockPeriod="4.000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:arg xd:name="to_app.data" xd:originalName="to_app" xd:direction="out" xd:interfaceRef="to_app_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="63:0" xd:dataWidth="64"/>
+  <xd:arg xd:name="to_app.last" xd:originalName="to_app" xd:direction="out" xd:interfaceRef="to_app_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="64:64" xd:dataWidth="1"/>
+  <xd:arg xd:name="to_app.tdest" xd:originalName="to_app" xd:direction="out" xd:interfaceRef="to_app_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="72:65" xd:dataWidth="8"/>
+  <xd:arg xd:name="to_app.tkeep" xd:originalName="to_app" xd:direction="out" xd:interfaceRef="to_app_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="80:73" xd:dataWidth="8"/>
+  <xd:arg xd:name="from_eth.data" xd:originalName="from_eth" xd:direction="in" xd:interfaceRef="from_eth_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="63:0" xd:dataWidth="64"/>
+  <xd:arg xd:name="from_eth.last" xd:originalName="from_eth" xd:direction="in" xd:interfaceRef="from_eth_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="64:64" xd:dataWidth="1"/>
+  <xd:arg xd:name="from_eth.tkeep" xd:originalName="from_eth" xd:direction="in" xd:interfaceRef="from_eth_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="72:65" xd:dataWidth="8"/>
+  <xd:arg xd:name="from_app.data" xd:originalName="from_app" xd:direction="in" xd:interfaceRef="from_app_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="63:0" xd:dataWidth="64"/>
+  <xd:arg xd:name="from_app.last" xd:originalName="from_app" xd:direction="in" xd:interfaceRef="from_app_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="64:64" xd:dataWidth="1"/>
+  <xd:arg xd:name="from_app.tdest" xd:originalName="from_app" xd:direction="in" xd:interfaceRef="from_app_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="72:65" xd:dataWidth="8"/>
+  <xd:arg xd:name="from_app.tkeep" xd:originalName="from_app" xd:direction="in" xd:interfaceRef="from_app_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="80:73" xd:dataWidth="8"/>
+  <xd:arg xd:name="to_eth.data" xd:originalName="to_eth" xd:direction="out" xd:interfaceRef="to_eth_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="63:0" xd:dataWidth="64"/>
+  <xd:arg xd:name="to_eth.last" xd:originalName="to_eth" xd:direction="out" xd:interfaceRef="to_eth_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="64:64" xd:dataWidth="1"/>
+  <xd:arg xd:name="to_eth.tkeep" xd:originalName="to_eth" xd:direction="out" xd:interfaceRef="to_eth_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="72:65" xd:dataWidth="8"/>
+  <xd:arg xd:name="mac_addr" xd:originalName="mac_addr" xd:direction="in" xd:interfaceRef="mac_addr_V" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="48"/>
+  <xd:arg xd:name="mac_table[]" xd:originalName="mac_table" xd:direction="in" xd:interfaceRef="mac_table_V_PORTA" xd:busTypeRef="bram" xd:arraySize="256" xd:dataWidth="48"/>
+  <xd:arg xd:name="mac_table[]" xd:originalName="mac_table" xd:direction="in" xd:interfaceRef="mac_table_V_PORTB" xd:busTypeRef="bram" xd:arraySize="256" xd:dataWidth="48"/>
+  <xd:latencyEstimates xd:best-case="2" xd:worst-case="2" xd:average-case="2"/>
+  <xd:resourceEstimates xd:LUT="398" xd:FF="483" xd:BRAM="0" xd:DSP="0"/>
+</xd:acceleratorMap>

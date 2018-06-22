@@ -1,0 +1,71 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+<sourceFile name="">
+<directive functionLabel="" functionName="" label="">
+<pragma name="INTERFACE">
+<option name="axis" positionalBoolean="mode" value=""/>
+<option name="port" positionalBoolean="4" value="stream_out"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="" label="">
+<pragma name="INTERFACE">
+<option name="axis" positionalBoolean="mode" value=""/>
+<option name="port" positionalBoolean="4" value="stream_in"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="MPI_Send" label="">
+<pragma name="PIPELINE"/>
+</directive>
+<directive functionLabel="" functionName="MPI_Send" label="">
+<pragma name="DEPENDENCE">
+<option name="variable" value="d"/>
+<option name="inter" positionalBoolean="type" value=""/>
+<option name="false" positionalBoolean="dependent" value=""/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="MPI_Recv" label="">
+<pragma name="PIPELINE"/>
+</directive>
+<directive functionLabel="" functionName="dariusController" label="">
+<pragma name="INTERFACE">
+<option name="axis" positionalBoolean="mode" value=""/>
+<option name="port" positionalBoolean="4" value="stream_out"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="dariusController" label="">
+<pragma name="DATA_PACK">
+<option name="variable" positionalBoolean="4" value="stream_out"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="dariusController" label="">
+<pragma name="INTERFACE">
+<option name="axis" positionalBoolean="mode" value=""/>
+<option name="port" positionalBoolean="4" value="stream_in"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="dariusController" label="">
+<pragma name="DATA_PACK">
+<option name="variable" positionalBoolean="4" value="stream_in"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="dariusController" label="">
+<pragma name="INTERFACE">
+<option name="m_axi" positionalBoolean="mode" value=""/>
+<option name="depth" value="2147483648"/>
+<option name="port" positionalBoolean="4" value="mem"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="dariusController" label="">
+<pragma name="INTERFACE">
+<option name="m_axi" positionalBoolean="mode" value=""/>
+<option name="depth" value="1073741824"/>
+<option name="port" positionalBoolean="4" value="darius_driver"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="dariusController" label="">
+<pragma name="INTERFACE">
+<option name="ap_ctrl_none" positionalBoolean="mode" value=""/>
+<option name="port" positionalBoolean="4" value="return"/>
+</pragma>
+</directive>
+</sourceFile>
+</AutoPilot:ProjectResources>

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Fri Jun 22 14:57:09 2018
+# Process ID: 24652
+# Current directory: /home/tarafdar/workDir/galapagos/telepathy/ipPackage
+# Command line: vivado -mode batch -source ./telepathy/ipPackage/package_top_debug.tcl
+# Log file: /home/tarafdar/workDir/galapagos/telepathy/ipPackage/vivado.log
+# Journal file: /home/tarafdar/workDir/galapagos/telepathy/ipPackage/vivado.jou
+#-----------------------------------------------------------
+source ./telepathy/ipPackage/package_top_debug.tcl

@@ -1,0 +1,38 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:54:30 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Fri May  4 09:41:48 2018
+# Process ID: 31343
+# Current directory: /home/madanie1/Documents/2017.4/8v3/repo/network_packet_fifo_rx
+# Command line: vivado
+# Log file: /home/madanie1/Documents/2017.4/8v3/repo/network_packet_fifo_rx/vivado.log
+# Journal file: /home/madanie1/Documents/2017.4/8v3/repo/network_packet_fifo_rx/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/madanie1/Documents/2017.4/8v3/repo/network_packet_fifo_rx/network_packet_fifo_rx.xpr
+update_compile_order -fileset sources_1
+ipx::open_ipxact_file /home/madanie1/Documents/2017.4/8v3/repo/network_packet_fifo_rx/component.xml
+set_property supported_families {} [ipx::current_core]
+set_property supported_families {virtex7 Production qvirtex7 Production kintex7 Production kintex7l Production qkintex7 Production qkintex7l Production artix7 Production artix7l Production aartix7 Production qartix7 Production zynq Production qzynq Production azynq Production spartan7 Production aspartan7 Production virtexu Production virtexuplus Production kintexuplus Production zynquplus Production kintexu Production} [ipx::current_core]
+set_property core_revision 3 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+update_ip_catalog -rebuild -repo_path /home/madanie1/Documents/2017.4/8v3/repo/network_packet_fifo_rx
+close_project
+open_project /home/madanie1/Documents/2017.4/8v3/repo/network_packet_fifo_tx/network_packet_fifo_tx.xpr
+update_compile_order -fileset sources_1
+ipx::open_ipxact_file /home/madanie1/Documents/2017.4/8v3/repo/network_packet_fifo_tx/component.xml
+set_property supported_families {} [ipx::current_core]
+set_property supported_families {virtex7 Beta qvirtex7 Beta kintex7 Beta kintex7l Beta qkintex7 Beta qkintex7l Beta artix7 Beta artix7l Beta aartix7 Beta qartix7 Beta zynq Beta qzynq Beta azynq Beta spartan7 Beta aspartan7 Beta virtexu Beta virtexuplus Beta kintexuplus Beta zynquplus Beta kintexu Beta} [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+set_property supported_families {qvirtex7 Beta kintex7l Beta qkintex7l Beta artix7l Beta qartix7 Beta qzynq Beta spartan7 Beta virtexu Beta kintexuplus Beta} [ipx::current_core]
+set_property supported_families {} [ipx::current_core]
+set_property supported_families {virtex7 Production qvirtex7 Production kintex7 Production kintex7l Production qkintex7 Production qkintex7l Production artix7 Production artix7l Production aartix7 Production qartix7 Production zynq Production qzynq Production azynq Production spartan7 Production aspartan7 Production virtexu Production virtexuplus Production kintexuplus Production zynquplus Production kintexu Production} [ipx::current_core]
+set_property core_revision 3 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+update_ip_catalog -rebuild -repo_path /home/madanie1/Documents/2017.4/8v3/repo/network_packet_fifo_tx

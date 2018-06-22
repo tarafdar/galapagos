@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Messages>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1312" content="Analyzing design file &apos;../HMPI/HLS_lib/NFR.cpp&apos; ..." tag=""/>
+	<Message prefix="[HLS 200-41]" severity="WARNING" keynum="HLS_41_1434" content="Resource core &apos;AXI4Stream&apos; on port &apos;&amp;stream_out&apos; is deprecated. Please use the interface directive to specify the AXI interface." tag=""/>
+	<Message prefix="[HLS 200-41]" severity="WARNING" keynum="HLS_41_1434" content="Resource core &apos;AXI4Stream&apos; on port &apos;&amp;stream_in&apos; is deprecated. Please use the interface directive to specify the AXI interface." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1465" content="Validating synthesis directives ..." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Checking Pragmas Time (s): cpu = 00:00:28 ; elapsed = 00:00:13 . Memory (MB): peak = 351.621 ; gain = 0.156 ; free physical = 17024 ; free virtual = 57178" tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Linking Time (s): cpu = 00:00:29 ; elapsed = 00:00:15 . Memory (MB): peak = 351.621 ; gain = 0.156 ; free physical = 17024 ; free virtual = 57177" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1467" content="Starting code transformations ..." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Standard Transforms Time (s): cpu = 00:00:31 ; elapsed = 00:00:17 . Memory (MB): peak = 351.906 ; gain = 0.441 ; free physical = 17016 ; free virtual = 57169" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1472" content="Checking synthesizability ..." tag=""/>
+	<Message prefix="[SYNCHK 200-23]" severity="WARNING" keynum="579" content="../HMPI/HLS_lib/NFR.cpp:176: variable-indexed range selection may cause suboptimal QoR." tag=""/>
+	<Message prefix="[SYNCHK 200-10]" severity="INFO" keynum="597" content="0 error(s), 1 warning(s)." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Checking Synthesizability Time (s): cpu = 00:00:31 ; elapsed = 00:00:17 . Memory (MB): peak = 479.895 ; gain = 128.430 ; free physical = 17008 ; free virtual = 57162" tag=""/>
+	<Message prefix="[XFORM 203-1101]" severity="INFO" keynum="909" content="Packing variable &apos;stream_out.V&apos; (../HMPI/HLS_lib/NFR.cpp:54) into a 129-bit variable." tag=""/>
+	<Message prefix="[XFORM 203-1101]" severity="INFO" keynum="909" content="Packing variable &apos;stream_in.V&apos; (../HMPI/HLS_lib/NFR.cpp:53) into a 81-bit variable." tag=""/>
+	<Message prefix="[XFORM 203-502]" severity="INFO" keynum="812" content="Unrolling small iteration loop &apos;Loop-1.1&apos; (../HMPI/HLS_lib/NFR.cpp:85) in function &apos;NFR&apos; automatically." tag=""/>
+	<Message prefix="[XFORM 203-502]" severity="INFO" keynum="813" content="Unrolling all sub-loops inside loop &apos;Loop-1.2&apos; (../HMPI/HLS_lib/NFR.cpp:163) in function &apos;NFR&apos; for pipelining." tag=""/>
+	<Message prefix="[XFORM 203-501]" severity="INFO" keynum="891" content="Unrolling loop &apos;Loop-1.1&apos; (../HMPI/HLS_lib/NFR.cpp:85) in function &apos;NFR&apos; completely." tag=""/>
+	<Message prefix="[XFORM 203-501]" severity="INFO" keynum="891" content="Unrolling loop &apos;Loop-1.2.1&apos; (../HMPI/HLS_lib/NFR.cpp:175) in function &apos;NFR&apos; completely." tag=""/>
+	<Message prefix="[XFORM 203-102]" severity="INFO" keynum="696" content="Partitioning array &apos;header.V&apos; (../HMPI/HLS_lib/NFR.cpp:64) automatically." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Pre-synthesis Time (s): cpu = 00:00:32 ; elapsed = 00:00:18 . Memory (MB): peak = 479.895 ; gain = 128.430 ; free physical = 16980 ; free virtual = 57133" tag=""/>
+	<Message prefix="[XFORM 203-561]" severity="WARNING" keynum="788" content="&apos;Loop-1&apos; in function &apos;NFR&apos; is an infinite loop." tag=""/>
+	<Message prefix="[XFORM 203-542]" severity="WARNING" keynum="790" content="Cannot flatten a loop nest &apos;Loop-1&apos; in function &apos;NFR&apos; : 
+
+the outer loop is not a perfect loop because there is nontrivial logic in the loop header." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Architecture Synthesis Time (s): cpu = 00:00:33 ; elapsed = 00:00:19 . Memory (MB): peak = 479.895 ; gain = 128.430 ; free physical = 16978 ; free virtual = 57131" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1317" content="Starting hardware synthesis ..." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1385" content="Synthesizing &apos;NFR&apos; ..." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1477" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-42]" severity="INFO" keynum="HLS_42_1438" content="-- Implementing module &apos;NFR&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1478" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="139" content="Starting scheduling ..." tag=""/>
+	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="107" content="Pipelining loop &apos;Loop 1.1&apos;." tag=""/>
+	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="110" content="Pipelining result : Target II = 1, Final II = 1, Depth = 2." tag=""/>
+	<Message prefix="[SCHED 204-21]" severity="WARNING" keynum="137" content="Estimated clock period (8.539ns) exceeds the target (target clock period: 5ns, clock uncertainty: 0.625ns, effective delay budget: 4.375ns)." tag=""/>
+	<Message prefix="[SCHED 204-21]" severity="WARNING" keynum="135" content="The critical path consists of the following:
+	&apos;add&apos; operation (&apos;expected_bytes_5_4&apos;, ../HMPI/HLS_lib/NFR.cpp:177) (1.49 ns)
+	&apos;select&apos; operation (&apos;expected_bytes_4_4&apos;, ../HMPI/HLS_lib/NFR.cpp:176) (0.44 ns)
+	&apos;add&apos; operation (&apos;expected_bytes_5_5&apos;, ../HMPI/HLS_lib/NFR.cpp:177) (1.49 ns)
+	&apos;select&apos; operation (&apos;expected_bytes_4_5&apos;, ../HMPI/HLS_lib/NFR.cpp:176) (0.44 ns)
+	&apos;add&apos; operation (&apos;expected_bytes_5_6&apos;, ../HMPI/HLS_lib/NFR.cpp:177) (1.49 ns)
+	&apos;select&apos; operation (&apos;expected_bytes_4_6&apos;, ../HMPI/HLS_lib/NFR.cpp:176) (0.44 ns)
+	&apos;add&apos; operation (&apos;expected_bytes_5_7&apos;, ../HMPI/HLS_lib/NFR.cpp:177) (1.49 ns)
+	&apos;select&apos; operation (&apos;expected_bytes_4_7&apos;, ../HMPI/HLS_lib/NFR.cpp:176) (0.44 ns)
+	multiplexor before &apos;phi&apos; operation (&apos;expected_bytes_6&apos;, ../HMPI/HLS_lib/NFR.cpp:176) with incoming values : (&apos;expected_bytes&apos;, ../HMPI/HLS_lib/NFR.cpp:153) (&apos;expected_bytes_4_7&apos;, ../HMPI/HLS_lib/NFR.cpp:176) (0.835 ns)" tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="138" content="Finished scheduling." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 19.14 seconds; current allocated memory: 89.494 MB." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="439" content="Starting micro-architecture generation ..." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="211" content="Performing variable lifetime analysis." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="210" content="Exploring resource sharing." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="206" content="Binding ..." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="438" content="Finished micro-architecture generation." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.05 seconds; current allocated memory: 90.013 MB." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1483" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1484" content="-- Generating RTL for module &apos;NFR&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1485" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;NFR/stream_in_V&apos; to &apos;ap_fifo&apos;." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;NFR/stream_out_V&apos; to &apos;ap_fifo&apos;." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on function &apos;NFR&apos; to &apos;ap_ctrl_none&apos;." tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="369" content="Finished creating RTL model for &apos;NFR&apos;." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.09 seconds; current allocated memory: 90.772 MB." tag=""/>
+	<Message prefix="[IMPL 213-200]" severity="INFO" keynum="IMPL_200_1804" content="Port &apos;stream_in_V.data&apos; is mapped to &apos;TDATA&apos; by default." tag=""/>
+	<Message prefix="[IMPL 213-200]" severity="INFO" keynum="IMPL_200_1804" content="Port &apos;stream_in_V.dest&apos; is mapped to &apos;TDEST&apos; by default." tag=""/>
+	<Message prefix="[IMPL 213-200]" severity="INFO" keynum="IMPL_200_1804" content="Port &apos;stream_in_V.keep&apos; is mapped to &apos;TKEEP&apos; by default." tag=""/>
+	<Message prefix="[IMPL 213-200]" severity="INFO" keynum="IMPL_200_1804" content="Port &apos;stream_in_V.last&apos; is mapped to &apos;TLAST&apos; by default." tag=""/>
+	<Message prefix="[IMPL 213-200]" severity="INFO" keynum="IMPL_200_1804" content="Port &apos;stream_out_V.data&apos; is mapped to &apos;TDATA&apos; by default." tag=""/>
+	<Message prefix="[IMPL 213-200]" severity="INFO" keynum="IMPL_200_1804" content="Port &apos;stream_out_V.dest&apos; is mapped to &apos;TDEST&apos; by default." tag=""/>
+	<Message prefix="[IMPL 213-200]" severity="INFO" keynum="IMPL_200_1804" content="Port &apos;stream_out_V.last&apos; is mapped to &apos;TLAST&apos; by default." tag=""/>
+	<Message prefix="[IMPL 213-200]" severity="INFO" keynum="IMPL_200_1804" content="Port &apos;stream_out_V.keep&apos; is mapped to &apos;TKEEP&apos; by default." tag=""/>
+	<Message prefix="[IMPL 213-200]" severity="INFO" keynum="IMPL_200_1804" content="Port &apos;stream_out_V.id&apos; is mapped to &apos;TID&apos; by default." tag=""/>
+	<Message prefix="[IMPL 213-200]" severity="INFO" keynum="IMPL_200_1804" content="Port &apos;stream_out_V.user&apos; is mapped to &apos;TUSER&apos; by default." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished generating all RTL models Time (s): cpu = 00:00:34 ; elapsed = 00:00:20 . Memory (MB): peak = 479.895 ; gain = 128.430 ; free physical = 16976 ; free virtual = 57129" tag=""/>
+	<Message prefix="[SYSC 207-301]" severity="INFO" keynum="SYSC_301_1065" content="Generating SystemC RTL for NFR." tag=""/>
+	<Message prefix="[VHDL 208-304]" severity="INFO" keynum="VHDL_304_1066" content="Generating VHDL RTL for NFR." tag=""/>
+	<Message prefix="[VLOG 209-307]" severity="INFO" keynum="VLOG_307_1067" content="Generating Verilog RTL for NFR." tag=""/>
+</Messages>

@@ -1,0 +1,1676 @@
+
+
+================================================================
+== Vivado HLS Report for 'MPI_Recv'
+================================================================
+* Date:           Fri Jun 22 11:48:38 2018
+
+* Version:        2018.1 (Build 2188600 on Wed Apr 04 19:04:02 MDT 2018)
+* Project:        dariusController
+* Solution:       solution1
+* Product family: kintexu
+* Target device:  xcku115-flva1517-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   5.00|      4.32|        0.62|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    ?|    ?|    ?|    ?|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------+-----+-----+----------+-----------+-----------+------+----------+
+        |             |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        |  Loop Name  | min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Loop 1     |    ?|    ?|   3 ~ 4  |          -|          -|     ?|    no    |
+        |- Loop 2     |    ?|    ?|         2|          -|          -|     ?|    no    |
+        |- Loop 3     |    ?|    ?|         1|          -|          -|     ?|    no    |
+        |- Loop 4     |    ?|    ?|         ?|          -|          -|     ?|    no    |
+        | + Loop 4.1  |    ?|    ?|         1|          -|          -|     ?|    no    |
+        | + Loop 4.2  |   24|   24|         3|          -|          -|     8|    no    |
+        | + Loop 4.3  |    ?|    ?|         1|          -|          -|     ?|    no    |
+        | + Loop 4.4  |    ?|    ?|   3 ~ 7  |          -|          -|     ?|    no    |
+        | + Loop 4.5  |    ?|    ?|   3 ~ 7  |          -|          -|     ?|    no    |
+        | + Loop 4.6  |    ?|    ?|   3 ~ 7  |          -|          -|     ?|    no    |
+        | + Loop 4.7  |    ?|    ?|   3 ~ 7  |          -|          -|     ?|    no    |
+        |- Loop 5     |    ?|    ?|         1|          -|          -|     ?|    no    |
+        +-------------+-----+-----+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 1
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 76
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	76  / (state_load == 3)
+	2  / (state_load == 2)
+	47  / (state_load == 1)
+	69  / (state_load == 0)
+2 --> 
+	3  / (icmp & !tmp & !brmerge)
+	67  / (icmp & !tmp & brmerge) | (icmp & tmp & demorgan)
+	4  / (icmp & tmp & !demorgan)
+	68  / (!icmp)
+3 --> 
+	47  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	10  / true
+10 --> 
+	11  / true
+11 --> 
+	12  / true
+12 --> 
+	13  / true
+13 --> 
+	14  / true
+14 --> 
+	15  / true
+15 --> 
+	16  / true
+16 --> 
+	17  / true
+17 --> 
+	18  / true
+18 --> 
+	19  / true
+19 --> 
+	20  / true
+20 --> 
+	21  / true
+21 --> 
+	22  / true
+22 --> 
+	23  / true
+23 --> 
+	24  / true
+24 --> 
+	25  / true
+25 --> 
+	26  / true
+26 --> 
+	27  / true
+27 --> 
+	28  / true
+28 --> 
+	29  / true
+29 --> 
+	30  / true
+30 --> 
+	31  / true
+31 --> 
+	32  / true
+32 --> 
+	33  / true
+33 --> 
+	34  / true
+34 --> 
+	35  / true
+35 --> 
+	36  / true
+36 --> 
+	37  / true
+37 --> 
+	38  / true
+38 --> 
+	39  / true
+39 --> 
+	39  / (tmp_176 & !p_0704_1)
+	67  / (!tmp_176 & !tmp_169 & !tmp_198) | (p_0704_1 & !tmp_169 & !tmp_198)
+	40  / (!tmp_176 & !tmp_169 & tmp_198) | (p_0704_1 & !tmp_169 & tmp_198)
+	64  / (!tmp_176 & tmp_169) | (p_0704_1 & tmp_169)
+40 --> 
+	40  / (!p_0704_3)
+	67  / (p_0704_3 & !tmp_209 & !tmp_212)
+	41  / (p_0704_3 & !tmp_209 & tmp_212)
+	53  / (p_0704_3 & tmp_209)
+41 --> 
+	42  / (!tmp_214 & tmp_216 & tmp_232)
+	48  / (tmp_214 & tmp_222)
+	67  / (!tmp_214 & !tmp_216) | (tmp_214 & !tmp_222) | (!tmp_214 & !tmp_232)
+42 --> 
+	43  / (tmp_236)
+	47  / (!tmp_236)
+43 --> 
+	44  / (tmp_241)
+	47  / (!tmp_241)
+44 --> 
+	45  / (float_clr2snd_array_120)
+	47  / (!float_clr2snd_array_120)
+45 --> 
+	46  / (tmp_248)
+	47  / (!tmp_248)
+46 --> 
+	47  / true
+47 --> 
+	41  / (state_load == 2 & icmp & tmp & !tmp_209 & !tmp_214 & !tmp_236) | (state_load == 2 & icmp & tmp & !tmp_209 & tmp_214 & !tmp_229) | (state_load == 2 & icmp & tmp & !tmp_209 & !tmp_214 & !tmp_241) | (state_load == 2 & icmp & tmp & !tmp_209 & tmp_214 & !tmp_234) | (state_load == 2 & icmp & tmp & !tmp_209 & !tmp_214 & !float_clr2snd_array_120) | (state_load == 2 & icmp & tmp & !tmp_209 & tmp_214 & !tmp_240) | (state_load == 2 & icmp & tmp & !tmp_209 & !tmp_214 & !tmp_248) | (state_load == 2 & icmp & tmp & !tmp_209 & tmp_214 & !tmp_244) | (state_load == 2 & icmp & tmp & !tmp_209 & !tmp_214 & !tmp_251) | (state_load == 2 & icmp & tmp & !tmp_209 & tmp_214 & !tmp_247) | (state_load == 2 & icmp & tmp & !tmp_209 & !tmp_214 & !tmp_252) | (state_load == 2 & icmp & tmp & !tmp_209 & tmp_214 & !tmp_250)
+	53  / (state_load == 2 & icmp & tmp & tmp_209 & !tmp_211 & !tmp_225) | (state_load == 2 & icmp & tmp & tmp_209 & tmp_211 & !tmp_218) | (state_load == 2 & icmp & tmp & tmp_209 & !tmp_211 & !tmp_233) | (state_load == 2 & icmp & tmp & tmp_209 & tmp_211 & !tmp_223) | (state_load == 2 & icmp & tmp & tmp_209 & !tmp_211 & !int_clr2snd_array_PK_19) | (state_load == 2 & icmp & tmp & tmp_209 & tmp_211 & int_request_array_PK_24) | (state_load == 2 & icmp & tmp & tmp_209 & !tmp_211 & !tmp_243) | (state_load == 2 & icmp & tmp & tmp_209 & tmp_211 & !tmp_239) | (state_load == 2 & icmp & tmp & tmp_209 & !tmp_211 & !tmp_246) | (state_load == 2 & icmp & tmp & tmp_209 & tmp_211 & !tmp_242) | (state_load == 2 & icmp & tmp & tmp_209 & !tmp_211 & !tmp_249) | (state_load == 2 & icmp & tmp & tmp_209 & tmp_211 & !tmp_245)
+48 --> 
+	47  / (!tmp_229)
+	49  / (tmp_229)
+49 --> 
+	47  / (!tmp_234)
+	50  / (tmp_234)
+50 --> 
+	47  / (!tmp_240)
+	51  / (tmp_240)
+51 --> 
+	47  / (!tmp_244)
+	52  / (tmp_244)
+52 --> 
+	47  / true
+53 --> 
+	54  / (!tmp_211 & tmp_213 & tmp_221)
+	59  / (tmp_211 & tmp_215)
+	67  / (!tmp_211 & !tmp_213) | (tmp_211 & !tmp_215) | (!tmp_211 & !tmp_221)
+54 --> 
+	47  / (!tmp_225)
+	55  / (tmp_225)
+55 --> 
+	47  / (!tmp_233)
+	56  / (tmp_233)
+56 --> 
+	47  / (!int_clr2snd_array_PK_19)
+	57  / (int_clr2snd_array_PK_19)
+57 --> 
+	47  / (!tmp_243)
+	58  / (tmp_243)
+58 --> 
+	47  / true
+59 --> 
+	47  / (!tmp_218)
+	60  / (tmp_218)
+60 --> 
+	47  / (!tmp_223)
+	61  / (tmp_223)
+61 --> 
+	47  / (int_request_array_PK_24)
+	62  / (!int_request_array_PK_24)
+62 --> 
+	47  / (!tmp_239)
+	63  / (tmp_239)
+63 --> 
+	47  / true
+64 --> 
+	65  / (!exitcond)
+	67  / (exitcond)
+65 --> 
+	66  / true
+66 --> 
+	64  / true
+67 --> 
+	2  / true
+68 --> 
+	68  / (!p_0704_8)
+	47  / (p_0704_8)
+69 --> 
+	70  / (tmp_s)
+	76  / (!tmp_s)
+70 --> 
+	71  / (!int_request_array_PK_18)
+	72  / (int_request_array_PK_18)
+71 --> 
+	72  / true
+72 --> 
+	73  / (!int_request_array_PK_18 & tmp_168 & tmp_172)
+	69  / (int_request_array_PK_18) | (!tmp_168) | (!tmp_172)
+73 --> 
+	74  / true
+74 --> 
+	75  / (tmp_179)
+	47  / (!tmp_179)
+75 --> 
+	74  / true
+76 --> 
+	76  / (state_load == 0 & !last_V_1)
+	47  / (state_load == 3) | (state_load == 0 & last_V_1)
+
+* FSM state operations: 
+
+ <State 1> : 2.19ns
+ST_1 : Operation 77 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i129* @stream_out_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_1 : Operation 78 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i129* @stream_in_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_1 : Operation 79 [1/1] (0.00ns)   --->   "%source_read = call i17 @_ssdm_op_Read.ap_auto.i17(i17 %source)"
+ST_1 : Operation 80 [1/1] (0.00ns)   --->   "%state_load = load i2* @state, align 1" [../HMPI/HLS_lib/./MPI.h:870]
+ST_1 : Operation 81 [1/1] (0.00ns)   --->   "%envlp_DEST_V_1_load = load i16* @envlp_DEST_V_1, align 2" [../HMPI/HLS_lib/./MPI.h:960]
+ST_1 : Operation 82 [1/1] (0.00ns)   --->   "%pkt_out_dest_V = load i8* @envlp_SRC_V, align 1" [../HMPI/HLS_lib/./MPI.h:959]
+ST_1 : Operation 83 [1/1] (0.90ns)   --->   "switch i2 %state_load, label %._crit_edge36 [
+    i2 0, label %.preheader991.preheader
+    i2 1, label %31
+    i2 -2, label %.preheader293.preheader
+  ]" [../HMPI/HLS_lib/./MPI.h:870]
+ST_1 : Operation 84 [1/1] (0.00ns)   --->   "%tmp_4 = alloca i129"
+ST_1 : Operation 85 [1/1] (0.00ns)   --->   "%last_V = alloca i1"
+ST_1 : Operation 86 [1/1] (0.00ns)   --->   "%op2_assign = alloca i32"
+ST_1 : Operation 87 [1/1] (0.00ns)   --->   "%p_6 = alloca i1"
+ST_1 : Operation 88 [1/1] (0.00ns)   --->   "%p_7 = alloca i1"
+ST_1 : Operation 89 [1/1] (0.00ns)   --->   "%error_DEST_V = zext i8 %pkt_out_dest_V to i16" [../HMPI/HLS_lib/./MPI.h:992]
+ST_1 : Operation 90 [1/1] (0.00ns)   --->   "%error_SRC_V = trunc i16 %envlp_DEST_V_1_load to i8" [../HMPI/HLS_lib/./MPI.h:993]
+ST_1 : Operation 91 [1/1] (0.83ns)   --->   "store i1 false, i1* %p_7"
+ST_1 : Operation 92 [1/1] (0.83ns)   --->   "store i1 false, i1* %p_6"
+ST_1 : Operation 93 [1/1] (0.83ns)   --->   "store i32 0, i32* %op2_assign"
+ST_1 : Operation 94 [1/1] (0.83ns)   --->   "br label %.preheader293" [../HMPI/HLS_lib/./MPI.h:984]
+ST_1 : Operation 95 [1/1] (0.00ns)   --->   "%clr2snd_DEST_V = zext i8 %pkt_out_dest_V to i16" [../HMPI/HLS_lib/./MPI.h:959]
+ST_1 : Operation 96 [1/1] (0.00ns)   --->   "%clr2snd_SRC_V = trunc i16 %envlp_DEST_V_1_load to i8" [../HMPI/HLS_lib/./MPI.h:960]
+ST_1 : Operation 97 [1/1] (0.00ns)   --->   "%clr2snd_MSG_SIZE_V = load i16* @envlp_MSG_SIZE_V, align 2" [../HMPI/HLS_lib/./MPI.h:962]
+ST_1 : Operation 98 [1/1] (0.00ns)   --->   "%p_Result_3 = call i40 @llvm.part.set.i40.i4(i40 undef, i4 0, i32 0, i32 3)" [../HMPI/HLS_lib/./MPI.h:967]
+ST_1 : Operation 99 [1/1] (0.00ns)   --->   "%p_Result_4 = call i40 @llvm.part.set.i40.i4(i40 %p_Result_3, i4 0, i32 4, i32 7)" [../HMPI/HLS_lib/./MPI.h:968]
+ST_1 : Operation 100 [1/1] (0.00ns)   --->   "%id_in_V_load_7 = load i16* @id_in_V, align 2" [../HMPI/HLS_lib/./MPI.h:969]
+ST_1 : Operation 101 [1/1] (0.00ns)   --->   "%pkt_out_id_V = trunc i16 %id_in_V_load_7 to i8" [../HMPI/HLS_lib/./MPI.h:969]
+ST_1 : Operation 102 [1/1] (0.00ns)   --->   "%tmp_210 = call i72 @_ssdm_op_BitConcatenate.i72.i8.i4.i4.i8.i16.i8.i8.i16(i8 %pkt_out_dest_V, i4 undef, i4 undef, i8 undef, i16 %clr2snd_MSG_SIZE_V, i8 1, i8 %clr2snd_SRC_V, i16 %clr2snd_DEST_V)" [../HMPI/HLS_lib/./MPI.h:970]
+ST_1 : Operation 103 [1/1] (0.00ns)   --->   "%tmp_2 = call i129 @_ssdm_op_PartSet.i129.i129.i72.i32.i32(i129 undef, i72 %tmp_210, i32 0, i32 71)" [../HMPI/HLS_lib/./MPI.h:970]
+ST_1 : Operation 104 [1/1] (0.00ns)   --->   "%tmp_2_1 = call i129 @_ssdm_op_BitSet.i129.i129.i32.i1(i129 %tmp_2, i32 72, i1 true)" [../HMPI/HLS_lib/./MPI.h:970]
+ST_1 : Operation 105 [1/1] (0.00ns)   --->   "%tmp_2_2 = call i129 @llvm.part.set.i129.i8(i129 %tmp_2_1, i8 %pkt_out_id_V, i32 73, i32 80)" [../HMPI/HLS_lib/./MPI.h:970]
+ST_1 : Operation 106 [1/1] (0.00ns)   --->   "%tmp_2_4 = call i129 @llvm.part.set.i129.i40(i129 %tmp_2_2, i40 %p_Result_4, i32 89, i32 128)" [../HMPI/HLS_lib/./MPI.h:970]
+ST_1 : Operation 107 [1/1] (2.18ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i129P(i129* @stream_out_V, i129 %tmp_2_4)" [../HMPI/HLS_lib/./MPI.h:970]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 129> <Depth = 0> <FIFO>
+ST_1 : Operation 108 [1/1] (0.91ns)   --->   "store i2 -2, i2* @state, align 1" [../HMPI/HLS_lib/./MPI.h:971]
+ST_1 : Operation 109 [1/1] (0.83ns)   --->   "store i64 0, i64* @time_V, align 8" [../HMPI/HLS_lib/./MPI.h:972]
+ST_1 : Operation 110 [1/1] (0.83ns)   --->   "br label %.loopexit" [../HMPI/HLS_lib/./MPI.h:973]
+ST_1 : Operation 111 [1/1] (0.00ns)   --->   "%int_req_num_load = load i32* @int_req_num, align 4" [../HMPI/HLS_lib/./MPI.h:874]
+ST_1 : Operation 112 [1/1] (0.00ns)   --->   "%id_in_V_load = load i16* @id_in_V, align 2" [../HMPI/HLS_lib/./MPI.h:876]
+ST_1 : Operation 113 [1/1] (0.83ns)   --->   "br label %.preheader991" [../HMPI/HLS_lib/./MPI.h:874]
+
+ <State 2> : 4.32ns
+ST_2 : Operation 114 [1/1] (0.00ns)   --->   "%i4 = phi i32 [ 0, %.preheader293.preheader ], [ %i_26, %.loopexit977 ]"
+ST_2 : Operation 115 [1/1] (0.00ns)   --->   "%last_V_load = load i1* %last_V"
+ST_2 : Operation 116 [1/1] (0.00ns)   --->   "%tmp_258 = call i30 @_ssdm_op_PartSelect.i30.i32.i32.i32(i32 %i4, i32 2, i32 31)" [../HMPI/HLS_lib/./MPI.h:984]
+ST_2 : Operation 117 [1/1] (1.13ns)   --->   "%icmp = icmp slt i30 %tmp_258, 1" [../HMPI/HLS_lib/./MPI.h:984]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 118 [1/1] (0.00ns)   --->   "br i1 %icmp, label %32, label %.preheader.preheader" [../HMPI/HLS_lib/./MPI.h:984]
+ST_2 : Operation 119 [1/1] (0.00ns)   --->   "%tmp = call i1 @_ssdm_op_NbReadReq.ap_fifo.i129P(i129* @stream_in_V, i32 1)"   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 129> <Depth = 0> <FIFO>
+ST_2 : Operation 120 [1/1] (0.00ns)   --->   "br i1 %tmp, label %33, label %76" [../HMPI/HLS_lib/./MPI.h:985]
+ST_2 : Operation 121 [1/1] (0.00ns)   --->   "%p_7_load = load i1* %p_7" [../HMPI/HLS_lib/./MPI.h:1108]
+ST_2 : Operation 122 [1/1] (0.00ns)   --->   "%t_V = load i64* @time_V, align 8" [../HMPI/HLS_lib/./MPI.h:1106]
+ST_2 : Operation 123 [1/1] (1.57ns)   --->   "%tmp_171 = add i64 %t_V, 1" [../HMPI/HLS_lib/./MPI.h:1106]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 124 [1/1] (0.83ns)   --->   "store i64 %tmp_171, i64* @time_V, align 8" [../HMPI/HLS_lib/./MPI.h:1106]
+ST_2 : Operation 125 [1/1] (1.48ns)   --->   "%i_18 = add nsw i32 %i4, -8" [../HMPI/HLS_lib/./MPI.h:1107]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 126 [1/1] (1.32ns)   --->   "%p_not = icmp ne i64 %tmp_171, 314465410" [../HMPI/HLS_lib/./MPI.h:1108]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 127 [1/1] (0.33ns)   --->   "%brmerge = or i1 %p_not, %p_7_load" [../HMPI/HLS_lib/./MPI.h:1108]   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 128 [1/1] (1.08ns)   --->   "br i1 %brmerge, label %.loopexit977, label %77" [../HMPI/HLS_lib/./MPI.h:1108]
+ST_2 : Operation 129 [1/1] (0.00ns)   --->   "%op2_assign_load_1 = load i32* %op2_assign" [../HMPI/HLS_lib/./MPI.h:990]
+ST_2 : Operation 130 [1/1] (0.00ns)   --->   "%p_7_load_1 = load i1* %p_7" [../HMPI/HLS_lib/./MPI.h:987]
+ST_2 : Operation 131 [1/1] (2.18ns)   --->   "%tmp_3243 = call i129 @_ssdm_op_Read.ap_fifo.volatile.i129P(i129* @stream_in_V)"   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 129> <Depth = 0> <FIFO>
+ST_2 : Operation 132 [1/1] (0.00ns)   --->   "%recv_data_data_V = trunc i129 %tmp_3243 to i64" [../HMPI/HLS_lib/./MPI.h:21->../HMPI/HLS_lib/./MPI.h:986]
+ST_2 : Operation 133 [1/1] (0.00ns)   --->   "%recv_data_dest_V = call i8 @_ssdm_op_PartSelect.i8.i129.i32.i32(i129 %tmp_3243, i32 64, i32 71)" [../HMPI/HLS_lib/./MPI.h:21->../HMPI/HLS_lib/./MPI.h:986]
+ST_2 : Operation 134 [1/1] (0.00ns)   --->   "%recv_data_last_V = call i1 @_ssdm_op_BitSelect.i1.i129.i32(i129 %tmp_3243, i32 72)" [../HMPI/HLS_lib/./MPI.h:21->../HMPI/HLS_lib/./MPI.h:986]
+ST_2 : Operation 135 [1/1] (0.00ns)   --->   "%p_Result_s = call i4 @_ssdm_op_PartSelect.i4.i129.i32.i32(i129 %tmp_3243, i32 93, i32 96)" [../HMPI/HLS_lib/./MPI.h:987]
+ST_2 : Operation 136 [1/1] (0.90ns)   --->   "%tmp_169 = icmp eq i4 %p_Result_s, 1" [../HMPI/HLS_lib/./MPI.h:987]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 137 [1/1] (0.33ns)   --->   "%p_s = or i1 %tmp_169, %p_7_load_1" [../HMPI/HLS_lib/./MPI.h:987]   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 138 [1/1] (0.00ns)   --->   "%p_Result_5 = call i32 @_ssdm_op_PartSelect.i32.i129.i32.i32(i129 %tmp_3243, i32 97, i32 128)" [../HMPI/HLS_lib/./MPI.h:990]
+ST_2 : Operation 139 [1/1] (0.00ns)   --->   "%p_Result_28_cast = zext i32 %p_Result_5 to i33" [../HMPI/HLS_lib/./MPI.h:990]
+ST_2 : Operation 140 [1/1] (0.00ns)   --->   "%tmp_174_cast = sext i32 %op2_assign_load_1 to i33" [../HMPI/HLS_lib/./MPI.h:990]
+ST_2 : Operation 141 [1/1] (1.14ns)   --->   "%tmp_170 = icmp ne i33 %p_Result_28_cast, %tmp_174_cast" [../HMPI/HLS_lib/./MPI.h:990]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 142 [1/1] (0.33ns)   --->   "%demorgan = and i1 %tmp_169, %tmp_170" [../HMPI/HLS_lib/./MPI.h:990]   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 143 [1/1] (0.00ns)   --->   "br i1 %demorgan, label %34, label %._crit_edge51" [../HMPI/HLS_lib/./MPI.h:990]
+ST_2 : Operation 144 [1/1] (1.48ns)   --->   "%tmp_174 = add nsw i32 8, %i4" [../HMPI/HLS_lib/./MPI.h:1013]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 145 [36/36] (1.75ns)   --->   "%tmp_175 = srem i32 %tmp_174, 1488" [../HMPI/HLS_lib/./MPI.h:1013]   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 12> <Delay = 1.75> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 146 [1/1] (0.00ns)   --->   "%p_6_load = load i1* %p_6" [../HMPI/HLS_lib/./MPI.h:1005]
+ST_2 : Operation 147 [1/1] (0.00ns)   --->   "%error_MSG_SIZE_V = trunc i32 %op2_assign_load_1 to i16" [../HMPI/HLS_lib/./MPI.h:995]
+ST_2 : Operation 148 [1/1] (0.00ns)   --->   "%id_in_V_load_9 = load i16* @id_in_V, align 2" [../HMPI/HLS_lib/./MPI.h:1004]
+ST_2 : Operation 149 [1/1] (0.00ns)   --->   "%pkt_out_id_V_2 = trunc i16 %id_in_V_load_9 to i8" [../HMPI/HLS_lib/./MPI.h:1004]
+ST_2 : Operation 150 [1/1] (0.00ns)   --->   "br i1 %p_6_load, label %._crit_edge53, label %35" [../HMPI/HLS_lib/./MPI.h:1005]
+ST_2 : Operation 151 [1/1] (0.00ns)   --->   "%tmp_4_load = load i129* %tmp_4" [../HMPI/HLS_lib/./MPI.h:1007]
+ST_2 : Operation 152 [1/1] (0.00ns)   --->   "%tmp_271 = call i72 @_ssdm_op_BitConcatenate.i72.i8.i4.i4.i8.i16.i8.i8.i16(i8 %pkt_out_dest_V, i4 undef, i4 undef, i8 undef, i16 %error_MSG_SIZE_V, i8 4, i8 %error_SRC_V, i16 %error_DEST_V)" [../HMPI/HLS_lib/./MPI.h:1007]
+ST_2 : Operation 153 [1/1] (0.00ns)   --->   "%tmp_4_1 = call i129 @_ssdm_op_PartSet.i129.i129.i72.i32.i32(i129 %tmp_4_load, i72 %tmp_271, i32 0, i32 71)" [../HMPI/HLS_lib/./MPI.h:1007]
+ST_2 : Operation 154 [1/1] (0.00ns)   --->   "%tmp_4_2 = call i129 @_ssdm_op_BitSet.i129.i129.i32.i1(i129 %tmp_4_1, i32 72, i1 true)" [../HMPI/HLS_lib/./MPI.h:1007]
+ST_2 : Operation 155 [1/1] (0.00ns)   --->   "%tmp_4_3 = call i129 @llvm.part.set.i129.i8(i129 %tmp_4_2, i8 %pkt_out_id_V_2, i32 73, i32 80)" [../HMPI/HLS_lib/./MPI.h:1007]
+ST_2 : Operation 156 [1/1] (0.00ns)   --->   "%tmp_4_5 = call i129 @llvm.part.set.i129.i40(i129 %tmp_4_3, i40 0, i32 89, i32 128)" [../HMPI/HLS_lib/./MPI.h:1007]
+ST_2 : Operation 157 [1/1] (2.18ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i129P(i129* @stream_out_V, i129 %tmp_4_5)" [../HMPI/HLS_lib/./MPI.h:1007]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 129> <Depth = 0> <FIFO>
+ST_2 : Operation 158 [1/1] (0.83ns)   --->   "store i1 true, i1* %p_6"
+ST_2 : Operation 159 [1/1] (0.00ns)   --->   "store i129 %tmp_4_5, i129* %tmp_4" [../HMPI/HLS_lib/./MPI.h:1007]
+ST_2 : Operation 160 [1/1] (0.00ns)   --->   "br label %._crit_edge53" [../HMPI/HLS_lib/./MPI.h:1008]
+ST_2 : Operation 161 [1/1] (1.48ns)   --->   "%i = add nsw i32 %i4, -8" [../HMPI/HLS_lib/./MPI.h:1009]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 162 [1/1] (0.83ns)   --->   "store i1 %p_s, i1* %p_7" [../HMPI/HLS_lib/./MPI.h:987]
+ST_2 : Operation 163 [1/1] (1.08ns)   --->   "br label %.loopexit977" [../HMPI/HLS_lib/./MPI.h:1010]
+ST_2 : Operation 164 [1/1] (0.83ns)   --->   "br label %.preheader" [../HMPI/HLS_lib/./MPI.h:1115]
+
+ <State 3> : 0.92ns
+ST_3 : Operation 165 [1/1] (0.83ns)   --->   "store i64 0, i64* @time_V, align 8" [../HMPI/HLS_lib/./MPI.h:1109]
+ST_3 : Operation 166 [1/1] (0.91ns)   --->   "store i2 1, i2* @state, align 1" [../HMPI/HLS_lib/./MPI.h:1110]
+ST_3 : Operation 167 [1/1] (0.83ns)   --->   "br label %.loopexit" [../HMPI/HLS_lib/./MPI.h:1111]
+
+ <State 4> : 1.75ns
+ST_4 : Operation 168 [35/36] (1.75ns)   --->   "%tmp_175 = srem i32 %tmp_174, 1488" [../HMPI/HLS_lib/./MPI.h:1013]   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 12> <Delay = 1.75> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 5> : 1.75ns
+ST_5 : Operation 169 [34/36] (1.75ns)   --->   "%tmp_175 = srem i32 %tmp_174, 1488" [../HMPI/HLS_lib/./MPI.h:1013]   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 12> <Delay = 1.75> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 6> : 1.75ns
+ST_6 : Operation 170 [33/36] (1.75ns)   --->   "%tmp_175 = srem i32 %tmp_174, 1488" [../HMPI/HLS_lib/./MPI.h:1013]   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 12> <Delay = 1.75> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 7> : 1.75ns
+ST_7 : Operation 171 [32/36] (1.75ns)   --->   "%tmp_175 = srem i32 %tmp_174, 1488" [../HMPI/HLS_lib/./MPI.h:1013]   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 12> <Delay = 1.75> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 8> : 1.75ns
+ST_8 : Operation 172 [31/36] (1.75ns)   --->   "%tmp_175 = srem i32 %tmp_174, 1488" [../HMPI/HLS_lib/./MPI.h:1013]   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 12> <Delay = 1.75> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 9> : 1.75ns
+ST_9 : Operation 173 [30/36] (1.75ns)   --->   "%tmp_175 = srem i32 %tmp_174, 1488" [../HMPI/HLS_lib/./MPI.h:1013]   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 12> <Delay = 1.75> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 10> : 1.75ns
+ST_10 : Operation 174 [29/36] (1.75ns)   --->   "%tmp_175 = srem i32 %tmp_174, 1488" [../HMPI/HLS_lib/./MPI.h:1013]   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 12> <Delay = 1.75> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 11> : 1.75ns
+ST_11 : Operation 175 [28/36] (1.75ns)   --->   "%tmp_175 = srem i32 %tmp_174, 1488" [../HMPI/HLS_lib/./MPI.h:1013]   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 12> <Delay = 1.75> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 12> : 1.75ns
+ST_12 : Operation 176 [27/36] (1.75ns)   --->   "%tmp_175 = srem i32 %tmp_174, 1488" [../HMPI/HLS_lib/./MPI.h:1013]   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 12> <Delay = 1.75> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 13> : 1.75ns
+ST_13 : Operation 177 [26/36] (1.75ns)   --->   "%tmp_175 = srem i32 %tmp_174, 1488" [../HMPI/HLS_lib/./MPI.h:1013]   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 12> <Delay = 1.75> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 14> : 1.75ns
+ST_14 : Operation 178 [25/36] (1.75ns)   --->   "%tmp_175 = srem i32 %tmp_174, 1488" [../HMPI/HLS_lib/./MPI.h:1013]   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 12> <Delay = 1.75> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 15> : 1.75ns
+ST_15 : Operation 179 [24/36] (1.75ns)   --->   "%tmp_175 = srem i32 %tmp_174, 1488" [../HMPI/HLS_lib/./MPI.h:1013]   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 12> <Delay = 1.75> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 16> : 1.75ns
+ST_16 : Operation 180 [23/36] (1.75ns)   --->   "%tmp_175 = srem i32 %tmp_174, 1488" [../HMPI/HLS_lib/./MPI.h:1013]   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 12> <Delay = 1.75> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 17> : 1.75ns
+ST_17 : Operation 181 [22/36] (1.75ns)   --->   "%tmp_175 = srem i32 %tmp_174, 1488" [../HMPI/HLS_lib/./MPI.h:1013]   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 12> <Delay = 1.75> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 18> : 1.75ns
+ST_18 : Operation 182 [21/36] (1.75ns)   --->   "%tmp_175 = srem i32 %tmp_174, 1488" [../HMPI/HLS_lib/./MPI.h:1013]   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 12> <Delay = 1.75> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 19> : 1.75ns
+ST_19 : Operation 183 [20/36] (1.75ns)   --->   "%tmp_175 = srem i32 %tmp_174, 1488" [../HMPI/HLS_lib/./MPI.h:1013]   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 12> <Delay = 1.75> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 20> : 1.75ns
+ST_20 : Operation 184 [19/36] (1.75ns)   --->   "%tmp_175 = srem i32 %tmp_174, 1488" [../HMPI/HLS_lib/./MPI.h:1013]   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 12> <Delay = 1.75> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 21> : 1.75ns
+ST_21 : Operation 185 [18/36] (1.75ns)   --->   "%tmp_175 = srem i32 %tmp_174, 1488" [../HMPI/HLS_lib/./MPI.h:1013]   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 12> <Delay = 1.75> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 22> : 1.75ns
+ST_22 : Operation 186 [17/36] (1.75ns)   --->   "%tmp_175 = srem i32 %tmp_174, 1488" [../HMPI/HLS_lib/./MPI.h:1013]   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 12> <Delay = 1.75> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 23> : 1.75ns
+ST_23 : Operation 187 [16/36] (1.75ns)   --->   "%tmp_175 = srem i32 %tmp_174, 1488" [../HMPI/HLS_lib/./MPI.h:1013]   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 12> <Delay = 1.75> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 24> : 1.75ns
+ST_24 : Operation 188 [15/36] (1.75ns)   --->   "%tmp_175 = srem i32 %tmp_174, 1488" [../HMPI/HLS_lib/./MPI.h:1013]   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 12> <Delay = 1.75> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 25> : 1.75ns
+ST_25 : Operation 189 [14/36] (1.75ns)   --->   "%tmp_175 = srem i32 %tmp_174, 1488" [../HMPI/HLS_lib/./MPI.h:1013]   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 12> <Delay = 1.75> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 26> : 1.75ns
+ST_26 : Operation 190 [13/36] (1.75ns)   --->   "%tmp_175 = srem i32 %tmp_174, 1488" [../HMPI/HLS_lib/./MPI.h:1013]   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 12> <Delay = 1.75> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 27> : 1.75ns
+ST_27 : Operation 191 [12/36] (1.75ns)   --->   "%tmp_175 = srem i32 %tmp_174, 1488" [../HMPI/HLS_lib/./MPI.h:1013]   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 12> <Delay = 1.75> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 28> : 1.75ns
+ST_28 : Operation 192 [11/36] (1.75ns)   --->   "%tmp_175 = srem i32 %tmp_174, 1488" [../HMPI/HLS_lib/./MPI.h:1013]   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 12> <Delay = 1.75> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 29> : 1.75ns
+ST_29 : Operation 193 [10/36] (1.75ns)   --->   "%tmp_175 = srem i32 %tmp_174, 1488" [../HMPI/HLS_lib/./MPI.h:1013]   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 12> <Delay = 1.75> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 30> : 1.75ns
+ST_30 : Operation 194 [9/36] (1.75ns)   --->   "%tmp_175 = srem i32 %tmp_174, 1488" [../HMPI/HLS_lib/./MPI.h:1013]   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 12> <Delay = 1.75> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 31> : 1.75ns
+ST_31 : Operation 195 [8/36] (1.75ns)   --->   "%tmp_175 = srem i32 %tmp_174, 1488" [../HMPI/HLS_lib/./MPI.h:1013]   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 12> <Delay = 1.75> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 32> : 1.75ns
+ST_32 : Operation 196 [7/36] (1.75ns)   --->   "%tmp_175 = srem i32 %tmp_174, 1488" [../HMPI/HLS_lib/./MPI.h:1013]   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 12> <Delay = 1.75> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 33> : 1.75ns
+ST_33 : Operation 197 [6/36] (1.75ns)   --->   "%tmp_175 = srem i32 %tmp_174, 1488" [../HMPI/HLS_lib/./MPI.h:1013]   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 12> <Delay = 1.75> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 34> : 1.75ns
+ST_34 : Operation 198 [5/36] (1.75ns)   --->   "%tmp_175 = srem i32 %tmp_174, 1488" [../HMPI/HLS_lib/./MPI.h:1013]   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 12> <Delay = 1.75> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 35> : 1.75ns
+ST_35 : Operation 199 [4/36] (1.75ns)   --->   "%tmp_175 = srem i32 %tmp_174, 1488" [../HMPI/HLS_lib/./MPI.h:1013]   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 12> <Delay = 1.75> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 36> : 1.75ns
+ST_36 : Operation 200 [3/36] (1.75ns)   --->   "%tmp_175 = srem i32 %tmp_174, 1488" [../HMPI/HLS_lib/./MPI.h:1013]   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 12> <Delay = 1.75> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 37> : 1.75ns
+ST_37 : Operation 201 [2/36] (1.75ns)   --->   "%tmp_175 = srem i32 %tmp_174, 1488" [../HMPI/HLS_lib/./MPI.h:1013]   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 12> <Delay = 1.75> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+ <State 38> : 3.53ns
+ST_38 : Operation 202 [1/36] (1.75ns)   --->   "%tmp_175 = srem i32 %tmp_174, 1488" [../HMPI/HLS_lib/./MPI.h:1013]   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 12> <Delay = 1.75> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_38 : Operation 203 [1/1] (0.00ns)   --->   "%tmp_265 = trunc i32 %tmp_175 to i12" [../HMPI/HLS_lib/./MPI.h:1013]
+ST_38 : Operation 204 [1/1] (0.93ns)   --->   "%tmp_176 = icmp eq i12 %tmp_265, 0" [../HMPI/HLS_lib/./MPI.h:1013]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_38 : Operation 205 [1/1] (0.83ns)   --->   "br i1 %tmp_176, label %.preheader978.preheader, label %.loopexit979_ifconv" [../HMPI/HLS_lib/./MPI.h:1013]
+ST_38 : Operation 206 [1/1] (0.83ns)   --->   "br label %.preheader978" [../HMPI/HLS_lib/./MPI.h:1014]
+
+ <State 39> : 2.76ns
+ST_39 : Operation 207 [1/1] (0.00ns)   --->   "%p_0704_1 = phi i1 [ %last_V_4, %36 ], [ %recv_data_last_V, %.preheader978.preheader ]"
+ST_39 : Operation 208 [1/1] (0.00ns)   --->   "br i1 %p_0704_1, label %.loopexit979_ifconv.loopexit, label %36" [../HMPI/HLS_lib/./MPI.h:1014]
+ST_39 : Operation 209 [1/1] (2.18ns)   --->   "%tmp_5 = call i129 @_ssdm_op_Read.ap_fifo.volatile.i129P(i129* @stream_in_V)"   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 129> <Depth = 0> <FIFO>
+ST_39 : Operation 210 [1/1] (0.00ns)   --->   "%last_V_4 = call i1 @_ssdm_op_BitSelect.i1.i129.i32(i129 %tmp_5, i32 72)" [../HMPI/HLS_lib/./MPI.h:21->../HMPI/HLS_lib/./MPI.h:1015]
+ST_39 : Operation 211 [1/1] (0.00ns)   --->   "br label %.preheader978" [../HMPI/HLS_lib/./MPI.h:1017]
+ST_39 : Operation 212 [1/1] (0.83ns)   --->   "br label %.loopexit979_ifconv"
+ST_39 : Operation 213 [1/1] (0.00ns)   --->   "%p_0704_2 = phi i1 [ %recv_data_last_V, %._crit_edge51 ], [ true, %.loopexit979_ifconv.loopexit ]"
+ST_39 : Operation 214 [1/1] (0.00ns)   --->   "%op2_assign_load = load i32* %op2_assign" [../HMPI/HLS_lib/./MPI.h:1021]
+ST_39 : Operation 215 [1/1] (1.48ns)   --->   "%seq_num = add nsw i32 %op2_assign_load, 1" [../HMPI/HLS_lib/./MPI.h:1021]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_39 : Operation 216 [1/1] (0.00ns) (grouped into LUT with out node seq_num_2)   --->   "%p_1 = select i1 %tmp_169, i32 %seq_num, i32 %op2_assign_load" [../HMPI/HLS_lib/./MPI.h:1020]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.44> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_39 : Operation 217 [1/1] (0.44ns) (out node of the LUT)   --->   "%seq_num_2 = select i1 %recv_data_last_V, i32 %p_1, i32 %op2_assign_load" [../HMPI/HLS_lib/./MPI.h:21->../HMPI/HLS_lib/./MPI.h:986]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.44> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_39 : Operation 218 [1/1] (0.00ns)   --->   "br i1 %tmp_169, label %.preheader976.preheader, label %38" [../HMPI/HLS_lib/./MPI.h:1029]
+ST_39 : Operation 219 [1/1] (0.90ns)   --->   "%tmp_198 = icmp eq i4 %p_Result_s, 0" [../HMPI/HLS_lib/./MPI.h:1034]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_39 : Operation 220 [1/1] (0.00ns)   --->   "br i1 %tmp_198, label %.preheader975.preheader, label %..loopexit977_crit_edge1272" [../HMPI/HLS_lib/./MPI.h:1034]
+ST_39 : Operation 221 [1/1] (0.83ns)   --->   "store i1 %p_s, i1* %p_7" [../HMPI/HLS_lib/./MPI.h:987]
+ST_39 : Operation 222 [1/1] (0.83ns)   --->   "store i1 false, i1* %p_6"
+ST_39 : Operation 223 [1/1] (0.83ns)   --->   "store i32 %seq_num_2, i32* %op2_assign" [../HMPI/HLS_lib/./MPI.h:21->../HMPI/HLS_lib/./MPI.h:986]
+ST_39 : Operation 224 [1/1] (0.83ns)   --->   "store i1 %p_0704_2, i1* %last_V" [../HMPI/HLS_lib/./MPI.h:21->../HMPI/HLS_lib/./MPI.h:986]
+ST_39 : Operation 225 [1/1] (1.08ns)   --->   "br label %.loopexit977" [../HMPI/HLS_lib/./MPI.h:1034]
+ST_39 : Operation 226 [1/1] (0.83ns)   --->   "br label %.preheader975" [../HMPI/HLS_lib/./MPI.h:1035]
+ST_39 : Operation 227 [1/1] (0.00ns)   --->   "%tmp_274 = shl i32 %i4, 3" [../HMPI/HLS_lib/./MPI.h:1031]
+ST_39 : Operation 228 [1/1] (0.83ns)   --->   "br label %.preheader976" [../HMPI/HLS_lib/./MPI.h:1030]
+
+ <State 40> : 2.19ns
+ST_40 : Operation 229 [1/1] (0.00ns)   --->   "%p_0704_3 = phi i1 [ %last_V_5, %39 ], [ %p_0704_2, %.preheader975.preheader ]"
+ST_40 : Operation 230 [1/1] (0.00ns)   --->   "br i1 %p_0704_3, label %40, label %39" [../HMPI/HLS_lib/./MPI.h:1035]
+ST_40 : Operation 231 [1/1] (2.18ns)   --->   "%tmp_6 = call i129 @_ssdm_op_Read.ap_fifo.volatile.i129P(i129* @stream_in_V)"   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 129> <Depth = 0> <FIFO>
+ST_40 : Operation 232 [1/1] (0.00ns)   --->   "%last_V_5 = call i1 @_ssdm_op_BitSelect.i1.i129.i32(i129 %tmp_6, i32 72)" [../HMPI/HLS_lib/./MPI.h:21->../HMPI/HLS_lib/./MPI.h:1036]
+ST_40 : Operation 233 [1/1] (0.00ns)   --->   "br label %.preheader975" [../HMPI/HLS_lib/./MPI.h:1038]
+ST_40 : Operation 234 [1/1] (0.00ns)   --->   "%p_Result_11 = call i4 @_ssdm_op_PartSelect.i4.i129.i32.i32(i129 %tmp_3243, i32 89, i32 92)" [../HMPI/HLS_lib/./MPI.h:1039]
+ST_40 : Operation 235 [1/1] (0.90ns)   --->   "%tmp_209 = icmp eq i4 %p_Result_11, 0" [../HMPI/HLS_lib/./MPI.h:1039]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_40 : Operation 236 [1/1] (0.00ns)   --->   "br i1 %tmp_209, label %41, label %58" [../HMPI/HLS_lib/./MPI.h:1039]
+ST_40 : Operation 237 [1/1] (0.90ns)   --->   "%tmp_212 = icmp eq i4 %p_Result_11, 1" [../HMPI/HLS_lib/./MPI.h:1071]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_40 : Operation 238 [1/1] (0.00ns)   --->   "br i1 %tmp_212, label %59, label %..loopexit977_crit_edge" [../HMPI/HLS_lib/./MPI.h:1071]
+ST_40 : Operation 239 [1/1] (0.83ns)   --->   "store i1 %p_s, i1* %p_7" [../HMPI/HLS_lib/./MPI.h:987]
+ST_40 : Operation 240 [1/1] (0.83ns)   --->   "store i1 false, i1* %p_6"
+ST_40 : Operation 241 [1/1] (0.83ns)   --->   "store i32 %seq_num_2, i32* %op2_assign" [../HMPI/HLS_lib/./MPI.h:21->../HMPI/HLS_lib/./MPI.h:986]
+ST_40 : Operation 242 [1/1] (0.83ns)   --->   "store i1 true, i1* %last_V"
+ST_40 : Operation 243 [1/1] (1.08ns)   --->   "br label %.loopexit977" [../HMPI/HLS_lib/./MPI.h:1071]
+ST_40 : Operation 244 [1/1] (0.00ns)   --->   "%temp_diff_src_or_typ_74 = zext i8 %recv_data_dest_V to i16" [../HMPI/HLS_lib/./MPI.h:76->../HMPI/HLS_lib/./MPI.h:1073]
+ST_40 : Operation 245 [1/1] (0.00ns)   --->   "%temp_diff_src_or_typ_75 = call i8 @_ssdm_op_PartSelect.i8.i129.i32.i32(i129 %tmp_3243, i32 16, i32 23)" [../HMPI/HLS_lib/./MPI.h:77->../HMPI/HLS_lib/./MPI.h:1073]
+ST_40 : Operation 246 [1/1] (0.00ns)   --->   "%temp_diff_src_or_typ_76 = call i8 @_ssdm_op_PartSelect.i8.i129.i32.i32(i129 %tmp_3243, i32 24, i32 31)" [../HMPI/HLS_lib/./MPI.h:78->../HMPI/HLS_lib/./MPI.h:1073]
+ST_40 : Operation 247 [1/1] (0.00ns)   --->   "%temp_diff_src_or_typ_77 = call i16 @_ssdm_op_PartSelect.i16.i129.i32.i32(i129 %tmp_3243, i32 32, i32 47)" [../HMPI/HLS_lib/./MPI.h:79->../HMPI/HLS_lib/./MPI.h:1073]
+ST_40 : Operation 248 [1/1] (0.00ns)   --->   "%temp_diff_src_or_typ_78 = call i8 @_ssdm_op_PartSelect.i8.i129.i32.i32(i129 %tmp_3243, i32 48, i32 55)" [../HMPI/HLS_lib/./MPI.h:80->../HMPI/HLS_lib/./MPI.h:1073]
+ST_40 : Operation 249 [1/1] (0.00ns)   --->   "%temp_diff_src_or_typ_79 = call i4 @_ssdm_op_PartSelect.i4.i129.i32.i32(i129 %tmp_3243, i32 60, i32 63)" [../HMPI/HLS_lib/./MPI.h:82->../HMPI/HLS_lib/./MPI.h:1073]
+ST_40 : Operation 250 [1/1] (0.78ns)   --->   "%tmp_214 = icmp eq i8 %temp_diff_src_or_typ_76, 0" [../HMPI/HLS_lib/./MPI.h:1074]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_40 : Operation 251 [1/1] (0.00ns)   --->   "br i1 %tmp_214, label %.preheader969.preheader, label %67" [../HMPI/HLS_lib/./MPI.h:1074]
+ST_40 : Operation 252 [1/1] (0.78ns)   --->   "%tmp_216 = icmp eq i8 %temp_diff_src_or_typ_76, 1" [../HMPI/HLS_lib/./MPI.h:1087]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_40 : Operation 253 [1/1] (0.00ns)   --->   "br i1 %tmp_216, label %.preheader968.preheader, label %._crit_edge74" [../HMPI/HLS_lib/./MPI.h:1087]
+ST_40 : Operation 254 [1/1] (0.00ns)   --->   "%float_clr_num_load_3 = load i32* @float_clr_num, align 4" [../HMPI/HLS_lib/./MPI.h:1088]
+ST_40 : Operation 255 [1/1] (0.83ns)   --->   "br label %.preheader968" [../HMPI/HLS_lib/./MPI.h:1088]
+ST_40 : Operation 256 [1/1] (0.00ns)   --->   "%float_req_num_load_4 = load i32* @float_req_num, align 4" [../HMPI/HLS_lib/./MPI.h:1075]
+ST_40 : Operation 257 [1/1] (0.83ns)   --->   "br label %.preheader969" [../HMPI/HLS_lib/./MPI.h:1075]
+ST_40 : Operation 258 [1/1] (0.00ns)   --->   "%temp_diff_src_or_typ = zext i8 %recv_data_dest_V to i16" [../HMPI/HLS_lib/./MPI.h:76->../HMPI/HLS_lib/./MPI.h:1041]
+ST_40 : Operation 259 [1/1] (0.00ns)   --->   "%temp_diff_src_or_typ_69 = call i8 @_ssdm_op_PartSelect.i8.i129.i32.i32(i129 %tmp_3243, i32 16, i32 23)" [../HMPI/HLS_lib/./MPI.h:77->../HMPI/HLS_lib/./MPI.h:1041]
+ST_40 : Operation 260 [1/1] (0.00ns)   --->   "%temp_diff_src_or_typ_70 = call i8 @_ssdm_op_PartSelect.i8.i129.i32.i32(i129 %tmp_3243, i32 24, i32 31)" [../HMPI/HLS_lib/./MPI.h:78->../HMPI/HLS_lib/./MPI.h:1041]
+ST_40 : Operation 261 [1/1] (0.00ns)   --->   "%temp_diff_src_or_typ_71 = call i16 @_ssdm_op_PartSelect.i16.i129.i32.i32(i129 %tmp_3243, i32 32, i32 47)" [../HMPI/HLS_lib/./MPI.h:79->../HMPI/HLS_lib/./MPI.h:1041]
+ST_40 : Operation 262 [1/1] (0.00ns)   --->   "%temp_diff_src_or_typ_72 = call i8 @_ssdm_op_PartSelect.i8.i129.i32.i32(i129 %tmp_3243, i32 48, i32 55)" [../HMPI/HLS_lib/./MPI.h:80->../HMPI/HLS_lib/./MPI.h:1041]
+ST_40 : Operation 263 [1/1] (0.00ns)   --->   "%temp_diff_src_or_typ_73 = call i4 @_ssdm_op_PartSelect.i4.i129.i32.i32(i129 %tmp_3243, i32 60, i32 63)" [../HMPI/HLS_lib/./MPI.h:82->../HMPI/HLS_lib/./MPI.h:1041]
+ST_40 : Operation 264 [1/1] (0.78ns)   --->   "%tmp_211 = icmp eq i8 %temp_diff_src_or_typ_70, 0" [../HMPI/HLS_lib/./MPI.h:1042]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_40 : Operation 265 [1/1] (0.00ns)   --->   "br i1 %tmp_211, label %.preheader973.preheader, label %49" [../HMPI/HLS_lib/./MPI.h:1042]
+ST_40 : Operation 266 [1/1] (0.78ns)   --->   "%tmp_213 = icmp eq i8 %temp_diff_src_or_typ_70, 1" [../HMPI/HLS_lib/./MPI.h:1055]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_40 : Operation 267 [1/1] (0.00ns)   --->   "br i1 %tmp_213, label %.preheader971.preheader, label %._crit_edge60" [../HMPI/HLS_lib/./MPI.h:1055]
+ST_40 : Operation 268 [1/1] (0.00ns)   --->   "%int_clr_num_load_2 = load i32* @int_clr_num, align 4" [../HMPI/HLS_lib/./MPI.h:1056]
+ST_40 : Operation 269 [1/1] (0.83ns)   --->   "br label %.preheader971" [../HMPI/HLS_lib/./MPI.h:1056]
+ST_40 : Operation 270 [1/1] (0.00ns)   --->   "%int_req_num_load_2 = load i32* @int_req_num, align 4" [../HMPI/HLS_lib/./MPI.h:1043]
+ST_40 : Operation 271 [1/1] (0.83ns)   --->   "br label %.preheader973" [../HMPI/HLS_lib/./MPI.h:1043]
+
+ <State 41> : 2.57ns
+ST_41 : Operation 272 [1/1] (0.00ns)   --->   "%i11 = phi i31 [ %i_22, %._crit_edge75 ], [ 0, %.preheader968.preheader ]"
+ST_41 : Operation 273 [1/1] (0.00ns)   --->   "%i11_cast = zext i31 %i11 to i32" [../HMPI/HLS_lib/./MPI.h:1088]
+ST_41 : Operation 274 [1/1] (1.14ns)   --->   "%tmp_232 = icmp slt i32 %i11_cast, %float_clr_num_load_3" [../HMPI/HLS_lib/./MPI.h:1088]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_41 : Operation 275 [1/1] (1.48ns)   --->   "%i_22 = add i31 %i11, 1" [../HMPI/HLS_lib/./MPI.h:1088]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_41 : Operation 276 [1/1] (0.00ns)   --->   "br i1 %tmp_232, label %68, label %74" [../HMPI/HLS_lib/./MPI.h:1088]
+ST_41 : Operation 277 [1/1] (0.00ns)   --->   "%tmp_235 = zext i31 %i11 to i64" [../HMPI/HLS_lib/./MPI.h:1089]
+ST_41 : Operation 278 [1/1] (0.00ns)   --->   "%float_clr2snd_array_115 = getelementptr [512 x i8]* @float_clr2snd_array_5, i64 0, i64 %tmp_235" [../HMPI/HLS_lib/./MPI.h:1089]
+ST_41 : Operation 279 [2/2] (1.77ns)   --->   "%float_clr2snd_array_116 = load i8* %float_clr2snd_array_115, align 2" [../HMPI/HLS_lib/./MPI.h:1089]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_41 : Operation 280 [1/1] (0.00ns)   --->   "%tmp_237 = sext i32 %float_clr_num_load_3 to i64" [../HMPI/HLS_lib/./MPI.h:1097]
+ST_41 : Operation 281 [1/1] (0.00ns)   --->   "%float_clr2snd_array_127 = getelementptr [512 x i16]* @float_clr2snd_array_1, i64 0, i64 %tmp_237" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:1097]
+ST_41 : Operation 282 [1/1] (1.77ns)   --->   "store i16 %temp_diff_src_or_typ_74, i16* %float_clr2snd_array_127, align 2" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:1097]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_41 : Operation 283 [1/1] (0.00ns)   --->   "%float_clr2snd_array_128 = getelementptr [512 x i8]* @float_clr2snd_array_5, i64 0, i64 %tmp_237" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:1097]
+ST_41 : Operation 284 [1/1] (1.77ns)   --->   "store i8 %temp_diff_src_or_typ_75, i8* %float_clr2snd_array_128, align 2" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:1097]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_41 : Operation 285 [1/1] (0.00ns)   --->   "%float_clr2snd_array_129 = getelementptr [512 x i1]* @float_clr2snd_array_4, i64 0, i64 %tmp_237" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:1097]
+ST_41 : Operation 286 [1/1] (0.94ns)   --->   "store i1 true, i1* %float_clr2snd_array_129, align 1" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:1097]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_41 : Operation 287 [1/1] (0.00ns)   --->   "%float_clr2snd_array_130 = getelementptr [512 x i16]* @float_clr2snd_array_3, i64 0, i64 %tmp_237" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:1097]
+ST_41 : Operation 288 [1/1] (1.77ns)   --->   "store i16 %temp_diff_src_or_typ_77, i16* %float_clr2snd_array_130, align 2" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:1097]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_41 : Operation 289 [1/1] (0.00ns)   --->   "%float_clr2snd_array_131 = getelementptr [512 x i8]* @float_clr2snd_array_s, i64 0, i64 %tmp_237" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:1097]
+ST_41 : Operation 290 [1/1] (1.77ns)   --->   "store i8 %temp_diff_src_or_typ_78, i8* %float_clr2snd_array_131, align 2" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:1097]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_41 : Operation 291 [1/1] (0.00ns)   --->   "%float_clr2snd_array_132 = getelementptr [512 x i4]* @float_clr2snd_array_6, i64 0, i64 %tmp_237" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:1097]
+ST_41 : Operation 292 [1/1] (1.77ns)   --->   "store i4 %temp_diff_src_or_typ_79, i4* %float_clr2snd_array_132, align 1" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:1097]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_41 : Operation 293 [1/1] (1.48ns)   --->   "%tmp_238 = add nsw i32 %float_clr_num_load_3, 1" [../HMPI/HLS_lib/./MPI.h:1098]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_41 : Operation 294 [1/1] (0.91ns)   --->   "store i32 %tmp_238, i32* @float_clr_num, align 4" [../HMPI/HLS_lib/./MPI.h:1098]
+ST_41 : Operation 295 [1/1] (0.00ns)   --->   "br label %._crit_edge74" [../HMPI/HLS_lib/./MPI.h:1099]
+ST_41 : Operation 296 [1/1] (0.00ns)   --->   "br label %75"
+ST_41 : Operation 297 [1/1] (0.00ns)   --->   "%i10 = phi i31 [ %i_21, %._crit_edge68 ], [ 0, %.preheader969.preheader ]"
+ST_41 : Operation 298 [1/1] (0.00ns)   --->   "%i10_cast = zext i31 %i10 to i32" [../HMPI/HLS_lib/./MPI.h:1075]
+ST_41 : Operation 299 [1/1] (1.14ns)   --->   "%tmp_222 = icmp slt i32 %i10_cast, %float_req_num_load_4" [../HMPI/HLS_lib/./MPI.h:1075]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_41 : Operation 300 [1/1] (1.48ns)   --->   "%i_21 = add i31 %i10, 1" [../HMPI/HLS_lib/./MPI.h:1075]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_41 : Operation 301 [1/1] (0.00ns)   --->   "br i1 %tmp_222, label %60, label %66" [../HMPI/HLS_lib/./MPI.h:1075]
+ST_41 : Operation 302 [1/1] (0.00ns)   --->   "%tmp_228 = zext i31 %i10 to i64" [../HMPI/HLS_lib/./MPI.h:1076]
+ST_41 : Operation 303 [1/1] (0.00ns)   --->   "%float_request_array_232 = getelementptr [512 x i8]* @float_request_array_5, i64 0, i64 %tmp_228" [../HMPI/HLS_lib/./MPI.h:1076]
+ST_41 : Operation 304 [2/2] (1.77ns)   --->   "%float_request_array_233 = load i8* %float_request_array_232, align 2" [../HMPI/HLS_lib/./MPI.h:1076]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_41 : Operation 305 [1/1] (0.00ns)   --->   "%tmp_230 = sext i32 %float_req_num_load_4 to i64" [../HMPI/HLS_lib/./MPI.h:1084]
+ST_41 : Operation 306 [1/1] (0.00ns)   --->   "%float_request_array_244 = getelementptr [512 x i16]* @float_request_array_1, i64 0, i64 %tmp_230" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:1084]
+ST_41 : Operation 307 [1/1] (1.77ns)   --->   "store i16 %temp_diff_src_or_typ_74, i16* %float_request_array_244, align 2" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:1084]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_41 : Operation 308 [1/1] (0.00ns)   --->   "%float_request_array_245 = getelementptr [512 x i8]* @float_request_array_5, i64 0, i64 %tmp_230" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:1084]
+ST_41 : Operation 309 [1/1] (1.77ns)   --->   "store i8 %temp_diff_src_or_typ_75, i8* %float_request_array_245, align 2" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:1084]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_41 : Operation 310 [1/1] (0.00ns)   --->   "%float_request_array_246 = getelementptr [512 x i8]* @float_request_array_4, i64 0, i64 %tmp_230" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:1084]
+ST_41 : Operation 311 [1/1] (1.77ns)   --->   "store i8 0, i8* %float_request_array_246, align 1" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:1084]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_41 : Operation 312 [1/1] (0.00ns)   --->   "%float_request_array_247 = getelementptr [512 x i16]* @float_request_array_3, i64 0, i64 %tmp_230" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:1084]
+ST_41 : Operation 313 [1/1] (1.77ns)   --->   "store i16 %temp_diff_src_or_typ_77, i16* %float_request_array_247, align 2" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:1084]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_41 : Operation 314 [1/1] (0.00ns)   --->   "%float_request_array_248 = getelementptr [512 x i8]* @float_request_array_s, i64 0, i64 %tmp_230" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:1084]
+ST_41 : Operation 315 [1/1] (1.77ns)   --->   "store i8 %temp_diff_src_or_typ_78, i8* %float_request_array_248, align 2" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:1084]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_41 : Operation 316 [1/1] (0.00ns)   --->   "%float_request_array_249 = getelementptr [512 x i4]* @float_request_array_7, i64 0, i64 %tmp_230" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:1084]
+ST_41 : Operation 317 [1/1] (1.77ns)   --->   "store i4 %temp_diff_src_or_typ_79, i4* %float_request_array_249, align 1" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:1084]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_41 : Operation 318 [1/1] (1.48ns)   --->   "%tmp_231 = add nsw i32 %float_req_num_load_4, 1" [../HMPI/HLS_lib/./MPI.h:1085]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_41 : Operation 319 [1/1] (0.91ns)   --->   "store i32 %tmp_231, i32* @float_req_num, align 4" [../HMPI/HLS_lib/./MPI.h:1085]
+ST_41 : Operation 320 [1/1] (0.00ns)   --->   "br label %75" [../HMPI/HLS_lib/./MPI.h:1086]
+ST_41 : Operation 321 [1/1] (1.48ns)   --->   "%i_24 = add nsw i32 %i4, -8" [../HMPI/HLS_lib/./MPI.h:1100]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_41 : Operation 322 [1/1] (0.83ns)   --->   "store i1 %p_s, i1* %p_7" [../HMPI/HLS_lib/./MPI.h:987]
+ST_41 : Operation 323 [1/1] (0.83ns)   --->   "store i1 false, i1* %p_6"
+ST_41 : Operation 324 [1/1] (0.83ns)   --->   "store i32 %seq_num_2, i32* %op2_assign" [../HMPI/HLS_lib/./MPI.h:21->../HMPI/HLS_lib/./MPI.h:986]
+ST_41 : Operation 325 [1/1] (0.83ns)   --->   "store i1 true, i1* %last_V"
+ST_41 : Operation 326 [1/1] (1.08ns)   --->   "br label %.loopexit977" [../HMPI/HLS_lib/./MPI.h:1101]
+
+ <State 42> : 2.55ns
+ST_42 : Operation 327 [1/2] (1.77ns)   --->   "%float_clr2snd_array_116 = load i8* %float_clr2snd_array_115, align 2" [../HMPI/HLS_lib/./MPI.h:1089]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_42 : Operation 328 [1/1] (0.78ns)   --->   "%tmp_236 = icmp eq i8 %float_clr2snd_array_116, %temp_diff_src_or_typ_75" [../HMPI/HLS_lib/./MPI.h:1089]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_42 : Operation 329 [1/1] (0.00ns)   --->   "br i1 %tmp_236, label %69, label %._crit_edge75" [../HMPI/HLS_lib/./MPI.h:1089]
+ST_42 : Operation 330 [1/1] (0.00ns)   --->   "%float_clr2snd_array_117 = getelementptr [512 x i16]* @float_clr2snd_array_1, i64 0, i64 %tmp_235" [../HMPI/HLS_lib/./MPI.h:1090]
+ST_42 : Operation 331 [2/2] (1.77ns)   --->   "%float_clr2snd_array_118 = load i16* %float_clr2snd_array_117, align 2" [../HMPI/HLS_lib/./MPI.h:1090]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+
+ <State 43> : 2.87ns
+ST_43 : Operation 332 [1/2] (1.77ns)   --->   "%float_clr2snd_array_118 = load i16* %float_clr2snd_array_117, align 2" [../HMPI/HLS_lib/./MPI.h:1090]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_43 : Operation 333 [1/1] (1.09ns)   --->   "%tmp_241 = icmp eq i16 %float_clr2snd_array_118, %temp_diff_src_or_typ_74" [../HMPI/HLS_lib/./MPI.h:1090]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_43 : Operation 334 [1/1] (0.00ns)   --->   "br i1 %tmp_241, label %70, label %._crit_edge75" [../HMPI/HLS_lib/./MPI.h:1090]
+ST_43 : Operation 335 [1/1] (0.00ns)   --->   "%float_clr2snd_array_119 = getelementptr [512 x i1]* @float_clr2snd_array_4, i64 0, i64 %tmp_235" [../HMPI/HLS_lib/./MPI.h:1091]
+ST_43 : Operation 336 [2/2] (0.94ns)   --->   "%float_clr2snd_array_120 = load i1* %float_clr2snd_array_119, align 1" [../HMPI/HLS_lib/./MPI.h:1091]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+
+ <State 44> : 1.77ns
+ST_44 : Operation 337 [1/2] (0.94ns)   --->   "%float_clr2snd_array_120 = load i1* %float_clr2snd_array_119, align 1" [../HMPI/HLS_lib/./MPI.h:1091]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_44 : Operation 338 [1/1] (0.00ns)   --->   "br i1 %float_clr2snd_array_120, label %71, label %._crit_edge75" [../HMPI/HLS_lib/./MPI.h:1091]
+ST_44 : Operation 339 [1/1] (0.00ns)   --->   "%float_clr2snd_array_121 = getelementptr [512 x i16]* @float_clr2snd_array_3, i64 0, i64 %tmp_235" [../HMPI/HLS_lib/./MPI.h:1092]
+ST_44 : Operation 340 [2/2] (1.77ns)   --->   "%float_clr2snd_array_122 = load i16* %float_clr2snd_array_121, align 2" [../HMPI/HLS_lib/./MPI.h:1092]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+
+ <State 45> : 2.87ns
+ST_45 : Operation 341 [1/2] (1.77ns)   --->   "%float_clr2snd_array_122 = load i16* %float_clr2snd_array_121, align 2" [../HMPI/HLS_lib/./MPI.h:1092]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_45 : Operation 342 [1/1] (1.09ns)   --->   "%tmp_248 = icmp eq i16 %float_clr2snd_array_122, %temp_diff_src_or_typ_77" [../HMPI/HLS_lib/./MPI.h:1092]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_45 : Operation 343 [1/1] (0.00ns)   --->   "br i1 %tmp_248, label %72, label %._crit_edge75" [../HMPI/HLS_lib/./MPI.h:1092]
+ST_45 : Operation 344 [1/1] (0.00ns)   --->   "%float_clr2snd_array_123 = getelementptr [512 x i8]* @float_clr2snd_array_s, i64 0, i64 %tmp_235" [../HMPI/HLS_lib/./MPI.h:1093]
+ST_45 : Operation 345 [2/2] (1.77ns)   --->   "%float_clr2snd_array_124 = load i8* %float_clr2snd_array_123, align 2" [../HMPI/HLS_lib/./MPI.h:1093]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+
+ <State 46> : 2.55ns
+ST_46 : Operation 346 [1/2] (1.77ns)   --->   "%float_clr2snd_array_124 = load i8* %float_clr2snd_array_123, align 2" [../HMPI/HLS_lib/./MPI.h:1093]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_46 : Operation 347 [1/1] (0.78ns)   --->   "%tmp_251 = icmp eq i8 %float_clr2snd_array_124, %temp_diff_src_or_typ_78" [../HMPI/HLS_lib/./MPI.h:1093]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_46 : Operation 348 [1/1] (0.00ns)   --->   "br i1 %tmp_251, label %73, label %._crit_edge75" [../HMPI/HLS_lib/./MPI.h:1093]
+ST_46 : Operation 349 [1/1] (0.00ns)   --->   "%float_clr2snd_array_125 = getelementptr [512 x i4]* @float_clr2snd_array_6, i64 0, i64 %tmp_235" [../HMPI/HLS_lib/./MPI.h:1094]
+ST_46 : Operation 350 [2/2] (1.77ns)   --->   "%float_clr2snd_array_126 = load i4* %float_clr2snd_array_125, align 1" [../HMPI/HLS_lib/./MPI.h:1094]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+
+ <State 47> : 2.68ns
+ST_47 : Operation 351 [1/2] (1.77ns)   --->   "%float_clr2snd_array_126 = load i4* %float_clr2snd_array_125, align 1" [../HMPI/HLS_lib/./MPI.h:1094]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_47 : Operation 352 [1/1] (0.90ns)   --->   "%tmp_252 = icmp eq i4 %float_clr2snd_array_126, %temp_diff_src_or_typ_79" [../HMPI/HLS_lib/./MPI.h:1094]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_47 : Operation 353 [1/1] (0.00ns)   --->   "br i1 %tmp_252, label %.loopexit.loopexit, label %._crit_edge75" [../HMPI/HLS_lib/./MPI.h:1094]
+ST_47 : Operation 354 [1/1] (0.00ns)   --->   "br label %.preheader968" [../HMPI/HLS_lib/./MPI.h:1088]
+ST_47 : Operation 355 [1/1] (0.83ns)   --->   "br label %.loopexit"
+ST_47 : Operation 356 [1/2] (1.77ns)   --->   "%float_request_array_243 = load i4* %float_request_array_242, align 1" [../HMPI/HLS_lib/./MPI.h:1081]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_47 : Operation 357 [1/1] (0.90ns)   --->   "%tmp_250 = icmp eq i4 %float_request_array_243, %temp_diff_src_or_typ_79" [../HMPI/HLS_lib/./MPI.h:1081]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_47 : Operation 358 [1/1] (0.00ns)   --->   "br i1 %tmp_250, label %.loopexit.loopexit1277, label %._crit_edge68" [../HMPI/HLS_lib/./MPI.h:1081]
+ST_47 : Operation 359 [1/1] (0.00ns)   --->   "br label %.preheader969" [../HMPI/HLS_lib/./MPI.h:1075]
+ST_47 : Operation 360 [1/1] (0.83ns)   --->   "br label %.loopexit"
+ST_47 : Operation 361 [1/2] (1.77ns)   --->   "%int_clr2snd_array_DA_19 = load i4* %int_clr2snd_array_DA_18, align 1" [../HMPI/HLS_lib/./MPI.h:1062]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_47 : Operation 362 [1/1] (0.90ns)   --->   "%tmp_249 = icmp eq i4 %int_clr2snd_array_DA_19, %temp_diff_src_or_typ_73" [../HMPI/HLS_lib/./MPI.h:1062]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_47 : Operation 363 [1/1] (0.00ns)   --->   "br i1 %tmp_249, label %.loopexit.loopexit1278, label %._crit_edge61" [../HMPI/HLS_lib/./MPI.h:1062]
+ST_47 : Operation 364 [1/1] (0.00ns)   --->   "br label %.preheader971" [../HMPI/HLS_lib/./MPI.h:1056]
+ST_47 : Operation 365 [1/1] (0.83ns)   --->   "br label %.loopexit"
+ST_47 : Operation 366 [1/2] (1.77ns)   --->   "%int_request_array_DA_26 = load i4* %int_request_array_DA_25, align 1" [../HMPI/HLS_lib/./MPI.h:1049]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_47 : Operation 367 [1/1] (0.90ns)   --->   "%tmp_245 = icmp eq i4 %int_request_array_DA_26, %temp_diff_src_or_typ_73" [../HMPI/HLS_lib/./MPI.h:1049]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_47 : Operation 368 [1/1] (0.00ns)   --->   "br i1 %tmp_245, label %.loopexit.loopexit1279, label %._crit_edge54" [../HMPI/HLS_lib/./MPI.h:1049]
+ST_47 : Operation 369 [1/1] (0.83ns)   --->   "br label %.loopexit"
+ST_47 : Operation 370 [1/1] (0.00ns)   --->   "br label %.preheader973" [../HMPI/HLS_lib/./MPI.h:1043]
+ST_47 : Operation 371 [1/1] (0.00ns)   --->   "%p_s_245 = phi i1 [ false, %._crit_edge36 ], [ false, %77 ], [ true, %79 ], [ false, %31 ], [ false, %16 ], [ false, %22 ], [ false, %28 ], [ false, %.loopexit.loopexit ], [ false, %.loopexit.loopexit1277 ], [ false, %.loopexit.loopexit1278 ], [ false, %.loopexit.loopexit1279 ], [ false, %.loopexit.loopexit1280 ]"
+ST_47 : Operation 372 [1/1] (0.00ns)   --->   "ret i1 %p_s_245" [../HMPI/HLS_lib/./MPI.h:1142]
+
+ <State 48> : 2.55ns
+ST_48 : Operation 373 [1/2] (1.77ns)   --->   "%float_request_array_233 = load i8* %float_request_array_232, align 2" [../HMPI/HLS_lib/./MPI.h:1076]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_48 : Operation 374 [1/1] (0.78ns)   --->   "%tmp_229 = icmp eq i8 %float_request_array_233, %temp_diff_src_or_typ_75" [../HMPI/HLS_lib/./MPI.h:1076]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_48 : Operation 375 [1/1] (0.00ns)   --->   "br i1 %tmp_229, label %61, label %._crit_edge68" [../HMPI/HLS_lib/./MPI.h:1076]
+ST_48 : Operation 376 [1/1] (0.00ns)   --->   "%float_request_array_234 = getelementptr [512 x i16]* @float_request_array_1, i64 0, i64 %tmp_228" [../HMPI/HLS_lib/./MPI.h:1077]
+ST_48 : Operation 377 [2/2] (1.77ns)   --->   "%float_request_array_235 = load i16* %float_request_array_234, align 2" [../HMPI/HLS_lib/./MPI.h:1077]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+
+ <State 49> : 2.87ns
+ST_49 : Operation 378 [1/2] (1.77ns)   --->   "%float_request_array_235 = load i16* %float_request_array_234, align 2" [../HMPI/HLS_lib/./MPI.h:1077]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_49 : Operation 379 [1/1] (1.09ns)   --->   "%tmp_234 = icmp eq i16 %float_request_array_235, %temp_diff_src_or_typ_74" [../HMPI/HLS_lib/./MPI.h:1077]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_49 : Operation 380 [1/1] (0.00ns)   --->   "br i1 %tmp_234, label %62, label %._crit_edge68" [../HMPI/HLS_lib/./MPI.h:1077]
+ST_49 : Operation 381 [1/1] (0.00ns)   --->   "%float_request_array_236 = getelementptr [512 x i8]* @float_request_array_4, i64 0, i64 %tmp_228" [../HMPI/HLS_lib/./MPI.h:1078]
+ST_49 : Operation 382 [2/2] (1.77ns)   --->   "%float_request_array_237 = load i8* %float_request_array_236, align 1" [../HMPI/HLS_lib/./MPI.h:1078]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+
+ <State 50> : 2.55ns
+ST_50 : Operation 383 [1/2] (1.77ns)   --->   "%float_request_array_237 = load i8* %float_request_array_236, align 1" [../HMPI/HLS_lib/./MPI.h:1078]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_50 : Operation 384 [1/1] (0.78ns)   --->   "%tmp_240 = icmp eq i8 %float_request_array_237, 0" [../HMPI/HLS_lib/./MPI.h:1078]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_50 : Operation 385 [1/1] (0.00ns)   --->   "br i1 %tmp_240, label %63, label %._crit_edge68" [../HMPI/HLS_lib/./MPI.h:1078]
+ST_50 : Operation 386 [1/1] (0.00ns)   --->   "%float_request_array_238 = getelementptr [512 x i16]* @float_request_array_3, i64 0, i64 %tmp_228" [../HMPI/HLS_lib/./MPI.h:1079]
+ST_50 : Operation 387 [2/2] (1.77ns)   --->   "%float_request_array_239 = load i16* %float_request_array_238, align 2" [../HMPI/HLS_lib/./MPI.h:1079]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+
+ <State 51> : 2.87ns
+ST_51 : Operation 388 [1/2] (1.77ns)   --->   "%float_request_array_239 = load i16* %float_request_array_238, align 2" [../HMPI/HLS_lib/./MPI.h:1079]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_51 : Operation 389 [1/1] (1.09ns)   --->   "%tmp_244 = icmp eq i16 %float_request_array_239, %temp_diff_src_or_typ_77" [../HMPI/HLS_lib/./MPI.h:1079]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_51 : Operation 390 [1/1] (0.00ns)   --->   "br i1 %tmp_244, label %64, label %._crit_edge68" [../HMPI/HLS_lib/./MPI.h:1079]
+ST_51 : Operation 391 [1/1] (0.00ns)   --->   "%float_request_array_240 = getelementptr [512 x i8]* @float_request_array_s, i64 0, i64 %tmp_228" [../HMPI/HLS_lib/./MPI.h:1080]
+ST_51 : Operation 392 [2/2] (1.77ns)   --->   "%float_request_array_241 = load i8* %float_request_array_240, align 2" [../HMPI/HLS_lib/./MPI.h:1080]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+
+ <State 52> : 2.55ns
+ST_52 : Operation 393 [1/2] (1.77ns)   --->   "%float_request_array_241 = load i8* %float_request_array_240, align 2" [../HMPI/HLS_lib/./MPI.h:1080]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_52 : Operation 394 [1/1] (0.78ns)   --->   "%tmp_247 = icmp eq i8 %float_request_array_241, %temp_diff_src_or_typ_78" [../HMPI/HLS_lib/./MPI.h:1080]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_52 : Operation 395 [1/1] (0.00ns)   --->   "br i1 %tmp_247, label %65, label %._crit_edge68" [../HMPI/HLS_lib/./MPI.h:1080]
+ST_52 : Operation 396 [1/1] (0.00ns)   --->   "%float_request_array_242 = getelementptr [512 x i4]* @float_request_array_7, i64 0, i64 %tmp_228" [../HMPI/HLS_lib/./MPI.h:1081]
+ST_52 : Operation 397 [2/2] (1.77ns)   --->   "%float_request_array_243 = load i4* %float_request_array_242, align 1" [../HMPI/HLS_lib/./MPI.h:1081]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+
+ <State 53> : 2.57ns
+ST_53 : Operation 398 [1/1] (0.00ns)   --->   "%i8 = phi i31 [ %i_20, %._crit_edge61 ], [ 0, %.preheader971.preheader ]"
+ST_53 : Operation 399 [1/1] (0.00ns)   --->   "%i8_cast = zext i31 %i8 to i32" [../HMPI/HLS_lib/./MPI.h:1056]
+ST_53 : Operation 400 [1/1] (1.14ns)   --->   "%tmp_221 = icmp slt i32 %i8_cast, %int_clr_num_load_2" [../HMPI/HLS_lib/./MPI.h:1056]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_53 : Operation 401 [1/1] (1.48ns)   --->   "%i_20 = add i31 %i8, 1" [../HMPI/HLS_lib/./MPI.h:1056]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_53 : Operation 402 [1/1] (0.00ns)   --->   "br i1 %tmp_221, label %50, label %56" [../HMPI/HLS_lib/./MPI.h:1056]
+ST_53 : Operation 403 [1/1] (0.00ns)   --->   "%tmp_224 = zext i31 %i8 to i64" [../HMPI/HLS_lib/./MPI.h:1057]
+ST_53 : Operation 404 [1/1] (0.00ns)   --->   "%int_clr2snd_array_SR_18 = getelementptr [512 x i8]* @int_clr2snd_array_SR, i64 0, i64 %tmp_224" [../HMPI/HLS_lib/./MPI.h:1057]
+ST_53 : Operation 405 [2/2] (1.77ns)   --->   "%int_clr2snd_array_SR_19 = load i8* %int_clr2snd_array_SR_18, align 2" [../HMPI/HLS_lib/./MPI.h:1057]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_53 : Operation 406 [1/1] (0.00ns)   --->   "%tmp_226 = sext i32 %int_clr_num_load_2 to i64" [../HMPI/HLS_lib/./MPI.h:1065]
+ST_53 : Operation 407 [1/1] (0.00ns)   --->   "%int_clr2snd_array_DE_20 = getelementptr [512 x i16]* @int_clr2snd_array_DE, i64 0, i64 %tmp_226" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:1065]
+ST_53 : Operation 408 [1/1] (1.77ns)   --->   "store i16 %temp_diff_src_or_typ, i16* %int_clr2snd_array_DE_20, align 2" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:1065]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_53 : Operation 409 [1/1] (0.00ns)   --->   "%int_clr2snd_array_SR_20 = getelementptr [512 x i8]* @int_clr2snd_array_SR, i64 0, i64 %tmp_226" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:1065]
+ST_53 : Operation 410 [1/1] (1.77ns)   --->   "store i8 %temp_diff_src_or_typ_69, i8* %int_clr2snd_array_SR_20, align 2" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:1065]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_53 : Operation 411 [1/1] (0.00ns)   --->   "%int_clr2snd_array_PK_20 = getelementptr [512 x i1]* @int_clr2snd_array_PK, i64 0, i64 %tmp_226" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:1065]
+ST_53 : Operation 412 [1/1] (0.94ns)   --->   "store i1 true, i1* %int_clr2snd_array_PK_20, align 1" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:1065]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_53 : Operation 413 [1/1] (0.00ns)   --->   "%int_clr2snd_array_MS_20 = getelementptr [512 x i16]* @int_clr2snd_array_MS, i64 0, i64 %tmp_226" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:1065]
+ST_53 : Operation 414 [1/1] (1.77ns)   --->   "store i16 %temp_diff_src_or_typ_71, i16* %int_clr2snd_array_MS_20, align 2" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:1065]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_53 : Operation 415 [1/1] (0.00ns)   --->   "%int_clr2snd_array_TA_20 = getelementptr [512 x i8]* @int_clr2snd_array_TA, i64 0, i64 %tmp_226" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:1065]
+ST_53 : Operation 416 [1/1] (1.77ns)   --->   "store i8 %temp_diff_src_or_typ_72, i8* %int_clr2snd_array_TA_20, align 2" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:1065]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_53 : Operation 417 [1/1] (0.00ns)   --->   "%int_clr2snd_array_DA_20 = getelementptr [512 x i4]* @int_clr2snd_array_DA, i64 0, i64 %tmp_226" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:1065]
+ST_53 : Operation 418 [1/1] (1.77ns)   --->   "store i4 %temp_diff_src_or_typ_73, i4* %int_clr2snd_array_DA_20, align 1" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:1065]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_53 : Operation 419 [1/1] (1.48ns)   --->   "%tmp_227 = add nsw i32 %int_clr_num_load_2, 1" [../HMPI/HLS_lib/./MPI.h:1066]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_53 : Operation 420 [1/1] (0.83ns)   --->   "store i32 %tmp_227, i32* @int_clr_num, align 4" [../HMPI/HLS_lib/./MPI.h:1066]
+ST_53 : Operation 421 [1/1] (0.00ns)   --->   "br label %._crit_edge60" [../HMPI/HLS_lib/./MPI.h:1067]
+ST_53 : Operation 422 [1/1] (0.00ns)   --->   "br label %57"
+ST_53 : Operation 423 [1/1] (0.00ns)   --->   "%i7 = phi i31 [ %i_25, %._crit_edge54 ], [ 0, %.preheader973.preheader ]"
+ST_53 : Operation 424 [1/1] (0.00ns)   --->   "%i7_cast = zext i31 %i7 to i32" [../HMPI/HLS_lib/./MPI.h:1043]
+ST_53 : Operation 425 [1/1] (1.14ns)   --->   "%tmp_215 = icmp slt i32 %i7_cast, %int_req_num_load_2" [../HMPI/HLS_lib/./MPI.h:1043]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_53 : Operation 426 [1/1] (1.48ns)   --->   "%i_25 = add i31 %i7, 1" [../HMPI/HLS_lib/./MPI.h:1043]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_53 : Operation 427 [1/1] (0.00ns)   --->   "br i1 %tmp_215, label %42, label %48" [../HMPI/HLS_lib/./MPI.h:1043]
+ST_53 : Operation 428 [1/1] (0.00ns)   --->   "%tmp_217 = zext i31 %i7 to i64" [../HMPI/HLS_lib/./MPI.h:1044]
+ST_53 : Operation 429 [1/1] (0.00ns)   --->   "%int_request_array_SR_23 = getelementptr [512 x i8]* @int_request_array_SR, i64 0, i64 %tmp_217" [../HMPI/HLS_lib/./MPI.h:1044]
+ST_53 : Operation 430 [2/2] (1.77ns)   --->   "%int_request_array_SR_24 = load i8* %int_request_array_SR_23, align 2" [../HMPI/HLS_lib/./MPI.h:1044]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_53 : Operation 431 [1/1] (0.00ns)   --->   "%tmp_219 = sext i32 %int_req_num_load_2 to i64" [../HMPI/HLS_lib/./MPI.h:1052]
+ST_53 : Operation 432 [1/1] (0.00ns)   --->   "%int_request_array_DE_25 = getelementptr [512 x i16]* @int_request_array_DE, i64 0, i64 %tmp_219" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:1052]
+ST_53 : Operation 433 [1/1] (1.77ns)   --->   "store i16 %temp_diff_src_or_typ, i16* %int_request_array_DE_25, align 2" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:1052]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_53 : Operation 434 [1/1] (0.00ns)   --->   "%int_request_array_SR_25 = getelementptr [512 x i8]* @int_request_array_SR, i64 0, i64 %tmp_219" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:1052]
+ST_53 : Operation 435 [1/1] (1.77ns)   --->   "store i8 %temp_diff_src_or_typ_69, i8* %int_request_array_SR_25, align 2" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:1052]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_53 : Operation 436 [1/1] (0.00ns)   --->   "%int_request_array_PK_25 = getelementptr [512 x i1]* @int_request_array_PK, i64 0, i64 %tmp_219" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:1052]
+ST_53 : Operation 437 [1/1] (0.94ns)   --->   "store i1 false, i1* %int_request_array_PK_25, align 1" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:1052]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_53 : Operation 438 [1/1] (0.00ns)   --->   "%int_request_array_MS_25 = getelementptr [512 x i16]* @int_request_array_MS, i64 0, i64 %tmp_219" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:1052]
+ST_53 : Operation 439 [1/1] (1.77ns)   --->   "store i16 %temp_diff_src_or_typ_71, i16* %int_request_array_MS_25, align 2" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:1052]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_53 : Operation 440 [1/1] (0.00ns)   --->   "%int_request_array_TA_23 = getelementptr [512 x i8]* @int_request_array_TA, i64 0, i64 %tmp_219" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:1052]
+ST_53 : Operation 441 [1/1] (1.77ns)   --->   "store i8 %temp_diff_src_or_typ_72, i8* %int_request_array_TA_23, align 2" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:1052]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_53 : Operation 442 [1/1] (0.00ns)   --->   "%int_request_array_DA_27 = getelementptr [512 x i4]* @int_request_array_DA, i64 0, i64 %tmp_219" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:1052]
+ST_53 : Operation 443 [1/1] (1.77ns)   --->   "store i4 %temp_diff_src_or_typ_73, i4* %int_request_array_DA_27, align 1" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:1052]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_53 : Operation 444 [1/1] (1.48ns)   --->   "%tmp_220 = add nsw i32 %int_req_num_load_2, 1" [../HMPI/HLS_lib/./MPI.h:1053]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_53 : Operation 445 [1/1] (0.91ns)   --->   "store i32 %tmp_220, i32* @int_req_num, align 4" [../HMPI/HLS_lib/./MPI.h:1053]
+ST_53 : Operation 446 [1/1] (0.00ns)   --->   "br label %57" [../HMPI/HLS_lib/./MPI.h:1054]
+ST_53 : Operation 447 [1/1] (1.48ns)   --->   "%i_23 = add nsw i32 %i4, -8" [../HMPI/HLS_lib/./MPI.h:1068]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_53 : Operation 448 [1/1] (0.83ns)   --->   "store i1 %p_s, i1* %p_7" [../HMPI/HLS_lib/./MPI.h:987]
+ST_53 : Operation 449 [1/1] (0.83ns)   --->   "store i1 false, i1* %p_6"
+ST_53 : Operation 450 [1/1] (0.83ns)   --->   "store i32 %seq_num_2, i32* %op2_assign" [../HMPI/HLS_lib/./MPI.h:21->../HMPI/HLS_lib/./MPI.h:986]
+ST_53 : Operation 451 [1/1] (0.83ns)   --->   "store i1 true, i1* %last_V"
+ST_53 : Operation 452 [1/1] (1.08ns)   --->   "br label %.loopexit977" [../HMPI/HLS_lib/./MPI.h:1069]
+
+ <State 54> : 2.55ns
+ST_54 : Operation 453 [1/2] (1.77ns)   --->   "%int_clr2snd_array_SR_19 = load i8* %int_clr2snd_array_SR_18, align 2" [../HMPI/HLS_lib/./MPI.h:1057]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_54 : Operation 454 [1/1] (0.78ns)   --->   "%tmp_225 = icmp eq i8 %int_clr2snd_array_SR_19, %temp_diff_src_or_typ_69" [../HMPI/HLS_lib/./MPI.h:1057]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_54 : Operation 455 [1/1] (0.00ns)   --->   "br i1 %tmp_225, label %51, label %._crit_edge61" [../HMPI/HLS_lib/./MPI.h:1057]
+ST_54 : Operation 456 [1/1] (0.00ns)   --->   "%int_clr2snd_array_DE_18 = getelementptr [512 x i16]* @int_clr2snd_array_DE, i64 0, i64 %tmp_224" [../HMPI/HLS_lib/./MPI.h:1058]
+ST_54 : Operation 457 [2/2] (1.77ns)   --->   "%int_clr2snd_array_DE_19 = load i16* %int_clr2snd_array_DE_18, align 2" [../HMPI/HLS_lib/./MPI.h:1058]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+
+ <State 55> : 2.87ns
+ST_55 : Operation 458 [1/2] (1.77ns)   --->   "%int_clr2snd_array_DE_19 = load i16* %int_clr2snd_array_DE_18, align 2" [../HMPI/HLS_lib/./MPI.h:1058]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_55 : Operation 459 [1/1] (1.09ns)   --->   "%tmp_233 = icmp eq i16 %int_clr2snd_array_DE_19, %temp_diff_src_or_typ" [../HMPI/HLS_lib/./MPI.h:1058]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_55 : Operation 460 [1/1] (0.00ns)   --->   "br i1 %tmp_233, label %52, label %._crit_edge61" [../HMPI/HLS_lib/./MPI.h:1058]
+ST_55 : Operation 461 [1/1] (0.00ns)   --->   "%int_clr2snd_array_PK_18 = getelementptr [512 x i1]* @int_clr2snd_array_PK, i64 0, i64 %tmp_224" [../HMPI/HLS_lib/./MPI.h:1059]
+ST_55 : Operation 462 [2/2] (0.94ns)   --->   "%int_clr2snd_array_PK_19 = load i1* %int_clr2snd_array_PK_18, align 1" [../HMPI/HLS_lib/./MPI.h:1059]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+
+ <State 56> : 1.77ns
+ST_56 : Operation 463 [1/2] (0.94ns)   --->   "%int_clr2snd_array_PK_19 = load i1* %int_clr2snd_array_PK_18, align 1" [../HMPI/HLS_lib/./MPI.h:1059]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_56 : Operation 464 [1/1] (0.00ns)   --->   "br i1 %int_clr2snd_array_PK_19, label %53, label %._crit_edge61" [../HMPI/HLS_lib/./MPI.h:1059]
+ST_56 : Operation 465 [1/1] (0.00ns)   --->   "%int_clr2snd_array_MS_18 = getelementptr [512 x i16]* @int_clr2snd_array_MS, i64 0, i64 %tmp_224" [../HMPI/HLS_lib/./MPI.h:1060]
+ST_56 : Operation 466 [2/2] (1.77ns)   --->   "%int_clr2snd_array_MS_19 = load i16* %int_clr2snd_array_MS_18, align 2" [../HMPI/HLS_lib/./MPI.h:1060]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+
+ <State 57> : 2.87ns
+ST_57 : Operation 467 [1/2] (1.77ns)   --->   "%int_clr2snd_array_MS_19 = load i16* %int_clr2snd_array_MS_18, align 2" [../HMPI/HLS_lib/./MPI.h:1060]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_57 : Operation 468 [1/1] (1.09ns)   --->   "%tmp_243 = icmp eq i16 %int_clr2snd_array_MS_19, %temp_diff_src_or_typ_71" [../HMPI/HLS_lib/./MPI.h:1060]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_57 : Operation 469 [1/1] (0.00ns)   --->   "br i1 %tmp_243, label %54, label %._crit_edge61" [../HMPI/HLS_lib/./MPI.h:1060]
+ST_57 : Operation 470 [1/1] (0.00ns)   --->   "%int_clr2snd_array_TA_18 = getelementptr [512 x i8]* @int_clr2snd_array_TA, i64 0, i64 %tmp_224" [../HMPI/HLS_lib/./MPI.h:1061]
+ST_57 : Operation 471 [2/2] (1.77ns)   --->   "%int_clr2snd_array_TA_19 = load i8* %int_clr2snd_array_TA_18, align 2" [../HMPI/HLS_lib/./MPI.h:1061]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+
+ <State 58> : 2.55ns
+ST_58 : Operation 472 [1/2] (1.77ns)   --->   "%int_clr2snd_array_TA_19 = load i8* %int_clr2snd_array_TA_18, align 2" [../HMPI/HLS_lib/./MPI.h:1061]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_58 : Operation 473 [1/1] (0.78ns)   --->   "%tmp_246 = icmp eq i8 %int_clr2snd_array_TA_19, %temp_diff_src_or_typ_72" [../HMPI/HLS_lib/./MPI.h:1061]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_58 : Operation 474 [1/1] (0.00ns)   --->   "br i1 %tmp_246, label %55, label %._crit_edge61" [../HMPI/HLS_lib/./MPI.h:1061]
+ST_58 : Operation 475 [1/1] (0.00ns)   --->   "%int_clr2snd_array_DA_18 = getelementptr [512 x i4]* @int_clr2snd_array_DA, i64 0, i64 %tmp_224" [../HMPI/HLS_lib/./MPI.h:1062]
+ST_58 : Operation 476 [2/2] (1.77ns)   --->   "%int_clr2snd_array_DA_19 = load i4* %int_clr2snd_array_DA_18, align 1" [../HMPI/HLS_lib/./MPI.h:1062]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+
+ <State 59> : 2.55ns
+ST_59 : Operation 477 [1/2] (1.77ns)   --->   "%int_request_array_SR_24 = load i8* %int_request_array_SR_23, align 2" [../HMPI/HLS_lib/./MPI.h:1044]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_59 : Operation 478 [1/1] (0.78ns)   --->   "%tmp_218 = icmp eq i8 %int_request_array_SR_24, %temp_diff_src_or_typ_69" [../HMPI/HLS_lib/./MPI.h:1044]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_59 : Operation 479 [1/1] (0.00ns)   --->   "br i1 %tmp_218, label %43, label %._crit_edge54" [../HMPI/HLS_lib/./MPI.h:1044]
+ST_59 : Operation 480 [1/1] (0.00ns)   --->   "%int_request_array_DE_23 = getelementptr [512 x i16]* @int_request_array_DE, i64 0, i64 %tmp_217" [../HMPI/HLS_lib/./MPI.h:1045]
+ST_59 : Operation 481 [2/2] (1.77ns)   --->   "%int_request_array_DE_24 = load i16* %int_request_array_DE_23, align 2" [../HMPI/HLS_lib/./MPI.h:1045]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+
+ <State 60> : 2.87ns
+ST_60 : Operation 482 [1/2] (1.77ns)   --->   "%int_request_array_DE_24 = load i16* %int_request_array_DE_23, align 2" [../HMPI/HLS_lib/./MPI.h:1045]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_60 : Operation 483 [1/1] (1.09ns)   --->   "%tmp_223 = icmp eq i16 %int_request_array_DE_24, %temp_diff_src_or_typ" [../HMPI/HLS_lib/./MPI.h:1045]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_60 : Operation 484 [1/1] (0.00ns)   --->   "br i1 %tmp_223, label %44, label %._crit_edge54" [../HMPI/HLS_lib/./MPI.h:1045]
+ST_60 : Operation 485 [1/1] (0.00ns)   --->   "%int_request_array_PK_23 = getelementptr [512 x i1]* @int_request_array_PK, i64 0, i64 %tmp_217" [../HMPI/HLS_lib/./MPI.h:1046]
+ST_60 : Operation 486 [2/2] (0.94ns)   --->   "%int_request_array_PK_24 = load i1* %int_request_array_PK_23, align 1" [../HMPI/HLS_lib/./MPI.h:1046]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+
+ <State 61> : 1.77ns
+ST_61 : Operation 487 [1/2] (0.94ns)   --->   "%int_request_array_PK_24 = load i1* %int_request_array_PK_23, align 1" [../HMPI/HLS_lib/./MPI.h:1046]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_61 : Operation 488 [1/1] (0.00ns)   --->   "br i1 %int_request_array_PK_24, label %._crit_edge54, label %45" [../HMPI/HLS_lib/./MPI.h:1046]
+ST_61 : Operation 489 [1/1] (0.00ns)   --->   "%int_request_array_MS_23 = getelementptr [512 x i16]* @int_request_array_MS, i64 0, i64 %tmp_217" [../HMPI/HLS_lib/./MPI.h:1047]
+ST_61 : Operation 490 [2/2] (1.77ns)   --->   "%int_request_array_MS_24 = load i16* %int_request_array_MS_23, align 2" [../HMPI/HLS_lib/./MPI.h:1047]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+
+ <State 62> : 2.87ns
+ST_62 : Operation 491 [1/2] (1.77ns)   --->   "%int_request_array_MS_24 = load i16* %int_request_array_MS_23, align 2" [../HMPI/HLS_lib/./MPI.h:1047]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_62 : Operation 492 [1/1] (1.09ns)   --->   "%tmp_239 = icmp eq i16 %int_request_array_MS_24, %temp_diff_src_or_typ_71" [../HMPI/HLS_lib/./MPI.h:1047]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_62 : Operation 493 [1/1] (0.00ns)   --->   "br i1 %tmp_239, label %46, label %._crit_edge54" [../HMPI/HLS_lib/./MPI.h:1047]
+ST_62 : Operation 494 [1/1] (0.00ns)   --->   "%int_request_array_TA_21 = getelementptr [512 x i8]* @int_request_array_TA, i64 0, i64 %tmp_217" [../HMPI/HLS_lib/./MPI.h:1048]
+ST_62 : Operation 495 [2/2] (1.77ns)   --->   "%int_request_array_TA_22 = load i8* %int_request_array_TA_21, align 2" [../HMPI/HLS_lib/./MPI.h:1048]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+
+ <State 63> : 2.55ns
+ST_63 : Operation 496 [1/2] (1.77ns)   --->   "%int_request_array_TA_22 = load i8* %int_request_array_TA_21, align 2" [../HMPI/HLS_lib/./MPI.h:1048]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_63 : Operation 497 [1/1] (0.78ns)   --->   "%tmp_242 = icmp eq i8 %int_request_array_TA_22, %temp_diff_src_or_typ_72" [../HMPI/HLS_lib/./MPI.h:1048]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_63 : Operation 498 [1/1] (0.00ns)   --->   "br i1 %tmp_242, label %47, label %._crit_edge54" [../HMPI/HLS_lib/./MPI.h:1048]
+ST_63 : Operation 499 [1/1] (0.00ns)   --->   "%int_request_array_DA_25 = getelementptr [512 x i4]* @int_request_array_DA, i64 0, i64 %tmp_217" [../HMPI/HLS_lib/./MPI.h:1049]
+ST_63 : Operation 500 [2/2] (1.77ns)   --->   "%int_request_array_DA_26 = load i4* %int_request_array_DA_25, align 1" [../HMPI/HLS_lib/./MPI.h:1049]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+
+ <State 64> : 2.47ns
+ST_64 : Operation 501 [1/1] (0.00ns)   --->   "%j6 = phi i4 [ %j_4, %37 ], [ 0, %.preheader976.preheader ]"
+ST_64 : Operation 502 [1/1] (0.00ns)   --->   "%j6_cast2 = zext i4 %j6 to i32" [../HMPI/HLS_lib/./MPI.h:1030]
+ST_64 : Operation 503 [1/1] (0.90ns)   --->   "%exitcond = icmp eq i4 %j6, -8" [../HMPI/HLS_lib/./MPI.h:1030]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_64 : Operation 504 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 8, i64 8, i64 8)"
+ST_64 : Operation 505 [1/1] (0.94ns)   --->   "%j_4 = add i4 %j6, 1" [../HMPI/HLS_lib/./MPI.h:1030]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_64 : Operation 506 [1/1] (0.00ns)   --->   "br i1 %exitcond, label %.loopexit977.loopexit, label %37" [../HMPI/HLS_lib/./MPI.h:1030]
+ST_64 : Operation 507 [1/1] (0.00ns)   --->   "%tmp_275 = trunc i4 %j6 to i3" [../HMPI/HLS_lib/./MPI.h:1030]
+ST_64 : Operation 508 [1/1] (0.00ns)   --->   "%Lo_assign = call i6 @_ssdm_op_BitConcatenate.i6.i3.i3(i3 %tmp_275, i3 0)" [../HMPI/HLS_lib/./MPI.h:1031]
+ST_64 : Operation 509 [1/1] (0.00ns)   --->   "%Hi_assign = or i6 %Lo_assign, 7" [../HMPI/HLS_lib/./MPI.h:1031]
+ST_64 : Operation 510 [1/1] (0.84ns)   --->   "%tmp_276 = icmp ugt i6 %Lo_assign, %Hi_assign" [../HMPI/HLS_lib/./MPI.h:1031]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_64 : Operation 511 [1/1] (0.00ns)   --->   "%tmp_277 = zext i6 %Lo_assign to i7" [../HMPI/HLS_lib/./MPI.h:1031]
+ST_64 : Operation 512 [1/1] (0.00ns)   --->   "%tmp_278 = zext i6 %Hi_assign to i7" [../HMPI/HLS_lib/./MPI.h:1031]
+ST_64 : Operation 513 [1/1] (0.00ns) (grouped into LUT with out node tmp_289)   --->   "%tmp_279 = call i64 @_ssdm_op_PartSelect.i64.i129.i32.i32(i129 %tmp_3243, i32 63, i32 0)" [../HMPI/HLS_lib/./MPI.h:1031]
+ST_64 : Operation 514 [1/1] (1.11ns)   --->   "%tmp_280 = sub i7 %tmp_277, %tmp_278" [../HMPI/HLS_lib/./MPI.h:1031]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_64 : Operation 515 [1/1] (0.00ns) (grouped into LUT with out node tmp_289)   --->   "%tmp_281 = xor i7 %tmp_277, 63" [../HMPI/HLS_lib/./MPI.h:1031]   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_64 : Operation 516 [1/1] (1.11ns)   --->   "%tmp_282 = sub i7 %tmp_278, %tmp_277" [../HMPI/HLS_lib/./MPI.h:1031]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_64 : Operation 517 [1/1] (0.00ns) (grouped into LUT with out node tmp_286)   --->   "%tmp_283 = select i1 %tmp_276, i7 %tmp_280, i7 %tmp_282" [../HMPI/HLS_lib/./MPI.h:1031]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.44> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_64 : Operation 518 [1/1] (0.00ns) (grouped into LUT with out node tmp_289)   --->   "%tmp_284 = select i1 %tmp_276, i64 %tmp_279, i64 %recv_data_data_V" [../HMPI/HLS_lib/./MPI.h:1031]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.44> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_64 : Operation 519 [1/1] (0.00ns) (grouped into LUT with out node tmp_289)   --->   "%tmp_285 = select i1 %tmp_276, i7 %tmp_281, i7 %tmp_277" [../HMPI/HLS_lib/./MPI.h:1031]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.44> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_64 : Operation 520 [1/1] (1.20ns) (out node of the LUT)   --->   "%tmp_286 = sub i7 63, %tmp_283" [../HMPI/HLS_lib/./MPI.h:1031]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_64 : Operation 521 [1/1] (0.00ns) (grouped into LUT with out node tmp_289)   --->   "%tmp_287 = zext i7 %tmp_285 to i64" [../HMPI/HLS_lib/./MPI.h:1031]
+ST_64 : Operation 522 [1/1] (1.62ns) (out node of the LUT)   --->   "%tmp_289 = lshr i64 %tmp_284, %tmp_287" [../HMPI/HLS_lib/./MPI.h:1031]   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 1.00> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_64 : Operation 523 [1/1] (1.48ns)   --->   "%tmp_206 = add nsw i32 %tmp_274, %j6_cast2" [../HMPI/HLS_lib/./MPI.h:1031]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_64 : Operation 524 [1/1] (0.00ns)   --->   "%tmp_293 = trunc i32 %tmp_206 to i2" [../HMPI/HLS_lib/./MPI.h:1031]
+ST_64 : Operation 525 [1/1] (0.00ns)   --->   "%adjSize = call i15 @_ssdm_op_PartSelect.i15.i32.i32.i32(i32 %tmp_206, i32 2, i32 16)" [../HMPI/HLS_lib/./MPI.h:1031]
+ST_64 : Operation 526 [1/1] (0.83ns)   --->   "store i1 %p_s, i1* %p_7" [../HMPI/HLS_lib/./MPI.h:987]
+ST_64 : Operation 527 [1/1] (0.83ns)   --->   "store i1 false, i1* %p_6"
+ST_64 : Operation 528 [1/1] (0.83ns)   --->   "store i32 %seq_num_2, i32* %op2_assign" [../HMPI/HLS_lib/./MPI.h:21->../HMPI/HLS_lib/./MPI.h:986]
+ST_64 : Operation 529 [1/1] (0.83ns)   --->   "store i1 %p_0704_2, i1* %last_V" [../HMPI/HLS_lib/./MPI.h:21->../HMPI/HLS_lib/./MPI.h:986]
+ST_64 : Operation 530 [1/1] (1.08ns)   --->   "br label %.loopexit977"
+
+ <State 65> : 3.91ns
+ST_65 : Operation 531 [1/1] (1.40ns)   --->   "%mem_index_gep = add i15 12473, %adjSize" [../HMPI/HLS_lib/./MPI.h:1031]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_65 : Operation 532 [1/1] (0.00ns)   --->   "%adjSize1242_cast = zext i15 %mem_index_gep to i16" [../HMPI/HLS_lib/./MPI.h:1031]
+ST_65 : Operation 533 [1/1] (1.05ns)   --->   "%addrCmp = icmp ult i15 %adjSize, -12473" [../HMPI/HLS_lib/./MPI.h:1031]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_65 : Operation 534 [1/1] (1.05ns)   --->   "%addrCmp1 = icmp ult i15 %mem_index_gep, 12474" [../HMPI/HLS_lib/./MPI.h:1031]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_65 : Operation 535 [1/1] (1.40ns)   --->   "%gepindex = add i16 -12473, %adjSize1242_cast" [../HMPI/HLS_lib/./MPI.h:1031]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_65 : Operation 536 [1/1] (0.00ns) (grouped into LUT with out node gepindex2)   --->   "%gepindex1 = select i1 %addrCmp, i16 %gepindex, i16 0" [../HMPI/HLS_lib/./MPI.h:1031]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.44> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_65 : Operation 537 [1/1] (0.41ns) (out node of the LUT)   --->   "%gepindex2 = select i1 %addrCmp1, i16 %gepindex1, i16 0" [../HMPI/HLS_lib/./MPI.h:1031]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.44> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_65 : Operation 538 [1/1] (0.00ns)   --->   "%gepindex2_cast = sext i16 %gepindex2 to i64" [../HMPI/HLS_lib/./MPI.h:1031]
+ST_65 : Operation 539 [1/1] (0.00ns)   --->   "%buf_addr = getelementptr [1 x i32]* %buf_r, i64 0, i64 %gepindex2_cast" [../HMPI/HLS_lib/./MPI.h:1031]
+ST_65 : Operation 540 [2/2] (0.69ns)   --->   "%buf_load = load i32* %buf_addr, align 4" [../HMPI/HLS_lib/./MPI.h:1031]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+
+ <State 66> : 3.27ns
+ST_66 : Operation 541 [1/1] (0.00ns) (grouped into LUT with out node tmp_306)   --->   "%tmp_288 = zext i7 %tmp_286 to i64" [../HMPI/HLS_lib/./MPI.h:1031]
+ST_66 : Operation 542 [1/1] (0.00ns) (grouped into LUT with out node tmp_306)   --->   "%tmp_290 = lshr i64 -1, %tmp_288" [../HMPI/HLS_lib/./MPI.h:1031]   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 1.00> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_66 : Operation 543 [1/1] (0.00ns) (grouped into LUT with out node tmp_306)   --->   "%p_Result_s_244 = and i64 %tmp_289, %tmp_290" [../HMPI/HLS_lib/./MPI.h:1031]   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_66 : Operation 544 [1/1] (0.00ns) (grouped into LUT with out node tmp_306)   --->   "%tmp_292 = trunc i64 %p_Result_s_244 to i8" [../HMPI/HLS_lib/./MPI.h:1031]
+ST_66 : Operation 545 [1/2] (0.69ns)   --->   "%buf_load = load i32* %buf_addr, align 4" [../HMPI/HLS_lib/./MPI.h:1031]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_66 : Operation 546 [1/1] (0.00ns)   --->   "%start_pos = call i5 @_ssdm_op_BitConcatenate.i5.i2.i3(i2 %tmp_293, i3 0)" [../HMPI/HLS_lib/./MPI.h:1031]
+ST_66 : Operation 547 [1/1] (0.00ns)   --->   "%end_pos = or i5 %start_pos, 7" [../HMPI/HLS_lib/./MPI.h:1031]
+ST_66 : Operation 548 [1/1] (0.87ns)   --->   "%tmp_294 = icmp ugt i5 %start_pos, %end_pos" [../HMPI/HLS_lib/./MPI.h:1031]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_66 : Operation 549 [1/1] (0.00ns)   --->   "%tmp_295 = zext i5 %start_pos to i6" [../HMPI/HLS_lib/./MPI.h:1031]
+ST_66 : Operation 550 [1/1] (0.00ns)   --->   "%tmp_296 = zext i5 %end_pos to i6" [../HMPI/HLS_lib/./MPI.h:1031]
+ST_66 : Operation 551 [1/1] (0.00ns) (grouped into LUT with out node tmp_306)   --->   "%tmp_297 = zext i8 %tmp_292 to i32" [../HMPI/HLS_lib/./MPI.h:1031]
+ST_66 : Operation 552 [1/1] (0.00ns) (grouped into LUT with out node tmp_306)   --->   "%tmp_298 = xor i6 %tmp_295, 31" [../HMPI/HLS_lib/./MPI.h:1031]   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_66 : Operation 553 [1/1] (0.00ns) (grouped into LUT with out node p_demorgan)   --->   "%tmp_299 = select i1 %tmp_294, i6 %tmp_295, i6 %tmp_296" [../HMPI/HLS_lib/./MPI.h:1031]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.44> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_66 : Operation 554 [1/1] (0.00ns) (grouped into LUT with out node p_demorgan)   --->   "%tmp_300 = select i1 %tmp_294, i6 %tmp_296, i6 %tmp_295" [../HMPI/HLS_lib/./MPI.h:1031]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.44> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_66 : Operation 555 [1/1] (0.00ns) (grouped into LUT with out node tmp_306)   --->   "%tmp_301 = select i1 %tmp_294, i6 %tmp_298, i6 %tmp_295" [../HMPI/HLS_lib/./MPI.h:1031]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.44> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_66 : Operation 556 [1/1] (0.00ns) (grouped into LUT with out node p_demorgan)   --->   "%tmp_302 = xor i6 %tmp_299, 31" [../HMPI/HLS_lib/./MPI.h:1031]   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_66 : Operation 557 [1/1] (0.00ns) (grouped into LUT with out node tmp_306)   --->   "%tmp_303 = zext i6 %tmp_301 to i32" [../HMPI/HLS_lib/./MPI.h:1031]
+ST_66 : Operation 558 [1/1] (0.00ns) (grouped into LUT with out node p_demorgan)   --->   "%tmp_304 = zext i6 %tmp_300 to i32" [../HMPI/HLS_lib/./MPI.h:1031]
+ST_66 : Operation 559 [1/1] (0.00ns) (grouped into LUT with out node p_demorgan)   --->   "%tmp_305 = zext i6 %tmp_302 to i32" [../HMPI/HLS_lib/./MPI.h:1031]
+ST_66 : Operation 560 [1/1] (1.10ns) (out node of the LUT)   --->   "%tmp_306 = shl i32 %tmp_297, %tmp_303" [../HMPI/HLS_lib/./MPI.h:1031]   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 1.00> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_66 : Operation 561 [1/1] (0.00ns) (grouped into LUT with out node tmp_314)   --->   "%tmp_307 = call i32 @llvm.part.select.i32(i32 %tmp_306, i32 31, i32 0)" [../HMPI/HLS_lib/./MPI.h:1031]
+ST_66 : Operation 562 [1/1] (0.00ns) (grouped into LUT with out node tmp_314)   --->   "%tmp_308 = select i1 %tmp_294, i32 %tmp_307, i32 %tmp_306" [../HMPI/HLS_lib/./MPI.h:1031]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.44> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_66 : Operation 563 [1/1] (0.00ns) (grouped into LUT with out node p_demorgan)   --->   "%tmp_309 = shl i32 -1, %tmp_304" [../HMPI/HLS_lib/./MPI.h:1031]   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 1.00> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_66 : Operation 564 [1/1] (0.00ns) (grouped into LUT with out node p_demorgan)   --->   "%tmp_310 = lshr i32 -1, %tmp_305" [../HMPI/HLS_lib/./MPI.h:1031]   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 1.00> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_66 : Operation 565 [1/1] (1.00ns) (out node of the LUT)   --->   "%p_demorgan = and i32 %tmp_309, %tmp_310" [../HMPI/HLS_lib/./MPI.h:1031]   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_66 : Operation 566 [1/1] (0.00ns) (grouped into LUT with out node tmp_314)   --->   "%tmp_311 = xor i32 %p_demorgan, -1" [../HMPI/HLS_lib/./MPI.h:1031]   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_66 : Operation 567 [1/1] (0.00ns) (grouped into LUT with out node tmp_314)   --->   "%tmp_312 = and i32 %buf_load, %tmp_311" [../HMPI/HLS_lib/./MPI.h:1031]   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_66 : Operation 568 [1/1] (0.00ns) (grouped into LUT with out node tmp_314)   --->   "%tmp_313 = and i32 %tmp_308, %p_demorgan" [../HMPI/HLS_lib/./MPI.h:1031]   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_66 : Operation 569 [1/1] (0.59ns) (out node of the LUT)   --->   "%tmp_314 = or i32 %tmp_312, %tmp_313" [../HMPI/HLS_lib/./MPI.h:1031]   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_66 : Operation 570 [1/1] (0.69ns)   --->   "store i32 %tmp_314, i32* %buf_addr, align 4" [../HMPI/HLS_lib/./MPI.h:1031]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_66 : Operation 571 [1/1] (0.00ns)   --->   "br label %.preheader976" [../HMPI/HLS_lib/./MPI.h:1030]
+
+ <State 67> : 1.49ns
+ST_67 : Operation 572 [1/1] (0.00ns)   --->   "%i4_2 = phi i32 [ %i, %._crit_edge53 ], [ %i_23, %57 ], [ %i_24, %75 ], [ %i4, %..loopexit977_crit_edge ], [ %i4, %..loopexit977_crit_edge1272 ], [ %i_18, %76 ], [ %i4, %.loopexit977.loopexit ]"
+ST_67 : Operation 573 [1/1] (1.48ns)   --->   "%i_26 = add nsw i32 %i4_2, 8" [../HMPI/HLS_lib/./MPI.h:984]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_67 : Operation 574 [1/1] (0.00ns)   --->   "br label %.preheader293" [../HMPI/HLS_lib/./MPI.h:984]
+
+ <State 68> : 2.19ns
+ST_68 : Operation 575 [1/1] (0.00ns)   --->   "%p_0704_8 = phi i1 [ %last_V_3, %78 ], [ %last_V_load, %.preheader.preheader ]"
+ST_68 : Operation 576 [1/1] (0.00ns)   --->   "br i1 %p_0704_8, label %79, label %78" [../HMPI/HLS_lib/./MPI.h:1115]
+ST_68 : Operation 577 [1/1] (2.18ns)   --->   "%tmp_7 = call i129 @_ssdm_op_Read.ap_fifo.volatile.i129P(i129* @stream_in_V)"   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 129> <Depth = 0> <FIFO>
+ST_68 : Operation 578 [1/1] (0.00ns)   --->   "%last_V_3 = call i1 @_ssdm_op_BitSelect.i1.i129.i32(i129 %tmp_7, i32 72)" [../HMPI/HLS_lib/./MPI.h:21->../HMPI/HLS_lib/./MPI.h:1116]
+ST_68 : Operation 579 [1/1] (0.00ns)   --->   "br label %.preheader" [../HMPI/HLS_lib/./MPI.h:1118]
+ST_68 : Operation 580 [1/1] (0.00ns)   --->   "%op2_assign_load_2 = load i32* %op2_assign" [../HMPI/HLS_lib/./MPI.h:1125]
+ST_68 : Operation 581 [1/1] (0.91ns)   --->   "store i2 0, i2* @state, align 1" [../HMPI/HLS_lib/./MPI.h:1119]
+ST_68 : Operation 582 [1/1] (0.83ns)   --->   "store i64 0, i64* @time_V, align 8" [../HMPI/HLS_lib/./MPI.h:1120]
+ST_68 : Operation 583 [1/1] (0.00ns)   --->   "%error_MSG_SIZE_V_1 = trunc i32 %op2_assign_load_2 to i16" [../HMPI/HLS_lib/./MPI.h:1125]
+ST_68 : Operation 584 [1/1] (0.00ns)   --->   "%p_Result_6 = call i40 @llvm.part.set.i40.i4(i40 undef, i4 0, i32 0, i32 3)" [../HMPI/HLS_lib/./MPI.h:1129]
+ST_68 : Operation 585 [1/1] (0.00ns)   --->   "%p_Result_12 = call i40 @llvm.part.set.i40.i4(i40 %p_Result_6, i4 0, i32 4, i32 7)" [../HMPI/HLS_lib/./MPI.h:1130]
+ST_68 : Operation 586 [1/1] (0.00ns)   --->   "%p_Result_13 = call i40 @llvm.part.set.i40.i32(i40 %p_Result_12, i32 0, i32 8, i32 39)" [../HMPI/HLS_lib/./MPI.h:1131]
+ST_68 : Operation 587 [1/1] (0.00ns)   --->   "%id_in_V_load_8 = load i16* @id_in_V, align 2" [../HMPI/HLS_lib/./MPI.h:1133]
+ST_68 : Operation 588 [1/1] (0.00ns)   --->   "%pkt_out_id_V_3 = trunc i16 %id_in_V_load_8 to i8" [../HMPI/HLS_lib/./MPI.h:1133]
+ST_68 : Operation 589 [1/1] (0.00ns)   --->   "%tmp_268 = call i72 @_ssdm_op_BitConcatenate.i72.i8.i4.i4.i8.i16.i8.i8.i16(i8 %pkt_out_dest_V, i4 undef, i4 undef, i8 undef, i16 %error_MSG_SIZE_V_1, i8 5, i8 %error_SRC_V, i16 %error_DEST_V)" [../HMPI/HLS_lib/./MPI.h:1134]
+ST_68 : Operation 590 [1/1] (0.00ns)   --->   "%tmp_8 = call i129 @_ssdm_op_PartSet.i129.i129.i72.i32.i32(i129 undef, i72 %tmp_268, i32 0, i32 71)" [../HMPI/HLS_lib/./MPI.h:1134]
+ST_68 : Operation 591 [1/1] (0.00ns)   --->   "%tmp_8_1 = call i129 @_ssdm_op_BitSet.i129.i129.i32.i1(i129 %tmp_8, i32 72, i1 true)" [../HMPI/HLS_lib/./MPI.h:1134]
+ST_68 : Operation 592 [1/1] (0.00ns)   --->   "%tmp_8_2 = call i129 @llvm.part.set.i129.i8(i129 %tmp_8_1, i8 %pkt_out_id_V_3, i32 73, i32 80)" [../HMPI/HLS_lib/./MPI.h:1134]
+ST_68 : Operation 593 [1/1] (0.00ns)   --->   "%tmp_8_4 = call i129 @llvm.part.set.i129.i40(i129 %tmp_8_2, i40 %p_Result_13, i32 89, i32 128)" [../HMPI/HLS_lib/./MPI.h:1134]
+ST_68 : Operation 594 [1/1] (2.18ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i129P(i129* @stream_out_V, i129 %tmp_8_4)" [../HMPI/HLS_lib/./MPI.h:1134]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 129> <Depth = 0> <FIFO>
+ST_68 : Operation 595 [1/1] (0.83ns)   --->   "br label %.loopexit" [../HMPI/HLS_lib/./MPI.h:1135]
+
+ <State 69> : 3.02ns
+ST_69 : Operation 596 [1/1] (0.00ns)   --->   "%j = phi i31 [ %i_19, %._crit_edge37 ], [ 0, %.preheader991.preheader ]"
+ST_69 : Operation 597 [1/1] (0.00ns)   --->   "%j_cast = zext i31 %j to i32" [../HMPI/HLS_lib/./MPI.h:874]
+ST_69 : Operation 598 [1/1] (1.14ns)   --->   "%tmp_s = icmp slt i32 %j_cast, %int_req_num_load" [../HMPI/HLS_lib/./MPI.h:874]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_69 : Operation 599 [1/1] (1.48ns)   --->   "%i_19 = add i31 %j, 1" [../HMPI/HLS_lib/./MPI.h:874]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_69 : Operation 600 [1/1] (0.00ns)   --->   "br i1 %tmp_s, label %0, label %6" [../HMPI/HLS_lib/./MPI.h:874]
+ST_69 : Operation 601 [1/1] (0.00ns)   --->   "%tmp_167 = zext i31 %j to i64" [../HMPI/HLS_lib/./MPI.h:875]
+ST_69 : Operation 602 [1/1] (0.00ns)   --->   "%int_request_array_PK_17 = getelementptr [512 x i1]* @int_request_array_PK, i64 0, i64 %tmp_167" [../HMPI/HLS_lib/./MPI.h:875]
+ST_69 : Operation 603 [2/2] (0.94ns)   --->   "%int_request_array_PK_18 = load i1* %int_request_array_PK_17, align 1" [../HMPI/HLS_lib/./MPI.h:875]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_69 : Operation 604 [1/1] (2.18ns)   --->   "%tmp212 = call i129 @_ssdm_op_Read.ap_fifo.volatile.i129P(i129* @stream_in_V)"   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 129> <Depth = 0> <FIFO>
+ST_69 : Operation 605 [1/1] (0.00ns)   --->   "%recv_pkt_dest_V = call i8 @_ssdm_op_PartSelect.i8.i129.i32.i32(i129 %tmp212, i32 64, i32 71)" [../HMPI/HLS_lib/./MPI.h:21->../HMPI/HLS_lib/./MPI.h:891]
+ST_69 : Operation 606 [1/1] (0.00ns)   --->   "%tmp_259 = call i1 @_ssdm_op_BitSelect.i1.i129.i32(i129 %tmp212, i32 72)" [../HMPI/HLS_lib/./MPI.h:21->../HMPI/HLS_lib/./MPI.h:891]
+ST_69 : Operation 607 [1/1] (0.00ns)   --->   "%recv_pkt_id_V = call i8 @_ssdm_op_PartSelect.i8.i129.i32.i32(i129 %tmp212, i32 73, i32 80)" [../HMPI/HLS_lib/./MPI.h:21->../HMPI/HLS_lib/./MPI.h:891]
+ST_69 : Operation 608 [1/1] (0.83ns)   --->   "br label %7" [../HMPI/HLS_lib/./MPI.h:894]
+
+ <State 70> : 1.77ns
+ST_70 : Operation 609 [1/2] (0.94ns)   --->   "%int_request_array_PK_18 = load i1* %int_request_array_PK_17, align 1" [../HMPI/HLS_lib/./MPI.h:875]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_70 : Operation 610 [1/1] (0.00ns)   --->   "br i1 %int_request_array_PK_18, label %._crit_edge37, label %1" [../HMPI/HLS_lib/./MPI.h:875]
+ST_70 : Operation 611 [1/1] (0.00ns)   --->   "%int_request_array_DE_17 = getelementptr [512 x i16]* @int_request_array_DE, i64 0, i64 %tmp_167" [../HMPI/HLS_lib/./MPI.h:876]
+ST_70 : Operation 612 [2/2] (1.77ns)   --->   "%int_request_array_DE_18 = load i16* %int_request_array_DE_17, align 2" [../HMPI/HLS_lib/./MPI.h:876]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+
+ <State 71> : 2.87ns
+ST_71 : Operation 613 [1/2] (1.77ns)   --->   "%int_request_array_DE_18 = load i16* %int_request_array_DE_17, align 2" [../HMPI/HLS_lib/./MPI.h:876]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_71 : Operation 614 [1/1] (1.09ns)   --->   "%tmp_168 = icmp eq i16 %int_request_array_DE_18, %id_in_V_load" [../HMPI/HLS_lib/./MPI.h:876]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_71 : Operation 615 [1/1] (0.00ns)   --->   "br i1 %tmp_168, label %2, label %._crit_edge37" [../HMPI/HLS_lib/./MPI.h:876]
+ST_71 : Operation 616 [1/1] (0.00ns)   --->   "%int_request_array_SR_17 = getelementptr [512 x i8]* @int_request_array_SR, i64 0, i64 %tmp_167" [../HMPI/HLS_lib/./MPI.h:877]
+ST_71 : Operation 617 [2/2] (1.77ns)   --->   "%int_request_array_SR_18 = load i8* %int_request_array_SR_17, align 2" [../HMPI/HLS_lib/./MPI.h:877]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+
+ <State 72> : 2.87ns
+ST_72 : Operation 618 [1/2] (1.77ns)   --->   "%int_request_array_SR_18 = load i8* %int_request_array_SR_17, align 2" [../HMPI/HLS_lib/./MPI.h:877]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_72 : Operation 619 [1/1] (0.00ns)   --->   "%tmp_177_cast = zext i8 %int_request_array_SR_18 to i17" [../HMPI/HLS_lib/./MPI.h:877]
+ST_72 : Operation 620 [1/1] (1.09ns)   --->   "%tmp_172 = icmp eq i17 %tmp_177_cast, %source_read" [../HMPI/HLS_lib/./MPI.h:877]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_72 : Operation 621 [1/1] (0.00ns)   --->   "br i1 %tmp_172, label %3, label %._crit_edge37" [../HMPI/HLS_lib/./MPI.h:877]
+ST_72 : Operation 622 [1/1] (0.83ns)   --->   "store i16 %id_in_V_load, i16* @envlp_DEST_V_1, align 2" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:878]
+ST_72 : Operation 623 [1/1] (0.83ns)   --->   "store i8 %int_request_array_SR_18, i8* @envlp_SRC_V, align 2" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:878]
+ST_72 : Operation 624 [1/1] (0.00ns)   --->   "%int_request_array_MS_17 = getelementptr [512 x i16]* @int_request_array_MS, i64 0, i64 %tmp_167" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:878]
+ST_72 : Operation 625 [2/2] (1.77ns)   --->   "%int_request_array_MS_18 = load i16* %int_request_array_MS_17, align 2" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:878]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_72 : Operation 626 [1/1] (0.91ns)   --->   "store i2 1, i2* @state, align 1" [../HMPI/HLS_lib/./MPI.h:879]
+ST_72 : Operation 627 [1/1] (0.00ns)   --->   "br label %.preheader991" [../HMPI/HLS_lib/./MPI.h:874]
+
+ <State 73> : 2.61ns
+ST_73 : Operation 628 [1/2] (1.77ns)   --->   "%int_request_array_MS_18 = load i16* %int_request_array_MS_17, align 2" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:878]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_73 : Operation 629 [1/1] (0.83ns)   --->   "store i16 %int_request_array_MS_18, i16* @envlp_MSG_SIZE_V, align 2" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:878]
+ST_73 : Operation 630 [1/1] (1.48ns)   --->   "%tmp_177 = add nsw i32 %int_req_num_load, -1" [../HMPI/HLS_lib/./MPI.h:880]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_73 : Operation 631 [1/1] (0.91ns)   --->   "store i32 %tmp_177, i32* @int_req_num, align 4" [../HMPI/HLS_lib/./MPI.h:880]
+ST_73 : Operation 632 [1/1] (0.83ns)   --->   "br label %4" [../HMPI/HLS_lib/./MPI.h:881]
+
+ <State 74> : 3.26ns
+ST_74 : Operation 633 [1/1] (0.00ns)   --->   "%j5 = phi i32 [ %j_cast, %3 ], [ %j_3, %5 ]"
+ST_74 : Operation 634 [1/1] (1.14ns)   --->   "%tmp_179 = icmp slt i32 %j5, %tmp_177" [../HMPI/HLS_lib/./MPI.h:881]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_74 : Operation 635 [1/1] (0.00ns)   --->   "br i1 %tmp_179, label %5, label %.loopexit.loopexit1280" [../HMPI/HLS_lib/./MPI.h:881]
+ST_74 : Operation 636 [1/1] (1.48ns)   --->   "%j_3 = add nsw i32 %j5, 1" [../HMPI/HLS_lib/./MPI.h:882]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_74 : Operation 637 [1/1] (0.00ns)   --->   "%tmp_182 = sext i32 %j_3 to i64" [../HMPI/HLS_lib/./MPI.h:882]
+ST_74 : Operation 638 [1/1] (0.00ns)   --->   "%int_request_array_DE_19 = getelementptr [512 x i16]* @int_request_array_DE, i64 0, i64 %tmp_182" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:882]
+ST_74 : Operation 639 [2/2] (1.77ns)   --->   "%int_request_array_DE_20 = load i16* %int_request_array_DE_19, align 2" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:882]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_74 : Operation 640 [1/1] (0.00ns)   --->   "%int_request_array_SR_19 = getelementptr [512 x i8]* @int_request_array_SR, i64 0, i64 %tmp_182" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:882]
+ST_74 : Operation 641 [2/2] (1.77ns)   --->   "%int_request_array_SR_20 = load i8* %int_request_array_SR_19, align 2" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:882]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_74 : Operation 642 [1/1] (0.00ns)   --->   "%int_request_array_PK_19 = getelementptr [512 x i1]* @int_request_array_PK, i64 0, i64 %tmp_182" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:882]
+ST_74 : Operation 643 [2/2] (0.94ns)   --->   "%int_request_array_PK_20 = load i1* %int_request_array_PK_19, align 1" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:882]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_74 : Operation 644 [1/1] (0.00ns)   --->   "%int_request_array_MS_19 = getelementptr [512 x i16]* @int_request_array_MS, i64 0, i64 %tmp_182" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:882]
+ST_74 : Operation 645 [2/2] (1.77ns)   --->   "%int_request_array_MS_20 = load i16* %int_request_array_MS_19, align 2" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:882]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_74 : Operation 646 [1/1] (0.00ns)   --->   "%int_request_array_TA_17 = getelementptr [512 x i8]* @int_request_array_TA, i64 0, i64 %tmp_182" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:882]
+ST_74 : Operation 647 [2/2] (1.77ns)   --->   "%int_request_array_TA_18 = load i8* %int_request_array_TA_17, align 2" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:882]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_74 : Operation 648 [1/1] (0.00ns)   --->   "%int_request_array_DA_18 = getelementptr [512 x i4]* @int_request_array_DA, i64 0, i64 %tmp_182" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:882]
+ST_74 : Operation 649 [2/2] (1.77ns)   --->   "%int_request_array_DA_19 = load i4* %int_request_array_DA_18, align 1" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:882]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_74 : Operation 650 [1/1] (0.00ns)   --->   "%int_request_array_DA_21 = getelementptr [512 x i4]* @int_request_array_DA_1, i64 0, i64 %tmp_182" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:882]
+ST_74 : Operation 651 [2/2] (1.77ns)   --->   "%int_request_array_DA_22 = load i4* %int_request_array_DA_21, align 2" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:882]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_74 : Operation 652 [1/1] (0.83ns)   --->   "br label %.loopexit"
+
+ <State 75> : 3.54ns
+ST_75 : Operation 653 [1/1] (0.00ns)   --->   "%tmp_181 = sext i32 %j5 to i64" [../HMPI/HLS_lib/./MPI.h:882]
+ST_75 : Operation 654 [1/2] (1.77ns)   --->   "%int_request_array_DE_20 = load i16* %int_request_array_DE_19, align 2" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:882]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_75 : Operation 655 [1/1] (0.00ns)   --->   "%int_request_array_DE_21 = getelementptr [512 x i16]* @int_request_array_DE, i64 0, i64 %tmp_181" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:882]
+ST_75 : Operation 656 [1/1] (1.77ns)   --->   "store i16 %int_request_array_DE_20, i16* %int_request_array_DE_21, align 2" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:882]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_75 : Operation 657 [1/2] (1.77ns)   --->   "%int_request_array_SR_20 = load i8* %int_request_array_SR_19, align 2" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:882]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_75 : Operation 658 [1/1] (0.00ns)   --->   "%int_request_array_SR_21 = getelementptr [512 x i8]* @int_request_array_SR, i64 0, i64 %tmp_181" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:882]
+ST_75 : Operation 659 [1/1] (1.77ns)   --->   "store i8 %int_request_array_SR_20, i8* %int_request_array_SR_21, align 2" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:882]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_75 : Operation 660 [1/2] (0.94ns)   --->   "%int_request_array_PK_20 = load i1* %int_request_array_PK_19, align 1" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:882]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_75 : Operation 661 [1/1] (0.00ns)   --->   "%int_request_array_PK_21 = getelementptr [512 x i1]* @int_request_array_PK, i64 0, i64 %tmp_181" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:882]
+ST_75 : Operation 662 [1/1] (0.94ns)   --->   "store i1 %int_request_array_PK_20, i1* %int_request_array_PK_21, align 1" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:882]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_75 : Operation 663 [1/2] (1.77ns)   --->   "%int_request_array_MS_20 = load i16* %int_request_array_MS_19, align 2" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:882]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_75 : Operation 664 [1/1] (0.00ns)   --->   "%int_request_array_MS_21 = getelementptr [512 x i16]* @int_request_array_MS, i64 0, i64 %tmp_181" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:882]
+ST_75 : Operation 665 [1/1] (1.77ns)   --->   "store i16 %int_request_array_MS_20, i16* %int_request_array_MS_21, align 2" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:882]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_75 : Operation 666 [1/2] (1.77ns)   --->   "%int_request_array_TA_18 = load i8* %int_request_array_TA_17, align 2" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:882]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_75 : Operation 667 [1/1] (0.00ns)   --->   "%int_request_array_TA_19 = getelementptr [512 x i8]* @int_request_array_TA, i64 0, i64 %tmp_181" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:882]
+ST_75 : Operation 668 [1/1] (1.77ns)   --->   "store i8 %int_request_array_TA_18, i8* %int_request_array_TA_19, align 2" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:882]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_75 : Operation 669 [1/2] (1.77ns)   --->   "%int_request_array_DA_19 = load i4* %int_request_array_DA_18, align 1" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:882]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_75 : Operation 670 [1/1] (0.00ns)   --->   "%int_request_array_DA_20 = getelementptr [512 x i4]* @int_request_array_DA, i64 0, i64 %tmp_181" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:882]
+ST_75 : Operation 671 [1/1] (1.77ns)   --->   "store i4 %int_request_array_DA_19, i4* %int_request_array_DA_20, align 1" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:882]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_75 : Operation 672 [1/2] (1.77ns)   --->   "%int_request_array_DA_22 = load i4* %int_request_array_DA_21, align 2" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:882]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_75 : Operation 673 [1/1] (0.00ns)   --->   "%int_request_array_DA_23 = getelementptr [512 x i4]* @int_request_array_DA_1, i64 0, i64 %tmp_181" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:882]
+ST_75 : Operation 674 [1/1] (1.77ns)   --->   "store i4 %int_request_array_DA_22, i4* %int_request_array_DA_23, align 2" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:882]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_75 : Operation 675 [1/1] (0.00ns)   --->   "br label %4" [../HMPI/HLS_lib/./MPI.h:881]
+
+ <State 76> : 2.40ns
+ST_76 : Operation 676 [1/1] (0.00ns)   --->   "%last_V_1 = phi i1 [ %tmp_259, %6 ], [ %tmp_262, %8 ]" [../HMPI/HLS_lib/./MPI.h:21->../HMPI/HLS_lib/./MPI.h:891]
+ST_76 : Operation 677 [1/1] (0.00ns)   --->   "br i1 %last_V_1, label %9, label %8" [../HMPI/HLS_lib/./MPI.h:894]
+ST_76 : Operation 678 [1/1] (2.18ns)   --->   "%tmp_1 = call i129 @_ssdm_op_Read.ap_fifo.volatile.i129P(i129* @stream_in_V)"   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 129> <Depth = 0> <FIFO>
+ST_76 : Operation 679 [1/1] (0.00ns)   --->   "%tmp_262 = call i1 @_ssdm_op_BitSelect.i1.i129.i32(i129 %tmp_1, i32 72)" [../HMPI/HLS_lib/./MPI.h:21->../HMPI/HLS_lib/./MPI.h:895]
+ST_76 : Operation 680 [1/1] (0.00ns)   --->   "br label %7" [../HMPI/HLS_lib/./MPI.h:897]
+ST_76 : Operation 681 [1/1] (0.00ns)   --->   "%tmp_179_cast = zext i8 %recv_pkt_id_V to i17" [../HMPI/HLS_lib/./MPI.h:899]
+ST_76 : Operation 682 [1/1] (1.09ns)   --->   "%tmp_173 = icmp eq i17 %tmp_179_cast, %source_read" [../HMPI/HLS_lib/./MPI.h:899]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_76 : Operation 683 [1/1] (0.00ns)   --->   "br i1 %tmp_173, label %._crit_edge40, label %10" [../HMPI/HLS_lib/./MPI.h:899]
+ST_76 : Operation 684 [1/1] (0.00ns)   --->   "%p_Result_7 = call i4 @_ssdm_op_PartSelect.i4.i129.i32.i32(i129 %tmp212, i32 93, i32 96)" [../HMPI/HLS_lib/./MPI.h:899]
+ST_76 : Operation 685 [1/1] (0.90ns)   --->   "%tmp_178 = icmp eq i4 %p_Result_7, 0" [../HMPI/HLS_lib/./MPI.h:899]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_76 : Operation 686 [1/1] (0.00ns)   --->   "br i1 %tmp_178, label %11, label %._crit_edge40" [../HMPI/HLS_lib/./MPI.h:899]
+ST_76 : Operation 687 [1/1] (0.00ns)   --->   "%p_Result_8 = call i4 @_ssdm_op_PartSelect.i4.i129.i32.i32(i129 %tmp212, i32 89, i32 92)" [../HMPI/HLS_lib/./MPI.h:900]
+ST_76 : Operation 688 [1/1] (0.90ns)   --->   "%tmp_180 = icmp eq i4 %p_Result_8, 0" [../HMPI/HLS_lib/./MPI.h:900]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_76 : Operation 689 [1/1] (0.00ns)   --->   "br i1 %tmp_180, label %12, label %17" [../HMPI/HLS_lib/./MPI.h:900]
+ST_76 : Operation 690 [1/1] (0.90ns)   --->   "%tmp_184 = icmp eq i4 %p_Result_8, 1" [../HMPI/HLS_lib/./MPI.h:913]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_76 : Operation 691 [1/1] (0.00ns)   --->   "br i1 %tmp_184, label %18, label %._crit_edge40" [../HMPI/HLS_lib/./MPI.h:913]
+ST_76 : Operation 692 [1/1] (0.00ns)   --->   "%temp_diff_src_DEST_V_1 = zext i8 %recv_pkt_dest_V to i16" [../HMPI/HLS_lib/./MPI.h:76->../HMPI/HLS_lib/./MPI.h:915]
+ST_76 : Operation 693 [1/1] (0.00ns)   --->   "%temp_diff_src_SRC_V_1 = call i8 @_ssdm_op_PartSelect.i8.i129.i32.i32(i129 %tmp212, i32 16, i32 23)" [../HMPI/HLS_lib/./MPI.h:77->../HMPI/HLS_lib/./MPI.h:915]
+ST_76 : Operation 694 [1/1] (0.00ns)   --->   "%temp_diff_src_PKT_TY_1 = call i8 @_ssdm_op_PartSelect.i8.i129.i32.i32(i129 %tmp212, i32 24, i32 31)" [../HMPI/HLS_lib/./MPI.h:78->../HMPI/HLS_lib/./MPI.h:915]
+ST_76 : Operation 695 [1/1] (0.00ns)   --->   "%temp_diff_src_MSG_SI_1 = call i16 @_ssdm_op_PartSelect.i16.i129.i32.i32(i129 %tmp212, i32 32, i32 47)" [../HMPI/HLS_lib/./MPI.h:79->../HMPI/HLS_lib/./MPI.h:915]
+ST_76 : Operation 696 [1/1] (0.00ns)   --->   "%temp_diff_src_TAG_V_1 = call i8 @_ssdm_op_PartSelect.i8.i129.i32.i32(i129 %tmp212, i32 48, i32 55)" [../HMPI/HLS_lib/./MPI.h:80->../HMPI/HLS_lib/./MPI.h:915]
+ST_76 : Operation 697 [1/1] (0.00ns)   --->   "%temp_diff_src_DATA_T_1 = call i4 @_ssdm_op_PartSelect.i4.i129.i32.i32(i129 %tmp212, i32 60, i32 63)" [../HMPI/HLS_lib/./MPI.h:82->../HMPI/HLS_lib/./MPI.h:915]
+ST_76 : Operation 698 [1/1] (0.78ns)   --->   "%tmp_188 = icmp eq i8 %temp_diff_src_PKT_TY_1, 0" [../HMPI/HLS_lib/./MPI.h:916]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_76 : Operation 699 [1/1] (0.00ns)   --->   "br i1 %tmp_188, label %19, label %20" [../HMPI/HLS_lib/./MPI.h:916]
+ST_76 : Operation 700 [1/1] (0.78ns)   --->   "%tmp_194 = icmp eq i8 %temp_diff_src_PKT_TY_1, 1" [../HMPI/HLS_lib/./MPI.h:920]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_76 : Operation 701 [1/1] (0.00ns)   --->   "br i1 %tmp_194, label %21, label %._crit_edge44" [../HMPI/HLS_lib/./MPI.h:920]
+ST_76 : Operation 702 [1/1] (0.00ns)   --->   "%float_clr_num_load = load i32* @float_clr_num, align 4" [../HMPI/HLS_lib/./MPI.h:921]
+ST_76 : Operation 703 [1/1] (0.00ns)   --->   "%tmp_199 = sext i32 %float_clr_num_load to i64" [../HMPI/HLS_lib/./MPI.h:921]
+ST_76 : Operation 704 [1/1] (0.00ns)   --->   "%float_clr2snd_array_103 = getelementptr [512 x i16]* @float_clr2snd_array_1, i64 0, i64 %tmp_199" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:921]
+ST_76 : Operation 705 [1/1] (1.77ns)   --->   "store i16 %temp_diff_src_DEST_V_1, i16* %float_clr2snd_array_103, align 2" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:921]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_76 : Operation 706 [1/1] (0.00ns)   --->   "%float_clr2snd_array_104 = getelementptr [512 x i8]* @float_clr2snd_array_5, i64 0, i64 %tmp_199" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:921]
+ST_76 : Operation 707 [1/1] (1.77ns)   --->   "store i8 %temp_diff_src_SRC_V_1, i8* %float_clr2snd_array_104, align 2" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:921]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_76 : Operation 708 [1/1] (0.00ns)   --->   "%float_clr2snd_array_105 = getelementptr [512 x i1]* @float_clr2snd_array_4, i64 0, i64 %tmp_199" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:921]
+ST_76 : Operation 709 [1/1] (0.94ns)   --->   "store i1 true, i1* %float_clr2snd_array_105, align 1" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:921]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_76 : Operation 710 [1/1] (0.00ns)   --->   "%float_clr2snd_array_106 = getelementptr [512 x i16]* @float_clr2snd_array_3, i64 0, i64 %tmp_199" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:921]
+ST_76 : Operation 711 [1/1] (1.77ns)   --->   "store i16 %temp_diff_src_MSG_SI_1, i16* %float_clr2snd_array_106, align 2" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:921]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_76 : Operation 712 [1/1] (0.00ns)   --->   "%float_clr2snd_array_107 = getelementptr [512 x i8]* @float_clr2snd_array_s, i64 0, i64 %tmp_199" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:921]
+ST_76 : Operation 713 [1/1] (1.77ns)   --->   "store i8 %temp_diff_src_TAG_V_1, i8* %float_clr2snd_array_107, align 2" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:921]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_76 : Operation 714 [1/1] (0.00ns)   --->   "%float_clr2snd_array_108 = getelementptr [512 x i4]* @float_clr2snd_array_6, i64 0, i64 %tmp_199" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:921]
+ST_76 : Operation 715 [1/1] (1.77ns)   --->   "store i4 %temp_diff_src_DATA_T_1, i4* %float_clr2snd_array_108, align 1" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:921]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_76 : Operation 716 [1/1] (1.48ns)   --->   "%tmp_200 = add nsw i32 %float_clr_num_load, 1" [../HMPI/HLS_lib/./MPI.h:922]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_76 : Operation 717 [1/1] (0.91ns)   --->   "store i32 %tmp_200, i32* @float_clr_num, align 4" [../HMPI/HLS_lib/./MPI.h:922]
+ST_76 : Operation 718 [1/1] (0.00ns)   --->   "br label %._crit_edge44" [../HMPI/HLS_lib/./MPI.h:923]
+ST_76 : Operation 719 [1/1] (0.00ns)   --->   "br label %22"
+ST_76 : Operation 720 [1/1] (0.00ns)   --->   "%float_req_num_load = load i32* @float_req_num, align 4" [../HMPI/HLS_lib/./MPI.h:917]
+ST_76 : Operation 721 [1/1] (0.00ns)   --->   "%tmp_192 = sext i32 %float_req_num_load to i64" [../HMPI/HLS_lib/./MPI.h:917]
+ST_76 : Operation 722 [1/1] (0.00ns)   --->   "%float_request_array_220 = getelementptr [512 x i16]* @float_request_array_1, i64 0, i64 %tmp_192" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:917]
+ST_76 : Operation 723 [1/1] (1.77ns)   --->   "store i16 %temp_diff_src_DEST_V_1, i16* %float_request_array_220, align 2" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:917]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_76 : Operation 724 [1/1] (0.00ns)   --->   "%float_request_array_221 = getelementptr [512 x i8]* @float_request_array_5, i64 0, i64 %tmp_192" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:917]
+ST_76 : Operation 725 [1/1] (1.77ns)   --->   "store i8 %temp_diff_src_SRC_V_1, i8* %float_request_array_221, align 2" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:917]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_76 : Operation 726 [1/1] (0.00ns)   --->   "%float_request_array_222 = getelementptr [512 x i8]* @float_request_array_4, i64 0, i64 %tmp_192" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:917]
+ST_76 : Operation 727 [1/1] (1.77ns)   --->   "store i8 0, i8* %float_request_array_222, align 1" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:917]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_76 : Operation 728 [1/1] (0.00ns)   --->   "%float_request_array_223 = getelementptr [512 x i16]* @float_request_array_3, i64 0, i64 %tmp_192" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:917]
+ST_76 : Operation 729 [1/1] (1.77ns)   --->   "store i16 %temp_diff_src_MSG_SI_1, i16* %float_request_array_223, align 2" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:917]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_76 : Operation 730 [1/1] (0.00ns)   --->   "%float_request_array_224 = getelementptr [512 x i8]* @float_request_array_s, i64 0, i64 %tmp_192" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:917]
+ST_76 : Operation 731 [1/1] (1.77ns)   --->   "store i8 %temp_diff_src_TAG_V_1, i8* %float_request_array_224, align 2" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:917]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_76 : Operation 732 [1/1] (0.00ns)   --->   "%float_request_array_225 = getelementptr [512 x i4]* @float_request_array_7, i64 0, i64 %tmp_192" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:917]
+ST_76 : Operation 733 [1/1] (1.77ns)   --->   "store i4 %temp_diff_src_DATA_T_1, i4* %float_request_array_225, align 1" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:917]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_76 : Operation 734 [1/1] (1.48ns)   --->   "%tmp_193 = add nsw i32 %float_req_num_load, 1" [../HMPI/HLS_lib/./MPI.h:918]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_76 : Operation 735 [1/1] (0.91ns)   --->   "store i32 %tmp_193, i32* @float_req_num, align 4" [../HMPI/HLS_lib/./MPI.h:918]
+ST_76 : Operation 736 [1/1] (0.00ns)   --->   "br label %22" [../HMPI/HLS_lib/./MPI.h:919]
+ST_76 : Operation 737 [1/1] (0.83ns)   --->   "br label %.loopexit" [../HMPI/HLS_lib/./MPI.h:924]
+ST_76 : Operation 738 [1/1] (0.00ns)   --->   "%temp_diff_src_DEST_V = zext i8 %recv_pkt_dest_V to i16" [../HMPI/HLS_lib/./MPI.h:76->../HMPI/HLS_lib/./MPI.h:902]
+ST_76 : Operation 739 [1/1] (0.00ns)   --->   "%temp_diff_src_SRC_V = call i8 @_ssdm_op_PartSelect.i8.i129.i32.i32(i129 %tmp212, i32 16, i32 23)" [../HMPI/HLS_lib/./MPI.h:77->../HMPI/HLS_lib/./MPI.h:902]
+ST_76 : Operation 740 [1/1] (0.00ns)   --->   "%temp_diff_src_PKT_TY = call i8 @_ssdm_op_PartSelect.i8.i129.i32.i32(i129 %tmp212, i32 24, i32 31)" [../HMPI/HLS_lib/./MPI.h:78->../HMPI/HLS_lib/./MPI.h:902]
+ST_76 : Operation 741 [1/1] (0.00ns)   --->   "%temp_diff_src_MSG_SI = call i16 @_ssdm_op_PartSelect.i16.i129.i32.i32(i129 %tmp212, i32 32, i32 47)" [../HMPI/HLS_lib/./MPI.h:79->../HMPI/HLS_lib/./MPI.h:902]
+ST_76 : Operation 742 [1/1] (0.00ns)   --->   "%temp_diff_src_TAG_V = call i8 @_ssdm_op_PartSelect.i8.i129.i32.i32(i129 %tmp212, i32 48, i32 55)" [../HMPI/HLS_lib/./MPI.h:80->../HMPI/HLS_lib/./MPI.h:902]
+ST_76 : Operation 743 [1/1] (0.00ns)   --->   "%temp_diff_src_DATA_T = call i4 @_ssdm_op_PartSelect.i4.i129.i32.i32(i129 %tmp212, i32 60, i32 63)" [../HMPI/HLS_lib/./MPI.h:82->../HMPI/HLS_lib/./MPI.h:902]
+ST_76 : Operation 744 [1/1] (0.78ns)   --->   "%tmp_183 = icmp eq i8 %temp_diff_src_PKT_TY, 0" [../HMPI/HLS_lib/./MPI.h:903]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_76 : Operation 745 [1/1] (0.00ns)   --->   "br i1 %tmp_183, label %13, label %14" [../HMPI/HLS_lib/./MPI.h:903]
+ST_76 : Operation 746 [1/1] (0.78ns)   --->   "%tmp_187 = icmp eq i8 %temp_diff_src_PKT_TY, 1" [../HMPI/HLS_lib/./MPI.h:907]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_76 : Operation 747 [1/1] (0.00ns)   --->   "br i1 %tmp_187, label %15, label %._crit_edge42" [../HMPI/HLS_lib/./MPI.h:907]
+ST_76 : Operation 748 [1/1] (0.00ns)   --->   "%int_clr_num_load = load i32* @int_clr_num, align 4" [../HMPI/HLS_lib/./MPI.h:908]
+ST_76 : Operation 749 [1/1] (0.00ns)   --->   "%tmp_190 = sext i32 %int_clr_num_load to i64" [../HMPI/HLS_lib/./MPI.h:908]
+ST_76 : Operation 750 [1/1] (0.00ns)   --->   "%int_clr2snd_array_DE_17 = getelementptr [512 x i16]* @int_clr2snd_array_DE, i64 0, i64 %tmp_190" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:908]
+ST_76 : Operation 751 [1/1] (1.77ns)   --->   "store i16 %temp_diff_src_DEST_V, i16* %int_clr2snd_array_DE_17, align 2" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:908]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_76 : Operation 752 [1/1] (0.00ns)   --->   "%int_clr2snd_array_SR_17 = getelementptr [512 x i8]* @int_clr2snd_array_SR, i64 0, i64 %tmp_190" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:908]
+ST_76 : Operation 753 [1/1] (1.77ns)   --->   "store i8 %temp_diff_src_SRC_V, i8* %int_clr2snd_array_SR_17, align 2" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:908]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_76 : Operation 754 [1/1] (0.00ns)   --->   "%int_clr2snd_array_PK_17 = getelementptr [512 x i1]* @int_clr2snd_array_PK, i64 0, i64 %tmp_190" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:908]
+ST_76 : Operation 755 [1/1] (0.94ns)   --->   "store i1 true, i1* %int_clr2snd_array_PK_17, align 1" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:908]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_76 : Operation 756 [1/1] (0.00ns)   --->   "%int_clr2snd_array_MS_17 = getelementptr [512 x i16]* @int_clr2snd_array_MS, i64 0, i64 %tmp_190" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:908]
+ST_76 : Operation 757 [1/1] (1.77ns)   --->   "store i16 %temp_diff_src_MSG_SI, i16* %int_clr2snd_array_MS_17, align 2" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:908]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_76 : Operation 758 [1/1] (0.00ns)   --->   "%int_clr2snd_array_TA_17 = getelementptr [512 x i8]* @int_clr2snd_array_TA, i64 0, i64 %tmp_190" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:908]
+ST_76 : Operation 759 [1/1] (1.77ns)   --->   "store i8 %temp_diff_src_TAG_V, i8* %int_clr2snd_array_TA_17, align 2" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:908]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_76 : Operation 760 [1/1] (0.00ns)   --->   "%int_clr2snd_array_DA_17 = getelementptr [512 x i4]* @int_clr2snd_array_DA, i64 0, i64 %tmp_190" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:908]
+ST_76 : Operation 761 [1/1] (1.77ns)   --->   "store i4 %temp_diff_src_DATA_T, i4* %int_clr2snd_array_DA_17, align 1" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:908]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_76 : Operation 762 [1/1] (1.48ns)   --->   "%tmp_191 = add nsw i32 %int_clr_num_load, 1" [../HMPI/HLS_lib/./MPI.h:909]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_76 : Operation 763 [1/1] (0.83ns)   --->   "store i32 %tmp_191, i32* @int_clr_num, align 4" [../HMPI/HLS_lib/./MPI.h:909]
+ST_76 : Operation 764 [1/1] (0.00ns)   --->   "br label %._crit_edge42" [../HMPI/HLS_lib/./MPI.h:910]
+ST_76 : Operation 765 [1/1] (0.00ns)   --->   "br label %16"
+ST_76 : Operation 766 [1/1] (0.00ns)   --->   "%tmp_185 = sext i32 %int_req_num_load to i64" [../HMPI/HLS_lib/./MPI.h:904]
+ST_76 : Operation 767 [1/1] (0.00ns)   --->   "%int_request_array_DE_22 = getelementptr [512 x i16]* @int_request_array_DE, i64 0, i64 %tmp_185" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:904]
+ST_76 : Operation 768 [1/1] (1.77ns)   --->   "store i16 %temp_diff_src_DEST_V, i16* %int_request_array_DE_22, align 2" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:904]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_76 : Operation 769 [1/1] (0.00ns)   --->   "%int_request_array_SR_22 = getelementptr [512 x i8]* @int_request_array_SR, i64 0, i64 %tmp_185" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:904]
+ST_76 : Operation 770 [1/1] (1.77ns)   --->   "store i8 %temp_diff_src_SRC_V, i8* %int_request_array_SR_22, align 2" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:904]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_76 : Operation 771 [1/1] (0.00ns)   --->   "%int_request_array_PK_22 = getelementptr [512 x i1]* @int_request_array_PK, i64 0, i64 %tmp_185" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:904]
+ST_76 : Operation 772 [1/1] (0.94ns)   --->   "store i1 false, i1* %int_request_array_PK_22, align 1" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:904]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_76 : Operation 773 [1/1] (0.00ns)   --->   "%int_request_array_MS_22 = getelementptr [512 x i16]* @int_request_array_MS, i64 0, i64 %tmp_185" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:904]
+ST_76 : Operation 774 [1/1] (1.77ns)   --->   "store i16 %temp_diff_src_MSG_SI, i16* %int_request_array_MS_22, align 2" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:904]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_76 : Operation 775 [1/1] (0.00ns)   --->   "%int_request_array_TA_20 = getelementptr [512 x i8]* @int_request_array_TA, i64 0, i64 %tmp_185" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:904]
+ST_76 : Operation 776 [1/1] (1.77ns)   --->   "store i8 %temp_diff_src_TAG_V, i8* %int_request_array_TA_20, align 2" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:904]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_76 : Operation 777 [1/1] (0.00ns)   --->   "%int_request_array_DA_24 = getelementptr [512 x i4]* @int_request_array_DA, i64 0, i64 %tmp_185" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:904]
+ST_76 : Operation 778 [1/1] (1.77ns)   --->   "store i4 %temp_diff_src_DATA_T, i4* %int_request_array_DA_24, align 1" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:904]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_76 : Operation 779 [1/1] (1.48ns)   --->   "%tmp_186 = add nsw i32 %int_req_num_load, 1" [../HMPI/HLS_lib/./MPI.h:905]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_76 : Operation 780 [1/1] (0.91ns)   --->   "store i32 %tmp_186, i32* @int_req_num, align 4" [../HMPI/HLS_lib/./MPI.h:905]
+ST_76 : Operation 781 [1/1] (0.00ns)   --->   "br label %16" [../HMPI/HLS_lib/./MPI.h:906]
+ST_76 : Operation 782 [1/1] (0.83ns)   --->   "br label %.loopexit" [../HMPI/HLS_lib/./MPI.h:911]
+ST_76 : Operation 783 [1/1] (0.00ns)   --->   "%p_Result_9 = call i4 @_ssdm_op_PartSelect.i4.i129.i32.i32(i129 %tmp212, i32 89, i32 92)" [../HMPI/HLS_lib/./MPI.h:929]
+ST_76 : Operation 784 [1/1] (0.90ns)   --->   "%tmp_189 = icmp eq i4 %p_Result_9, 1" [../HMPI/HLS_lib/./MPI.h:929]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_76 : Operation 785 [1/1] (0.00ns)   --->   "br i1 %tmp_189, label %23, label %._crit_edge45" [../HMPI/HLS_lib/./MPI.h:929]
+ST_76 : Operation 786 [1/1] (0.00ns)   --->   "%p_Result_10 = call i4 @_ssdm_op_PartSelect.i4.i129.i32.i32(i129 %tmp212, i32 93, i32 96)" [../HMPI/HLS_lib/./MPI.h:929]
+ST_76 : Operation 787 [1/1] (0.90ns)   --->   "%tmp_195 = icmp eq i4 %p_Result_10, 0" [../HMPI/HLS_lib/./MPI.h:929]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_76 : Operation 788 [1/1] (0.00ns)   --->   "br i1 %tmp_195, label %24, label %._crit_edge45" [../HMPI/HLS_lib/./MPI.h:929]
+ST_76 : Operation 789 [1/1] (0.00ns)   --->   "%envlp_DEST_V_write_a = zext i8 %recv_pkt_dest_V to i16" [../HMPI/HLS_lib/./MPI.h:76->../HMPI/HLS_lib/./MPI.h:944]
+ST_76 : Operation 790 [1/1] (0.00ns)   --->   "%envlp_SRC_V_write_as = call i8 @_ssdm_op_PartSelect.i8.i129.i32.i32(i129 %tmp212, i32 16, i32 23)" [../HMPI/HLS_lib/./MPI.h:77->../HMPI/HLS_lib/./MPI.h:944]
+ST_76 : Operation 791 [1/1] (0.00ns)   --->   "%envlp_PKT_TYPE_V_wri = call i8 @_ssdm_op_PartSelect.i8.i129.i32.i32(i129 %tmp212, i32 24, i32 31)" [../HMPI/HLS_lib/./MPI.h:78->../HMPI/HLS_lib/./MPI.h:944]
+ST_76 : Operation 792 [1/1] (0.00ns)   --->   "%envlp_MSG_SIZE_V_wri = call i16 @_ssdm_op_PartSelect.i16.i129.i32.i32(i129 %tmp212, i32 32, i32 47)" [../HMPI/HLS_lib/./MPI.h:79->../HMPI/HLS_lib/./MPI.h:944]
+ST_76 : Operation 793 [1/1] (0.83ns)   --->   "store i16 %envlp_DEST_V_write_a, i16* @envlp_DEST_V_1, align 2" [../HMPI/HLS_lib/./MPI.h:944]
+ST_76 : Operation 794 [1/1] (0.83ns)   --->   "store i8 %envlp_SRC_V_write_as, i8* @envlp_SRC_V, align 1" [../HMPI/HLS_lib/./MPI.h:944]
+ST_76 : Operation 795 [1/1] (0.83ns)   --->   "store i16 %envlp_MSG_SIZE_V_wri, i16* @envlp_MSG_SIZE_V, align 2" [../HMPI/HLS_lib/./MPI.h:944]
+ST_76 : Operation 796 [1/1] (0.78ns)   --->   "%tmp_196 = icmp eq i8 %envlp_PKT_TYPE_V_wri, 0" [../HMPI/HLS_lib/./MPI.h:945]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_76 : Operation 797 [1/1] (1.09ns)   --->   "%tmp_197 = icmp eq i16 %envlp_DEST_V_write_a, %id_in_V_load" [../HMPI/HLS_lib/./MPI.h:946]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_76 : Operation 798 [1/1] (0.33ns)   --->   "%or_cond = and i1 %tmp_196, %tmp_197" [../HMPI/HLS_lib/./MPI.h:946]   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_76 : Operation 799 [1/1] (0.00ns)   --->   "br i1 %or_cond, label %29, label %._crit_edge48" [../HMPI/HLS_lib/./MPI.h:945]
+ST_76 : Operation 800 [1/1] (0.00ns)   --->   "%tmp_208_cast = zext i8 %envlp_SRC_V_write_as to i17" [../HMPI/HLS_lib/./MPI.h:947]
+ST_76 : Operation 801 [1/1] (1.09ns)   --->   "%tmp_202 = icmp eq i17 %tmp_208_cast, %source_read" [../HMPI/HLS_lib/./MPI.h:947]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_76 : Operation 802 [1/1] (0.00ns)   --->   "br i1 %tmp_202, label %30, label %._crit_edge48" [../HMPI/HLS_lib/./MPI.h:947]
+ST_76 : Operation 803 [1/1] (0.91ns)   --->   "store i2 1, i2* @state, align 1" [../HMPI/HLS_lib/./MPI.h:948]
+ST_76 : Operation 804 [1/1] (0.00ns)   --->   "br label %._crit_edge48" [../HMPI/HLS_lib/./MPI.h:949]
+ST_76 : Operation 805 [1/1] (0.00ns)   --->   "br label %._crit_edge36" [../HMPI/HLS_lib/./MPI.h:955]
+ST_76 : Operation 806 [1/1] (0.00ns)   --->   "%temp_diff_type_DEST_s = zext i8 %recv_pkt_dest_V to i16" [../HMPI/HLS_lib/./MPI.h:76->../HMPI/HLS_lib/./MPI.h:931]
+ST_76 : Operation 807 [1/1] (0.00ns)   --->   "%temp_diff_type_SRC_V = call i8 @_ssdm_op_PartSelect.i8.i129.i32.i32(i129 %tmp212, i32 16, i32 23)" [../HMPI/HLS_lib/./MPI.h:77->../HMPI/HLS_lib/./MPI.h:931]
+ST_76 : Operation 808 [1/1] (0.00ns)   --->   "%temp_diff_type_PKT_T = call i8 @_ssdm_op_PartSelect.i8.i129.i32.i32(i129 %tmp212, i32 24, i32 31)" [../HMPI/HLS_lib/./MPI.h:78->../HMPI/HLS_lib/./MPI.h:931]
+ST_76 : Operation 809 [1/1] (0.00ns)   --->   "%temp_diff_type_MSG_S = call i16 @_ssdm_op_PartSelect.i16.i129.i32.i32(i129 %tmp212, i32 32, i32 47)" [../HMPI/HLS_lib/./MPI.h:79->../HMPI/HLS_lib/./MPI.h:931]
+ST_76 : Operation 810 [1/1] (0.00ns)   --->   "%temp_diff_type_TAG_V = call i8 @_ssdm_op_PartSelect.i8.i129.i32.i32(i129 %tmp212, i32 48, i32 55)" [../HMPI/HLS_lib/./MPI.h:80->../HMPI/HLS_lib/./MPI.h:931]
+ST_76 : Operation 811 [1/1] (0.00ns)   --->   "%temp_diff_type_DATA_s = call i4 @_ssdm_op_PartSelect.i4.i129.i32.i32(i129 %tmp212, i32 60, i32 63)" [../HMPI/HLS_lib/./MPI.h:82->../HMPI/HLS_lib/./MPI.h:931]
+ST_76 : Operation 812 [1/1] (0.78ns)   --->   "%tmp_201 = icmp eq i8 %temp_diff_type_PKT_T, 0" [../HMPI/HLS_lib/./MPI.h:932]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_76 : Operation 813 [1/1] (0.00ns)   --->   "br i1 %tmp_201, label %25, label %26" [../HMPI/HLS_lib/./MPI.h:932]
+ST_76 : Operation 814 [1/1] (0.78ns)   --->   "%tmp_205 = icmp eq i8 %temp_diff_type_PKT_T, 1" [../HMPI/HLS_lib/./MPI.h:936]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_76 : Operation 815 [1/1] (0.00ns)   --->   "br i1 %tmp_205, label %27, label %._crit_edge47" [../HMPI/HLS_lib/./MPI.h:936]
+ST_76 : Operation 816 [1/1] (0.00ns)   --->   "%float_clr_num_load_2 = load i32* @float_clr_num, align 4" [../HMPI/HLS_lib/./MPI.h:937]
+ST_76 : Operation 817 [1/1] (0.00ns)   --->   "%tmp_207 = sext i32 %float_clr_num_load_2 to i64" [../HMPI/HLS_lib/./MPI.h:937]
+ST_76 : Operation 818 [1/1] (0.00ns)   --->   "%float_clr2snd_array_109 = getelementptr [512 x i16]* @float_clr2snd_array_1, i64 0, i64 %tmp_207" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:937]
+ST_76 : Operation 819 [1/1] (1.77ns)   --->   "store i16 %temp_diff_type_DEST_s, i16* %float_clr2snd_array_109, align 2" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:937]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_76 : Operation 820 [1/1] (0.00ns)   --->   "%float_clr2snd_array_110 = getelementptr [512 x i8]* @float_clr2snd_array_5, i64 0, i64 %tmp_207" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:937]
+ST_76 : Operation 821 [1/1] (1.77ns)   --->   "store i8 %temp_diff_type_SRC_V, i8* %float_clr2snd_array_110, align 2" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:937]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_76 : Operation 822 [1/1] (0.00ns)   --->   "%float_clr2snd_array_111 = getelementptr [512 x i1]* @float_clr2snd_array_4, i64 0, i64 %tmp_207" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:937]
+ST_76 : Operation 823 [1/1] (0.94ns)   --->   "store i1 true, i1* %float_clr2snd_array_111, align 1" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:937]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_76 : Operation 824 [1/1] (0.00ns)   --->   "%float_clr2snd_array_112 = getelementptr [512 x i16]* @float_clr2snd_array_3, i64 0, i64 %tmp_207" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:937]
+ST_76 : Operation 825 [1/1] (1.77ns)   --->   "store i16 %temp_diff_type_MSG_S, i16* %float_clr2snd_array_112, align 2" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:937]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_76 : Operation 826 [1/1] (0.00ns)   --->   "%float_clr2snd_array_113 = getelementptr [512 x i8]* @float_clr2snd_array_s, i64 0, i64 %tmp_207" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:937]
+ST_76 : Operation 827 [1/1] (1.77ns)   --->   "store i8 %temp_diff_type_TAG_V, i8* %float_clr2snd_array_113, align 2" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:937]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_76 : Operation 828 [1/1] (0.00ns)   --->   "%float_clr2snd_array_114 = getelementptr [512 x i4]* @float_clr2snd_array_6, i64 0, i64 %tmp_207" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:937]
+ST_76 : Operation 829 [1/1] (1.77ns)   --->   "store i4 %temp_diff_type_DATA_s, i4* %float_clr2snd_array_114, align 1" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:937]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_76 : Operation 830 [1/1] (1.48ns)   --->   "%tmp_208 = add nsw i32 %float_clr_num_load_2, 1" [../HMPI/HLS_lib/./MPI.h:938]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_76 : Operation 831 [1/1] (0.91ns)   --->   "store i32 %tmp_208, i32* @float_clr_num, align 4" [../HMPI/HLS_lib/./MPI.h:938]
+ST_76 : Operation 832 [1/1] (0.00ns)   --->   "br label %._crit_edge47" [../HMPI/HLS_lib/./MPI.h:939]
+ST_76 : Operation 833 [1/1] (0.00ns)   --->   "br label %28"
+ST_76 : Operation 834 [1/1] (0.00ns)   --->   "%float_req_num_load_3 = load i32* @float_req_num, align 4" [../HMPI/HLS_lib/./MPI.h:933]
+ST_76 : Operation 835 [1/1] (0.00ns)   --->   "%tmp_203 = sext i32 %float_req_num_load_3 to i64" [../HMPI/HLS_lib/./MPI.h:933]
+ST_76 : Operation 836 [1/1] (0.00ns)   --->   "%float_request_array_226 = getelementptr [512 x i16]* @float_request_array_1, i64 0, i64 %tmp_203" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:933]
+ST_76 : Operation 837 [1/1] (1.77ns)   --->   "store i16 %temp_diff_type_DEST_s, i16* %float_request_array_226, align 2" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:933]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_76 : Operation 838 [1/1] (0.00ns)   --->   "%float_request_array_227 = getelementptr [512 x i8]* @float_request_array_5, i64 0, i64 %tmp_203" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:933]
+ST_76 : Operation 839 [1/1] (1.77ns)   --->   "store i8 %temp_diff_type_SRC_V, i8* %float_request_array_227, align 2" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:933]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_76 : Operation 840 [1/1] (0.00ns)   --->   "%float_request_array_228 = getelementptr [512 x i8]* @float_request_array_4, i64 0, i64 %tmp_203" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:933]
+ST_76 : Operation 841 [1/1] (1.77ns)   --->   "store i8 0, i8* %float_request_array_228, align 1" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:933]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_76 : Operation 842 [1/1] (0.00ns)   --->   "%float_request_array_229 = getelementptr [512 x i16]* @float_request_array_3, i64 0, i64 %tmp_203" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:933]
+ST_76 : Operation 843 [1/1] (1.77ns)   --->   "store i16 %temp_diff_type_MSG_S, i16* %float_request_array_229, align 2" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:933]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_76 : Operation 844 [1/1] (0.00ns)   --->   "%float_request_array_230 = getelementptr [512 x i8]* @float_request_array_s, i64 0, i64 %tmp_203" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:933]
+ST_76 : Operation 845 [1/1] (1.77ns)   --->   "store i8 %temp_diff_type_TAG_V, i8* %float_request_array_230, align 2" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:933]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_76 : Operation 846 [1/1] (0.00ns)   --->   "%float_request_array_231 = getelementptr [512 x i4]* @float_request_array_7, i64 0, i64 %tmp_203" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:933]
+ST_76 : Operation 847 [1/1] (1.77ns)   --->   "store i4 %temp_diff_type_DATA_s, i4* %float_request_array_231, align 1" [../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:933]   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.77> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 512> <RAM>
+ST_76 : Operation 848 [1/1] (1.48ns)   --->   "%tmp_204 = add nsw i32 %float_req_num_load_3, 1" [../HMPI/HLS_lib/./MPI.h:934]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_76 : Operation 849 [1/1] (0.91ns)   --->   "store i32 %tmp_204, i32* @float_req_num, align 4" [../HMPI/HLS_lib/./MPI.h:934]
+ST_76 : Operation 850 [1/1] (0.00ns)   --->   "br label %28" [../HMPI/HLS_lib/./MPI.h:935]
+ST_76 : Operation 851 [1/1] (0.83ns)   --->   "br label %.loopexit" [../HMPI/HLS_lib/./MPI.h:940]
+ST_76 : Operation 852 [1/1] (0.83ns)   --->   "br label %.loopexit" [../HMPI/HLS_lib/./MPI.h:1140]
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5ns, clock uncertainty: 0.625ns.
+
+ <State 1>: 2.19ns
+The critical path consists of the following:
+	'load' operation ('envlp_DEST_V_1_load', ../HMPI/HLS_lib/./MPI.h:960) on static variable 'envlp_DEST_V_1' [44]  (0 ns)
+	fifo write on port 'stream_out_V' (../HMPI/HLS_lib/./MPI.h:970) [575]  (2.19 ns)
+
+ <State 2>: 4.32ns
+The critical path consists of the following:
+	'load' operation ('t.V', ../HMPI/HLS_lib/./MPI.h:1106) on static variable 'time_V' [70]  (0 ns)
+	'add' operation ('tmp_171', ../HMPI/HLS_lib/./MPI.h:1106) [71]  (1.57 ns)
+	'icmp' operation ('p_not', ../HMPI/HLS_lib/./MPI.h:1108) [74]  (1.32 ns)
+	'or' operation ('brmerge', ../HMPI/HLS_lib/./MPI.h:1108) [75]  (0.337 ns)
+	multiplexor before 'phi' operation ('i') with incoming values : ('i', ../HMPI/HLS_lib/./MPI.h:1107) ('i', ../HMPI/HLS_lib/./MPI.h:1100) ('i', ../HMPI/HLS_lib/./MPI.h:1068) ('i', ../HMPI/HLS_lib/./MPI.h:1009) ('i', ../HMPI/HLS_lib/./MPI.h:984) [533]  (1.09 ns)
+
+ <State 3>: 0.918ns
+The critical path consists of the following:
+	'store' operation (../HMPI/HLS_lib/./MPI.h:1110) of constant 1 on static variable 'state' [79]  (0.918 ns)
+
+ <State 4>: 1.75ns
+The critical path consists of the following:
+	'srem' operation ('tmp_175', ../HMPI/HLS_lib/./MPI.h:1013) [99]  (1.75 ns)
+
+ <State 5>: 1.75ns
+The critical path consists of the following:
+	'srem' operation ('tmp_175', ../HMPI/HLS_lib/./MPI.h:1013) [99]  (1.75 ns)
+
+ <State 6>: 1.75ns
+The critical path consists of the following:
+	'srem' operation ('tmp_175', ../HMPI/HLS_lib/./MPI.h:1013) [99]  (1.75 ns)
+
+ <State 7>: 1.75ns
+The critical path consists of the following:
+	'srem' operation ('tmp_175', ../HMPI/HLS_lib/./MPI.h:1013) [99]  (1.75 ns)
+
+ <State 8>: 1.75ns
+The critical path consists of the following:
+	'srem' operation ('tmp_175', ../HMPI/HLS_lib/./MPI.h:1013) [99]  (1.75 ns)
+
+ <State 9>: 1.75ns
+The critical path consists of the following:
+	'srem' operation ('tmp_175', ../HMPI/HLS_lib/./MPI.h:1013) [99]  (1.75 ns)
+
+ <State 10>: 1.75ns
+The critical path consists of the following:
+	'srem' operation ('tmp_175', ../HMPI/HLS_lib/./MPI.h:1013) [99]  (1.75 ns)
+
+ <State 11>: 1.75ns
+The critical path consists of the following:
+	'srem' operation ('tmp_175', ../HMPI/HLS_lib/./MPI.h:1013) [99]  (1.75 ns)
+
+ <State 12>: 1.75ns
+The critical path consists of the following:
+	'srem' operation ('tmp_175', ../HMPI/HLS_lib/./MPI.h:1013) [99]  (1.75 ns)
+
+ <State 13>: 1.75ns
+The critical path consists of the following:
+	'srem' operation ('tmp_175', ../HMPI/HLS_lib/./MPI.h:1013) [99]  (1.75 ns)
+
+ <State 14>: 1.75ns
+The critical path consists of the following:
+	'srem' operation ('tmp_175', ../HMPI/HLS_lib/./MPI.h:1013) [99]  (1.75 ns)
+
+ <State 15>: 1.75ns
+The critical path consists of the following:
+	'srem' operation ('tmp_175', ../HMPI/HLS_lib/./MPI.h:1013) [99]  (1.75 ns)
+
+ <State 16>: 1.75ns
+The critical path consists of the following:
+	'srem' operation ('tmp_175', ../HMPI/HLS_lib/./MPI.h:1013) [99]  (1.75 ns)
+
+ <State 17>: 1.75ns
+The critical path consists of the following:
+	'srem' operation ('tmp_175', ../HMPI/HLS_lib/./MPI.h:1013) [99]  (1.75 ns)
+
+ <State 18>: 1.75ns
+The critical path consists of the following:
+	'srem' operation ('tmp_175', ../HMPI/HLS_lib/./MPI.h:1013) [99]  (1.75 ns)
+
+ <State 19>: 1.75ns
+The critical path consists of the following:
+	'srem' operation ('tmp_175', ../HMPI/HLS_lib/./MPI.h:1013) [99]  (1.75 ns)
+
+ <State 20>: 1.75ns
+The critical path consists of the following:
+	'srem' operation ('tmp_175', ../HMPI/HLS_lib/./MPI.h:1013) [99]  (1.75 ns)
+
+ <State 21>: 1.75ns
+The critical path consists of the following:
+	'srem' operation ('tmp_175', ../HMPI/HLS_lib/./MPI.h:1013) [99]  (1.75 ns)
+
+ <State 22>: 1.75ns
+The critical path consists of the following:
+	'srem' operation ('tmp_175', ../HMPI/HLS_lib/./MPI.h:1013) [99]  (1.75 ns)
+
+ <State 23>: 1.75ns
+The critical path consists of the following:
+	'srem' operation ('tmp_175', ../HMPI/HLS_lib/./MPI.h:1013) [99]  (1.75 ns)
+
+ <State 24>: 1.75ns
+The critical path consists of the following:
+	'srem' operation ('tmp_175', ../HMPI/HLS_lib/./MPI.h:1013) [99]  (1.75 ns)
+
+ <State 25>: 1.75ns
+The critical path consists of the following:
+	'srem' operation ('tmp_175', ../HMPI/HLS_lib/./MPI.h:1013) [99]  (1.75 ns)
+
+ <State 26>: 1.75ns
+The critical path consists of the following:
+	'srem' operation ('tmp_175', ../HMPI/HLS_lib/./MPI.h:1013) [99]  (1.75 ns)
+
+ <State 27>: 1.75ns
+The critical path consists of the following:
+	'srem' operation ('tmp_175', ../HMPI/HLS_lib/./MPI.h:1013) [99]  (1.75 ns)
+
+ <State 28>: 1.75ns
+The critical path consists of the following:
+	'srem' operation ('tmp_175', ../HMPI/HLS_lib/./MPI.h:1013) [99]  (1.75 ns)
+
+ <State 29>: 1.75ns
+The critical path consists of the following:
+	'srem' operation ('tmp_175', ../HMPI/HLS_lib/./MPI.h:1013) [99]  (1.75 ns)
+
+ <State 30>: 1.75ns
+The critical path consists of the following:
+	'srem' operation ('tmp_175', ../HMPI/HLS_lib/./MPI.h:1013) [99]  (1.75 ns)
+
+ <State 31>: 1.75ns
+The critical path consists of the following:
+	'srem' operation ('tmp_175', ../HMPI/HLS_lib/./MPI.h:1013) [99]  (1.75 ns)
+
+ <State 32>: 1.75ns
+The critical path consists of the following:
+	'srem' operation ('tmp_175', ../HMPI/HLS_lib/./MPI.h:1013) [99]  (1.75 ns)
+
+ <State 33>: 1.75ns
+The critical path consists of the following:
+	'srem' operation ('tmp_175', ../HMPI/HLS_lib/./MPI.h:1013) [99]  (1.75 ns)
+
+ <State 34>: 1.75ns
+The critical path consists of the following:
+	'srem' operation ('tmp_175', ../HMPI/HLS_lib/./MPI.h:1013) [99]  (1.75 ns)
+
+ <State 35>: 1.75ns
+The critical path consists of the following:
+	'srem' operation ('tmp_175', ../HMPI/HLS_lib/./MPI.h:1013) [99]  (1.75 ns)
+
+ <State 36>: 1.75ns
+The critical path consists of the following:
+	'srem' operation ('tmp_175', ../HMPI/HLS_lib/./MPI.h:1013) [99]  (1.75 ns)
+
+ <State 37>: 1.75ns
+The critical path consists of the following:
+	'srem' operation ('tmp_175', ../HMPI/HLS_lib/./MPI.h:1013) [99]  (1.75 ns)
+
+ <State 38>: 3.53ns
+The critical path consists of the following:
+	'srem' operation ('tmp_175', ../HMPI/HLS_lib/./MPI.h:1013) [99]  (1.75 ns)
+	'icmp' operation ('tmp_176', ../HMPI/HLS_lib/./MPI.h:1013) [101]  (0.939 ns)
+	multiplexor before 'phi' operation ('last.V') with incoming values : ('recv_data.last.V', ../HMPI/HLS_lib/./MPI.h:21->../HMPI/HLS_lib/./MPI.h:986) [115]  (0.835 ns)
+
+ <State 39>: 2.76ns
+The critical path consists of the following:
+	'load' operation ('op2_assign_load', ../HMPI/HLS_lib/./MPI.h:1021) on local variable 'val' [116]  (0 ns)
+	'add' operation ('seq_num', ../HMPI/HLS_lib/./MPI.h:1021) [117]  (1.49 ns)
+	'select' operation ('p_1', ../HMPI/HLS_lib/./MPI.h:1020) [118]  (0 ns)
+	'select' operation ('seq_num_2', ../HMPI/HLS_lib/./MPI.h:21->../HMPI/HLS_lib/./MPI.h:986) [119]  (0.44 ns)
+	'store' operation (../HMPI/HLS_lib/./MPI.h:21->../HMPI/HLS_lib/./MPI.h:986) of variable 'seq_num_2', ../HMPI/HLS_lib/./MPI.h:21->../HMPI/HLS_lib/./MPI.h:986 on local variable 'val' [127]  (0.835 ns)
+
+ <State 40>: 2.19ns
+The critical path consists of the following:
+	fifo read on port 'stream_in_V' [136]  (2.19 ns)
+
+ <State 41>: 2.57ns
+The critical path consists of the following:
+	'add' operation ('i', ../HMPI/HLS_lib/./MPI.h:1100) [288]  (1.49 ns)
+	multiplexor before 'phi' operation ('i') with incoming values : ('i', ../HMPI/HLS_lib/./MPI.h:1107) ('i', ../HMPI/HLS_lib/./MPI.h:1100) ('i', ../HMPI/HLS_lib/./MPI.h:1068) ('i', ../HMPI/HLS_lib/./MPI.h:1009) ('i', ../HMPI/HLS_lib/./MPI.h:984) [533]  (1.09 ns)
+
+ <State 42>: 2.55ns
+The critical path consists of the following:
+	'load' operation ('float_clr2snd_array_116', ../HMPI/HLS_lib/./MPI.h:1089) on array 'float_clr2snd_array_5' [176]  (1.77 ns)
+	'icmp' operation ('tmp_236', ../HMPI/HLS_lib/./MPI.h:1089) [177]  (0.782 ns)
+
+ <State 43>: 2.87ns
+The critical path consists of the following:
+	'load' operation ('float_clr2snd_array_118', ../HMPI/HLS_lib/./MPI.h:1090) on array 'float_clr2snd_array_1' [181]  (1.77 ns)
+	'icmp' operation ('tmp_241', ../HMPI/HLS_lib/./MPI.h:1090) [182]  (1.1 ns)
+
+ <State 44>: 1.77ns
+The critical path consists of the following:
+	'getelementptr' operation ('float_clr2snd_array_121', ../HMPI/HLS_lib/./MPI.h:1092) [189]  (0 ns)
+	'load' operation ('float_clr2snd_array_122', ../HMPI/HLS_lib/./MPI.h:1092) on array 'float_clr2snd_array_3' [190]  (1.77 ns)
+
+ <State 45>: 2.87ns
+The critical path consists of the following:
+	'load' operation ('float_clr2snd_array_122', ../HMPI/HLS_lib/./MPI.h:1092) on array 'float_clr2snd_array_3' [190]  (1.77 ns)
+	'icmp' operation ('tmp_248', ../HMPI/HLS_lib/./MPI.h:1092) [191]  (1.1 ns)
+
+ <State 46>: 2.55ns
+The critical path consists of the following:
+	'load' operation ('float_clr2snd_array_124', ../HMPI/HLS_lib/./MPI.h:1093) on array 'float_clr2snd_array_s' [195]  (1.77 ns)
+	'icmp' operation ('tmp_251', ../HMPI/HLS_lib/./MPI.h:1093) [196]  (0.782 ns)
+
+ <State 47>: 2.68ns
+The critical path consists of the following:
+	'load' operation ('float_clr2snd_array_126', ../HMPI/HLS_lib/./MPI.h:1094) on array 'float_clr2snd_array_6' [200]  (1.77 ns)
+	'icmp' operation ('tmp_252', ../HMPI/HLS_lib/./MPI.h:1094) [201]  (0.909 ns)
+
+ <State 48>: 2.55ns
+The critical path consists of the following:
+	'load' operation ('float_request_array_233', ../HMPI/HLS_lib/./MPI.h:1076) on array 'float_request_array_5' [238]  (1.77 ns)
+	'icmp' operation ('tmp_229', ../HMPI/HLS_lib/./MPI.h:1076) [239]  (0.782 ns)
+
+ <State 49>: 2.87ns
+The critical path consists of the following:
+	'load' operation ('float_request_array_235', ../HMPI/HLS_lib/./MPI.h:1077) on array 'float_request_array_1' [243]  (1.77 ns)
+	'icmp' operation ('tmp_234', ../HMPI/HLS_lib/./MPI.h:1077) [244]  (1.1 ns)
+
+ <State 50>: 2.55ns
+The critical path consists of the following:
+	'load' operation ('float_request_array_237', ../HMPI/HLS_lib/./MPI.h:1078) on array 'float_request_array_4' [248]  (1.77 ns)
+	'icmp' operation ('tmp_240', ../HMPI/HLS_lib/./MPI.h:1078) [249]  (0.782 ns)
+
+ <State 51>: 2.87ns
+The critical path consists of the following:
+	'load' operation ('float_request_array_239', ../HMPI/HLS_lib/./MPI.h:1079) on array 'float_request_array_3' [253]  (1.77 ns)
+	'icmp' operation ('tmp_244', ../HMPI/HLS_lib/./MPI.h:1079) [254]  (1.1 ns)
+
+ <State 52>: 2.55ns
+The critical path consists of the following:
+	'load' operation ('float_request_array_241', ../HMPI/HLS_lib/./MPI.h:1080) on array 'float_request_array_s' [258]  (1.77 ns)
+	'icmp' operation ('tmp_247', ../HMPI/HLS_lib/./MPI.h:1080) [259]  (0.782 ns)
+
+ <State 53>: 2.57ns
+The critical path consists of the following:
+	'add' operation ('i', ../HMPI/HLS_lib/./MPI.h:1068) [429]  (1.49 ns)
+	multiplexor before 'phi' operation ('i') with incoming values : ('i', ../HMPI/HLS_lib/./MPI.h:1107) ('i', ../HMPI/HLS_lib/./MPI.h:1100) ('i', ../HMPI/HLS_lib/./MPI.h:1068) ('i', ../HMPI/HLS_lib/./MPI.h:1009) ('i', ../HMPI/HLS_lib/./MPI.h:984) [533]  (1.09 ns)
+
+ <State 54>: 2.55ns
+The critical path consists of the following:
+	'load' operation ('int_clr2snd_array_SR_19', ../HMPI/HLS_lib/./MPI.h:1057) on array 'int_clr2snd_array_SR' [318]  (1.77 ns)
+	'icmp' operation ('tmp_225', ../HMPI/HLS_lib/./MPI.h:1057) [319]  (0.782 ns)
+
+ <State 55>: 2.87ns
+The critical path consists of the following:
+	'load' operation ('int_clr2snd_array_DE_19', ../HMPI/HLS_lib/./MPI.h:1058) on array 'int_clr2snd_array_DE' [323]  (1.77 ns)
+	'icmp' operation ('tmp_233', ../HMPI/HLS_lib/./MPI.h:1058) [324]  (1.1 ns)
+
+ <State 56>: 1.77ns
+The critical path consists of the following:
+	'getelementptr' operation ('int_clr2snd_array_MS_18', ../HMPI/HLS_lib/./MPI.h:1060) [331]  (0 ns)
+	'load' operation ('int_clr2snd_array_MS_19', ../HMPI/HLS_lib/./MPI.h:1060) on array 'int_clr2snd_array_MS' [332]  (1.77 ns)
+
+ <State 57>: 2.87ns
+The critical path consists of the following:
+	'load' operation ('int_clr2snd_array_MS_19', ../HMPI/HLS_lib/./MPI.h:1060) on array 'int_clr2snd_array_MS' [332]  (1.77 ns)
+	'icmp' operation ('tmp_243', ../HMPI/HLS_lib/./MPI.h:1060) [333]  (1.1 ns)
+
+ <State 58>: 2.55ns
+The critical path consists of the following:
+	'load' operation ('int_clr2snd_array_TA_19', ../HMPI/HLS_lib/./MPI.h:1061) on array 'int_clr2snd_array_TA' [337]  (1.77 ns)
+	'icmp' operation ('tmp_246', ../HMPI/HLS_lib/./MPI.h:1061) [338]  (0.782 ns)
+
+ <State 59>: 2.55ns
+The critical path consists of the following:
+	'load' operation ('int_request_array_SR_24', ../HMPI/HLS_lib/./MPI.h:1044) on array 'int_request_array_SR' [380]  (1.77 ns)
+	'icmp' operation ('tmp_218', ../HMPI/HLS_lib/./MPI.h:1044) [381]  (0.782 ns)
+
+ <State 60>: 2.87ns
+The critical path consists of the following:
+	'load' operation ('int_request_array_DE_24', ../HMPI/HLS_lib/./MPI.h:1045) on array 'int_request_array_DE' [385]  (1.77 ns)
+	'icmp' operation ('tmp_223', ../HMPI/HLS_lib/./MPI.h:1045) [386]  (1.1 ns)
+
+ <State 61>: 1.77ns
+The critical path consists of the following:
+	'getelementptr' operation ('int_request_array_MS_23', ../HMPI/HLS_lib/./MPI.h:1047) [393]  (0 ns)
+	'load' operation ('int_request_array_MS_24', ../HMPI/HLS_lib/./MPI.h:1047) on array 'int_request_array_MS' [394]  (1.77 ns)
+
+ <State 62>: 2.87ns
+The critical path consists of the following:
+	'load' operation ('int_request_array_MS_24', ../HMPI/HLS_lib/./MPI.h:1047) on array 'int_request_array_MS' [394]  (1.77 ns)
+	'icmp' operation ('tmp_239', ../HMPI/HLS_lib/./MPI.h:1047) [395]  (1.1 ns)
+
+ <State 63>: 2.55ns
+The critical path consists of the following:
+	'load' operation ('int_request_array_TA_22', ../HMPI/HLS_lib/./MPI.h:1048) on array 'int_request_array_TA' [399]  (1.77 ns)
+	'icmp' operation ('tmp_242', ../HMPI/HLS_lib/./MPI.h:1048) [400]  (0.782 ns)
+
+ <State 64>: 2.47ns
+The critical path consists of the following:
+	'phi' operation ('j') with incoming values : ('j', ../HMPI/HLS_lib/./MPI.h:1030) [439]  (0 ns)
+	'icmp' operation ('tmp_276', ../HMPI/HLS_lib/./MPI.h:1031) [449]  (0.846 ns)
+	'select' operation ('tmp_284', ../HMPI/HLS_lib/./MPI.h:1031) [457]  (0 ns)
+	'lshr' operation ('tmp_289', ../HMPI/HLS_lib/./MPI.h:1031) [462]  (1.62 ns)
+
+ <State 65>: 3.91ns
+The critical path consists of the following:
+	'add' operation ('mem_index_gep', ../HMPI/HLS_lib/./MPI.h:1031) [469]  (1.4 ns)
+	'add' operation ('gepindex', ../HMPI/HLS_lib/./MPI.h:1031) [473]  (1.4 ns)
+	'select' operation ('gepindex1', ../HMPI/HLS_lib/./MPI.h:1031) [474]  (0 ns)
+	'select' operation ('gepindex2', ../HMPI/HLS_lib/./MPI.h:1031) [475]  (0.411 ns)
+	'getelementptr' operation ('buf_addr', ../HMPI/HLS_lib/./MPI.h:1031) [477]  (0 ns)
+	'load' operation ('buf_load', ../HMPI/HLS_lib/./MPI.h:1031) on array 'buf_r' [478]  (0.698 ns)
+
+ <State 66>: 3.27ns
+The critical path consists of the following:
+	'icmp' operation ('tmp_294', ../HMPI/HLS_lib/./MPI.h:1031) [481]  (0.877 ns)
+	'select' operation ('tmp_301', ../HMPI/HLS_lib/./MPI.h:1031) [488]  (0 ns)
+	'shl' operation ('tmp_306', ../HMPI/HLS_lib/./MPI.h:1031) [493]  (1.1 ns)
+	'select' operation ('tmp_308', ../HMPI/HLS_lib/./MPI.h:1031) [495]  (0 ns)
+	'and' operation ('tmp_313', ../HMPI/HLS_lib/./MPI.h:1031) [501]  (0 ns)
+	'or' operation ('tmp_314', ../HMPI/HLS_lib/./MPI.h:1031) [502]  (0.593 ns)
+	'store' operation (../HMPI/HLS_lib/./MPI.h:1031) of variable 'tmp_314', ../HMPI/HLS_lib/./MPI.h:1031 on array 'buf_r' [503]  (0.698 ns)
+
+ <State 67>: 1.49ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', ../HMPI/HLS_lib/./MPI.h:1107) ('i', ../HMPI/HLS_lib/./MPI.h:1100) ('i', ../HMPI/HLS_lib/./MPI.h:1068) ('i', ../HMPI/HLS_lib/./MPI.h:1009) ('i', ../HMPI/HLS_lib/./MPI.h:984) [533]  (0 ns)
+	'add' operation ('i', ../HMPI/HLS_lib/./MPI.h:984) [534]  (1.49 ns)
+
+ <State 68>: 2.19ns
+The critical path consists of the following:
+	fifo read on port 'stream_in_V' [542]  (2.19 ns)
+
+ <State 69>: 3.02ns
+The critical path consists of the following:
+	fifo read on port 'stream_in_V' [657]  (2.19 ns)
+	multiplexor before 'phi' operation ('last.V', ../HMPI/HLS_lib/./MPI.h:21->../HMPI/HLS_lib/./MPI.h:891) with incoming values : ('tmp_259', ../HMPI/HLS_lib/./MPI.h:21->../HMPI/HLS_lib/./MPI.h:891) ('tmp_262', ../HMPI/HLS_lib/./MPI.h:21->../HMPI/HLS_lib/./MPI.h:895) [663]  (0.835 ns)
+
+ <State 70>: 1.77ns
+The critical path consists of the following:
+	'getelementptr' operation ('int_request_array_DE_17', ../HMPI/HLS_lib/./MPI.h:876) [595]  (0 ns)
+	'load' operation ('int_request_array_DE_18', ../HMPI/HLS_lib/./MPI.h:876) on array 'int_request_array_DE' [596]  (1.77 ns)
+
+ <State 71>: 2.87ns
+The critical path consists of the following:
+	'load' operation ('int_request_array_DE_18', ../HMPI/HLS_lib/./MPI.h:876) on array 'int_request_array_DE' [596]  (1.77 ns)
+	'icmp' operation ('tmp_168', ../HMPI/HLS_lib/./MPI.h:876) [597]  (1.1 ns)
+
+ <State 72>: 2.87ns
+The critical path consists of the following:
+	'load' operation ('int_request_array_SR_18', ../HMPI/HLS_lib/./MPI.h:877) on array 'int_request_array_SR' [601]  (1.77 ns)
+	'icmp' operation ('tmp_172', ../HMPI/HLS_lib/./MPI.h:877) [603]  (1.1 ns)
+
+ <State 73>: 2.61ns
+The critical path consists of the following:
+	'load' operation ('int_request_array_MS_18', ../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:878) on array 'int_request_array_MS' [609]  (1.77 ns)
+	'store' operation (../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:878) of variable 'int_request_array_MS_18', ../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:878 on static variable 'envlp_MSG_SIZE_V' [610]  (0.835 ns)
+
+ <State 74>: 3.26ns
+The critical path consists of the following:
+	'phi' operation ('j') with incoming values : ('j_cast', ../HMPI/HLS_lib/./MPI.h:874) ('j', ../HMPI/HLS_lib/./MPI.h:882) [616]  (0 ns)
+	'add' operation ('j', ../HMPI/HLS_lib/./MPI.h:882) [621]  (1.49 ns)
+	'getelementptr' operation ('int_request_array_DE_19', ../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:882) [623]  (0 ns)
+	'load' operation ('int_request_array_DE_20', ../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:882) on array 'int_request_array_DE' [624]  (1.77 ns)
+
+ <State 75>: 3.54ns
+The critical path consists of the following:
+	'load' operation ('int_request_array_DE_20', ../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:882) on array 'int_request_array_DE' [624]  (1.77 ns)
+	'store' operation (../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:882) of variable 'int_request_array_DE_20', ../HMPI/HLS_lib/./MPI.h:51->../HMPI/HLS_lib/./MPI.h:882 on array 'int_request_array_DE' [626]  (1.77 ns)
+
+ <State 76>: 2.4ns
+The critical path consists of the following:
+	'load' operation ('float_clr_num_load', ../HMPI/HLS_lib/./MPI.h:921) on static variable 'float_clr_num' [697]  (0 ns)
+	'add' operation ('tmp_200', ../HMPI/HLS_lib/./MPI.h:922) [711]  (1.49 ns)
+	'store' operation (../HMPI/HLS_lib/./MPI.h:922) of variable 'tmp_200', ../HMPI/HLS_lib/./MPI.h:922 on static variable 'float_clr_num' [712]  (0.918 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+	State 38
+	State 39
+	State 40
+	State 41
+	State 42
+	State 43
+	State 44
+	State 45
+	State 46
+	State 47
+	State 48
+	State 49
+	State 50
+	State 51
+	State 52
+	State 53
+	State 54
+	State 55
+	State 56
+	State 57
+	State 58
+	State 59
+	State 60
+	State 61
+	State 62
+	State 63
+	State 64
+	State 65
+	State 66
+	State 67
+	State 68
+	State 69
+	State 70
+	State 71
+	State 72
+	State 73
+	State 74
+	State 75
+	State 76
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

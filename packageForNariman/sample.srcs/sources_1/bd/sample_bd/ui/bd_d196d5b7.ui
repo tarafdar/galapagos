@@ -1,0 +1,34 @@
+{
+   ExpandedHierarchyInLayout: "",
+   guistr: "# # String gsaved with Nlview 6.8.5  2018-01-30 bk=1.4354 VDI=40 GEI=35 GUI=JA:1.6 TLS
+#  -string -flagsOSRD
+preplace port to_eth_0 -pg 1 -y -60 -defaultsOSRD
+preplace port ARESETN -pg 1 -y 140 -defaultsOSRD
+preplace port to_app_0 -pg 1 -y -80 -defaultsOSRD
+preplace port CLK -pg 1 -y -10 -defaultsOSRD
+preplace port from_app_0 -pg 1 -y -30 -defaultsOSRD
+preplace port from_eth_0 -pg 1 -y -50 -defaultsOSRD
+preplace inst blk_mem_gen_0 -pg 1 -lvl 3 -y 100 -defaultsOSRD
+preplace inst src_mac_addr -pg 1 -lvl 1 -y -130 -defaultsOSRD
+preplace inst ethernet_bridge_0 -pg 1 -lvl 2 -y 10 -defaultsOSRD
+preplace netloc ethernet_bridge_0_mac_table_V_ce1 1 2 1 680
+preplace netloc CLK_1 1 0 3 N -10 60 160 700
+preplace netloc from_app_0_1 1 0 2 NJ -30 NJ
+preplace netloc ARESETN_1 1 0 2 NJ 140 70
+preplace netloc ethernet_bridge_0_mac_table_V_we0 1 2 1 720
+preplace netloc ethernet_bridge_0_mac_table_V_we1 1 2 1 660
+preplace netloc ethernet_bridge_0_mac_table_V_address0 1 2 1 690
+preplace netloc ethernet_bridge_0_to_eth 1 2 2 730J -90 1030J
+preplace netloc ethernet_bridge_0_mac_table_V_address1 1 2 1 670
+preplace netloc src_mac_addr_dout 1 1 1 90
+preplace netloc blk_mem_gen_0_douta 1 1 2 80 170 640
+preplace netloc ethernet_bridge_0_mac_table_V_d0 1 2 1 710
+preplace netloc blk_mem_gen_0_doutb 1 1 2 90 190 N
+preplace netloc from_eth_0_1 1 0 2 NJ -50 NJ
+preplace netloc ethernet_bridge_0_mac_table_V_d1 1 2 1 650
+preplace netloc ethernet_bridge_0_to_app 1 2 2 720J -100 1040J
+preplace netloc ethernet_bridge_0_mac_table_V_ce0 1 2 1 730
+levelinfo -pg 1 -170 -30 410 920 1060 -top -340 -bot 300
+",
+}
+

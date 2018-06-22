@@ -1,0 +1,758 @@
+
+*** Running vivado
+    with args -log pr_network_bridge_inst_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source pr_network_bridge_inst_0.tcl
+
+
+****** Vivado v2018.1 (64-bit)
+  **** SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018
+  **** IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source pr_network_bridge_inst_0.tcl -notrace
+Command: synth_design -top pr_network_bridge_inst_0 -part xcku115-flva1517-2-e -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xcku115'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcku115'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 16619 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1372.824 ; gain = 80.000 ; free physical = 17971 ; free virtual = 57044
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'pr_network_bridge_inst_0' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ip/pr_network_bridge_inst_0/synth/pr_network_bridge_inst_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'ethernet_bridge_top' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/9390/hdl/verilog/ethernet_bridge_top.v:9]
+	Parameter RESET_ACTIVE_LOW bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'ethernet_bridge' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/9390/hdl/verilog/ethernet_bridge.v:12]
+INFO: [Synth 8-6157] synthesizing module 'ethernet_bridge_entr' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/9390/hdl/verilog/ethernet_bridge_entr.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 1'b1 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/9390/hdl/verilog/ethernet_bridge_entr.v:51]
+INFO: [Synth 8-6155] done synthesizing module 'ethernet_bridge_entr' (1#1) [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/9390/hdl/verilog/ethernet_bridge_entr.v:10]
+INFO: [Synth 8-6157] synthesizing module 'eth_to_app' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/9390/hdl/verilog/eth_to_app.v:10]
+	Parameter ap_ST_fsm_pp0_stage0 bound to: 1'b1 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/9390/hdl/verilog/eth_to_app.v:56]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/9390/hdl/verilog/eth_to_app.v:406]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/9390/hdl/verilog/eth_to_app.v:408]
+INFO: [Synth 8-6155] done synthesizing module 'eth_to_app' (2#1) [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/9390/hdl/verilog/eth_to_app.v:10]
+INFO: [Synth 8-6157] synthesizing module 'app_to_eth' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/9390/hdl/verilog/app_to_eth.v:10]
+	Parameter ap_ST_fsm_pp0_stage0 bound to: 1'b1 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/9390/hdl/verilog/app_to_eth.v:64]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/9390/hdl/verilog/app_to_eth.v:459]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/9390/hdl/verilog/app_to_eth.v:461]
+INFO: [Synth 8-6155] done synthesizing module 'app_to_eth' (3#1) [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/9390/hdl/verilog/app_to_eth.v:10]
+INFO: [Synth 8-6157] synthesizing module 'fifo_w48_d2_A' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/9390/hdl/verilog/fifo_w48_d2_A.v:45]
+	Parameter MEM_STYLE bound to: shiftreg - type: string 
+	Parameter DATA_WIDTH bound to: 48 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2'b10 
+INFO: [Synth 8-6157] synthesizing module 'fifo_w48_d2_A_shiftReg' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/9390/hdl/verilog/fifo_w48_d2_A.v:11]
+	Parameter DATA_WIDTH bound to: 48 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2'b10 
+INFO: [Synth 8-6155] done synthesizing module 'fifo_w48_d2_A_shiftReg' (4#1) [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/9390/hdl/verilog/fifo_w48_d2_A.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'fifo_w48_d2_A' (5#1) [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/9390/hdl/verilog/fifo_w48_d2_A.v:45]
+INFO: [Synth 8-6155] done synthesizing module 'ethernet_bridge' (6#1) [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/9390/hdl/verilog/ethernet_bridge.v:12]
+INFO: [Synth 8-6157] synthesizing module 'ethernet_bridge_mac_table_V_if' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/9390/hdl/verilog/ethernet_bridge_mac_table_V_if.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'ethernet_bridge_mac_table_V_if' (7#1) [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/9390/hdl/verilog/ethernet_bridge_mac_table_V_if.v:11]
+INFO: [Synth 8-6157] synthesizing module 'ethernet_bridge_from_app_V_if' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/9390/hdl/verilog/ethernet_bridge_from_app_V_if.v:11]
+INFO: [Synth 8-6157] synthesizing module 'ethernet_bridge_from_app_V_reg_slice' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/9390/hdl/verilog/ethernet_bridge_from_app_V_if.v:70]
+	Parameter N bound to: 81 - type: integer 
+	Parameter ZERO bound to: 2'b10 
+	Parameter ONE bound to: 2'b11 
+	Parameter TWO bound to: 2'b01 
+INFO: [Synth 8-6155] done synthesizing module 'ethernet_bridge_from_app_V_reg_slice' (8#1) [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/9390/hdl/verilog/ethernet_bridge_from_app_V_if.v:70]
+INFO: [Synth 8-6155] done synthesizing module 'ethernet_bridge_from_app_V_if' (9#1) [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/9390/hdl/verilog/ethernet_bridge_from_app_V_if.v:11]
+INFO: [Synth 8-6157] synthesizing module 'ethernet_bridge_from_eth_V_if' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/9390/hdl/verilog/ethernet_bridge_from_eth_V_if.v:11]
+INFO: [Synth 8-6157] synthesizing module 'ethernet_bridge_from_eth_V_reg_slice' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/9390/hdl/verilog/ethernet_bridge_from_eth_V_if.v:68]
+	Parameter N bound to: 73 - type: integer 
+	Parameter ZERO bound to: 2'b10 
+	Parameter ONE bound to: 2'b11 
+	Parameter TWO bound to: 2'b01 
+INFO: [Synth 8-6155] done synthesizing module 'ethernet_bridge_from_eth_V_reg_slice' (10#1) [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/9390/hdl/verilog/ethernet_bridge_from_eth_V_if.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'ethernet_bridge_from_eth_V_if' (11#1) [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/9390/hdl/verilog/ethernet_bridge_from_eth_V_if.v:11]
+INFO: [Synth 8-6157] synthesizing module 'ethernet_bridge_to_app_V_if' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/9390/hdl/verilog/ethernet_bridge_to_app_V_if.v:11]
+INFO: [Synth 8-6157] synthesizing module 'ethernet_bridge_to_app_V_reg_slice' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/9390/hdl/verilog/ethernet_bridge_to_app_V_if.v:70]
+	Parameter N bound to: 81 - type: integer 
+	Parameter ZERO bound to: 2'b10 
+	Parameter ONE bound to: 2'b11 
+	Parameter TWO bound to: 2'b01 
+INFO: [Synth 8-6155] done synthesizing module 'ethernet_bridge_to_app_V_reg_slice' (12#1) [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/9390/hdl/verilog/ethernet_bridge_to_app_V_if.v:70]
+INFO: [Synth 8-6155] done synthesizing module 'ethernet_bridge_to_app_V_if' (13#1) [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/9390/hdl/verilog/ethernet_bridge_to_app_V_if.v:11]
+INFO: [Synth 8-6157] synthesizing module 'ethernet_bridge_to_eth_V_if' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/9390/hdl/verilog/ethernet_bridge_to_eth_V_if.v:11]
+INFO: [Synth 8-6157] synthesizing module 'ethernet_bridge_to_eth_V_reg_slice' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/9390/hdl/verilog/ethernet_bridge_to_eth_V_if.v:68]
+	Parameter N bound to: 73 - type: integer 
+	Parameter ZERO bound to: 2'b10 
+	Parameter ONE bound to: 2'b11 
+	Parameter TWO bound to: 2'b01 
+INFO: [Synth 8-6155] done synthesizing module 'ethernet_bridge_to_eth_V_reg_slice' (14#1) [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/9390/hdl/verilog/ethernet_bridge_to_eth_V_if.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'ethernet_bridge_to_eth_V_if' (15#1) [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/9390/hdl/verilog/ethernet_bridge_to_eth_V_if.v:11]
+INFO: [Synth 8-6157] synthesizing module 'ethernet_bridge_ap_rst_if' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/9390/hdl/verilog/ethernet_bridge_ap_rst_if.v:10]
+	Parameter RESET_ACTIVE_LOW bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ethernet_bridge_ap_rst_if' (16#1) [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/9390/hdl/verilog/ethernet_bridge_ap_rst_if.v:10]
+WARNING: [Synth 8-3848] Net sig_ethernet_bridge_ap_rst_n in module/entity ethernet_bridge_top does not have driver. [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/9390/hdl/verilog/ethernet_bridge_top.v:215]
+INFO: [Synth 8-6155] done synthesizing module 'ethernet_bridge_top' (17#1) [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/9390/hdl/verilog/ethernet_bridge_top.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'pr_network_bridge_inst_0' (18#1) [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ip/pr_network_bridge_inst_0/synth/pr_network_bridge_inst_0.v:57]
+WARNING: [Synth 8-3331] design ethernet_bridge_mac_table_V_if has unconnected port Din_A[63]
+WARNING: [Synth 8-3331] design ethernet_bridge_mac_table_V_if has unconnected port Din_A[62]
+WARNING: [Synth 8-3331] design ethernet_bridge_mac_table_V_if has unconnected port Din_A[61]
+WARNING: [Synth 8-3331] design ethernet_bridge_mac_table_V_if has unconnected port Din_A[60]
+WARNING: [Synth 8-3331] design ethernet_bridge_mac_table_V_if has unconnected port Din_A[59]
+WARNING: [Synth 8-3331] design ethernet_bridge_mac_table_V_if has unconnected port Din_A[58]
+WARNING: [Synth 8-3331] design ethernet_bridge_mac_table_V_if has unconnected port Din_A[57]
+WARNING: [Synth 8-3331] design ethernet_bridge_mac_table_V_if has unconnected port Din_A[56]
+WARNING: [Synth 8-3331] design ethernet_bridge_mac_table_V_if has unconnected port Din_A[55]
+WARNING: [Synth 8-3331] design ethernet_bridge_mac_table_V_if has unconnected port Din_A[54]
+WARNING: [Synth 8-3331] design ethernet_bridge_mac_table_V_if has unconnected port Din_A[53]
+WARNING: [Synth 8-3331] design ethernet_bridge_mac_table_V_if has unconnected port Din_A[52]
+WARNING: [Synth 8-3331] design ethernet_bridge_mac_table_V_if has unconnected port Din_A[51]
+WARNING: [Synth 8-3331] design ethernet_bridge_mac_table_V_if has unconnected port Din_A[50]
+WARNING: [Synth 8-3331] design ethernet_bridge_mac_table_V_if has unconnected port Din_A[49]
+WARNING: [Synth 8-3331] design ethernet_bridge_mac_table_V_if has unconnected port Din_A[48]
+WARNING: [Synth 8-3331] design ethernet_bridge_mac_table_V_if has unconnected port Din_B[63]
+WARNING: [Synth 8-3331] design ethernet_bridge_mac_table_V_if has unconnected port Din_B[62]
+WARNING: [Synth 8-3331] design ethernet_bridge_mac_table_V_if has unconnected port Din_B[61]
+WARNING: [Synth 8-3331] design ethernet_bridge_mac_table_V_if has unconnected port Din_B[60]
+WARNING: [Synth 8-3331] design ethernet_bridge_mac_table_V_if has unconnected port Din_B[59]
+WARNING: [Synth 8-3331] design ethernet_bridge_mac_table_V_if has unconnected port Din_B[58]
+WARNING: [Synth 8-3331] design ethernet_bridge_mac_table_V_if has unconnected port Din_B[57]
+WARNING: [Synth 8-3331] design ethernet_bridge_mac_table_V_if has unconnected port Din_B[56]
+WARNING: [Synth 8-3331] design ethernet_bridge_mac_table_V_if has unconnected port Din_B[55]
+WARNING: [Synth 8-3331] design ethernet_bridge_mac_table_V_if has unconnected port Din_B[54]
+WARNING: [Synth 8-3331] design ethernet_bridge_mac_table_V_if has unconnected port Din_B[53]
+WARNING: [Synth 8-3331] design ethernet_bridge_mac_table_V_if has unconnected port Din_B[52]
+WARNING: [Synth 8-3331] design ethernet_bridge_mac_table_V_if has unconnected port Din_B[51]
+WARNING: [Synth 8-3331] design ethernet_bridge_mac_table_V_if has unconnected port Din_B[50]
+WARNING: [Synth 8-3331] design ethernet_bridge_mac_table_V_if has unconnected port Din_B[49]
+WARNING: [Synth 8-3331] design ethernet_bridge_mac_table_V_if has unconnected port Din_B[48]
+WARNING: [Synth 8-3331] design ethernet_bridge has unconnected port mac_table_V_q1[47]
+WARNING: [Synth 8-3331] design ethernet_bridge has unconnected port mac_table_V_q1[46]
+WARNING: [Synth 8-3331] design ethernet_bridge has unconnected port mac_table_V_q1[45]
+WARNING: [Synth 8-3331] design ethernet_bridge has unconnected port mac_table_V_q1[44]
+WARNING: [Synth 8-3331] design ethernet_bridge has unconnected port mac_table_V_q1[43]
+WARNING: [Synth 8-3331] design ethernet_bridge has unconnected port mac_table_V_q1[42]
+WARNING: [Synth 8-3331] design ethernet_bridge has unconnected port mac_table_V_q1[41]
+WARNING: [Synth 8-3331] design ethernet_bridge has unconnected port mac_table_V_q1[40]
+WARNING: [Synth 8-3331] design ethernet_bridge has unconnected port mac_table_V_q1[39]
+WARNING: [Synth 8-3331] design ethernet_bridge has unconnected port mac_table_V_q1[38]
+WARNING: [Synth 8-3331] design ethernet_bridge has unconnected port mac_table_V_q1[37]
+WARNING: [Synth 8-3331] design ethernet_bridge has unconnected port mac_table_V_q1[36]
+WARNING: [Synth 8-3331] design ethernet_bridge has unconnected port mac_table_V_q1[35]
+WARNING: [Synth 8-3331] design ethernet_bridge has unconnected port mac_table_V_q1[34]
+WARNING: [Synth 8-3331] design ethernet_bridge has unconnected port mac_table_V_q1[33]
+WARNING: [Synth 8-3331] design ethernet_bridge has unconnected port mac_table_V_q1[32]
+WARNING: [Synth 8-3331] design ethernet_bridge has unconnected port mac_table_V_q1[31]
+WARNING: [Synth 8-3331] design ethernet_bridge has unconnected port mac_table_V_q1[30]
+WARNING: [Synth 8-3331] design ethernet_bridge has unconnected port mac_table_V_q1[29]
+WARNING: [Synth 8-3331] design ethernet_bridge has unconnected port mac_table_V_q1[28]
+WARNING: [Synth 8-3331] design ethernet_bridge has unconnected port mac_table_V_q1[27]
+WARNING: [Synth 8-3331] design ethernet_bridge has unconnected port mac_table_V_q1[26]
+WARNING: [Synth 8-3331] design ethernet_bridge has unconnected port mac_table_V_q1[25]
+WARNING: [Synth 8-3331] design ethernet_bridge has unconnected port mac_table_V_q1[24]
+WARNING: [Synth 8-3331] design ethernet_bridge has unconnected port mac_table_V_q1[23]
+WARNING: [Synth 8-3331] design ethernet_bridge has unconnected port mac_table_V_q1[22]
+WARNING: [Synth 8-3331] design ethernet_bridge has unconnected port mac_table_V_q1[21]
+WARNING: [Synth 8-3331] design ethernet_bridge has unconnected port mac_table_V_q1[20]
+WARNING: [Synth 8-3331] design ethernet_bridge has unconnected port mac_table_V_q1[19]
+WARNING: [Synth 8-3331] design ethernet_bridge has unconnected port mac_table_V_q1[18]
+WARNING: [Synth 8-3331] design ethernet_bridge has unconnected port mac_table_V_q1[17]
+WARNING: [Synth 8-3331] design ethernet_bridge has unconnected port mac_table_V_q1[16]
+WARNING: [Synth 8-3331] design ethernet_bridge has unconnected port mac_table_V_q1[15]
+WARNING: [Synth 8-3331] design ethernet_bridge has unconnected port mac_table_V_q1[14]
+WARNING: [Synth 8-3331] design ethernet_bridge has unconnected port mac_table_V_q1[13]
+WARNING: [Synth 8-3331] design ethernet_bridge has unconnected port mac_table_V_q1[12]
+WARNING: [Synth 8-3331] design ethernet_bridge has unconnected port mac_table_V_q1[11]
+WARNING: [Synth 8-3331] design ethernet_bridge has unconnected port mac_table_V_q1[10]
+WARNING: [Synth 8-3331] design ethernet_bridge has unconnected port mac_table_V_q1[9]
+WARNING: [Synth 8-3331] design ethernet_bridge has unconnected port mac_table_V_q1[8]
+WARNING: [Synth 8-3331] design ethernet_bridge has unconnected port mac_table_V_q1[7]
+WARNING: [Synth 8-3331] design ethernet_bridge has unconnected port mac_table_V_q1[6]
+WARNING: [Synth 8-3331] design ethernet_bridge has unconnected port mac_table_V_q1[5]
+WARNING: [Synth 8-3331] design ethernet_bridge has unconnected port mac_table_V_q1[4]
+WARNING: [Synth 8-3331] design ethernet_bridge has unconnected port mac_table_V_q1[3]
+WARNING: [Synth 8-3331] design ethernet_bridge has unconnected port mac_table_V_q1[2]
+WARNING: [Synth 8-3331] design ethernet_bridge has unconnected port mac_table_V_q1[1]
+WARNING: [Synth 8-3331] design ethernet_bridge has unconnected port mac_table_V_q1[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1418.434 ; gain = 125.609 ; free physical = 17828 ; free virtual = 56901
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin ethernet_bridge_mac_table_V_if_U:reset to constant 0 [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/9390/hdl/verilog/ethernet_bridge_top.v:213]
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1418.434 ; gain = 125.609 ; free physical = 17799 ; free virtual = 56872
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1418.434 ; gain = 125.609 ; free physical = 17799 ; free virtual = 56872
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xcku115-flva1517-2-e
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ip/pr_network_bridge_inst_0/constraints/ethernet_bridge_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ip/pr_network_bridge_inst_0/constraints/ethernet_bridge_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.runs/pr_network_bridge_inst_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.runs/pr_network_bridge_inst_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.09 . Memory (MB): peak = 2115.758 ; gain = 1.000 ; free physical = 15648 ; free virtual = 54722
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:36 ; elapsed = 00:00:48 . Memory (MB): peak = 2115.758 ; gain = 822.934 ; free physical = 15352 ; free virtual = 54440
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xcku115-flva1517-2-e
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:36 ; elapsed = 00:00:48 . Memory (MB): peak = 2115.758 ; gain = 822.934 ; free physical = 15351 ; free virtual = 54439
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for inst. (constraint file  /home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.runs/pr_network_bridge_inst_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:36 ; elapsed = 00:00:48 . Memory (MB): peak = 2115.758 ; gain = 822.934 ; free physical = 15353 ; free virtual = 54441
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4471] merging register 'tmp_last_V_reg_351_reg[0:0]' into 'app_packet_out_last_s_reg[0:0]' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/9390/hdl/verilog/eth_to_app.v:179]
+INFO: [Synth 8-4471] merging register 'state_V_1_reg[2:2]' into 'state_V_1_load_reg_339_reg[2:2]' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/9390/hdl/verilog/eth_to_app.v:434]
+WARNING: [Synth 8-6014] Unused sequential element tmp_last_V_reg_351_reg was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/9390/hdl/verilog/eth_to_app.v:179]
+WARNING: [Synth 8-3936] Found unconnected internal register 'eth_dst_src_V_reg' and it is trimmed from '96' to '32' bits. [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/9390/hdl/verilog/app_to_eth.v:232]
+INFO: [Synth 8-802] inferred FSM for state register 'state_V_reg' in module 'app_to_eth'
+INFO: [Synth 8-5544] ROM "storemerge3_i_fu_337_p3" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "storemerge_i_fu_323_p3" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "internal_empty_n" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'ethernet_bridge_from_app_V_reg_slice'
+INFO: [Synth 8-5544] ROM "next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'ethernet_bridge_from_eth_V_reg_slice'
+INFO: [Synth 8-5544] ROM "next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'ethernet_bridge_to_app_V_reg_slice'
+INFO: [Synth 8-5544] ROM "next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'ethernet_bridge_to_eth_V_reg_slice'
+INFO: [Synth 8-5544] ROM "next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                            00010 |                              001
+                 iSTATE0 |                            10000 |                              010
+                 iSTATE1 |                            01000 |                              011
+                 iSTATE2 |                            00100 |                              100
+*
+                 iSTATE3 |                            00001 |                              000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_V_reg' using encoding 'one-hot' in module 'app_to_eth'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'ethernet_bridge_from_app_V_reg_slice'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'ethernet_bridge_from_eth_V_reg_slice'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'ethernet_bridge_to_app_V_reg_slice'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'ethernet_bridge_to_eth_V_reg_slice'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:37 ; elapsed = 00:00:49 . Memory (MB): peak = 2115.758 ; gain = 822.934 ; free physical = 15291 ; free virtual = 54379
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 2     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	               81 Bit    Registers := 4     
+	               73 Bit    Registers := 4     
+	               64 Bit    Registers := 2     
+	               48 Bit    Registers := 5     
+	               32 Bit    Registers := 1     
+	                8 Bit    Registers := 22    
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 8     
+	                1 Bit    Registers := 23    
++---Muxes : 
+	   2 Input     81 Bit        Muxes := 2     
+	   4 Input     73 Bit        Muxes := 1     
+	   2 Input     73 Bit        Muxes := 3     
+	   2 Input     48 Bit        Muxes := 2     
+	   4 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 2     
+	   5 Input      3 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 14    
+	   2 Input      2 Bit        Muxes := 41    
+	   5 Input      2 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 31    
+	   4 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module ethernet_bridge_entr 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+Module eth_to_app 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	                8 Bit    Registers := 10    
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   3 Input      2 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 6     
+Module app_to_eth 
+Detailed RTL Component Info : 
++---Registers : 
+	               64 Bit    Registers := 2     
+	               48 Bit    Registers := 1     
+	               32 Bit    Registers := 1     
+	                8 Bit    Registers := 12    
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   4 Input     73 Bit        Muxes := 1     
+	   2 Input     73 Bit        Muxes := 1     
+	   4 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 2     
+	   5 Input      3 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module fifo_w48_d2_A_shiftReg 
+Detailed RTL Component Info : 
++---Registers : 
+	               48 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     48 Bit        Muxes := 1     
+Module fifo_w48_d2_A 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 4     
+Module ethernet_bridge 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module ethernet_bridge_from_app_V_reg_slice 
+Detailed RTL Component Info : 
++---Registers : 
+	               81 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     81 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 10    
+	   3 Input      2 Bit        Muxes := 3     
+	   5 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module ethernet_bridge_from_eth_V_reg_slice 
+Detailed RTL Component Info : 
++---Registers : 
+	               73 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     73 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 10    
+	   3 Input      2 Bit        Muxes := 3     
+	   5 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module ethernet_bridge_to_app_V_reg_slice 
+Detailed RTL Component Info : 
++---Registers : 
+	               81 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     81 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 10    
+	   3 Input      2 Bit        Muxes := 3     
+	   5 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module ethernet_bridge_to_eth_V_reg_slice 
+Detailed RTL Component Info : 
++---Registers : 
+	               73 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     73 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 10    
+	   3 Input      2 Bit        Muxes := 3     
+	   5 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 5520 (col length:120)
+BRAMs: 4320 (col length: RAMB18 240 RAMB36 120)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5544] ROM "mac_addr_V_c_U/internal_empty_n" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "mac_addr_V_c42_U/internal_empty_n" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-4471] merging register 'ethernet_bridge_U/eth_to_app_U0/ap_CS_fsm_reg[0:0]' into 'ethernet_bridge_U/ethernet_bridge_entr_U0/ap_CS_fsm_reg[0:0]' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/9390/hdl/verilog/eth_to_app.v:127]
+INFO: [Synth 8-4471] merging register 'ethernet_bridge_U/app_to_eth_U0/ap_CS_fsm_reg[0:0]' into 'ethernet_bridge_U/ethernet_bridge_entr_U0/ap_CS_fsm_reg[0:0]' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/9390/hdl/verilog/app_to_eth.v:154]
+WARNING: [Synth 8-6014] Unused sequential element ethernet_bridge_U/eth_to_app_U0/ap_CS_fsm_reg was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/9390/hdl/verilog/eth_to_app.v:127]
+WARNING: [Synth 8-6014] Unused sequential element ethernet_bridge_U/app_to_eth_U0/ap_CS_fsm_reg was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/9390/hdl/verilog/app_to_eth.v:154]
+WARNING: [Synth 8-3331] design ethernet_bridge_top has unconnected port mac_table_V_Din_A[63]
+WARNING: [Synth 8-3331] design ethernet_bridge_top has unconnected port mac_table_V_Din_A[62]
+WARNING: [Synth 8-3331] design ethernet_bridge_top has unconnected port mac_table_V_Din_A[61]
+WARNING: [Synth 8-3331] design ethernet_bridge_top has unconnected port mac_table_V_Din_A[60]
+WARNING: [Synth 8-3331] design ethernet_bridge_top has unconnected port mac_table_V_Din_A[59]
+WARNING: [Synth 8-3331] design ethernet_bridge_top has unconnected port mac_table_V_Din_A[58]
+WARNING: [Synth 8-3331] design ethernet_bridge_top has unconnected port mac_table_V_Din_A[57]
+WARNING: [Synth 8-3331] design ethernet_bridge_top has unconnected port mac_table_V_Din_A[56]
+WARNING: [Synth 8-3331] design ethernet_bridge_top has unconnected port mac_table_V_Din_A[55]
+WARNING: [Synth 8-3331] design ethernet_bridge_top has unconnected port mac_table_V_Din_A[54]
+WARNING: [Synth 8-3331] design ethernet_bridge_top has unconnected port mac_table_V_Din_A[53]
+WARNING: [Synth 8-3331] design ethernet_bridge_top has unconnected port mac_table_V_Din_A[52]
+WARNING: [Synth 8-3331] design ethernet_bridge_top has unconnected port mac_table_V_Din_A[51]
+WARNING: [Synth 8-3331] design ethernet_bridge_top has unconnected port mac_table_V_Din_A[50]
+WARNING: [Synth 8-3331] design ethernet_bridge_top has unconnected port mac_table_V_Din_A[49]
+WARNING: [Synth 8-3331] design ethernet_bridge_top has unconnected port mac_table_V_Din_A[48]
+WARNING: [Synth 8-3331] design ethernet_bridge_top has unconnected port mac_table_V_Din_B[63]
+WARNING: [Synth 8-3331] design ethernet_bridge_top has unconnected port mac_table_V_Din_B[62]
+WARNING: [Synth 8-3331] design ethernet_bridge_top has unconnected port mac_table_V_Din_B[61]
+WARNING: [Synth 8-3331] design ethernet_bridge_top has unconnected port mac_table_V_Din_B[60]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\ethernet_bridge_to_eth_V_if_U/rs/data_p2_reg[64] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\ethernet_bridge_U/eth_to_app_U0/ap_done_reg_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\ethernet_bridge_U/eth_to_app_U0/state_V_1_load_reg_339_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\ethernet_bridge_U/ethernet_bridge_entr_U0/ap_done_reg_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\ethernet_bridge_U/app_to_eth_U0/ap_done_reg_reg )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\ethernet_bridge_U/ethernet_bridge_entr_U0/ap_CS_fsm_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\ethernet_bridge_to_eth_V_if_U/rs/data_p1_reg[64] )
+WARNING: [Synth 8-3332] Sequential element (ethernet_bridge_U/ethernet_bridge_entr_U0/ap_done_reg_reg) is unused and will be removed from module ethernet_bridge_top.
+WARNING: [Synth 8-3332] Sequential element (ethernet_bridge_U/ethernet_bridge_entr_U0/ap_CS_fsm_reg[0]) is unused and will be removed from module ethernet_bridge_top.
+WARNING: [Synth 8-3332] Sequential element (ethernet_bridge_U/eth_to_app_U0/ap_done_reg_reg) is unused and will be removed from module ethernet_bridge_top.
+WARNING: [Synth 8-3332] Sequential element (ethernet_bridge_U/app_to_eth_U0/ap_done_reg_reg) is unused and will be removed from module ethernet_bridge_top.
+WARNING: [Synth 8-3332] Sequential element (ethernet_bridge_to_eth_V_if_U/rs/data_p2_reg[64]) is unused and will be removed from module ethernet_bridge_top.
+WARNING: [Synth 8-3332] Sequential element (ethernet_bridge_to_eth_V_if_U/rs/data_p1_reg[64]) is unused and will be removed from module ethernet_bridge_top.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:00:53 . Memory (MB): peak = 2115.758 ; gain = 822.934 ; free physical = 14951 ; free virtual = 54042
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:54 ; elapsed = 00:01:27 . Memory (MB): peak = 2275.195 ; gain = 982.371 ; free physical = 15937 ; free virtual = 55020
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:56 ; elapsed = 00:01:29 . Memory (MB): peak = 2342.148 ; gain = 1049.324 ; free physical = 16928 ; free virtual = 56011
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][2]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][2]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][0]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][0]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][1]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][1]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][5]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][5]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][3]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][3]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][4]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][4]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][8]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][8]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][6]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][6]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][7]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][7]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][11]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][11]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][9]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][9]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][10]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][10]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][14]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][14]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][12]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][12]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][13]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][13]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][17]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][17]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][15]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][15]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][16]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][16]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][20]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][20]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][18]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][18]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][19]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][19]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][23]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][23]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][21]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][21]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][22]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][22]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][26]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][26]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][24]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][24]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][25]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][25]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][29]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][29]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][27]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][27]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][28]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][28]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][32]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][32]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][30]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][30]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][31]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][31]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][35]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][35]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][33]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][33]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][34]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][34]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][38]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][38]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][36]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][36]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][37]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][37]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][41]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][41]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][39]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][39]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][40]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][40]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][44]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][44]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][42]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][42]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][43]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][43]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][47]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][47]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][45]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][45]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][46]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[0][46]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][0]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][0]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][1]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][1]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][2]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][2]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][3]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][3]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][4]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][4]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][5]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][5]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][6]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][6]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][7]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][7]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][8]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][8]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][9]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][9]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][10]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][10]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][11]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][11]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][12]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][12]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][13]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][13]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][14]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][14]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][15]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][15]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][16]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][16]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][17]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][17]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][18]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][18]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][19]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][19]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][20]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][20]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][21]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][21]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][22]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][22]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][23]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][23]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][24]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][24]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][25]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][25]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][26]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][26]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][27]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][27]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][28]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][28]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][29]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][29]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][30]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][30]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][31]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][31]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][32]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][32]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][33]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][33]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][34]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][34]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][35]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][35]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][36]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][36]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][37]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][37]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][38]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][38]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][39]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][39]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][40]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][40]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][41]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][41]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][42]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][42]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][43]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][43]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][44]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][44]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][45]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][45]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][46]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][46]'
+INFO: [Synth 8-3886] merging instance 'inst/ethernet_bridge_U/mac_addr_V_c42_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][47]' (FDE) to 'inst/ethernet_bridge_U/mac_addr_V_c_U/U_fifo_w48_d2_A_ram/SRL_SIG_reg[1][47]'
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:56 ; elapsed = 00:01:29 . Memory (MB): peak = 2342.148 ; gain = 1049.324 ; free physical = 16927 ; free virtual = 56010
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:57 ; elapsed = 00:01:30 . Memory (MB): peak = 2342.148 ; gain = 1049.324 ; free physical = 16923 ; free virtual = 56006
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:57 ; elapsed = 00:01:30 . Memory (MB): peak = 2342.148 ; gain = 1049.324 ; free physical = 16923 ; free virtual = 56006
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:57 ; elapsed = 00:01:30 . Memory (MB): peak = 2342.148 ; gain = 1049.324 ; free physical = 16922 ; free virtual = 56005
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:57 ; elapsed = 00:01:30 . Memory (MB): peak = 2342.148 ; gain = 1049.324 ; free physical = 16922 ; free virtual = 56005
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:57 ; elapsed = 00:01:30 . Memory (MB): peak = 2342.148 ; gain = 1049.324 ; free physical = 16922 ; free virtual = 56005
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:57 ; elapsed = 00:01:30 . Memory (MB): peak = 2342.148 ; gain = 1049.324 ; free physical = 16922 ; free virtual = 56005
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY8 |     2|
+|2     |LUT1   |     4|
+|3     |LUT2   |    10|
+|4     |LUT3   |    39|
+|5     |LUT4   |   327|
+|6     |LUT5   |    47|
+|7     |LUT6   |   155|
+|8     |FDRE   |  1133|
+|9     |FDSE   |     9|
++------+-------+------+
+
+Report Instance Areas: 
++------+------------------------------------+-------------------------------------+------+
+|      |Instance                            |Module                               |Cells |
++------+------------------------------------+-------------------------------------+------+
+|1     |top                                 |                                     |  1726|
+|2     |  inst                              |ethernet_bridge_top                  |  1726|
+|3     |    ethernet_bridge_U               |ethernet_bridge                      |   766|
+|4     |      app_to_eth_U0                 |app_to_eth                           |   450|
+|5     |      eth_to_app_U0                 |eth_to_app                           |   100|
+|6     |      mac_addr_V_c42_U              |fifo_w48_d2_A                        |   106|
+|7     |        U_fifo_w48_d2_A_ram         |fifo_w48_d2_A_shiftReg_1             |    96|
+|8     |      mac_addr_V_c_U                |fifo_w48_d2_A_0                      |   109|
+|9     |        U_fifo_w48_d2_A_ram         |fifo_w48_d2_A_shiftReg               |    97|
+|10    |    ethernet_bridge_from_app_V_if_U |ethernet_bridge_from_app_V_if        |   255|
+|11    |      rs                            |ethernet_bridge_from_app_V_reg_slice |   255|
+|12    |    ethernet_bridge_from_eth_V_if_U |ethernet_bridge_from_eth_V_if        |   231|
+|13    |      rs                            |ethernet_bridge_from_eth_V_reg_slice |   231|
+|14    |    ethernet_bridge_to_app_V_if_U   |ethernet_bridge_to_app_V_if          |   254|
+|15    |      rs                            |ethernet_bridge_to_app_V_reg_slice   |   254|
+|16    |    ethernet_bridge_to_eth_V_if_U   |ethernet_bridge_to_eth_V_if          |   220|
+|17    |      rs                            |ethernet_bridge_to_eth_V_reg_slice   |   220|
++------+------------------------------------+-------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:57 ; elapsed = 00:01:30 . Memory (MB): peak = 2342.148 ; gain = 1049.324 ; free physical = 16922 ; free virtual = 56005
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 90 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:45 ; elapsed = 00:01:08 . Memory (MB): peak = 2342.148 ; gain = 352.000 ; free physical = 16943 ; free virtual = 56026
+Synthesis Optimization Complete : Time (s): cpu = 00:00:57 ; elapsed = 00:01:30 . Memory (MB): peak = 2342.156 ; gain = 1049.324 ; free physical = 16943 ; free virtual = 56026
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+185 Infos, 116 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:01 ; elapsed = 00:01:33 . Memory (MB): peak = 2385.797 ; gain = 1126.578 ; free physical = 16950 ; free virtual = 56034
+INFO: [Common 17-1381] The checkpoint '/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.runs/pr_network_bridge_inst_0_synth_1/pr_network_bridge_inst_0.dcp' has been generated.

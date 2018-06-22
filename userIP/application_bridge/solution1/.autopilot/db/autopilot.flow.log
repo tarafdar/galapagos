@@ -1,0 +1,1451 @@
+INFO: [HLS 200-0] Workspace /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1 opened at Fri Jun 22 15:25:41 EDT 2018
+Execute     config_clock -quiet -name default -period 6.4 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 6.4ns.
+Command     config_clock returned 0; 0 sec.
+Execute     open_platform DefaultPlatform 
+Command     open_platform returned 0; 0 sec.
+Execute     import_lib /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/kintexu/kintexu 
+Execute       source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx.lib 
+Execute         source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/plb46.lib 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/fsl.lib 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/axi4.lib 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/maxi.lib 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/saxilite.lib 
+Command           ap_source returned 0; 0 sec.
+Command         ap_source returned 0; 0 sec.
+Execute         source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/dsp48.lib 
+Command         ap_source returned 0; 0.01 sec.
+Execute         source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/dds_compiler.lib 
+Command         ap_source returned 0; 0 sec.
+Execute         source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/xfft.lib 
+Command         ap_source returned 0; 0 sec.
+Execute         source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/xfir.lib 
+Command         ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0.01 sec.
+Execute       source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx_old.lib 
+Command       ap_source returned 0; 0 sec.
+Execute       source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx_vivado.lib 
+Command       ap_source returned 0; 0 sec.
+Execute       source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/target_info.tcl 
+Command         ap_source returned 0; 0 sec.
+Execute         source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/maxi.hlp 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/saxilite.hlp 
+Command           ap_source returned 0; 0 sec.
+Command         ap_source returned 0; 0 sec.
+Execute         source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/dsp48.hlp 
+Command         ap_source returned 0; 0.01 sec.
+Command       ap_source returned 0; 0.01 sec.
+Execute       source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/kintexu/dsp48e2.hlp 
+Command       ap_source returned 0; 0 sec.
+Execute       get_default_platform 
+Command       get_default_platform returned 0; 0 sec.
+Execute       config_chip_info -quiet -resource  {SLICE 30300} {LUT 242400}    {FF 484800} {DSP48E 1920}   {BRAM 1200}  
+Command       config_chip_info returned 0; 0 sec.
+Execute       config_chip_info -quiet -speed medium 
+Command       config_chip_info returned 0; 0 sec.
+Execute       source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/target_info.tcl 
+Command         ap_source returned 0; 0 sec.
+Execute         source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/maxi.hlp 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/saxilite.hlp 
+Command           ap_source returned 0; 0 sec.
+Command         ap_source returned 0; 0 sec.
+Execute         source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/dsp48.hlp 
+Command         ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0.01 sec.
+Command     import_lib returned 0; 0.04 sec.
+Execute     source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/kintexu/kintexu.gen 
+Execute       source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/virtex.gen 
+Execute         source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx.gen 
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/plb46.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/fsl.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/axi4.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/saxilite.gen 
+Command             ap_source returned 0; 0 sec.
+Execute             source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/maxi.gen 
+Command             ap_source returned 0; 0.01 sec.
+Command           ap_source returned 0; 0.02 sec.
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Command           ap_source returned 0; 0.01 sec.
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Command           ap_source returned 0; 0.01 sec.
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/xfft.gen 
+Command           ap_source returned 0; 0.1 sec.
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/util.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/dds_compiler.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source returned 0; 0 sec.
+Command         ap_source returned 0; 0.14 sec.
+Execute         source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0.14 sec.
+Command     ap_source returned 0; 0.14 sec.
+Execute     open_platform DefaultPlatform 
+Command     open_platform returned 0; 0 sec.
+Execute     import_lib /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/kintexu/kintexu_fpv7 
+Execute       source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute         source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx_hp.lib 
+Command         ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0.01 sec.
+Execute       source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute         source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx.hlp 
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/target_info.tcl 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/maxi.hlp 
+Command             ap_source returned 0; 0 sec.
+Execute             source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/saxilite.hlp 
+Command             ap_source returned 0; 0 sec.
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/dsp48.hlp 
+Command           ap_source returned 0; 0.01 sec.
+Command         ap_source returned 0; 0.01 sec.
+Command       ap_source returned 0; 0.01 sec.
+Execute       source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/kintexu/kintexu_hp.hlp 
+Command       ap_source returned 0; 0 sec.
+Command     import_lib returned 0; 0.02 sec.
+Execute     source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/kintexu/kintexu_fpv7.gen 
+Execute       source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx_fpv6.gen 
+Command       ap_source returned 0; 0 sec.
+Command     ap_source returned 0; 0 sec.
+Execute     set_part xcku115-flva1517-2-e 
+Execute       add_library xilinx/kintexu/kintexu:xcku115:-flva1517:-2-e 
+Execute         get_default_platform 
+Command         get_default_platform returned 0; 0 sec.
+Execute         license_isbetapart xcku115 
+Command         license_isbetapart returned 1; 0 sec.
+Execute         open_platform DefaultPlatform 
+Command         open_platform returned 0; 0 sec.
+Execute         import_lib /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/kintexu/kintexu 
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx.lib 
+Execute             source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute               source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/plb46.lib 
+Command               ap_source returned 0; 0 sec.
+Execute               source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/fsl.lib 
+Command               ap_source returned 0; 0 sec.
+Execute               source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/axi4.lib 
+Command               ap_source returned 0; 0 sec.
+Execute               source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/maxi.lib 
+Command               ap_source returned 0; 0 sec.
+Execute               source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/saxilite.lib 
+Command               ap_source returned 0; 0 sec.
+Command             ap_source returned 0; 0 sec.
+Execute             source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/dsp48.lib 
+Command             ap_source returned 0; 0 sec.
+Execute             source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/dds_compiler.lib 
+Command             ap_source returned 0; 0 sec.
+Execute             source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/xfft.lib 
+Command             ap_source returned 0; 0 sec.
+Execute             source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/xfir.lib 
+Command             ap_source returned 0; 0 sec.
+Command           ap_source returned 0; 0.01 sec.
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx_old.lib 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx_vivado.lib 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx.hlp 
+Execute             source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/target_info.tcl 
+Command             ap_source returned 0; 0 sec.
+Execute             source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/maxi.hlp 
+Command               ap_source returned 0; 0 sec.
+Execute               source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/saxilite.hlp 
+Command               ap_source returned 0; 0 sec.
+Command             ap_source returned 0; 0 sec.
+Execute             source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/dsp48.hlp 
+Command             ap_source returned 0; 0 sec.
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/kintexu/dsp48e2.hlp 
+Command           ap_source returned 0; 0 sec.
+Execute           get_default_platform 
+Command           get_default_platform returned 0; 0 sec.
+Execute           config_chip_info -quiet -resource  {SLICE 30300} {LUT 242400}    {FF 484800} {DSP48E 1920}   {BRAM 1200}  
+Command           config_chip_info returned 0; 0 sec.
+Execute           config_chip_info -quiet -speed medium 
+Command           config_chip_info returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx.hlp 
+Execute             source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/target_info.tcl 
+Command             ap_source returned 0; 0 sec.
+Execute             source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/maxi.hlp 
+Command               ap_source returned 0; 0 sec.
+Execute               source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/saxilite.hlp 
+Command               ap_source returned 0; 0 sec.
+Command             ap_source returned 0; 0 sec.
+Execute             source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/dsp48.hlp 
+Command             ap_source returned 0; 0 sec.
+Command           ap_source returned 0; 0 sec.
+Command         import_lib returned 0; 0.01 sec.
+Execute         source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/kintexu/kintexu.gen 
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/virtex.gen 
+Execute             source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx.gen 
+Execute               source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/plb46.gen 
+Command               ap_source returned 0; 0 sec.
+Execute               source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/fsl.gen 
+Command               ap_source returned 0; 0 sec.
+Execute               source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/axi4.gen 
+Command               ap_source returned 0; 0 sec.
+Execute               source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute                 source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/saxilite.gen 
+Command                 ap_source returned 0; 0 sec.
+Execute                 source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/maxi.gen 
+Command                 ap_source returned 0; 0.01 sec.
+Command               ap_source returned 0; 0.01 sec.
+Execute               source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Command               ap_source returned 0; 0 sec.
+Execute               source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Command               ap_source returned 0; 0.01 sec.
+Execute               source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/xfft.gen 
+Command               ap_source returned 0; 0.06 sec.
+Execute               source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/util.gen 
+Command               ap_source returned 0; 0 sec.
+Execute               source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/dds_compiler.gen 
+Command               ap_source returned 0; 0 sec.
+Execute               source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/xfir.gen 
+Command               ap_source returned 0; 0 sec.
+Command             ap_source returned 0; 0.08 sec.
+Execute             source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/dsp48.gen 
+Command             ap_source returned 0; 0 sec.
+Command           ap_source returned 0; 0.09 sec.
+Command         ap_source returned 0; 0.09 sec.
+Execute         get_default_platform 
+Command         get_default_platform returned 0; 0 sec.
+Execute         config_chip_info -quiet -resource  {SLICE 82920} {LUT 663360}    {FF 1326720} {DSP48E 5520}  {BRAM 4320} {SLR 2}  
+Command         config_chip_info returned 0; 0 sec.
+Execute         config_chip_info -quiet -speed medium 
+Command         config_chip_info returned 0; 0 sec.
+Command       add_library returned 0; 0.11 sec.
+Execute       add_library xilinx/kintexu/kintexu_fpv7 
+Execute         get_default_platform 
+Command         get_default_platform returned 0; 0 sec.
+Execute         open_platform DefaultPlatform 
+Command         open_platform returned 0; 0 sec.
+Execute         import_lib /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/kintexu/kintexu_fpv7 
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute             source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx_hp.lib 
+Command             ap_source returned 0; 0.01 sec.
+Command           ap_source returned 0; 0.01 sec.
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute             source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx.hlp 
+Execute               source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/target_info.tcl 
+Command               ap_source returned 0; 0 sec.
+Execute               source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                 source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/maxi.hlp 
+Command                 ap_source returned 0; 0 sec.
+Execute                 source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/saxilite.hlp 
+Command                 ap_source returned 0; 0 sec.
+Command               ap_source returned 0; 0 sec.
+Execute               source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/dsp48.hlp 
+Command               ap_source returned 0; 0 sec.
+Command             ap_source returned 0; 0 sec.
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/kintexu/kintexu_hp.hlp 
+Command           ap_source returned 0; 0 sec.
+Command         import_lib returned 0; 0.02 sec.
+Execute         source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/kintexu/kintexu_fpv7.gen 
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx_fpv6.gen 
+Command           ap_source returned 0; 0 sec.
+Command         ap_source returned 0; 0 sec.
+Command       add_library returned 0; 0.02 sec.
+INFO: [HLS 200-10] Setting target device to 'xcku115-flva1517-2-e'
+Execute       get_default_platform 
+Command       get_default_platform returned 0; 0 sec.
+Command     set_part returned 0; 0.15 sec.
+Execute     get_default_platform 
+Command     get_default_platform returned 0; 0 sec.
+Execute     config_chip_info -quiet -resource  {SLICE 82920} {LUT 663360}    {FF 1326720} {DSP48E 5520}  {BRAM 4320} {SLR 2}  
+Command     config_chip_info returned 0; 0 sec.
+Execute     config_chip_info -quiet -speed medium 
+Command     config_chip_info returned 0; 0 sec.
+Execute     config_interface -expose_global=1 
+Command     config_interface returned 0; 0 sec.
+Command   open_solution returned 0; 0.36 sec.
+Execute   set_part xcku115-flva1517-2-e 
+Execute     add_library xilinx/kintexu/kintexu:xcku115:-flva1517:-2-e 
+Execute       get_default_platform 
+Command       get_default_platform returned 0; 0 sec.
+Execute       license_isbetapart xcku115 
+Command       license_isbetapart returned 1; 0 sec.
+Execute       open_platform DefaultPlatform 
+Command       open_platform returned 0; 0 sec.
+Execute       import_lib /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/kintexu/kintexu 
+Execute         source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx.lib 
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute             source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/plb46.lib 
+Command             ap_source returned 0; 0 sec.
+Execute             source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/fsl.lib 
+Command             ap_source returned 0; 0 sec.
+Execute             source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/axi4.lib 
+Command             ap_source returned 0; 0 sec.
+Execute             source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/maxi.lib 
+Command             ap_source returned 0; 0 sec.
+Execute             source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/saxilite.lib 
+Command             ap_source returned 0; 0 sec.
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/dsp48.lib 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/dds_compiler.lib 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/xfft.lib 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/xfir.lib 
+Command           ap_source returned 0; 0 sec.
+Command         ap_source returned 0; 0 sec.
+Execute         source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx_old.lib 
+Command         ap_source returned 0; 0 sec.
+Execute         source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx_vivado.lib 
+Command         ap_source returned 0; 0 sec.
+Execute         source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx.hlp 
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/target_info.tcl 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/maxi.hlp 
+Command             ap_source returned 0; 0 sec.
+Execute             source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/saxilite.hlp 
+Command             ap_source returned 0; 0 sec.
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/dsp48.hlp 
+Command           ap_source returned 0; 0 sec.
+Command         ap_source returned 0; 0 sec.
+Execute         source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/kintexu/dsp48e2.hlp 
+Command         ap_source returned 0; 0 sec.
+Execute         get_default_platform 
+Command         get_default_platform returned 0; 0 sec.
+Execute         config_chip_info -quiet -resource  {SLICE 30300} {LUT 242400}    {FF 484800} {DSP48E 1920}   {BRAM 1200}  
+Command         config_chip_info returned 0; 0 sec.
+Execute         config_chip_info -quiet -speed medium 
+Command         config_chip_info returned 0; 0 sec.
+Execute         source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx.hlp 
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/target_info.tcl 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/maxi.hlp 
+Command             ap_source returned 0; 0 sec.
+Execute             source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/saxilite.hlp 
+Command             ap_source returned 0; 0 sec.
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/dsp48.hlp 
+Command           ap_source returned 0; 0 sec.
+Command         ap_source returned 0; 0 sec.
+Command       import_lib returned 0; 0.01 sec.
+Execute       source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/kintexu/kintexu.gen 
+Execute         source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/virtex.gen 
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx.gen 
+Execute             source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/plb46.gen 
+Command             ap_source returned 0; 0 sec.
+Execute             source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/fsl.gen 
+Command             ap_source returned 0; 0 sec.
+Execute             source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/axi4.gen 
+Command             ap_source returned 0; 0 sec.
+Execute             source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/saxilite.gen 
+Command               ap_source returned 0; 0 sec.
+Execute               source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/maxi.gen 
+Command               ap_source returned 0; 0.01 sec.
+Command             ap_source returned 0; 0.01 sec.
+Execute             source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Command             ap_source returned 0; 0 sec.
+Execute             source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Command             ap_source returned 0; 0.01 sec.
+Execute             source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/xfft.gen 
+Command             ap_source returned 0; 0.06 sec.
+Execute             source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/util.gen 
+Command             ap_source returned 0; 0 sec.
+Execute             source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/dds_compiler.gen 
+Command             ap_source returned 0; 0 sec.
+Execute             source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/xfir.gen 
+Command             ap_source returned 0; 0 sec.
+Command           ap_source returned 0; 0.08 sec.
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/dsp48.gen 
+Command           ap_source returned 0; 0 sec.
+Command         ap_source returned 0; 0.08 sec.
+Command       ap_source returned 0; 0.08 sec.
+Execute       get_default_platform 
+Command       get_default_platform returned 0; 0 sec.
+Execute       config_chip_info -quiet -resource  {SLICE 82920} {LUT 663360}    {FF 1326720} {DSP48E 5520}  {BRAM 4320} {SLR 2}  
+Command       config_chip_info returned 0; 0 sec.
+Execute       config_chip_info -quiet -speed medium 
+Command       config_chip_info returned 0; 0 sec.
+Command     add_library returned 0; 0.11 sec.
+Execute     add_library xilinx/kintexu/kintexu_fpv7 
+Execute       get_default_platform 
+Command       get_default_platform returned 0; 0 sec.
+Execute       open_platform DefaultPlatform 
+Command       open_platform returned 0; 0 sec.
+Execute       import_lib /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/kintexu/kintexu_fpv7 
+Execute         source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx_hp.lib 
+Command           ap_source returned 0; 0 sec.
+Command         ap_source returned 0; 0 sec.
+Execute         source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx.hlp 
+Execute             source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/target_info.tcl 
+Command             ap_source returned 0; 0 sec.
+Execute             source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/maxi.hlp 
+Command               ap_source returned 0; 0 sec.
+Execute               source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/saxilite.hlp 
+Command               ap_source returned 0; 0 sec.
+Command             ap_source returned 0; 0 sec.
+Execute             source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/dsp48.hlp 
+Command             ap_source returned 0; 0 sec.
+Command           ap_source returned 0; 0 sec.
+Command         ap_source returned 0; 0 sec.
+Execute         source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/kintexu/kintexu_hp.hlp 
+Command         ap_source returned 0; 0 sec.
+Command       import_lib returned 0; 0.01 sec.
+Execute       source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/kintexu/kintexu_fpv7.gen 
+Execute         source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx_fpv6.gen 
+Command         ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0 sec.
+Command     add_library returned 0; 0.01 sec.
+Execute     get_default_platform 
+Command     get_default_platform returned 0; 0 sec.
+Command   set_part returned 0; 0.15 sec.
+Execute   create_clock -period 6.4 -name default 
+Command   create_clock returned 0; 0 sec.
+Execute   config_interface -expose_global 
+Command   config_interface returned 0; 0 sec.
+Execute   csynth_design 
+Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -lm=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -enable_clang39=0 
+INFO: [HLS 200-10] Analyzing design file '../HMPI/HLS_lib/application_bridge.cpp' ...
+INFO: [HLS 200-0] Compiling one TU...
+Execute       is_m_axi_addr64 
+Command       is_m_axi_addr64 returned 0; 0 sec.
+INFO: [HLS 200-0] Handling ../HMPI/HLS_lib/application_bridge.cpp as C++
+Execute       get_default_platform 
+Command       get_default_platform returned 0; 0 sec.
+Execute       is_encrypted ../HMPI/HLS_lib/application_bridge.cpp 
+Command       is_encrypted returned 0; 0 sec.
+Execute       get_default_platform 
+Command       get_default_platform returned 0; 0 sec.
+INFO: [HLS 200-0] Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "/opt/Xilinx/Vivado/2018.1/lnx64/tools/gcc" -hls  -fno-exceptions  -D__llvm__  -E "../HMPI/HLS_lib/application_bridge.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado/2018.1/common/technology/autopilot" -I "/opt/Xilinx/Vivado/2018.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__  -o "/home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/application_bridge.pp.0.cpp" 
+INFO: [HLS 200-0] exec clang -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2018.1/lnx64/tools/gcc -hls -fno-exceptions -D__llvm__ -E ../HMPI/HLS_lib/application_bridge.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/Vivado/2018.1/common/technology/autopilot -I /opt/Xilinx/Vivado/2018.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -o /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/application_bridge.pp.0.cpp
+Command       clang returned 0; 1.26 sec.
+INFO: [HLS 200-0] Syntax Checking before pre-processing...
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "/opt/Xilinx/Vivado/2018.1/lnx64/tools/gcc" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado/2018.1/common/technology/autopilot" -I "/opt/Xilinx/Vivado/2018.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__  "/home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/application_bridge.pp.0.cpp"  -o "/home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/useless.bc"  
+INFO: [HLS 200-0] exec clang -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2018.1/lnx64/tools/gcc -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/Vivado/2018.1/common/technology/autopilot -I /opt/Xilinx/Vivado/2018.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/application_bridge.pp.0.cpp -o /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/useless.bc
+Command       clang returned 0; 1.6 sec.
+INFO: [HLS 200-0] GCC PP time: 2 seconds per iteration
+Execute       list_core -type functional_unit 
+Command       list_core returned 0; 0 sec.
+INFO: [HLS 200-0] CDT Preprocessing...
+INFO: [HLS 200-0] Marker-Pragma convertor: /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/application_bridge.pp.0.cpp /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/application_bridge.pp.0.cpp.ap-line.cpp /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/application_bridge.pp.0.cpp.ap-line.cpp.CXX 1
+INFO: [HLS 200-0] Converting Markers to Pragmas...
+Execute       cdt  "/home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/application_bridge.pp.0.cpp.ap-line.cpp"  -m "application_bridge" -o "/home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/application_bridge.pp.0.cpp.ap-cdt.cpp" --pp --directive /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/solution1.directive --source /home/tarafdar/workDir/galapagos/userIP/../HMPI/HLS_lib/application_bridge.cpp --error /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db --funcunit "AddSub AddSub_DSP AddSubnS DAddSub_fulldsp DAddSub_nodsp DDiv DExp_fulldsp DExp_meddsp DExp_nodsp DLog_fulldsp DLog_meddsp DLog_nodsp DMul_fulldsp DMul_maxdsp DMul_meddsp DMul_nodsp DRSqrt DRecip DSP_Macro DSqrt DivnS FAddSub_fulldsp FAddSub_nodsp FDiv FExp_fulldsp FExp_meddsp FExp_nodsp FLog_fulldsp FLog_meddsp FLog_nodsp FMul_fulldsp FMul_maxdsp FMul_meddsp FMul_nodsp FRSqrt_fulldsp FRSqrt_nodsp FRecip_fulldsp FRecip_nodsp FSqrt HAddSub_fulldsp HAddSub_meddsp HAddSub_nodsp HDiv HMul_fulldsp HMul_maxdsp HMul_nodsp HSqrt Mul Mul2S Mul3S Mul4S Mul5S Mul6S Mul_LUT MulnS MuxnS" --ve --vetcl /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db --ca --es --gf --pd --p2d /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db --sd --scff /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/.systemc_flag --ad 
+INFO: [HLS 200-0] Error:Syntax error in source:for (__decltype(__n + 0) __niter = __n;
+Error:Missing ; in source:t
+Error:Syntax error in source:)
+ *__first = __value;
+Error:Syntax error in source:for (__decltype(__n + 0) __niter = __n;
+Error:Missing ; in source:t
+Error:Syntax error in source:)
+ *__first = __tmp;
+Command       cdt returned 0; 6.32 sec.
+INFO: [HLS 200-0] Marker-Pragma convertor: /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/application_bridge.pp.0.cpp.ap-cdt.cpp /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/application_bridge.pragma.0.cpp /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/application_bridge.pragma.0.cpp.ap-line.CXX 0
+INFO: [HLS 200-0] Converting Pragmas to Markers...
+Execute       source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/pragma.status.tcl 
+Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-0] Pragma Handling...
+WARNING: [HLS 200-41] Resource core 'AXI4Stream' on port '&from_app' is deprecated. Please use the interface directive to specify the AXI interface.
+WARNING: [HLS 200-41] Resource core 'AXI4Stream' on port '&to_app' is deprecated. Please use the interface directive to specify the AXI interface.
+WARNING: [HLS 200-41] Resource core 'AXI4Stream' on port '&from_net' is deprecated. Please use the interface directive to specify the AXI interface.
+WARNING: [HLS 200-41] Resource core 'AXI4Stream' on port '&to_net' is deprecated. Please use the interface directive to specify the AXI interface.
+INFO: [HLS 200-0] Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "/opt/Xilinx/Vivado/2018.1/lnx64/tools/gcc" -hls  -fno-exceptions  -D__llvm__  -E "/home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/application_bridge.pragma.1.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado/2018.1/common/technology/autopilot" -I "/opt/Xilinx/Vivado/2018.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__  -o "/home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/application_bridge.pragma.2.cpp" 
+INFO: [HLS 200-0] exec clang -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2018.1/lnx64/tools/gcc -hls -fno-exceptions -D__llvm__ -E /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/application_bridge.pragma.1.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/Vivado/2018.1/common/technology/autopilot -I /opt/Xilinx/Vivado/2018.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -o /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/application_bridge.pragma.2.cpp
+Command       clang returned 0; 1.18 sec.
+Execute       get_default_platform 
+Command       get_default_platform returned 0; 0 sec.
+INFO: [HLS 200-0] Processing labels
+Execute       clang  -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2018.1/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "/home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/application_bridge.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado/2018.1/common/technology/autopilot" -I "/opt/Xilinx/Vivado/2018.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o "/home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/application_bridge.g.bc" 
+INFO: [HLS 200-0] exec clang -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2018.1/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/application_bridge.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/Vivado/2018.1/common/technology/autopilot -I /opt/Xilinx/Vivado/2018.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/application_bridge.g.bc
+Command       clang returned 0; 1.72 sec.
+Execute       source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/ve_warning.tcl 
+Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-10] Validating synthesis directives ...
+Execute       source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/pragma.status.tcl 
+Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:28 ; elapsed = 00:00:14 . Memory (MB): peak = 351.629 ; gain = 0.156 ; free physical = 19833 ; free virtual = 59501
+INFO: [HLS 200-0] Linking Release ...
+Execute       llvm-ld /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/application_bridge.bc -hls-opt -except-internalize application_bridge -L/opt/Xilinx/Vivado/2018.1/lnx64/lib -lm_basic -lhlsmc++ -lhlsm -o /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/a.o 
+Command       llvm-ld returned 0; 0.67 sec.
+Execute       disassemble /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/a.o /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/a.o 
+Execute         is_encrypted /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/a.o.bc 
+Command         is_encrypted returned 0; 0 sec.
+Command       disassemble returned 0; 0.66 sec.
+INFO: [HLS 200-0] Disassemble time: 0 seconds per iteration
+INFO: [HLS 200-0] Linking Debug ...
+Execute       llvm-ld /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/application_bridge.g.bc -hls-opt -except-internalize application_bridge -L/opt/Xilinx/Vivado/2018.1/lnx64/lib -lm_basic -lhlsmc++ -lhlsm -o /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/a.g 
+Command       llvm-ld returned 0; 0.66 sec.
+INFO: [HLS 200-0] Disassemble time: 0 seconds per iteration
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:30 ; elapsed = 00:00:16 . Memory (MB): peak = 351.629 ; gain = 0.156 ; free physical = 19824 ; free virtual = 59492
+Execute       ::config_rtl 
+Command       config_rtl returned 0; 0 sec.
+Execute       source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 -enable_clang39=0 
+Execute         cleanup_all_models 
+Command         cleanup_all_models returned 0; 0 sec.
+INFO: [HLS 200-10] Starting code transformations ...
+Execute         transform -promote-dbg-pointer /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/a.pp.bc -o /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/a.pp.0.bc -f 
+Command         transform returned 0; 0.04 sec.
+Execute         llvm-ld /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/a.pp.0.bc -disable-opt -L/opt/Xilinx/Vivado/2018.1/lnx64/lib -lfloatconversion -o /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/a.g.0 
+Command         llvm-ld returned 0; 0.56 sec.
+INFO: [HLS 200-0] Running Standard Transforms...
+Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top application_bridge -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/a.g.0.bc -o /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
+Command         transform returned 0; 0.19 sec.
+Execute         disassemble /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/a.g.1 /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/a.g.1 
+Execute           is_encrypted /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/a.g.1.bc 
+Command           is_encrypted returned 0; 0 sec.
+Command         disassemble returned 0; 0.63 sec.
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:31 ; elapsed = 00:00:17 . Memory (MB): peak = 351.973 ; gain = 0.500 ; free physical = 19823 ; free virtual = 59491
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-0] Checking Synthesizability 1/2..
+Execute         transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/a.g.1.bc -o /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/a.g.2.prechk.bc -f 
+Command         transform returned 0; 0.23 sec.
+INFO: [HLS 200-0] Checking Synthesizability 2/2..
+Execute         transform -syn-check /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/a.g.2.prechk.bc -o /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
+WARNING: [SYNCHK 200-23] ../HMPI/HLS_lib/application_bridge.cpp:117: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+Command         transform returned 0; 0.04 sec.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:32 ; elapsed = 00:00:17 . Memory (MB): peak = 479.902 ; gain = 128.430 ; free physical = 19816 ; free virtual = 59484
+INFO: [HLS 200-0] Compiler optimizing ...
+INFO: [HLS 200-0] Share syncheck's 1.bc for syn flow: copy /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/a.g.1.bc to /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/a.o.1.bc
+INFO: [HLS 200-0] Presyn 1...
+Execute         transform -hls -tmp /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db -interface-port-rename -type-info -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -clib-intrinsic-prepare -dce -func-buffer -dce -array-normalize -func-legal -instcombine -gvn -constprop -dce -ptrArgReplace -mem2reg -instcombine -dce -array-seg-normalize -deadargelim -instcombine -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -auto-par -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -instcombine -dce -global-constprop -deadargelim -mem2reg -instcombine -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -mem-intrinsic-preproc -dce -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -instcombine -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -inst-simplify -dce -norm-name -function-inline -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -deadargelim -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/a.o.1.bc -o /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/a.o.1.tmp.bc -f 
+INFO: [XFORM 203-1101] Packing variable 'from_app.V' (../HMPI/HLS_lib/application_bridge.cpp:258) into a 129-bit variable.
+INFO: [XFORM 203-1101] Packing variable 'to_app.V' (../HMPI/HLS_lib/application_bridge.cpp:259) into a 129-bit variable.
+INFO: [XFORM 203-1101] Packing variable 'from_net.V' (../HMPI/HLS_lib/application_bridge.cpp:260) into a 81-bit variable.
+INFO: [XFORM 203-1101] Packing variable 'to_net.V' (../HMPI/HLS_lib/application_bridge.cpp:261) into a 81-bit variable.
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'app_to_net' (../HMPI/HLS_lib/application_bridge.cpp:155).
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'net_to_app' (../HMPI/HLS_lib/application_bridge.cpp:53).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (../HMPI/HLS_lib/application_bridge.cpp:222) in function 'app_to_net' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (../HMPI/HLS_lib/application_bridge.cpp:116) in function 'net_to_app' completely.
+INFO: [XFORM 203-712] Applying dataflow to function 'application_bridge', detected/extracted 2 process function(s): 
+	 'net_to_app'
+	 'app_to_net'.
+Command         transform returned 0; 0.33 sec.
+Execute         disassemble /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/a.o.1.tmp /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/a.o.1.tmp 
+Execute           is_encrypted /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/a.o.1.tmp.bc 
+Command           is_encrypted returned 0; 0 sec.
+Command         disassemble returned 0; 0.61 sec.
+INFO: [HLS 200-0] Presyn 2...
+Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/a.o.1.tmp.bc -o /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
+INFO: [XFORM 203-11] Balancing expressions in function 'net_to_app' (../HMPI/HLS_lib/application_bridge.cpp:53)...7 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'app_to_net' (../HMPI/HLS_lib/application_bridge.cpp:155)...7 expression(s) balanced.
+Command         transform returned 0; 0.24 sec.
+Execute         disassemble /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/a.o.2 /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/a.o.2 
+Execute           is_encrypted /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/a.o.2.bc 
+Command           is_encrypted returned 0; 0 sec.
+Command         disassemble returned 0; 0.63 sec.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:33 ; elapsed = 00:00:19 . Memory (MB): peak = 479.902 ; gain = 128.430 ; free physical = 19787 ; free virtual = 59455
+INFO: [HLS 200-0] Building ssdm...
+Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -instcombine -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -read-loop-dep -dce -bitwidth -loop-dep -check-stream -norm-name -legalize -validate-dataflow -cdfg-build /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/a.o.2.bc -o /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+Command         transform returned 0; 0.3 sec.
+Execute         disassemble /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/a.o.3 /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/a.o.3 
+Execute           is_encrypted /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/a.o.3.bc 
+Command           is_encrypted returned 0; 0 sec.
+Command         disassemble returned 0; 0.6 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:34 ; elapsed = 00:00:20 . Memory (MB): peak = 479.902 ; gain = 128.430 ; free physical = 19769 ; free virtual = 59437
+INFO: [HLS 200-0] Finish building internal data model.
+Command       opt_and_import_c returned 0; 4.42 sec.
+Command     elaborate returned 0; 19.36 sec.
+Execute     autosyn 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-0] Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'application_bridge' ...
+Execute       ap_set_top_model application_bridge 
+Command       ap_set_top_model returned 0; 0 sec.
+Execute       get_model_list application_bridge -filter all-wo-channel -topdown 
+Command       get_model_list returned 0; 0 sec.
+Execute       preproc_iomode -model application_bridge 
+Command       preproc_iomode returned 0; 0 sec.
+Execute       preproc_iomode -model app_to_net 
+Command       preproc_iomode returned 0; 0 sec.
+Execute       preproc_iomode -model net_to_app 
+Command       preproc_iomode returned 0; 0 sec.
+Execute       get_model_list application_bridge -filter all-wo-channel 
+Command       get_model_list returned 0; 0 sec.
+INFO: [HLS 200-0] Model list for configure: net_to_app app_to_net application_bridge
+INFO: [HLS 200-0] Configuring Module : net_to_app ...
+Execute       set_default_model net_to_app 
+Command       set_default_model returned 0; 0 sec.
+Execute       apply_spec_resource_limit net_to_app 
+Command       apply_spec_resource_limit returned 0; 0 sec.
+INFO: [HLS 200-0] Configuring Module : app_to_net ...
+Execute       set_default_model app_to_net 
+Command       set_default_model returned 0; 0 sec.
+Execute       apply_spec_resource_limit app_to_net 
+Command       apply_spec_resource_limit returned 0; 0 sec.
+INFO: [HLS 200-0] Configuring Module : application_bridge ...
+Execute       set_default_model application_bridge 
+Command       set_default_model returned 0; 0 sec.
+Execute       apply_spec_resource_limit application_bridge 
+Command       apply_spec_resource_limit returned 0; 0 sec.
+INFO: [HLS 200-0] Model list for preprocess: net_to_app app_to_net application_bridge
+INFO: [HLS 200-0] Preprocessing Module: net_to_app ...
+Execute       set_default_model net_to_app 
+Command       set_default_model returned 0; 0 sec.
+Execute       cdfg_preprocess -model net_to_app 
+Command       cdfg_preprocess returned 0; 0 sec.
+Execute       rtl_gen_preprocess net_to_app 
+Command       rtl_gen_preprocess returned 0; 0.01 sec.
+INFO: [HLS 200-0] Preprocessing Module: app_to_net ...
+Execute       set_default_model app_to_net 
+Command       set_default_model returned 0; 0 sec.
+Execute       cdfg_preprocess -model app_to_net 
+Command       cdfg_preprocess returned 0; 0 sec.
+Execute       rtl_gen_preprocess app_to_net 
+Command       rtl_gen_preprocess returned 0; 0 sec.
+INFO: [HLS 200-0] Preprocessing Module: application_bridge ...
+Execute       set_default_model application_bridge 
+Command       set_default_model returned 0; 0 sec.
+Execute       cdfg_preprocess -model application_bridge 
+Command       cdfg_preprocess returned 0; 0 sec.
+Execute       rtl_gen_preprocess application_bridge 
+Command       rtl_gen_preprocess returned 0; 0 sec.
+INFO: [HLS 200-0] Model list for synthesis: net_to_app app_to_net application_bridge
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'net_to_app'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model net_to_app 
+Command       set_default_model returned 0; 0 sec.
+Execute       schedule -model net_to_app 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'net_to_app'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+WARNING: [SCHED 204-21] Estimated clock period (16.3265ns) exceeds the target (target clock period: 6.4ns, clock uncertainty: 0.8ns, effective delay budget: 5.6ns).
+WARNING: [SCHED 204-21] The critical path consists of the following:
+	'load' operation ('byte_counter_load', ../HMPI/HLS_lib/application_bridge.cpp:118) on static variable 'byte_counter' (0 ns)
+	'add' operation ('tmp_5', ../HMPI/HLS_lib/application_bridge.cpp:118) (1.49 ns)
+	'select' operation ('tmp_11_byte_counter_s', ../HMPI/HLS_lib/application_bridge.cpp:117) (0.44 ns)
+	'add' operation ('tmp_11_1', ../HMPI/HLS_lib/application_bridge.cpp:118) (1.49 ns)
+	'select' operation ('byte_counter_new_4', ../HMPI/HLS_lib/application_bridge.cpp:117) (0.44 ns)
+	'add' operation ('tmp_11_2', ../HMPI/HLS_lib/application_bridge.cpp:118) (1.49 ns)
+	'select' operation ('tmp_11_2_byte_counte', ../HMPI/HLS_lib/application_bridge.cpp:117) (0.44 ns)
+	'add' operation ('tmp_11_3', ../HMPI/HLS_lib/application_bridge.cpp:118) (1.49 ns)
+	'select' operation ('byte_counter_new_6', ../HMPI/HLS_lib/application_bridge.cpp:117) (0.44 ns)
+	'add' operation ('tmp_11_4', ../HMPI/HLS_lib/application_bridge.cpp:118) (1.49 ns)
+	'select' operation ('tmp_11_4_byte_counte', ../HMPI/HLS_lib/application_bridge.cpp:117) (0.44 ns)
+	'add' operation ('tmp_11_5', ../HMPI/HLS_lib/application_bridge.cpp:118) (1.49 ns)
+	'select' operation ('byte_counter_new_8', ../HMPI/HLS_lib/application_bridge.cpp:117) (0.44 ns)
+	'add' operation ('tmp_11_6', ../HMPI/HLS_lib/application_bridge.cpp:118) (1.49 ns)
+	'select' operation ('tmp_11_6_byte_counte', ../HMPI/HLS_lib/application_bridge.cpp:117) (0.44 ns)
+	'add' operation ('tmp_11_7', ../HMPI/HLS_lib/application_bridge.cpp:118) (1.49 ns)
+	'select' operation ('byte_counter_new_s', ../HMPI/HLS_lib/application_bridge.cpp:117) (0.44 ns)
+	multiplexor before 'phi' operation ('byte_counter_flag_1', ../HMPI/HLS_lib/application_bridge.cpp:117) with incoming values : ('byte_counter_flag_s', ../HMPI/HLS_lib/application_bridge.cpp:117) (0.918 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule returned 0; 0.14 sec.
+INFO: [HLS 200-111]  Elapsed time: 20.27 seconds; current allocated memory: 109.958 MB.
+Execute       report -o /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/net_to_app.verbose.sched.rpt -verbose -f 
+Command       report returned 0; 0.02 sec.
+Execute       db_write -o /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/net_to_app.sched.adb -f 
+Command       db_write returned 0; 0.01 sec.
+INFO: [HLS 200-0] Finish scheduling net_to_app.
+Execute       set_default_model net_to_app 
+Command       set_default_model returned 0; 0 sec.
+Execute       bind -model net_to_app 
+INFO: [BIND 205-110] clear=
+INFO: [BIND 205-110] debug=
+INFO: [BIND 205-110] drf=
+INFO: [BIND 205-110] effort=
+INFO: [BIND 205-110] fast_refine=
+INFO: [BIND 205-110] fu_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-110] global_opt=
+INFO: [BIND 205-110] gsearch=
+INFO: [BIND 205-110] help=
+INFO: [BIND 205-110] help-hidden=
+INFO: [BIND 205-110] min_mem_port=
+INFO: [BIND 205-110] min_op=
+INFO: [BIND 205-110] minreg=
+INFO: [BIND 205-110] ml=
+INFO: [BIND 205-110] model=net_to_app
+INFO: [BIND 205-110] no_false_path=
+INFO: [BIND 205-110] no_min_op=
+INFO: [BIND 205-110] normalize=
+INFO: [BIND 205-110] quiet=
+INFO: [BIND 205-110] refine=
+INFO: [BIND 205-110] reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-110] search=
+INFO: [BIND 205-110] tight_delay=
+INFO: [BIND 205-110] verbose=
+INFO: [BIND 205-110] wFF=
+INFO: [BIND 205-110] wFU=
+INFO: [BIND 205-110] wMUX=
+INFO: [BIND 205-110] wNET=
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind returned 0; 0.02 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 110.452 MB.
+Execute       report -o /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/net_to_app.verbose.bind.rpt -verbose -f 
+Command       report returned 0; 0.05 sec.
+Execute       db_write -o /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/net_to_app.bind.adb -f 
+Command       db_write returned 0; 0.01 sec.
+INFO: [HLS 200-0] Finish binding net_to_app.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'app_to_net'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model app_to_net 
+Command       set_default_model returned 0; 0 sec.
+Execute       schedule -model app_to_net 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'app_to_net'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+WARNING: [SCHED 204-21] Estimated clock period (17.222ns) exceeds the target (target clock period: 6.4ns, clock uncertainty: 0.8ns, effective delay budget: 5.6ns).
+WARNING: [SCHED 204-21] The critical path consists of the following:
+	'load' operation ('byte_counter_1_load', ../HMPI/HLS_lib/application_bridge.cpp:224) on static variable 'byte_counter_1' (0 ns)
+	'add' operation ('tmp_2', ../HMPI/HLS_lib/application_bridge.cpp:224) (1.49 ns)
+	'select' operation ('tmp_18_byte_counter_s', ../HMPI/HLS_lib/application_bridge.cpp:223) (0.44 ns)
+	'add' operation ('tmp_18_1', ../HMPI/HLS_lib/application_bridge.cpp:224) (1.49 ns)
+	'select' operation ('byte_counter_1_new_1', ../HMPI/HLS_lib/application_bridge.cpp:223) (0.44 ns)
+	'add' operation ('tmp_18_2', ../HMPI/HLS_lib/application_bridge.cpp:224) (1.49 ns)
+	'select' operation ('tmp_18_2_byte_counte', ../HMPI/HLS_lib/application_bridge.cpp:223) (0.44 ns)
+	'add' operation ('tmp_18_3', ../HMPI/HLS_lib/application_bridge.cpp:224) (1.49 ns)
+	'select' operation ('byte_counter_1_new_3', ../HMPI/HLS_lib/application_bridge.cpp:223) (0.44 ns)
+	'add' operation ('tmp_18_4', ../HMPI/HLS_lib/application_bridge.cpp:224) (1.49 ns)
+	'select' operation ('tmp_18_4_byte_counte', ../HMPI/HLS_lib/application_bridge.cpp:223) (0.44 ns)
+	'add' operation ('tmp_18_5', ../HMPI/HLS_lib/application_bridge.cpp:224) (1.49 ns)
+	'select' operation ('byte_counter_1_new_5', ../HMPI/HLS_lib/application_bridge.cpp:223) (0.44 ns)
+	'add' operation ('tmp_18_6', ../HMPI/HLS_lib/application_bridge.cpp:224) (1.49 ns)
+	'select' operation ('tmp_18_6_byte_counte', ../HMPI/HLS_lib/application_bridge.cpp:223) (0.44 ns)
+	'add' operation ('tmp_18_7', ../HMPI/HLS_lib/application_bridge.cpp:224) (1.49 ns)
+	'select' operation ('byte_counter_1_new_7', ../HMPI/HLS_lib/application_bridge.cpp:223) (0.44 ns)
+	'icmp' operation ('tmp_5', ../HMPI/HLS_lib/application_bridge.cpp:227) (1.14 ns)
+	blocking operation 0.674 ns on control path)
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule returned 0; 0.12 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.19 seconds; current allocated memory: 111.603 MB.
+Execute       report -o /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/app_to_net.verbose.sched.rpt -verbose -f 
+Command       report returned 0; 0.02 sec.
+Execute       db_write -o /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/app_to_net.sched.adb -f 
+Command       db_write returned 0; 0 sec.
+INFO: [HLS 200-0] Finish scheduling app_to_net.
+Execute       set_default_model app_to_net 
+Command       set_default_model returned 0; 0 sec.
+Execute       bind -model app_to_net 
+INFO: [BIND 205-110] clear=
+INFO: [BIND 205-110] debug=
+INFO: [BIND 205-110] drf=
+INFO: [BIND 205-110] effort=
+INFO: [BIND 205-110] fast_refine=
+INFO: [BIND 205-110] fu_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-110] global_opt=
+INFO: [BIND 205-110] gsearch=
+INFO: [BIND 205-110] help=
+INFO: [BIND 205-110] help-hidden=
+INFO: [BIND 205-110] min_mem_port=
+INFO: [BIND 205-110] min_op=
+INFO: [BIND 205-110] minreg=
+INFO: [BIND 205-110] ml=
+INFO: [BIND 205-110] model=app_to_net
+INFO: [BIND 205-110] no_false_path=
+INFO: [BIND 205-110] no_min_op=
+INFO: [BIND 205-110] normalize=
+INFO: [BIND 205-110] quiet=
+INFO: [BIND 205-110] refine=
+INFO: [BIND 205-110] reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-110] search=
+INFO: [BIND 205-110] tight_delay=
+INFO: [BIND 205-110] verbose=
+INFO: [BIND 205-110] wFF=
+INFO: [BIND 205-110] wFU=
+INFO: [BIND 205-110] wMUX=
+INFO: [BIND 205-110] wNET=
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind returned 0; 0.02 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 112.120 MB.
+Execute       report -o /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/app_to_net.verbose.bind.rpt -verbose -f 
+Command       report returned 0; 0.05 sec.
+Execute       db_write -o /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/app_to_net.bind.adb -f 
+Command       db_write returned 0; 0.01 sec.
+INFO: [HLS 200-0] Finish binding app_to_net.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'application_bridge'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model application_bridge 
+Command       set_default_model returned 0; 0 sec.
+Execute       schedule -model application_bridge 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule returned 0; 0.01 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 112.243 MB.
+Execute       report -o /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/application_bridge.verbose.sched.rpt -verbose -f 
+Command       report returned 0; 0 sec.
+Execute       db_write -o /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/application_bridge.sched.adb -f 
+Command       db_write returned 0; 0.01 sec.
+INFO: [HLS 200-0] Finish scheduling application_bridge.
+Execute       set_default_model application_bridge 
+Command       set_default_model returned 0; 0 sec.
+Execute       bind -model application_bridge 
+INFO: [BIND 205-110] clear=
+INFO: [BIND 205-110] debug=
+INFO: [BIND 205-110] drf=
+INFO: [BIND 205-110] effort=
+INFO: [BIND 205-110] fast_refine=
+INFO: [BIND 205-110] fu_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-110] global_opt=
+INFO: [BIND 205-110] gsearch=
+INFO: [BIND 205-110] help=
+INFO: [BIND 205-110] help-hidden=
+INFO: [BIND 205-110] min_mem_port=
+INFO: [BIND 205-110] min_op=
+INFO: [BIND 205-110] minreg=
+INFO: [BIND 205-110] ml=
+INFO: [BIND 205-110] model=application_bridge
+INFO: [BIND 205-110] no_false_path=
+INFO: [BIND 205-110] no_min_op=
+INFO: [BIND 205-110] normalize=
+INFO: [BIND 205-110] quiet=
+INFO: [BIND 205-110] refine=
+INFO: [BIND 205-110] reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-110] search=
+INFO: [BIND 205-110] tight_delay=
+INFO: [BIND 205-110] verbose=
+INFO: [BIND 205-110] wFF=
+INFO: [BIND 205-110] wFU=
+INFO: [BIND 205-110] wMUX=
+INFO: [BIND 205-110] wNET=
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind returned 0; 0.04 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 112.374 MB.
+Execute       report -o /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/application_bridge.verbose.bind.rpt -verbose -f 
+Command       report returned 0; 0.06 sec.
+Execute       db_write -o /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/application_bridge.bind.adb -f 
+Command       db_write returned 0; 0.01 sec.
+INFO: [HLS 200-0] Finish binding application_bridge.
+Execute       get_model_list application_bridge -filter all-wo-channel 
+Command       get_model_list returned 0; 0 sec.
+INFO: [HLS 200-0] Preprocessing for RTLGen ...
+Execute       rtl_gen_preprocess net_to_app 
+Command       rtl_gen_preprocess returned 0; 0 sec.
+Execute       rtl_gen_preprocess app_to_net 
+Command       rtl_gen_preprocess returned 0; 0 sec.
+Execute       rtl_gen_preprocess application_bridge 
+Command       rtl_gen_preprocess returned 0; 0 sec.
+INFO: [HLS 200-0] Model list for RTL generation: net_to_app app_to_net application_bridge
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'net_to_app'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model net_to_app -vendor xilinx -mg_file /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/net_to_app.compgen.tcl 
+WARNING: [RTGEN 206-101] Register 'nta_state_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'last_V_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'byte_counter' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'dest_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'id_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'user_V' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'net_to_app'.
+Command       create_rtl_model returned 0; 0.04 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.11 seconds; current allocated memory: 113.250 MB.
+Execute       source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/application_bridge.rtl_wrap.cfg.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       gen_rtl net_to_app -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/syn/systemc/net_to_app -synmodules net_to_app app_to_net application_bridge 
+Command       gen_rtl returned 0; 0 sec.
+Execute       gen_rtl net_to_app -style xilinx -f -lang vhdl -o /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/syn/vhdl/net_to_app 
+Command       gen_rtl returned 0; 0 sec.
+Execute       gen_rtl net_to_app -style xilinx -f -lang vlog -o /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/syn/verilog/net_to_app 
+Command       gen_rtl returned 0; 0.01 sec.
+Execute       gen_tb_info net_to_app -o /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/net_to_app -p /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db 
+Command       gen_tb_info returned 0; 0.01 sec.
+Execute       report -model net_to_app -o /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/syn/report/net_to_app_csynth.rpt -f 
+Command       report returned 0; 0.02 sec.
+Execute       report -model net_to_app -o /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/syn/report/net_to_app_csynth.xml -f -x 
+Command       report returned 0; 0.02 sec.
+Execute       report -model net_to_app -o /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/net_to_app.verbose.rpt -verbose -f 
+Command       report returned 0; 0.07 sec.
+Execute       db_write -model net_to_app -o /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/net_to_app.adb -f 
+Command       db_write returned 0; 0.03 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'app_to_net'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model app_to_net -vendor xilinx -mg_file /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/app_to_net.compgen.tcl 
+WARNING: [RTGEN 206-101] Register 'atn_state_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'app_packet_in_data_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'byte_counter_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'last_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'app_packet_in_last_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'app_packet_in_dest_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'app_packet_in_keep_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'extraPayload_dest_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'seq_num' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'extraPayload_data_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'extraPayload_keep_V' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'app_to_net'.
+Command       create_rtl_model returned 0; 0.05 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.24 seconds; current allocated memory: 115.849 MB.
+Execute       source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/application_bridge.rtl_wrap.cfg.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       gen_rtl app_to_net -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/syn/systemc/app_to_net -synmodules net_to_app app_to_net application_bridge 
+Command       gen_rtl returned 0; 0 sec.
+Execute       gen_rtl app_to_net -style xilinx -f -lang vhdl -o /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/syn/vhdl/app_to_net 
+Command       gen_rtl returned 0; 0 sec.
+Execute       gen_rtl app_to_net -style xilinx -f -lang vlog -o /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/syn/verilog/app_to_net 
+Command       gen_rtl returned 0; 0.01 sec.
+Execute       gen_tb_info app_to_net -o /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/app_to_net -p /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db 
+Command       gen_tb_info returned 0; 0.02 sec.
+Execute       report -model app_to_net -o /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/syn/report/app_to_net_csynth.rpt -f 
+Command       report returned 0; 0.02 sec.
+Execute       report -model app_to_net -o /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/syn/report/app_to_net_csynth.xml -f -x 
+Command       report returned 0; 0.02 sec.
+Execute       report -model app_to_net -o /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/app_to_net.verbose.rpt -verbose -f 
+Command       report returned 0; 0.06 sec.
+Execute       db_write -model app_to_net -o /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/app_to_net.adb -f 
+Command       db_write returned 0; 0.06 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'application_bridge'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model application_bridge -vendor xilinx -mg_file /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/application_bridge.compgen.tcl 
+INFO: [RTGEN 206-500] Setting interface mode on port 'application_bridge/from_app_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'application_bridge/to_app_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'application_bridge/from_net_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'application_bridge/to_net_V' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'application_bridge' to 'ap_ctrl_none'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'application_bridge'.
+Command       create_rtl_model returned 0; 0.01 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.22 seconds; current allocated memory: 117.960 MB.
+Execute       source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/application_bridge.rtl_wrap.cfg.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       gen_rtl application_bridge -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/syn/systemc/application_bridge -synmodules net_to_app app_to_net application_bridge 
+Command       gen_rtl returned 0; 0 sec.
+Execute       gen_rtl application_bridge -istop -style xilinx -f -lang vhdl -o /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/syn/vhdl/application_bridge 
+Command       gen_rtl returned 0; 0 sec.
+Execute       gen_rtl application_bridge -istop -style xilinx -f -lang vlog -o /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/syn/verilog/application_bridge 
+Command       gen_rtl returned 0; 0 sec.
+Execute       export_constraint_db -o /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/application_bridge.constraint.tcl -f -tool general 
+Command       export_constraint_db returned 0; 0 sec.
+Execute       report -model application_bridge -o /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/application_bridge.design.xml -verbose -f -dv 
+Command       report returned 0; 0.07 sec.
+Execute       report -model application_bridge -o /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/application_bridge.sdaccel.xml -verbose -f -sdaccel 
+Command       report returned 0; 0 sec.
+Execute       gen_tb_info application_bridge -o /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/application_bridge -p /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db 
+Command       gen_tb_info returned 0; 0 sec.
+Execute       report -model application_bridge -o /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/syn/report/application_bridge_csynth.rpt -f 
+Command       report returned 0; 0 sec.
+Execute       report -model application_bridge -o /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/syn/report/application_bridge_csynth.xml -f -x 
+Command       report returned 0; 0 sec.
+Execute       report -model application_bridge -o /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/application_bridge.verbose.rpt -verbose -f 
+Command       report returned 0; 0.06 sec.
+Execute       db_write -model application_bridge -o /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/application_bridge.adb -f 
+Command       db_write returned 0; 0.02 sec.
+Execute       sc_get_clocks application_bridge 
+Command       sc_get_clocks returned 0; 0 sec.
+Execute       sc_get_portdomain application_bridge 
+Command       sc_get_portdomain returned 0; 0 sec.
+INFO: [HLS 200-0] Model list for RTL component generation: net_to_app app_to_net application_bridge
+INFO: [HLS 200-0] Handling components in module [net_to_app] ... 
+Execute       source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/net_to_app.compgen.tcl 
+Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-0] Handling components in module [app_to_net] ... 
+Execute       source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/app_to_net.compgen.tcl 
+Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-0] Handling components in module [application_bridge] ... 
+Execute       source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/application_bridge.compgen.tcl 
+Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-0] Append model net_to_app
+INFO: [HLS 200-0] Append model app_to_net
+INFO: [HLS 200-0] Append model application_bridge
+INFO: [HLS 200-0] Generating RTL model list ...
+INFO: [HLS 200-0] All models in this session: net_to_app app_to_net application_bridge
+INFO: [HLS 200-0] To file: write model net_to_app
+INFO: [HLS 200-0] To file: write model app_to_net
+INFO: [HLS 200-0] To file: write model application_bridge
+INFO: [HLS 200-0] Finished generating RTL model list.
+
+
+INFO: [HLS 200-0] RTL Generation done.
+INFO: [HLS 200-0] CAS Generation done.
+INFO: [HLS 200-0] CBC Generation done.
+Execute       export_ssdm /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/a.export.ll 
+Command       export_ssdm returned 0; 0 sec.
+Execute       source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /opt/Xilinx/Vivado/2018.1/common/technology/generic/autopilot/common.gen 
+Execute         source /opt/Xilinx/Vivado/2018.1/common/technology/generic/autopilot/APCoreGen.gen 
+Command         ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0 sec.
+Execute       source /opt/Xilinx/Vivado/2018.1/common/technology/generic/autopilot/op.gen 
+Command       ap_source returned 0; 0 sec.
+Execute       source /opt/Xilinx/Vivado/2018.1/common/technology/generic/autopilot/op_simcore.gen 
+Command       ap_source returned 0; 0 sec.
+Execute       source /opt/Xilinx/Vivado/2018.1/common/technology/generic/autopilot/interface.gen 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/kintexu/kintexu.gen 
+Execute         source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/virtex.gen 
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx.gen 
+Execute             source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/plb46.gen 
+Command             ap_source returned 0; 0 sec.
+Execute             source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/fsl.gen 
+Command             ap_source returned 0; 0 sec.
+Execute             source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/axi4.gen 
+Command             ap_source returned 0; 0 sec.
+Execute             source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/saxilite.gen 
+Command               ap_source returned 0; 0 sec.
+Execute               source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/maxi.gen 
+Command               ap_source returned 0; 0.01 sec.
+Command             ap_source returned 0; 0.01 sec.
+Execute             source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Command             ap_source returned 0; 0.01 sec.
+Execute             source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Command             ap_source returned 0; 0 sec.
+Execute             source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/xfft.gen 
+Command             ap_source returned 0; 0.06 sec.
+Execute             source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/util.gen 
+Command             ap_source returned 0; 0 sec.
+Execute             source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/dds_compiler.gen 
+Command             ap_source returned 0; 0 sec.
+Execute             source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/xfir.gen 
+Command             ap_source returned 0; 0 sec.
+Command           ap_source returned 0; 0.08 sec.
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/dsp48.gen 
+Command           ap_source returned 0; 0 sec.
+Command         ap_source returned 0; 0.08 sec.
+Command       ap_source returned 0; 0.08 sec.
+Execute       source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/kintexu/kintexu_fpv7.gen 
+Execute         source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx_fpv6.gen 
+Command         ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/net_to_app.compgen.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/app_to_net.compgen.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/application_bridge.compgen.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /opt/Xilinx/Vivado/2018.1/common/technology/generic/autopilot/common.gen 
+Execute         source /opt/Xilinx/Vivado/2018.1/common/technology/generic/autopilot/APCoreGen.gen 
+Command         ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0 sec.
+Execute       source /opt/Xilinx/Vivado/2018.1/common/technology/generic/autopilot/op.gen 
+Command       ap_source returned 0; 0 sec.
+Execute       source /opt/Xilinx/Vivado/2018.1/common/technology/generic/autopilot/op_simcore.gen 
+Command       ap_source returned 0; 0 sec.
+Execute       source /opt/Xilinx/Vivado/2018.1/common/technology/generic/autopilot/interface.gen 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/kintexu/kintexu.gen 
+Execute         source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/virtex.gen 
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx.gen 
+Execute             source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/plb46.gen 
+Command             ap_source returned 0; 0 sec.
+Execute             source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/fsl.gen 
+Command             ap_source returned 0; 0 sec.
+Execute             source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/axi4.gen 
+Command             ap_source returned 0; 0 sec.
+Execute             source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/saxilite.gen 
+Command               ap_source returned 0; 0.01 sec.
+Execute               source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/maxi.gen 
+Command               ap_source returned 0; 0 sec.
+Command             ap_source returned 0; 0.01 sec.
+Execute             source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Command             ap_source returned 0; 0 sec.
+Execute             source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Command             ap_source returned 0; 0.01 sec.
+Execute             source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/xfft.gen 
+Command             ap_source returned 0; 0.06 sec.
+Execute             source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/util.gen 
+Command             ap_source returned 0; 0 sec.
+Execute             source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/dds_compiler.gen 
+Command             ap_source returned 0; 0 sec.
+Execute             source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/xfir.gen 
+Command             ap_source returned 0; 0 sec.
+Command           ap_source returned 0; 0.08 sec.
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/dsp48.gen 
+Command           ap_source returned 0; 0 sec.
+Command         ap_source returned 0; 0.08 sec.
+Command       ap_source returned 0; 0.08 sec.
+Execute       source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/kintexu/kintexu_fpv7.gen 
+Execute         source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx_fpv6.gen 
+Command         ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/application_bridge.rtl_wrap.cfg.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/application_bridge.rtl_wrap.cfg.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/application_bridge.rtl_wrap.cfg.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/application_bridge.tbgen.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/application_bridge.tbgen.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/net_to_app.compgen.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/app_to_net.compgen.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/application_bridge.compgen.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/net_to_app.compgen.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/app_to_net.compgen.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/application_bridge.compgen.tcl 
+INFO: [IMPL 213-200] Port 'from_app_V.data' is mapped to 'TDATA' by default.
+INFO: [IMPL 213-200] Port 'from_app_V.dest' is mapped to 'TDEST' by default.
+INFO: [IMPL 213-200] Port 'from_app_V.last' is mapped to 'TLAST' by default.
+INFO: [IMPL 213-200] Port 'from_app_V.keep' is mapped to 'TKEEP' by default.
+INFO: [IMPL 213-200] Port 'from_app_V.id' is mapped to 'TID' by default.
+INFO: [IMPL 213-200] Port 'from_app_V.user' is mapped to 'TUSER' by default.
+INFO: [IMPL 213-200] Port 'from_net_V.data' is mapped to 'TDATA' by default.
+INFO: [IMPL 213-200] Port 'from_net_V.dest' is mapped to 'TDEST' by default.
+INFO: [IMPL 213-200] Port 'from_net_V.keep' is mapped to 'TKEEP' by default.
+INFO: [IMPL 213-200] Port 'from_net_V.last' is mapped to 'TLAST' by default.
+INFO: [IMPL 213-200] Port 'to_app_V.data' is mapped to 'TDATA' by default.
+INFO: [IMPL 213-200] Port 'to_app_V.dest' is mapped to 'TDEST' by default.
+INFO: [IMPL 213-200] Port 'to_app_V.last' is mapped to 'TLAST' by default.
+INFO: [IMPL 213-200] Port 'to_app_V.keep' is mapped to 'TKEEP' by default.
+INFO: [IMPL 213-200] Port 'to_app_V.id' is mapped to 'TID' by default.
+INFO: [IMPL 213-200] Port 'to_app_V.user' is mapped to 'TUSER' by default.
+INFO: [IMPL 213-200] Port 'to_net_V.data' is mapped to 'TDATA' by default.
+INFO: [IMPL 213-200] Port 'to_net_V.dest' is mapped to 'TDEST' by default.
+INFO: [IMPL 213-200] Port 'to_net_V.keep' is mapped to 'TKEEP' by default.
+INFO: [IMPL 213-200] Port 'to_net_V.last' is mapped to 'TLAST' by default.
+Command       ap_source returned 0; 0.04 sec.
+Execute       source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/net_to_app.compgen.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/app_to_net.compgen.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/application_bridge.compgen.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/application_bridge.constraint.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/application_bridge.tbgen.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/application_bridge.tbgen.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/application_bridge.tbgen.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/application_bridge.constraint.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       sc_get_clocks application_bridge 
+Command       sc_get_clocks returned 0; 0 sec.
+Execute       source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0 sec.
+Execute       source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0 sec.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:36 ; elapsed = 00:00:22 . Memory (MB): peak = 479.902 ; gain = 128.430 ; free physical = 19758 ; free virtual = 59427
+INFO: [SYSC 207-301] Generating SystemC RTL for application_bridge.
+INFO: [VHDL 208-304] Generating VHDL RTL for application_bridge.
+INFO: [VLOG 209-307] Generating Verilog RTL for application_bridge.
+Command     autosyn returned 0; 1.63 sec.
+Command   csynth_design returned 0; 20.99 sec.
+Execute   export_design -format ip_catalog -display_name Application Bridge 
+Execute     source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /opt/Xilinx/Vivado/2018.1/common/technology/generic/autopilot/common.gen 
+Execute       source /opt/Xilinx/Vivado/2018.1/common/technology/generic/autopilot/APCoreGen.gen 
+Command       ap_source returned 0; 0 sec.
+Command     ap_source returned 0; 0 sec.
+Execute     source /opt/Xilinx/Vivado/2018.1/common/technology/generic/autopilot/op.gen 
+Command     ap_source returned 0; 0 sec.
+Execute     source /opt/Xilinx/Vivado/2018.1/common/technology/generic/autopilot/op_simcore.gen 
+Command     ap_source returned 0; 0 sec.
+Execute     source /opt/Xilinx/Vivado/2018.1/common/technology/generic/autopilot/interface.gen 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/kintexu/kintexu.gen 
+Execute       source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/virtex.gen 
+Execute         source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx.gen 
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/plb46.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/fsl.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/axi4.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/saxilite.gen 
+Command             ap_source returned 0; 0 sec.
+Execute             source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/maxi.gen 
+Command             ap_source returned 0; 0 sec.
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Command           ap_source returned 0; 0.01 sec.
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Command           ap_source returned 0; 0.01 sec.
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/xfft.gen 
+Command           ap_source returned 0; 0.06 sec.
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/util.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/dds_compiler.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source returned 0; 0 sec.
+Command         ap_source returned 0; 0.08 sec.
+Execute         source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0.09 sec.
+Command     ap_source returned 0; 0.09 sec.
+Execute     source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/kintexu/kintexu_fpv7.gen 
+Execute       source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx_fpv6.gen 
+Command       ap_source returned 0; 0 sec.
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+Execute     source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /opt/Xilinx/Vivado/2018.1/common/technology/generic/autopilot/common.gen 
+Execute       source /opt/Xilinx/Vivado/2018.1/common/technology/generic/autopilot/APCoreGen.gen 
+Command       ap_source returned 0; 0 sec.
+Command     ap_source returned 0; 0 sec.
+Execute     source /opt/Xilinx/Vivado/2018.1/common/technology/generic/autopilot/op.gen 
+Command     ap_source returned 0; 0 sec.
+Execute     source /opt/Xilinx/Vivado/2018.1/common/technology/generic/autopilot/op_simcore.gen 
+Command     ap_source returned 0; 0 sec.
+Execute     source /opt/Xilinx/Vivado/2018.1/common/technology/generic/autopilot/interface.gen 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/kintexu/kintexu.gen 
+Execute       source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/virtex.gen 
+Execute         source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx.gen 
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/plb46.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/fsl.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/axi4.gen 
+Command           ap_source returned 0; 0.01 sec.
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/saxilite.gen 
+Command             ap_source returned 0; 0 sec.
+Execute             source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/maxi.gen 
+Command             ap_source returned 0; 0 sec.
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Command           ap_source returned 0; 0.01 sec.
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/xfft.gen 
+Command           ap_source returned 0; 0.06 sec.
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/util.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/dds_compiler.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source returned 0; 0 sec.
+Command         ap_source returned 0; 0.09 sec.
+Execute         source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0.09 sec.
+Command     ap_source returned 0; 0.09 sec.
+Execute     source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/kintexu/kintexu_fpv7.gen 
+Execute       source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx_fpv6.gen 
+Command       ap_source returned 0; 0 sec.
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/net_to_app.compgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/app_to_net.compgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/application_bridge.compgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/net_to_app.compgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/app_to_net.compgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/application_bridge.compgen.tcl 
+INFO: [IMPL 213-200] Port 'from_app_V.data' is mapped to 'TDATA' by default.
+INFO: [IMPL 213-200] Port 'from_app_V.dest' is mapped to 'TDEST' by default.
+INFO: [IMPL 213-200] Port 'from_app_V.last' is mapped to 'TLAST' by default.
+INFO: [IMPL 213-200] Port 'from_app_V.keep' is mapped to 'TKEEP' by default.
+INFO: [IMPL 213-200] Port 'from_app_V.id' is mapped to 'TID' by default.
+INFO: [IMPL 213-200] Port 'from_app_V.user' is mapped to 'TUSER' by default.
+INFO: [IMPL 213-200] Port 'from_net_V.data' is mapped to 'TDATA' by default.
+INFO: [IMPL 213-200] Port 'from_net_V.dest' is mapped to 'TDEST' by default.
+INFO: [IMPL 213-200] Port 'from_net_V.keep' is mapped to 'TKEEP' by default.
+INFO: [IMPL 213-200] Port 'from_net_V.last' is mapped to 'TLAST' by default.
+INFO: [IMPL 213-200] Port 'to_app_V.data' is mapped to 'TDATA' by default.
+INFO: [IMPL 213-200] Port 'to_app_V.dest' is mapped to 'TDEST' by default.
+INFO: [IMPL 213-200] Port 'to_app_V.last' is mapped to 'TLAST' by default.
+INFO: [IMPL 213-200] Port 'to_app_V.keep' is mapped to 'TKEEP' by default.
+INFO: [IMPL 213-200] Port 'to_app_V.id' is mapped to 'TID' by default.
+INFO: [IMPL 213-200] Port 'to_app_V.user' is mapped to 'TUSER' by default.
+INFO: [IMPL 213-200] Port 'to_net_V.data' is mapped to 'TDATA' by default.
+INFO: [IMPL 213-200] Port 'to_net_V.dest' is mapped to 'TDEST' by default.
+INFO: [IMPL 213-200] Port 'to_net_V.keep' is mapped to 'TKEEP' by default.
+INFO: [IMPL 213-200] Port 'to_net_V.last' is mapped to 'TLAST' by default.
+Command     ap_source returned 0; 0.02 sec.
+Execute     source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/net_to_app.compgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/app_to_net.compgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/application_bridge.compgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/application_bridge.constraint.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/application_bridge.tbgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/application_bridge.tbgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/application_bridge.tbgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/application_bridge.constraint.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     sc_get_clocks application_bridge 
+Command     sc_get_clocks returned 0; 0 sec.
+Execute     source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/application_bridge.rtl_wrap.cfg.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/application_bridge.rtl_wrap.cfg.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/application_bridge.rtl_wrap.cfg.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/application_bridge.tbgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/application_bridge.tbgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/application_bridge.tbgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/application_bridge.tbgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/application_bridge.constraint.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/application_bridge.constraint.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/application_bridge.tbgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/application_bridge.constraint.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/application_bridge.tbgen.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /opt/Xilinx/Vivado/2018.1/common/technology/generic/autopilot/common.gen 
+Execute       source /opt/Xilinx/Vivado/2018.1/common/technology/generic/autopilot/APCoreGen.gen 
+Command       ap_source returned 0; 0 sec.
+Command     ap_source returned 0; 0 sec.
+Execute     source /opt/Xilinx/Vivado/2018.1/common/technology/generic/autopilot/op.gen 
+Command     ap_source returned 0; 0.01 sec.
+Execute     source /opt/Xilinx/Vivado/2018.1/common/technology/generic/autopilot/op_simcore.gen 
+Command     ap_source returned 0; 0 sec.
+Execute     source /opt/Xilinx/Vivado/2018.1/common/technology/generic/autopilot/interface.gen 
+Command     ap_source returned 0; 0 sec.
+Execute     source /home/tarafdar/workDir/galapagos/userIP/application_bridge/solution1/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0 sec.
+Execute     source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/kintexu/kintexu.gen 
+Execute       source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/virtex.gen 
+Execute         source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx.gen 
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/plb46.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/fsl.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/axi4.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/saxilite.gen 
+Command             ap_source returned 0; 0 sec.
+Execute             source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/maxi.gen 
+Command             ap_source returned 0; 0.01 sec.
+Command           ap_source returned 0; 0.01 sec.
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Command           ap_source returned 0; 0.01 sec.
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/xfft.gen 
+Command           ap_source returned 0; 0.06 sec.
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/util.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/dds_compiler.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source returned 0; 0 sec.
+Command         ap_source returned 0; 0.08 sec.
+Execute         source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source returned 0; 0 sec.
+Command       ap_source returned 0; 0.08 sec.
+Command     ap_source returned 0; 0.08 sec.
+Execute     source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/kintexu/kintexu_fpv7.gen 
+Execute       source /opt/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx_fpv6.gen 
+Command       ap_source returned 0; 0 sec.
+Command     ap_source returned 0; 0 sec.
+Command   export_design returned 0; 10.6 sec.
+Command ap_source returned 0; 32.1 sec.
+Execute cleanup_all 
+Command cleanup_all returned 0; 0.01 sec.

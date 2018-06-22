@@ -1,0 +1,328 @@
+
+*** Running vivado
+    with args -log shell_mac_config_vector_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source shell_mac_config_vector_0.tcl
+
+
+****** Vivado v2018.1 (64-bit)
+  **** SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018
+  **** IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source shell_mac_config_vector_0.tcl -notrace
+Command: synth_design -top shell_mac_config_vector_0 -part xcku115-flva1517-2-e -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xcku115'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcku115'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 13120 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:18 . Memory (MB): peak = 1369.828 ; gain = 77.000 ; free physical = 1569 ; free virtual = 44544
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'shell_mac_config_vector_0' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest3/1/1.srcs/sources_1/bd/srcs/ip/shell_mac_config_vector_0/synth/shell_mac_config_vector_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_4_xlconstant' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest3/1/1.srcs/sources_1/bd/srcs/ipshared/2fc9/hdl/xlconstant_v1_1_vl_rfs.v:23]
+	Parameter CONST_VAL bound to: 80'b00000000000000000000000000000000000000000000000000000000000000000000000000010110 
+	Parameter CONST_WIDTH bound to: 80 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_4_xlconstant' (1#1) [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest3/1/1.srcs/sources_1/bd/srcs/ipshared/2fc9/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'shell_mac_config_vector_0' (2#1) [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest3/1/1.srcs/sources_1/bd/srcs/ip/shell_mac_config_vector_0/synth/shell_mac_config_vector_0.v:57]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:20 . Memory (MB): peak = 1415.438 ; gain = 122.609 ; free physical = 1488 ; free virtual = 44464
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:20 . Memory (MB): peak = 1415.438 ; gain = 122.609 ; free physical = 1507 ; free virtual = 44484
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:20 . Memory (MB): peak = 1415.438 ; gain = 122.609 ; free physical = 1507 ; free virtual = 44484
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xcku115-flva1517-2-e
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2010.770 ; gain = 0.000 ; free physical = 1706 ; free virtual = 42815
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:36 ; elapsed = 00:00:56 . Memory (MB): peak = 2010.770 ; gain = 717.941 ; free physical = 2921 ; free virtual = 44051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xcku115-flva1517-2-e
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:36 ; elapsed = 00:00:56 . Memory (MB): peak = 2010.770 ; gain = 717.941 ; free physical = 2919 ; free virtual = 44049
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:36 ; elapsed = 00:00:56 . Memory (MB): peak = 2010.770 ; gain = 717.941 ; free physical = 2913 ; free virtual = 44044
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:36 ; elapsed = 00:00:56 . Memory (MB): peak = 2010.770 ; gain = 717.941 ; free physical = 2900 ; free virtual = 44031
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 5520 (col length:120)
+BRAMs: 4320 (col length: RAMB18 240 RAMB36 120)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3330] design shell_mac_config_vector_0 has an empty top module
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[79] driven by constant 0
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[78] driven by constant 0
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[77] driven by constant 0
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[76] driven by constant 0
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[75] driven by constant 0
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[74] driven by constant 0
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[73] driven by constant 0
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[72] driven by constant 0
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[71] driven by constant 0
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[70] driven by constant 0
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[69] driven by constant 0
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[68] driven by constant 0
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[67] driven by constant 0
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[66] driven by constant 0
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[65] driven by constant 0
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[64] driven by constant 0
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[63] driven by constant 0
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[62] driven by constant 0
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[61] driven by constant 0
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[60] driven by constant 0
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[59] driven by constant 0
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[58] driven by constant 0
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[57] driven by constant 0
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[56] driven by constant 0
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[55] driven by constant 0
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[54] driven by constant 0
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[53] driven by constant 0
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[52] driven by constant 0
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[51] driven by constant 0
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[50] driven by constant 0
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[49] driven by constant 0
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[48] driven by constant 0
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[47] driven by constant 0
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[46] driven by constant 0
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[45] driven by constant 0
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[44] driven by constant 0
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[43] driven by constant 0
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[42] driven by constant 0
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[41] driven by constant 0
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[40] driven by constant 0
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[39] driven by constant 0
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[38] driven by constant 0
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[37] driven by constant 0
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[36] driven by constant 0
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[35] driven by constant 0
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[34] driven by constant 0
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[33] driven by constant 0
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[32] driven by constant 0
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[31] driven by constant 0
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[30] driven by constant 0
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[29] driven by constant 0
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[28] driven by constant 0
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[27] driven by constant 0
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[26] driven by constant 0
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[25] driven by constant 0
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[24] driven by constant 0
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[23] driven by constant 0
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[22] driven by constant 0
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[21] driven by constant 0
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[20] driven by constant 0
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[19] driven by constant 0
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[18] driven by constant 0
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[17] driven by constant 0
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[16] driven by constant 0
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[15] driven by constant 0
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[14] driven by constant 0
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[13] driven by constant 0
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[12] driven by constant 0
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[11] driven by constant 0
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[10] driven by constant 0
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[9] driven by constant 0
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[8] driven by constant 0
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[7] driven by constant 0
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[6] driven by constant 0
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[5] driven by constant 0
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[4] driven by constant 1
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[3] driven by constant 0
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[2] driven by constant 1
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[1] driven by constant 1
+INFO: [Synth 8-3917] design shell_mac_config_vector_0 has port dout[0] driven by constant 0
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:37 ; elapsed = 00:00:57 . Memory (MB): peak = 2010.770 ; gain = 717.941 ; free physical = 2866 ; free virtual = 43998
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:54 ; elapsed = 00:01:52 . Memory (MB): peak = 2238.246 ; gain = 945.418 ; free physical = 2666 ; free virtual = 43867
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:54 ; elapsed = 00:01:52 . Memory (MB): peak = 2238.246 ; gain = 945.418 ; free physical = 2664 ; free virtual = 43866
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:54 ; elapsed = 00:01:52 . Memory (MB): peak = 2238.246 ; gain = 945.418 ; free physical = 2673 ; free virtual = 43875
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:55 ; elapsed = 00:01:54 . Memory (MB): peak = 2239.246 ; gain = 946.418 ; free physical = 2592 ; free virtual = 43794
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:55 ; elapsed = 00:01:54 . Memory (MB): peak = 2239.246 ; gain = 946.418 ; free physical = 2592 ; free virtual = 43794
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:55 ; elapsed = 00:01:54 . Memory (MB): peak = 2239.246 ; gain = 946.418 ; free physical = 2592 ; free virtual = 43794
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:55 ; elapsed = 00:01:54 . Memory (MB): peak = 2239.246 ; gain = 946.418 ; free physical = 2592 ; free virtual = 43794
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:55 ; elapsed = 00:01:54 . Memory (MB): peak = 2239.246 ; gain = 946.418 ; free physical = 2592 ; free virtual = 43794
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:55 ; elapsed = 00:01:54 . Memory (MB): peak = 2239.246 ; gain = 946.418 ; free physical = 2592 ; free virtual = 43794
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++-+-----+------+
+| |Cell |Count |
++-+-----+------+
++-+-----+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |     0|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:55 ; elapsed = 00:01:54 . Memory (MB): peak = 2239.246 ; gain = 946.418 ; free physical = 2592 ; free virtual = 43794
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:43 ; elapsed = 00:01:32 . Memory (MB): peak = 2239.246 ; gain = 351.086 ; free physical = 2610 ; free virtual = 43812
+Synthesis Optimization Complete : Time (s): cpu = 00:00:55 ; elapsed = 00:01:54 . Memory (MB): peak = 2239.254 ; gain = 946.418 ; free physical = 2619 ; free virtual = 43821
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+93 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:58 ; elapsed = 00:01:57 . Memory (MB): peak = 2293.770 ; gain = 1034.547 ; free physical = 2317 ; free virtual = 43519
+INFO: [Common 17-1381] The checkpoint '/home/tarafdar/workDir/galapagos/projects/mlKernelsTest3/1/1.runs/shell_mac_config_vector_0_synth_1/shell_mac_config_vector_0.dcp' has been generated.

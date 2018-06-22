@@ -1,0 +1,207 @@
+<stg><name>ethernet_bridge.entr</name>
+
+
+<trans_list>
+</trans_list>
+
+
+
+<state_list>
+
+<state id="1" st_id="1">
+
+<operation id="2" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="4" bw="0" op_0_bw="0" op_1_bw="48" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0">
+<![CDATA[
+entry:0  call void (...)* @_ssdm_op_SpecInterface(i48* %mac_addr_V_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="3" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="5" bw="48" op_0_bw="48" op_1_bw="48">
+<![CDATA[
+entry:1  %mac_addr_V_read = call i48 @_ssdm_op_Read.ap_auto.i48(i48 %mac_addr_V)
+
+]]></Node>
+<StgValue><ssdm name="mac_addr_V_read"/></StgValue>
+</operation>
+
+<operation id="4" st_id="1" stage="1" lat="1">
+<core>FIFO</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="6" bw="0" op_0_bw="0" op_1_bw="48" op_2_bw="48">
+<![CDATA[
+entry:2  call void @_ssdm_op_Write.ap_fifo.i48P(i48* %mac_addr_V_out, i48 %mac_addr_V_read)
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="5" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="7" bw="0" op_0_bw="0" op_1_bw="48" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0">
+<![CDATA[
+entry:3  call void (...)* @_ssdm_op_SpecInterface(i48* %mac_addr_V_out1, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="6" st_id="1" stage="1" lat="1">
+<core>FIFO</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="8" bw="0" op_0_bw="0" op_1_bw="48" op_2_bw="48">
+<![CDATA[
+entry:4  call void @_ssdm_op_Write.ap_fifo.i48P(i48* %mac_addr_V_out1, i48 %mac_addr_V_read)
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+
+<operation id="7" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="0">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="9" bw="0">
+<![CDATA[
+entry:5  ret void
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+</state>
+</state_list>
+
+
+<ports>
+<port id="8" name="mac_addr_V" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="mac_addr_V"/></StgValue>
+</port>
+<port id="9" name="mac_addr_V_out" dir="1" iftype="3">
+<core>FIFO</core><StgValue><ssdm name="mac_addr_V_out"/></StgValue>
+</port>
+<port id="10" name="mac_addr_V_out1" dir="1" iftype="3">
+<core>FIFO</core><StgValue><ssdm name="mac_addr_V_out1"/></StgValue>
+</port>
+</ports>
+
+
+<dataflows>
+<dataflow id="12" from="_ssdm_op_SpecInterface" to="StgValue_2" fromId="11" toId="2">
+</dataflow>
+<dataflow id="13" from="mac_addr_V_out" to="StgValue_2" fromId="9" toId="2">
+</dataflow>
+<dataflow id="15" from="ap_fifo_str" to="StgValue_2" fromId="14" toId="2">
+</dataflow>
+<dataflow id="17" from="StgValue_16" to="StgValue_2" fromId="16" toId="2">
+</dataflow>
+<dataflow id="18" from="StgValue_16" to="StgValue_2" fromId="16" toId="2">
+</dataflow>
+<dataflow id="20" from="p_str" to="StgValue_2" fromId="19" toId="2">
+</dataflow>
+<dataflow id="21" from="StgValue_16" to="StgValue_2" fromId="16" toId="2">
+</dataflow>
+<dataflow id="22" from="StgValue_16" to="StgValue_2" fromId="16" toId="2">
+</dataflow>
+<dataflow id="23" from="p_str" to="StgValue_2" fromId="19" toId="2">
+</dataflow>
+<dataflow id="24" from="p_str" to="StgValue_2" fromId="19" toId="2">
+</dataflow>
+<dataflow id="25" from="p_str" to="StgValue_2" fromId="19" toId="2">
+</dataflow>
+<dataflow id="27" from="StgValue_26" to="StgValue_2" fromId="26" toId="2">
+</dataflow>
+<dataflow id="28" from="StgValue_26" to="StgValue_2" fromId="26" toId="2">
+</dataflow>
+<dataflow id="30" from="StgValue_29" to="StgValue_2" fromId="29" toId="2">
+</dataflow>
+<dataflow id="31" from="StgValue_29" to="StgValue_2" fromId="29" toId="2">
+</dataflow>
+<dataflow id="32" from="p_str" to="StgValue_2" fromId="19" toId="2">
+</dataflow>
+<dataflow id="33" from="p_str" to="StgValue_2" fromId="19" toId="2">
+</dataflow>
+<dataflow id="35" from="_ssdm_op_Read.ap_auto.i48" to="mac_addr_V_read" fromId="34" toId="3">
+</dataflow>
+<dataflow id="36" from="mac_addr_V" to="mac_addr_V_read" fromId="8" toId="3">
+</dataflow>
+<dataflow id="38" from="_ssdm_op_Write.ap_fifo.i48P" to="StgValue_4" fromId="37" toId="4">
+</dataflow>
+<dataflow id="39" from="mac_addr_V_out" to="StgValue_4" fromId="9" toId="4">
+</dataflow>
+<dataflow id="40" from="mac_addr_V_read" to="StgValue_4" fromId="3" toId="4">
+</dataflow>
+<dataflow id="41" from="_ssdm_op_SpecInterface" to="StgValue_5" fromId="11" toId="5">
+</dataflow>
+<dataflow id="42" from="mac_addr_V_out1" to="StgValue_5" fromId="10" toId="5">
+</dataflow>
+<dataflow id="43" from="ap_fifo_str" to="StgValue_5" fromId="14" toId="5">
+</dataflow>
+<dataflow id="44" from="StgValue_16" to="StgValue_5" fromId="16" toId="5">
+</dataflow>
+<dataflow id="45" from="StgValue_16" to="StgValue_5" fromId="16" toId="5">
+</dataflow>
+<dataflow id="46" from="p_str" to="StgValue_5" fromId="19" toId="5">
+</dataflow>
+<dataflow id="47" from="StgValue_16" to="StgValue_5" fromId="16" toId="5">
+</dataflow>
+<dataflow id="48" from="StgValue_16" to="StgValue_5" fromId="16" toId="5">
+</dataflow>
+<dataflow id="49" from="p_str" to="StgValue_5" fromId="19" toId="5">
+</dataflow>
+<dataflow id="50" from="p_str" to="StgValue_5" fromId="19" toId="5">
+</dataflow>
+<dataflow id="51" from="p_str" to="StgValue_5" fromId="19" toId="5">
+</dataflow>
+<dataflow id="52" from="StgValue_26" to="StgValue_5" fromId="26" toId="5">
+</dataflow>
+<dataflow id="53" from="StgValue_26" to="StgValue_5" fromId="26" toId="5">
+</dataflow>
+<dataflow id="54" from="StgValue_29" to="StgValue_5" fromId="29" toId="5">
+</dataflow>
+<dataflow id="55" from="StgValue_29" to="StgValue_5" fromId="29" toId="5">
+</dataflow>
+<dataflow id="56" from="p_str" to="StgValue_5" fromId="19" toId="5">
+</dataflow>
+<dataflow id="57" from="p_str" to="StgValue_5" fromId="19" toId="5">
+</dataflow>
+<dataflow id="58" from="_ssdm_op_Write.ap_fifo.i48P" to="StgValue_6" fromId="37" toId="6">
+</dataflow>
+<dataflow id="59" from="mac_addr_V_out1" to="StgValue_6" fromId="10" toId="6">
+</dataflow>
+<dataflow id="60" from="mac_addr_V_read" to="StgValue_6" fromId="3" toId="6">
+</dataflow>
+</dataflows>
+
+
+</stg>

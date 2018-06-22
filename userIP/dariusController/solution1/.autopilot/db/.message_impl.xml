@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Messages>
+	<Message prefix="[IMPL 213-8]" severity="INFO" keynum="IMPL_8_1776" content="Exporting RTL as a Vivado IP." tag=""/>
+	<Message prefix="[IMPL 213-200]" severity="INFO" keynum="IMPL_200_1804" content="Port &apos;stream_in_V.data&apos; is mapped to &apos;TDATA&apos; by default." tag=""/>
+	<Message prefix="[IMPL 213-200]" severity="INFO" keynum="IMPL_200_1804" content="Port &apos;stream_in_V.dest&apos; is mapped to &apos;TDEST&apos; by default." tag=""/>
+	<Message prefix="[IMPL 213-200]" severity="INFO" keynum="IMPL_200_1804" content="Port &apos;stream_in_V.last&apos; is mapped to &apos;TLAST&apos; by default." tag=""/>
+	<Message prefix="[IMPL 213-200]" severity="INFO" keynum="IMPL_200_1804" content="Port &apos;stream_in_V.id&apos; is mapped to &apos;TID&apos; by default." tag=""/>
+	<Message prefix="[IMPL 213-200]" severity="INFO" keynum="IMPL_200_1804" content="Port &apos;stream_in_V.keep&apos; is mapped to &apos;TKEEP&apos; by default." tag=""/>
+	<Message prefix="[IMPL 213-200]" severity="INFO" keynum="IMPL_200_1804" content="Port &apos;stream_in_V.user&apos; is mapped to &apos;TUSER&apos; by default." tag=""/>
+	<Message prefix="[IMPL 213-200]" severity="INFO" keynum="IMPL_200_1804" content="Port &apos;stream_out_V.data&apos; is mapped to &apos;TDATA&apos; by default." tag=""/>
+	<Message prefix="[IMPL 213-200]" severity="INFO" keynum="IMPL_200_1804" content="Port &apos;stream_out_V.dest&apos; is mapped to &apos;TDEST&apos; by default." tag=""/>
+	<Message prefix="[IMPL 213-200]" severity="INFO" keynum="IMPL_200_1804" content="Port &apos;stream_out_V.last&apos; is mapped to &apos;TLAST&apos; by default." tag=""/>
+	<Message prefix="[IMPL 213-200]" severity="INFO" keynum="IMPL_200_1804" content="Port &apos;stream_out_V.id&apos; is mapped to &apos;TID&apos; by default." tag=""/>
+	<Message prefix="[IMPL 213-200]" severity="INFO" keynum="IMPL_200_1804" content="Port &apos;stream_out_V.keep&apos; is mapped to &apos;TKEEP&apos; by default." tag=""/>
+	<Message prefix="[IMPL 213-200]" severity="INFO" keynum="IMPL_200_1804" content="Port &apos;stream_out_V.user&apos; is mapped to &apos;TUSER&apos; by default." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1303" content="Opening project &apos;/home/tarafdar/workDir/galapagos/userIP/conv_proj&apos;." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1358" content="Adding design file &apos;../telepathy/hlsSources/conv_layer.cpp&apos; to the project" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1369" content="Opening solution &apos;/home/tarafdar/workDir/galapagos/userIP/conv_proj/solution1&apos;." tag=""/>
+	<Message prefix="[SYN 201-201]" severity="INFO" keynum="23" content="Setting up clock &apos;default&apos; with a period of 4ns." tag=""/>
+</Messages>

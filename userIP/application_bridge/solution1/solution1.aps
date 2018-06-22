@@ -1,0 +1,26 @@
+<AutoPilot:solution xmlns:AutoPilot="com.autoesl.autopilot.solution">
+    <config>
+        <config_interface expose_global="1"/>
+        <schedule model="application_bridge"/>
+    </config>
+    <ExportDesign askAgain="true" evaluate="false" rtl="verilog" formatName="ip_catalog">
+        <Format formatName="ip_catalog" description="" vendor="" library="" ipname="" version="" driver_input_dir="" display_name="Application Bridge" taxonomy=""/>
+    </ExportDesign>
+    <name>
+        <value string="solution1"/>
+    </name>
+    <project>
+        <value string="application_bridge"/>
+    </project>
+    <targetInfo>
+        <TargetInfo value="xcku115:-flva1517:-2-e"/>
+    </targetInfo>
+    <libraryList>
+        <library value="xilinx/kintexu/kintexu" name="DefaultPlatform"/>
+        <library value="xilinx/kintexu/kintexu_fpv7" name="DefaultPlatform"/>
+    </libraryList>
+    <clockList>
+        <clock default="false" name="default" period="6.4"/>
+    </clockList>
+</AutoPilot:solution>
+

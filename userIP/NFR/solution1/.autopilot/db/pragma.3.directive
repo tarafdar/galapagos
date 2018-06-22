@@ -1,0 +1,35 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+<sourceFile name="">
+<directive functionLabel="" functionName="NFR" label="">
+<pragma name="INTERFACE">
+<option name="ap_ctrl_none" positionalBoolean="mode" value=""/>
+<option name="port" positionalBoolean="4" value="return"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="NFR" label="">
+<pragma name="RESOURCE">
+<option name="variable" positionalBoolean="4" value="stream_out"/>
+<option name="core" value="AXI4Stream"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="NFR" label="">
+<pragma name="RESOURCE">
+<option name="variable" positionalBoolean="4" value="stream_in"/>
+<option name="core" value="AXI4Stream"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="NFR" label="">
+<pragma name="DATA_PACK">
+<option name="variable" positionalBoolean="4" value="stream_out"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="NFR" label="">
+<pragma name="DATA_PACK">
+<option name="variable" positionalBoolean="4" value="stream_in"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="NFR" label="">
+<pragma name="PIPELINE"/>
+</directive>
+</sourceFile>
+</AutoPilot:ProjectResources>

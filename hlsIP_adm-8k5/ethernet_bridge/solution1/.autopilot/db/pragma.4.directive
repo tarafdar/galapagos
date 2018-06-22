@@ -1,0 +1,67 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+<sourceFile name="">
+<directive functionLabel="" functionName="eth_to_app" label="">
+<pragma name="PIPELINE">
+<option name="II" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="app_to_eth" label="">
+<pragma name="PIPELINE">
+<option name="II" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="ethernet_bridge" label="">
+<pragma name="DATAFLOW"/>
+</directive>
+<directive functionLabel="" functionName="ethernet_bridge" label="">
+<pragma name="RESOURCE">
+<option name="variable" positionalBoolean="4" value="to_app"/>
+<option name="core" value="AXI4Stream"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="ethernet_bridge" label="">
+<pragma name="RESOURCE">
+<option name="variable" positionalBoolean="4" value="from_eth"/>
+<option name="core" value="AXI4Stream"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="ethernet_bridge" label="">
+<pragma name="RESOURCE">
+<option name="variable" positionalBoolean="4" value="from_app"/>
+<option name="core" value="AXI4Stream"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="ethernet_bridge" label="">
+<pragma name="RESOURCE">
+<option name="variable" positionalBoolean="4" value="to_eth"/>
+<option name="core" value="AXI4Stream"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="ethernet_bridge" label="">
+<pragma name="DATA_PACK">
+<option name="variable" positionalBoolean="4" value="to_app"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="ethernet_bridge" label="">
+<pragma name="DATA_PACK">
+<option name="variable" positionalBoolean="4" value="from_eth"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="ethernet_bridge" label="">
+<pragma name="DATA_PACK">
+<option name="variable" positionalBoolean="4" value="from_app"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="ethernet_bridge" label="">
+<pragma name="DATA_PACK">
+<option name="variable" positionalBoolean="4" value="to_eth"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="ethernet_bridge" label="">
+<pragma name="INTERFACE">
+<option name="ap_ctrl_none" positionalBoolean="mode" value=""/>
+<option name="port" positionalBoolean="4" value="return"/>
+</pragma>
+</directive>
+</sourceFile>
+</AutoPilot:ProjectResources>

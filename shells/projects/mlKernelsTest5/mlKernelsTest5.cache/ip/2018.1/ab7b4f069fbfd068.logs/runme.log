@@ -1,0 +1,1323 @@
+
+*** Running vivado
+    with args -log pr_conv_layer_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source pr_conv_layer_0_0.tcl
+
+
+****** Vivado v2018.1 (64-bit)
+  **** SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018
+  **** IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source pr_conv_layer_0_0.tcl -notrace
+Command: synth_design -top pr_conv_layer_0_0 -part xcku115-flva1517-2-e -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xcku115'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcku115'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 16956 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 1374.953 ; gain = 81.000 ; free physical = 15974 ; free virtual = 56030
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'pr_conv_layer_0_0' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ip/pr_conv_layer_0_0/synth/pr_conv_layer_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'conv_layer' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer.v:12]
+	Parameter ap_ST_fsm_state1 bound to: 64'b0000000000000000000000000000000000000000000000000000000000000001 
+	Parameter ap_ST_fsm_state2 bound to: 64'b0000000000000000000000000000000000000000000000000000000000000010 
+	Parameter ap_ST_fsm_state3 bound to: 64'b0000000000000000000000000000000000000000000000000000000000000100 
+	Parameter ap_ST_fsm_state4 bound to: 64'b0000000000000000000000000000000000000000000000000000000000001000 
+	Parameter ap_ST_fsm_state5 bound to: 64'b0000000000000000000000000000000000000000000000000000000000010000 
+	Parameter ap_ST_fsm_state6 bound to: 64'b0000000000000000000000000000000000000000000000000000000000100000 
+	Parameter ap_ST_fsm_state7 bound to: 64'b0000000000000000000000000000000000000000000000000000000001000000 
+	Parameter ap_ST_fsm_state8 bound to: 64'b0000000000000000000000000000000000000000000000000000000010000000 
+	Parameter ap_ST_fsm_state9 bound to: 64'b0000000000000000000000000000000000000000000000000000000100000000 
+	Parameter ap_ST_fsm_state10 bound to: 64'b0000000000000000000000000000000000000000000000000000001000000000 
+	Parameter ap_ST_fsm_state11 bound to: 64'b0000000000000000000000000000000000000000000000000000010000000000 
+	Parameter ap_ST_fsm_state12 bound to: 64'b0000000000000000000000000000000000000000000000000000100000000000 
+	Parameter ap_ST_fsm_state13 bound to: 64'b0000000000000000000000000000000000000000000000000001000000000000 
+	Parameter ap_ST_fsm_state14 bound to: 64'b0000000000000000000000000000000000000000000000000010000000000000 
+	Parameter ap_ST_fsm_state15 bound to: 64'b0000000000000000000000000000000000000000000000000100000000000000 
+	Parameter ap_ST_fsm_state16 bound to: 64'b0000000000000000000000000000000000000000000000001000000000000000 
+	Parameter ap_ST_fsm_state17 bound to: 64'b0000000000000000000000000000000000000000000000010000000000000000 
+	Parameter ap_ST_fsm_state18 bound to: 64'b0000000000000000000000000000000000000000000000100000000000000000 
+	Parameter ap_ST_fsm_state19 bound to: 64'b0000000000000000000000000000000000000000000001000000000000000000 
+	Parameter ap_ST_fsm_state20 bound to: 64'b0000000000000000000000000000000000000000000010000000000000000000 
+	Parameter ap_ST_fsm_state21 bound to: 64'b0000000000000000000000000000000000000000000100000000000000000000 
+	Parameter ap_ST_fsm_state22 bound to: 64'b0000000000000000000000000000000000000000001000000000000000000000 
+	Parameter ap_ST_fsm_state23 bound to: 64'b0000000000000000000000000000000000000000010000000000000000000000 
+	Parameter ap_ST_fsm_state24 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter ap_ST_fsm_state25 bound to: 64'b0000000000000000000000000000000000000001000000000000000000000000 
+	Parameter ap_ST_fsm_state26 bound to: 64'b0000000000000000000000000000000000000010000000000000000000000000 
+	Parameter ap_ST_fsm_state27 bound to: 64'b0000000000000000000000000000000000000100000000000000000000000000 
+	Parameter ap_ST_fsm_state28 bound to: 64'b0000000000000000000000000000000000001000000000000000000000000000 
+	Parameter ap_ST_fsm_state29 bound to: 64'b0000000000000000000000000000000000010000000000000000000000000000 
+	Parameter ap_ST_fsm_state30 bound to: 64'b0000000000000000000000000000000000100000000000000000000000000000 
+	Parameter ap_ST_fsm_state31 bound to: 64'b0000000000000000000000000000000001000000000000000000000000000000 
+	Parameter ap_ST_fsm_state32 bound to: 64'b0000000000000000000000000000000010000000000000000000000000000000 
+	Parameter ap_ST_fsm_state33 bound to: 64'b0000000000000000000000000000000100000000000000000000000000000000 
+	Parameter ap_ST_fsm_state34 bound to: 64'b0000000000000000000000000000001000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state35 bound to: 64'b0000000000000000000000000000010000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state36 bound to: 64'b0000000000000000000000000000100000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state37 bound to: 64'b0000000000000000000000000001000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state38 bound to: 64'b0000000000000000000000000010000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state39 bound to: 64'b0000000000000000000000000100000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state40 bound to: 64'b0000000000000000000000001000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state41 bound to: 64'b0000000000000000000000010000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state42 bound to: 64'b0000000000000000000000100000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state43 bound to: 64'b0000000000000000000001000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state44 bound to: 64'b0000000000000000000010000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state45 bound to: 64'b0000000000000000000100000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state46 bound to: 64'b0000000000000000001000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state47 bound to: 64'b0000000000000000010000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state48 bound to: 64'b0000000000000000100000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state49 bound to: 64'b0000000000000001000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state50 bound to: 64'b0000000000000010000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state51 bound to: 64'b0000000000000100000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state52 bound to: 64'b0000000000001000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state53 bound to: 64'b0000000000010000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state54 bound to: 64'b0000000000100000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state55 bound to: 64'b0000000001000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state56 bound to: 64'b0000000010000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state57 bound to: 64'b0000000100000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state58 bound to: 64'b0000001000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state59 bound to: 64'b0000010000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state60 bound to: 64'b0000100000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state61 bound to: 64'b0001000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state62 bound to: 64'b0010000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state63 bound to: 64'b0100000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state64 bound to: 64'b1000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_S_AXI_CTRL_BUS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_CTRL_BUS_ADDR_WIDTH bound to: 7 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_MEM_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_MEM_ADDR_WIDTH bound to: 64 - type: integer 
+	Parameter C_M_AXI_MEM_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_MEM_AWUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_MEM_ARUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_MEM_WUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_MEM_RUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_MEM_BUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_MEM_TARGET_ADDR bound to: 0 - type: integer 
+	Parameter C_M_AXI_MEM_USER_VALUE bound to: 0 - type: integer 
+	Parameter C_M_AXI_MEM_PROT_VALUE bound to: 0 - type: integer 
+	Parameter C_M_AXI_MEM_CACHE_VALUE bound to: 3 - type: integer 
+	Parameter C_M_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_CTRL_BUS_WSTRB_WIDTH bound to: 4 - type: integer 
+	Parameter C_S_AXI_WSTRB_WIDTH bound to: 4 - type: integer 
+	Parameter C_M_AXI_MEM_WSTRB_WIDTH bound to: 4 - type: integer 
+	Parameter C_M_AXI_WSTRB_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer.v:236]
+INFO: [Synth 8-6157] synthesizing module 'conv_layer_CTRL_BUS_s_axi' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_CTRL_BUS_s_axi.v:9]
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 7 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ADDR_AP_CTRL bound to: 7'b0000000 
+	Parameter ADDR_GIE bound to: 7'b0000100 
+	Parameter ADDR_IER bound to: 7'b0001000 
+	Parameter ADDR_ISR bound to: 7'b0001100 
+	Parameter ADDR_INPUT_OFFSET_DATA_0 bound to: 7'b0010000 
+	Parameter ADDR_INPUT_OFFSET_CTRL bound to: 7'b0010100 
+	Parameter ADDR_OUTPUT_OFFSET_DATA_0 bound to: 7'b0011000 
+	Parameter ADDR_OUTPUT_OFFSET_CTRL bound to: 7'b0011100 
+	Parameter ADDR_B_DATA_0 bound to: 7'b0100000 
+	Parameter ADDR_B_CTRL bound to: 7'b0100100 
+	Parameter ADDR_OD_DATA_0 bound to: 7'b0101000 
+	Parameter ADDR_OD_CTRL bound to: 7'b0101100 
+	Parameter ADDR_OX_DATA_0 bound to: 7'b0110000 
+	Parameter ADDR_OX_CTRL bound to: 7'b0110100 
+	Parameter ADDR_OY_DATA_0 bound to: 7'b0111000 
+	Parameter ADDR_OY_CTRL bound to: 7'b0111100 
+	Parameter ADDR_ID_DATA_0 bound to: 7'b1000000 
+	Parameter ADDR_ID_CTRL bound to: 7'b1000100 
+	Parameter ADDR_IX_DATA_0 bound to: 7'b1001000 
+	Parameter ADDR_IX_CTRL bound to: 7'b1001100 
+	Parameter ADDR_IY_DATA_0 bound to: 7'b1010000 
+	Parameter ADDR_IY_CTRL bound to: 7'b1010100 
+	Parameter ADDR_S_DATA_0 bound to: 7'b1011000 
+	Parameter ADDR_S_CTRL bound to: 7'b1011100 
+	Parameter ADDR_K_DATA_0 bound to: 7'b1100000 
+	Parameter ADDR_K_CTRL bound to: 7'b1100100 
+	Parameter WRIDLE bound to: 2'b00 
+	Parameter WRDATA bound to: 2'b01 
+	Parameter WRRESP bound to: 2'b10 
+	Parameter WRRESET bound to: 2'b11 
+	Parameter RDIDLE bound to: 2'b00 
+	Parameter RDDATA bound to: 2'b01 
+	Parameter RDRESET bound to: 2'b10 
+	Parameter ADDR_BITS bound to: 7 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_CTRL_BUS_s_axi.v:266]
+INFO: [Synth 8-6155] done synthesizing module 'conv_layer_CTRL_BUS_s_axi' (1#1) [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_CTRL_BUS_s_axi.v:9]
+INFO: [Synth 8-6157] synthesizing module 'conv_layer_mem_m_axi' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mem_m_axi.v:10]
+	Parameter CONSERVATIVE bound to: 0 - type: integer 
+	Parameter NUM_READ_OUTSTANDING bound to: 16 - type: integer 
+	Parameter NUM_WRITE_OUTSTANDING bound to: 16 - type: integer 
+	Parameter MAX_READ_BURST_LENGTH bound to: 16 - type: integer 
+	Parameter MAX_WRITE_BURST_LENGTH bound to: 16 - type: integer 
+	Parameter C_M_AXI_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_ADDR_WIDTH bound to: 64 - type: integer 
+	Parameter C_TARGET_ADDR bound to: 0 - type: integer 
+	Parameter C_M_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_AWUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_ARUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_WUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_RUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_BUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_USER_VALUE bound to: 0 - type: integer 
+	Parameter C_PROT_VALUE bound to: 0 - type: integer 
+	Parameter C_CACHE_VALUE bound to: 3 - type: integer 
+	Parameter USER_DW bound to: 32 - type: integer 
+	Parameter USER_AW bound to: 64 - type: integer 
+	Parameter USER_MAXREQS bound to: 5 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'conv_layer_mem_m_axi_throttl' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mem_m_axi.v:708]
+	Parameter USED_FIX bound to: 0 - type: integer 
+	Parameter FIX_VALUE bound to: 4 - type: integer 
+	Parameter ADDR_WIDTH bound to: 64 - type: integer 
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter DEPTH bound to: 16 - type: integer 
+	Parameter USER_MAXREQS bound to: 16 - type: integer 
+	Parameter CONSERVATIVE bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'conv_layer_mem_m_axi_throttl' (2#1) [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mem_m_axi.v:708]
+INFO: [Synth 8-6157] synthesizing module 'conv_layer_mem_m_axi_write' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mem_m_axi.v:1696]
+	Parameter NUM_WRITE_OUTSTANDING bound to: 16 - type: integer 
+	Parameter MAX_WRITE_BURST_LENGTH bound to: 16 - type: integer 
+	Parameter C_M_AXI_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_ADDR_WIDTH bound to: 64 - type: integer 
+	Parameter C_TARGET_ADDR bound to: 0 - type: integer 
+	Parameter C_M_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_AWUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_WUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_BUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_USER_VALUE bound to: 0 - type: integer 
+	Parameter C_PROT_VALUE bound to: 0 - type: integer 
+	Parameter C_CACHE_VALUE bound to: 3 - type: integer 
+	Parameter USER_DW bound to: 32 - type: integer 
+	Parameter USER_AW bound to: 64 - type: integer 
+	Parameter USER_MAXREQS bound to: 5 - type: integer 
+	Parameter USER_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter USER_DATA_BYTES bound to: 4 - type: integer 
+	Parameter USER_ADDR_ALIGN bound to: 2 - type: integer 
+	Parameter BUS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter BUS_DATA_BYTES bound to: 4 - type: integer 
+	Parameter BUS_ADDR_ALIGN bound to: 2 - type: integer 
+	Parameter NUM_WRITE_WIDTH bound to: 4 - type: integer 
+	Parameter TARGET_ADDR bound to: 0 - type: integer 
+	Parameter BOUNDARY_BEATS bound to: 10'b1111111111 
+INFO: [Synth 8-6157] synthesizing module 'conv_layer_mem_m_axi_fifo' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mem_m_axi.v:418]
+	Parameter DATA_BITS bound to: 8 - type: integer 
+	Parameter DEPTH bound to: 5 - type: integer 
+	Parameter DEPTH_BITS bound to: 3 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'conv_layer_mem_m_axi_fifo' (3#1) [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mem_m_axi.v:418]
+INFO: [Synth 8-6157] synthesizing module 'conv_layer_mem_m_axi_reg_slice' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mem_m_axi.v:314]
+	Parameter N bound to: 96 - type: integer 
+	Parameter ZERO bound to: 2'b10 
+	Parameter ONE bound to: 2'b11 
+	Parameter TWO bound to: 2'b01 
+INFO: [Synth 8-6155] done synthesizing module 'conv_layer_mem_m_axi_reg_slice' (4#1) [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mem_m_axi.v:314]
+INFO: [Synth 8-6157] synthesizing module 'conv_layer_mem_m_axi_fifo__parameterized0' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mem_m_axi.v:418]
+	Parameter DATA_BITS bound to: 96 - type: integer 
+	Parameter DEPTH bound to: 5 - type: integer 
+	Parameter DEPTH_BITS bound to: 3 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'conv_layer_mem_m_axi_fifo__parameterized0' (4#1) [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mem_m_axi.v:418]
+INFO: [Synth 8-6157] synthesizing module 'conv_layer_mem_m_axi_buffer' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mem_m_axi.v:527]
+	Parameter MEM_STYLE bound to: block - type: string 
+	Parameter DATA_WIDTH bound to: 36 - type: integer 
+	Parameter ADDR_WIDTH bound to: 8 - type: integer 
+	Parameter DEPTH bound to: 256 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'conv_layer_mem_m_axi_buffer' (5#1) [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mem_m_axi.v:527]
+INFO: [Synth 8-6157] synthesizing module 'conv_layer_mem_m_axi_fifo__parameterized1' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mem_m_axi.v:418]
+	Parameter DATA_BITS bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 15 - type: integer 
+	Parameter DEPTH_BITS bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'conv_layer_mem_m_axi_fifo__parameterized1' (5#1) [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mem_m_axi.v:418]
+INFO: [Synth 8-6157] synthesizing module 'conv_layer_mem_m_axi_fifo__parameterized2' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mem_m_axi.v:418]
+	Parameter DATA_BITS bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 5 - type: integer 
+	Parameter DEPTH_BITS bound to: 3 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'conv_layer_mem_m_axi_fifo__parameterized2' (5#1) [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mem_m_axi.v:418]
+WARNING: [Synth 8-6014] Unused sequential element sect_end_buf_reg was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mem_m_axi.v:2063]
+INFO: [Synth 8-6155] done synthesizing module 'conv_layer_mem_m_axi_write' (6#1) [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mem_m_axi.v:1696]
+INFO: [Synth 8-6157] synthesizing module 'conv_layer_mem_m_axi_read' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mem_m_axi.v:899]
+	Parameter NUM_READ_OUTSTANDING bound to: 16 - type: integer 
+	Parameter MAX_READ_BURST_LENGTH bound to: 16 - type: integer 
+	Parameter C_M_AXI_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_ADDR_WIDTH bound to: 64 - type: integer 
+	Parameter C_TARGET_ADDR bound to: 0 - type: integer 
+	Parameter C_M_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_ARUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_RUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_USER_VALUE bound to: 0 - type: integer 
+	Parameter C_PROT_VALUE bound to: 0 - type: integer 
+	Parameter C_CACHE_VALUE bound to: 3 - type: integer 
+	Parameter USER_DW bound to: 32 - type: integer 
+	Parameter USER_AW bound to: 64 - type: integer 
+	Parameter USER_MAXREQS bound to: 5 - type: integer 
+	Parameter USER_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter USER_DATA_BYTES bound to: 4 - type: integer 
+	Parameter USER_ADDR_ALIGN bound to: 2 - type: integer 
+	Parameter BUS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter BUS_DATA_BYTES bound to: 4 - type: integer 
+	Parameter BUS_ADDR_ALIGN bound to: 2 - type: integer 
+	Parameter NUM_READ_WIDTH bound to: 4 - type: integer 
+	Parameter TARGET_ADDR bound to: 0 - type: integer 
+	Parameter BOUNDARY_BEATS bound to: 10'b1111111111 
+INFO: [Synth 8-6157] synthesizing module 'conv_layer_mem_m_axi_buffer__parameterized0' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mem_m_axi.v:527]
+	Parameter MEM_STYLE bound to: block - type: string 
+	Parameter DATA_WIDTH bound to: 35 - type: integer 
+	Parameter ADDR_WIDTH bound to: 8 - type: integer 
+	Parameter DEPTH bound to: 256 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'conv_layer_mem_m_axi_buffer__parameterized0' (6#1) [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mem_m_axi.v:527]
+INFO: [Synth 8-6157] synthesizing module 'conv_layer_mem_m_axi_reg_slice__parameterized0' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mem_m_axi.v:314]
+	Parameter N bound to: 34 - type: integer 
+	Parameter ZERO bound to: 2'b10 
+	Parameter ONE bound to: 2'b11 
+	Parameter TWO bound to: 2'b01 
+INFO: [Synth 8-6155] done synthesizing module 'conv_layer_mem_m_axi_reg_slice__parameterized0' (6#1) [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mem_m_axi.v:314]
+WARNING: [Synth 8-6014] Unused sequential element sect_end_buf_reg was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mem_m_axi.v:1247]
+INFO: [Synth 8-6155] done synthesizing module 'conv_layer_mem_m_axi_read' (7#1) [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mem_m_axi.v:899]
+INFO: [Synth 8-6155] done synthesizing module 'conv_layer_mem_m_axi' (8#1) [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mem_m_axi.v:10]
+INFO: [Synth 8-6157] synthesizing module 'conv_layer_fadd_3bkb' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_fadd_3bkb.v:11]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 8 - type: integer 
+	Parameter din0_WIDTH bound to: 32 - type: integer 
+	Parameter din1_WIDTH bound to: 32 - type: integer 
+	Parameter dout_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'conv_layer_ap_fadd_6_full_dsp_32' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/ip/conv_layer_ap_fadd_6_full_dsp_32.vhd:72]
+	Parameter C_XDEVICEFAMILY bound to: virtex7 - type: string 
+	Parameter C_HAS_ADD bound to: 1 - type: integer 
+	Parameter C_HAS_SUBTRACT bound to: 0 - type: integer 
+	Parameter C_HAS_MULTIPLY bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE bound to: 0 - type: integer 
+	Parameter C_HAS_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_COMPARE bound to: 0 - type: integer 
+	Parameter C_HAS_FIX_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FIX bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_ABSOLUTE bound to: 0 - type: integer 
+	Parameter C_HAS_LOGARITHM bound to: 0 - type: integer 
+	Parameter C_HAS_EXPONENTIAL bound to: 0 - type: integer 
+	Parameter C_HAS_FMA bound to: 0 - type: integer 
+	Parameter C_HAS_FMS bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_A_WIDTH bound to: 32 - type: integer 
+	Parameter C_A_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_B_WIDTH bound to: 32 - type: integer 
+	Parameter C_B_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_C_WIDTH bound to: 32 - type: integer 
+	Parameter C_C_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_RESULT_WIDTH bound to: 32 - type: integer 
+	Parameter C_RESULT_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_COMPARE_OPERATION bound to: 8 - type: integer 
+	Parameter C_LATENCY bound to: 6 - type: integer 
+	Parameter C_OPTIMIZATION bound to: 1 - type: integer 
+	Parameter C_MULT_USAGE bound to: 2 - type: integer 
+	Parameter C_BRAM_USAGE bound to: 0 - type: integer 
+	Parameter C_RATE bound to: 1 - type: integer 
+	Parameter C_ACCUM_INPUT_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_LSB bound to: -31 - type: integer 
+	Parameter C_HAS_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_INVALID_OP bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE_BY_ZERO bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_INPUT_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 1 - type: integer 
+	Parameter C_HAS_ARESETN bound to: 0 - type: integer 
+	Parameter C_THROTTLE_SCHEME bound to: 3 - type: integer 
+	Parameter C_HAS_A_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_A_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_B bound to: 1 - type: integer 
+	Parameter C_HAS_B_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_B_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_C bound to: 0 - type: integer 
+	Parameter C_HAS_C_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_C_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TLAST bound to: 0 - type: integer 
+	Parameter C_TLAST_RESOLUTION bound to: 0 - type: integer 
+	Parameter C_A_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_A_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_B_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_B_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_C_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_C_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_OPERATION_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_OPERATION_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_RESULT_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_RESULT_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_FIXED_DATA_UNSIGNED bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'floating_point_v7_1_6' declared at '/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/c4f7/hdl/floating_point_v7_1_vh_rfs.vhd:91604' bound to instance 'U0' of component 'floating_point_v7_1_6' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/ip/conv_layer_ap_fadd_6_full_dsp_32.vhd:203]
+INFO: [Synth 8-256] done synthesizing module 'conv_layer_ap_fadd_6_full_dsp_32' (26#1) [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/ip/conv_layer_ap_fadd_6_full_dsp_32.vhd:72]
+INFO: [Synth 8-6155] done synthesizing module 'conv_layer_fadd_3bkb' (27#1) [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_fadd_3bkb.v:11]
+INFO: [Synth 8-6157] synthesizing module 'conv_layer_fmul_3cud' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_fmul_3cud.v:11]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 5 - type: integer 
+	Parameter din0_WIDTH bound to: 32 - type: integer 
+	Parameter din1_WIDTH bound to: 32 - type: integer 
+	Parameter dout_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'conv_layer_ap_fmul_3_max_dsp_32' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/ip/conv_layer_ap_fmul_3_max_dsp_32.vhd:72]
+	Parameter C_XDEVICEFAMILY bound to: virtex7 - type: string 
+	Parameter C_HAS_ADD bound to: 0 - type: integer 
+	Parameter C_HAS_SUBTRACT bound to: 0 - type: integer 
+	Parameter C_HAS_MULTIPLY bound to: 1 - type: integer 
+	Parameter C_HAS_DIVIDE bound to: 0 - type: integer 
+	Parameter C_HAS_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_COMPARE bound to: 0 - type: integer 
+	Parameter C_HAS_FIX_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FIX bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_ABSOLUTE bound to: 0 - type: integer 
+	Parameter C_HAS_LOGARITHM bound to: 0 - type: integer 
+	Parameter C_HAS_EXPONENTIAL bound to: 0 - type: integer 
+	Parameter C_HAS_FMA bound to: 0 - type: integer 
+	Parameter C_HAS_FMS bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_A_WIDTH bound to: 32 - type: integer 
+	Parameter C_A_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_B_WIDTH bound to: 32 - type: integer 
+	Parameter C_B_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_C_WIDTH bound to: 32 - type: integer 
+	Parameter C_C_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_RESULT_WIDTH bound to: 32 - type: integer 
+	Parameter C_RESULT_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_COMPARE_OPERATION bound to: 8 - type: integer 
+	Parameter C_LATENCY bound to: 3 - type: integer 
+	Parameter C_OPTIMIZATION bound to: 1 - type: integer 
+	Parameter C_MULT_USAGE bound to: 3 - type: integer 
+	Parameter C_BRAM_USAGE bound to: 0 - type: integer 
+	Parameter C_RATE bound to: 1 - type: integer 
+	Parameter C_ACCUM_INPUT_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_LSB bound to: -31 - type: integer 
+	Parameter C_HAS_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_INVALID_OP bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE_BY_ZERO bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_INPUT_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 1 - type: integer 
+	Parameter C_HAS_ARESETN bound to: 0 - type: integer 
+	Parameter C_THROTTLE_SCHEME bound to: 3 - type: integer 
+	Parameter C_HAS_A_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_A_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_B bound to: 1 - type: integer 
+	Parameter C_HAS_B_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_B_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_C bound to: 0 - type: integer 
+	Parameter C_HAS_C_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_C_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TLAST bound to: 0 - type: integer 
+	Parameter C_TLAST_RESOLUTION bound to: 0 - type: integer 
+	Parameter C_A_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_A_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_B_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_B_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_C_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_C_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_OPERATION_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_OPERATION_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_RESULT_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_RESULT_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_FIXED_DATA_UNSIGNED bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'floating_point_v7_1_6' declared at '/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/c4f7/hdl/floating_point_v7_1_vh_rfs.vhd:91604' bound to instance 'U0' of component 'floating_point_v7_1_6' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/ip/conv_layer_ap_fmul_3_max_dsp_32.vhd:203]
+INFO: [Synth 8-256] done synthesizing module 'conv_layer_ap_fmul_3_max_dsp_32' (35#1) [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/ip/conv_layer_ap_fmul_3_max_dsp_32.vhd:72]
+INFO: [Synth 8-6155] done synthesizing module 'conv_layer_fmul_3cud' (36#1) [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_fmul_3cud.v:11]
+INFO: [Synth 8-6157] synthesizing module 'conv_layer_fcmp_3dEe' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_fcmp_3dEe.v:11]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 32 - type: integer 
+	Parameter din1_WIDTH bound to: 32 - type: integer 
+	Parameter dout_WIDTH bound to: 1 - type: integer 
+	Parameter AP_OEQ bound to: 5'b00001 
+	Parameter AP_OGT bound to: 5'b00010 
+	Parameter AP_OGE bound to: 5'b00011 
+	Parameter AP_OLT bound to: 5'b00100 
+	Parameter AP_OLE bound to: 5'b00101 
+	Parameter AP_ONE bound to: 5'b00110 
+	Parameter AP_UNO bound to: 5'b01000 
+	Parameter OP_EQ bound to: 8'b00010100 
+	Parameter OP_GT bound to: 8'b00100100 
+	Parameter OP_GE bound to: 8'b00110100 
+	Parameter OP_LT bound to: 8'b00001100 
+	Parameter OP_LE bound to: 8'b00011100 
+	Parameter OP_NE bound to: 8'b00101100 
+	Parameter OP_UO bound to: 8'b00000100 
+INFO: [Synth 8-638] synthesizing module 'conv_layer_ap_fcmp_0_no_dsp_32' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/ip/conv_layer_ap_fcmp_0_no_dsp_32.vhd:72]
+	Parameter C_XDEVICEFAMILY bound to: virtex7 - type: string 
+	Parameter C_HAS_ADD bound to: 0 - type: integer 
+	Parameter C_HAS_SUBTRACT bound to: 0 - type: integer 
+	Parameter C_HAS_MULTIPLY bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE bound to: 0 - type: integer 
+	Parameter C_HAS_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_COMPARE bound to: 1 - type: integer 
+	Parameter C_HAS_FIX_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FIX bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_ABSOLUTE bound to: 0 - type: integer 
+	Parameter C_HAS_LOGARITHM bound to: 0 - type: integer 
+	Parameter C_HAS_EXPONENTIAL bound to: 0 - type: integer 
+	Parameter C_HAS_FMA bound to: 0 - type: integer 
+	Parameter C_HAS_FMS bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_A_WIDTH bound to: 32 - type: integer 
+	Parameter C_A_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_B_WIDTH bound to: 32 - type: integer 
+	Parameter C_B_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_C_WIDTH bound to: 32 - type: integer 
+	Parameter C_C_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_RESULT_WIDTH bound to: 1 - type: integer 
+	Parameter C_RESULT_FRACTION_WIDTH bound to: 0 - type: integer 
+	Parameter C_COMPARE_OPERATION bound to: 8 - type: integer 
+	Parameter C_LATENCY bound to: 0 - type: integer 
+	Parameter C_OPTIMIZATION bound to: 1 - type: integer 
+	Parameter C_MULT_USAGE bound to: 0 - type: integer 
+	Parameter C_BRAM_USAGE bound to: 0 - type: integer 
+	Parameter C_RATE bound to: 1 - type: integer 
+	Parameter C_ACCUM_INPUT_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_LSB bound to: -31 - type: integer 
+	Parameter C_HAS_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_INVALID_OP bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE_BY_ZERO bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_INPUT_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 0 - type: integer 
+	Parameter C_HAS_ARESETN bound to: 0 - type: integer 
+	Parameter C_THROTTLE_SCHEME bound to: 3 - type: integer 
+	Parameter C_HAS_A_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_A_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_B bound to: 1 - type: integer 
+	Parameter C_HAS_B_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_B_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_C bound to: 0 - type: integer 
+	Parameter C_HAS_C_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_C_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION bound to: 1 - type: integer 
+	Parameter C_HAS_OPERATION_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TLAST bound to: 0 - type: integer 
+	Parameter C_TLAST_RESOLUTION bound to: 0 - type: integer 
+	Parameter C_A_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_A_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_B_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_B_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_C_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_C_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_OPERATION_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_OPERATION_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_RESULT_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_RESULT_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_FIXED_DATA_UNSIGNED bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'floating_point_v7_1_6' declared at '/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/c4f7/hdl/floating_point_v7_1_vh_rfs.vhd:91604' bound to instance 'U0' of component 'floating_point_v7_1_6' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/ip/conv_layer_ap_fcmp_0_no_dsp_32.vhd:202]
+INFO: [Synth 8-256] done synthesizing module 'conv_layer_ap_fcmp_0_no_dsp_32' (40#1) [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/ip/conv_layer_ap_fcmp_0_no_dsp_32.vhd:72]
+INFO: [Synth 8-6155] done synthesizing module 'conv_layer_fcmp_3dEe' (41#1) [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_fcmp_3dEe.v:11]
+INFO: [Synth 8-6157] synthesizing module 'conv_layer_mul_32eOg' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:35]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 3 - type: integer 
+	Parameter din0_WIDTH bound to: 32 - type: integer 
+	Parameter din1_WIDTH bound to: 32 - type: integer 
+	Parameter dout_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'conv_layer_mul_32eOg_MulnS_0' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'conv_layer_mul_32eOg_MulnS_0' (42#1) [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'conv_layer_mul_32eOg' (43#1) [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:35]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer.v:1945]
+INFO: [Synth 8-6155] done synthesizing module 'conv_layer' (44#1) [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'pr_conv_layer_0_0' (45#1) [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ip/pr_conv_layer_0_0/synth/pr_conv_layer_0_0.v:58]
+WARNING: [Synth 8-3331] design conv_layer_mul_32eOg has unconnected port reset
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized9 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized9 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized9 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized9 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized9 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized89 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized89 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized89 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized89 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized89 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized87 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized87 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized87 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized87 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized87 has unconnected port SINIT
+WARNING: [Synth 8-3331] design compare_eq_im__parameterized3 has unconnected port CARRYS_OUT[0]
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized11 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized11 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized11 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized11 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized11 has unconnected port SINIT
+WARNING: [Synth 8-3331] design compare_ne_im has unconnected port CARRYS_OUT[0]
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized31 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized31 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized31 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized31 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized31 has unconnected port SINIT
+WARNING: [Synth 8-3331] design compare_eq_im__parameterized2 has unconnected port CARRYS_OUT[0]
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized3 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized3 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized3 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized3 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized3 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized85 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized85 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized85 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized85 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized85 has unconnected port SINIT
+WARNING: [Synth 8-3331] design floating_point_v7_1_6_viv__parameterized3 has unconnected port m_axis_result_tuser[0]
+WARNING: [Synth 8-3331] design floating_point_v7_1_6_viv__parameterized3 has unconnected port m_axis_result_tlast
+WARNING: [Synth 8-3331] design floating_point_v7_1_6_viv__parameterized3 has unconnected port aclken
+WARNING: [Synth 8-3331] design floating_point_v7_1_6_viv__parameterized3 has unconnected port aresetn
+WARNING: [Synth 8-3331] design floating_point_v7_1_6_viv__parameterized3 has unconnected port s_axis_a_tuser[0]
+WARNING: [Synth 8-3331] design floating_point_v7_1_6_viv__parameterized3 has unconnected port s_axis_a_tlast
+WARNING: [Synth 8-3331] design floating_point_v7_1_6_viv__parameterized3 has unconnected port s_axis_b_tuser[0]
+WARNING: [Synth 8-3331] design floating_point_v7_1_6_viv__parameterized3 has unconnected port s_axis_b_tlast
+WARNING: [Synth 8-3331] design floating_point_v7_1_6_viv__parameterized3 has unconnected port s_axis_c_tvalid
+WARNING: [Synth 8-3331] design floating_point_v7_1_6_viv__parameterized3 has unconnected port s_axis_c_tdata[31]
+WARNING: [Synth 8-3331] design floating_point_v7_1_6_viv__parameterized3 has unconnected port s_axis_c_tdata[30]
+WARNING: [Synth 8-3331] design floating_point_v7_1_6_viv__parameterized3 has unconnected port s_axis_c_tdata[29]
+WARNING: [Synth 8-3331] design floating_point_v7_1_6_viv__parameterized3 has unconnected port s_axis_c_tdata[28]
+WARNING: [Synth 8-3331] design floating_point_v7_1_6_viv__parameterized3 has unconnected port s_axis_c_tdata[27]
+WARNING: [Synth 8-3331] design floating_point_v7_1_6_viv__parameterized3 has unconnected port s_axis_c_tdata[26]
+WARNING: [Synth 8-3331] design floating_point_v7_1_6_viv__parameterized3 has unconnected port s_axis_c_tdata[25]
+WARNING: [Synth 8-3331] design floating_point_v7_1_6_viv__parameterized3 has unconnected port s_axis_c_tdata[24]
+WARNING: [Synth 8-3331] design floating_point_v7_1_6_viv__parameterized3 has unconnected port s_axis_c_tdata[23]
+WARNING: [Synth 8-3331] design floating_point_v7_1_6_viv__parameterized3 has unconnected port s_axis_c_tdata[22]
+WARNING: [Synth 8-3331] design floating_point_v7_1_6_viv__parameterized3 has unconnected port s_axis_c_tdata[21]
+WARNING: [Synth 8-3331] design floating_point_v7_1_6_viv__parameterized3 has unconnected port s_axis_c_tdata[20]
+WARNING: [Synth 8-3331] design floating_point_v7_1_6_viv__parameterized3 has unconnected port s_axis_c_tdata[19]
+WARNING: [Synth 8-3331] design floating_point_v7_1_6_viv__parameterized3 has unconnected port s_axis_c_tdata[18]
+WARNING: [Synth 8-3331] design floating_point_v7_1_6_viv__parameterized3 has unconnected port s_axis_c_tdata[17]
+WARNING: [Synth 8-3331] design floating_point_v7_1_6_viv__parameterized3 has unconnected port s_axis_c_tdata[16]
+WARNING: [Synth 8-3331] design floating_point_v7_1_6_viv__parameterized3 has unconnected port s_axis_c_tdata[15]
+WARNING: [Synth 8-3331] design floating_point_v7_1_6_viv__parameterized3 has unconnected port s_axis_c_tdata[14]
+WARNING: [Synth 8-3331] design floating_point_v7_1_6_viv__parameterized3 has unconnected port s_axis_c_tdata[13]
+WARNING: [Synth 8-3331] design floating_point_v7_1_6_viv__parameterized3 has unconnected port s_axis_c_tdata[12]
+WARNING: [Synth 8-3331] design floating_point_v7_1_6_viv__parameterized3 has unconnected port s_axis_c_tdata[11]
+WARNING: [Synth 8-3331] design floating_point_v7_1_6_viv__parameterized3 has unconnected port s_axis_c_tdata[10]
+WARNING: [Synth 8-3331] design floating_point_v7_1_6_viv__parameterized3 has unconnected port s_axis_c_tdata[9]
+WARNING: [Synth 8-3331] design floating_point_v7_1_6_viv__parameterized3 has unconnected port s_axis_c_tdata[8]
+WARNING: [Synth 8-3331] design floating_point_v7_1_6_viv__parameterized3 has unconnected port s_axis_c_tdata[7]
+WARNING: [Synth 8-3331] design floating_point_v7_1_6_viv__parameterized3 has unconnected port s_axis_c_tdata[6]
+WARNING: [Synth 8-3331] design floating_point_v7_1_6_viv__parameterized3 has unconnected port s_axis_c_tdata[5]
+WARNING: [Synth 8-3331] design floating_point_v7_1_6_viv__parameterized3 has unconnected port s_axis_c_tdata[4]
+WARNING: [Synth 8-3331] design floating_point_v7_1_6_viv__parameterized3 has unconnected port s_axis_c_tdata[3]
+WARNING: [Synth 8-3331] design floating_point_v7_1_6_viv__parameterized3 has unconnected port s_axis_c_tdata[2]
+WARNING: [Synth 8-3331] design floating_point_v7_1_6_viv__parameterized3 has unconnected port s_axis_c_tdata[1]
+WARNING: [Synth 8-3331] design floating_point_v7_1_6_viv__parameterized3 has unconnected port s_axis_c_tdata[0]
+WARNING: [Synth 8-3331] design floating_point_v7_1_6_viv__parameterized3 has unconnected port s_axis_c_tuser[0]
+WARNING: [Synth 8-3331] design floating_point_v7_1_6_viv__parameterized3 has unconnected port s_axis_c_tlast
+WARNING: [Synth 8-3331] design floating_point_v7_1_6_viv__parameterized3 has unconnected port s_axis_operation_tdata[7]
+WARNING: [Synth 8-3331] design floating_point_v7_1_6_viv__parameterized3 has unconnected port s_axis_operation_tdata[6]
+WARNING: [Synth 8-3331] design floating_point_v7_1_6_viv__parameterized3 has unconnected port s_axis_operation_tdata[2]
+WARNING: [Synth 8-3331] design floating_point_v7_1_6_viv__parameterized3 has unconnected port s_axis_operation_tdata[1]
+WARNING: [Synth 8-3331] design floating_point_v7_1_6_viv__parameterized3 has unconnected port s_axis_operation_tdata[0]
+WARNING: [Synth 8-3331] design floating_point_v7_1_6_viv__parameterized3 has unconnected port s_axis_operation_tuser[0]
+WARNING: [Synth 8-3331] design floating_point_v7_1_6_viv__parameterized3 has unconnected port s_axis_operation_tlast
+WARNING: [Synth 8-3331] design floating_point_v7_1_6_viv__parameterized3 has unconnected port m_axis_result_tready
+WARNING: [Synth 8-3331] design flt_dec_op_lat has unconnected port DEC_OP_STATE[11]
+WARNING: [Synth 8-3331] design flt_dec_op_lat has unconnected port DEC_OP_STATE[10]
+WARNING: [Synth 8-3331] design flt_dec_op_lat has unconnected port DEC_OP_STATE[9]
+WARNING: [Synth 8-3331] design flt_dec_op_lat has unconnected port DEC_OP_STATE[8]
+WARNING: [Synth 8-3331] design flt_dec_op_lat has unconnected port DIVIDE_BY_ZERO_IN
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized35 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized35 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized35 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized35 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized35 has unconnected port SINIT
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:17 ; elapsed = 00:00:24 . Memory (MB): peak = 1495.562 ; gain = 201.609 ; free physical = 15835 ; free virtual = 55892
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:24 . Memory (MB): peak = 1495.562 ; gain = 201.609 ; free physical = 15835 ; free virtual = 55893
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:24 . Memory (MB): peak = 1495.562 ; gain = 201.609 ; free physical = 15835 ; free virtual = 55893
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 154 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xcku115-flva1517-2-e
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ip/pr_conv_layer_0_0/constraints/conv_layer_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ip/pr_conv_layer_0_0/constraints/conv_layer_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.runs/pr_conv_layer_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.runs/pr_conv_layer_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 9 instances were transformed.
+  DSP48E1 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD_DATA, DSP_PREADD): 5 instances
+  FDE => FDRE: 4 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.34 ; elapsed = 00:00:00.12 . Memory (MB): peak = 2143.199 ; gain = 2.000 ; free physical = 14950 ; free virtual = 55008
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:36 ; elapsed = 00:00:49 . Memory (MB): peak = 2143.199 ; gain = 849.246 ; free physical = 14769 ; free virtual = 54827
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xcku115-flva1517-2-e
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:36 ; elapsed = 00:00:49 . Memory (MB): peak = 2143.199 ; gain = 849.246 ; free physical = 14769 ; free virtual = 54827
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for inst. (constraint file  /home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.runs/pr_conv_layer_0_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:36 ; elapsed = 00:00:49 . Memory (MB): peak = 2143.199 ; gain = 849.246 ; free physical = 14769 ; free virtual = 54827
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'wstate_reg' in module 'conv_layer_CTRL_BUS_s_axi'
+INFO: [Synth 8-802] inferred FSM for state register 'rstate_reg' in module 'conv_layer_CTRL_BUS_s_axi'
+INFO: [Synth 8-5544] ROM "wnext" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "wnext" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[0] was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mem_m_axi.v:519]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[1] was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mem_m_axi.v:519]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[2] was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mem_m_axi.v:519]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[3] was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mem_m_axi.v:519]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[4] was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mem_m_axi.v:519]
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'conv_layer_mem_m_axi_reg_slice'
+INFO: [Synth 8-5544] ROM "next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[0] was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mem_m_axi.v:519]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[1] was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mem_m_axi.v:519]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[2] was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mem_m_axi.v:519]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[3] was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mem_m_axi.v:519]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[4] was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mem_m_axi.v:519]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mem_m_axi.v:610]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mem_m_axi.v:506]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[0] was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mem_m_axi.v:519]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[1] was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mem_m_axi.v:519]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[2] was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mem_m_axi.v:519]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[3] was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mem_m_axi.v:519]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[4] was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mem_m_axi.v:519]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[5] was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mem_m_axi.v:519]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[6] was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mem_m_axi.v:519]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[7] was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mem_m_axi.v:519]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[8] was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mem_m_axi.v:519]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[9] was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mem_m_axi.v:519]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[10] was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mem_m_axi.v:519]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[11] was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mem_m_axi.v:519]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[12] was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mem_m_axi.v:519]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[13] was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mem_m_axi.v:519]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[14] was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mem_m_axi.v:519]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[0] was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mem_m_axi.v:519]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[1] was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mem_m_axi.v:519]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[2] was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mem_m_axi.v:519]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[3] was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mem_m_axi.v:519]
+WARNING: [Synth 8-6014] Unused sequential element mem_reg[4] was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mem_m_axi.v:519]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mem_m_axi.v:610]
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'conv_layer_mem_m_axi_reg_slice__parameterized0'
+INFO: [Synth 8-5544] ROM "next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_over_int" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ip_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_over_int" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ip_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "det_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_just_over_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_just_over_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "state_int_up" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "op_tdata" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-4471] merging register 'tmp_7_reg_1061_reg[63:62]' into 'tmp_3_reg_1050_reg[63:62]' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer.v:1913]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5546] ROM "notrhs_fu_932_p2" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                             0001 |                               11
+*
+                  WRIDLE |                             0010 |                               00
+                  WRDATA |                             0100 |                               01
+                  WRRESP |                             1000 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'wstate_reg' using encoding 'one-hot' in module 'conv_layer_CTRL_BUS_s_axi'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              001 |                               10
+*
+                  RDIDLE |                              010 |                               00
+                  RDDATA |                              100 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rstate_reg' using encoding 'one-hot' in module 'conv_layer_CTRL_BUS_s_axi'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'conv_layer_mem_m_axi_reg_slice'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'conv_layer_mem_m_axi_reg_slice__parameterized0'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:38 ; elapsed = 00:00:51 . Memory (MB): peak = 2143.199 ; gain = 849.246 ; free physical = 14752 ; free virtual = 54812
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'inst/conv_layer_fadd_3bkb_U1/conv_layer_ap_fadd_6_full_dsp_32_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'inst/conv_layer_fadd_3bkb_U1/conv_layer_ap_fadd_6_full_dsp_32_u/U0/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/conv_layer_fadd_3bkb_U1/conv_layer_ap_fadd_6_full_dsp_32_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'inst/conv_layer_fadd_3bkb_U1/conv_layer_ap_fadd_6_full_dsp_32_u/U0/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/conv_layer_fadd_3bkb_U1/conv_layer_ap_fadd_6_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/SUB_DELAY' (delay__parameterized0) to 'inst/conv_layer_fadd_3bkb_U1/conv_layer_ap_fadd_6_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/SUB_ADD_IP_DELAY'
+INFO: [Synth 8-223] decloning instance 'inst/conv_layer_fmul_3cud_U2/conv_layer_ap_fmul_3_max_dsp_32_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'inst/conv_layer_fmul_3cud_U2/conv_layer_ap_fmul_3_max_dsp_32_u/U0/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/conv_layer_fmul_3cud_U2/conv_layer_ap_fmul_3_max_dsp_32_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'inst/conv_layer_fmul_3cud_U2/conv_layer_ap_fmul_3_max_dsp_32_u/U0/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/conv_layer_fcmp_3dEe_U3/conv_layer_ap_fcmp_0_no_dsp_32_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'inst/conv_layer_fcmp_3dEe_U3/conv_layer_ap_fcmp_0_no_dsp_32_u/U0/i_synth/DELAY_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/conv_layer_fcmp_3dEe_U3/conv_layer_ap_fcmp_0_no_dsp_32_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'inst/conv_layer_fcmp_3dEe_U3/conv_layer_ap_fcmp_0_no_dsp_32_u/U0/i_synth/DELAY_UNDERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/conv_layer_fcmp_3dEe_U3/conv_layer_ap_fcmp_0_no_dsp_32_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'inst/conv_layer_fcmp_3dEe_U3/conv_layer_ap_fcmp_0_no_dsp_32_u/U0/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'inst/conv_layer_fcmp_3dEe_U3/conv_layer_ap_fcmp_0_no_dsp_32_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'inst/conv_layer_fcmp_3dEe_U3/conv_layer_ap_fcmp_0_no_dsp_32_u/U0/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 5520 (col length:120)
+BRAMs: 4320 (col length: RAMB18 240 RAMB36 120)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-6014] Unused sequential element fifo_rctl/q_reg was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mem_m_axi.v:456]
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/COND_DET_A/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/COND_DET_A/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/COND_DET_B/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/COND_DET_B/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/exp_over_int" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/ip_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_A/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_A/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_B/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/COND_DET_B/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/exp_just_over_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MULT.OP/EXP/flow_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "notrhs_fu_932_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:24]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:24]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:24]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:24]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:24]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:24]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:24]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:24]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:24]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:24]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:24]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:24]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:24]
+WARNING: [Synth 8-6014] Unused sequential element conv_layer_mul_32eOg_U4/conv_layer_mul_32eOg_MulnS_0_U/buff0_reg was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:23]
+WARNING: [Synth 8-6014] Unused sequential element conv_layer_mul_32eOg_U5/conv_layer_mul_32eOg_MulnS_0_U/buff0_reg was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:23]
+WARNING: [Synth 8-6014] Unused sequential element conv_layer_mul_32eOg_U6/conv_layer_mul_32eOg_MulnS_0_U/buff0_reg was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:23]
+WARNING: [Synth 8-6014] Unused sequential element conv_layer_mul_32eOg_U7/conv_layer_mul_32eOg_MulnS_0_U/buff0_reg was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:23]
+WARNING: [Synth 8-6014] Unused sequential element conv_layer_mul_32eOg_U8/conv_layer_mul_32eOg_MulnS_0_U/buff0_reg was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:23]
+WARNING: [Synth 8-6014] Unused sequential element conv_layer_mul_32eOg_U9/conv_layer_mul_32eOg_MulnS_0_U/buff0_reg was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:23]
+WARNING: [Synth 8-6014] Unused sequential element conv_layer_mul_32eOg_U10/conv_layer_mul_32eOg_MulnS_0_U/buff0_reg was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:23]
+WARNING: [Synth 8-6014] Unused sequential element conv_layer_mul_32eOg_U11/conv_layer_mul_32eOg_MulnS_0_U/buff0_reg was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:23]
+WARNING: [Synth 8-6014] Unused sequential element conv_layer_mul_32eOg_U12/conv_layer_mul_32eOg_MulnS_0_U/buff0_reg was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:23]
+WARNING: [Synth 8-6014] Unused sequential element conv_layer_mul_32eOg_U13/conv_layer_mul_32eOg_MulnS_0_U/buff0_reg was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:23]
+WARNING: [Synth 8-6014] Unused sequential element conv_layer_mul_32eOg_U14/conv_layer_mul_32eOg_MulnS_0_U/buff0_reg was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:23]
+WARNING: [Synth 8-6014] Unused sequential element conv_layer_mul_32eOg_U15/conv_layer_mul_32eOg_MulnS_0_U/buff0_reg was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:23]
+WARNING: [Synth 8-6014] Unused sequential element conv_layer_mul_32eOg_U16/conv_layer_mul_32eOg_MulnS_0_U/buff0_reg was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:23]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:24]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:24]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:24]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:23]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:24]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:24]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:24]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:23]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:24]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:24]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:24]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:23]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:24]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:24]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:24]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:23]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:24]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:24]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:24]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:23]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:24]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:24]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:24]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:23]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:24]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:24]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:24]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:23]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:24]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:24]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:24]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:23]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:24]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:24]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:24]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:23]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:24]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:24]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:24]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:23]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:24]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:24]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:24]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:23]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:24]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:24]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:24]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:23]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:24]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:24]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:24]
+WARNING: [Synth 8-6014] Unused sequential element  was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.srcs/sources_1/bd/pr/ipshared/bfe5/hdl/verilog/conv_layer_mul_32eOg.v:23]
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/conv_layer_fmul_3cud_U2/ce_r_reg)
+INFO: [Synth 8-3886] merging instance 'inst/tmp6_reg_1148_reg[32]' (FDE) to 'inst/tmp6_reg_1148_reg[33]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp6_reg_1148_reg[33]' (FDE) to 'inst/tmp6_reg_1148_reg[34]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp6_reg_1148_reg[34]' (FDE) to 'inst/tmp6_reg_1148_reg[35]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp6_reg_1148_reg[35]' (FDE) to 'inst/tmp6_reg_1148_reg[36]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp6_reg_1148_reg[36]' (FDE) to 'inst/tmp6_reg_1148_reg[37]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp6_reg_1148_reg[37]' (FDE) to 'inst/tmp6_reg_1148_reg[38]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp6_reg_1148_reg[38]' (FDE) to 'inst/tmp6_reg_1148_reg[39]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp6_reg_1148_reg[39]' (FDE) to 'inst/tmp6_reg_1148_reg[40]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp6_reg_1148_reg[40]' (FDE) to 'inst/tmp6_reg_1148_reg[41]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp6_reg_1148_reg[41]' (FDE) to 'inst/tmp6_reg_1148_reg[42]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp6_reg_1148_reg[42]' (FDE) to 'inst/tmp6_reg_1148_reg[43]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp6_reg_1148_reg[43]' (FDE) to 'inst/tmp6_reg_1148_reg[44]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp6_reg_1148_reg[44]' (FDE) to 'inst/tmp6_reg_1148_reg[45]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp6_reg_1148_reg[45]' (FDE) to 'inst/tmp6_reg_1148_reg[46]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp6_reg_1148_reg[46]' (FDE) to 'inst/tmp6_reg_1148_reg[47]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp6_reg_1148_reg[47]' (FDE) to 'inst/tmp6_reg_1148_reg[48]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp6_reg_1148_reg[48]' (FDE) to 'inst/tmp6_reg_1148_reg[49]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp6_reg_1148_reg[49]' (FDE) to 'inst/tmp6_reg_1148_reg[50]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp6_reg_1148_reg[50]' (FDE) to 'inst/tmp6_reg_1148_reg[51]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp6_reg_1148_reg[51]' (FDE) to 'inst/tmp6_reg_1148_reg[52]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp6_reg_1148_reg[52]' (FDE) to 'inst/tmp6_reg_1148_reg[53]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp6_reg_1148_reg[53]' (FDE) to 'inst/tmp6_reg_1148_reg[54]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp6_reg_1148_reg[54]' (FDE) to 'inst/tmp6_reg_1148_reg[55]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp6_reg_1148_reg[55]' (FDE) to 'inst/tmp6_reg_1148_reg[56]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp6_reg_1148_reg[56]' (FDE) to 'inst/tmp6_reg_1148_reg[57]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp6_reg_1148_reg[57]' (FDE) to 'inst/tmp6_reg_1148_reg[58]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp6_reg_1148_reg[58]' (FDE) to 'inst/tmp6_reg_1148_reg[59]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp6_reg_1148_reg[59]' (FDE) to 'inst/tmp6_reg_1148_reg[60]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp6_reg_1148_reg[60]' (FDE) to 'inst/tmp6_reg_1148_reg[61]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp4_reg_1081_reg[33]' (FDE) to 'inst/tmp4_reg_1081_reg[34]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp4_reg_1081_reg[34]' (FDE) to 'inst/tmp4_reg_1081_reg[35]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp4_reg_1081_reg[35]' (FDE) to 'inst/tmp4_reg_1081_reg[36]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp4_reg_1081_reg[36]' (FDE) to 'inst/tmp4_reg_1081_reg[37]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp4_reg_1081_reg[37]' (FDE) to 'inst/tmp4_reg_1081_reg[38]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp4_reg_1081_reg[38]' (FDE) to 'inst/tmp4_reg_1081_reg[39]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp4_reg_1081_reg[39]' (FDE) to 'inst/tmp4_reg_1081_reg[40]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp4_reg_1081_reg[40]' (FDE) to 'inst/tmp4_reg_1081_reg[41]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp4_reg_1081_reg[41]' (FDE) to 'inst/tmp4_reg_1081_reg[42]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp4_reg_1081_reg[42]' (FDE) to 'inst/tmp4_reg_1081_reg[43]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp4_reg_1081_reg[43]' (FDE) to 'inst/tmp4_reg_1081_reg[44]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp4_reg_1081_reg[44]' (FDE) to 'inst/tmp4_reg_1081_reg[45]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp4_reg_1081_reg[45]' (FDE) to 'inst/tmp4_reg_1081_reg[46]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp4_reg_1081_reg[46]' (FDE) to 'inst/tmp4_reg_1081_reg[47]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp4_reg_1081_reg[47]' (FDE) to 'inst/tmp4_reg_1081_reg[48]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp4_reg_1081_reg[48]' (FDE) to 'inst/tmp4_reg_1081_reg[49]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp4_reg_1081_reg[49]' (FDE) to 'inst/tmp4_reg_1081_reg[50]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp4_reg_1081_reg[50]' (FDE) to 'inst/tmp4_reg_1081_reg[51]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp4_reg_1081_reg[51]' (FDE) to 'inst/tmp4_reg_1081_reg[52]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp4_reg_1081_reg[52]' (FDE) to 'inst/tmp4_reg_1081_reg[53]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp4_reg_1081_reg[53]' (FDE) to 'inst/tmp4_reg_1081_reg[54]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp4_reg_1081_reg[54]' (FDE) to 'inst/tmp4_reg_1081_reg[55]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp4_reg_1081_reg[55]' (FDE) to 'inst/tmp4_reg_1081_reg[56]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp4_reg_1081_reg[56]' (FDE) to 'inst/tmp4_reg_1081_reg[57]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp4_reg_1081_reg[57]' (FDE) to 'inst/tmp4_reg_1081_reg[58]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp4_reg_1081_reg[58]' (FDE) to 'inst/tmp4_reg_1081_reg[59]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp4_reg_1081_reg[59]' (FDE) to 'inst/tmp4_reg_1081_reg[60]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp4_reg_1081_reg[60]' (FDE) to 'inst/tmp4_reg_1081_reg[61]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp9_reg_1153_reg[32]' (FDE) to 'inst/tmp9_reg_1153_reg[33]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp9_reg_1153_reg[33]' (FDE) to 'inst/tmp9_reg_1153_reg[34]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp9_reg_1153_reg[34]' (FDE) to 'inst/tmp9_reg_1153_reg[35]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp9_reg_1153_reg[35]' (FDE) to 'inst/tmp9_reg_1153_reg[36]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp9_reg_1153_reg[36]' (FDE) to 'inst/tmp9_reg_1153_reg[37]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp9_reg_1153_reg[37]' (FDE) to 'inst/tmp9_reg_1153_reg[38]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp9_reg_1153_reg[38]' (FDE) to 'inst/tmp9_reg_1153_reg[39]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp9_reg_1153_reg[39]' (FDE) to 'inst/tmp9_reg_1153_reg[40]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp9_reg_1153_reg[40]' (FDE) to 'inst/tmp9_reg_1153_reg[41]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp9_reg_1153_reg[41]' (FDE) to 'inst/tmp9_reg_1153_reg[42]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp9_reg_1153_reg[42]' (FDE) to 'inst/tmp9_reg_1153_reg[43]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp9_reg_1153_reg[43]' (FDE) to 'inst/tmp9_reg_1153_reg[44]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp9_reg_1153_reg[44]' (FDE) to 'inst/tmp9_reg_1153_reg[45]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp9_reg_1153_reg[45]' (FDE) to 'inst/tmp9_reg_1153_reg[46]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp9_reg_1153_reg[46]' (FDE) to 'inst/tmp9_reg_1153_reg[47]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp9_reg_1153_reg[47]' (FDE) to 'inst/tmp9_reg_1153_reg[48]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp9_reg_1153_reg[48]' (FDE) to 'inst/tmp9_reg_1153_reg[49]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp9_reg_1153_reg[49]' (FDE) to 'inst/tmp9_reg_1153_reg[50]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp9_reg_1153_reg[50]' (FDE) to 'inst/tmp9_reg_1153_reg[51]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp9_reg_1153_reg[51]' (FDE) to 'inst/tmp9_reg_1153_reg[52]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp9_reg_1153_reg[52]' (FDE) to 'inst/tmp9_reg_1153_reg[53]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp9_reg_1153_reg[53]' (FDE) to 'inst/tmp9_reg_1153_reg[54]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp9_reg_1153_reg[54]' (FDE) to 'inst/tmp9_reg_1153_reg[55]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp9_reg_1153_reg[55]' (FDE) to 'inst/tmp9_reg_1153_reg[56]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp9_reg_1153_reg[56]' (FDE) to 'inst/tmp9_reg_1153_reg[57]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp9_reg_1153_reg[57]' (FDE) to 'inst/tmp9_reg_1153_reg[58]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp9_reg_1153_reg[58]' (FDE) to 'inst/tmp9_reg_1153_reg[59]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp9_reg_1153_reg[59]' (FDE) to 'inst/tmp9_reg_1153_reg[60]'
+INFO: [Synth 8-3886] merging instance 'inst/tmp9_reg_1153_reg[60]' (FDE) to 'inst/tmp9_reg_1153_reg[61]'
+INFO: [Synth 8-3886] merging instance 'inst/mem_addr_reg_1132_reg[33]' (FDE) to 'inst/mem_addr_reg_1132_reg[34]'
+INFO: [Synth 8-3886] merging instance 'inst/mem_addr_reg_1132_reg[34]' (FDE) to 'inst/mem_addr_reg_1132_reg[35]'
+INFO: [Synth 8-3886] merging instance 'inst/mem_addr_reg_1132_reg[35]' (FDE) to 'inst/mem_addr_reg_1132_reg[36]'
+INFO: [Synth 8-3886] merging instance 'inst/mem_addr_reg_1132_reg[36]' (FDE) to 'inst/mem_addr_reg_1132_reg[37]'
+INFO: [Synth 8-3886] merging instance 'inst/mem_addr_reg_1132_reg[37]' (FDE) to 'inst/mem_addr_reg_1132_reg[38]'
+INFO: [Synth 8-3886] merging instance 'inst/mem_addr_reg_1132_reg[38]' (FDE) to 'inst/mem_addr_reg_1132_reg[39]'
+INFO: [Synth 8-3886] merging instance 'inst/mem_addr_reg_1132_reg[39]' (FDE) to 'inst/mem_addr_reg_1132_reg[40]'
+INFO: [Synth 8-3886] merging instance 'inst/mem_addr_reg_1132_reg[40]' (FDE) to 'inst/mem_addr_reg_1132_reg[41]'
+INFO: [Synth 8-3886] merging instance 'inst/mem_addr_reg_1132_reg[41]' (FDE) to 'inst/mem_addr_reg_1132_reg[42]'
+INFO: [Synth 8-3886] merging instance 'inst/mem_addr_reg_1132_reg[42]' (FDE) to 'inst/mem_addr_reg_1132_reg[43]'
+INFO: [Synth 8-3886] merging instance 'inst/mem_addr_reg_1132_reg[43]' (FDE) to 'inst/mem_addr_reg_1132_reg[44]'
+INFO: [Synth 8-3886] merging instance 'inst/mem_addr_reg_1132_reg[44]' (FDE) to 'inst/mem_addr_reg_1132_reg[45]'
+INFO: [Synth 8-3886] merging instance 'inst/mem_addr_reg_1132_reg[45]' (FDE) to 'inst/mem_addr_reg_1132_reg[46]'
+INFO: [Synth 8-3886] merging instance 'inst/mem_addr_reg_1132_reg[46]' (FDE) to 'inst/mem_addr_reg_1132_reg[47]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/conv_layer_mem_m_axi_U/\bus_read/rs_rreq/data_p2_reg[64] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/conv_layer_mem_m_axi_U/\bus_read/rs_rreq/data_p2_reg[95] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/conv_layer_fadd_3bkb_U1/ce_r_reg)
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/conv_layer_mem_m_axi_U/\bus_write/rs_wreq/data_p2_reg[64] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/conv_layer_mem_m_axi_U/\bus_write/rs_wreq/data_p2_reg[95] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/conv_layer_mem_m_axi_U/\bus_read/start_addr_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/conv_layer_mem_m_axi_U/\bus_write/start_addr_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/conv_layer_mem_m_axi_U/\bus_read/could_multi_bursts.arlen_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/conv_layer_mem_m_axi_U/\bus_read/could_multi_bursts.araddr_buf_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/conv_layer_mem_m_axi_U/\bus_write/could_multi_bursts.awlen_buf_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/conv_layer_mem_m_axi_U/\bus_write/could_multi_bursts.awlen_buf_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/conv_layer_mem_m_axi_U/\bus_write/could_multi_bursts.awaddr_buf_reg[1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/conv_layer_mem_m_axi_U/\bus_read/rs_rreq/data_p1_reg[64] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/conv_layer_mem_m_axi_U/\bus_read/rs_rreq/data_p1_reg[95] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/conv_layer_mem_m_axi_U/\bus_write/rs_wreq/data_p1_reg[64] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/conv_layer_mem_m_axi_U/\bus_write/rs_wreq/data_p1_reg[95] )
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p2_reg[95]) is unused and will be removed from module conv_layer_mem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p2_reg[64]) is unused and will be removed from module conv_layer_mem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p2_reg[63]) is unused and will be removed from module conv_layer_mem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p2_reg[62]) is unused and will be removed from module conv_layer_mem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p1_reg[95]) is unused and will be removed from module conv_layer_mem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p1_reg[64]) is unused and will be removed from module conv_layer_mem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p1_reg[63]) is unused and will be removed from module conv_layer_mem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/rs_wreq/data_p1_reg[62]) is unused and will be removed from module conv_layer_mem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/fifo_wreq/q_reg[63]) is unused and will be removed from module conv_layer_mem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/fifo_wreq/q_reg[62]) is unused and will be removed from module conv_layer_mem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/fifo_resp_to_user/q_reg[1]) is unused and will be removed from module conv_layer_mem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/fifo_resp_to_user/q_reg[0]) is unused and will be removed from module conv_layer_mem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/align_len_reg[1]) is unused and will be removed from module conv_layer_mem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/align_len_reg[0]) is unused and will be removed from module conv_layer_mem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/start_addr_reg[1]) is unused and will be removed from module conv_layer_mem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/end_addr_buf_reg[1]) is unused and will be removed from module conv_layer_mem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/end_addr_buf_reg[0]) is unused and will be removed from module conv_layer_mem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/start_addr_buf_reg[1]) is unused and will be removed from module conv_layer_mem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/start_addr_buf_reg[0]) is unused and will be removed from module conv_layer_mem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/could_multi_bursts.awlen_buf_reg[7]) is unused and will be removed from module conv_layer_mem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/could_multi_bursts.awlen_buf_reg[4]) is unused and will be removed from module conv_layer_mem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/sect_addr_buf_reg[1]) is unused and will be removed from module conv_layer_mem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/sect_addr_buf_reg[0]) is unused and will be removed from module conv_layer_mem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/could_multi_bursts.awaddr_buf_reg[1]) is unused and will be removed from module conv_layer_mem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/bresp_tmp_reg[1]) is unused and will be removed from module conv_layer_mem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_write/bresp_tmp_reg[0]) is unused and will be removed from module conv_layer_mem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_read/rs_rreq/data_p2_reg[95]) is unused and will be removed from module conv_layer_mem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_read/rs_rreq/data_p2_reg[64]) is unused and will be removed from module conv_layer_mem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_read/rs_rreq/data_p2_reg[63]) is unused and will be removed from module conv_layer_mem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_read/rs_rreq/data_p2_reg[62]) is unused and will be removed from module conv_layer_mem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_read/rs_rreq/data_p1_reg[95]) is unused and will be removed from module conv_layer_mem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_read/rs_rreq/data_p1_reg[64]) is unused and will be removed from module conv_layer_mem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_read/rs_rreq/data_p1_reg[63]) is unused and will be removed from module conv_layer_mem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_read/rs_rreq/data_p1_reg[62]) is unused and will be removed from module conv_layer_mem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_read/fifo_rreq/q_reg[63]) is unused and will be removed from module conv_layer_mem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_read/fifo_rreq/q_reg[62]) is unused and will be removed from module conv_layer_mem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_read/buff_rdata/q_tmp_reg[33]) is unused and will be removed from module conv_layer_mem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_read/buff_rdata/q_tmp_reg[32]) is unused and will be removed from module conv_layer_mem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_read/buff_rdata/dout_buf_reg[33]) is unused and will be removed from module conv_layer_mem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_read/buff_rdata/dout_buf_reg[32]) is unused and will be removed from module conv_layer_mem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_read/bus_equal_gen.resp_buf_reg[1]) is unused and will be removed from module conv_layer_mem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_read/bus_equal_gen.resp_buf_reg[0]) is unused and will be removed from module conv_layer_mem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_read/rs_rdata/data_p2_reg[33]) is unused and will be removed from module conv_layer_mem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_read/rs_rdata/data_p2_reg[32]) is unused and will be removed from module conv_layer_mem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_read/rs_rdata/data_p1_reg[33]) is unused and will be removed from module conv_layer_mem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_read/rs_rdata/data_p1_reg[32]) is unused and will be removed from module conv_layer_mem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_read/align_len_reg[1]) is unused and will be removed from module conv_layer_mem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_read/align_len_reg[0]) is unused and will be removed from module conv_layer_mem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_read/start_addr_reg[1]) is unused and will be removed from module conv_layer_mem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_read/end_addr_buf_reg[1]) is unused and will be removed from module conv_layer_mem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_read/end_addr_buf_reg[0]) is unused and will be removed from module conv_layer_mem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_read/start_addr_buf_reg[1]) is unused and will be removed from module conv_layer_mem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_read/start_addr_buf_reg[0]) is unused and will be removed from module conv_layer_mem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_read/could_multi_bursts.arlen_buf_reg[7]) is unused and will be removed from module conv_layer_mem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_read/sect_addr_buf_reg[1]) is unused and will be removed from module conv_layer_mem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_read/sect_addr_buf_reg[0]) is unused and will be removed from module conv_layer_mem_m_axi.
+WARNING: [Synth 8-3332] Sequential element (bus_read/could_multi_bursts.araddr_buf_reg[1]) is unused and will be removed from module conv_layer_mem_m_axi.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (i_nd_to_rdy/opt_has_pipe.i_pipe[2].pipe_reg[2][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (i_nd_to_rdy/opt_has_pipe.i_pipe[3].pipe_reg[3][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (i_nd_to_rdy/opt_has_pipe.i_pipe[4].pipe_reg[4][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (i_nd_to_rdy/opt_has_pipe.i_pipe[5].pipe_reg[5][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+INFO: [Synth 8-3332] Sequential element (i_nd_to_rdy/opt_has_pipe.i_pipe[6].pipe_reg[6][0]) is unused and will be removed from module floating_point_v7_1_6_viv.
+WARNING: [Synth 8-3332] Sequential element (ce_r_reg) is unused and will be removed from module conv_layer_fadd_3bkb.
+WARNING: [Synth 8-3332] Sequential element (dout_r_reg[31]) is unused and will be removed from module conv_layer_fadd_3bkb.
+WARNING: [Synth 8-3332] Sequential element (dout_r_reg[30]) is unused and will be removed from module conv_layer_fadd_3bkb.
+WARNING: [Synth 8-3332] Sequential element (dout_r_reg[29]) is unused and will be removed from module conv_layer_fadd_3bkb.
+WARNING: [Synth 8-3332] Sequential element (dout_r_reg[28]) is unused and will be removed from module conv_layer_fadd_3bkb.
+WARNING: [Synth 8-3332] Sequential element (dout_r_reg[27]) is unused and will be removed from module conv_layer_fadd_3bkb.
+WARNING: [Synth 8-3332] Sequential element (dout_r_reg[26]) is unused and will be removed from module conv_layer_fadd_3bkb.
+WARNING: [Synth 8-3332] Sequential element (dout_r_reg[25]) is unused and will be removed from module conv_layer_fadd_3bkb.
+WARNING: [Synth 8-3332] Sequential element (dout_r_reg[24]) is unused and will be removed from module conv_layer_fadd_3bkb.
+WARNING: [Synth 8-3332] Sequential element (dout_r_reg[23]) is unused and will be removed from module conv_layer_fadd_3bkb.
+WARNING: [Synth 8-3332] Sequential element (dout_r_reg[22]) is unused and will be removed from module conv_layer_fadd_3bkb.
+WARNING: [Synth 8-3332] Sequential element (dout_r_reg[21]) is unused and will be removed from module conv_layer_fadd_3bkb.
+WARNING: [Synth 8-3332] Sequential element (dout_r_reg[20]) is unused and will be removed from module conv_layer_fadd_3bkb.
+WARNING: [Synth 8-3332] Sequential element (dout_r_reg[19]) is unused and will be removed from module conv_layer_fadd_3bkb.
+WARNING: [Synth 8-3332] Sequential element (dout_r_reg[18]) is unused and will be removed from module conv_layer_fadd_3bkb.
+WARNING: [Synth 8-3332] Sequential element (dout_r_reg[17]) is unused and will be removed from module conv_layer_fadd_3bkb.
+WARNING: [Synth 8-3332] Sequential element (dout_r_reg[16]) is unused and will be removed from module conv_layer_fadd_3bkb.
+WARNING: [Synth 8-3332] Sequential element (dout_r_reg[15]) is unused and will be removed from module conv_layer_fadd_3bkb.
+WARNING: [Synth 8-3332] Sequential element (dout_r_reg[14]) is unused and will be removed from module conv_layer_fadd_3bkb.
+WARNING: [Synth 8-3332] Sequential element (dout_r_reg[13]) is unused and will be removed from module conv_layer_fadd_3bkb.
+WARNING: [Synth 8-3332] Sequential element (dout_r_reg[12]) is unused and will be removed from module conv_layer_fadd_3bkb.
+WARNING: [Synth 8-3332] Sequential element (dout_r_reg[11]) is unused and will be removed from module conv_layer_fadd_3bkb.
+WARNING: [Synth 8-3332] Sequential element (dout_r_reg[10]) is unused and will be removed from module conv_layer_fadd_3bkb.
+WARNING: [Synth 8-3332] Sequential element (dout_r_reg[9]) is unused and will be removed from module conv_layer_fadd_3bkb.
+WARNING: [Synth 8-3332] Sequential element (dout_r_reg[8]) is unused and will be removed from module conv_layer_fadd_3bkb.
+WARNING: [Synth 8-3332] Sequential element (dout_r_reg[7]) is unused and will be removed from module conv_layer_fadd_3bkb.
+WARNING: [Synth 8-3332] Sequential element (dout_r_reg[6]) is unused and will be removed from module conv_layer_fadd_3bkb.
+WARNING: [Synth 8-3332] Sequential element (dout_r_reg[5]) is unused and will be removed from module conv_layer_fadd_3bkb.
+WARNING: [Synth 8-3332] Sequential element (dout_r_reg[4]) is unused and will be removed from module conv_layer_fadd_3bkb.
+WARNING: [Synth 8-3332] Sequential element (dout_r_reg[3]) is unused and will be removed from module conv_layer_fadd_3bkb.
+WARNING: [Synth 8-3332] Sequential element (dout_r_reg[2]) is unused and will be removed from module conv_layer_fadd_3bkb.
+WARNING: [Synth 8-3332] Sequential element (dout_r_reg[1]) is unused and will be removed from module conv_layer_fadd_3bkb.
+WARNING: [Synth 8-3332] Sequential element (dout_r_reg[0]) is unused and will be removed from module conv_layer_fadd_3bkb.
+INFO: [Synth 8-3332] Sequential element (i_nd_to_rdy/opt_has_pipe.i_pipe[2].pipe_reg[2][0]) is unused and will be removed from module floating_point_v7_1_6_viv__parameterized1.
+INFO: [Synth 8-3332] Sequential element (i_nd_to_rdy/opt_has_pipe.i_pipe[3].pipe_reg[3][0]) is unused and will be removed from module floating_point_v7_1_6_viv__parameterized1.
+WARNING: [Synth 8-3332] Sequential element (ce_r_reg) is unused and will be removed from module conv_layer_fmul_3cud.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/conv_layer_mem_m_axi_U/\bus_read/fifo_rreq/q_reg[95] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/conv_layer_mem_m_axi_U/\bus_write/fifo_wreq/q_reg[95] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/conv_layer_mem_m_axi_U/\bus_write/bus_equal_gen.fifo_burst/q_reg[5] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:52 ; elapsed = 00:01:06 . Memory (MB): peak = 2143.199 ; gain = 849.246 ; free physical = 14598 ; free virtual = 54670
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4480] The timing for the instance inst/conv_layer_mem_m_axi_U/i_2/bus_write/buff_wdata/mem_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/conv_layer_mem_m_axi_U/i_60/bus_read/buff_rdata/mem_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:03 ; elapsed = 00:01:30 . Memory (MB): peak = 2318.637 ; gain = 1024.684 ; free physical = 13563 ; free virtual = 53636
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:06 ; elapsed = 00:01:33 . Memory (MB): peak = 2350.637 ; gain = 1056.684 ; free physical = 13585 ; free virtual = 53665
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4480] The timing for the instance inst/conv_layer_mem_m_axi_U/bus_write/buff_wdata/mem_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance inst/conv_layer_mem_m_axi_U/bus_read/buff_rdata/mem_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:09 ; elapsed = 00:01:37 . Memory (MB): peak = 2379.895 ; gain = 1085.941 ; free physical = 14800 ; free virtual = 54875
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:10 ; elapsed = 00:01:38 . Memory (MB): peak = 2379.895 ; gain = 1085.941 ; free physical = 14783 ; free virtual = 54865
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:10 ; elapsed = 00:01:38 . Memory (MB): peak = 2379.895 ; gain = 1085.941 ; free physical = 14777 ; free virtual = 54859
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:12 ; elapsed = 00:01:40 . Memory (MB): peak = 2379.895 ; gain = 1085.941 ; free physical = 14757 ; free virtual = 54839
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:12 ; elapsed = 00:01:40 . Memory (MB): peak = 2379.895 ; gain = 1085.941 ; free physical = 14754 ; free virtual = 54836
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:12 ; elapsed = 00:01:40 . Memory (MB): peak = 2379.895 ; gain = 1085.941 ; free physical = 14743 ; free virtual = 54825
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:12 ; elapsed = 00:01:40 . Memory (MB): peak = 2379.895 ; gain = 1085.941 ; free physical = 14754 ; free virtual = 54836
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------------+------+
+|      |Cell            |Count |
++------+----------------+------+
+|1     |CARRY8          |   262|
+|2     |DSP48E1         |     5|
+|3     |DSP_ALU         |    39|
+|4     |DSP_A_B_DATA_1  |    26|
+|5     |DSP_A_B_DATA_2  |    13|
+|6     |DSP_C_DATA      |    39|
+|7     |DSP_MULTIPLIER  |    39|
+|8     |DSP_M_DATA      |    39|
+|9     |DSP_OUTPUT      |    13|
+|10    |DSP_OUTPUT_1    |    26|
+|11    |DSP_PREADD      |    39|
+|12    |DSP_PREADD_DATA |    39|
+|13    |LUT1            |    35|
+|14    |LUT2            |  1339|
+|15    |LUT3            |   946|
+|16    |LUT4            |   588|
+|17    |LUT5            |   287|
+|18    |LUT6            |   316|
+|19    |MUXCY           |   105|
+|20    |MUXF7           |     4|
+|21    |MUXF8           |     1|
+|22    |RAMB18E2        |     2|
+|23    |SRL16E          |   135|
+|24    |XORCY           |    26|
+|25    |FDE             |     4|
+|26    |FDRE            |  5267|
+|27    |FDSE            |     6|
++------+----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:12 ; elapsed = 00:01:40 . Memory (MB): peak = 2379.895 ; gain = 1085.941 ; free physical = 14754 ; free virtual = 54836
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1707 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:01 ; elapsed = 00:01:24 . Memory (MB): peak = 2379.895 ; gain = 438.305 ; free physical = 14778 ; free virtual = 54860
+Synthesis Optimization Complete : Time (s): cpu = 00:01:12 ; elapsed = 00:01:40 . Memory (MB): peak = 2379.902 ; gain = 1085.941 ; free physical = 14779 ; free virtual = 54861
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 446 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 67 instances were transformed.
+  (CARRY4) => CARRY8: 19 instances
+  DSP48E1 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD_DATA, DSP_PREADD): 5 instances
+  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD_DATA, DSP_PREADD): 39 instances
+  FDE => FDRE: 4 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+275 Infos, 290 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:16 ; elapsed = 00:01:43 . Memory (MB): peak = 2455.801 ; gain = 1195.453 ; free physical = 14684 ; free virtual = 54766
+INFO: [Common 17-1381] The checkpoint '/home/tarafdar/workDir/galapagos/projects/mlKernelsTest5/1/1.runs/pr_conv_layer_0_0_synth_1/pr_conv_layer_0_0.dcp' has been generated.

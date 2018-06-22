@@ -1,0 +1,950 @@
+
+
+================================================================
+== Vivado HLS Report for 'conv_layer'
+================================================================
+* Date:           Fri Jun 22 11:49:13 2018
+
+* Version:        2018.1 (Build 2188600 on Wed Apr 04 19:04:02 MDT 2018)
+* Project:        conv_proj
+* Solution:       solution1
+* Product family: kintexu
+* Target device:  xcku115-flva1517-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   4.00|      3.50|        0.50|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    ?|    ?|    ?|    ?|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +---------------------------------+-----+-----+----------+-----------+-----------+------+----------+
+        |                                 |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        |            Loop Name            | min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +---------------------------------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Loop 1                         |    ?|    ?|         ?|          -|          -|     ?|    no    |
+        | + Loop 1.1                      |    ?|    ?|         ?|          -|          -|     ?|    no    |
+        |  ++ Loop 1.1.1                  |    ?|    ?|         ?|          -|          -|     ?|    no    |
+        |   +++ Loop 1.1.1.1              |    ?|    ?|         ?|          -|          -|     ?|    no    |
+        |    ++++ Loop 1.1.1.1.1          |    ?|    ?|         ?|          -|          -|     ?|    no    |
+        |     +++++ Loop 1.1.1.1.1.1      |    ?|    ?|         ?|          -|          -|     ?|    no    |
+        |      ++++++ Loop 1.1.1.1.1.1.1  |    ?|    ?|        24|          -|          -|     ?|    no    |
+        +---------------------------------+-----+-----+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 64
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	10  / (tmp_8)
+10 --> 
+	11  / true
+11 --> 
+	12  / true
+12 --> 
+	13  / (tmp_2)
+	9  / (!tmp_2)
+13 --> 
+	14  / true
+14 --> 
+	15  / true
+15 --> 
+	16  / true
+16 --> 
+	17  / (tmp_15)
+	12  / (!tmp_15)
+17 --> 
+	18  / (tmp_17)
+	16  / (!tmp_17)
+18 --> 
+	19  / true
+19 --> 
+	20  / true
+20 --> 
+	21  / true
+21 --> 
+	22  / true
+22 --> 
+	23  / true
+23 --> 
+	24  / true
+24 --> 
+	25  / true
+25 --> 
+	26  / true
+26 --> 
+	27  / (tmp_20)
+	57  / (!tmp_20)
+27 --> 
+	28  / true
+28 --> 
+	29  / true
+29 --> 
+	30  / true
+30 --> 
+	31  / (tmp_31)
+	26  / (!tmp_31)
+31 --> 
+	32  / true
+32 --> 
+	33  / true
+33 --> 
+	34  / (tmp_34)
+	30  / (!tmp_34)
+34 --> 
+	35  / true
+35 --> 
+	36  / true
+36 --> 
+	37  / true
+37 --> 
+	38  / true
+38 --> 
+	39  / true
+39 --> 
+	40  / true
+40 --> 
+	41  / true
+41 --> 
+	42  / true
+42 --> 
+	43  / true
+43 --> 
+	44  / true
+44 --> 
+	45  / true
+45 --> 
+	46  / true
+46 --> 
+	47  / true
+47 --> 
+	48  / true
+48 --> 
+	49  / true
+49 --> 
+	50  / true
+50 --> 
+	51  / true
+51 --> 
+	52  / true
+52 --> 
+	53  / true
+53 --> 
+	54  / true
+54 --> 
+	55  / true
+55 --> 
+	56  / true
+56 --> 
+	33  / true
+57 --> 
+	58  / true
+58 --> 
+	59  / true
+59 --> 
+	60  / true
+60 --> 
+	61  / true
+61 --> 
+	62  / true
+62 --> 
+	63  / true
+63 --> 
+	64  / true
+64 --> 
+	17  / true
+
+* FSM state operations: 
+
+ <State 1> : 1.00ns
+ST_1 : Operation 65 [1/1] (1.00ns)   --->   "%k_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %k) nounwind"   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 66 [1/1] (1.00ns)   --->   "%s_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %s) nounwind"   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 67 [1/1] (1.00ns)   --->   "%iy_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %iy) nounwind"   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 68 [1/1] (1.00ns)   --->   "%ix_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %ix) nounwind"   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 69 [1/1] (1.00ns)   --->   "%id_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %id) nounwind"   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 70 [1/1] (1.00ns)   --->   "%oy_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %oy) nounwind"   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 71 [1/1] (1.00ns)   --->   "%ox_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %ox) nounwind"   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 72 [1/1] (1.00ns)   --->   "%od_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %od) nounwind"   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 73 [1/1] (1.00ns)   --->   "%b_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %b) nounwind"   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 74 [1/1] (1.00ns)   --->   "%output_offset_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %output_offset) nounwind"   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 75 [1/1] (1.00ns)   --->   "%input_offset_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %input_offset) nounwind"   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 76 [1/1] (0.00ns)   --->   "%tmp_6 = call i30 @_ssdm_op_PartSelect.i30.i32.i32.i32(i32 %input_offset_read, i32 2, i32 31)" [../telepathy/hlsSources/conv_layer.cpp:53]
+ST_1 : Operation 77 [1/1] (0.00ns)   --->   "%tmp_4 = call i30 @_ssdm_op_PartSelect.i30.i32.i32.i32(i32 %output_offset_read, i32 2, i32 31)" [../telepathy/hlsSources/conv_layer.cpp:72]
+
+ <State 2> : 3.33ns
+ST_2 : Operation 78 [3/3] (3.33ns)   --->   "%tmp1 = mul i32 %od_read, %id_read" [../telepathy/hlsSources/conv_layer.cpp:35]   --->   Core 17 'MulnS' <Latency = 2> <II = 1> <Delay = 3.33> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 79 [3/3] (3.33ns)   --->   "%tmp2 = mul i32 %k_read, %k_read" [../telepathy/hlsSources/conv_layer.cpp:35]   --->   Core 17 'MulnS' <Latency = 2> <II = 1> <Delay = 3.33> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 3> : 3.33ns
+ST_3 : Operation 80 [2/3] (3.33ns)   --->   "%tmp1 = mul i32 %od_read, %id_read" [../telepathy/hlsSources/conv_layer.cpp:35]   --->   Core 17 'MulnS' <Latency = 2> <II = 1> <Delay = 3.33> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 81 [2/3] (3.33ns)   --->   "%tmp2 = mul i32 %k_read, %k_read" [../telepathy/hlsSources/conv_layer.cpp:35]   --->   Core 17 'MulnS' <Latency = 2> <II = 1> <Delay = 3.33> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 4> : 3.33ns
+ST_4 : Operation 82 [1/3] (3.33ns)   --->   "%tmp1 = mul i32 %od_read, %id_read" [../telepathy/hlsSources/conv_layer.cpp:35]   --->   Core 17 'MulnS' <Latency = 2> <II = 1> <Delay = 3.33> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 83 [1/3] (3.33ns)   --->   "%tmp2 = mul i32 %k_read, %k_read" [../telepathy/hlsSources/conv_layer.cpp:35]   --->   Core 17 'MulnS' <Latency = 2> <II = 1> <Delay = 3.33> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 5> : 3.33ns
+ST_5 : Operation 84 [3/3] (3.33ns)   --->   "%num_weights = mul i32 %tmp2, %tmp1" [../telepathy/hlsSources/conv_layer.cpp:35]   --->   Core 17 'MulnS' <Latency = 2> <II = 1> <Delay = 3.33> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 6> : 3.33ns
+ST_6 : Operation 85 [2/3] (3.33ns)   --->   "%num_weights = mul i32 %tmp2, %tmp1" [../telepathy/hlsSources/conv_layer.cpp:35]   --->   Core 17 'MulnS' <Latency = 2> <II = 1> <Delay = 3.33> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 86 [3/3] (3.33ns)   --->   "%tmp3 = mul i32 %ix_read, %id_read" [../telepathy/hlsSources/conv_layer.cpp:66]   --->   Core 17 'MulnS' <Latency = 2> <II = 1> <Delay = 3.33> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 87 [3/3] (3.33ns)   --->   "%tmp5 = mul i32 %ox_read, %od_read" [../telepathy/hlsSources/conv_layer.cpp:72]   --->   Core 17 'MulnS' <Latency = 2> <II = 1> <Delay = 3.33> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 88 [3/3] (3.33ns)   --->   "%tmp8 = mul i32 %id_read, %k_read" [../telepathy/hlsSources/conv_layer.cpp:66]   --->   Core 17 'MulnS' <Latency = 2> <II = 1> <Delay = 3.33> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 7> : 3.33ns
+ST_7 : Operation 89 [1/3] (3.33ns)   --->   "%num_weights = mul i32 %tmp2, %tmp1" [../telepathy/hlsSources/conv_layer.cpp:35]   --->   Core 17 'MulnS' <Latency = 2> <II = 1> <Delay = 3.33> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 90 [2/3] (3.33ns)   --->   "%tmp3 = mul i32 %ix_read, %id_read" [../telepathy/hlsSources/conv_layer.cpp:66]   --->   Core 17 'MulnS' <Latency = 2> <II = 1> <Delay = 3.33> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 91 [2/3] (3.33ns)   --->   "%tmp5 = mul i32 %ox_read, %od_read" [../telepathy/hlsSources/conv_layer.cpp:72]   --->   Core 17 'MulnS' <Latency = 2> <II = 1> <Delay = 3.33> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 92 [2/3] (3.33ns)   --->   "%tmp8 = mul i32 %id_read, %k_read" [../telepathy/hlsSources/conv_layer.cpp:66]   --->   Core 17 'MulnS' <Latency = 2> <II = 1> <Delay = 3.33> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 8> : 3.33ns
+ST_8 : Operation 93 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(float* %mem) nounwind, !map !13"
+ST_8 : Operation 94 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %input_offset) nounwind, !map !19"
+ST_8 : Operation 95 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %output_offset) nounwind, !map !25"
+ST_8 : Operation 96 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %b) nounwind, !map !29"
+ST_8 : Operation 97 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %od) nounwind, !map !33"
+ST_8 : Operation 98 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %ox) nounwind, !map !37"
+ST_8 : Operation 99 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %oy) nounwind, !map !41"
+ST_8 : Operation 100 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %id) nounwind, !map !45"
+ST_8 : Operation 101 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %ix) nounwind, !map !49"
+ST_8 : Operation 102 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %iy) nounwind, !map !53"
+ST_8 : Operation 103 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %s) nounwind, !map !57"
+ST_8 : Operation 104 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %k) nounwind, !map !61"
+ST_8 : Operation 105 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([11 x i8]* @conv_layer_str) nounwind"
+ST_8 : Operation 106 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(float* %mem, [6 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i64 2147483648, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [../telepathy/hlsSources/conv_layer.cpp:20]
+ST_8 : Operation 107 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %b, [10 x i8]* @p_str2, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [9 x i8]* @p_str3, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [../telepathy/hlsSources/conv_layer.cpp:22]
+ST_8 : Operation 108 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %od, [10 x i8]* @p_str2, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [9 x i8]* @p_str3, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [../telepathy/hlsSources/conv_layer.cpp:23]
+ST_8 : Operation 109 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %ox, [10 x i8]* @p_str2, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [9 x i8]* @p_str3, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [../telepathy/hlsSources/conv_layer.cpp:24]
+ST_8 : Operation 110 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %oy, [10 x i8]* @p_str2, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [9 x i8]* @p_str3, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [../telepathy/hlsSources/conv_layer.cpp:25]
+ST_8 : Operation 111 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %id, [10 x i8]* @p_str2, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [9 x i8]* @p_str3, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [../telepathy/hlsSources/conv_layer.cpp:26]
+ST_8 : Operation 112 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %ix, [10 x i8]* @p_str2, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [9 x i8]* @p_str3, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [../telepathy/hlsSources/conv_layer.cpp:27]
+ST_8 : Operation 113 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %iy, [10 x i8]* @p_str2, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [9 x i8]* @p_str3, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [../telepathy/hlsSources/conv_layer.cpp:28]
+ST_8 : Operation 114 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %s, [10 x i8]* @p_str2, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [9 x i8]* @p_str3, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [../telepathy/hlsSources/conv_layer.cpp:29]
+ST_8 : Operation 115 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %k, [10 x i8]* @p_str2, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [9 x i8]* @p_str3, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [../telepathy/hlsSources/conv_layer.cpp:30]
+ST_8 : Operation 116 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %input_offset, [10 x i8]* @p_str2, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [../telepathy/hlsSources/conv_layer.cpp:31]
+ST_8 : Operation 117 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %output_offset, [10 x i8]* @p_str2, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [../telepathy/hlsSources/conv_layer.cpp:32]
+ST_8 : Operation 118 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 0, [10 x i8]* @p_str2, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [9 x i8]* @p_str3, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [../telepathy/hlsSources/conv_layer.cpp:33]
+ST_8 : Operation 119 [1/1] (0.00ns)   --->   "%tmp_s = sext i30 %tmp_6 to i62" [../telepathy/hlsSources/conv_layer.cpp:53]
+ST_8 : Operation 120 [1/1] (0.00ns)   --->   "%tmp_3 = zext i62 %tmp_s to i64" [../telepathy/hlsSources/conv_layer.cpp:53]
+ST_8 : Operation 121 [1/1] (0.00ns)   --->   "%tmp_4_cast = sext i32 %num_weights to i33" [../telepathy/hlsSources/conv_layer.cpp:66]
+ST_8 : Operation 122 [1/1] (0.00ns)   --->   "%tmp_5_cast = sext i32 %od_read to i33" [../telepathy/hlsSources/conv_layer.cpp:72]
+ST_8 : Operation 123 [1/1] (0.00ns)   --->   "%tmp_5 = sext i30 %tmp_4 to i62" [../telepathy/hlsSources/conv_layer.cpp:72]
+ST_8 : Operation 124 [1/1] (0.00ns)   --->   "%tmp_7 = zext i62 %tmp_5 to i64" [../telepathy/hlsSources/conv_layer.cpp:72]
+ST_8 : Operation 125 [1/3] (3.33ns)   --->   "%tmp3 = mul i32 %ix_read, %id_read" [../telepathy/hlsSources/conv_layer.cpp:66]   --->   Core 17 'MulnS' <Latency = 2> <II = 1> <Delay = 3.33> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 126 [1/3] (3.33ns)   --->   "%tmp5 = mul i32 %ox_read, %od_read" [../telepathy/hlsSources/conv_layer.cpp:72]   --->   Core 17 'MulnS' <Latency = 2> <II = 1> <Delay = 3.33> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 127 [1/3] (3.33ns)   --->   "%tmp8 = mul i32 %id_read, %k_read" [../telepathy/hlsSources/conv_layer.cpp:66]   --->   Core 17 'MulnS' <Latency = 2> <II = 1> <Delay = 3.33> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 128 [1/1] (1.48ns)   --->   "%tmp = add i33 %tmp_5_cast, %tmp_4_cast" [../telepathy/hlsSources/conv_layer.cpp:66]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 129 [1/1] (0.00ns)   --->   "%tmp14_cast = sext i33 %tmp to i64" [../telepathy/hlsSources/conv_layer.cpp:66]
+ST_8 : Operation 130 [1/1] (1.57ns)   --->   "%tmp4 = add i64 %tmp14_cast, %tmp_3" [../telepathy/hlsSources/conv_layer.cpp:66]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 131 [1/1] (0.83ns)   --->   "br label %.loopexit30" [../telepathy/hlsSources/conv_layer.cpp:41]
+
+ <State 9> : 3.33ns
+ST_9 : Operation 132 [1/1] (0.00ns)   --->   "%b_s = phi i31 [ 0, %0 ], [ %b_1, %.loopexit30.loopexit ]"
+ST_9 : Operation 133 [1/1] (0.00ns)   --->   "%phi_mul2 = phi i32 [ 0, %0 ], [ %next_mul3, %.loopexit30.loopexit ]"
+ST_9 : Operation 134 [1/1] (0.00ns)   --->   "%phi_mul4 = phi i32 [ 0, %0 ], [ %next_mul1, %.loopexit30.loopexit ]"
+ST_9 : Operation 135 [1/1] (1.48ns)   --->   "%next_mul1 = add i32 %phi_mul4, %oy_read"   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 136 [1/1] (1.48ns)   --->   "%next_mul3 = add i32 %phi_mul2, %iy_read"   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 137 [1/1] (0.00ns)   --->   "%b_cast = zext i31 %b_s to i32" [../telepathy/hlsSources/conv_layer.cpp:41]
+ST_9 : Operation 138 [1/1] (1.14ns)   --->   "%tmp_8 = icmp slt i32 %b_cast, %b_read" [../telepathy/hlsSources/conv_layer.cpp:41]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.11> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 139 [1/1] (1.48ns)   --->   "%b_1 = add i31 %b_s, 1" [../telepathy/hlsSources/conv_layer.cpp:41]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 140 [1/1] (0.00ns)   --->   "br i1 %tmp_8, label %.preheader2.preheader, label %9" [../telepathy/hlsSources/conv_layer.cpp:41]
+ST_9 : Operation 141 [3/3] (3.33ns)   --->   "%tmp_9 = mul i32 %phi_mul2, %tmp3" [../telepathy/hlsSources/conv_layer.cpp:66]   --->   Core 17 'MulnS' <Latency = 2> <II = 1> <Delay = 3.33> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 142 [3/3] (3.33ns)   --->   "%tmp_1 = mul i32 %phi_mul4, %tmp5" [../telepathy/hlsSources/conv_layer.cpp:72]   --->   Core 17 'MulnS' <Latency = 2> <II = 1> <Delay = 3.33> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 143 [1/1] (0.00ns)   --->   "ret void" [../telepathy/hlsSources/conv_layer.cpp:77]
+
+ <State 10> : 3.33ns
+ST_10 : Operation 144 [2/3] (3.33ns)   --->   "%tmp_9 = mul i32 %phi_mul2, %tmp3" [../telepathy/hlsSources/conv_layer.cpp:66]   --->   Core 17 'MulnS' <Latency = 2> <II = 1> <Delay = 3.33> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 145 [2/3] (3.33ns)   --->   "%tmp_1 = mul i32 %phi_mul4, %tmp5" [../telepathy/hlsSources/conv_layer.cpp:72]   --->   Core 17 'MulnS' <Latency = 2> <II = 1> <Delay = 3.33> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 11> : 3.33ns
+ST_11 : Operation 146 [1/3] (3.33ns)   --->   "%tmp_9 = mul i32 %phi_mul2, %tmp3" [../telepathy/hlsSources/conv_layer.cpp:66]   --->   Core 17 'MulnS' <Latency = 2> <II = 1> <Delay = 3.33> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 147 [1/1] (0.00ns)   --->   "%tmp_11_cast = sext i32 %tmp_9 to i33" [../telepathy/hlsSources/conv_layer.cpp:72]
+ST_11 : Operation 148 [1/3] (3.33ns)   --->   "%tmp_1 = mul i32 %phi_mul4, %tmp5" [../telepathy/hlsSources/conv_layer.cpp:72]   --->   Core 17 'MulnS' <Latency = 2> <II = 1> <Delay = 3.33> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 149 [1/1] (0.00ns)   --->   "%tmp_15_cast = sext i32 %tmp_1 to i33" [../telepathy/hlsSources/conv_layer.cpp:44]
+ST_11 : Operation 150 [1/1] (0.83ns)   --->   "br label %.preheader2" [../telepathy/hlsSources/conv_layer.cpp:44]
+
+ <State 12> : 3.33ns
+ST_12 : Operation 151 [1/1] (0.00ns)   --->   "%o_d = phi i31 [ 0, %.preheader2.preheader ], [ %o_d_1, %.preheader2.loopexit ]"
+ST_12 : Operation 152 [1/1] (0.00ns)   --->   "%phi_mul6 = phi i32 [ 0, %.preheader2.preheader ], [ %next_mul7, %.preheader2.loopexit ]"
+ST_12 : Operation 153 [1/1] (0.00ns)   --->   "%phi_mul8 = phi i32 [ 0, %.preheader2.preheader ], [ %next_mul5, %.preheader2.loopexit ]"
+ST_12 : Operation 154 [1/1] (1.48ns)   --->   "%next_mul5 = add i32 %phi_mul8, %oy_read"   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 155 [1/1] (1.48ns)   --->   "%next_mul7 = add i32 %phi_mul6, %k_read"   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 156 [1/1] (0.00ns)   --->   "%o_d_cast = zext i31 %o_d to i32" [../telepathy/hlsSources/conv_layer.cpp:44]
+ST_12 : Operation 157 [1/1] (1.14ns)   --->   "%tmp_2 = icmp slt i32 %o_d_cast, %od_read" [../telepathy/hlsSources/conv_layer.cpp:44]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.11> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 158 [1/1] (1.48ns)   --->   "%o_d_1 = add i31 %o_d, 1" [../telepathy/hlsSources/conv_layer.cpp:44]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 159 [1/1] (0.00ns)   --->   "br i1 %tmp_2, label %.preheader1.preheader, label %.loopexit30.loopexit" [../telepathy/hlsSources/conv_layer.cpp:44]
+ST_12 : Operation 160 [1/1] (0.00ns)   --->   "%tmp_17_cast = zext i31 %o_d to i33" [../telepathy/hlsSources/conv_layer.cpp:53]
+ST_12 : Operation 161 [1/1] (1.48ns)   --->   "%tmp7 = add i33 %tmp_4_cast, %tmp_17_cast" [../telepathy/hlsSources/conv_layer.cpp:53]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 162 [1/1] (0.00ns)   --->   "%tmp7_cast = sext i33 %tmp7 to i64" [../telepathy/hlsSources/conv_layer.cpp:53]
+ST_12 : Operation 163 [1/1] (1.57ns)   --->   "%tmp_10 = add i64 %tmp7_cast, %tmp_3" [../telepathy/hlsSources/conv_layer.cpp:53]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 164 [1/1] (0.00ns)   --->   "%mem_addr = getelementptr inbounds float* %mem, i64 %tmp_10" [../telepathy/hlsSources/conv_layer.cpp:53]
+ST_12 : Operation 165 [3/3] (3.33ns)   --->   "%tmp_11 = mul i32 %phi_mul6, %tmp8" [../telepathy/hlsSources/conv_layer.cpp:66]   --->   Core 17 'MulnS' <Latency = 2> <II = 1> <Delay = 3.33> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 166 [3/3] (3.33ns)   --->   "%tmp_13 = mul i32 %phi_mul8, %ox_read" [../telepathy/hlsSources/conv_layer.cpp:72]   --->   Core 17 'MulnS' <Latency = 2> <II = 1> <Delay = 3.33> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 167 [1/1] (0.00ns)   --->   "br label %.loopexit30"
+
+ <State 13> : 3.33ns
+ST_13 : Operation 168 [2/3] (3.33ns)   --->   "%tmp_11 = mul i32 %phi_mul6, %tmp8" [../telepathy/hlsSources/conv_layer.cpp:66]   --->   Core 17 'MulnS' <Latency = 2> <II = 1> <Delay = 3.33> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 169 [2/3] (3.33ns)   --->   "%tmp_13 = mul i32 %phi_mul8, %ox_read" [../telepathy/hlsSources/conv_layer.cpp:72]   --->   Core 17 'MulnS' <Latency = 2> <II = 1> <Delay = 3.33> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 14> : 3.33ns
+ST_14 : Operation 170 [1/3] (3.33ns)   --->   "%tmp_11 = mul i32 %phi_mul6, %tmp8" [../telepathy/hlsSources/conv_layer.cpp:66]   --->   Core 17 'MulnS' <Latency = 2> <II = 1> <Delay = 3.33> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 171 [1/3] (3.33ns)   --->   "%tmp_13 = mul i32 %phi_mul8, %ox_read" [../telepathy/hlsSources/conv_layer.cpp:72]   --->   Core 17 'MulnS' <Latency = 2> <II = 1> <Delay = 3.33> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 15> : 1.58ns
+ST_15 : Operation 172 [1/1] (0.00ns)   --->   "%tmp_12 = sext i32 %tmp_11 to i64" [../telepathy/hlsSources/conv_layer.cpp:66]
+ST_15 : Operation 173 [1/1] (0.00ns)   --->   "%tmp_14 = sext i32 %tmp_13 to i64" [../telepathy/hlsSources/conv_layer.cpp:72]
+ST_15 : Operation 174 [1/1] (1.57ns)   --->   "%tmp6 = add i64 %tmp_3, %tmp_12" [../telepathy/hlsSources/conv_layer.cpp:66]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 175 [1/1] (1.57ns)   --->   "%tmp9 = add i64 %tmp_7, %tmp_14" [../telepathy/hlsSources/conv_layer.cpp:72]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 176 [1/1] (0.83ns)   --->   "br label %.preheader1" [../telepathy/hlsSources/conv_layer.cpp:47]
+
+ <State 16> : 1.49ns
+ST_16 : Operation 177 [1/1] (0.00ns)   --->   "%o_y = phi i31 [ 0, %.preheader1.preheader ], [ %o_y_1, %.preheader1.loopexit ]"
+ST_16 : Operation 178 [1/1] (0.00ns)   --->   "%i_y = phi i32 [ 0, %.preheader1.preheader ], [ %next_mul8, %.preheader1.loopexit ]"
+ST_16 : Operation 179 [1/1] (0.00ns)   --->   "%phi_mul9 = phi i32 [ 0, %.preheader1.preheader ], [ %next_mul9, %.preheader1.loopexit ]"
+ST_16 : Operation 180 [1/1] (1.48ns)   --->   "%next_mul9 = add i32 %phi_mul9, %ox_read"   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 181 [1/1] (1.48ns)   --->   "%next_mul8 = add i32 %i_y, %s_read"   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 182 [1/1] (0.00ns)   --->   "%o_y_cast = zext i31 %o_y to i32" [../telepathy/hlsSources/conv_layer.cpp:47]
+ST_16 : Operation 183 [1/1] (1.14ns)   --->   "%tmp_15 = icmp slt i32 %o_y_cast, %oy_read" [../telepathy/hlsSources/conv_layer.cpp:47]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.11> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 184 [1/1] (1.48ns)   --->   "%o_y_1 = add i31 %o_y, 1" [../telepathy/hlsSources/conv_layer.cpp:47]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 185 [1/1] (0.00ns)   --->   "br i1 %tmp_15, label %.preheader.preheader, label %.preheader2.loopexit" [../telepathy/hlsSources/conv_layer.cpp:47]
+ST_16 : Operation 186 [1/1] (1.48ns)   --->   "%tmp_16 = add nsw i32 %i_y, %k_read" [../telepathy/hlsSources/conv_layer.cpp:61]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 187 [1/1] (0.00ns)   --->   "%tmp_30_cast = sext i32 %phi_mul9 to i34" [../telepathy/hlsSources/conv_layer.cpp:50]
+ST_16 : Operation 188 [1/1] (0.83ns)   --->   "br label %.preheader" [../telepathy/hlsSources/conv_layer.cpp:50]
+ST_16 : Operation 189 [1/1] (0.00ns)   --->   "br label %.preheader2"
+
+ <State 17> : 3.50ns
+ST_17 : Operation 190 [1/1] (0.00ns)   --->   "%o_x = phi i31 [ %o_x_1, %8 ], [ 0, %.preheader.preheader ]"
+ST_17 : Operation 191 [1/1] (0.00ns)   --->   "%i_x = phi i32 [ %next_mul6, %8 ], [ 0, %.preheader.preheader ]"
+ST_17 : Operation 192 [1/1] (1.48ns)   --->   "%next_mul6 = add i32 %i_x, %s_read"   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 193 [1/1] (0.00ns)   --->   "%o_x_cast = zext i31 %o_x to i32" [../telepathy/hlsSources/conv_layer.cpp:50]
+ST_17 : Operation 194 [1/1] (1.14ns)   --->   "%tmp_17 = icmp slt i32 %o_x_cast, %ox_read" [../telepathy/hlsSources/conv_layer.cpp:50]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.11> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 195 [1/1] (1.48ns)   --->   "%o_x_1 = add i31 %o_x, 1" [../telepathy/hlsSources/conv_layer.cpp:50]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 196 [1/1] (0.00ns)   --->   "br i1 %tmp_17, label %1, label %.preheader1.loopexit" [../telepathy/hlsSources/conv_layer.cpp:50]
+ST_17 : Operation 197 [7/7] (3.50ns)   --->   "%output_element_req = call i1 @_ssdm_op_ReadReq.m_axi.floatP(float* %mem_addr, i32 1) nounwind" [../telepathy/hlsSources/conv_layer.cpp:53]   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_17 : Operation 198 [1/1] (0.00ns)   --->   "br label %.preheader1"
+
+ <State 18> : 3.50ns
+ST_18 : Operation 199 [6/7] (3.50ns)   --->   "%output_element_req = call i1 @_ssdm_op_ReadReq.m_axi.floatP(float* %mem_addr, i32 1) nounwind" [../telepathy/hlsSources/conv_layer.cpp:53]   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+ <State 19> : 3.50ns
+ST_19 : Operation 200 [5/7] (3.50ns)   --->   "%output_element_req = call i1 @_ssdm_op_ReadReq.m_axi.floatP(float* %mem_addr, i32 1) nounwind" [../telepathy/hlsSources/conv_layer.cpp:53]   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+ <State 20> : 3.50ns
+ST_20 : Operation 201 [4/7] (3.50ns)   --->   "%output_element_req = call i1 @_ssdm_op_ReadReq.m_axi.floatP(float* %mem_addr, i32 1) nounwind" [../telepathy/hlsSources/conv_layer.cpp:53]   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+ <State 21> : 3.50ns
+ST_21 : Operation 202 [3/7] (3.50ns)   --->   "%output_element_req = call i1 @_ssdm_op_ReadReq.m_axi.floatP(float* %mem_addr, i32 1) nounwind" [../telepathy/hlsSources/conv_layer.cpp:53]   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+ <State 22> : 3.50ns
+ST_22 : Operation 203 [2/7] (3.50ns)   --->   "%output_element_req = call i1 @_ssdm_op_ReadReq.m_axi.floatP(float* %mem_addr, i32 1) nounwind" [../telepathy/hlsSources/conv_layer.cpp:53]   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+ <State 23> : 3.50ns
+ST_23 : Operation 204 [1/7] (3.50ns)   --->   "%output_element_req = call i1 @_ssdm_op_ReadReq.m_axi.floatP(float* %mem_addr, i32 1) nounwind" [../telepathy/hlsSources/conv_layer.cpp:53]   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+ <State 24> : 3.50ns
+ST_24 : Operation 205 [1/1] (3.50ns)   --->   "%output_element = call float @_ssdm_op_Read.m_axi.floatP(float* %mem_addr) nounwind" [../telepathy/hlsSources/conv_layer.cpp:53]   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+ <State 25> : 1.49ns
+ST_25 : Operation 206 [1/1] (1.48ns)   --->   "%tmp_18 = add nsw i32 %i_x, %k_read" [../telepathy/hlsSources/conv_layer.cpp:64]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_25 : Operation 207 [1/1] (0.83ns)   --->   "br label %.loopexit" [../telepathy/hlsSources/conv_layer.cpp:58]
+
+ <State 26> : 3.33ns
+ST_26 : Operation 208 [1/1] (0.00ns)   --->   "%tmp_19 = phi float [ %output_element, %1 ], [ %tmp_30, %.loopexit.loopexit ]"
+ST_26 : Operation 209 [1/1] (0.00ns)   --->   "%i_d = phi i31 [ 0, %1 ], [ %i_d_1, %.loopexit.loopexit ]"
+ST_26 : Operation 210 [1/1] (0.00ns)   --->   "%phi_mul1 = phi i32 [ 0, %1 ], [ %next_mul2, %.loopexit.loopexit ]"
+ST_26 : Operation 211 [1/1] (0.00ns)   --->   "%phi_mul3 = phi i32 [ 0, %1 ], [ %next_mul4, %.loopexit.loopexit ]"
+ST_26 : Operation 212 [1/1] (1.48ns)   --->   "%next_mul4 = add i32 %phi_mul3, %k_read"   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_26 : Operation 213 [1/1] (1.48ns)   --->   "%next_mul2 = add i32 %phi_mul1, %ix_read"   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_26 : Operation 214 [1/1] (0.00ns)   --->   "%i_d_cast = zext i31 %i_d to i32" [../telepathy/hlsSources/conv_layer.cpp:58]
+ST_26 : Operation 215 [1/1] (1.14ns)   --->   "%tmp_20 = icmp slt i32 %i_d_cast, %id_read" [../telepathy/hlsSources/conv_layer.cpp:58]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.11> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_26 : Operation 216 [1/1] (1.48ns)   --->   "%i_d_1 = add i31 %i_d, 1" [../telepathy/hlsSources/conv_layer.cpp:58]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_26 : Operation 217 [1/1] (0.00ns)   --->   "br i1 %tmp_20, label %2, label %8" [../telepathy/hlsSources/conv_layer.cpp:58]
+ST_26 : Operation 218 [3/3] (3.33ns)   --->   "%tmp_21 = mul i32 %phi_mul1, %iy_read" [../telepathy/hlsSources/conv_layer.cpp:66]   --->   Core 17 'MulnS' <Latency = 2> <II = 1> <Delay = 3.33> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_26 : Operation 219 [1/1] (0.00ns)   --->   "%tmp_43_cast = zext i31 %o_x to i33" [../telepathy/hlsSources/conv_layer.cpp:72]
+ST_26 : Operation 220 [1/1] (1.48ns)   --->   "%tmp21 = add i33 %tmp_15_cast, %tmp_43_cast" [../telepathy/hlsSources/conv_layer.cpp:72]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_26 : Operation 221 [1/1] (0.00ns)   --->   "%tmp23_cast = sext i33 %tmp21 to i34" [../telepathy/hlsSources/conv_layer.cpp:72]
+ST_26 : Operation 222 [1/1] (1.49ns)   --->   "%tmp22 = add i34 %tmp23_cast, %tmp_30_cast" [../telepathy/hlsSources/conv_layer.cpp:72]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 27> : 3.33ns
+ST_27 : Operation 223 [2/3] (3.33ns)   --->   "%tmp_21 = mul i32 %phi_mul1, %iy_read" [../telepathy/hlsSources/conv_layer.cpp:66]   --->   Core 17 'MulnS' <Latency = 2> <II = 1> <Delay = 3.33> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_27 : Operation 224 [3/3] (3.33ns)   --->   "%tmp_22 = mul i32 %phi_mul3, %k_read" [../telepathy/hlsSources/conv_layer.cpp:66]   --->   Core 17 'MulnS' <Latency = 2> <II = 1> <Delay = 3.33> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 28> : 3.33ns
+ST_28 : Operation 225 [1/3] (3.33ns)   --->   "%tmp_21 = mul i32 %phi_mul1, %iy_read" [../telepathy/hlsSources/conv_layer.cpp:66]   --->   Core 17 'MulnS' <Latency = 2> <II = 1> <Delay = 3.33> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_28 : Operation 226 [2/3] (3.33ns)   --->   "%tmp_22 = mul i32 %phi_mul3, %k_read" [../telepathy/hlsSources/conv_layer.cpp:66]   --->   Core 17 'MulnS' <Latency = 2> <II = 1> <Delay = 3.33> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 29> : 3.33ns
+ST_29 : Operation 227 [1/1] (0.00ns)   --->   "%tmp_37_cast = sext i32 %tmp_21 to i33" [../telepathy/hlsSources/conv_layer.cpp:66]
+ST_29 : Operation 228 [1/3] (3.33ns)   --->   "%tmp_22 = mul i32 %phi_mul3, %k_read" [../telepathy/hlsSources/conv_layer.cpp:66]   --->   Core 17 'MulnS' <Latency = 2> <II = 1> <Delay = 3.33> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_29 : Operation 229 [1/1] (0.00ns)   --->   "%tmp_40_cast = sext i32 %tmp_22 to i34" [../telepathy/hlsSources/conv_layer.cpp:61]
+ST_29 : Operation 230 [1/1] (1.48ns)   --->   "%tmp10 = add i33 %tmp_11_cast, %tmp_37_cast" [../telepathy/hlsSources/conv_layer.cpp:66]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_29 : Operation 231 [1/1] (0.00ns)   --->   "%tmp16_cast = sext i33 %tmp10 to i34" [../telepathy/hlsSources/conv_layer.cpp:66]
+ST_29 : Operation 232 [1/1] (0.83ns)   --->   "br label %3" [../telepathy/hlsSources/conv_layer.cpp:61]
+
+ <State 30> : 3.33ns
+ST_30 : Operation 233 [1/1] (0.00ns)   --->   "%tmp_30 = phi float [ %tmp_19, %2 ], [ %tmp_33, %7 ]" [../telepathy/hlsSources/conv_layer.cpp:53]
+ST_30 : Operation 234 [1/1] (0.00ns)   --->   "%i_y1 = phi i32 [ %i_y, %2 ], [ %i_y_1, %7 ]"
+ST_30 : Operation 235 [1/1] (0.00ns)   --->   "%phi_mul = phi i32 [ 0, %2 ], [ %next_mul, %7 ]"
+ST_30 : Operation 236 [1/1] (1.48ns)   --->   "%next_mul = add i32 %phi_mul, %k_read"   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_30 : Operation 237 [1/1] (1.14ns)   --->   "%tmp_31 = icmp slt i32 %i_y1, %tmp_16" [../telepathy/hlsSources/conv_layer.cpp:61]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.11> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_30 : Operation 238 [1/1] (0.00ns)   --->   "br i1 %tmp_31, label %4, label %.loopexit.loopexit" [../telepathy/hlsSources/conv_layer.cpp:61]
+ST_30 : Operation 239 [3/3] (3.33ns)   --->   "%tmp_32 = mul nsw i32 %i_y1, %ix_read" [../telepathy/hlsSources/conv_layer.cpp:66]   --->   Core 17 'MulnS' <Latency = 2> <II = 1> <Delay = 3.33> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_30 : Operation 240 [1/1] (0.00ns)   --->   "br label %.loopexit"
+
+ <State 31> : 3.33ns
+ST_31 : Operation 241 [2/3] (3.33ns)   --->   "%tmp_32 = mul nsw i32 %i_y1, %ix_read" [../telepathy/hlsSources/conv_layer.cpp:66]   --->   Core 17 'MulnS' <Latency = 2> <II = 1> <Delay = 3.33> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 32> : 3.33ns
+ST_32 : Operation 242 [1/3] (3.33ns)   --->   "%tmp_32 = mul nsw i32 %i_y1, %ix_read" [../telepathy/hlsSources/conv_layer.cpp:66]   --->   Core 17 'MulnS' <Latency = 2> <II = 1> <Delay = 3.33> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_32 : Operation 243 [1/1] (0.00ns)   --->   "%tmp_51_cast = sext i32 %tmp_32 to i33" [../telepathy/hlsSources/conv_layer.cpp:66]
+ST_32 : Operation 244 [1/1] (0.00ns)   --->   "%tmp_53_cast = sext i32 %phi_mul to i33" [../telepathy/hlsSources/conv_layer.cpp:64]
+ST_32 : Operation 245 [1/1] (0.83ns)   --->   "br label %5" [../telepathy/hlsSources/conv_layer.cpp:64]
+
+ <State 33> : 2.98ns
+ST_33 : Operation 246 [1/1] (0.00ns)   --->   "%tmp_33 = phi float [ %tmp_30, %4 ], [ %output_element_1, %6 ]"
+ST_33 : Operation 247 [1/1] (0.00ns)   --->   "%i_x1 = phi i32 [ %i_x, %4 ], [ %i_x_1, %6 ]"
+ST_33 : Operation 248 [1/1] (0.00ns)   --->   "%iix = phi i32 [ 0, %4 ], [ %iix_1, %6 ]"
+ST_33 : Operation 249 [1/1] (1.14ns)   --->   "%tmp_34 = icmp slt i32 %i_x1, %tmp_18" [../telepathy/hlsSources/conv_layer.cpp:64]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.11> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_33 : Operation 250 [1/1] (1.48ns)   --->   "%iix_1 = add nsw i32 %iix, 1" [../telepathy/hlsSources/conv_layer.cpp:64]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_33 : Operation 251 [1/1] (0.00ns)   --->   "br i1 %tmp_34, label %6, label %7" [../telepathy/hlsSources/conv_layer.cpp:64]
+ST_33 : Operation 252 [1/1] (0.00ns)   --->   "%tmp_56_cast = sext i32 %i_x1 to i33" [../telepathy/hlsSources/conv_layer.cpp:66]
+ST_33 : Operation 253 [1/1] (1.48ns)   --->   "%tmp17 = add i33 %tmp_51_cast, %tmp_56_cast" [../telepathy/hlsSources/conv_layer.cpp:66]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_33 : Operation 254 [1/1] (0.00ns)   --->   "%tmp17_cast = sext i33 %tmp17 to i34" [../telepathy/hlsSources/conv_layer.cpp:66]
+ST_33 : Operation 255 [1/1] (1.49ns)   --->   "%tmp15 = add i34 %tmp17_cast, %tmp16_cast" [../telepathy/hlsSources/conv_layer.cpp:66]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_33 : Operation 256 [1/1] (0.00ns)   --->   "%tmp_63_cast = sext i32 %iix to i33" [../telepathy/hlsSources/conv_layer.cpp:66]
+ST_33 : Operation 257 [1/1] (1.48ns)   --->   "%tmp20 = add i33 %tmp_53_cast, %tmp_63_cast" [../telepathy/hlsSources/conv_layer.cpp:66]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_33 : Operation 258 [1/1] (0.00ns)   --->   "%tmp20_cast = sext i33 %tmp20 to i34" [../telepathy/hlsSources/conv_layer.cpp:66]
+ST_33 : Operation 259 [1/1] (1.49ns)   --->   "%tmp19 = add i34 %tmp20_cast, %tmp_40_cast" [../telepathy/hlsSources/conv_layer.cpp:66]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_33 : Operation 260 [1/1] (1.48ns)   --->   "%i_x_1 = add nsw i32 %i_x1, 1" [../telepathy/hlsSources/conv_layer.cpp:64]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_33 : Operation 261 [1/1] (1.48ns)   --->   "%i_y_1 = add nsw i32 %i_y1, 1" [../telepathy/hlsSources/conv_layer.cpp:61]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_33 : Operation 262 [1/1] (0.00ns)   --->   "br label %3" [../telepathy/hlsSources/conv_layer.cpp:61]
+
+ <State 34> : 1.57ns
+ST_34 : Operation 263 [1/1] (0.00ns)   --->   "%tmp15_cast = sext i34 %tmp15 to i64" [../telepathy/hlsSources/conv_layer.cpp:66]
+ST_34 : Operation 264 [1/1] (1.57ns)   --->   "%tmp_35 = add i64 %tmp15_cast, %tmp4" [../telepathy/hlsSources/conv_layer.cpp:66]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_34 : Operation 265 [1/1] (0.00ns)   --->   "%mem_addr_2 = getelementptr inbounds float* %mem, i64 %tmp_35" [../telepathy/hlsSources/conv_layer.cpp:66]
+ST_34 : Operation 266 [1/1] (0.00ns)   --->   "%tmp19_cast = sext i34 %tmp19 to i64" [../telepathy/hlsSources/conv_layer.cpp:66]
+ST_34 : Operation 267 [1/1] (1.57ns)   --->   "%tmp_36 = add i64 %tmp19_cast, %tmp6" [../telepathy/hlsSources/conv_layer.cpp:66]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_34 : Operation 268 [1/1] (0.00ns)   --->   "%mem_addr_3 = getelementptr inbounds float* %mem, i64 %tmp_36" [../telepathy/hlsSources/conv_layer.cpp:66]
+
+ <State 35> : 3.50ns
+ST_35 : Operation 269 [7/7] (3.50ns)   --->   "%mem_load_req = call i1 @_ssdm_op_ReadReq.m_axi.floatP(float* %mem_addr_2, i32 1) nounwind" [../telepathy/hlsSources/conv_layer.cpp:66]   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+ <State 36> : 3.50ns
+ST_36 : Operation 270 [6/7] (3.50ns)   --->   "%mem_load_req = call i1 @_ssdm_op_ReadReq.m_axi.floatP(float* %mem_addr_2, i32 1) nounwind" [../telepathy/hlsSources/conv_layer.cpp:66]   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_36 : Operation 271 [7/7] (3.50ns)   --->   "%mem_load_1_req = call i1 @_ssdm_op_ReadReq.m_axi.floatP(float* %mem_addr_3, i32 1) nounwind" [../telepathy/hlsSources/conv_layer.cpp:66]   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+ <State 37> : 3.50ns
+ST_37 : Operation 272 [5/7] (3.50ns)   --->   "%mem_load_req = call i1 @_ssdm_op_ReadReq.m_axi.floatP(float* %mem_addr_2, i32 1) nounwind" [../telepathy/hlsSources/conv_layer.cpp:66]   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_37 : Operation 273 [6/7] (3.50ns)   --->   "%mem_load_1_req = call i1 @_ssdm_op_ReadReq.m_axi.floatP(float* %mem_addr_3, i32 1) nounwind" [../telepathy/hlsSources/conv_layer.cpp:66]   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+ <State 38> : 3.50ns
+ST_38 : Operation 274 [4/7] (3.50ns)   --->   "%mem_load_req = call i1 @_ssdm_op_ReadReq.m_axi.floatP(float* %mem_addr_2, i32 1) nounwind" [../telepathy/hlsSources/conv_layer.cpp:66]   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_38 : Operation 275 [5/7] (3.50ns)   --->   "%mem_load_1_req = call i1 @_ssdm_op_ReadReq.m_axi.floatP(float* %mem_addr_3, i32 1) nounwind" [../telepathy/hlsSources/conv_layer.cpp:66]   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+ <State 39> : 3.50ns
+ST_39 : Operation 276 [3/7] (3.50ns)   --->   "%mem_load_req = call i1 @_ssdm_op_ReadReq.m_axi.floatP(float* %mem_addr_2, i32 1) nounwind" [../telepathy/hlsSources/conv_layer.cpp:66]   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_39 : Operation 277 [4/7] (3.50ns)   --->   "%mem_load_1_req = call i1 @_ssdm_op_ReadReq.m_axi.floatP(float* %mem_addr_3, i32 1) nounwind" [../telepathy/hlsSources/conv_layer.cpp:66]   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+ <State 40> : 3.50ns
+ST_40 : Operation 278 [2/7] (3.50ns)   --->   "%mem_load_req = call i1 @_ssdm_op_ReadReq.m_axi.floatP(float* %mem_addr_2, i32 1) nounwind" [../telepathy/hlsSources/conv_layer.cpp:66]   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_40 : Operation 279 [3/7] (3.50ns)   --->   "%mem_load_1_req = call i1 @_ssdm_op_ReadReq.m_axi.floatP(float* %mem_addr_3, i32 1) nounwind" [../telepathy/hlsSources/conv_layer.cpp:66]   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+ <State 41> : 3.50ns
+ST_41 : Operation 280 [1/7] (3.50ns)   --->   "%mem_load_req = call i1 @_ssdm_op_ReadReq.m_axi.floatP(float* %mem_addr_2, i32 1) nounwind" [../telepathy/hlsSources/conv_layer.cpp:66]   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_41 : Operation 281 [2/7] (3.50ns)   --->   "%mem_load_1_req = call i1 @_ssdm_op_ReadReq.m_axi.floatP(float* %mem_addr_3, i32 1) nounwind" [../telepathy/hlsSources/conv_layer.cpp:66]   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+ <State 42> : 3.50ns
+ST_42 : Operation 282 [1/1] (3.50ns)   --->   "%mem_addr_2_read = call float @_ssdm_op_Read.m_axi.floatP(float* %mem_addr_2) nounwind" [../telepathy/hlsSources/conv_layer.cpp:66]   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_42 : Operation 283 [1/7] (3.50ns)   --->   "%mem_load_1_req = call i1 @_ssdm_op_ReadReq.m_axi.floatP(float* %mem_addr_3, i32 1) nounwind" [../telepathy/hlsSources/conv_layer.cpp:66]   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+ <State 43> : 3.50ns
+ST_43 : Operation 284 [1/1] (3.50ns)   --->   "%mem_addr_3_read = call float @_ssdm_op_Read.m_axi.floatP(float* %mem_addr_3) nounwind" [../telepathy/hlsSources/conv_layer.cpp:66]   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+ <State 44> : 3.18ns
+ST_44 : Operation 285 [5/5] (3.17ns)   --->   "%tmp_37 = fmul float %mem_addr_2_read, %mem_addr_3_read" [../telepathy/hlsSources/conv_layer.cpp:66]   --->   Core 100 'FMul' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 45> : 3.18ns
+ST_45 : Operation 286 [4/5] (3.17ns)   --->   "%tmp_37 = fmul float %mem_addr_2_read, %mem_addr_3_read" [../telepathy/hlsSources/conv_layer.cpp:66]   --->   Core 100 'FMul' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 46> : 3.18ns
+ST_46 : Operation 287 [3/5] (3.17ns)   --->   "%tmp_37 = fmul float %mem_addr_2_read, %mem_addr_3_read" [../telepathy/hlsSources/conv_layer.cpp:66]   --->   Core 100 'FMul' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 47> : 3.18ns
+ST_47 : Operation 288 [2/5] (3.17ns)   --->   "%tmp_37 = fmul float %mem_addr_2_read, %mem_addr_3_read" [../telepathy/hlsSources/conv_layer.cpp:66]   --->   Core 100 'FMul' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 48> : 3.18ns
+ST_48 : Operation 289 [1/5] (3.17ns)   --->   "%tmp_37 = fmul float %mem_addr_2_read, %mem_addr_3_read" [../telepathy/hlsSources/conv_layer.cpp:66]   --->   Core 100 'FMul' <Latency = 4> <II = 1> <Delay = 3.17> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+ <State 49> : 3.45ns
+ST_49 : Operation 290 [8/8] (3.45ns)   --->   "%output_element_1 = fadd float %tmp_33, %tmp_37" [../telepathy/hlsSources/conv_layer.cpp:66]   --->   Core 99 'FAddSub' <Latency = 7> <II = 1> <Delay = 3.45> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 50> : 3.45ns
+ST_50 : Operation 291 [7/8] (3.45ns)   --->   "%output_element_1 = fadd float %tmp_33, %tmp_37" [../telepathy/hlsSources/conv_layer.cpp:66]   --->   Core 99 'FAddSub' <Latency = 7> <II = 1> <Delay = 3.45> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 51> : 3.45ns
+ST_51 : Operation 292 [6/8] (3.45ns)   --->   "%output_element_1 = fadd float %tmp_33, %tmp_37" [../telepathy/hlsSources/conv_layer.cpp:66]   --->   Core 99 'FAddSub' <Latency = 7> <II = 1> <Delay = 3.45> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 52> : 3.45ns
+ST_52 : Operation 293 [5/8] (3.45ns)   --->   "%output_element_1 = fadd float %tmp_33, %tmp_37" [../telepathy/hlsSources/conv_layer.cpp:66]   --->   Core 99 'FAddSub' <Latency = 7> <II = 1> <Delay = 3.45> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 53> : 3.45ns
+ST_53 : Operation 294 [4/8] (3.45ns)   --->   "%output_element_1 = fadd float %tmp_33, %tmp_37" [../telepathy/hlsSources/conv_layer.cpp:66]   --->   Core 99 'FAddSub' <Latency = 7> <II = 1> <Delay = 3.45> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 54> : 3.45ns
+ST_54 : Operation 295 [3/8] (3.45ns)   --->   "%output_element_1 = fadd float %tmp_33, %tmp_37" [../telepathy/hlsSources/conv_layer.cpp:66]   --->   Core 99 'FAddSub' <Latency = 7> <II = 1> <Delay = 3.45> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 55> : 3.45ns
+ST_55 : Operation 296 [2/8] (3.45ns)   --->   "%output_element_1 = fadd float %tmp_33, %tmp_37" [../telepathy/hlsSources/conv_layer.cpp:66]   --->   Core 99 'FAddSub' <Latency = 7> <II = 1> <Delay = 3.45> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 56> : 3.45ns
+ST_56 : Operation 297 [1/8] (3.45ns)   --->   "%output_element_1 = fadd float %tmp_33, %tmp_37" [../telepathy/hlsSources/conv_layer.cpp:66]   --->   Core 99 'FAddSub' <Latency = 7> <II = 1> <Delay = 3.45> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_56 : Operation 298 [1/1] (0.00ns)   --->   "br label %5" [../telepathy/hlsSources/conv_layer.cpp:64]
+
+ <State 57> : 3.48ns
+ST_57 : Operation 299 [1/1] (3.47ns)   --->   "%tmp_26 = fcmp ogt float %tmp_19, 0.000000e+00" [/opt/Xilinx/Vivado/2018.1/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h:215->../telepathy/hlsSources/conv_layer.cpp:72]   --->   Core 105 'FCmp' <Latency = 0> <II = 1> <Delay = 3.47> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+ST_57 : Operation 300 [1/1] (0.00ns)   --->   "%tmp22_cast = sext i34 %tmp22 to i64" [../telepathy/hlsSources/conv_layer.cpp:72]
+ST_57 : Operation 301 [1/1] (1.57ns)   --->   "%tmp_29 = add i64 %tmp22_cast, %tmp9" [../telepathy/hlsSources/conv_layer.cpp:72]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.57> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_57 : Operation 302 [1/1] (0.00ns)   --->   "%mem_addr_1 = getelementptr inbounds float* %mem, i64 %tmp_29" [../telepathy/hlsSources/conv_layer.cpp:72]
+
+ <State 58> : 3.50ns
+ST_58 : Operation 303 [1/1] (0.00ns)   --->   "%tmp_33_to_int = bitcast float %tmp_19 to i32" [../telepathy/hlsSources/conv_layer.cpp:53]
+ST_58 : Operation 304 [1/1] (0.00ns)   --->   "%tmp_23 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %tmp_33_to_int, i32 23, i32 30)" [../telepathy/hlsSources/conv_layer.cpp:53]
+ST_58 : Operation 305 [1/1] (0.00ns)   --->   "%tmp_24 = trunc i32 %tmp_33_to_int to i23" [../telepathy/hlsSources/conv_layer.cpp:53]
+ST_58 : Operation 306 [1/1] (0.78ns)   --->   "%notlhs = icmp ne i8 %tmp_23, -1" [../telepathy/hlsSources/conv_layer.cpp:53]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.11> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_58 : Operation 307 [1/1] (1.11ns)   --->   "%notrhs = icmp eq i23 %tmp_24, 0" [../telepathy/hlsSources/conv_layer.cpp:53]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.11> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_58 : Operation 308 [1/1] (0.00ns) (grouped into LUT with out node tmp_28)   --->   "%tmp_25 = or i1 %notrhs, %notlhs" [../telepathy/hlsSources/conv_layer.cpp:53]   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_58 : Operation 309 [1/1] (0.00ns) (grouped into LUT with out node tmp_28)   --->   "%tmp_27 = and i1 %tmp_25, %tmp_26" [/opt/Xilinx/Vivado/2018.1/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h:215->../telepathy/hlsSources/conv_layer.cpp:72]   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.33> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_58 : Operation 310 [1/1] (0.44ns) (out node of the LUT)   --->   "%tmp_28 = select i1 %tmp_27, float %tmp_19, float 0.000000e+00" [../telepathy/hlsSources/conv_layer.cpp:72]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.44> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_58 : Operation 311 [1/1] (3.50ns)   --->   "%mem_addr_1_req = call i1 @_ssdm_op_WriteReq.m_axi.floatP(float* %mem_addr_1, i32 1) nounwind" [../telepathy/hlsSources/conv_layer.cpp:72]   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+ <State 59> : 3.50ns
+ST_59 : Operation 312 [1/1] (3.50ns)   --->   "call void @_ssdm_op_Write.m_axi.floatP(float* %mem_addr_1, float %tmp_28, i4 -1) nounwind" [../telepathy/hlsSources/conv_layer.cpp:72]   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+ <State 60> : 3.50ns
+ST_60 : Operation 313 [5/5] (3.50ns)   --->   "%mem_addr_1_resp = call i1 @_ssdm_op_WriteResp.m_axi.floatP(float* %mem_addr_1) nounwind" [../telepathy/hlsSources/conv_layer.cpp:72]   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+ <State 61> : 3.50ns
+ST_61 : Operation 314 [4/5] (3.50ns)   --->   "%mem_addr_1_resp = call i1 @_ssdm_op_WriteResp.m_axi.floatP(float* %mem_addr_1) nounwind" [../telepathy/hlsSources/conv_layer.cpp:72]   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+ <State 62> : 3.50ns
+ST_62 : Operation 315 [3/5] (3.50ns)   --->   "%mem_addr_1_resp = call i1 @_ssdm_op_WriteResp.m_axi.floatP(float* %mem_addr_1) nounwind" [../telepathy/hlsSources/conv_layer.cpp:72]   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+ <State 63> : 3.50ns
+ST_63 : Operation 316 [2/5] (3.50ns)   --->   "%mem_addr_1_resp = call i1 @_ssdm_op_WriteResp.m_axi.floatP(float* %mem_addr_1) nounwind" [../telepathy/hlsSources/conv_layer.cpp:72]   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+ <State 64> : 3.50ns
+ST_64 : Operation 317 [1/5] (3.50ns)   --->   "%mem_addr_1_resp = call i1 @_ssdm_op_WriteResp.m_axi.floatP(float* %mem_addr_1) nounwind" [../telepathy/hlsSources/conv_layer.cpp:72]   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_64 : Operation 318 [1/1] (0.00ns)   --->   "br label %.preheader" [../telepathy/hlsSources/conv_layer.cpp:50]
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 4ns, clock uncertainty: 0.5ns.
+
+ <State 1>: 1ns
+The critical path consists of the following:
+	s_axi read on port 'k' [26]  (1 ns)
+
+ <State 2>: 3.33ns
+The critical path consists of the following:
+	'mul' operation ('tmp1', ../telepathy/hlsSources/conv_layer.cpp:35) [50]  (3.33 ns)
+
+ <State 3>: 3.33ns
+The critical path consists of the following:
+	'mul' operation ('tmp1', ../telepathy/hlsSources/conv_layer.cpp:35) [50]  (3.33 ns)
+
+ <State 4>: 3.33ns
+The critical path consists of the following:
+	'mul' operation ('tmp1', ../telepathy/hlsSources/conv_layer.cpp:35) [50]  (3.33 ns)
+
+ <State 5>: 3.33ns
+The critical path consists of the following:
+	'mul' operation ('num_weights', ../telepathy/hlsSources/conv_layer.cpp:35) [52]  (3.33 ns)
+
+ <State 6>: 3.33ns
+The critical path consists of the following:
+	'mul' operation ('num_weights', ../telepathy/hlsSources/conv_layer.cpp:35) [52]  (3.33 ns)
+
+ <State 7>: 3.33ns
+The critical path consists of the following:
+	'mul' operation ('num_weights', ../telepathy/hlsSources/conv_layer.cpp:35) [52]  (3.33 ns)
+
+ <State 8>: 3.33ns
+The critical path consists of the following:
+	'mul' operation ('tmp3', ../telepathy/hlsSources/conv_layer.cpp:66) [61]  (3.33 ns)
+
+ <State 9>: 3.33ns
+The critical path consists of the following:
+	'phi' operation ('phi_mul2') with incoming values : ('next_mul3') [70]  (0 ns)
+	'mul' operation ('tmp_9', ../telepathy/hlsSources/conv_layer.cpp:66) [79]  (3.33 ns)
+
+ <State 10>: 3.33ns
+The critical path consists of the following:
+	'mul' operation ('tmp_9', ../telepathy/hlsSources/conv_layer.cpp:66) [79]  (3.33 ns)
+
+ <State 11>: 3.33ns
+The critical path consists of the following:
+	'mul' operation ('tmp_9', ../telepathy/hlsSources/conv_layer.cpp:66) [79]  (3.33 ns)
+
+ <State 12>: 3.33ns
+The critical path consists of the following:
+	'phi' operation ('phi_mul6') with incoming values : ('next_mul7') [86]  (0 ns)
+	'mul' operation ('tmp_11', ../telepathy/hlsSources/conv_layer.cpp:66) [100]  (3.33 ns)
+
+ <State 13>: 3.33ns
+The critical path consists of the following:
+	'mul' operation ('tmp_11', ../telepathy/hlsSources/conv_layer.cpp:66) [100]  (3.33 ns)
+
+ <State 14>: 3.33ns
+The critical path consists of the following:
+	'mul' operation ('tmp_11', ../telepathy/hlsSources/conv_layer.cpp:66) [100]  (3.33 ns)
+
+ <State 15>: 1.58ns
+The critical path consists of the following:
+	'add' operation ('tmp6', ../telepathy/hlsSources/conv_layer.cpp:66) [104]  (1.58 ns)
+
+ <State 16>: 1.49ns
+The critical path consists of the following:
+	'phi' operation ('i_y') with incoming values : ('next_mul8') [109]  (0 ns)
+	'add' operation ('next_mul8') [112]  (1.49 ns)
+
+ <State 17>: 3.5ns
+The critical path consists of the following:
+	bus request on port 'mem' (../telepathy/hlsSources/conv_layer.cpp:53) [130]  (3.5 ns)
+
+ <State 18>: 3.5ns
+The critical path consists of the following:
+	bus request on port 'mem' (../telepathy/hlsSources/conv_layer.cpp:53) [130]  (3.5 ns)
+
+ <State 19>: 3.5ns
+The critical path consists of the following:
+	bus request on port 'mem' (../telepathy/hlsSources/conv_layer.cpp:53) [130]  (3.5 ns)
+
+ <State 20>: 3.5ns
+The critical path consists of the following:
+	bus request on port 'mem' (../telepathy/hlsSources/conv_layer.cpp:53) [130]  (3.5 ns)
+
+ <State 21>: 3.5ns
+The critical path consists of the following:
+	bus request on port 'mem' (../telepathy/hlsSources/conv_layer.cpp:53) [130]  (3.5 ns)
+
+ <State 22>: 3.5ns
+The critical path consists of the following:
+	bus request on port 'mem' (../telepathy/hlsSources/conv_layer.cpp:53) [130]  (3.5 ns)
+
+ <State 23>: 3.5ns
+The critical path consists of the following:
+	bus request on port 'mem' (../telepathy/hlsSources/conv_layer.cpp:53) [130]  (3.5 ns)
+
+ <State 24>: 3.5ns
+The critical path consists of the following:
+	bus read on port 'mem' (../telepathy/hlsSources/conv_layer.cpp:53) [131]  (3.5 ns)
+
+ <State 25>: 1.49ns
+The critical path consists of the following:
+	'add' operation ('tmp_18', ../telepathy/hlsSources/conv_layer.cpp:64) [132]  (1.49 ns)
+
+ <State 26>: 3.33ns
+The critical path consists of the following:
+	'phi' operation ('phi_mul1') with incoming values : ('next_mul2') [137]  (0 ns)
+	'mul' operation ('tmp_21', ../telepathy/hlsSources/conv_layer.cpp:66) [146]  (3.33 ns)
+
+ <State 27>: 3.33ns
+The critical path consists of the following:
+	'mul' operation ('tmp_21', ../telepathy/hlsSources/conv_layer.cpp:66) [146]  (3.33 ns)
+
+ <State 28>: 3.33ns
+The critical path consists of the following:
+	'mul' operation ('tmp_21', ../telepathy/hlsSources/conv_layer.cpp:66) [146]  (3.33 ns)
+
+ <State 29>: 3.33ns
+The critical path consists of the following:
+	'mul' operation ('tmp_22', ../telepathy/hlsSources/conv_layer.cpp:66) [148]  (3.33 ns)
+
+ <State 30>: 3.33ns
+The critical path consists of the following:
+	'phi' operation ('i_y') with incoming values : ('next_mul8') ('i_y', ../telepathy/hlsSources/conv_layer.cpp:61) [155]  (0 ns)
+	'mul' operation ('tmp_32', ../telepathy/hlsSources/conv_layer.cpp:66) [161]  (3.33 ns)
+
+ <State 31>: 3.33ns
+The critical path consists of the following:
+	'mul' operation ('tmp_32', ../telepathy/hlsSources/conv_layer.cpp:66) [161]  (3.33 ns)
+
+ <State 32>: 3.33ns
+The critical path consists of the following:
+	'mul' operation ('tmp_32', ../telepathy/hlsSources/conv_layer.cpp:66) [161]  (3.33 ns)
+
+ <State 33>: 2.98ns
+The critical path consists of the following:
+	'phi' operation ('i_x') with incoming values : ('next_mul6') ('i_x', ../telepathy/hlsSources/conv_layer.cpp:64) [167]  (0 ns)
+	'add' operation ('tmp17', ../telepathy/hlsSources/conv_layer.cpp:66) [174]  (1.49 ns)
+	'add' operation ('tmp15', ../telepathy/hlsSources/conv_layer.cpp:66) [176]  (1.5 ns)
+
+ <State 34>: 1.57ns
+The critical path consists of the following:
+	'add' operation ('tmp_35', ../telepathy/hlsSources/conv_layer.cpp:66) [178]  (1.57 ns)
+
+ <State 35>: 3.5ns
+The critical path consists of the following:
+	bus request on port 'mem' (../telepathy/hlsSources/conv_layer.cpp:66) [180]  (3.5 ns)
+
+ <State 36>: 3.5ns
+The critical path consists of the following:
+	bus request on port 'mem' (../telepathy/hlsSources/conv_layer.cpp:66) [180]  (3.5 ns)
+
+ <State 37>: 3.5ns
+The critical path consists of the following:
+	bus request on port 'mem' (../telepathy/hlsSources/conv_layer.cpp:66) [180]  (3.5 ns)
+
+ <State 38>: 3.5ns
+The critical path consists of the following:
+	bus request on port 'mem' (../telepathy/hlsSources/conv_layer.cpp:66) [180]  (3.5 ns)
+
+ <State 39>: 3.5ns
+The critical path consists of the following:
+	bus request on port 'mem' (../telepathy/hlsSources/conv_layer.cpp:66) [180]  (3.5 ns)
+
+ <State 40>: 3.5ns
+The critical path consists of the following:
+	bus request on port 'mem' (../telepathy/hlsSources/conv_layer.cpp:66) [180]  (3.5 ns)
+
+ <State 41>: 3.5ns
+The critical path consists of the following:
+	bus request on port 'mem' (../telepathy/hlsSources/conv_layer.cpp:66) [180]  (3.5 ns)
+
+ <State 42>: 3.5ns
+The critical path consists of the following:
+	bus read on port 'mem' (../telepathy/hlsSources/conv_layer.cpp:66) [181]  (3.5 ns)
+
+ <State 43>: 3.5ns
+The critical path consists of the following:
+	bus read on port 'mem' (../telepathy/hlsSources/conv_layer.cpp:66) [190]  (3.5 ns)
+
+ <State 44>: 3.18ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_37', ../telepathy/hlsSources/conv_layer.cpp:66) [191]  (3.18 ns)
+
+ <State 45>: 3.18ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_37', ../telepathy/hlsSources/conv_layer.cpp:66) [191]  (3.18 ns)
+
+ <State 46>: 3.18ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_37', ../telepathy/hlsSources/conv_layer.cpp:66) [191]  (3.18 ns)
+
+ <State 47>: 3.18ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_37', ../telepathy/hlsSources/conv_layer.cpp:66) [191]  (3.18 ns)
+
+ <State 48>: 3.18ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_37', ../telepathy/hlsSources/conv_layer.cpp:66) [191]  (3.18 ns)
+
+ <State 49>: 3.45ns
+The critical path consists of the following:
+	'fadd' operation ('output_element', ../telepathy/hlsSources/conv_layer.cpp:66) [192]  (3.45 ns)
+
+ <State 50>: 3.45ns
+The critical path consists of the following:
+	'fadd' operation ('output_element', ../telepathy/hlsSources/conv_layer.cpp:66) [192]  (3.45 ns)
+
+ <State 51>: 3.45ns
+The critical path consists of the following:
+	'fadd' operation ('output_element', ../telepathy/hlsSources/conv_layer.cpp:66) [192]  (3.45 ns)
+
+ <State 52>: 3.45ns
+The critical path consists of the following:
+	'fadd' operation ('output_element', ../telepathy/hlsSources/conv_layer.cpp:66) [192]  (3.45 ns)
+
+ <State 53>: 3.45ns
+The critical path consists of the following:
+	'fadd' operation ('output_element', ../telepathy/hlsSources/conv_layer.cpp:66) [192]  (3.45 ns)
+
+ <State 54>: 3.45ns
+The critical path consists of the following:
+	'fadd' operation ('output_element', ../telepathy/hlsSources/conv_layer.cpp:66) [192]  (3.45 ns)
+
+ <State 55>: 3.45ns
+The critical path consists of the following:
+	'fadd' operation ('output_element', ../telepathy/hlsSources/conv_layer.cpp:66) [192]  (3.45 ns)
+
+ <State 56>: 3.45ns
+The critical path consists of the following:
+	'fadd' operation ('output_element', ../telepathy/hlsSources/conv_layer.cpp:66) [192]  (3.45 ns)
+
+ <State 57>: 3.48ns
+The critical path consists of the following:
+	'fcmp' operation ('tmp_26', /opt/Xilinx/Vivado/2018.1/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/bits/stl_algobase.h:215->../telepathy/hlsSources/conv_layer.cpp:72) [207]  (3.48 ns)
+
+ <State 58>: 3.5ns
+The critical path consists of the following:
+	bus request on port 'mem' (../telepathy/hlsSources/conv_layer.cpp:72) [217]  (3.5 ns)
+
+ <State 59>: 3.5ns
+The critical path consists of the following:
+	bus write on port 'mem' (../telepathy/hlsSources/conv_layer.cpp:72) [218]  (3.5 ns)
+
+ <State 60>: 3.5ns
+The critical path consists of the following:
+	bus access on port 'mem' (../telepathy/hlsSources/conv_layer.cpp:72) [219]  (3.5 ns)
+
+ <State 61>: 3.5ns
+The critical path consists of the following:
+	bus access on port 'mem' (../telepathy/hlsSources/conv_layer.cpp:72) [219]  (3.5 ns)
+
+ <State 62>: 3.5ns
+The critical path consists of the following:
+	bus access on port 'mem' (../telepathy/hlsSources/conv_layer.cpp:72) [219]  (3.5 ns)
+
+ <State 63>: 3.5ns
+The critical path consists of the following:
+	bus access on port 'mem' (../telepathy/hlsSources/conv_layer.cpp:72) [219]  (3.5 ns)
+
+ <State 64>: 3.5ns
+The critical path consists of the following:
+	bus access on port 'mem' (../telepathy/hlsSources/conv_layer.cpp:72) [219]  (3.5 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+	State 38
+	State 39
+	State 40
+	State 41
+	State 42
+	State 43
+	State 44
+	State 45
+	State 46
+	State 47
+	State 48
+	State 49
+	State 50
+	State 51
+	State 52
+	State 53
+	State 54
+	State 55
+	State 56
+	State 57
+	State 58
+	State 59
+	State 60
+	State 61
+	State 62
+	State 63
+	State 64
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

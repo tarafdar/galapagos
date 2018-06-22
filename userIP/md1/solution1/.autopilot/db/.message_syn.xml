@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Messages>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1312" content="Analyzing design file &apos;../HMPI/mpi_app_benchmarks/HMPI_md/hls/md1.cpp&apos; ..." tag=""/>
+	<Message prefix="[HLS 200-40]" severity="WARNING" keynum="HLS_40_1378" content="../HMPI/mpi_app_benchmarks/HMPI_md/hls/md1.cpp:30:9: warning: &apos;RAND_MAX&apos; macro redefined
+#define RAND_MAX 2048
+        ^
+/usr/include/stdlib.h:128:9: note: previous definition is here
+#define RAND_MAX        2147483647
+        ^
+1 warning generated." tag=""/>
+	<Message prefix="[HLS 200-40]" severity="WARNING" keynum="HLS_40_1378" content="In file included from ../HMPI/mpi_app_benchmarks/HMPI_md/hls/md1.cpp:1:
+In file included from ../HMPI/mpi_app_benchmarks/HMPI_md/hls/md1.cpp:16:
+../HMPI/mpi_app_benchmarks/HMPI_md/hls/MPI.h:289:7: warning: expression result unused [-Wunused-value]
+  for(i ; i &lt; count*dataType ; i+= 8 ){
+      ^
+../HMPI/mpi_app_benchmarks/HMPI_md/hls/MPI.h:750:7: warning: expression result unused [-Wunused-value]
+  for(i ; i &lt;= (count/2)+1 ; i++){
+      ^
+../HMPI/mpi_app_benchmarks/HMPI_md/hls/MPI.h:585:9: warning: enumeration value &apos;SEND_DATA_FAILURE&apos; not handled in switch [-Wswitch]
+ switch(state){
+        ^
+3 warnings generated." tag=""/>
+	<Message prefix="[HLS 200-41]" severity="WARNING" keynum="HLS_41_1434" content="Resource core &apos;AXI4Stream&apos; on port &apos;&amp;stream_out&apos; is deprecated. Please use the interface directive to specify the AXI interface." tag=""/>
+	<Message prefix="[HLS 200-41]" severity="WARNING" keynum="HLS_41_1434" content="Resource core &apos;AXI4Stream&apos; on port &apos;&amp;stream_in&apos; is deprecated. Please use the interface directive to specify the AXI interface." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1465" content="Validating synthesis directives ..." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Checking Pragmas Time (s): cpu = 00:02:40 ; elapsed = 00:01:45 . Memory (MB): peak = 607.469 ; gain = 256.000 ; free physical = 17075 ; free virtual = 57228" tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Linking Time (s): cpu = 00:02:42 ; elapsed = 00:01:48 . Memory (MB): peak = 607.469 ; gain = 256.000 ; free physical = 17075 ; free virtual = 57228" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1467" content="Starting code transformations ..." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Standard Transforms Time (s): cpu = 00:02:45 ; elapsed = 00:01:51 . Memory (MB): peak = 609.648 ; gain = 258.180 ; free physical = 17049 ; free virtual = 57202" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1472" content="Checking synthesizability ..." tag=""/>
+	<Message prefix="[XFORM 203-602]" severity="INFO" keynum="794" content="Inlining function &apos;packet_to_envelope&apos; into &apos;MPI_Recv&apos; (../HMPI/mpi_app_benchmarks/HMPI_md/hls/MPI.h:1439) automatically." tag=""/>
+	<Message prefix="[XFORM 203-602]" severity="INFO" keynum="794" content="Inlining function &apos;envelope_to_packet&apos; into &apos;MPI_Recv&apos; (../HMPI/mpi_app_benchmarks/HMPI_md/hls/MPI.h:1524) automatically." tag=""/>
+	<Message prefix="[XFORM 203-602]" severity="INFO" keynum="794" content="Inlining function &apos;generic_isnan&lt;double&gt;&apos; into &apos;__isnan&apos; (/wrk/2018.1/nightly/2018_04_04_2188600/src/products/hls/hls_lib/hlsmath/src/c/isnandouble.cpp:6) automatically." tag=""/>
+	<Message prefix="[XFORM 203-602]" severity="INFO" keynum="794" content="Inlining function &apos;__isnan&apos; into &apos;std::isnan&lt;float&gt;&apos; (/opt/Xilinx/Vivado/2018.1/lnx64/tools/gcc/lib/gcc/x86_64-unknown-linux-gnu/4.6.3/../../../../include/c++/4.6.3/cmath:764) automatically." tag=""/>
+	<Message prefix="[XFORM 203-602]" severity="INFO" keynum="794" content="Inlining function &apos;fp_struct&lt;double&gt;::data&apos; into &apos;fp_struct&lt;double&gt;::to_double&apos; (/wrk/2018.1/nightly/2018_04_04_2188600/src/products/hls/src/technology/autopilot/header_files/utils/x_hls_utils.h:475) automatically." tag=""/>
+	<Message prefix="[XFORM 203-602]" severity="INFO" keynum="794" content="Inlining function &apos;fp_struct&lt;double&gt;::to_double&apos; into &apos;fp_struct&lt;double&gt;::to_ieee&apos; (/wrk/2018.1/nightly/2018_04_04_2188600/src/products/hls/src/technology/autopilot/header_files/utils/x_hls_utils.h:489) automatically." tag=""/>
+	<Message prefix="[XFORM 203-602]" severity="INFO" keynum="794" content="Inlining function &apos;fp_struct&lt;double&gt;::to_ieee&apos; into &apos;generic_copysign&lt;double&gt;&apos; (/wrk/2018.1/nightly/2018_04_04_2188600/src/products/hls/hls_lib/hlsmath/include/internaltmp/hls_copysign.h:13) automatically." tag=""/>
+	<Message prefix="[XFORM 203-602]" severity="INFO" keynum="794" content="Inlining function &apos;fp_struct&lt;double&gt;::__signbit&apos; into &apos;generic_floor&lt;double&gt;&apos; (/wrk/2018.1/nightly/2018_04_04_2188600/src/products/hls/hls_lib/hlsmath/include/internaltmp/hls_floor.h:18) automatically." tag=""/>
+	<Message prefix="[XFORM 203-602]" severity="INFO" keynum="794" content="Inlining function &apos;generic_copysign&lt;double&gt;&apos; into &apos;generic_floor&lt;double&gt;&apos; (/wrk/2018.1/nightly/2018_04_04_2188600/src/products/hls/hls_lib/hlsmath/include/internaltmp/hls_floor.h:21) automatically." tag=""/>
+	<Message prefix="[XFORM 203-602]" severity="INFO" keynum="794" content="Inlining function &apos;fp_struct&lt;double&gt;::data&apos; into &apos;generic_floor&lt;double&gt;&apos; (/wrk/2018.1/nightly/2018_04_04_2188600/src/products/hls/hls_lib/hlsmath/include/internaltmp/hls_floor.h:35) automatically." tag=""/>
+	<Message prefix="[XFORM 203-602]" severity="INFO" keynum="794" content="Inlining function &apos;fp_struct&lt;double&gt;::to_ieee&apos; into &apos;generic_floor&lt;double&gt;&apos; (/wrk/2018.1/nightly/2018_04_04_2188600/src/products/hls/hls_lib/hlsmath/include/internaltmp/hls_floor.h:39) automatically." tag=""/>
+	<Message prefix="[XFORM 203-602]" severity="INFO" keynum="794" content="Inlining function &apos;fp_struct&lt;double&gt;::__signbit&apos; into &apos;generic_ceil&lt;double&gt;&apos; (/wrk/2018.1/nightly/2018_04_04_2188600/src/products/hls/hls_lib/hlsmath/include/internaltmp/hls_ceil.h:20) automatically." tag=""/>
+	<Message prefix="[XFORM 203-602]" severity="INFO" keynum="794" content="Inlining function &apos;generic_copysign&lt;double&gt;&apos; into &apos;generic_ceil&lt;double&gt;&apos; (/wrk/2018.1/nightly/2018_04_04_2188600/src/products/hls/hls_lib/hlsmath/include/internaltmp/hls_ceil.h:23) automatically." tag=""/>
+	<Message prefix="[XFORM 203-602]" severity="INFO" keynum="794" content="Inlining function &apos;fp_struct&lt;double&gt;::data&apos; into &apos;generic_ceil&lt;double&gt;&apos; (/wrk/2018.1/nightly/2018_04_04_2188600/src/products/hls/hls_lib/hlsmath/include/internaltmp/hls_ceil.h:37) automatically." tag=""/>
+	<Message prefix="[XFORM 203-602]" severity="INFO" keynum="794" content="Inlining function &apos;fp_struct&lt;double&gt;::to_ieee&apos; into &apos;generic_ceil&lt;double&gt;&apos; (/wrk/2018.1/nightly/2018_04_04_2188600/src/products/hls/hls_lib/hlsmath/include/internaltmp/hls_ceil.h:41) automatically." tag=""/>
+	<Message prefix="[XFORM 203-602]" severity="INFO" keynum="794" content="Inlining function &apos;std::isnan&lt;float&gt;&apos; into &apos;roundInt&apos; (../HMPI/mpi_app_benchmarks/HMPI_md/hls/md1.cpp:54) automatically." tag=""/>
+	<Message prefix="[XFORM 203-602]" severity="INFO" keynum="794" content="Inlining function &apos;floor&apos; into &apos;roundInt&apos; (../HMPI/mpi_app_benchmarks/HMPI_md/hls/md1.cpp:70) automatically." tag=""/>
+	<Message prefix="[XFORM 203-602]" severity="INFO" keynum="794" content="Inlining function &apos;ceil&apos; into &apos;roundInt&apos; (../HMPI/mpi_app_benchmarks/HMPI_md/hls/md1.cpp:84) automatically." tag=""/>
+	<Message prefix="[XFORM 203-602]" severity="INFO" keynum="794" content="Inlining function &apos;envelope_to_packet&apos; into &apos;MPI_Send&apos; (../HMPI/mpi_app_benchmarks/HMPI_md/hls/MPI.h:605) automatically." tag=""/>
+	<Message prefix="[XFORM 203-602]" severity="INFO" keynum="794" content="Inlining function &apos;MPI_Init&apos; into &apos;md1&apos; (../HMPI/mpi_app_benchmarks/HMPI_md/hls/md1.cpp:294) automatically." tag=""/>
+	<Message prefix="[XFORM 203-602]" severity="INFO" keynum="794" content="Inlining function &apos;MPI_Finalize&apos; into &apos;md1&apos; (../HMPI/mpi_app_benchmarks/HMPI_md/hls/md1.cpp:323) automatically." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Checking Synthesizability Time (s): cpu = 00:02:46 ; elapsed = 00:01:52 . Memory (MB): peak = 609.648 ; gain = 258.180 ; free physical = 17024 ; free virtual = 57177" tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Pre-synthesis Time (s): cpu = 00:02:48 ; elapsed = 00:01:54 . Memory (MB): peak = 609.648 ; gain = 258.180 ; free physical = 16982 ; free virtual = 57135" tag=""/>
+	<Message prefix="[XFORM 203-561]" severity="WARNING" keynum="788" content="&apos;Loop-1&apos; (../HMPI/mpi_app_benchmarks/HMPI_md/hls/md1.cpp:309:9) in function &apos;md1&apos; is an infinite loop." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Architecture Synthesis Time (s): cpu = 00:02:49 ; elapsed = 00:01:55 . Memory (MB): peak = 609.648 ; gain = 258.180 ; free physical = 16985 ; free virtual = 57138" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1317" content="Starting hardware synthesis ..." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1385" content="Synthesizing &apos;md1&apos; ..." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="61" content="Cannot apply resource assignment of &apos;AXI4Stream&apos;: &apos;stream_out_V&apos; does not exist or is optimized away." tag=""/>
+	<Message prefix="[SYN 201-303]" severity="WARNING" keynum="61" content="Cannot apply resource assignment of &apos;AXI4Stream&apos;: &apos;stream_in_V&apos; does not exist or is optimized away." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1477" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-42]" severity="INFO" keynum="HLS_42_1438" content="-- Implementing module &apos;md1&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1478" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="139" content="Starting scheduling ..." tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="138" content="Finished scheduling." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 33.62 seconds; current allocated memory: 265.080 MB." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="439" content="Starting micro-architecture generation ..." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="211" content="Performing variable lifetime analysis." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="210" content="Exploring resource sharing." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="206" content="Binding ..." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="438" content="Finished micro-architecture generation." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.08 seconds; current allocated memory: 265.139 MB." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1483" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1484" content="-- Generating RTL for module &apos;md1&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1485" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;md1/id_V&apos; to &apos;ap_none&apos;." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on function &apos;md1&apos; to &apos;ap_ctrl_none&apos;." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="375" content="Global scalar &apos;id_in_V&apos; will not be exposed as RTL port." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="375" content="Global scalar &apos;world_rank&apos; will not be exposed as RTL port." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="375" content="Global scalar &apos;processorCount&apos; will not be exposed as RTL port." tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="369" content="Finished creating RTL model for &apos;md1&apos;." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.06 seconds; current allocated memory: 265.207 MB." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished generating all RTL models Time (s): cpu = 00:02:49 ; elapsed = 00:01:55 . Memory (MB): peak = 609.648 ; gain = 258.180 ; free physical = 16985 ; free virtual = 57138" tag=""/>
+	<Message prefix="[SYSC 207-301]" severity="INFO" keynum="SYSC_301_1065" content="Generating SystemC RTL for md1." tag=""/>
+	<Message prefix="[VHDL 208-304]" severity="INFO" keynum="VHDL_304_1066" content="Generating VHDL RTL for md1." tag=""/>
+	<Message prefix="[VLOG 209-307]" severity="INFO" keynum="VLOG_307_1067" content="Generating Verilog RTL for md1." tag=""/>
+</Messages>

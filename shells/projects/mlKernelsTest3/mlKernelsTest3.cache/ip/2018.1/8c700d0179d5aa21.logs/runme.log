@@ -1,0 +1,674 @@
+
+*** Running vivado
+    with args -log pr_application_bridge_inst_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source pr_application_bridge_inst_0.tcl
+
+
+****** Vivado v2018.1 (64-bit)
+  **** SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018
+  **** IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source pr_application_bridge_inst_0.tcl -notrace
+Command: synth_design -top pr_application_bridge_inst_0 -part xcku115-flva1517-2-e -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xcku115'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcku115'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 9369 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1372.832 ; gain = 80.000 ; free physical = 15495 ; free virtual = 57351
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'pr_application_bridge_inst_0' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest3/1/1.srcs/sources_1/bd/pr/ip/pr_application_bridge_inst_0/synth/pr_application_bridge_inst_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'application_bridge_top' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest3/1/1.srcs/sources_1/bd/pr/ipshared/1c5a/hdl/verilog/application_bridge_top.v:9]
+	Parameter RESET_ACTIVE_LOW bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'application_bridge' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest3/1/1.srcs/sources_1/bd/pr/ipshared/1c5a/hdl/verilog/application_bridge.v:12]
+INFO: [Synth 8-6157] synthesizing module 'net_to_app' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest3/1/1.srcs/sources_1/bd/pr/ipshared/1c5a/hdl/verilog/net_to_app.v:10]
+	Parameter ap_ST_fsm_pp0_stage0 bound to: 1'b1 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest3/1/1.srcs/sources_1/bd/pr/ipshared/1c5a/hdl/verilog/net_to_app.v:50]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest3/1/1.srcs/sources_1/bd/pr/ipshared/1c5a/hdl/verilog/net_to_app.v:454]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest3/1/1.srcs/sources_1/bd/pr/ipshared/1c5a/hdl/verilog/net_to_app.v:456]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest3/1/1.srcs/sources_1/bd/pr/ipshared/1c5a/hdl/verilog/net_to_app.v:458]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest3/1/1.srcs/sources_1/bd/pr/ipshared/1c5a/hdl/verilog/net_to_app.v:460]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest3/1/1.srcs/sources_1/bd/pr/ipshared/1c5a/hdl/verilog/net_to_app.v:482]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest3/1/1.srcs/sources_1/bd/pr/ipshared/1c5a/hdl/verilog/net_to_app.v:500]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest3/1/1.srcs/sources_1/bd/pr/ipshared/1c5a/hdl/verilog/net_to_app.v:506]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest3/1/1.srcs/sources_1/bd/pr/ipshared/1c5a/hdl/verilog/net_to_app.v:512]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest3/1/1.srcs/sources_1/bd/pr/ipshared/1c5a/hdl/verilog/net_to_app.v:518]
+INFO: [Synth 8-6155] done synthesizing module 'net_to_app' (1#1) [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest3/1/1.srcs/sources_1/bd/pr/ipshared/1c5a/hdl/verilog/net_to_app.v:10]
+INFO: [Synth 8-6157] synthesizing module 'app_to_net' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest3/1/1.srcs/sources_1/bd/pr/ipshared/1c5a/hdl/verilog/app_to_net.v:10]
+	Parameter ap_ST_fsm_pp0_stage0 bound to: 1'b1 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest3/1/1.srcs/sources_1/bd/pr/ipshared/1c5a/hdl/verilog/app_to_net.v:50]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest3/1/1.srcs/sources_1/bd/pr/ipshared/1c5a/hdl/verilog/app_to_net.v:548]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest3/1/1.srcs/sources_1/bd/pr/ipshared/1c5a/hdl/verilog/app_to_net.v:550]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest3/1/1.srcs/sources_1/bd/pr/ipshared/1c5a/hdl/verilog/app_to_net.v:552]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest3/1/1.srcs/sources_1/bd/pr/ipshared/1c5a/hdl/verilog/app_to_net.v:554]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest3/1/1.srcs/sources_1/bd/pr/ipshared/1c5a/hdl/verilog/app_to_net.v:556]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest3/1/1.srcs/sources_1/bd/pr/ipshared/1c5a/hdl/verilog/app_to_net.v:592]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest3/1/1.srcs/sources_1/bd/pr/ipshared/1c5a/hdl/verilog/app_to_net.v:598]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest3/1/1.srcs/sources_1/bd/pr/ipshared/1c5a/hdl/verilog/app_to_net.v:604]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest3/1/1.srcs/sources_1/bd/pr/ipshared/1c5a/hdl/verilog/app_to_net.v:610]
+INFO: [Synth 8-6155] done synthesizing module 'app_to_net' (2#1) [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest3/1/1.srcs/sources_1/bd/pr/ipshared/1c5a/hdl/verilog/app_to_net.v:10]
+INFO: [Synth 8-4471] merging register 'net_to_app_U0_ap_start_reg' into 'app_to_net_U0_ap_start_reg' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest3/1/1.srcs/sources_1/bd/pr/ipshared/1c5a/hdl/verilog/application_bridge.v:76]
+WARNING: [Synth 8-6014] Unused sequential element net_to_app_U0_ap_start_reg was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest3/1/1.srcs/sources_1/bd/pr/ipshared/1c5a/hdl/verilog/application_bridge.v:76]
+INFO: [Synth 8-6155] done synthesizing module 'application_bridge' (3#1) [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest3/1/1.srcs/sources_1/bd/pr/ipshared/1c5a/hdl/verilog/application_bridge.v:12]
+INFO: [Synth 8-6157] synthesizing module 'application_bridge_from_app_V_if' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest3/1/1.srcs/sources_1/bd/pr/ipshared/1c5a/hdl/verilog/application_bridge_from_app_V_if.v:11]
+INFO: [Synth 8-6157] synthesizing module 'application_bridge_from_app_V_reg_slice' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest3/1/1.srcs/sources_1/bd/pr/ipshared/1c5a/hdl/verilog/application_bridge_from_app_V_if.v:74]
+	Parameter N bound to: 129 - type: integer 
+	Parameter ZERO bound to: 2'b10 
+	Parameter ONE bound to: 2'b11 
+	Parameter TWO bound to: 2'b01 
+INFO: [Synth 8-6155] done synthesizing module 'application_bridge_from_app_V_reg_slice' (4#1) [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest3/1/1.srcs/sources_1/bd/pr/ipshared/1c5a/hdl/verilog/application_bridge_from_app_V_if.v:74]
+INFO: [Synth 8-6155] done synthesizing module 'application_bridge_from_app_V_if' (5#1) [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest3/1/1.srcs/sources_1/bd/pr/ipshared/1c5a/hdl/verilog/application_bridge_from_app_V_if.v:11]
+INFO: [Synth 8-6157] synthesizing module 'application_bridge_from_net_V_if' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest3/1/1.srcs/sources_1/bd/pr/ipshared/1c5a/hdl/verilog/application_bridge_from_net_V_if.v:11]
+INFO: [Synth 8-6157] synthesizing module 'application_bridge_from_net_V_reg_slice' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest3/1/1.srcs/sources_1/bd/pr/ipshared/1c5a/hdl/verilog/application_bridge_from_net_V_if.v:70]
+	Parameter N bound to: 81 - type: integer 
+	Parameter ZERO bound to: 2'b10 
+	Parameter ONE bound to: 2'b11 
+	Parameter TWO bound to: 2'b01 
+INFO: [Synth 8-6155] done synthesizing module 'application_bridge_from_net_V_reg_slice' (6#1) [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest3/1/1.srcs/sources_1/bd/pr/ipshared/1c5a/hdl/verilog/application_bridge_from_net_V_if.v:70]
+INFO: [Synth 8-6155] done synthesizing module 'application_bridge_from_net_V_if' (7#1) [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest3/1/1.srcs/sources_1/bd/pr/ipshared/1c5a/hdl/verilog/application_bridge_from_net_V_if.v:11]
+INFO: [Synth 8-6157] synthesizing module 'application_bridge_to_app_V_if' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest3/1/1.srcs/sources_1/bd/pr/ipshared/1c5a/hdl/verilog/application_bridge_to_app_V_if.v:11]
+INFO: [Synth 8-6157] synthesizing module 'application_bridge_to_app_V_reg_slice' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest3/1/1.srcs/sources_1/bd/pr/ipshared/1c5a/hdl/verilog/application_bridge_to_app_V_if.v:74]
+	Parameter N bound to: 129 - type: integer 
+	Parameter ZERO bound to: 2'b10 
+	Parameter ONE bound to: 2'b11 
+	Parameter TWO bound to: 2'b01 
+INFO: [Synth 8-6155] done synthesizing module 'application_bridge_to_app_V_reg_slice' (8#1) [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest3/1/1.srcs/sources_1/bd/pr/ipshared/1c5a/hdl/verilog/application_bridge_to_app_V_if.v:74]
+INFO: [Synth 8-6155] done synthesizing module 'application_bridge_to_app_V_if' (9#1) [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest3/1/1.srcs/sources_1/bd/pr/ipshared/1c5a/hdl/verilog/application_bridge_to_app_V_if.v:11]
+INFO: [Synth 8-6157] synthesizing module 'application_bridge_to_net_V_if' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest3/1/1.srcs/sources_1/bd/pr/ipshared/1c5a/hdl/verilog/application_bridge_to_net_V_if.v:11]
+INFO: [Synth 8-6157] synthesizing module 'application_bridge_to_net_V_reg_slice' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest3/1/1.srcs/sources_1/bd/pr/ipshared/1c5a/hdl/verilog/application_bridge_to_net_V_if.v:70]
+	Parameter N bound to: 81 - type: integer 
+	Parameter ZERO bound to: 2'b10 
+	Parameter ONE bound to: 2'b11 
+	Parameter TWO bound to: 2'b01 
+INFO: [Synth 8-6155] done synthesizing module 'application_bridge_to_net_V_reg_slice' (10#1) [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest3/1/1.srcs/sources_1/bd/pr/ipshared/1c5a/hdl/verilog/application_bridge_to_net_V_if.v:70]
+INFO: [Synth 8-6155] done synthesizing module 'application_bridge_to_net_V_if' (11#1) [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest3/1/1.srcs/sources_1/bd/pr/ipshared/1c5a/hdl/verilog/application_bridge_to_net_V_if.v:11]
+INFO: [Synth 8-6157] synthesizing module 'application_bridge_ap_rst_if' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest3/1/1.srcs/sources_1/bd/pr/ipshared/1c5a/hdl/verilog/application_bridge_ap_rst_if.v:10]
+	Parameter RESET_ACTIVE_LOW bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'application_bridge_ap_rst_if' (12#1) [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest3/1/1.srcs/sources_1/bd/pr/ipshared/1c5a/hdl/verilog/application_bridge_ap_rst_if.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'application_bridge_top' (13#1) [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest3/1/1.srcs/sources_1/bd/pr/ipshared/1c5a/hdl/verilog/application_bridge_top.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'pr_application_bridge_inst_0' (14#1) [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest3/1/1.srcs/sources_1/bd/pr/ip/pr_application_bridge_inst_0/synth/pr_application_bridge_inst_0.v:57]
+WARNING: [Synth 8-3331] design app_to_net has unconnected port from_app_V_dout[128]
+WARNING: [Synth 8-3331] design app_to_net has unconnected port from_app_V_dout[127]
+WARNING: [Synth 8-3331] design app_to_net has unconnected port from_app_V_dout[126]
+WARNING: [Synth 8-3331] design app_to_net has unconnected port from_app_V_dout[125]
+WARNING: [Synth 8-3331] design app_to_net has unconnected port from_app_V_dout[124]
+WARNING: [Synth 8-3331] design app_to_net has unconnected port from_app_V_dout[123]
+WARNING: [Synth 8-3331] design app_to_net has unconnected port from_app_V_dout[122]
+WARNING: [Synth 8-3331] design app_to_net has unconnected port from_app_V_dout[121]
+WARNING: [Synth 8-3331] design app_to_net has unconnected port from_app_V_dout[120]
+WARNING: [Synth 8-3331] design app_to_net has unconnected port from_app_V_dout[119]
+WARNING: [Synth 8-3331] design app_to_net has unconnected port from_app_V_dout[118]
+WARNING: [Synth 8-3331] design app_to_net has unconnected port from_app_V_dout[117]
+WARNING: [Synth 8-3331] design app_to_net has unconnected port from_app_V_dout[116]
+WARNING: [Synth 8-3331] design app_to_net has unconnected port from_app_V_dout[115]
+WARNING: [Synth 8-3331] design app_to_net has unconnected port from_app_V_dout[114]
+WARNING: [Synth 8-3331] design app_to_net has unconnected port from_app_V_dout[113]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 1417.441 ; gain = 124.609 ; free physical = 15376 ; free virtual = 57232
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 1417.441 ; gain = 124.609 ; free physical = 15342 ; free virtual = 57198
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 1417.441 ; gain = 124.609 ; free physical = 15342 ; free virtual = 57198
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xcku115-flva1517-2-e
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest3/1/1.srcs/sources_1/bd/pr/ip/pr_application_bridge_inst_0/constraints/application_bridge_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest3/1/1.srcs/sources_1/bd/pr/ip/pr_application_bridge_inst_0/constraints/application_bridge_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest3/1/1.runs/pr_application_bridge_inst_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest3/1/1.runs/pr_application_bridge_inst_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.09 . Memory (MB): peak = 2116.773 ; gain = 0.000 ; free physical = 12928 ; free virtual = 54785
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:39 ; elapsed = 00:00:53 . Memory (MB): peak = 2116.773 ; gain = 823.941 ; free physical = 12792 ; free virtual = 54652
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xcku115-flva1517-2-e
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:39 ; elapsed = 00:00:53 . Memory (MB): peak = 2116.773 ; gain = 823.941 ; free physical = 12792 ; free virtual = 54651
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for inst. (constraint file  /home/tarafdar/workDir/galapagos/projects/mlKernelsTest3/1/1.runs/pr_application_bridge_inst_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:39 ; elapsed = 00:00:53 . Memory (MB): peak = 2116.773 ; gain = 823.941 ; free physical = 12789 ; free virtual = 54648
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3936] Found unconnected internal register 'dest_V_reg' and it is trimmed from '16' to '8' bits. [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest3/1/1.srcs/sources_1/bd/pr/ipshared/1c5a/hdl/verilog/net_to_app.v:219]
+WARNING: [Synth 8-3936] Found unconnected internal register 'tmp28_reg_717_reg' and it is trimmed from '81' to '72' bits. [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest3/1/1.srcs/sources_1/bd/pr/ipshared/1c5a/hdl/verilog/net_to_app.v:247]
+INFO: [Synth 8-5546] ROM "tmp_s_fu_542_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_9_fu_518_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_7_fu_506_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_6_fu_500_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "tmp_11_fu_530_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-4471] merging register 'tmp_last_V_1_reg_757_reg[0:0]' into 'app_packet_in_last_V_reg[0:0]' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest3/1/1.srcs/sources_1/bd/pr/ipshared/1c5a/hdl/verilog/app_to_net.v:250]
+WARNING: [Synth 8-6014] Unused sequential element tmp_last_V_1_reg_757_reg was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest3/1/1.srcs/sources_1/bd/pr/ipshared/1c5a/hdl/verilog/app_to_net.v:250]
+INFO: [Synth 8-5544] ROM "tmp_s_fu_573_p2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "tmp_8_fu_579_p2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "ap_phi_mux_byte_counter_1_new_s_phi_fu_177_p12" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'application_bridge_from_app_V_reg_slice'
+INFO: [Synth 8-5544] ROM "next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'application_bridge_from_net_V_reg_slice'
+INFO: [Synth 8-5544] ROM "next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'application_bridge_to_app_V_reg_slice'
+INFO: [Synth 8-5544] ROM "next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'application_bridge_to_net_V_reg_slice'
+INFO: [Synth 8-5544] ROM "next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'application_bridge_from_app_V_reg_slice'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'application_bridge_from_net_V_reg_slice'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'application_bridge_to_app_V_reg_slice'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'application_bridge_to_net_V_reg_slice'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:40 ; elapsed = 00:00:54 . Memory (MB): peak = 2116.773 ; gain = 823.941 ; free physical = 12734 ; free virtual = 54596
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   9 Input     32 Bit       Adders := 2     
++---Registers : 
+	              129 Bit    Registers := 4     
+	               81 Bit    Registers := 4     
+	               72 Bit    Registers := 2     
+	               64 Bit    Registers := 4     
+	               35 Bit    Registers := 1     
+	               32 Bit    Registers := 2     
+	               16 Bit    Registers := 1     
+	                8 Bit    Registers := 8     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 8     
+	                1 Bit    Registers := 27    
++---Muxes : 
+	   2 Input    129 Bit        Muxes := 3     
+	   2 Input     81 Bit        Muxes := 5     
+	   2 Input     64 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 4     
+	   3 Input     32 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 41    
+	   3 Input      2 Bit        Muxes := 14    
+	   5 Input      2 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 33    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module net_to_app 
+Detailed RTL Component Info : 
++---Adders : 
+	   9 Input     32 Bit       Adders := 1     
++---Registers : 
+	               72 Bit    Registers := 1     
+	               64 Bit    Registers := 1     
+	               35 Bit    Registers := 1     
+	               32 Bit    Registers := 1     
+	                8 Bit    Registers := 3     
+	                5 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 9     
++---Muxes : 
+	   2 Input    129 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 12    
+Module app_to_net 
+Detailed RTL Component Info : 
++---Adders : 
+	   9 Input     32 Bit       Adders := 1     
++---Registers : 
+	               72 Bit    Registers := 1     
+	               64 Bit    Registers := 3     
+	               32 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	                8 Bit    Registers := 5     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 13    
++---Muxes : 
+	   2 Input     81 Bit        Muxes := 3     
+	   2 Input     64 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 3     
+	   3 Input     32 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 9     
+Module application_bridge 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module application_bridge_from_app_V_reg_slice 
+Detailed RTL Component Info : 
++---Registers : 
+	              129 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    129 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 10    
+	   3 Input      2 Bit        Muxes := 3     
+	   5 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module application_bridge_from_net_V_reg_slice 
+Detailed RTL Component Info : 
++---Registers : 
+	               81 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     81 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 10    
+	   3 Input      2 Bit        Muxes := 3     
+	   5 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module application_bridge_to_app_V_reg_slice 
+Detailed RTL Component Info : 
++---Registers : 
+	              129 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    129 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 10    
+	   3 Input      2 Bit        Muxes := 3     
+	   5 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module application_bridge_to_net_V_reg_slice 
+Detailed RTL Component Info : 
++---Registers : 
+	               81 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     81 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 10    
+	   3 Input      2 Bit        Muxes := 3     
+	   5 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 5520 (col length:120)
+BRAMs: 4320 (col length: RAMB18 240 RAMB36 120)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-4471] merging register 'application_bridge_U/app_to_net_U0/ap_CS_fsm_reg[0:0]' into 'application_bridge_U/net_to_app_U0/ap_CS_fsm_reg[0:0]' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest3/1/1.srcs/sources_1/bd/pr/ipshared/1c5a/hdl/verilog/app_to_net.v:179]
+WARNING: [Synth 8-6014] Unused sequential element application_bridge_U/app_to_net_U0/ap_CS_fsm_reg was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest3/1/1.srcs/sources_1/bd/pr/ipshared/1c5a/hdl/verilog/app_to_net.v:179]
+WARNING: [Synth 8-3936] Found unconnected internal register 'application_bridge_from_app_V_if_U/rs/data_p1_reg' and it is trimmed from '129' to '113' bits. [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest3/1/1.srcs/sources_1/bd/pr/ipshared/1c5a/hdl/verilog/application_bridge_from_app_V_if.v:107]
+WARNING: [Synth 8-3936] Found unconnected internal register 'application_bridge_from_app_V_if_U/rs/data_p2_reg' and it is trimmed from '129' to '113' bits. [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest3/1/1.srcs/sources_1/bd/pr/ipshared/1c5a/hdl/verilog/application_bridge_from_app_V_if.v:128]
+INFO: [Synth 8-5546] ROM "application_bridge_U/net_to_app_U0/tmp_9_fu_518_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "application_bridge_U/net_to_app_U0/tmp_11_fu_530_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "application_bridge_U/net_to_app_U0/tmp_7_fu_506_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "application_bridge_U/net_to_app_U0/tmp_6_fu_500_p2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "application_bridge_U/net_to_app_U0/tmp_s_fu_542_p2" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-3331] design application_bridge_top has unconnected port from_app_V_TUSER[39]
+WARNING: [Synth 8-3331] design application_bridge_top has unconnected port from_app_V_TUSER[38]
+WARNING: [Synth 8-3331] design application_bridge_top has unconnected port from_app_V_TUSER[37]
+WARNING: [Synth 8-3331] design application_bridge_top has unconnected port from_app_V_TUSER[36]
+WARNING: [Synth 8-3331] design application_bridge_top has unconnected port from_app_V_TUSER[35]
+WARNING: [Synth 8-3331] design application_bridge_top has unconnected port from_app_V_TUSER[34]
+WARNING: [Synth 8-3331] design application_bridge_top has unconnected port from_app_V_TUSER[33]
+WARNING: [Synth 8-3331] design application_bridge_top has unconnected port from_app_V_TUSER[32]
+WARNING: [Synth 8-3331] design application_bridge_top has unconnected port from_app_V_TUSER[31]
+WARNING: [Synth 8-3331] design application_bridge_top has unconnected port from_app_V_TUSER[30]
+WARNING: [Synth 8-3331] design application_bridge_top has unconnected port from_app_V_TUSER[29]
+WARNING: [Synth 8-3331] design application_bridge_top has unconnected port from_app_V_TUSER[28]
+WARNING: [Synth 8-3331] design application_bridge_top has unconnected port from_app_V_TUSER[27]
+WARNING: [Synth 8-3331] design application_bridge_top has unconnected port from_app_V_TUSER[26]
+WARNING: [Synth 8-3331] design application_bridge_top has unconnected port from_app_V_TUSER[25]
+WARNING: [Synth 8-3331] design application_bridge_top has unconnected port from_app_V_TUSER[24]
+INFO: [Synth 8-3886] merging instance 'inst/application_bridge_U/app_to_net_U0/p_Result_s_12_reg_785_reg[60]' (FDE) to 'inst/application_bridge_U/app_to_net_U0/p_Result_s_12_reg_785_reg[61]'
+INFO: [Synth 8-3886] merging instance 'inst/application_bridge_U/app_to_net_U0/p_Result_s_12_reg_785_reg[61]' (FDE) to 'inst/application_bridge_U/app_to_net_U0/p_Result_s_12_reg_785_reg[62]'
+INFO: [Synth 8-3886] merging instance 'inst/application_bridge_U/app_to_net_U0/p_Result_s_12_reg_785_reg[62]' (FDE) to 'inst/application_bridge_U/app_to_net_U0/p_Result_s_12_reg_785_reg[63]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\application_bridge_U/app_to_net_U0/p_Result_s_12_reg_785_reg[63] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\application_bridge_U/net_to_app_U0/user_V_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\application_bridge_U/net_to_app_U0/user_V_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\application_bridge_U/net_to_app_U0/user_V_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\application_bridge_U/net_to_app_U0/user_V_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\application_bridge_U/net_to_app_U0/user_V_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\application_bridge_U/net_to_app_U0/user_V_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\application_bridge_U/net_to_app_U0/user_V_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\application_bridge_U/net_to_app_U0/user_V_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\application_bridge_U/net_to_app_U0/user_V_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\application_bridge_U/net_to_app_U0/user_V_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\application_bridge_U/net_to_app_U0/user_V_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\application_bridge_U/net_to_app_U0/user_V_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\application_bridge_U/net_to_app_U0/user_V_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\application_bridge_U/net_to_app_U0/user_V_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\application_bridge_U/net_to_app_U0/user_V_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\application_bridge_U/net_to_app_U0/user_V_reg[20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\application_bridge_U/net_to_app_U0/user_V_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\application_bridge_U/net_to_app_U0/user_V_reg[22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\application_bridge_U/net_to_app_U0/user_V_reg[23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\application_bridge_U/net_to_app_U0/user_V_reg[24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\application_bridge_U/net_to_app_U0/user_V_reg[25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\application_bridge_U/net_to_app_U0/user_V_reg[26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\application_bridge_U/net_to_app_U0/user_V_reg[27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\application_bridge_U/net_to_app_U0/user_V_reg[28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\application_bridge_U/net_to_app_U0/user_V_reg[29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\application_bridge_U/net_to_app_U0/user_V_reg[30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\application_bridge_U/net_to_app_U0/user_V_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\application_bridge_U/net_to_app_U0/user_V_reg[32] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\application_bridge_U/net_to_app_U0/user_V_reg[33] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\application_bridge_U/net_to_app_U0/user_V_reg[34] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\application_bridge_U/net_to_app_U0/user_V_reg[35] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\application_bridge_U/net_to_app_U0/user_V_reg[36] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\application_bridge_U/net_to_app_U0/user_V_reg[37] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\application_bridge_U/net_to_app_U0/user_V_reg[38] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\application_bridge_U/net_to_app_U0/user_V_reg[39] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\application_bridge_U/net_to_app_U0/ap_done_reg_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\application_bridge_U/app_to_net_U0/ap_done_reg_reg )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\application_bridge_U/net_to_app_U0/ap_CS_fsm_reg[0] )
+INFO: [Synth 8-3886] merging instance 'inst/application_bridge_to_app_V_if_U/rs/data_p2_reg[94]' (FDE) to 'inst/application_bridge_to_app_V_if_U/rs/data_p2_reg[95]'
+INFO: [Synth 8-3886] merging instance 'inst/application_bridge_to_app_V_if_U/rs/data_p2_reg[95]' (FDE) to 'inst/application_bridge_to_app_V_if_U/rs/data_p2_reg[96]'
+INFO: [Synth 8-3886] merging instance 'inst/application_bridge_to_app_V_if_U/rs/data_p2_reg[96]' (FDE) to 'inst/application_bridge_to_app_V_if_U/rs/data_p2_reg[97]'
+INFO: [Synth 8-3886] merging instance 'inst/application_bridge_to_app_V_if_U/rs/data_p2_reg[97]' (FDE) to 'inst/application_bridge_to_app_V_if_U/rs/data_p2_reg[98]'
+INFO: [Synth 8-3886] merging instance 'inst/application_bridge_to_app_V_if_U/rs/data_p2_reg[98]' (FDE) to 'inst/application_bridge_to_app_V_if_U/rs/data_p2_reg[99]'
+INFO: [Synth 8-3886] merging instance 'inst/application_bridge_to_app_V_if_U/rs/data_p2_reg[99]' (FDE) to 'inst/application_bridge_to_app_V_if_U/rs/data_p2_reg[100]'
+INFO: [Synth 8-3886] merging instance 'inst/application_bridge_to_app_V_if_U/rs/data_p2_reg[100]' (FDE) to 'inst/application_bridge_to_app_V_if_U/rs/data_p2_reg[101]'
+INFO: [Synth 8-3886] merging instance 'inst/application_bridge_to_app_V_if_U/rs/data_p2_reg[101]' (FDE) to 'inst/application_bridge_to_app_V_if_U/rs/data_p2_reg[102]'
+INFO: [Synth 8-3886] merging instance 'inst/application_bridge_to_app_V_if_U/rs/data_p2_reg[102]' (FDE) to 'inst/application_bridge_to_app_V_if_U/rs/data_p2_reg[103]'
+INFO: [Synth 8-3886] merging instance 'inst/application_bridge_to_app_V_if_U/rs/data_p2_reg[103]' (FDE) to 'inst/application_bridge_to_app_V_if_U/rs/data_p2_reg[104]'
+INFO: [Synth 8-3886] merging instance 'inst/application_bridge_to_app_V_if_U/rs/data_p2_reg[104]' (FDE) to 'inst/application_bridge_to_app_V_if_U/rs/data_p2_reg[105]'
+INFO: [Synth 8-3886] merging instance 'inst/application_bridge_to_app_V_if_U/rs/data_p2_reg[105]' (FDE) to 'inst/application_bridge_to_app_V_if_U/rs/data_p2_reg[106]'
+INFO: [Synth 8-3886] merging instance 'inst/application_bridge_to_app_V_if_U/rs/data_p2_reg[106]' (FDE) to 'inst/application_bridge_to_app_V_if_U/rs/data_p2_reg[107]'
+INFO: [Synth 8-3886] merging instance 'inst/application_bridge_to_app_V_if_U/rs/data_p2_reg[107]' (FDE) to 'inst/application_bridge_to_app_V_if_U/rs/data_p2_reg[108]'
+INFO: [Synth 8-3886] merging instance 'inst/application_bridge_to_app_V_if_U/rs/data_p2_reg[108]' (FDE) to 'inst/application_bridge_to_app_V_if_U/rs/data_p2_reg[109]'
+INFO: [Synth 8-3886] merging instance 'inst/application_bridge_to_app_V_if_U/rs/data_p2_reg[109]' (FDE) to 'inst/application_bridge_to_app_V_if_U/rs/data_p2_reg[110]'
+INFO: [Synth 8-3886] merging instance 'inst/application_bridge_to_app_V_if_U/rs/data_p2_reg[110]' (FDE) to 'inst/application_bridge_to_app_V_if_U/rs/data_p2_reg[111]'
+INFO: [Synth 8-3886] merging instance 'inst/application_bridge_to_app_V_if_U/rs/data_p2_reg[111]' (FDE) to 'inst/application_bridge_to_app_V_if_U/rs/data_p2_reg[112]'
+INFO: [Synth 8-3886] merging instance 'inst/application_bridge_to_app_V_if_U/rs/data_p2_reg[112]' (FDE) to 'inst/application_bridge_to_app_V_if_U/rs/data_p2_reg[113]'
+INFO: [Synth 8-3886] merging instance 'inst/application_bridge_to_app_V_if_U/rs/data_p2_reg[113]' (FDE) to 'inst/application_bridge_to_app_V_if_U/rs/data_p2_reg[114]'
+INFO: [Synth 8-3886] merging instance 'inst/application_bridge_to_app_V_if_U/rs/data_p2_reg[114]' (FDE) to 'inst/application_bridge_to_app_V_if_U/rs/data_p2_reg[115]'
+INFO: [Synth 8-3886] merging instance 'inst/application_bridge_to_app_V_if_U/rs/data_p2_reg[115]' (FDE) to 'inst/application_bridge_to_app_V_if_U/rs/data_p2_reg[116]'
+INFO: [Synth 8-3886] merging instance 'inst/application_bridge_to_app_V_if_U/rs/data_p2_reg[116]' (FDE) to 'inst/application_bridge_to_app_V_if_U/rs/data_p2_reg[117]'
+INFO: [Synth 8-3886] merging instance 'inst/application_bridge_to_app_V_if_U/rs/data_p2_reg[117]' (FDE) to 'inst/application_bridge_to_app_V_if_U/rs/data_p2_reg[118]'
+INFO: [Synth 8-3886] merging instance 'inst/application_bridge_to_app_V_if_U/rs/data_p2_reg[118]' (FDE) to 'inst/application_bridge_to_app_V_if_U/rs/data_p2_reg[119]'
+INFO: [Synth 8-3886] merging instance 'inst/application_bridge_to_app_V_if_U/rs/data_p2_reg[119]' (FDE) to 'inst/application_bridge_to_app_V_if_U/rs/data_p2_reg[120]'
+INFO: [Synth 8-3886] merging instance 'inst/application_bridge_to_app_V_if_U/rs/data_p2_reg[120]' (FDE) to 'inst/application_bridge_to_app_V_if_U/rs/data_p2_reg[121]'
+INFO: [Synth 8-3886] merging instance 'inst/application_bridge_to_app_V_if_U/rs/data_p2_reg[121]' (FDE) to 'inst/application_bridge_to_app_V_if_U/rs/data_p2_reg[122]'
+INFO: [Synth 8-3886] merging instance 'inst/application_bridge_to_app_V_if_U/rs/data_p2_reg[122]' (FDE) to 'inst/application_bridge_to_app_V_if_U/rs/data_p2_reg[123]'
+INFO: [Synth 8-3886] merging instance 'inst/application_bridge_to_app_V_if_U/rs/data_p2_reg[123]' (FDE) to 'inst/application_bridge_to_app_V_if_U/rs/data_p2_reg[124]'
+INFO: [Synth 8-3886] merging instance 'inst/application_bridge_to_app_V_if_U/rs/data_p2_reg[124]' (FDE) to 'inst/application_bridge_to_app_V_if_U/rs/data_p2_reg[125]'
+INFO: [Synth 8-3886] merging instance 'inst/application_bridge_to_app_V_if_U/rs/data_p2_reg[125]' (FDE) to 'inst/application_bridge_to_app_V_if_U/rs/data_p2_reg[126]'
+INFO: [Synth 8-3886] merging instance 'inst/application_bridge_to_app_V_if_U/rs/data_p2_reg[126]' (FDE) to 'inst/application_bridge_to_app_V_if_U/rs/data_p2_reg[127]'
+INFO: [Synth 8-3886] merging instance 'inst/application_bridge_to_app_V_if_U/rs/data_p2_reg[127]' (FDE) to 'inst/application_bridge_to_app_V_if_U/rs/data_p2_reg[128]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\application_bridge_to_app_V_if_U/rs/data_p2_reg[128] )
+INFO: [Synth 8-3886] merging instance 'inst/application_bridge_to_app_V_if_U/rs/data_p1_reg[94]' (FDE) to 'inst/application_bridge_to_app_V_if_U/rs/data_p1_reg[95]'
+INFO: [Synth 8-3886] merging instance 'inst/application_bridge_to_app_V_if_U/rs/data_p1_reg[95]' (FDE) to 'inst/application_bridge_to_app_V_if_U/rs/data_p1_reg[96]'
+INFO: [Synth 8-3886] merging instance 'inst/application_bridge_to_app_V_if_U/rs/data_p1_reg[96]' (FDE) to 'inst/application_bridge_to_app_V_if_U/rs/data_p1_reg[97]'
+INFO: [Synth 8-3886] merging instance 'inst/application_bridge_to_app_V_if_U/rs/data_p1_reg[97]' (FDE) to 'inst/application_bridge_to_app_V_if_U/rs/data_p1_reg[98]'
+INFO: [Synth 8-3886] merging instance 'inst/application_bridge_to_app_V_if_U/rs/data_p1_reg[98]' (FDE) to 'inst/application_bridge_to_app_V_if_U/rs/data_p1_reg[99]'
+INFO: [Synth 8-3886] merging instance 'inst/application_bridge_to_app_V_if_U/rs/data_p1_reg[99]' (FDE) to 'inst/application_bridge_to_app_V_if_U/rs/data_p1_reg[100]'
+INFO: [Synth 8-3886] merging instance 'inst/application_bridge_to_app_V_if_U/rs/data_p1_reg[100]' (FDE) to 'inst/application_bridge_to_app_V_if_U/rs/data_p1_reg[101]'
+INFO: [Synth 8-3886] merging instance 'inst/application_bridge_to_app_V_if_U/rs/data_p1_reg[101]' (FDE) to 'inst/application_bridge_to_app_V_if_U/rs/data_p1_reg[102]'
+INFO: [Synth 8-3886] merging instance 'inst/application_bridge_to_app_V_if_U/rs/data_p1_reg[102]' (FDE) to 'inst/application_bridge_to_app_V_if_U/rs/data_p1_reg[103]'
+INFO: [Synth 8-3886] merging instance 'inst/application_bridge_to_app_V_if_U/rs/data_p1_reg[103]' (FDE) to 'inst/application_bridge_to_app_V_if_U/rs/data_p1_reg[104]'
+INFO: [Synth 8-3886] merging instance 'inst/application_bridge_to_app_V_if_U/rs/data_p1_reg[104]' (FDE) to 'inst/application_bridge_to_app_V_if_U/rs/data_p1_reg[105]'
+INFO: [Synth 8-3886] merging instance 'inst/application_bridge_to_app_V_if_U/rs/data_p1_reg[105]' (FDE) to 'inst/application_bridge_to_app_V_if_U/rs/data_p1_reg[106]'
+INFO: [Synth 8-3886] merging instance 'inst/application_bridge_to_app_V_if_U/rs/data_p1_reg[106]' (FDE) to 'inst/application_bridge_to_app_V_if_U/rs/data_p1_reg[107]'
+INFO: [Synth 8-3886] merging instance 'inst/application_bridge_to_app_V_if_U/rs/data_p1_reg[107]' (FDE) to 'inst/application_bridge_to_app_V_if_U/rs/data_p1_reg[108]'
+INFO: [Synth 8-3886] merging instance 'inst/application_bridge_to_app_V_if_U/rs/data_p1_reg[108]' (FDE) to 'inst/application_bridge_to_app_V_if_U/rs/data_p1_reg[109]'
+INFO: [Synth 8-3886] merging instance 'inst/application_bridge_to_app_V_if_U/rs/data_p1_reg[109]' (FDE) to 'inst/application_bridge_to_app_V_if_U/rs/data_p1_reg[110]'
+INFO: [Synth 8-3886] merging instance 'inst/application_bridge_to_app_V_if_U/rs/data_p1_reg[110]' (FDE) to 'inst/application_bridge_to_app_V_if_U/rs/data_p1_reg[111]'
+INFO: [Synth 8-3886] merging instance 'inst/application_bridge_to_app_V_if_U/rs/data_p1_reg[111]' (FDE) to 'inst/application_bridge_to_app_V_if_U/rs/data_p1_reg[112]'
+INFO: [Synth 8-3886] merging instance 'inst/application_bridge_to_app_V_if_U/rs/data_p1_reg[112]' (FDE) to 'inst/application_bridge_to_app_V_if_U/rs/data_p1_reg[113]'
+INFO: [Synth 8-3886] merging instance 'inst/application_bridge_to_app_V_if_U/rs/data_p1_reg[113]' (FDE) to 'inst/application_bridge_to_app_V_if_U/rs/data_p1_reg[114]'
+INFO: [Synth 8-3886] merging instance 'inst/application_bridge_to_app_V_if_U/rs/data_p1_reg[114]' (FDE) to 'inst/application_bridge_to_app_V_if_U/rs/data_p1_reg[115]'
+INFO: [Synth 8-3886] merging instance 'inst/application_bridge_to_app_V_if_U/rs/data_p1_reg[115]' (FDE) to 'inst/application_bridge_to_app_V_if_U/rs/data_p1_reg[116]'
+INFO: [Synth 8-3886] merging instance 'inst/application_bridge_to_app_V_if_U/rs/data_p1_reg[116]' (FDE) to 'inst/application_bridge_to_app_V_if_U/rs/data_p1_reg[117]'
+INFO: [Synth 8-3886] merging instance 'inst/application_bridge_to_app_V_if_U/rs/data_p1_reg[117]' (FDE) to 'inst/application_bridge_to_app_V_if_U/rs/data_p1_reg[118]'
+INFO: [Synth 8-3886] merging instance 'inst/application_bridge_to_app_V_if_U/rs/data_p1_reg[118]' (FDE) to 'inst/application_bridge_to_app_V_if_U/rs/data_p1_reg[119]'
+INFO: [Synth 8-3886] merging instance 'inst/application_bridge_to_app_V_if_U/rs/data_p1_reg[119]' (FDE) to 'inst/application_bridge_to_app_V_if_U/rs/data_p1_reg[120]'
+INFO: [Synth 8-3886] merging instance 'inst/application_bridge_to_app_V_if_U/rs/data_p1_reg[120]' (FDE) to 'inst/application_bridge_to_app_V_if_U/rs/data_p1_reg[121]'
+INFO: [Synth 8-3886] merging instance 'inst/application_bridge_to_app_V_if_U/rs/data_p1_reg[121]' (FDE) to 'inst/application_bridge_to_app_V_if_U/rs/data_p1_reg[122]'
+INFO: [Synth 8-3886] merging instance 'inst/application_bridge_to_app_V_if_U/rs/data_p1_reg[122]' (FDE) to 'inst/application_bridge_to_app_V_if_U/rs/data_p1_reg[123]'
+INFO: [Synth 8-3886] merging instance 'inst/application_bridge_to_app_V_if_U/rs/data_p1_reg[123]' (FDE) to 'inst/application_bridge_to_app_V_if_U/rs/data_p1_reg[124]'
+INFO: [Synth 8-3886] merging instance 'inst/application_bridge_to_app_V_if_U/rs/data_p1_reg[124]' (FDE) to 'inst/application_bridge_to_app_V_if_U/rs/data_p1_reg[125]'
+INFO: [Synth 8-3886] merging instance 'inst/application_bridge_to_app_V_if_U/rs/data_p1_reg[125]' (FDE) to 'inst/application_bridge_to_app_V_if_U/rs/data_p1_reg[126]'
+INFO: [Synth 8-3886] merging instance 'inst/application_bridge_to_app_V_if_U/rs/data_p1_reg[126]' (FDE) to 'inst/application_bridge_to_app_V_if_U/rs/data_p1_reg[127]'
+INFO: [Synth 8-3886] merging instance 'inst/application_bridge_to_app_V_if_U/rs/data_p1_reg[127]' (FDE) to 'inst/application_bridge_to_app_V_if_U/rs/data_p1_reg[128]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\application_bridge_to_app_V_if_U/rs/data_p1_reg[128] )
+WARNING: [Synth 8-3332] Sequential element (application_bridge_U/net_to_app_U0/ap_CS_fsm_reg[0]) is unused and will be removed from module application_bridge_top.
+WARNING: [Synth 8-3332] Sequential element (application_bridge_U/net_to_app_U0/ap_done_reg_reg) is unused and will be removed from module application_bridge_top.
+WARNING: [Synth 8-3332] Sequential element (application_bridge_U/app_to_net_U0/ap_done_reg_reg) is unused and will be removed from module application_bridge_top.
+WARNING: [Synth 8-3332] Sequential element (application_bridge_to_app_V_if_U/rs/data_p2_reg[128]) is unused and will be removed from module application_bridge_top.
+WARNING: [Synth 8-3332] Sequential element (application_bridge_to_app_V_if_U/rs/data_p1_reg[128]) is unused and will be removed from module application_bridge_top.
+WARNING: [Synth 8-3332] Sequential element (application_bridge_U/app_to_net_U0/p_Result_s_12_reg_785_reg[63]) is unused and will be removed from module application_bridge_top.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:43 ; elapsed = 00:00:58 . Memory (MB): peak = 2116.773 ; gain = 823.941 ; free physical = 12520 ; free virtual = 54387
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:00 ; elapsed = 00:01:39 . Memory (MB): peak = 2275.211 ; gain = 982.379 ; free physical = 12037 ; free virtual = 53905
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:04 ; elapsed = 00:01:43 . Memory (MB): peak = 2347.883 ; gain = 1055.051 ; free physical = 13185 ; free virtual = 55052
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:05 ; elapsed = 00:01:43 . Memory (MB): peak = 2347.883 ; gain = 1055.051 ; free physical = 13177 ; free virtual = 55044
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:06 ; elapsed = 00:01:44 . Memory (MB): peak = 2347.883 ; gain = 1055.051 ; free physical = 13173 ; free virtual = 55040
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:06 ; elapsed = 00:01:44 . Memory (MB): peak = 2347.883 ; gain = 1055.051 ; free physical = 13173 ; free virtual = 55040
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:06 ; elapsed = 00:01:45 . Memory (MB): peak = 2347.883 ; gain = 1055.051 ; free physical = 13170 ; free virtual = 55037
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:06 ; elapsed = 00:01:45 . Memory (MB): peak = 2347.883 ; gain = 1055.051 ; free physical = 13169 ; free virtual = 55036
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:06 ; elapsed = 00:01:45 . Memory (MB): peak = 2347.883 ; gain = 1055.051 ; free physical = 13166 ; free virtual = 55033
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:06 ; elapsed = 00:01:45 . Memory (MB): peak = 2347.883 ; gain = 1055.051 ; free physical = 13160 ; free virtual = 55027
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY8 |    20|
+|2     |LUT1   |     1|
+|3     |LUT2   |    58|
+|4     |LUT3   |    18|
+|5     |LUT4   |   284|
+|6     |LUT5   |    71|
+|7     |LUT6   |   317|
+|8     |FDRE   |  1330|
+|9     |FDSE   |     4|
++------+-------+------+
+
+Report Instance Areas: 
++------+---------------------------------------+----------------------------------------+------+
+|      |Instance                               |Module                                  |Cells |
++------+---------------------------------------+----------------------------------------+------+
+|1     |top                                    |                                        |  2103|
+|2     |  inst                                 |application_bridge_top                  |  2103|
+|3     |    application_bridge_U               |application_bridge                      |   925|
+|4     |      app_to_net_U0                    |app_to_net                              |   567|
+|5     |      net_to_app_U0                    |net_to_app                              |   357|
+|6     |    application_bridge_from_app_V_if_U |application_bridge_from_app_V_if        |   372|
+|7     |      rs                               |application_bridge_from_app_V_reg_slice |   372|
+|8     |    application_bridge_from_net_V_if_U |application_bridge_from_net_V_if        |   267|
+|9     |      rs                               |application_bridge_from_net_V_reg_slice |   267|
+|10    |    application_bridge_to_app_V_if_U   |application_bridge_to_app_V_if          |   294|
+|11    |      rs                               |application_bridge_to_app_V_reg_slice   |   294|
+|12    |    application_bridge_to_net_V_if_U   |application_bridge_to_net_V_if          |   245|
+|13    |      rs                               |application_bridge_to_net_V_reg_slice   |   245|
++------+---------------------------------------+----------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:06 ; elapsed = 00:01:45 . Memory (MB): peak = 2347.883 ; gain = 1055.051 ; free physical = 13160 ; free virtual = 55027
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 28 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:53 ; elapsed = 00:01:22 . Memory (MB): peak = 2347.883 ; gain = 355.719 ; free physical = 13190 ; free virtual = 55057
+Synthesis Optimization Complete : Time (s): cpu = 00:01:06 ; elapsed = 00:01:45 . Memory (MB): peak = 2347.891 ; gain = 1055.051 ; free physical = 13200 ; free virtual = 55068
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 20 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+189 Infos, 63 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:09 ; elapsed = 00:01:48 . Memory (MB): peak = 2394.531 ; gain = 1135.305 ; free physical = 14282 ; free virtual = 56147
+INFO: [Common 17-1381] The checkpoint '/home/tarafdar/workDir/galapagos/projects/mlKernelsTest3/1/1.runs/pr_application_bridge_inst_0_synth_1/pr_application_bridge_inst_0.dcp' has been generated.

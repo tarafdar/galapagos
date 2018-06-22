@@ -1,0 +1,360 @@
+
+*** Running vivado
+    with args -log pr_ip_constant_block_inst_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source pr_ip_constant_block_inst_0.tcl
+
+
+****** Vivado v2018.1 (64-bit)
+  **** SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018
+  **** IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source pr_ip_constant_block_inst_0.tcl -notrace
+Command: synth_design -top pr_ip_constant_block_inst_0 -part xcku115-flva1517-2-e -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xcku115'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcku115'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 16126 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 1368.836 ; gain = 75.000 ; free physical = 10267 ; free virtual = 53587
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'pr_ip_constant_block_inst_0' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest/1/1.srcs/sources_1/bd/pr/ip/pr_ip_constant_block_inst_0/synth/pr_ip_constant_block_inst_0.v:56]
+INFO: [Synth 8-6157] synthesizing module 'ip_constant_block' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest/1/1.srcs/sources_1/bd/pr/ipshared/546a/ip_constant_block.v:23]
+	Parameter C_IP_B0 bound to: 8'b01100111 
+	Parameter C_IP_B1 bound to: 8'b00000010 
+	Parameter C_IP_B2 bound to: 8'b00000001 
+	Parameter C_IP_B3 bound to: 8'b00001010 
+	Parameter C_GATEWAY_B0 bound to: 8'b01100100 
+	Parameter C_GATEWAY_B1 bound to: 8'b00000010 
+	Parameter C_GATEWAY_B2 bound to: 8'b00000001 
+	Parameter C_GATEWAY_B3 bound to: 8'b00001010 
+	Parameter C_SUBNET_B0 bound to: 8'b00000000 
+	Parameter C_SUBNET_B1 bound to: 8'b11111111 
+	Parameter C_SUBNET_B2 bound to: 8'b11111111 
+	Parameter C_SUBNET_B3 bound to: 8'b11111111 
+	Parameter C_MAC bound to: 48'b111110100001011000111110010101011100101000000011 
+INFO: [Synth 8-6155] done synthesizing module 'ip_constant_block' (1#1) [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest/1/1.srcs/sources_1/bd/pr/ipshared/546a/ip_constant_block.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'pr_ip_constant_block_inst_0' (2#1) [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest/1/1.srcs/sources_1/bd/pr/ip/pr_ip_constant_block_inst_0/synth/pr_ip_constant_block_inst_0.v:56]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 1414.445 ; gain = 120.609 ; free physical = 10229 ; free virtual = 53552
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 1414.445 ; gain = 120.609 ; free physical = 10182 ; free virtual = 53505
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 1414.445 ; gain = 120.609 ; free physical = 10182 ; free virtual = 53505
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xcku115-flva1517-2-e
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.08 . Memory (MB): peak = 2009.777 ; gain = 0.000 ; free physical = 7263 ; free virtual = 50593
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:37 ; elapsed = 00:00:57 . Memory (MB): peak = 2009.777 ; gain = 715.941 ; free physical = 6998 ; free virtual = 50322
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xcku115-flva1517-2-e
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:37 ; elapsed = 00:00:57 . Memory (MB): peak = 2009.777 ; gain = 715.941 ; free physical = 6998 ; free virtual = 50322
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:37 ; elapsed = 00:00:57 . Memory (MB): peak = 2009.777 ; gain = 715.941 ; free physical = 7000 ; free virtual = 50324
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:37 ; elapsed = 00:00:57 . Memory (MB): peak = 2009.777 ; gain = 715.941 ; free physical = 6995 ; free virtual = 50320
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 5520 (col length:120)
+BRAMs: 4320 (col length: RAMB18 240 RAMB36 120)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3330] design pr_ip_constant_block_inst_0 has an empty top module
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port ip[31] driven by constant 0
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port ip[30] driven by constant 1
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port ip[29] driven by constant 1
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port ip[28] driven by constant 0
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port ip[27] driven by constant 0
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port ip[26] driven by constant 1
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port ip[25] driven by constant 1
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port ip[24] driven by constant 1
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port ip[23] driven by constant 0
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port ip[22] driven by constant 0
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port ip[21] driven by constant 0
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port ip[20] driven by constant 0
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port ip[19] driven by constant 0
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port ip[18] driven by constant 0
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port ip[17] driven by constant 1
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port ip[16] driven by constant 0
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port ip[15] driven by constant 0
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port ip[14] driven by constant 0
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port ip[13] driven by constant 0
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port ip[12] driven by constant 0
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port ip[11] driven by constant 0
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port ip[10] driven by constant 0
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port ip[9] driven by constant 0
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port ip[8] driven by constant 1
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port ip[7] driven by constant 0
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port ip[6] driven by constant 0
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port ip[5] driven by constant 0
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port ip[4] driven by constant 0
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port ip[3] driven by constant 1
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port ip[2] driven by constant 0
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port ip[1] driven by constant 1
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port ip[0] driven by constant 0
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port gateway[31] driven by constant 0
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port gateway[30] driven by constant 1
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port gateway[29] driven by constant 1
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port gateway[28] driven by constant 0
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port gateway[27] driven by constant 0
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port gateway[26] driven by constant 1
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port gateway[25] driven by constant 0
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port gateway[24] driven by constant 0
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port gateway[23] driven by constant 0
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port gateway[22] driven by constant 0
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port gateway[21] driven by constant 0
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port gateway[20] driven by constant 0
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port gateway[19] driven by constant 0
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port gateway[18] driven by constant 0
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port gateway[17] driven by constant 1
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port gateway[16] driven by constant 0
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port gateway[15] driven by constant 0
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port gateway[14] driven by constant 0
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port gateway[13] driven by constant 0
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port gateway[12] driven by constant 0
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port gateway[11] driven by constant 0
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port gateway[10] driven by constant 0
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port gateway[9] driven by constant 0
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port gateway[8] driven by constant 1
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port gateway[7] driven by constant 0
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port gateway[6] driven by constant 0
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port gateway[5] driven by constant 0
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port gateway[4] driven by constant 0
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port gateway[3] driven by constant 1
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port gateway[2] driven by constant 0
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port gateway[1] driven by constant 1
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port gateway[0] driven by constant 0
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port subnet[31] driven by constant 0
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port subnet[30] driven by constant 0
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port subnet[29] driven by constant 0
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port subnet[28] driven by constant 0
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port subnet[27] driven by constant 0
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port subnet[26] driven by constant 0
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port subnet[25] driven by constant 0
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port subnet[24] driven by constant 0
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port subnet[23] driven by constant 1
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port subnet[22] driven by constant 1
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port subnet[21] driven by constant 1
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port subnet[20] driven by constant 1
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port subnet[19] driven by constant 1
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port subnet[18] driven by constant 1
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port subnet[17] driven by constant 1
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port subnet[16] driven by constant 1
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port subnet[15] driven by constant 1
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port subnet[14] driven by constant 1
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port subnet[13] driven by constant 1
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port subnet[12] driven by constant 1
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port subnet[11] driven by constant 1
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port subnet[10] driven by constant 1
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port subnet[9] driven by constant 1
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port subnet[8] driven by constant 1
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port subnet[7] driven by constant 1
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port subnet[6] driven by constant 1
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port subnet[5] driven by constant 1
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port subnet[4] driven by constant 1
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port subnet[3] driven by constant 1
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port subnet[2] driven by constant 1
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port subnet[1] driven by constant 1
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port subnet[0] driven by constant 1
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port mac[47] driven by constant 0
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port mac[46] driven by constant 0
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port mac[45] driven by constant 0
+INFO: [Synth 8-3917] design pr_ip_constant_block_inst_0 has port mac[44] driven by constant 0
+INFO: [Common 17-14] Message 'Synth 8-3917' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:00:57 . Memory (MB): peak = 2009.777 ; gain = 715.941 ; free physical = 6959 ; free virtual = 50285
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:54 ; elapsed = 00:01:40 . Memory (MB): peak = 2238.254 ; gain = 944.418 ; free physical = 5202 ; free virtual = 48563
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:54 ; elapsed = 00:01:40 . Memory (MB): peak = 2238.254 ; gain = 944.418 ; free physical = 5201 ; free virtual = 48563
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:54 ; elapsed = 00:01:40 . Memory (MB): peak = 2238.254 ; gain = 944.418 ; free physical = 5200 ; free virtual = 48562
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:55 ; elapsed = 00:01:41 . Memory (MB): peak = 2239.254 ; gain = 945.418 ; free physical = 5129 ; free virtual = 48491
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:55 ; elapsed = 00:01:41 . Memory (MB): peak = 2239.254 ; gain = 945.418 ; free physical = 5129 ; free virtual = 48490
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:55 ; elapsed = 00:01:41 . Memory (MB): peak = 2239.254 ; gain = 945.418 ; free physical = 5128 ; free virtual = 48490
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:55 ; elapsed = 00:01:41 . Memory (MB): peak = 2239.254 ; gain = 945.418 ; free physical = 5128 ; free virtual = 48490
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:55 ; elapsed = 00:01:41 . Memory (MB): peak = 2239.254 ; gain = 945.418 ; free physical = 5127 ; free virtual = 48489
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:55 ; elapsed = 00:01:41 . Memory (MB): peak = 2239.254 ; gain = 945.418 ; free physical = 5127 ; free virtual = 48489
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++-+-----+------+
+| |Cell |Count |
++-+-----+------+
++-+-----+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |     0|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:55 ; elapsed = 00:01:41 . Memory (MB): peak = 2239.254 ; gain = 945.418 ; free physical = 5127 ; free virtual = 48489
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:43 ; elapsed = 00:01:16 . Memory (MB): peak = 2239.254 ; gain = 350.086 ; free physical = 5142 ; free virtual = 48504
+Synthesis Optimization Complete : Time (s): cpu = 00:00:55 ; elapsed = 00:01:41 . Memory (MB): peak = 2239.262 ; gain = 945.418 ; free physical = 5152 ; free virtual = 48514
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+114 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:58 ; elapsed = 00:01:44 . Memory (MB): peak = 2293.785 ; gain = 1033.555 ; free physical = 6709 ; free virtual = 50069
+INFO: [Common 17-1381] The checkpoint '/home/tarafdar/workDir/galapagos/projects/mlKernelsTest/1/1.runs/pr_ip_constant_block_inst_0_synth_1/pr_ip_constant_block_inst_0.dcp' has been generated.

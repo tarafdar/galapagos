@@ -1,0 +1,805 @@
+
+*** Running vivado
+    with args -log shell_s00_mmu_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source shell_s00_mmu_0.tcl
+
+
+****** Vivado v2018.1 (64-bit)
+  **** SW Build 2188600 on Wed Apr  4 18:39:19 MDT 2018
+  **** IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source shell_s00_mmu_0.tcl -notrace
+Command: synth_design -top shell_s00_mmu_0 -part xcku115-flva1517-2-e -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xcku115'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcku115'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 31530 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1371.949 ; gain = 78.000 ; free physical = 7918 ; free virtual = 47266
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'shell_s00_mmu_0' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest/1/1.srcs/sources_1/bd/srcs/ip/shell_s00_mmu_0/synth/shell_s00_mmu_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'axi_mmu_v2_1_14_top' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest/1/1.srcs/sources_1/bd/srcs/ipshared/fed1/hdl/axi_mmu_v2_1_vl_rfs.v:557]
+	Parameter C_FAMILY bound to: kintexu - type: string 
+	Parameter C_AXI_PROTOCOL bound to: 0 - type: integer 
+	Parameter C_AXI_ID_WIDTH bound to: 4 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 64 - type: integer 
+	Parameter C_M_AXI_ADDR_WIDTH bound to: 64 - type: integer 
+	Parameter C_AXI_DATA_WIDTH bound to: 256 - type: integer 
+	Parameter C_AXI_SUPPORTS_USER_SIGNALS bound to: 0 - type: integer 
+	Parameter C_AXI_AWUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_ARUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_WUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_RUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_BUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_NUM_RANGES bound to: 1 - type: integer 
+	Parameter C_BASE_ADDR bound to: 64'b0000000000000000000000000000000001000000000000000000000000000000 
+	Parameter C_RANGE_SIZE bound to: 30 - type: integer 
+	Parameter C_USES_DEST bound to: 0 - type: integer 
+	Parameter C_DEST_WIDTH bound to: 1 - type: integer 
+	Parameter C_DEST bound to: 1'b0 
+	Parameter C_PREFIX_WIDTH bound to: 1 - type: integer 
+	Parameter C_PREFIX bound to: 1'b0 
+	Parameter C_S_AXI_SUPPORTS_WRITE bound to: 1 - type: integer 
+	Parameter C_S_AXI_SUPPORTS_READ bound to: 1 - type: integer 
+	Parameter C_M_AXI_SUPPORTS_WRITE bound to: 1'b1 
+	Parameter C_M_AXI_SUPPORTS_READ bound to: 1'b1 
+	Parameter P_AXI4 bound to: 0 - type: integer 
+	Parameter P_AXI3 bound to: 1 - type: integer 
+	Parameter P_AXILITE bound to: 2 - type: integer 
+	Parameter P_DECERR bound to: 2'b11 
+	Parameter P_NUM_RANGES_LOG bound to: 1 - type: integer 
+	Parameter W_IDLE bound to: 2'b00 
+	Parameter W_PENDING bound to: 2'b01 
+	Parameter W_DECERR bound to: 2'b11 
+	Parameter R_IDLE bound to: 2'b00 
+	Parameter R_PENDING bound to: 2'b01 
+	Parameter R_DECERR bound to: 2'b11 
+INFO: [Synth 8-6157] synthesizing module 'axi_mmu_v2_1_14_addr_decoder' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest/1/1.srcs/sources_1/bd/srcs/ipshared/fed1/hdl/axi_mmu_v2_1_vl_rfs.v:63]
+	Parameter C_FAMILY bound to: kintexu - type: string 
+	Parameter C_NUM_RANGES bound to: 1 - type: integer 
+	Parameter C_NUM_RANGES_LOG bound to: 1 - type: integer 
+	Parameter C_ADDR_WIDTH bound to: 64 - type: integer 
+	Parameter C_BASE_ADDR bound to: 64'b0000000000000000000000000000000001000000000000000000000000000000 
+	Parameter C_RANGE_SIZE bound to: 30 - type: integer 
+	Parameter C_RANGE_QUAL bound to: 2'b01 
+INFO: [Synth 8-6155] done synthesizing module 'axi_mmu_v2_1_14_addr_decoder' (1#1) [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest/1/1.srcs/sources_1/bd/srcs/ipshared/fed1/hdl/axi_mmu_v2_1_vl_rfs.v:63]
+INFO: [Synth 8-6157] synthesizing module 'axi_mmu_v2_1_14_decerr_slave' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest/1/1.srcs/sources_1/bd/srcs/ipshared/fed1/hdl/axi_mmu_v2_1_vl_rfs.v:201]
+	Parameter C_AXI_ID_WIDTH bound to: 4 - type: integer 
+	Parameter C_AXI_DATA_WIDTH bound to: 256 - type: integer 
+	Parameter C_AXI_BUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_RUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_PROTOCOL bound to: 0 - type: integer 
+	Parameter C_AXI_SUPPORTS_WRITE bound to: 1 - type: integer 
+	Parameter C_AXI_SUPPORTS_READ bound to: 1 - type: integer 
+	Parameter C_RESP bound to: 3 - type: integer 
+	Parameter P_WRITE_IDLE bound to: 2'b00 
+	Parameter P_WRITE_DATA bound to: 2'b01 
+	Parameter P_WRITE_RESP bound to: 2'b10 
+	Parameter P_READ_IDLE bound to: 1'b0 
+	Parameter P_READ_DATA bound to: 1'b1 
+	Parameter P_AXI4 bound to: 0 - type: integer 
+	Parameter P_AXI3 bound to: 1 - type: integer 
+	Parameter P_AXILITE bound to: 2 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest/1/1.srcs/sources_1/bd/srcs/ipshared/fed1/hdl/axi_mmu_v2_1_vl_rfs.v:362]
+INFO: [Synth 8-6155] done synthesizing module 'axi_mmu_v2_1_14_decerr_slave' (2#1) [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest/1/1.srcs/sources_1/bd/srcs/ipshared/fed1/hdl/axi_mmu_v2_1_vl_rfs.v:201]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_16_axi_register_slice' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest/1/1.srcs/sources_1/bd/srcs/ipshared/0cde/hdl/axi_register_slice_v2_1_vl_rfs.v:2413]
+	Parameter C_FAMILY bound to: kintexu - type: string 
+	Parameter C_AXI_PROTOCOL bound to: 0 - type: integer 
+	Parameter C_AXI_ID_WIDTH bound to: 4 - type: integer 
+	Parameter C_AXI_ADDR_WIDTH bound to: 65 - type: integer 
+	Parameter C_AXI_DATA_WIDTH bound to: 256 - type: integer 
+	Parameter C_AXI_SUPPORTS_USER_SIGNALS bound to: 0 - type: integer 
+	Parameter C_AXI_AWUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_ARUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_WUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_RUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_BUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_REG_CONFIG_AW bound to: 7 - type: integer 
+	Parameter C_REG_CONFIG_W bound to: 0 - type: integer 
+	Parameter C_REG_CONFIG_B bound to: 0 - type: integer 
+	Parameter C_REG_CONFIG_AR bound to: 7 - type: integer 
+	Parameter C_REG_CONFIG_R bound to: 0 - type: integer 
+	Parameter C_NUM_SLR_CROSSINGS bound to: 0 - type: integer 
+	Parameter C_PIPELINES_MASTER_AW bound to: 0 - type: integer 
+	Parameter C_PIPELINES_MASTER_W bound to: 0 - type: integer 
+	Parameter C_PIPELINES_MASTER_B bound to: 0 - type: integer 
+	Parameter C_PIPELINES_MASTER_AR bound to: 0 - type: integer 
+	Parameter C_PIPELINES_MASTER_R bound to: 0 - type: integer 
+	Parameter C_PIPELINES_SLAVE_AW bound to: 0 - type: integer 
+	Parameter C_PIPELINES_SLAVE_W bound to: 0 - type: integer 
+	Parameter C_PIPELINES_SLAVE_B bound to: 0 - type: integer 
+	Parameter C_PIPELINES_SLAVE_AR bound to: 0 - type: integer 
+	Parameter C_PIPELINES_SLAVE_R bound to: 0 - type: integer 
+	Parameter C_PIPELINES_MIDDLE_AW bound to: 0 - type: integer 
+	Parameter C_PIPELINES_MIDDLE_W bound to: 0 - type: integer 
+	Parameter C_PIPELINES_MIDDLE_B bound to: 0 - type: integer 
+	Parameter C_PIPELINES_MIDDLE_AR bound to: 0 - type: integer 
+	Parameter C_PIPELINES_MIDDLE_R bound to: 0 - type: integer 
+	Parameter C_AXI_SUPPORTS_REGION_SIGNALS bound to: 1 - type: integer 
+	Parameter P_FORWARD bound to: 0 - type: integer 
+	Parameter P_RESPONSE bound to: 1 - type: integer 
+	Parameter G_AXI_AWADDR_INDEX bound to: 0 - type: integer 
+	Parameter G_AXI_AWADDR_WIDTH bound to: 65 - type: integer 
+	Parameter G_AXI_AWPROT_INDEX bound to: 65 - type: integer 
+	Parameter G_AXI_AWPROT_WIDTH bound to: 3 - type: integer 
+	Parameter G_AXI_AWSIZE_INDEX bound to: 68 - type: integer 
+	Parameter G_AXI_AWSIZE_WIDTH bound to: 3 - type: integer 
+	Parameter G_AXI_AWBURST_INDEX bound to: 71 - type: integer 
+	Parameter G_AXI_AWBURST_WIDTH bound to: 2 - type: integer 
+	Parameter G_AXI_AWCACHE_INDEX bound to: 73 - type: integer 
+	Parameter G_AXI_AWCACHE_WIDTH bound to: 4 - type: integer 
+	Parameter G_AXI_AWLEN_INDEX bound to: 77 - type: integer 
+	Parameter G_AXI_AWLEN_WIDTH bound to: 8 - type: integer 
+	Parameter G_AXI_AWLOCK_INDEX bound to: 85 - type: integer 
+	Parameter G_AXI_AWLOCK_WIDTH bound to: 1 - type: integer 
+	Parameter G_AXI_AWID_INDEX bound to: 86 - type: integer 
+	Parameter G_AXI_AWID_WIDTH bound to: 4 - type: integer 
+	Parameter G_AXI_AWQOS_INDEX bound to: 90 - type: integer 
+	Parameter G_AXI_AWQOS_WIDTH bound to: 4 - type: integer 
+	Parameter G_AXI_AWREGION_INDEX bound to: 94 - type: integer 
+	Parameter G_AXI_AWREGION_WIDTH bound to: 4 - type: integer 
+	Parameter G_AXI_AWUSER_INDEX bound to: 98 - type: integer 
+	Parameter G_AXI_AWUSER_WIDTH bound to: 0 - type: integer 
+	Parameter G_AXI_AWPAYLOAD_WIDTH bound to: 98 - type: integer 
+	Parameter G_AXI_ARADDR_INDEX bound to: 0 - type: integer 
+	Parameter G_AXI_ARADDR_WIDTH bound to: 65 - type: integer 
+	Parameter G_AXI_ARPROT_INDEX bound to: 65 - type: integer 
+	Parameter G_AXI_ARPROT_WIDTH bound to: 3 - type: integer 
+	Parameter G_AXI_ARSIZE_INDEX bound to: 68 - type: integer 
+	Parameter G_AXI_ARSIZE_WIDTH bound to: 3 - type: integer 
+	Parameter G_AXI_ARBURST_INDEX bound to: 71 - type: integer 
+	Parameter G_AXI_ARBURST_WIDTH bound to: 2 - type: integer 
+	Parameter G_AXI_ARCACHE_INDEX bound to: 73 - type: integer 
+	Parameter G_AXI_ARCACHE_WIDTH bound to: 4 - type: integer 
+	Parameter G_AXI_ARLEN_INDEX bound to: 77 - type: integer 
+	Parameter G_AXI_ARLEN_WIDTH bound to: 8 - type: integer 
+	Parameter G_AXI_ARLOCK_INDEX bound to: 85 - type: integer 
+	Parameter G_AXI_ARLOCK_WIDTH bound to: 1 - type: integer 
+	Parameter G_AXI_ARID_INDEX bound to: 86 - type: integer 
+	Parameter G_AXI_ARID_WIDTH bound to: 4 - type: integer 
+	Parameter G_AXI_ARQOS_INDEX bound to: 90 - type: integer 
+	Parameter G_AXI_ARQOS_WIDTH bound to: 4 - type: integer 
+	Parameter G_AXI_ARREGION_INDEX bound to: 94 - type: integer 
+	Parameter G_AXI_ARREGION_WIDTH bound to: 4 - type: integer 
+	Parameter G_AXI_ARUSER_INDEX bound to: 98 - type: integer 
+	Parameter G_AXI_ARUSER_WIDTH bound to: 0 - type: integer 
+	Parameter G_AXI_ARPAYLOAD_WIDTH bound to: 98 - type: integer 
+	Parameter G_AXI_WDATA_INDEX bound to: 0 - type: integer 
+	Parameter G_AXI_WDATA_WIDTH bound to: 256 - type: integer 
+	Parameter G_AXI_WSTRB_INDEX bound to: 256 - type: integer 
+	Parameter G_AXI_WSTRB_WIDTH bound to: 32 - type: integer 
+	Parameter G_AXI_WLAST_INDEX bound to: 288 - type: integer 
+	Parameter G_AXI_WLAST_WIDTH bound to: 1 - type: integer 
+	Parameter G_AXI_WID_INDEX bound to: 289 - type: integer 
+	Parameter G_AXI_WID_WIDTH bound to: 0 - type: integer 
+	Parameter G_AXI_WUSER_INDEX bound to: 289 - type: integer 
+	Parameter G_AXI_WUSER_WIDTH bound to: 0 - type: integer 
+	Parameter G_AXI_WPAYLOAD_WIDTH bound to: 289 - type: integer 
+	Parameter G_AXI_BRESP_INDEX bound to: 0 - type: integer 
+	Parameter G_AXI_BRESP_WIDTH bound to: 2 - type: integer 
+	Parameter G_AXI_BID_INDEX bound to: 2 - type: integer 
+	Parameter G_AXI_BID_WIDTH bound to: 4 - type: integer 
+	Parameter G_AXI_BUSER_INDEX bound to: 6 - type: integer 
+	Parameter G_AXI_BUSER_WIDTH bound to: 0 - type: integer 
+	Parameter G_AXI_BPAYLOAD_WIDTH bound to: 6 - type: integer 
+	Parameter G_AXI_RDATA_INDEX bound to: 0 - type: integer 
+	Parameter G_AXI_RDATA_WIDTH bound to: 256 - type: integer 
+	Parameter G_AXI_RRESP_INDEX bound to: 256 - type: integer 
+	Parameter G_AXI_RRESP_WIDTH bound to: 2 - type: integer 
+	Parameter G_AXI_RLAST_INDEX bound to: 258 - type: integer 
+	Parameter G_AXI_RLAST_WIDTH bound to: 1 - type: integer 
+	Parameter G_AXI_RID_INDEX bound to: 259 - type: integer 
+	Parameter G_AXI_RID_WIDTH bound to: 4 - type: integer 
+	Parameter G_AXI_RUSER_INDEX bound to: 263 - type: integer 
+	Parameter G_AXI_RUSER_WIDTH bound to: 0 - type: integer 
+	Parameter G_AXI_RPAYLOAD_WIDTH bound to: 263 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_16_axic_register_slice' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest/1/1.srcs/sources_1/bd/srcs/ipshared/0cde/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
+	Parameter C_FAMILY bound to: kintexu - type: string 
+	Parameter C_DATA_WIDTH bound to: 98 - type: integer 
+	Parameter C_REG_CONFIG bound to: 7 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_16_axic_register_slice' (3#1) [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest/1/1.srcs/sources_1/bd/srcs/ipshared/0cde/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_16_axic_register_slice__parameterized0' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest/1/1.srcs/sources_1/bd/srcs/ipshared/0cde/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
+	Parameter C_FAMILY bound to: kintexu - type: string 
+	Parameter C_DATA_WIDTH bound to: 289 - type: integer 
+	Parameter C_REG_CONFIG bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_16_axic_register_slice__parameterized0' (3#1) [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest/1/1.srcs/sources_1/bd/srcs/ipshared/0cde/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_16_axic_register_slice__parameterized1' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest/1/1.srcs/sources_1/bd/srcs/ipshared/0cde/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
+	Parameter C_FAMILY bound to: kintexu - type: string 
+	Parameter C_DATA_WIDTH bound to: 6 - type: integer 
+	Parameter C_REG_CONFIG bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_16_axic_register_slice__parameterized1' (3#1) [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest/1/1.srcs/sources_1/bd/srcs/ipshared/0cde/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_16_axic_register_slice__parameterized2' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest/1/1.srcs/sources_1/bd/srcs/ipshared/0cde/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
+	Parameter C_FAMILY bound to: kintexu - type: string 
+	Parameter C_DATA_WIDTH bound to: 263 - type: integer 
+	Parameter C_REG_CONFIG bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_16_axic_register_slice__parameterized2' (3#1) [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest/1/1.srcs/sources_1/bd/srcs/ipshared/0cde/hdl/axi_register_slice_v2_1_vl_rfs.v:189]
+INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest/1/1.srcs/sources_1/bd/srcs/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:60]
+	Parameter C_AXI_PROTOCOL bound to: 0 - type: integer 
+	Parameter C_AXI_ID_WIDTH bound to: 4 - type: integer 
+	Parameter C_AXI_ADDR_WIDTH bound to: 65 - type: integer 
+	Parameter C_AXI_DATA_WIDTH bound to: 256 - type: integer 
+	Parameter C_AXI_SUPPORTS_USER_SIGNALS bound to: 0 - type: integer 
+	Parameter C_AXI_SUPPORTS_REGION_SIGNALS bound to: 1 - type: integer 
+	Parameter C_AXI_AWUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_WUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_BUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_ARUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_RUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AWPAYLOAD_WIDTH bound to: 98 - type: integer 
+	Parameter C_WPAYLOAD_WIDTH bound to: 289 - type: integer 
+	Parameter C_BPAYLOAD_WIDTH bound to: 6 - type: integer 
+	Parameter C_ARPAYLOAD_WIDTH bound to: 98 - type: integer 
+	Parameter C_RPAYLOAD_WIDTH bound to: 263 - type: integer 
+	Parameter G_AXI_AWADDR_INDEX bound to: 0 - type: integer 
+	Parameter G_AXI_AWADDR_WIDTH bound to: 65 - type: integer 
+	Parameter G_AXI_AWPROT_INDEX bound to: 65 - type: integer 
+	Parameter G_AXI_AWPROT_WIDTH bound to: 3 - type: integer 
+	Parameter G_AXI_AWSIZE_INDEX bound to: 68 - type: integer 
+	Parameter G_AXI_AWSIZE_WIDTH bound to: 3 - type: integer 
+	Parameter G_AXI_AWBURST_INDEX bound to: 71 - type: integer 
+	Parameter G_AXI_AWBURST_WIDTH bound to: 2 - type: integer 
+	Parameter G_AXI_AWCACHE_INDEX bound to: 73 - type: integer 
+	Parameter G_AXI_AWCACHE_WIDTH bound to: 4 - type: integer 
+	Parameter G_AXI_AWLEN_INDEX bound to: 77 - type: integer 
+	Parameter G_AXI_AWLEN_WIDTH bound to: 8 - type: integer 
+	Parameter G_AXI_AWLOCK_INDEX bound to: 85 - type: integer 
+	Parameter G_AXI_AWLOCK_WIDTH bound to: 1 - type: integer 
+	Parameter G_AXI_AWID_INDEX bound to: 86 - type: integer 
+	Parameter G_AXI_AWID_WIDTH bound to: 4 - type: integer 
+	Parameter G_AXI_AWQOS_INDEX bound to: 90 - type: integer 
+	Parameter G_AXI_AWQOS_WIDTH bound to: 4 - type: integer 
+	Parameter G_AXI_AWREGION_INDEX bound to: 94 - type: integer 
+	Parameter G_AXI_AWREGION_WIDTH bound to: 4 - type: integer 
+	Parameter G_AXI_AWUSER_INDEX bound to: 98 - type: integer 
+	Parameter G_AXI_AWUSER_WIDTH bound to: 0 - type: integer 
+	Parameter G_AXI_AWPAYLOAD_WIDTH bound to: 98 - type: integer 
+	Parameter G_AXI_ARADDR_INDEX bound to: 0 - type: integer 
+	Parameter G_AXI_ARADDR_WIDTH bound to: 65 - type: integer 
+	Parameter G_AXI_ARPROT_INDEX bound to: 65 - type: integer 
+	Parameter G_AXI_ARPROT_WIDTH bound to: 3 - type: integer 
+	Parameter G_AXI_ARSIZE_INDEX bound to: 68 - type: integer 
+	Parameter G_AXI_ARSIZE_WIDTH bound to: 3 - type: integer 
+	Parameter G_AXI_ARBURST_INDEX bound to: 71 - type: integer 
+	Parameter G_AXI_ARBURST_WIDTH bound to: 2 - type: integer 
+	Parameter G_AXI_ARCACHE_INDEX bound to: 73 - type: integer 
+	Parameter G_AXI_ARCACHE_WIDTH bound to: 4 - type: integer 
+	Parameter G_AXI_ARLEN_INDEX bound to: 77 - type: integer 
+	Parameter G_AXI_ARLEN_WIDTH bound to: 8 - type: integer 
+	Parameter G_AXI_ARLOCK_INDEX bound to: 85 - type: integer 
+	Parameter G_AXI_ARLOCK_WIDTH bound to: 1 - type: integer 
+	Parameter G_AXI_ARID_INDEX bound to: 86 - type: integer 
+	Parameter G_AXI_ARID_WIDTH bound to: 4 - type: integer 
+	Parameter G_AXI_ARQOS_INDEX bound to: 90 - type: integer 
+	Parameter G_AXI_ARQOS_WIDTH bound to: 4 - type: integer 
+	Parameter G_AXI_ARREGION_INDEX bound to: 94 - type: integer 
+	Parameter G_AXI_ARREGION_WIDTH bound to: 4 - type: integer 
+	Parameter G_AXI_ARUSER_INDEX bound to: 98 - type: integer 
+	Parameter G_AXI_ARUSER_WIDTH bound to: 0 - type: integer 
+	Parameter G_AXI_ARPAYLOAD_WIDTH bound to: 98 - type: integer 
+	Parameter G_AXI_WDATA_INDEX bound to: 0 - type: integer 
+	Parameter G_AXI_WDATA_WIDTH bound to: 256 - type: integer 
+	Parameter G_AXI_WSTRB_INDEX bound to: 256 - type: integer 
+	Parameter G_AXI_WSTRB_WIDTH bound to: 32 - type: integer 
+	Parameter G_AXI_WLAST_INDEX bound to: 288 - type: integer 
+	Parameter G_AXI_WLAST_WIDTH bound to: 1 - type: integer 
+	Parameter G_AXI_WID_INDEX bound to: 289 - type: integer 
+	Parameter G_AXI_WID_WIDTH bound to: 0 - type: integer 
+	Parameter G_AXI_WUSER_INDEX bound to: 289 - type: integer 
+	Parameter G_AXI_WUSER_WIDTH bound to: 0 - type: integer 
+	Parameter G_AXI_WPAYLOAD_WIDTH bound to: 289 - type: integer 
+	Parameter G_AXI_BRESP_INDEX bound to: 0 - type: integer 
+	Parameter G_AXI_BRESP_WIDTH bound to: 2 - type: integer 
+	Parameter G_AXI_BID_INDEX bound to: 2 - type: integer 
+	Parameter G_AXI_BID_WIDTH bound to: 4 - type: integer 
+	Parameter G_AXI_BUSER_INDEX bound to: 6 - type: integer 
+	Parameter G_AXI_BUSER_WIDTH bound to: 0 - type: integer 
+	Parameter G_AXI_BPAYLOAD_WIDTH bound to: 6 - type: integer 
+	Parameter G_AXI_RDATA_INDEX bound to: 0 - type: integer 
+	Parameter G_AXI_RDATA_WIDTH bound to: 256 - type: integer 
+	Parameter G_AXI_RRESP_INDEX bound to: 256 - type: integer 
+	Parameter G_AXI_RRESP_WIDTH bound to: 2 - type: integer 
+	Parameter G_AXI_RLAST_INDEX bound to: 258 - type: integer 
+	Parameter G_AXI_RLAST_WIDTH bound to: 1 - type: integer 
+	Parameter G_AXI_RID_INDEX bound to: 259 - type: integer 
+	Parameter G_AXI_RID_WIDTH bound to: 4 - type: integer 
+	Parameter G_AXI_RUSER_INDEX bound to: 263 - type: integer 
+	Parameter G_AXI_RUSER_WIDTH bound to: 0 - type: integer 
+	Parameter G_AXI_RPAYLOAD_WIDTH bound to: 263 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' (4#1) [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest/1/1.srcs/sources_1/bd/srcs/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:60]
+INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest/1/1.srcs/sources_1/bd/srcs/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:474]
+	Parameter C_AXI_PROTOCOL bound to: 0 - type: integer 
+	Parameter C_AXI_ID_WIDTH bound to: 4 - type: integer 
+	Parameter C_AXI_ADDR_WIDTH bound to: 65 - type: integer 
+	Parameter C_AXI_DATA_WIDTH bound to: 256 - type: integer 
+	Parameter C_AXI_SUPPORTS_USER_SIGNALS bound to: 0 - type: integer 
+	Parameter C_AXI_SUPPORTS_REGION_SIGNALS bound to: 1 - type: integer 
+	Parameter C_AXI_AWUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_WUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_BUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_ARUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_RUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AWPAYLOAD_WIDTH bound to: 98 - type: integer 
+	Parameter C_WPAYLOAD_WIDTH bound to: 289 - type: integer 
+	Parameter C_BPAYLOAD_WIDTH bound to: 6 - type: integer 
+	Parameter C_ARPAYLOAD_WIDTH bound to: 98 - type: integer 
+	Parameter C_RPAYLOAD_WIDTH bound to: 263 - type: integer 
+	Parameter G_AXI_AWADDR_INDEX bound to: 0 - type: integer 
+	Parameter G_AXI_AWADDR_WIDTH bound to: 65 - type: integer 
+	Parameter G_AXI_AWPROT_INDEX bound to: 65 - type: integer 
+	Parameter G_AXI_AWPROT_WIDTH bound to: 3 - type: integer 
+	Parameter G_AXI_AWSIZE_INDEX bound to: 68 - type: integer 
+	Parameter G_AXI_AWSIZE_WIDTH bound to: 3 - type: integer 
+	Parameter G_AXI_AWBURST_INDEX bound to: 71 - type: integer 
+	Parameter G_AXI_AWBURST_WIDTH bound to: 2 - type: integer 
+	Parameter G_AXI_AWCACHE_INDEX bound to: 73 - type: integer 
+	Parameter G_AXI_AWCACHE_WIDTH bound to: 4 - type: integer 
+	Parameter G_AXI_AWLEN_INDEX bound to: 77 - type: integer 
+	Parameter G_AXI_AWLEN_WIDTH bound to: 8 - type: integer 
+	Parameter G_AXI_AWLOCK_INDEX bound to: 85 - type: integer 
+	Parameter G_AXI_AWLOCK_WIDTH bound to: 1 - type: integer 
+	Parameter G_AXI_AWID_INDEX bound to: 86 - type: integer 
+	Parameter G_AXI_AWID_WIDTH bound to: 4 - type: integer 
+	Parameter G_AXI_AWQOS_INDEX bound to: 90 - type: integer 
+	Parameter G_AXI_AWQOS_WIDTH bound to: 4 - type: integer 
+	Parameter G_AXI_AWREGION_INDEX bound to: 94 - type: integer 
+	Parameter G_AXI_AWREGION_WIDTH bound to: 4 - type: integer 
+	Parameter G_AXI_AWUSER_INDEX bound to: 98 - type: integer 
+	Parameter G_AXI_AWUSER_WIDTH bound to: 0 - type: integer 
+	Parameter G_AXI_AWPAYLOAD_WIDTH bound to: 98 - type: integer 
+	Parameter G_AXI_ARADDR_INDEX bound to: 0 - type: integer 
+	Parameter G_AXI_ARADDR_WIDTH bound to: 65 - type: integer 
+	Parameter G_AXI_ARPROT_INDEX bound to: 65 - type: integer 
+	Parameter G_AXI_ARPROT_WIDTH bound to: 3 - type: integer 
+	Parameter G_AXI_ARSIZE_INDEX bound to: 68 - type: integer 
+	Parameter G_AXI_ARSIZE_WIDTH bound to: 3 - type: integer 
+	Parameter G_AXI_ARBURST_INDEX bound to: 71 - type: integer 
+	Parameter G_AXI_ARBURST_WIDTH bound to: 2 - type: integer 
+	Parameter G_AXI_ARCACHE_INDEX bound to: 73 - type: integer 
+	Parameter G_AXI_ARCACHE_WIDTH bound to: 4 - type: integer 
+	Parameter G_AXI_ARLEN_INDEX bound to: 77 - type: integer 
+	Parameter G_AXI_ARLEN_WIDTH bound to: 8 - type: integer 
+	Parameter G_AXI_ARLOCK_INDEX bound to: 85 - type: integer 
+	Parameter G_AXI_ARLOCK_WIDTH bound to: 1 - type: integer 
+	Parameter G_AXI_ARID_INDEX bound to: 86 - type: integer 
+	Parameter G_AXI_ARID_WIDTH bound to: 4 - type: integer 
+	Parameter G_AXI_ARQOS_INDEX bound to: 90 - type: integer 
+	Parameter G_AXI_ARQOS_WIDTH bound to: 4 - type: integer 
+	Parameter G_AXI_ARREGION_INDEX bound to: 94 - type: integer 
+	Parameter G_AXI_ARREGION_WIDTH bound to: 4 - type: integer 
+	Parameter G_AXI_ARUSER_INDEX bound to: 98 - type: integer 
+	Parameter G_AXI_ARUSER_WIDTH bound to: 0 - type: integer 
+	Parameter G_AXI_ARPAYLOAD_WIDTH bound to: 98 - type: integer 
+	Parameter G_AXI_WDATA_INDEX bound to: 0 - type: integer 
+	Parameter G_AXI_WDATA_WIDTH bound to: 256 - type: integer 
+	Parameter G_AXI_WSTRB_INDEX bound to: 256 - type: integer 
+	Parameter G_AXI_WSTRB_WIDTH bound to: 32 - type: integer 
+	Parameter G_AXI_WLAST_INDEX bound to: 288 - type: integer 
+	Parameter G_AXI_WLAST_WIDTH bound to: 1 - type: integer 
+	Parameter G_AXI_WID_INDEX bound to: 289 - type: integer 
+	Parameter G_AXI_WID_WIDTH bound to: 0 - type: integer 
+	Parameter G_AXI_WUSER_INDEX bound to: 289 - type: integer 
+	Parameter G_AXI_WUSER_WIDTH bound to: 0 - type: integer 
+	Parameter G_AXI_WPAYLOAD_WIDTH bound to: 289 - type: integer 
+	Parameter G_AXI_BRESP_INDEX bound to: 0 - type: integer 
+	Parameter G_AXI_BRESP_WIDTH bound to: 2 - type: integer 
+	Parameter G_AXI_BID_INDEX bound to: 2 - type: integer 
+	Parameter G_AXI_BID_WIDTH bound to: 4 - type: integer 
+	Parameter G_AXI_BUSER_INDEX bound to: 6 - type: integer 
+	Parameter G_AXI_BUSER_WIDTH bound to: 0 - type: integer 
+	Parameter G_AXI_BPAYLOAD_WIDTH bound to: 6 - type: integer 
+	Parameter G_AXI_RDATA_INDEX bound to: 0 - type: integer 
+	Parameter G_AXI_RDATA_WIDTH bound to: 256 - type: integer 
+	Parameter G_AXI_RRESP_INDEX bound to: 256 - type: integer 
+	Parameter G_AXI_RRESP_WIDTH bound to: 2 - type: integer 
+	Parameter G_AXI_RLAST_INDEX bound to: 258 - type: integer 
+	Parameter G_AXI_RLAST_WIDTH bound to: 1 - type: integer 
+	Parameter G_AXI_RID_INDEX bound to: 259 - type: integer 
+	Parameter G_AXI_RID_WIDTH bound to: 4 - type: integer 
+	Parameter G_AXI_RUSER_INDEX bound to: 263 - type: integer 
+	Parameter G_AXI_RUSER_WIDTH bound to: 0 - type: integer 
+	Parameter G_AXI_RPAYLOAD_WIDTH bound to: 263 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' (5#1) [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest/1/1.srcs/sources_1/bd/srcs/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:474]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_16_axi_register_slice' (6#1) [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest/1/1.srcs/sources_1/bd/srcs/ipshared/0cde/hdl/axi_register_slice_v2_1_vl_rfs.v:2413]
+WARNING: [Synth 8-350] instance 'register_slice_inst' of module 'axi_register_slice_v2_1_16_axi_register_slice' requires 93 connections, but only 92 given [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest/1/1.srcs/sources_1/bd/srcs/ipshared/fed1/hdl/axi_mmu_v2_1_vl_rfs.v:1172]
+INFO: [Synth 8-6155] done synthesizing module 'axi_mmu_v2_1_14_top' (7#1) [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest/1/1.srcs/sources_1/bd/srcs/ipshared/fed1/hdl/axi_mmu_v2_1_vl_rfs.v:557]
+INFO: [Synth 8-6155] done synthesizing module 'shell_s00_mmu_0' (8#1) [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest/1/1.srcs/sources_1/bd/srcs/ip/shell_s00_mmu_0/synth/shell_s00_mmu_0.v:58]
+WARNING: [Synth 8-3331] design axi_infrastructure_v1_1_0_vector2axi has unconnected port m_axi_buser[0]
+WARNING: [Synth 8-3331] design axi_infrastructure_v1_1_0_vector2axi has unconnected port m_axi_ruser[0]
+WARNING: [Synth 8-3331] design axi_infrastructure_v1_1_0_axi2vector has unconnected port s_axi_awuser[0]
+WARNING: [Synth 8-3331] design axi_infrastructure_v1_1_0_axi2vector has unconnected port s_axi_wid[3]
+WARNING: [Synth 8-3331] design axi_infrastructure_v1_1_0_axi2vector has unconnected port s_axi_wid[2]
+WARNING: [Synth 8-3331] design axi_infrastructure_v1_1_0_axi2vector has unconnected port s_axi_wid[1]
+WARNING: [Synth 8-3331] design axi_infrastructure_v1_1_0_axi2vector has unconnected port s_axi_wid[0]
+WARNING: [Synth 8-3331] design axi_infrastructure_v1_1_0_axi2vector has unconnected port s_axi_wuser[0]
+WARNING: [Synth 8-3331] design axi_infrastructure_v1_1_0_axi2vector has unconnected port s_axi_aruser[0]
+WARNING: [Synth 8-3331] design axi_register_slice_v2_1_16_axic_register_slice__parameterized2 has unconnected port ACLK
+WARNING: [Synth 8-3331] design axi_register_slice_v2_1_16_axic_register_slice__parameterized2 has unconnected port ARESET
+WARNING: [Synth 8-3331] design axi_register_slice_v2_1_16_axic_register_slice__parameterized1 has unconnected port ACLK
+WARNING: [Synth 8-3331] design axi_register_slice_v2_1_16_axic_register_slice__parameterized1 has unconnected port ARESET
+WARNING: [Synth 8-3331] design axi_register_slice_v2_1_16_axic_register_slice__parameterized0 has unconnected port ACLK
+WARNING: [Synth 8-3331] design axi_register_slice_v2_1_16_axic_register_slice__parameterized0 has unconnected port ARESET
+WARNING: [Synth 8-3331] design axi_register_slice_v2_1_16_axi_register_slice has unconnected port aclk2x
+WARNING: [Synth 8-3331] design axi_mmu_v2_1_14_addr_decoder has unconnected port addr[29]
+WARNING: [Synth 8-3331] design axi_mmu_v2_1_14_addr_decoder has unconnected port addr[28]
+WARNING: [Synth 8-3331] design axi_mmu_v2_1_14_addr_decoder has unconnected port addr[27]
+WARNING: [Synth 8-3331] design axi_mmu_v2_1_14_addr_decoder has unconnected port addr[26]
+WARNING: [Synth 8-3331] design axi_mmu_v2_1_14_addr_decoder has unconnected port addr[25]
+WARNING: [Synth 8-3331] design axi_mmu_v2_1_14_addr_decoder has unconnected port addr[24]
+WARNING: [Synth 8-3331] design axi_mmu_v2_1_14_addr_decoder has unconnected port addr[23]
+WARNING: [Synth 8-3331] design axi_mmu_v2_1_14_addr_decoder has unconnected port addr[22]
+WARNING: [Synth 8-3331] design axi_mmu_v2_1_14_addr_decoder has unconnected port addr[21]
+WARNING: [Synth 8-3331] design axi_mmu_v2_1_14_addr_decoder has unconnected port addr[20]
+WARNING: [Synth 8-3331] design axi_mmu_v2_1_14_addr_decoder has unconnected port addr[19]
+WARNING: [Synth 8-3331] design axi_mmu_v2_1_14_addr_decoder has unconnected port addr[18]
+WARNING: [Synth 8-3331] design axi_mmu_v2_1_14_addr_decoder has unconnected port addr[17]
+WARNING: [Synth 8-3331] design axi_mmu_v2_1_14_addr_decoder has unconnected port addr[16]
+WARNING: [Synth 8-3331] design axi_mmu_v2_1_14_addr_decoder has unconnected port addr[15]
+WARNING: [Synth 8-3331] design axi_mmu_v2_1_14_addr_decoder has unconnected port addr[14]
+WARNING: [Synth 8-3331] design axi_mmu_v2_1_14_addr_decoder has unconnected port addr[13]
+WARNING: [Synth 8-3331] design axi_mmu_v2_1_14_addr_decoder has unconnected port addr[12]
+WARNING: [Synth 8-3331] design axi_mmu_v2_1_14_addr_decoder has unconnected port addr[11]
+WARNING: [Synth 8-3331] design axi_mmu_v2_1_14_addr_decoder has unconnected port addr[10]
+WARNING: [Synth 8-3331] design axi_mmu_v2_1_14_addr_decoder has unconnected port addr[9]
+WARNING: [Synth 8-3331] design axi_mmu_v2_1_14_addr_decoder has unconnected port addr[8]
+WARNING: [Synth 8-3331] design axi_mmu_v2_1_14_addr_decoder has unconnected port addr[7]
+WARNING: [Synth 8-3331] design axi_mmu_v2_1_14_addr_decoder has unconnected port addr[6]
+WARNING: [Synth 8-3331] design axi_mmu_v2_1_14_addr_decoder has unconnected port addr[5]
+WARNING: [Synth 8-3331] design axi_mmu_v2_1_14_addr_decoder has unconnected port addr[4]
+WARNING: [Synth 8-3331] design axi_mmu_v2_1_14_addr_decoder has unconnected port addr[3]
+WARNING: [Synth 8-3331] design axi_mmu_v2_1_14_addr_decoder has unconnected port addr[2]
+WARNING: [Synth 8-3331] design axi_mmu_v2_1_14_addr_decoder has unconnected port addr[1]
+WARNING: [Synth 8-3331] design axi_mmu_v2_1_14_addr_decoder has unconnected port addr[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1416.559 ; gain = 122.609 ; free physical = 7890 ; free virtual = 47151
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1416.559 ; gain = 122.609 ; free physical = 7887 ; free virtual = 47147
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1416.559 ; gain = 122.609 ; free physical = 7887 ; free virtual = 47147
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xcku115-flva1517-2-e
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest/1/1.srcs/sources_1/bd/srcs/ip/shell_s00_mmu_0/shell_s00_mmu_0_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest/1/1.srcs/sources_1/bd/srcs/ip/shell_s00_mmu_0/shell_s00_mmu_0_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest/1/1.runs/shell_s00_mmu_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest/1/1.runs/shell_s00_mmu_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.15 . Memory (MB): peak = 2115.906 ; gain = 1.000 ; free physical = 11531 ; free virtual = 50773
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:37 ; elapsed = 00:00:50 . Memory (MB): peak = 2115.906 ; gain = 821.957 ; free physical = 11306 ; free virtual = 50704
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xcku115-flva1517-2-e
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:37 ; elapsed = 00:00:50 . Memory (MB): peak = 2115.906 ; gain = 821.957 ; free physical = 11306 ; free virtual = 50704
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for inst. (constraint file  /home/tarafdar/workDir/galapagos/projects/mlKernelsTest/1/1.runs/shell_s00_mmu_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:37 ; elapsed = 00:00:50 . Memory (MB): peak = 2115.906 ; gain = 821.957 ; free physical = 11307 ; free virtual = 50706
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4471] merging register 'gen_axi.gen_read.s_axi_rvalid_i_reg' into 'gen_axi.gen_read.read_cs_reg[0:0]' [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest/1/1.srcs/sources_1/bd/srcs/ipshared/fed1/hdl/axi_mmu_v2_1_vl_rfs.v:415]
+WARNING: [Synth 8-6014] Unused sequential element gen_axi.gen_read.s_axi_rvalid_i_reg was removed.  [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest/1/1.srcs/sources_1/bd/srcs/ipshared/fed1/hdl/axi_mmu_v2_1_vl_rfs.v:415]
+INFO: [Synth 8-802] inferred FSM for state register 'gen_axi.gen_write.write_cs_reg' in module 'axi_mmu_v2_1_14_decerr_slave'
+INFO: [Synth 8-5546] ROM "gen_axi.gen_read.read_cs" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gen_axi.gen_read.s_axi_rlast_i" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "gen_axi.gen_read.s_axi_rlast_i" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest/1/1.srcs/sources_1/bd/srcs/ipshared/fed1/hdl/axi_mmu_v2_1_vl_rfs.v:924]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest/1/1.srcs/sources_1/bd/srcs/ipshared/fed1/hdl/axi_mmu_v2_1_vl_rfs.v:1060]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest/1/1.srcs/sources_1/bd/srcs/ipshared/fed1/hdl/axi_mmu_v2_1_vl_rfs.v:918]
+INFO: [Synth 8-802] inferred FSM for state register 'gen_write.w_state_reg' in module 'axi_mmu_v2_1_14_top'
+INFO: [Synth 8-802] inferred FSM for state register 'gen_read.r_state_reg' in module 'axi_mmu_v2_1_14_top'
+INFO: [Synth 8-5546] ROM "r_state" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+            P_WRITE_IDLE |                              001 |                               00
+            P_WRITE_DATA |                              010 |                               01
+            P_WRITE_RESP |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_axi.gen_write.write_cs_reg' using encoding 'one-hot' in module 'axi_mmu_v2_1_14_decerr_slave'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              001 |                              000
+*
+               W_PENDING |                              010 |                              001
+                W_DECERR |                              100 |                              011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_write.w_state_reg' using encoding 'one-hot' in module 'axi_mmu_v2_1_14_top'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              001 |                              000
+*
+               R_PENDING |                              010 |                              001
+                R_DECERR |                              100 |                              011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_read.r_state_reg' using encoding 'one-hot' in module 'axi_mmu_v2_1_14_top'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:37 ; elapsed = 00:00:51 . Memory (MB): peak = 2115.906 ; gain = 821.957 ; free physical = 11140 ; free virtual = 50539
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 3     
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	               98 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                6 Bit    Registers := 3     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 11    
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+	   3 Input      3 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 5     
+	   3 Input      1 Bit        Muxes := 13    
+	   2 Input      1 Bit        Muxes := 31    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module axi_mmu_v2_1_14_addr_decoder 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module axi_mmu_v2_1_14_decerr_slave 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 9     
+	   2 Input      1 Bit        Muxes := 12    
+Module axi_register_slice_v2_1_16_axic_register_slice 
+Detailed RTL Component Info : 
++---Registers : 
+	               98 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+Module axi_mmu_v2_1_14_top 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 3     
++---Registers : 
+	                6 Bit    Registers := 3     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+	   3 Input      3 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 5     
+	   2 Input      1 Bit        Muxes := 15    
+	   3 Input      1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 5520 (col length:120)
+BRAMs: 4320 (col length: RAMB18 240 RAMB36 120)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-3936] Found unconnected internal register 'register_slice_inst/aw.aw_pipe/m_payload_i_reg' and it is trimmed from '98' to '94' bits. [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest/1/1.srcs/sources_1/bd/srcs/ipshared/0cde/hdl/axi_register_slice_v2_1_vl_rfs.v:788]
+INFO: [Synth 8-3936] Found unconnected internal register 'register_slice_inst/ar.ar_pipe/m_payload_i_reg' and it is trimmed from '98' to '94' bits. [/home/tarafdar/workDir/galapagos/projects/mlKernelsTest/1/1.srcs/sources_1/bd/srcs/ipshared/0cde/hdl/axi_register_slice_v2_1_vl_rfs.v:788]
+INFO: [Synth 8-5546] ROM "decerr_slave_inst/gen_axi.gen_read.s_axi_rlast_i" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "decerr_slave_inst/gen_axi.gen_read.read_cs" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-3331] design axi_mmu_v2_1_14_top has unconnected port s_axi_awuser[0]
+WARNING: [Synth 8-3331] design axi_mmu_v2_1_14_top has unconnected port s_axi_wid[3]
+WARNING: [Synth 8-3331] design axi_mmu_v2_1_14_top has unconnected port s_axi_wid[2]
+WARNING: [Synth 8-3331] design axi_mmu_v2_1_14_top has unconnected port s_axi_wid[1]
+WARNING: [Synth 8-3331] design axi_mmu_v2_1_14_top has unconnected port s_axi_wid[0]
+WARNING: [Synth 8-3331] design axi_mmu_v2_1_14_top has unconnected port s_axi_wuser[0]
+WARNING: [Synth 8-3331] design axi_mmu_v2_1_14_top has unconnected port s_axi_aruser[0]
+INFO: [Synth 8-3886] merging instance 'inst/aresetn_d_reg[0]' (FDR) to 'inst/register_slice_inst/aw.aw_pipe/aresetn_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/register_slice_inst/ar.ar_pipe/aresetn_d_reg[0]' (FDR) to 'inst/register_slice_inst/aw.aw_pipe/aresetn_d_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/aresetn_d_reg[1]' (FDR) to 'inst/register_slice_inst/aw.aw_pipe/aresetn_d_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/register_slice_inst/aw.aw_pipe/aresetn_d_reg[1]' (FDR) to 'inst/register_slice_inst/ar.ar_pipe/aresetn_d_reg[1]'
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:00:54 . Memory (MB): peak = 2115.906 ; gain = 821.957 ; free physical = 11021 ; free virtual = 50340
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:56 ; elapsed = 00:01:35 . Memory (MB): peak = 2276.344 ; gain = 982.395 ; free physical = 11369 ; free virtual = 50607
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:57 ; elapsed = 00:01:37 . Memory (MB): peak = 2301.375 ; gain = 1007.426 ; free physical = 11301 ; free virtual = 50542
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:58 ; elapsed = 00:01:37 . Memory (MB): peak = 2309.383 ; gain = 1015.434 ; free physical = 11317 ; free virtual = 50559
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:58 ; elapsed = 00:01:39 . Memory (MB): peak = 2309.383 ; gain = 1015.434 ; free physical = 11239 ; free virtual = 50486
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:58 ; elapsed = 00:01:39 . Memory (MB): peak = 2309.383 ; gain = 1015.434 ; free physical = 11239 ; free virtual = 50486
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:59 ; elapsed = 00:01:39 . Memory (MB): peak = 2309.383 ; gain = 1015.434 ; free physical = 11228 ; free virtual = 50475
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:59 ; elapsed = 00:01:39 . Memory (MB): peak = 2309.383 ; gain = 1015.434 ; free physical = 11228 ; free virtual = 50475
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:59 ; elapsed = 00:01:39 . Memory (MB): peak = 2309.383 ; gain = 1015.434 ; free physical = 11235 ; free virtual = 50483
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:59 ; elapsed = 00:01:39 . Memory (MB): peak = 2309.383 ; gain = 1015.434 ; free physical = 11235 ; free virtual = 50483
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT1 |     9|
+|2     |LUT2 |   270|
+|3     |LUT3 |    22|
+|4     |LUT4 |    33|
+|5     |LUT5 |    22|
+|6     |LUT6 |    38|
+|7     |FDRE |   241|
+|8     |FDSE |     3|
++------+-----+------+
+
+Report Instance Areas: 
++------+------------------------+-------------------------------------------------+------+
+|      |Instance                |Module                                           |Cells |
++------+------------------------+-------------------------------------------------+------+
+|1     |top                     |                                                 |   638|
+|2     |  inst                  |axi_mmu_v2_1_14_top                              |   638|
+|3     |    decerr_slave_inst   |axi_mmu_v2_1_14_decerr_slave                     |    66|
+|4     |    register_slice_inst |axi_register_slice_v2_1_16_axi_register_slice    |   257|
+|5     |      \ar.ar_pipe       |axi_register_slice_v2_1_16_axic_register_slice   |   129|
+|6     |      \aw.aw_pipe       |axi_register_slice_v2_1_16_axic_register_slice_0 |   128|
++------+------------------------+-------------------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:59 ; elapsed = 00:01:39 . Memory (MB): peak = 2309.383 ; gain = 1015.434 ; free physical = 11235 ; free virtual = 50482
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 8 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:46 ; elapsed = 00:01:16 . Memory (MB): peak = 2309.383 ; gain = 316.086 ; free physical = 11249 ; free virtual = 50496
+Synthesis Optimization Complete : Time (s): cpu = 00:00:59 ; elapsed = 00:01:39 . Memory (MB): peak = 2309.391 ; gain = 1015.434 ; free physical = 11258 ; free virtual = 50506
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+54 Infos, 55 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:02 ; elapsed = 00:01:43 . Memory (MB): peak = 2371.844 ; gain = 1111.500 ; free physical = 10971 ; free virtual = 50228
+INFO: [Common 17-1381] The checkpoint '/home/tarafdar/workDir/galapagos/projects/mlKernelsTest/1/1.runs/shell_s00_mmu_0_synth_1/shell_s00_mmu_0.dcp' has been generated.

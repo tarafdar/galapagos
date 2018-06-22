@@ -1,0 +1,419 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'dariusController'" level="0">
+<item name = "Date">Fri Jun 22 11:48:48 2018
+</item>
+<item name = "Version">2018.1 (Build 2188600 on Wed Apr 04 19:04:02 MDT 2018)</item>
+<item name = "Project">dariusController</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">kintexu</item>
+<item name = "Target device">xcku115-flva1517-2-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Target clock period (ns)">5.00</item>
+<item name = "Clock uncertainty (ns)">0.62</item>
+<item name = "Estimated clock period (ns)">4.38</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="grp_MPI_Recv_fu_399">MPI_Recv, ?, ?, ?, ?, none</column>
+<column name="grp_MPI_Recv_1_2210_fu_479">MPI_Recv_1_2210, ?, ?, ?, ?, none</column>
+<column name="grp_MPI_Recv_1_2211_fu_559">MPI_Recv_1_2211, ?, ?, ?, ?, none</column>
+<column name="grp_MPI_Recv_1_2_fu_637">MPI_Recv_1_2, ?, ?, ?, ?, none</column>
+<column name="grp_MPI_Recv_1_1_fu_719">MPI_Recv_1_1, ?, ?, ?, ?, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- Loop 1">?, ?, ?, -, -, ?, no</column>
+<column name="- Loop 2">4, 4, 2, -, -, 2, no</column>
+<column name="- Loop 3">?, ?, ?, -, -, ?, no</column>
+<column name="- Loop 4">?, ?, ?, -, -, ?, no</column>
+<column name="- Loop 5">8, 8, 2, -, -, 4, no</column>
+<column name="- Loop 6">?, ?, ?, -, -, ?, no</column>
+<column name="- Loop 7">21, 21, 3, -, -, 7, no</column>
+<column name="- Loop 8">?, ?, ?, -, -, ?, no</column>
+<column name="- Loop 9">?, ?, ?, -, -, ?, no</column>
+<column name="- Loop 10">18, 18, 3, -, -, 6, no</column>
+<column name="- Loop 11">?, ?, 1, -, -, inf, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="DSP">-, -, -, -</column>
+<column name="Expression">-, -, 0, 1644</column>
+<column name="FIFO">-, -, -, -</column>
+<column name="Instance">1, -, 7653, 17367</column>
+<column name="Memory">24, -, 134, 29</column>
+<column name="Multiplexer">-, -, -, 3965</column>
+<column name="Register">-, -, 1124, -</column>
+<specialColumn name="Available SLR">2160, 2760, 663360, 331680</specialColumn>
+<specialColumn name="Utilization SLR (%)">1, 0, 1, 6</specialColumn>
+<specialColumn name="Available">4320, 5520, 1326720, 663360</specialColumn>
+<specialColumn name="Utilization (%)">~0, 0, ~0, 3</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="grp_MPI_Recv_fu_399">MPI_Recv, 1, 0, 2012, 4792</column>
+<column name="grp_MPI_Recv_1_1_fu_719">MPI_Recv_1_1, 0, 0, 1176, 2794</column>
+<column name="grp_MPI_Recv_1_2_fu_637">MPI_Recv_1_2, 0, 0, 1327, 2952</column>
+<column name="grp_MPI_Recv_1_2210_fu_479">MPI_Recv_1_2210, 0, 0, 1700, 3795</column>
+<column name="grp_MPI_Recv_1_2211_fu_559">MPI_Recv_1_2211, 0, 0, 1438, 3017</column>
+<column name="dariusController_Ffa_U192">dariusController_Ffa, 0, 0, 0, 17</column>
+</table>
+</item>
+<item name = "DSP48"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="9">Memory, Module, BRAM_18K, FF, LUT, Words, Bits, Banks, W*Bits*Banks</keys>
+<column name="float_request_array_7_U">MPI_Recv_int_requbkb, 1, 0, 0, 512, 4, 1, 2048</column>
+<column name="float_request_array_6_U">MPI_Recv_int_requbkb, 1, 0, 0, 512, 4, 1, 2048</column>
+<column name="int_request_array_DA_U">MPI_Recv_int_requbkb, 1, 0, 0, 512, 4, 1, 2048</column>
+<column name="int_clr2snd_array_DA_U">MPI_Recv_int_requbkb, 1, 0, 0, 512, 4, 1, 2048</column>
+<column name="float_clr2snd_array_6_U">MPI_Recv_int_requbkb, 1, 0, 0, 512, 4, 1, 2048</column>
+<column name="darius_info_U">dariusController_CeG, 0, 64, 4, 7, 32, 1, 224</column>
+<column name="cumulative_cycle_cou_U">dariusController_DeQ, 0, 64, 1, 1, 32, 1, 32</column>
+<column name="darius_info_float_U">dariusController_Ee0, 2, 0, 0, 7, 32, 1, 224</column>
+<column name="float_request_array_4_U">dariusController_dEe, 1, 0, 0, 512, 8, 1, 4096</column>
+<column name="float_request_array_5_U">dariusController_dEe, 1, 0, 0, 512, 8, 1, 4096</column>
+<column name="float_request_array_s_U">dariusController_dEe, 1, 0, 0, 512, 8, 1, 4096</column>
+<column name="int_request_array_SR_U">dariusController_dEe, 1, 0, 0, 512, 8, 1, 4096</column>
+<column name="int_request_array_TA_U">dariusController_dEe, 1, 0, 0, 512, 8, 1, 4096</column>
+<column name="int_clr2snd_array_SR_U">dariusController_dEe, 1, 0, 0, 512, 8, 1, 4096</column>
+<column name="int_clr2snd_array_TA_U">dariusController_dEe, 1, 0, 0, 512, 8, 1, 4096</column>
+<column name="float_clr2snd_array_5_U">dariusController_dEe, 1, 0, 0, 512, 8, 1, 4096</column>
+<column name="float_clr2snd_array_s_U">dariusController_dEe, 1, 0, 0, 512, 8, 1, 4096</column>
+<column name="float_request_array_1_U">dariusController_eOg, 1, 0, 0, 512, 16, 1, 8192</column>
+<column name="float_request_array_3_U">dariusController_eOg, 1, 0, 0, 512, 16, 1, 8192</column>
+<column name="int_request_array_DE_U">dariusController_eOg, 1, 0, 0, 512, 16, 1, 8192</column>
+<column name="int_request_array_MS_U">dariusController_eOg, 1, 0, 0, 512, 16, 1, 8192</column>
+<column name="int_clr2snd_array_DE_U">dariusController_eOg, 1, 0, 0, 512, 16, 1, 8192</column>
+<column name="int_clr2snd_array_MS_U">dariusController_eOg, 1, 0, 0, 512, 16, 1, 8192</column>
+<column name="float_clr2snd_array_1_U">dariusController_eOg, 1, 0, 0, 512, 16, 1, 8192</column>
+<column name="float_clr2snd_array_3_U">dariusController_eOg, 1, 0, 0, 512, 16, 1, 8192</column>
+<column name="int_request_array_PK_U">dariusController_mb6, 0, 2, 8, 512, 1, 1, 512</column>
+<column name="int_clr2snd_array_PK_U">dariusController_mb6, 0, 2, 8, 512, 1, 1, 512</column>
+<column name="float_clr2snd_array_4_U">dariusController_mb6, 0, 2, 8, 512, 1, 1, 512</column>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="7">Name, BRAM_18K, FF, LUT, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="i_1_fu_862_p2">+, 0, 0, 9, 2, 1</column>
+<column name="i_2_fu_1139_p2">+, 0, 0, 11, 3, 1</column>
+<column name="i_3_fu_1316_p2">+, 0, 0, 11, 3, 1</column>
+<column name="i_4_fu_1542_p2">+, 0, 0, 11, 3, 1</column>
+<column name="prev_rank_fu_1480_p2">+, 0, 0, 24, 17, 2</column>
+<column name="sh_assign_2_fu_1203_p2">+, 0, 0, 16, 8, 9</column>
+<column name="sh_assign_4_fu_1371_p2">+, 0, 0, 16, 8, 9</column>
+<column name="sh_assign_fu_922_p2">+, 0, 0, 16, 8, 9</column>
+<column name="p_Val2_i_i_i1_fu_1289_p2">-, 0, 0, 39, 1, 32</column>
+<column name="p_Val2_i_i_i2_fu_1457_p2">-, 0, 0, 39, 1, 32</column>
+<column name="p_Val2_i_i_i_fu_1036_p2">-, 0, 0, 39, 1, 32</column>
+<column name="tmp_6_i_i_i1_fu_1217_p2">-, 0, 0, 15, 7, 8</column>
+<column name="tmp_6_i_i_i2_fu_1385_p2">-, 0, 0, 15, 7, 8</column>
+<column name="tmp_6_i_i_i_fu_936_p2">-, 0, 0, 15, 7, 8</column>
+<column name="ap_block_state22">and, 0, 0, 2, 1, 1</column>
+<column name="ap_block_state23">and, 0, 0, 2, 1, 1</column>
+<column name="exitcond1_fu_1310_p2">icmp, 0, 0, 9, 3, 2</column>
+<column name="exitcond2_fu_1133_p2">icmp, 0, 0, 9, 3, 4</column>
+<column name="exitcond3_fu_856_p2">icmp, 0, 0, 9, 2, 3</column>
+<column name="exitcond_fu_1536_p2">icmp, 0, 0, 9, 3, 3</column>
+<column name="is_0iter_fu_1553_p2">icmp, 0, 0, 9, 3, 1</column>
+<column name="tmp_11_fu_1475_p2">icmp, 0, 0, 20, 32, 32</column>
+<column name="tmp_9_fu_1107_p2">icmp, 0, 0, 20, 32, 1</column>
+<column name="tmp_s_fu_840_p2">icmp, 0, 0, 20, 32, 1</column>
+<column name="tmp_9_i_i_i1_fu_1247_p2">lshr, 0, 0, 66, 25, 25</column>
+<column name="tmp_9_i_i_i2_fu_1415_p2">lshr, 0, 0, 66, 25, 25</column>
+<column name="tmp_9_i_i_i_fu_966_p2">lshr, 0, 0, 66, 25, 25</column>
+<column name="darius_info_d0">select, 0, 0, 32, 1, 32</column>
+<column name="p_Val2_14_fu_1449_p3">select, 0, 0, 32, 1, 32</column>
+<column name="p_Val2_17_fu_1041_p3">select, 0, 0, 32, 1, 32</column>
+<column name="p_Val2_18_fu_1294_p3">select, 0, 0, 32, 1, 32</column>
+<column name="p_Val2_3_fu_1000_p3">select, 0, 0, 32, 1, 32</column>
+<column name="p_Val2_8_fu_1281_p3">select, 0, 0, 32, 1, 32</column>
+<column name="parameter_mem_info_1_6_fu_1047_p3">select, 0, 0, 32, 1, 32</column>
+<column name="parameter_mem_info_1_7_fu_1054_p3">select, 0, 0, 32, 1, 32</column>
+<column name="prev_rank_1_fu_1485_p3">select, 0, 0, 17, 1, 17</column>
+<column name="sh_assign_1_fu_946_p3">select, 0, 0, 9, 1, 9</column>
+<column name="sh_assign_3_fu_1227_p3">select, 0, 0, 9, 1, 9</column>
+<column name="sh_assign_5_fu_1395_p3">select, 0, 0, 9, 1, 9</column>
+<column name="x_assign_fu_872_p3">select, 0, 0, 32, 1, 32</column>
+<column name="tmp_1_i_i_i1_fu_1253_p2">shl, 0, 0, 243, 79, 79</column>
+<column name="tmp_1_i_i_i2_fu_1421_p2">shl, 0, 0, 243, 79, 79</column>
+<column name="tmp_1_i_i_i_fu_972_p2">shl, 0, 0, 243, 79, 79</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">125, 27, 1, 27</column>
+<column name="cumulative_cycle_cou_address0">15, 3, 1, 3</column>
+<column name="cumulative_cycle_cou_ce0">15, 3, 1, 3</column>
+<column name="cumulative_cycle_cou_d0">15, 3, 32, 96</column>
+<column name="cumulative_cycle_cou_we0">15, 3, 1, 3</column>
+<column name="darius_driver_address">21, 4, 32, 128</column>
+<column name="darius_driver_dataout">15, 3, 32, 96</column>
+<column name="darius_driver_size">15, 3, 32, 96</column>
+<column name="darius_info_address0">15, 3, 3, 9</column>
+<column name="darius_info_address1">15, 3, 3, 9</column>
+<column name="darius_info_float_address0">15, 3, 3, 9</column>
+<column name="darius_info_float_ce0">15, 3, 1, 3</column>
+<column name="darius_info_float_ce1">9, 2, 1, 2</column>
+<column name="darius_info_float_we0">9, 2, 1, 2</column>
+<column name="darius_info_float_we1">9, 2, 1, 2</column>
+<column name="envlp_DEST_V">21, 4, 16, 64</column>
+<column name="envlp_MSG_SIZE_V_1">21, 4, 16, 64</column>
+<column name="envlp_SRC_V_1">21, 4, 8, 32</column>
+<column name="float_clr2snd_array_1_address0">33, 6, 9, 54</column>
+<column name="float_clr2snd_array_1_ce0">33, 6, 1, 6</column>
+<column name="float_clr2snd_array_1_d0">33, 6, 16, 96</column>
+<column name="float_clr2snd_array_1_we0">33, 6, 1, 6</column>
+<column name="float_clr2snd_array_3_address0">33, 6, 9, 54</column>
+<column name="float_clr2snd_array_3_ce0">33, 6, 1, 6</column>
+<column name="float_clr2snd_array_3_d0">33, 6, 16, 96</column>
+<column name="float_clr2snd_array_3_we0">33, 6, 1, 6</column>
+<column name="float_clr2snd_array_4_address0">33, 6, 9, 54</column>
+<column name="float_clr2snd_array_4_ce0">33, 6, 1, 6</column>
+<column name="float_clr2snd_array_4_d0">33, 6, 1, 6</column>
+<column name="float_clr2snd_array_4_we0">33, 6, 1, 6</column>
+<column name="float_clr2snd_array_5_address0">33, 6, 9, 54</column>
+<column name="float_clr2snd_array_5_ce0">33, 6, 1, 6</column>
+<column name="float_clr2snd_array_5_d0">33, 6, 8, 48</column>
+<column name="float_clr2snd_array_5_we0">33, 6, 1, 6</column>
+<column name="float_clr2snd_array_6_address0">33, 6, 9, 54</column>
+<column name="float_clr2snd_array_6_ce0">33, 6, 1, 6</column>
+<column name="float_clr2snd_array_6_d0">33, 6, 4, 24</column>
+<column name="float_clr2snd_array_6_we0">33, 6, 1, 6</column>
+<column name="float_clr2snd_array_s_address0">33, 6, 9, 54</column>
+<column name="float_clr2snd_array_s_ce0">33, 6, 1, 6</column>
+<column name="float_clr2snd_array_s_d0">33, 6, 8, 48</column>
+<column name="float_clr2snd_array_s_we0">33, 6, 1, 6</column>
+<column name="float_clr_num">27, 5, 32, 160</column>
+<column name="float_req_num">27, 5, 32, 160</column>
+<column name="float_request_array_1_address0">33, 6, 9, 54</column>
+<column name="float_request_array_1_ce0">33, 6, 1, 6</column>
+<column name="float_request_array_1_d0">33, 6, 16, 96</column>
+<column name="float_request_array_1_we0">33, 6, 1, 6</column>
+<column name="float_request_array_3_address0">33, 6, 9, 54</column>
+<column name="float_request_array_3_ce0">33, 6, 1, 6</column>
+<column name="float_request_array_3_d0">33, 6, 16, 96</column>
+<column name="float_request_array_3_we0">33, 6, 1, 6</column>
+<column name="float_request_array_4_address0">33, 6, 9, 54</column>
+<column name="float_request_array_4_ce0">33, 6, 1, 6</column>
+<column name="float_request_array_4_d0">33, 6, 8, 48</column>
+<column name="float_request_array_4_we0">33, 6, 1, 6</column>
+<column name="float_request_array_5_address0">33, 6, 9, 54</column>
+<column name="float_request_array_5_ce0">33, 6, 1, 6</column>
+<column name="float_request_array_5_d0">33, 6, 8, 48</column>
+<column name="float_request_array_5_we0">33, 6, 1, 6</column>
+<column name="float_request_array_6_address0">27, 5, 9, 45</column>
+<column name="float_request_array_6_ce0">27, 5, 1, 5</column>
+<column name="float_request_array_6_d0">27, 5, 4, 20</column>
+<column name="float_request_array_6_we0">27, 5, 1, 5</column>
+<column name="float_request_array_7_address0">33, 6, 9, 54</column>
+<column name="float_request_array_7_ce0">33, 6, 1, 6</column>
+<column name="float_request_array_7_d0">33, 6, 4, 24</column>
+<column name="float_request_array_7_we0">33, 6, 1, 6</column>
+<column name="float_request_array_s_address0">33, 6, 9, 54</column>
+<column name="float_request_array_s_ce0">33, 6, 1, 6</column>
+<column name="float_request_array_s_d0">33, 6, 8, 48</column>
+<column name="float_request_array_s_we0">33, 6, 1, 6</column>
+<column name="grp_MPI_Recv_1_2_fu_637_buf_offset">15, 3, 64, 192</column>
+<column name="grp_MPI_Recv_1_2_fu_637_count">15, 3, 30, 90</column>
+<column name="grp_MPI_Recv_1_2_fu_637_source">15, 3, 18, 54</column>
+<column name="i1_reg_366">9, 2, 3, 6</column>
+<column name="i2_reg_377">9, 2, 3, 6</column>
+<column name="i3_reg_388">9, 2, 3, 6</column>
+<column name="i_reg_355">9, 2, 2, 4</column>
+<column name="int_clr2snd_array_DA_address0">33, 6, 9, 54</column>
+<column name="int_clr2snd_array_DA_ce0">33, 6, 1, 6</column>
+<column name="int_clr2snd_array_DA_d0">33, 6, 4, 24</column>
+<column name="int_clr2snd_array_DA_we0">33, 6, 1, 6</column>
+<column name="int_clr2snd_array_DE_address0">33, 6, 9, 54</column>
+<column name="int_clr2snd_array_DE_ce0">33, 6, 1, 6</column>
+<column name="int_clr2snd_array_DE_d0">33, 6, 16, 96</column>
+<column name="int_clr2snd_array_DE_we0">33, 6, 1, 6</column>
+<column name="int_clr2snd_array_MS_address0">33, 6, 9, 54</column>
+<column name="int_clr2snd_array_MS_ce0">33, 6, 1, 6</column>
+<column name="int_clr2snd_array_MS_d0">33, 6, 16, 96</column>
+<column name="int_clr2snd_array_MS_we0">33, 6, 1, 6</column>
+<column name="int_clr2snd_array_PK_address0">33, 6, 9, 54</column>
+<column name="int_clr2snd_array_PK_ce0">33, 6, 1, 6</column>
+<column name="int_clr2snd_array_PK_d0">33, 6, 1, 6</column>
+<column name="int_clr2snd_array_PK_we0">33, 6, 1, 6</column>
+<column name="int_clr2snd_array_SR_address0">33, 6, 9, 54</column>
+<column name="int_clr2snd_array_SR_ce0">33, 6, 1, 6</column>
+<column name="int_clr2snd_array_SR_d0">33, 6, 8, 48</column>
+<column name="int_clr2snd_array_SR_we0">33, 6, 1, 6</column>
+<column name="int_clr2snd_array_TA_address0">33, 6, 9, 54</column>
+<column name="int_clr2snd_array_TA_ce0">33, 6, 1, 6</column>
+<column name="int_clr2snd_array_TA_d0">33, 6, 8, 48</column>
+<column name="int_clr2snd_array_TA_we0">33, 6, 1, 6</column>
+<column name="int_clr_num">27, 5, 32, 160</column>
+<column name="int_req_num">27, 5, 32, 160</column>
+<column name="int_request_array_DA_address0">33, 6, 9, 54</column>
+<column name="int_request_array_DA_ce0">33, 6, 1, 6</column>
+<column name="int_request_array_DA_d0">33, 6, 4, 24</column>
+<column name="int_request_array_DA_we0">33, 6, 1, 6</column>
+<column name="int_request_array_DE_address0">33, 6, 9, 54</column>
+<column name="int_request_array_DE_ce0">33, 6, 1, 6</column>
+<column name="int_request_array_DE_d0">33, 6, 16, 96</column>
+<column name="int_request_array_DE_we0">33, 6, 1, 6</column>
+<column name="int_request_array_MS_address0">33, 6, 9, 54</column>
+<column name="int_request_array_MS_ce0">33, 6, 1, 6</column>
+<column name="int_request_array_MS_d0">33, 6, 16, 96</column>
+<column name="int_request_array_MS_we0">33, 6, 1, 6</column>
+<column name="int_request_array_PK_address0">33, 6, 9, 54</column>
+<column name="int_request_array_PK_ce0">33, 6, 1, 6</column>
+<column name="int_request_array_PK_d0">33, 6, 1, 6</column>
+<column name="int_request_array_PK_we0">33, 6, 1, 6</column>
+<column name="int_request_array_SR_address0">33, 6, 9, 54</column>
+<column name="int_request_array_SR_ce0">33, 6, 1, 6</column>
+<column name="int_request_array_SR_d0">33, 6, 8, 48</column>
+<column name="int_request_array_SR_we0">33, 6, 1, 6</column>
+<column name="int_request_array_TA_address0">33, 6, 9, 54</column>
+<column name="int_request_array_TA_ce0">33, 6, 1, 6</column>
+<column name="int_request_array_TA_d0">33, 6, 8, 48</column>
+<column name="int_request_array_TA_we0">33, 6, 1, 6</column>
+<column name="state_1">21, 4, 2, 8</column>
+<column name="stream_in_V_read">33, 6, 1, 6</column>
+<column name="stream_out_V_din">27, 5, 129, 645</column>
+<column name="stream_out_V_write">33, 6, 1, 6</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">26, 0, 26, 0</column>
+<column name="data_mem_info_1_1_fu_266">32, 0, 32, 0</column>
+<column name="data_mem_info_1_fu_262">32, 0, 32, 0</column>
+<column name="data_mem_info_float_10_reg_1708">32, 0, 32, 0</column>
+<column name="data_mem_info_float_11_reg_1713">32, 0, 32, 0</column>
+<column name="data_mem_info_float_1_fu_250">32, 0, 32, 0</column>
+<column name="data_mem_info_float_2_fu_254">32, 0, 32, 0</column>
+<column name="data_mem_info_float_3_fu_258">32, 0, 32, 0</column>
+<column name="data_mem_info_float_8_reg_1698">32, 0, 32, 0</column>
+<column name="data_mem_info_float_9_reg_1703">32, 0, 32, 0</column>
+<column name="data_mem_info_float_s_fu_246">32, 0, 32, 0</column>
+<column name="envlp_DEST_V">16, 0, 16, 0</column>
+<column name="envlp_MSG_SIZE_V_1">16, 0, 16, 0</column>
+<column name="envlp_SRC_V_1">8, 0, 8, 0</column>
+<column name="float_clr_num">32, 0, 32, 0</column>
+<column name="float_req_num">32, 0, 32, 0</column>
+<column name="grp_MPI_Recv_1_1_fu_719_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_MPI_Recv_1_2210_fu_479_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_MPI_Recv_1_2211_fu_559_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_MPI_Recv_1_2_fu_637_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_MPI_Recv_fu_399_ap_start_reg">1, 0, 1, 0</column>
+<column name="i1_reg_366">3, 0, 3, 0</column>
+<column name="i2_reg_377">3, 0, 3, 0</column>
+<column name="i3_reg_388">3, 0, 3, 0</column>
+<column name="i_1_reg_1619">2, 0, 2, 0</column>
+<column name="i_2_reg_1736">3, 0, 3, 0</column>
+<column name="i_3_reg_1762">3, 0, 3, 0</column>
+<column name="i_4_reg_1843">3, 0, 3, 0</column>
+<column name="i_reg_355">2, 0, 2, 0</column>
+<column name="int_clr_num">32, 0, 32, 0</column>
+<column name="int_req_num">32, 0, 32, 0</column>
+<column name="is_0iter_reg_1853">1, 0, 1, 0</column>
+<column name="p_Result_1_reg_1745">1, 0, 1, 0</column>
+<column name="p_Result_2_reg_1787">1, 0, 1, 0</column>
+<column name="p_Result_s_reg_1630">1, 0, 1, 0</column>
+<column name="p_Val2_14_reg_1792">32, 0, 32, 0</column>
+<column name="p_Val2_3_reg_1635">32, 0, 32, 0</column>
+<column name="p_Val2_8_reg_1750">32, 0, 32, 0</column>
+<column name="parameter_mem_info_1_1_fu_242">32, 0, 32, 0</column>
+<column name="parameter_mem_info_1_fu_238">32, 0, 32, 0</column>
+<column name="parameter_mem_info_f_1_fu_222">32, 0, 32, 0</column>
+<column name="parameter_mem_info_f_4_reg_1591">32, 0, 32, 0</column>
+<column name="parameter_mem_info_f_5_reg_1596">32, 0, 32, 0</column>
+<column name="parameter_mem_info_f_fu_218">32, 0, 32, 0</column>
+<column name="prev_rank_1_cast_cas_reg_1827">18, 0, 18, 0</column>
+<column name="prev_rank_1_reg_1798">17, 0, 17, 0</column>
+<column name="rank_cast_reg_1576">16, 0, 17, 1</column>
+<column name="rank_reg_1571">16, 0, 32, 16</column>
+<column name="reg_802">32, 0, 32, 0</column>
+<column name="state_1">2, 0, 2, 0</column>
+<column name="tmp_15_reg_1809">62, 0, 64, 2</column>
+<column name="tmp_17_reg_1814">30, 0, 30, 0</column>
+<column name="tmp_18_reg_1767">3, 0, 64, 61</column>
+<column name="tmp_1_reg_1624">1, 0, 1, 0</column>
+<column name="tmp_29_reg_1741">2, 0, 2, 0</column>
+<column name="tmp_4_reg_1641">62, 0, 64, 2</column>
+<column name="tmp_6_reg_1646">30, 0, 30, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_none, dariusController, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_none, dariusController, return value</column>
+<column name="mem_req_din">out, 1, ap_bus, mem, pointer</column>
+<column name="mem_req_full_n">in, 1, ap_bus, mem, pointer</column>
+<column name="mem_req_write">out, 1, ap_bus, mem, pointer</column>
+<column name="mem_rsp_empty_n">in, 1, ap_bus, mem, pointer</column>
+<column name="mem_rsp_read">out, 1, ap_bus, mem, pointer</column>
+<column name="mem_address">out, 32, ap_bus, mem, pointer</column>
+<column name="mem_datain">in, 32, ap_bus, mem, pointer</column>
+<column name="mem_dataout">out, 32, ap_bus, mem, pointer</column>
+<column name="mem_size">out, 32, ap_bus, mem, pointer</column>
+<column name="darius_driver_req_din">out, 1, ap_bus, darius_driver, pointer</column>
+<column name="darius_driver_req_full_n">in, 1, ap_bus, darius_driver, pointer</column>
+<column name="darius_driver_req_write">out, 1, ap_bus, darius_driver, pointer</column>
+<column name="darius_driver_rsp_empty_n">in, 1, ap_bus, darius_driver, pointer</column>
+<column name="darius_driver_rsp_read">out, 1, ap_bus, darius_driver, pointer</column>
+<column name="darius_driver_address">out, 32, ap_bus, darius_driver, pointer</column>
+<column name="darius_driver_datain">in, 32, ap_bus, darius_driver, pointer</column>
+<column name="darius_driver_dataout">out, 32, ap_bus, darius_driver, pointer</column>
+<column name="darius_driver_size">out, 32, ap_bus, darius_driver, pointer</column>
+<column name="id_in_V">in, 16, ap_none, id_in_V, pointer</column>
+<column name="stream_in_V_dout">in, 129, ap_fifo, stream_in_V, pointer</column>
+<column name="stream_in_V_empty_n">in, 1, ap_fifo, stream_in_V, pointer</column>
+<column name="stream_in_V_read">out, 1, ap_fifo, stream_in_V, pointer</column>
+<column name="stream_out_V_din">out, 129, ap_fifo, stream_out_V, pointer</column>
+<column name="stream_out_V_full_n">in, 1, ap_fifo, stream_out_V, pointer</column>
+<column name="stream_out_V_write">out, 1, ap_fifo, stream_out_V, pointer</column>
+</table>
+</item>
+</section>
+
+<section name = "Critical Path" level="0">
+<item name = "Max Delay">4.38</item>
+<item name = "Critical Path Table"><table name="Critical Path Table" hasTotal="0">
+<keys size="15">Name, Operator, Delay, Accumulated Delay, Store Source, Resource, Core, Interface, Type, Port, Array, Scope, Pointer, Callee, Phi Node</keys>
+<column name="'darius_driver_addr_r', ../telepathy/hlsSources/dariusController.cpp:92">writereq, 4.38, 4.38, -, -, -, ap_bus, request, &apos;darius_driver&apos;, -, -, -, -, -</column>
+</table>
+</item>
+</section>
+</profile>

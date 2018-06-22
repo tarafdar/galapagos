@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="md1" xd:componentRef="md1" xd:initiationInterval="x" xd:clockPeriod="5.000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:arg xd:name="id" xd:originalName="id" xd:direction="in" xd:interfaceRef="id_V" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="16"/>
+  <xd:latencyEstimates xd:best-case="undef" xd:worst-case="undef" xd:average-case="undef"/>
+  <xd:resourceEstimates xd:LUT="15" xd:FF="2" xd:BRAM="0" xd:DSP="0"/>
+</xd:acceleratorMap>

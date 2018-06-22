@@ -1,0 +1,151 @@
+
+
+================================================================
+== Vivado HLS Report for 'eth_dest_filter'
+================================================================
+* Date:           Sun Jun 17 22:51:19 2018
+
+* Version:        2018.1 (Build 2188600 on Wed Apr 04 19:04:02 MDT 2018)
+* Project:        eth_dest_filter
+* Solution:       solution1
+* Product family: kintexu
+* Target device:  xcku115-flva1517-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   4.00|      2.91|        0.50|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+----------+
+    |  Latency  |  Interval | Pipeline |
+    | min | max | min | max |   Type   |
+    +-----+-----+-----+-----+----------+
+    |    2|    2|    1|    1| function |
+    +-----+-----+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+-------+---------+--------+
+|         Name        | BRAM_18K| DSP48E|    FF   |   LUT  |
++---------------------+---------+-------+---------+--------+
+|DSP                  |        -|      -|        -|       -|
+|Expression           |        -|      -|        0|      32|
+|FIFO                 |        -|      -|        -|       -|
+|Instance             |        -|      -|        -|       -|
+|Memory               |        -|      -|        -|       -|
+|Multiplexer          |        -|      -|        -|      27|
+|Register             |        -|      -|      200|       -|
++---------------------+---------+-------+---------+--------+
+|Total                |        0|      0|      200|      59|
++---------------------+---------+-------+---------+--------+
+|Available SLR        |     2160|   2760|   663360|  331680|
++---------------------+---------+-------+---------+--------+
+|Utilization SLR (%)  |        0|      0|    ~0   |   ~0   |
++---------------------+---------+-------+---------+--------+
+|Available            |     4320|   5520|  1326720|  663360|
++---------------------+---------+-------+---------+--------+
+|Utilization (%)      |        0|      0|    ~0   |   ~0   |
++---------------------+---------+-------+---------+--------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |ap_block_state1_pp0_stage0_iter0  |    and   |      0|  0|   2|           1|           1|
+    |ap_predicate_op29_write_state3    |    and   |      0|  0|   2|           1|           1|
+    |ap_predicate_op31_write_state3    |    and   |      0|  0|   2|           1|           1|
+    |inFPGA_fu_117_p2                  |   icmp   |      0|  0|  20|          32|          32|
+    |ap_block_pp0_stage0_01001         |    or    |      0|  0|   2|           1|           1|
+    |ap_block_state3_pp0_stage0_iter2  |    or    |      0|  0|   2|           1|           1|
+    |ap_enable_pp0                     |    xor   |      0|  0|   2|           1|           2|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |Total                             |          |      0|  0|  32|          38|          39|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------+----+-----------+-----+-----------+
+    |            Name            | LUT| Input Size| Bits| Total Bits|
+    +----------------------------+----+-----------+-----+-----------+
+    |stream_in_V_blk_n           |   9|          2|    1|          2|
+    |stream_out_network_V_blk_n  |   9|          2|    1|          2|
+    |stream_out_switch_V_blk_n   |   9|          2|    1|          2|
+    +----------------------------+----+-----------+-----+-----------+
+    |Total                       |  27|          6|    3|          6|
+    +----------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------+----+----+-----+-----------+
+    |             Name            | FF | LUT| Bits| Const Bits|
+    +-----------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                    |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1      |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2      |   1|   0|    1|          0|
+    |inFPGA_reg_142               |   1|   0|    1|          0|
+    |mac_addr_read_reg_122        |  32|   0|   32|          0|
+    |tmp22_reg_131                |  81|   0|   81|          0|
+    |tmp22_reg_131_pp0_iter1_reg  |  81|   0|   81|          0|
+    |tmp_reg_127                  |   1|   0|    1|          0|
+    |tmp_reg_127_pp0_iter1_reg    |   1|   0|    1|          0|
+    +-----------------------------+----+----+-----+-----------+
+    |Total                        | 200|   0|  200|          0|
+    +-----------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------------+-----+-----+--------------+----------------------+--------------+
+|          RTL Ports          | Dir | Bits|   Protocol   |     Source Object    |    C Type    |
++-----------------------------+-----+-----+--------------+----------------------+--------------+
+|ap_clk                       |  in |    1| ap_ctrl_none |    eth_dest_filter   | return value |
+|ap_rst                       |  in |    1| ap_ctrl_none |    eth_dest_filter   | return value |
+|mac_table_V_address0         | out |    8|   ap_memory  |      mac_table_V     |     array    |
+|mac_table_V_ce0              | out |    1|   ap_memory  |      mac_table_V     |     array    |
+|mac_table_V_q0               |  in |   32|   ap_memory  |      mac_table_V     |     array    |
+|mac_addr                     |  in |   32|    ap_none   |       mac_addr       |    scalar    |
+|stream_in_V_dout             |  in |   81|    ap_fifo   |      stream_in_V     |    pointer   |
+|stream_in_V_empty_n          |  in |    1|    ap_fifo   |      stream_in_V     |    pointer   |
+|stream_in_V_read             | out |    1|    ap_fifo   |      stream_in_V     |    pointer   |
+|stream_out_switch_V_din      | out |   81|    ap_fifo   |  stream_out_switch_V |    pointer   |
+|stream_out_switch_V_full_n   |  in |    1|    ap_fifo   |  stream_out_switch_V |    pointer   |
+|stream_out_switch_V_write    | out |    1|    ap_fifo   |  stream_out_switch_V |    pointer   |
+|stream_out_network_V_din     | out |   81|    ap_fifo   | stream_out_network_V |    pointer   |
+|stream_out_network_V_full_n  |  in |    1|    ap_fifo   | stream_out_network_V |    pointer   |
+|stream_out_network_V_write   | out |    1|    ap_fifo   | stream_out_network_V |    pointer   |
++-----------------------------+-----+-----+--------------+----------------------+--------------+
+

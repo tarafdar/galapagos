@@ -1,0 +1,128 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'application_bridge'" level="0">
+<item name = "Date">Fri Jun 22 15:26:02 2018
+</item>
+<item name = "Version">2018.1 (Build 2188600 on Wed Apr 04 19:04:02 MDT 2018)</item>
+<item name = "Project">application_bridge</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">kintexu</item>
+<item name = "Target device">xcku115-flva1517-2-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Target clock period (ns)">6.40</item>
+<item name = "Clock uncertainty (ns)">0.80</item>
+<item name = "Estimated clock period (ns)">17.22</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">1, 1, 1, 1, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="app_to_net_U0">app_to_net, 1, 1, 1, 1, function</column>
+<column name="net_to_app_U0">net_to_app, 1, 1, 1, 1, function</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="DSP">-, -, -, -</column>
+<column name="Expression">-, -, -, -</column>
+<column name="FIFO">-, -, -, -</column>
+<column name="Instance">-, -, 747, 1684</column>
+<column name="Memory">-, -, -, -</column>
+<column name="Multiplexer">-, -, -, -</column>
+<column name="Register">-, -, 2, -</column>
+<specialColumn name="Available SLR">2160, 2760, 663360, 331680</specialColumn>
+<specialColumn name="Utilization SLR (%)">0, 0, ~0, ~0</specialColumn>
+<specialColumn name="Available">4320, 5520, 1326720, 663360</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, ~0, ~0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="app_to_net_U0">app_to_net, 0, 0, 520, 890</column>
+<column name="net_to_app_U0">net_to_app, 0, 0, 227, 794</column>
+</table>
+</item>
+<item name = "DSP48"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="9">Memory, Module, BRAM_18K, FF, LUT, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="7">Name, BRAM_18K, FF, LUT, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="app_to_net_U0_ap_start">1, 0, 1, 0</column>
+<column name="net_to_app_U0_ap_start">1, 0, 1, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="from_app_V_dout">in, 129, ap_fifo, from_app_V, pointer</column>
+<column name="from_app_V_empty_n">in, 1, ap_fifo, from_app_V, pointer</column>
+<column name="from_app_V_read">out, 1, ap_fifo, from_app_V, pointer</column>
+<column name="to_app_V_din">out, 129, ap_fifo, to_app_V, pointer</column>
+<column name="to_app_V_full_n">in, 1, ap_fifo, to_app_V, pointer</column>
+<column name="to_app_V_write">out, 1, ap_fifo, to_app_V, pointer</column>
+<column name="from_net_V_dout">in, 81, ap_fifo, from_net_V, pointer</column>
+<column name="from_net_V_empty_n">in, 1, ap_fifo, from_net_V, pointer</column>
+<column name="from_net_V_read">out, 1, ap_fifo, from_net_V, pointer</column>
+<column name="to_net_V_din">out, 81, ap_fifo, to_net_V, pointer</column>
+<column name="to_net_V_full_n">in, 1, ap_fifo, to_net_V, pointer</column>
+<column name="to_net_V_write">out, 1, ap_fifo, to_net_V, pointer</column>
+<column name="ap_clk">in, 1, ap_ctrl_none, application_bridge, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_none, application_bridge, return value</column>
+</table>
+</item>
+</section>
+
+<section name = "Critical Path" level="0">
+<item name = "Max Delay">0.00</item>
+<item name = "Critical Path Table"><table name="Critical Path Table" hasTotal="0">
+<keys size="15">Name, Operator, Delay, Accumulated Delay, Store Source, Resource, Core, Interface, Type, Port, Array, Scope, Pointer, Callee, Phi Node</keys>
+</table>
+</item>
+</section>
+</profile>

@@ -1,0 +1,107 @@
+<InterfaceSummary>
+<RtlPorts>
+<name>stream_in_V</name>
+<CType>
+<TypeName>struct</TypeName>
+<TypeWidth>129</TypeWidth>
+<PhysicalWidth>129</PhysicalWidth>
+<Fields>
+<Field>
+<FieldName>data</FieldName>
+<FieldType>
+<TypeName>ap_uint 64</TypeName>
+<TypeWidth>64</TypeWidth>
+<PhysicalWidth>64</PhysicalWidth>
+</FieldType>
+</Field>
+<Field>
+<FieldName>dest</FieldName>
+<FieldType>
+<TypeName>ap_uint 8</TypeName>
+<TypeWidth>8</TypeWidth>
+<PhysicalWidth>8</PhysicalWidth>
+</FieldType>
+</Field>
+<Field>
+<FieldName>keep</FieldName>
+<FieldType>
+<TypeName>ap_uint 8</TypeName>
+<TypeWidth>8</TypeWidth>
+<PhysicalWidth>8</PhysicalWidth>
+</FieldType>
+</Field>
+<Field>
+<FieldName>last</FieldName>
+<FieldType>
+<TypeName>ap_uint 1</TypeName>
+<TypeWidth>1</TypeWidth>
+<PhysicalWidth>1</PhysicalWidth>
+</FieldType>
+</Field>
+<Field>
+<FieldName>id</FieldName>
+<FieldType>
+<TypeName>ap_uint 8</TypeName>
+<TypeWidth>8</TypeWidth>
+<PhysicalWidth>8</PhysicalWidth>
+</FieldType>
+</Field>
+<Field>
+<FieldName>user</FieldName>
+<FieldType>
+<TypeName>ap_uint 40</TypeName>
+<TypeWidth>40</TypeWidth>
+<PhysicalWidth>40</PhysicalWidth>
+</FieldType>
+</Field>
+</Fields>
+</CType>
+<CFractionWidth>0</CFractionWidth>
+<InvalidType>1</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>stream_out_V</name>
+<CType>
+<TypeName>struct</TypeName>
+<TypeWidth>81</TypeWidth>
+<PhysicalWidth>81</PhysicalWidth>
+<Fields>
+<Field>
+<FieldName>data</FieldName>
+<FieldType>
+<TypeName>ap_int 64</TypeName>
+<TypeWidth>64</TypeWidth>
+<PhysicalWidth>64</PhysicalWidth>
+</FieldType>
+</Field>
+<Field>
+<FieldName>last</FieldName>
+<FieldType>
+<TypeName>ap_uint 1</TypeName>
+<TypeWidth>1</TypeWidth>
+<PhysicalWidth>1</PhysicalWidth>
+</FieldType>
+</Field>
+<Field>
+<FieldName>keep</FieldName>
+<FieldType>
+<TypeName>ap_uint 8</TypeName>
+<TypeWidth>8</TypeWidth>
+<PhysicalWidth>8</PhysicalWidth>
+</FieldType>
+</Field>
+<Field>
+<FieldName>dest</FieldName>
+<FieldType>
+<TypeName>ap_uint 8</TypeName>
+<TypeWidth>8</TypeWidth>
+<PhysicalWidth>8</PhysicalWidth>
+</FieldType>
+</Field>
+</Fields>
+</CType>
+<CFractionWidth>0</CFractionWidth>
+<InvalidType>1</InvalidType>
+</RtlPorts>
+</InterfaceSummary>
+

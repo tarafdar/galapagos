@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="dummy" xd:componentRef="dummy" xd:initiationInterval="8" xd:clockPeriod="5.000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:arg xd:name="*(out)" xd:originalName="out" xd:direction="out" xd:interfaceRef="out_r" xd:busTypeRef="register" xd:handshakeRef="ap_vld" xd:dataWidth="32" xd:firstOut="0"/>
+  <xd:arg xd:name="*(mem)" xd:originalName="mem" xd:direction="inout" xd:interfaceRef="m_axi_mem" xd:busTypeRef="aximm" xd:dataWidth="32" xd:bufferDirection="in"/>
+  <xd:latencyEstimates xd:best-case="1" xd:worst-case="7" xd:average-case="4"/>
+  <xd:resourceEstimates xd:LUT="670" xd:FF="523" xd:BRAM="2" xd:DSP="0"/>
+</xd:acceleratorMap>

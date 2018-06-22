@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="dariusController" xd:componentRef="dariusController" xd:initiationInterval="x" xd:clockPeriod="5.000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:arg xd:name="mem[]" xd:originalName="mem" xd:direction="out" xd:interfaceRef="M_AXI_MEM" xd:busTypeRef="aximm" xd:arraySize="2147483648" xd:dataWidth="32" xd:bufferDirection="out"/>
+  <xd:arg xd:name="darius_driver[]" xd:originalName="darius_driver" xd:direction="out" xd:interfaceRef="M_AXI_DARIUS_DRIVER" xd:busTypeRef="aximm" xd:arraySize="1024" xd:dataWidth="32" xd:bufferDirection="out"/>
+  <xd:arg xd:name="id_in" xd:originalName="id_in" xd:direction="in" xd:interfaceRef="id_in_V" xd:busTypeRef="register" xd:handshakeRef="ap_none" xd:dataWidth="16"/>
+  <xd:arg xd:name="stream_in.data" xd:originalName="stream_in" xd:direction="in" xd:interfaceRef="stream_in_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="63:0" xd:dataWidth="64"/>
+  <xd:arg xd:name="stream_in.dest" xd:originalName="stream_in" xd:direction="in" xd:interfaceRef="stream_in_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="71:64" xd:dataWidth="8"/>
+  <xd:arg xd:name="stream_in.last" xd:originalName="stream_in" xd:direction="in" xd:interfaceRef="stream_in_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="72:72" xd:dataWidth="1"/>
+  <xd:arg xd:name="stream_in.id" xd:originalName="stream_in" xd:direction="in" xd:interfaceRef="stream_in_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="80:73" xd:dataWidth="8"/>
+  <xd:arg xd:name="stream_in.keep" xd:originalName="stream_in" xd:direction="in" xd:interfaceRef="stream_in_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="88:81" xd:dataWidth="8"/>
+  <xd:arg xd:name="stream_in.user" xd:originalName="stream_in" xd:direction="in" xd:interfaceRef="stream_in_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="128:89" xd:dataWidth="40"/>
+  <xd:arg xd:name="stream_out.data" xd:originalName="stream_out" xd:direction="out" xd:interfaceRef="stream_out_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="63:0" xd:dataWidth="64"/>
+  <xd:arg xd:name="stream_out.dest" xd:originalName="stream_out" xd:direction="out" xd:interfaceRef="stream_out_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="71:64" xd:dataWidth="8"/>
+  <xd:arg xd:name="stream_out.last" xd:originalName="stream_out" xd:direction="out" xd:interfaceRef="stream_out_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="72:72" xd:dataWidth="1"/>
+  <xd:arg xd:name="stream_out.id" xd:originalName="stream_out" xd:direction="out" xd:interfaceRef="stream_out_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="80:73" xd:dataWidth="8"/>
+  <xd:arg xd:name="stream_out.keep" xd:originalName="stream_out" xd:direction="out" xd:interfaceRef="stream_out_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="88:81" xd:dataWidth="8"/>
+  <xd:arg xd:name="stream_out.user" xd:originalName="stream_out" xd:direction="out" xd:interfaceRef="stream_out_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="128:89" xd:dataWidth="40"/>
+  <xd:latencyEstimates xd:best-case="undef" xd:worst-case="undef" xd:average-case="undef"/>
+  <xd:resourceEstimates xd:LUT="23005" xd:FF="8911" xd:BRAM="25" xd:DSP="0"/>
+</xd:acceleratorMap>

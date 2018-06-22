@@ -1,0 +1,144 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'ethernet_bridge'" level="0">
+<item name = "Date">Sun Jun 17 22:50:50 2018
+</item>
+<item name = "Version">2018.1 (Build 2188600 on Wed Apr 04 19:04:02 MDT 2018)</item>
+<item name = "Project">ethernet_bridge</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">kintexu</item>
+<item name = "Target device">xcku115-flva1517-2-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Target clock period (ns)">4.00</item>
+<item name = "Clock uncertainty (ns)">0.50</item>
+<item name = "Estimated clock period (ns)">4.33</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">2, 2, 1, 1, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="app_to_eth_U0">app_to_eth, 1, 1, 1, 1, function</column>
+<column name="eth_to_app_U0">eth_to_app, 1, 1, 1, 1, function</column>
+<column name="ethernet_bridge_entr_U0">ethernet_bridge_entr, 0, 0, 0, 0, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="DSP">-, -, -, -</column>
+<column name="Expression">-, -, -, -</column>
+<column name="FIFO">0, -, 10, 120</column>
+<column name="Instance">-, -, 472, 278</column>
+<column name="Memory">-, -, -, -</column>
+<column name="Multiplexer">-, -, -, -</column>
+<column name="Register">-, -, 1, -</column>
+<specialColumn name="Available SLR">2160, 2760, 663360, 331680</specialColumn>
+<specialColumn name="Utilization SLR (%)">0, 0, ~0, ~0</specialColumn>
+<specialColumn name="Available">4320, 5520, 1326720, 663360</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, ~0, ~0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="app_to_eth_U0">app_to_eth, 0, 0, 380, 125</column>
+<column name="eth_to_app_U0">eth_to_app, 0, 0, 90, 124</column>
+<column name="ethernet_bridge_entr_U0">ethernet_bridge_entr, 0, 0, 2, 29</column>
+</table>
+</item>
+<item name = "DSP48"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="9">Memory, Module, BRAM_18K, FF, LUT, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="7">Name, BRAM_18K, FF, LUT, Depth, Bits, Size:D*B</keys>
+<column name="mac_addr_V_c42_U">0, 5, 60, 2, 48, 96</column>
+<column name="mac_addr_V_c_U">0, 5, 60, 2, 48, 96</column>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="eth_to_app_U0_ap_start">1, 0, 1, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="to_app_V_din">out, 81, ap_fifo, to_app_V, pointer</column>
+<column name="to_app_V_full_n">in, 1, ap_fifo, to_app_V, pointer</column>
+<column name="to_app_V_write">out, 1, ap_fifo, to_app_V, pointer</column>
+<column name="from_eth_V_dout">in, 73, ap_fifo, from_eth_V, pointer</column>
+<column name="from_eth_V_empty_n">in, 1, ap_fifo, from_eth_V, pointer</column>
+<column name="from_eth_V_read">out, 1, ap_fifo, from_eth_V, pointer</column>
+<column name="from_app_V_dout">in, 81, ap_fifo, from_app_V, pointer</column>
+<column name="from_app_V_empty_n">in, 1, ap_fifo, from_app_V, pointer</column>
+<column name="from_app_V_read">out, 1, ap_fifo, from_app_V, pointer</column>
+<column name="to_eth_V_din">out, 73, ap_fifo, to_eth_V, pointer</column>
+<column name="to_eth_V_full_n">in, 1, ap_fifo, to_eth_V, pointer</column>
+<column name="to_eth_V_write">out, 1, ap_fifo, to_eth_V, pointer</column>
+<column name="mac_addr_V">in, 48, ap_none, mac_addr_V, scalar</column>
+<column name="mac_table_V_address0">out, 8, ap_memory, mac_table_V, array</column>
+<column name="mac_table_V_ce0">out, 1, ap_memory, mac_table_V, array</column>
+<column name="mac_table_V_d0">out, 48, ap_memory, mac_table_V, array</column>
+<column name="mac_table_V_q0">in, 48, ap_memory, mac_table_V, array</column>
+<column name="mac_table_V_we0">out, 1, ap_memory, mac_table_V, array</column>
+<column name="mac_table_V_address1">out, 8, ap_memory, mac_table_V, array</column>
+<column name="mac_table_V_ce1">out, 1, ap_memory, mac_table_V, array</column>
+<column name="mac_table_V_d1">out, 48, ap_memory, mac_table_V, array</column>
+<column name="mac_table_V_q1">in, 48, ap_memory, mac_table_V, array</column>
+<column name="mac_table_V_we1">out, 1, ap_memory, mac_table_V, array</column>
+<column name="ap_clk">in, 1, ap_ctrl_none, ethernet_bridge, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_none, ethernet_bridge, return value</column>
+</table>
+</item>
+</section>
+
+<section name = "Critical Path" level="0">
+<item name = "Max Delay">1.75</item>
+<item name = "Critical Path Table"><table name="Critical Path Table" hasTotal="0">
+<keys size="15">Name, Operator, Delay, Accumulated Delay, Store Source, Resource, Core, Interface, Type, Port, Array, Scope, Pointer, Callee, Phi Node</keys>
+<column name="'op.V'">read, 0.00, 0.00, -, -, -, wire, read, &apos;mac_addr_V&apos;, -, -, -, -, -</column>
+<column name="">call, 1.75, 1.75, -, -, -, -, -, -, -, -, -, ethernet_bridge.entr, -</column>
+</table>
+</item>
+</section>
+</profile>

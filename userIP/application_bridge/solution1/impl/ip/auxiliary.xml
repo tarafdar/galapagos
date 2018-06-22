@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="application_bridge" xd:componentRef="application_bridge" xd:initiationInterval="2" xd:clockPeriod="6.400" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:arg xd:name="from_app.data" xd:originalName="from_app" xd:direction="in" xd:interfaceRef="from_app_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="63:0" xd:dataWidth="64"/>
+  <xd:arg xd:name="from_app.dest" xd:originalName="from_app" xd:direction="in" xd:interfaceRef="from_app_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="71:64" xd:dataWidth="8"/>
+  <xd:arg xd:name="from_app.last" xd:originalName="from_app" xd:direction="in" xd:interfaceRef="from_app_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="72:72" xd:dataWidth="1"/>
+  <xd:arg xd:name="from_app.keep" xd:originalName="from_app" xd:direction="in" xd:interfaceRef="from_app_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="80:73" xd:dataWidth="8"/>
+  <xd:arg xd:name="from_app.id" xd:originalName="from_app" xd:direction="in" xd:interfaceRef="from_app_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="88:81" xd:dataWidth="8"/>
+  <xd:arg xd:name="from_app.user" xd:originalName="from_app" xd:direction="in" xd:interfaceRef="from_app_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="128:89" xd:dataWidth="40"/>
+  <xd:arg xd:name="to_app.data" xd:originalName="to_app" xd:direction="out" xd:interfaceRef="to_app_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="63:0" xd:dataWidth="64"/>
+  <xd:arg xd:name="to_app.dest" xd:originalName="to_app" xd:direction="out" xd:interfaceRef="to_app_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="71:64" xd:dataWidth="8"/>
+  <xd:arg xd:name="to_app.last" xd:originalName="to_app" xd:direction="out" xd:interfaceRef="to_app_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="72:72" xd:dataWidth="1"/>
+  <xd:arg xd:name="to_app.keep" xd:originalName="to_app" xd:direction="out" xd:interfaceRef="to_app_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="80:73" xd:dataWidth="8"/>
+  <xd:arg xd:name="to_app.id" xd:originalName="to_app" xd:direction="out" xd:interfaceRef="to_app_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="88:81" xd:dataWidth="8"/>
+  <xd:arg xd:name="to_app.user" xd:originalName="to_app" xd:direction="out" xd:interfaceRef="to_app_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="128:89" xd:dataWidth="40"/>
+  <xd:arg xd:name="from_net.data" xd:originalName="from_net" xd:direction="in" xd:interfaceRef="from_net_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="63:0" xd:dataWidth="64"/>
+  <xd:arg xd:name="from_net.dest" xd:originalName="from_net" xd:direction="in" xd:interfaceRef="from_net_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="71:64" xd:dataWidth="8"/>
+  <xd:arg xd:name="from_net.keep" xd:originalName="from_net" xd:direction="in" xd:interfaceRef="from_net_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="79:72" xd:dataWidth="8"/>
+  <xd:arg xd:name="from_net.last" xd:originalName="from_net" xd:direction="in" xd:interfaceRef="from_net_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="80:80" xd:dataWidth="1"/>
+  <xd:arg xd:name="to_net.data" xd:originalName="to_net" xd:direction="out" xd:interfaceRef="to_net_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="63:0" xd:dataWidth="64"/>
+  <xd:arg xd:name="to_net.dest" xd:originalName="to_net" xd:direction="out" xd:interfaceRef="to_net_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="71:64" xd:dataWidth="8"/>
+  <xd:arg xd:name="to_net.keep" xd:originalName="to_net" xd:direction="out" xd:interfaceRef="to_net_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="79:72" xd:dataWidth="8"/>
+  <xd:arg xd:name="to_net.last" xd:originalName="to_net" xd:direction="out" xd:interfaceRef="to_net_V" xd:busTypeRef="axis" xd:dataPack="true" xd:bitMapping="80:80" xd:dataWidth="1"/>
+  <xd:latencyEstimates xd:best-case="1" xd:worst-case="1" xd:average-case="1"/>
+  <xd:resourceEstimates xd:LUT="1684" xd:FF="749" xd:BRAM="0" xd:DSP="0"/>
+</xd:acceleratorMap>

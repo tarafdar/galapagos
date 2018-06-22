@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Messages>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1312" content="Analyzing design file &apos;../HMPI/HLS_lib/FNR.cpp&apos; ..." tag=""/>
+	<Message prefix="[HLS 200-41]" severity="WARNING" keynum="HLS_41_1434" content="Resource core &apos;AXI4Stream&apos; on port &apos;&amp;stream_out&apos; is deprecated. Please use the interface directive to specify the AXI interface." tag=""/>
+	<Message prefix="[HLS 200-41]" severity="WARNING" keynum="HLS_41_1434" content="Resource core &apos;AXI4Stream&apos; on port &apos;&amp;stream_in&apos; is deprecated. Please use the interface directive to specify the AXI interface." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1465" content="Validating synthesis directives ..." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Checking Pragmas Time (s): cpu = 00:01:11 ; elapsed = 00:00:43 . Memory (MB): peak = 479.898 ; gain = 128.430 ; free physical = 16958 ; free virtual = 57111" tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Linking Time (s): cpu = 00:01:12 ; elapsed = 00:00:45 . Memory (MB): peak = 479.898 ; gain = 128.430 ; free physical = 16957 ; free virtual = 57110" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1467" content="Starting code transformations ..." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Standard Transforms Time (s): cpu = 00:01:14 ; elapsed = 00:00:47 . Memory (MB): peak = 479.898 ; gain = 128.430 ; free physical = 16958 ; free virtual = 57111" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1472" content="Checking synthesizability ..." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Checking Synthesizability Time (s): cpu = 00:01:14 ; elapsed = 00:00:47 . Memory (MB): peak = 479.898 ; gain = 128.430 ; free physical = 16958 ; free virtual = 57111" tag=""/>
+	<Message prefix="[XFORM 203-1101]" severity="INFO" keynum="909" content="Packing variable &apos;stream_out.V&apos; (../HMPI/HLS_lib/FNR.cpp:61) into a 81-bit variable." tag=""/>
+	<Message prefix="[XFORM 203-1101]" severity="INFO" keynum="909" content="Packing variable &apos;stream_in.V&apos; (../HMPI/HLS_lib/FNR.cpp:58) into a 129-bit variable." tag=""/>
+	<Message prefix="[XFORM 203-401]" severity="INFO" keynum="809" content="Performing if-conversion on hyperblock to (../HMPI/HLS_lib/FNR.cpp:122:5) in function &apos;FNR&apos;... converting 5 basic blocks." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Pre-synthesis Time (s): cpu = 00:01:15 ; elapsed = 00:00:48 . Memory (MB): peak = 543.469 ; gain = 192.000 ; free physical = 16932 ; free virtual = 57085" tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Architecture Synthesis Time (s): cpu = 00:01:16 ; elapsed = 00:00:49 . Memory (MB): peak = 543.469 ; gain = 192.000 ; free physical = 16929 ; free virtual = 57082" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1317" content="Starting hardware synthesis ..." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1385" content="Synthesizing &apos;FNR&apos; ..." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1477" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-42]" severity="INFO" keynum="HLS_42_1438" content="-- Implementing module &apos;FNR&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1478" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="139" content="Starting scheduling ..." tag=""/>
+	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="107" content="Pipelining loop &apos;Loop 1&apos;." tag=""/>
+	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="110" content="Pipelining result : Target II = 1, Final II = 1, Depth = 2." tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="138" content="Finished scheduling." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 29.72 seconds; current allocated memory: 124.407 MB." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="439" content="Starting micro-architecture generation ..." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="211" content="Performing variable lifetime analysis." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="210" content="Exploring resource sharing." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="206" content="Binding ..." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="438" content="Finished micro-architecture generation." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.05 seconds; current allocated memory: 124.665 MB." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1483" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1484" content="-- Generating RTL for module &apos;FNR&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1485" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;FNR/stream_in_V&apos; to &apos;ap_fifo&apos;." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;FNR/stream_out_V&apos; to &apos;ap_fifo&apos;." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on function &apos;FNR&apos; to &apos;ap_ctrl_none&apos;." tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="369" content="Finished creating RTL model for &apos;FNR&apos;." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.06 seconds; current allocated memory: 125.097 MB." tag=""/>
+	<Message prefix="[IMPL 213-200]" severity="INFO" keynum="IMPL_200_1804" content="Port &apos;stream_in_V.data&apos; is mapped to &apos;TDATA&apos; by default." tag=""/>
+	<Message prefix="[IMPL 213-200]" severity="INFO" keynum="IMPL_200_1804" content="Port &apos;stream_in_V.dest&apos; is mapped to &apos;TDEST&apos; by default." tag=""/>
+	<Message prefix="[IMPL 213-200]" severity="INFO" keynum="IMPL_200_1804" content="Port &apos;stream_in_V.keep&apos; is mapped to &apos;TKEEP&apos; by default." tag=""/>
+	<Message prefix="[IMPL 213-200]" severity="INFO" keynum="IMPL_200_1804" content="Port &apos;stream_in_V.last&apos; is mapped to &apos;TLAST&apos; by default." tag=""/>
+	<Message prefix="[IMPL 213-200]" severity="INFO" keynum="IMPL_200_1804" content="Port &apos;stream_in_V.id&apos; is mapped to &apos;TID&apos; by default." tag=""/>
+	<Message prefix="[IMPL 213-200]" severity="INFO" keynum="IMPL_200_1804" content="Port &apos;stream_in_V.user&apos; is mapped to &apos;TUSER&apos; by default." tag=""/>
+	<Message prefix="[IMPL 213-200]" severity="INFO" keynum="IMPL_200_1804" content="Port &apos;stream_out_V.data&apos; is mapped to &apos;TDATA&apos; by default." tag=""/>
+	<Message prefix="[IMPL 213-200]" severity="INFO" keynum="IMPL_200_1804" content="Port &apos;stream_out_V.last&apos; is mapped to &apos;TLAST&apos; by default." tag=""/>
+	<Message prefix="[IMPL 213-200]" severity="INFO" keynum="IMPL_200_1804" content="Port &apos;stream_out_V.keep&apos; is mapped to &apos;TKEEP&apos; by default." tag=""/>
+	<Message prefix="[IMPL 213-200]" severity="INFO" keynum="IMPL_200_1804" content="Port &apos;stream_out_V.dest&apos; is mapped to &apos;TDEST&apos; by default." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished generating all RTL models Time (s): cpu = 00:01:16 ; elapsed = 00:00:50 . Memory (MB): peak = 543.469 ; gain = 192.000 ; free physical = 16929 ; free virtual = 57082" tag=""/>
+	<Message prefix="[SYSC 207-301]" severity="INFO" keynum="SYSC_301_1065" content="Generating SystemC RTL for FNR." tag=""/>
+	<Message prefix="[VHDL 208-304]" severity="INFO" keynum="VHDL_304_1066" content="Generating VHDL RTL for FNR." tag=""/>
+	<Message prefix="[VLOG 209-307]" severity="INFO" keynum="VLOG_307_1067" content="Generating Verilog RTL for FNR." tag=""/>
+</Messages>

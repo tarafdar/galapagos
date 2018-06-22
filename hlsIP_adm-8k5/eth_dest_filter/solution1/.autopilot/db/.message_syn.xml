@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Messages>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1312" content="Analyzing design file &apos;../hlsSources/srcs/eth_dest_filter.cpp&apos; ..." tag=""/>
+	<Message prefix="[HLS 200-41]" severity="WARNING" keynum="HLS_41_1434" content="Resource core &apos;AXI4Stream&apos; on port &apos;stream_in&apos; is deprecated. Please use the interface directive to specify the AXI interface." tag=""/>
+	<Message prefix="[HLS 200-41]" severity="WARNING" keynum="HLS_41_1434" content="Resource core &apos;AXI4Stream&apos; on port &apos;stream_out_switch&apos; is deprecated. Please use the interface directive to specify the AXI interface." tag=""/>
+	<Message prefix="[HLS 200-41]" severity="WARNING" keynum="HLS_41_1434" content="Resource core &apos;AXI4Stream&apos; on port &apos;stream_out_network&apos; is deprecated. Please use the interface directive to specify the AXI interface." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1465" content="Validating synthesis directives ..." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Checking Pragmas Time (s): cpu = 00:01:11 ; elapsed = 00:00:44 . Memory (MB): peak = 543.469 ; gain = 192.000 ; free physical = 11478 ; free virtual = 57964" tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Linking Time (s): cpu = 00:01:12 ; elapsed = 00:00:46 . Memory (MB): peak = 543.469 ; gain = 192.000 ; free physical = 11483 ; free virtual = 57969" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1467" content="Starting code transformations ..." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Standard Transforms Time (s): cpu = 00:01:14 ; elapsed = 00:00:47 . Memory (MB): peak = 543.469 ; gain = 192.000 ; free physical = 11483 ; free virtual = 57969" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1472" content="Checking synthesizability ..." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Checking Synthesizability Time (s): cpu = 00:01:14 ; elapsed = 00:00:47 . Memory (MB): peak = 543.469 ; gain = 192.000 ; free physical = 11483 ; free virtual = 57969" tag=""/>
+	<Message prefix="[XFORM 203-1101]" severity="INFO" keynum="909" content="Packing variable &apos;stream_in.V&apos; (../hlsSources/srcs/eth_dest_filter.cpp:20) into a 81-bit variable." tag=""/>
+	<Message prefix="[XFORM 203-1101]" severity="INFO" keynum="909" content="Packing variable &apos;stream_out_switch.V&apos; (../hlsSources/srcs/eth_dest_filter.cpp:21) into a 81-bit variable." tag=""/>
+	<Message prefix="[XFORM 203-1101]" severity="INFO" keynum="909" content="Packing variable &apos;stream_out_network.V&apos; (../hlsSources/srcs/eth_dest_filter.cpp:22) into a 81-bit variable." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Pre-synthesis Time (s): cpu = 00:01:15 ; elapsed = 00:00:48 . Memory (MB): peak = 543.469 ; gain = 192.000 ; free physical = 11482 ; free virtual = 57968" tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Architecture Synthesis Time (s): cpu = 00:01:16 ; elapsed = 00:00:49 . Memory (MB): peak = 543.469 ; gain = 192.000 ; free physical = 11482 ; free virtual = 57968" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1317" content="Starting hardware synthesis ..." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1385" content="Synthesizing &apos;eth_dest_filter&apos; ..." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1477" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-42]" severity="INFO" keynum="HLS_42_1438" content="-- Implementing module &apos;eth_dest_filter&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1478" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="139" content="Starting scheduling ..." tag=""/>
+	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="112" content="Pipelining function &apos;eth_dest_filter&apos;." tag=""/>
+	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="110" content="Pipelining result : Target II = 1, Final II = 1, Depth = 3." tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="138" content="Finished scheduling." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 28.7 seconds; current allocated memory: 119.556 MB." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="439" content="Starting micro-architecture generation ..." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="211" content="Performing variable lifetime analysis." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="210" content="Exploring resource sharing." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="206" content="Binding ..." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="438" content="Finished micro-architecture generation." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.04 seconds; current allocated memory: 119.685 MB." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1483" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1484" content="-- Generating RTL for module &apos;eth_dest_filter&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1485" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;eth_dest_filter/mac_table_V&apos; to &apos;ap_memory&apos;." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;eth_dest_filter/mac_addr&apos; to &apos;ap_none&apos;." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;eth_dest_filter/stream_in_V&apos; to &apos;ap_fifo&apos;." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;eth_dest_filter/stream_out_switch_V&apos; to &apos;ap_fifo&apos;." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;eth_dest_filter/stream_out_network_V&apos; to &apos;ap_fifo&apos;." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on function &apos;eth_dest_filter&apos; to &apos;ap_ctrl_none&apos;." tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="369" content="Finished creating RTL model for &apos;eth_dest_filter&apos;." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.04 seconds; current allocated memory: 119.908 MB." tag=""/>
+	<Message prefix="[IMPL 213-200]" severity="INFO" keynum="IMPL_200_1804" content="Port &apos;stream_in_V.data&apos; is mapped to &apos;TDATA&apos; by default." tag=""/>
+	<Message prefix="[IMPL 213-200]" severity="INFO" keynum="IMPL_200_1804" content="Port &apos;stream_in_V.last&apos; is mapped to &apos;TLAST&apos; by default." tag=""/>
+	<Message prefix="[IMPL 213-200]" severity="INFO" keynum="IMPL_200_1804" content="Port &apos;stream_in_V.tdest&apos; is mapped to &apos;TDEST&apos; by default." tag=""/>
+	<Message prefix="[IMPL 213-200]" severity="INFO" keynum="IMPL_200_1804" content="Port &apos;stream_in_V.tkeep&apos; is mapped to &apos;TKEEP&apos; by default." tag=""/>
+	<Message prefix="[IMPL 213-200]" severity="INFO" keynum="IMPL_200_1804" content="Port &apos;stream_out_network_V.data&apos; is mapped to &apos;TDATA&apos; by default." tag=""/>
+	<Message prefix="[IMPL 213-200]" severity="INFO" keynum="IMPL_200_1804" content="Port &apos;stream_out_network_V.last&apos; is mapped to &apos;TLAST&apos; by default." tag=""/>
+	<Message prefix="[IMPL 213-200]" severity="INFO" keynum="IMPL_200_1804" content="Port &apos;stream_out_network_V.tdest&apos; is mapped to &apos;TDEST&apos; by default." tag=""/>
+	<Message prefix="[IMPL 213-200]" severity="INFO" keynum="IMPL_200_1804" content="Port &apos;stream_out_network_V.tkeep&apos; is mapped to &apos;TKEEP&apos; by default." tag=""/>
+	<Message prefix="[IMPL 213-200]" severity="INFO" keynum="IMPL_200_1804" content="Port &apos;stream_out_switch_V.data&apos; is mapped to &apos;TDATA&apos; by default." tag=""/>
+	<Message prefix="[IMPL 213-200]" severity="INFO" keynum="IMPL_200_1804" content="Port &apos;stream_out_switch_V.last&apos; is mapped to &apos;TLAST&apos; by default." tag=""/>
+	<Message prefix="[IMPL 213-200]" severity="INFO" keynum="IMPL_200_1804" content="Port &apos;stream_out_switch_V.tdest&apos; is mapped to &apos;TDEST&apos; by default." tag=""/>
+	<Message prefix="[IMPL 213-200]" severity="INFO" keynum="IMPL_200_1804" content="Port &apos;stream_out_switch_V.tkeep&apos; is mapped to &apos;TKEEP&apos; by default." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished generating all RTL models Time (s): cpu = 00:01:16 ; elapsed = 00:00:50 . Memory (MB): peak = 543.469 ; gain = 192.000 ; free physical = 11481 ; free virtual = 57967" tag=""/>
+	<Message prefix="[SYSC 207-301]" severity="INFO" keynum="SYSC_301_1065" content="Generating SystemC RTL for eth_dest_filter." tag=""/>
+	<Message prefix="[VHDL 208-304]" severity="INFO" keynum="VHDL_304_1066" content="Generating VHDL RTL for eth_dest_filter." tag=""/>
+	<Message prefix="[VLOG 209-307]" severity="INFO" keynum="VLOG_307_1067" content="Generating Verilog RTL for eth_dest_filter." tag=""/>
+</Messages>

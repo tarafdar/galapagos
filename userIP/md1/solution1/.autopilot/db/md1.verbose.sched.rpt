@@ -1,0 +1,129 @@
+
+
+================================================================
+== Vivado HLS Report for 'md1'
+================================================================
+* Date:           Fri Jun 22 10:01:57 2018
+
+* Version:        2018.1 (Build 2188600 on Wed Apr 04 19:04:02 MDT 2018)
+* Project:        md1
+* Solution:       solution1
+* Product family: kintexu
+* Target device:  xcku115-flva1517-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   5.00|      0.00|        0.62|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    ?|    ?|    ?|    ?|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |          |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name| min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Loop 1  |    ?|    ?|         1|          -|          -|  inf |    no    |
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 0
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	2  / true
+
+* FSM state operations: 
+
+ <State 1> : 0.00ns
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i16 %id_V), !map !233"
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([4 x i8]* @md1_str) nounwind"
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 0, [13 x i8]* @p_str12, i32 0, i32 0, [1 x i8]* @p_str11, i32 0, i32 0, [1 x i8]* @p_str11, [1 x i8]* @p_str11, [1 x i8]* @p_str11, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str11, [1 x i8]* @p_str11) nounwind" [../HMPI/mpi_app_benchmarks/HMPI_md/hls/md1.cpp:281]
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecIFCore(i121* @stream_out_V, [1 x i8]* @p_str11, [11 x i8]* @p_str13, [1 x i8]* @p_str11, i32 -1, [1 x i8]* @p_str11, [1 x i8]* @p_str11, [1 x i8]* @p_str11, [1 x i8]* @p_str11, [1 x i8]* @p_str11)"
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecIFCore(i121* @stream_in_V, [1 x i8]* @p_str11, [11 x i8]* @p_str13, [1 x i8]* @p_str11, i32 -1, [1 x i8]* @p_str11, [1 x i8]* @p_str11, [1 x i8]* @p_str11, [1 x i8]* @p_str11, [1 x i8]* @p_str11)"
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%id_V_read = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %id_V)"
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "store i16 %id_V_read, i16* @id_in_V, align 2" [../HMPI/mpi_app_benchmarks/HMPI_md/hls/md1.cpp:289]
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%tmp = zext i16 %id_V_read to i32" [../HMPI/mpi_app_benchmarks/HMPI_md/hls/md1.cpp:290]
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "store i32 %tmp, i32* @world_rank, align 4" [../HMPI/mpi_app_benchmarks/HMPI_md/hls/md1.cpp:290]
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "store i32 46, i32* @processorCount, align 4" [../HMPI/mpi_app_benchmarks/HMPI_md/hls/md1.cpp:291]
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "br label %.preheader" [../HMPI/mpi_app_benchmarks/HMPI_md/hls/md1.cpp:309]
+
+ <State 2> : 0.00ns
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "br label %.preheader" [../HMPI/mpi_app_benchmarks/HMPI_md/hls/md1.cpp:309]
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5ns, clock uncertainty: 0.625ns.
+
+ <State 1>: 0ns
+The critical path consists of the following:
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,46 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+<sourceFile name="">
+<directive functionLabel="" functionName="eth_dest_filter" label="">
+<pragma name="RESOURCE">
+<option name="variable" positionalBoolean="4" value="stream_in"/>
+<option name="core" value="AXI4Stream"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="eth_dest_filter" label="">
+<pragma name="RESOURCE">
+<option name="variable" positionalBoolean="4" value="stream_out_switch"/>
+<option name="core" value="AXI4Stream"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="eth_dest_filter" label="">
+<pragma name="RESOURCE">
+<option name="variable" positionalBoolean="4" value="stream_out_network"/>
+<option name="core" value="AXI4Stream"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="eth_dest_filter" label="">
+<pragma name="DATA_PACK">
+<option name="variable" positionalBoolean="4" value="stream_in"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="eth_dest_filter" label="">
+<pragma name="DATA_PACK">
+<option name="variable" positionalBoolean="4" value="stream_out_switch"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="eth_dest_filter" label="">
+<pragma name="DATA_PACK">
+<option name="variable" positionalBoolean="4" value="stream_out_network"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="eth_dest_filter" label="">
+<pragma name="INTERFACE">
+<option name="ap_ctrl_none" positionalBoolean="mode" value=""/>
+<option name="port" positionalBoolean="4" value="return"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="eth_dest_filter" label="">
+<pragma name="PIPELINE"/>
+</directive>
+</sourceFile>
+</AutoPilot:ProjectResources>

@@ -1,0 +1,61 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'dariusController'" level="0">
+<item name = "Date">Fri Jun 22 11:48:40 2018
+</item>
+<item name = "Version">2018.1 (Build 2188600 on Wed Apr 04 19:04:02 MDT 2018)</item>
+<item name = "Project">dariusController</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">kintexu</item>
+<item name = "Target device">xcku115-flva1517-2-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">5.00, 4.38, 0.62</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="grp_MPI_Recv_fu_399">MPI_Recv, ?, ?, ?, ?, none</column>
+<column name="grp_MPI_Recv_1_2210_fu_479">MPI_Recv_1_2210, ?, ?, ?, ?, none</column>
+<column name="grp_MPI_Recv_1_2211_fu_559">MPI_Recv_1_2211, ?, ?, ?, ?, none</column>
+<column name="grp_MPI_Recv_1_2_fu_637">MPI_Recv_1_2, ?, ?, ?, ?, none</column>
+<column name="grp_MPI_Recv_1_1_fu_719">MPI_Recv_1_1, ?, ?, ?, ?, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- Loop 1">?, ?, ?, -, -, ?, no</column>
+<column name="- Loop 2">4, 4, 2, -, -, 2, no</column>
+<column name="- Loop 3">?, ?, ?, -, -, ?, no</column>
+<column name="- Loop 4">?, ?, ?, -, -, ?, no</column>
+<column name="- Loop 5">8, 8, 2, -, -, 4, no</column>
+<column name="- Loop 6">?, ?, ?, -, -, ?, no</column>
+<column name="- Loop 7">21, 21, 3, -, -, 7, no</column>
+<column name="- Loop 8">?, ?, ?, -, -, ?, no</column>
+<column name="- Loop 9">?, ?, ?, -, -, ?, no</column>
+<column name="- Loop 10">18, 18, 3, -, -, 6, no</column>
+<column name="- Loop 11">?, ?, 1, -, -, inf, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

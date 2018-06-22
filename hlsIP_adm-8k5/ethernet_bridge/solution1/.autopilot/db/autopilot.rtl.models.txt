@@ -1,0 +1,6 @@
+fifo_w48_d2_A
+fifo_w48_d2_A
+ethernet_bridge_entr
+eth_to_app
+app_to_eth
+ethernet_bridge
