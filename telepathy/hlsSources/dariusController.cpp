@@ -16,6 +16,11 @@
 #define DEPTH 2147483648 
 #define DARIUS_DEPTH 1024
 
+#define INIT 0
+#define DMA_IN 1 
+#define RUN_DARIUS 2  
+#define WAIT_FOR_DARIUS 3  
+#define DMA_OUT 4  
 
 void dariusController(
                 float  mem [DEPTH],            // global memory pointer
@@ -36,70 +41,93 @@ void dariusController(
 #pragma HLS resource core=AXI4M variable=darius_driver
 #pragma HLS INTERFACE ap_ctrl_none port=return 
     
-    int rank = id_in;
-    int parameter_mem_info[PARAMETER_MEM_INFO_SIZE]; //{offset in offchip memory to dma_in, size to dma_in} 
-    int data_mem_info[MEM_INFO_SIZE]; //{offset in offchip memory to dma_in, size to dma_in, offset in offchip memory to dma_out, size to dma_out} 
-    int darius_info[DARIUS_INFO_SIZE]; //{num_commands, command, batch_size, num_ranks} 
-    int cumulative_cycle_count[1];
+    static int rank = id_in;
+    static int parameter_mem_info[PARAMETER_MEM_INFO_SIZE]; //{offset in offchip memory to dma_in, size to dma_in} 
+    static int data_mem_info[MEM_INFO_SIZE]; //{offset in offchip memory to dma_in, size to dma_in, offset in offchip memory to dma_out, size to dma_out} 
+    static int darius_info[DARIUS_INFO_SIZE]; //{num_commands, command, batch_size, num_ranks} 
+    static int cumulative_cycle_count[1];
+    static 
+    static float parameter_mem_info_float[PARAMETER_MEM_INFO_SIZE]; //{offset in offchip memory to dma_in, size to dma_in} 
+    static float data_mem_info_float[MEM_INFO_SIZE]; //{offset in offchip memory to dma_in, size to dma_in, offset in offchip memory to dma_out, size to dma_out} 
+    static float darius_info_float[DARIUS_INFO_SIZE]; //{num_commands, command, batch_size, num_ranks} 
+    static float cumulative_cycle_count_float[1];
     
-    float parameter_mem_info_float[PARAMETER_MEM_INFO_SIZE]; //{offset in offchip memory to dma_in, size to dma_in} 
-    float data_mem_info_float[MEM_INFO_SIZE]; //{offset in offchip memory to dma_in, size to dma_in, offset in offchip memory to dma_out, size to dma_out} 
-    float darius_info_float[DARIUS_INFO_SIZE]; //{num_commands, command, batch_size, num_ranks} 
-    float cumulative_cycle_count_float[1];
-    
-      
+
+    static ap_uint <3> state = INIT;
+
+    static unsigned int batch_size = darius_info[DARIUS_INFO_SIZE - 2];
+    static unsigned int num_ranks = darius_info[DARIUS_INFO_SIZE - 1];
+    static int prev_rank;
+    static int next_rank;
+
+    switch (state) {
+        case INIT:
     //control and parameters from rank 0
     //
     //information on parameters (offset to dma in and size)
-    while(!MPI_Recv(parameter_mem_info_float, PARAMETER_MEM_INFO_SIZE, MPI_FLOAT, 0,0/*not used*/,MPI_COMM_WORLD/*not used*/));
-    for(int i=0; i< PARAMETER_MEM_INFO_SIZE; i++)
-        parameter_mem_info[i] = (int) parameter_mem_info_float[i];
+            while(!MPI_Recv(parameter_mem_info_float, PARAMETER_MEM_INFO_SIZE, MPI_FLOAT, 0,0/*not used*/,MPI_COMM_WORLD/*not used*/));
+            for(int i=0; i< PARAMETER_MEM_INFO_SIZE; i++)
+                parameter_mem_info[i] = (int) parameter_mem_info_float[i];
 
-    //dma in parameters
-    while(!MPI_Recv(mem + parameter_mem_info[0]/sizeof(int), parameter_mem_info[1]/sizeof(int), MPI_FLOAT, 0,0/*not used*/,MPI_COMM_WORLD/*not used*/));
-    
-    while(!MPI_Recv(data_mem_info_float, MEM_INFO_SIZE, MPI_FLOAT, 0,0/*not used*/,MPI_COMM_WORLD/*not used*/));
-    for(int i=0; i< MEM_INFO_SIZE; i++)
-        data_mem_info[i] = (int) data_mem_info_float[i];
+            //dma in parameters
+            while(!MPI_Recv(mem + parameter_mem_info[0]/sizeof(int), parameter_mem_info[1]/sizeof(int), MPI_FLOAT, 0,0/*not used*/,MPI_COMM_WORLD/*not used*/));
+            
+            while(!MPI_Recv(data_mem_info_float, MEM_INFO_SIZE, MPI_FLOAT, 0,0/*not used*/,MPI_COMM_WORLD/*not used*/));
+            for(int i=0; i< MEM_INFO_SIZE; i++)
+                data_mem_info[i] = (int) data_mem_info_float[i];
 
 
-    while(!MPI_Recv(darius_info_float, DARIUS_INFO_SIZE, MPI_FLOAT, 0,0/*not used*/,MPI_COMM_WORLD/*not used*/));
-    for(int i=0; i< DARIUS_INFO_SIZE; i++)
-        darius_info[i] = (int) darius_info_float[i];
+            while(!MPI_Recv(darius_info_float, DARIUS_INFO_SIZE, MPI_FLOAT, 0,0/*not used*/,MPI_COMM_WORLD/*not used*/));
+            for(int i=0; i< DARIUS_INFO_SIZE; i++)
+                darius_info[i] = (int) darius_info_float[i];
      
-    unsigned int batch_size = darius_info[DARIUS_INFO_SIZE - 2];
-    unsigned int num_ranks = darius_info[DARIUS_INFO_SIZE - 1];
-    int prev_rank;
-    int next_rank;
+            batch_size = darius_info[DARIUS_INFO_SIZE - 2];
+            num_ranks = darius_info[DARIUS_INFO_SIZE - 1];
 
-    if(rank<=batch_size)
-        prev_rank = 0;
-    else
-        prev_rank = rank -1;
+            if(rank<=batch_size)
+                prev_rank = 0;
+            else
+                prev_rank = rank -1;
 
-    if(rank>(num_ranks - batch_size))
-        next_rank = 0;
-    else
-        next_rank = rank + 1;
+            if(rank>(num_ranks - batch_size))
+                next_rank = 0;
+            else
+                next_rank = rank + 1;
+            state = DMA_IN;
+            break;
 
-    while(1){
-        //previous cycle count and data from previous rank
-        while(!MPI_Recv(cumulative_cycle_count, 1, MPI_FLOAT, prev_rank,0/*not used*/,MPI_COMM_WORLD/*not used*/));
-        cumulative_cycle_count[0] = (int) cumulative_cycle_count_float[0];
-        while(!MPI_Recv(mem + data_mem_info[0]/sizeof(float), data_mem_info[1]/sizeof(float), MPI_FLOAT, prev_rank,0/*not used*/,MPI_COMM_WORLD/*not used*/));
+        case DMA_IN:
+            //previous cycle count and data from previous rank
+            while(!MPI_Recv(cumulative_cycle_count, 1, MPI_FLOAT, prev_rank,0/*not used*/,MPI_COMM_WORLD/*not used*/));
+            cumulative_cycle_count[0] = (int) cumulative_cycle_count_float[0];
+            while(!MPI_Recv(mem + data_mem_info[0]/sizeof(float), data_mem_info[1]/sizeof(float), MPI_FLOAT, prev_rank,0/*not used*/,MPI_COMM_WORLD/*not used*/));
+            state = RUN_DARIUS;
+            break;
+
+        case RUN_DARIUS:
+            //run darius
+            darius_driver[NUM_COMMANDS_OFFSET/sizeof(int)] = darius_info[0]; // num_commands
+            for (int i=0; i<(DARIUS_INFO_SIZE-1); i++)
+                darius_driver[COMMAND_OFFSET/sizeof(int) + i] = darius_info[i+1]; // command
+            darius_driver[0] = START;
+
+            state = WAIT_FOR_DARIUS;
+            break;
+        case WAIT_FOR_DARIUS:
+            if(darius_driver[0] == DONE)
+                state = DMA_OUT;
+            else
+                state = WAIT_FOR_DARIUS;
+            break;
         
-        //run darius
-        darius_driver[NUM_COMMANDS_OFFSET/sizeof(int)] = darius_info[0]; // num_commands
-        for (int i=0; i<(DARIUS_INFO_SIZE-1); i++)
-            darius_driver[COMMAND_OFFSET/sizeof(int) + i] = darius_info[i+1]; // command
-        darius_driver[0] = START; 
-        while( darius_driver[0] != DONE);
-        
-        cumulative_cycle_count[0] += darius_driver[CYCLE_COUNT_OFFSET/sizeof(int)]; // command
-        cumulative_cycle_count_float[0] = (float) cumulative_cycle_count[0];
-        //send next cycle count and data to next rank    
-	    while(!MPI_Send(cumulative_cycle_count_float, 1, MPI_FLOAT, next_rank, 0 ,MPI_COMM_WORLD));
-	    while(!MPI_Send(mem + data_mem_info[2]/sizeof(float), data_mem_info[3]/sizeof(int), MPI_FLOAT, next_rank, 0 ,MPI_COMM_WORLD));
+        case DMA_OUT:
+            cumulative_cycle_count[0] += darius_driver[CYCLE_COUNT_OFFSET/sizeof(int)]; // command
+            cumulative_cycle_count_float[0] = (float) cumulative_cycle_count[0];
+            //send next cycle count and data to next rank    
+	        while(!MPI_Send(cumulative_cycle_count_float, 1, MPI_FLOAT, next_rank, 0 ,MPI_COMM_WORLD));
+	        while(!MPI_Send(mem + data_mem_info[2]/sizeof(float), data_mem_info[3]/sizeof(int), MPI_FLOAT, next_rank, 0 ,MPI_COMM_WORLD));
+            state = DMA_IN;
+            break;
     }
 }
 
