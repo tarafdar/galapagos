@@ -10,7 +10,7 @@ DCP = static_routed_v3.dcp
 
 
 USERHLSIP_DIR = ./HMPI
-PROJECTNAME=mlKernelsTest5
+PROJECTNAME=mlKernelsTest_1
 
 #ML DIRECTORIES
 ML_USERHLSIP_DIR=telepathy/hlsSources
@@ -39,22 +39,21 @@ MAPFILE=./HMPI/sw_kmeans/configuration_files/mpiMap.xml
 
 
 
-all: userIP createCluster pr  
+all: ml_userIP kmeans_userIP createCluster   
 
 
-#userIP: kmeans_userIP
-userIP: ml_userIP 
+userIP:  
 	mkdir -p userIP
 	vivado_hls ${USERHLSIP_DIR}/generate_hls_ip.tcl
 
 #CUSTOM USERIP ADDED FOR ML and KMEANS, ADD ACCORDINGLY
 
-ml_userIP: ${ML_USERHLSIP_DIR}/* ${ML_USERHLSIP_DIR}/generate_hls_ip.tcl
+ml_userIP: userIP ${ML_USERHLSIP_DIR}/* ${ML_USERHLSIPTCL}
 	mkdir -p userIP
 	vivado_hls ${ML_USERHLSIPTCL}
 	vivado -mode batch -source ${ML_USERIPTCLDEBUG} 
 
-kmeans_userIP: 
+kmeans_userIP: userIP ${ML_USERHLSIP_DIR}/* ${KMEANS_USERHLSIPTCL}
 	mkdir -p userIP
 	vivado_hls ${KMEANS_USERHLSIPTCL}
 

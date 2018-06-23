@@ -50,8 +50,7 @@ This is described with XML, for now the MACFILE is a separate file but with the 
 
 ## MPI Programming Layer 
 
-This builds an application that uses MPI to communcate on a heterogeneus cluster made by the layers below. To download heterogenous MPI (HMPI):
-`git clone https://github.com/eskandarinariman/HMPI.git` 
+This builds an application that uses MPI to communcate on a heterogeneus cluster made by the layers below. HMPI is currently in the git repo https://github.com/eskandarinariman/HMPI:
 
 We provide an example in ./HMPI/mpi_app_benchmarks/HMPI_kmeans/hls/kmeans5.cpp and ./HMPI/mpi_app_benchmarks/HMPI_kmeans/hls/kmeans5_0.cpp
 
@@ -64,13 +63,17 @@ The cluster configuration is seen in ./HMPI/sw_kmeans/configuration_files
 You need to specify a bridge to transform AXI stream packets into MPI packets. This is defined in the mpiMap.xml file. 
 
 
+To Build K-Means MPI Example:
+1. `git clone https://github.com/eskandarinariman/HMPI` . This will clone HMPI.
+1. `make kmeans_userIP' This makes the HLS kernels with MPI
+2. Change the Logical and Mapfile in Makefile to point to ./HMPI/sw_kmeans/configuration_files/mpiLogical.xml and ./HMPI/sw_kmeans/configuration_files/mpiMap.xml 
+3. `make createCluster`
 
 ## ML Application Layer on top of MPI
 
 Look at the README in ML_Layer that specifies different configurations. Modify Makefile to point to different configurations.
 
-1. `git clone https://github.com/eskandarinariman/HMPI.git`
-2. `mkdir userIP`
-3. Download PYNQ-DL Darius IP and place in userIP
-4. `make userIP`
-5. make createCluster 
+1. Follow instructions in MPI Programming layer and to get HMPI
+2. Download PYNQ-DL Darius IP and place in userIP
+3. `make ml_userIP`. This builds and packages the ML core into a MPI core.
+4. make createCluster 
