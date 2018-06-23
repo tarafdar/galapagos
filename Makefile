@@ -42,8 +42,8 @@ MAPFILE=./HMPI/sw_kmeans/configuration_files/mpiMap.xml
 all: userIP createCluster pr  
 
 
-#userIP: ml_userIP 
-userIP: kmeans_userIP
+#userIP: kmeans_userIP
+userIP: ml_userIP 
 	mkdir -p userIP
 	vivado_hls ${USERHLSIP_DIR}/generate_hls_ip.tcl
 
