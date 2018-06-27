@@ -1,3 +1,6 @@
+set netBridge_from_app from_app_V
+set netBridge_to_app to_app_V
+
 create_bd_cell -type ip -vlnv xilinx.com:hls:ethernet_bridge:1.0 network/network_bridge_inst
 connect_bd_net [get_bd_ports CLK] [get_bd_pins network/network_bridge_inst/aclk]
 connect_bd_net [get_bd_ports ARESETN] [get_bd_pins network/network_bridge_inst/aresetn]

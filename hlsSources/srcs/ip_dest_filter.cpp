@@ -27,12 +27,12 @@ void ip_dest_filter(
 
 ){
 #pragma HLS resource core=AXI4Stream variable=stream_in
-#pragma HLS resource core=AXI4Stream variable=stream_out
-#pragma HLS resource core=AXI4Stream variable=stream_network
+#pragma HLS resource core=AXI4Stream variable=stream_out_switch
+#pragma HLS resource core=AXI4Stream variable=stream_out_network
 
 #pragma HLS DATA_PACK variable=stream_in
-#pragma HLS DATA_PACK variable=stream_out
-#pragma HLS DATA_PACK variable=stream_out
+#pragma HLS DATA_PACK variable=stream_out_switch
+#pragma HLS DATA_PACK variable=stream_out_network
 
 #pragma HLS INTERFACE ap_ctrl_none port=return
 #pragma HLS PIPELINE

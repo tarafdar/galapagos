@@ -124,7 +124,7 @@ set bCheckIPs 1
 if { $bCheckIPs == 1 } {
    set list_check_ips "\ 
 xilinx.com:hls:dariusController:1.0\
-xilinx.com:user:darius_v2_0:2.0\
+xilinx.com:user:darius_v2_0:1.0\
 "
 
    set list_ips_missing ""
@@ -190,7 +190,7 @@ proc create_root_design { parentCell } {
   # Create interface ports
   set M_AXI_MEM [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:aximm_rtl:1.0 M_AXI_MEM ]
   set_property -dict [ list \
-   CONFIG.ADDR_WIDTH {64} \
+   CONFIG.ADDR_WIDTH {33} \
    CONFIG.DATA_WIDTH {512} \
    CONFIG.FREQ_HZ {156250000} \
    CONFIG.NUM_READ_OUTSTANDING {2} \
@@ -243,88 +243,76 @@ proc create_root_design { parentCell } {
   # Create instance: dariusController_inst, and set properties
   set dariusController_inst [ create_bd_cell -type ip -vlnv xilinx.com:hls:dariusController:1.0 dariusController_inst ]
 
-  # Create instance: darius_v2_0_0, and set properties
-  set darius_v2_0_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:darius_v2_0:2.0 darius_v2_0_0 ]
+  # Create instance: darius_inst, and set properties
+  set darius_inst [ create_bd_cell -type ip -vlnv xilinx.com:user:darius_v2_0:1.0 darius_inst ]
   set_property -dict [ list \
-   CONFIG.C_M_AXI_IFM_DATA_WIDTH {256} \
-   CONFIG.C_M_AXI_OFM_DATA_WIDTH {256} \
-   CONFIG.C_M_AXI_WEIGHT_DATA_WIDTH {256} \
    CONFIG.C_NUM_OF_COLS {16} \
    CONFIG.C_NUM_OF_ROWS {16} \
- ] $darius_v2_0_0
+   CONFIG.C_XILINX_FPGA_ARCH {UltraScale} \
+ ] $darius_inst
 
   set_property -dict [ list \
    CONFIG.DATA_WIDTH {128} \
-   CONFIG.FREQ_HZ {156250000} \
-   CONFIG.ADDR_WIDTH {32} \
-   CONFIG.SUPPORTS_NARROW_BURST {0} \
+   CONFIG.SUPPORTS_NARROW_BURST {1} \
    CONFIG.NUM_READ_OUTSTANDING {2} \
    CONFIG.NUM_WRITE_OUTSTANDING {2} \
    CONFIG.MAX_BURST_LENGTH {256} \
- ] [get_bd_intf_pins /darius_v2_0_0/m_axi_cmd]
+ ] [get_bd_intf_pins /darius_inst/m_axi_cmd]
 
   set_property -dict [ list \
-   CONFIG.DATA_WIDTH {256} \
-   CONFIG.FREQ_HZ {156250000} \
-   CONFIG.ADDR_WIDTH {64} \
-   CONFIG.SUPPORTS_NARROW_BURST {0} \
+   CONFIG.DATA_WIDTH {128} \
+   CONFIG.SUPPORTS_NARROW_BURST {1} \
    CONFIG.NUM_READ_OUTSTANDING {2} \
    CONFIG.NUM_WRITE_OUTSTANDING {2} \
    CONFIG.MAX_BURST_LENGTH {256} \
- ] [get_bd_intf_pins /darius_v2_0_0/m_axi_ifm]
+ ] [get_bd_intf_pins /darius_inst/m_axi_ifm]
 
   set_property -dict [ list \
-   CONFIG.DATA_WIDTH {256} \
-   CONFIG.FREQ_HZ {156250000} \
-   CONFIG.ADDR_WIDTH {64} \
-   CONFIG.SUPPORTS_NARROW_BURST {0} \
+   CONFIG.DATA_WIDTH {128} \
+   CONFIG.SUPPORTS_NARROW_BURST {1} \
    CONFIG.NUM_READ_OUTSTANDING {2} \
    CONFIG.NUM_WRITE_OUTSTANDING {2} \
    CONFIG.MAX_BURST_LENGTH {256} \
- ] [get_bd_intf_pins /darius_v2_0_0/m_axi_ofm]
+ ] [get_bd_intf_pins /darius_inst/m_axi_ofm]
 
   set_property -dict [ list \
-   CONFIG.DATA_WIDTH {256} \
-   CONFIG.FREQ_HZ {156250000} \
-   CONFIG.ADDR_WIDTH {64} \
-   CONFIG.SUPPORTS_NARROW_BURST {0} \
+   CONFIG.DATA_WIDTH {128} \
+   CONFIG.SUPPORTS_NARROW_BURST {1} \
    CONFIG.NUM_READ_OUTSTANDING {2} \
    CONFIG.NUM_WRITE_OUTSTANDING {2} \
    CONFIG.MAX_BURST_LENGTH {256} \
- ] [get_bd_intf_pins /darius_v2_0_0/m_axi_weight]
+ ] [get_bd_intf_pins /darius_inst/m_axi_weight]
 
   set_property -dict [ list \
    CONFIG.DATA_WIDTH {32} \
-   CONFIG.FREQ_HZ {156250000} \
-   CONFIG.ADDR_WIDTH {12} \
    CONFIG.NUM_READ_OUTSTANDING {1} \
    CONFIG.NUM_WRITE_OUTSTANDING {1} \
- ] [get_bd_intf_pins /darius_v2_0_0/s_axi_control]
+ ] [get_bd_intf_pins /darius_inst/s_axi_control]
 
   # Create interface connections
-  connect_bd_intf_net -intf_net axi_interconnect_control_M00_AXI [get_bd_intf_pins axi_interconnect_control/M00_AXI] [get_bd_intf_pins darius_v2_0_0/s_axi_control]
+  connect_bd_intf_net -intf_net axi_interconnect_control_M00_AXI [get_bd_intf_pins axi_interconnect_control/M00_AXI] [get_bd_intf_pins darius_inst/s_axi_control]
   connect_bd_intf_net -intf_net axi_interconnect_mem_M00_AXI [get_bd_intf_ports M_AXI_MEM] [get_bd_intf_pins axi_interconnect_mem/M00_AXI]
   connect_bd_intf_net -intf_net dariusController_inst_M_AXI_DARIUS_DRIVER [get_bd_intf_pins axi_interconnect_control/S00_AXI] [get_bd_intf_pins dariusController_inst/M_AXI_DARIUS_DRIVER]
   connect_bd_intf_net -intf_net dariusController_inst_M_AXI_MEM [get_bd_intf_pins axi_interconnect_mem/S00_AXI] [get_bd_intf_pins dariusController_inst/M_AXI_MEM]
   connect_bd_intf_net -intf_net dariusController_inst_stream_out_V [get_bd_intf_ports stream_out] [get_bd_intf_pins dariusController_inst/stream_out_V]
-  connect_bd_intf_net -intf_net darius_v2_0_0_m_axi_cmd [get_bd_intf_pins axi_interconnect_mem/S01_AXI] [get_bd_intf_pins darius_v2_0_0/m_axi_cmd]
-  connect_bd_intf_net -intf_net darius_v2_0_0_m_axi_ifm [get_bd_intf_pins axi_interconnect_mem/S02_AXI] [get_bd_intf_pins darius_v2_0_0/m_axi_ifm]
-  connect_bd_intf_net -intf_net darius_v2_0_0_m_axi_ofm [get_bd_intf_pins axi_interconnect_mem/S03_AXI] [get_bd_intf_pins darius_v2_0_0/m_axi_ofm]
-  connect_bd_intf_net -intf_net darius_v2_0_0_m_axi_weight [get_bd_intf_pins axi_interconnect_mem/S04_AXI] [get_bd_intf_pins darius_v2_0_0/m_axi_weight]
+  connect_bd_intf_net -intf_net darius_inst_m_axi_cmd [get_bd_intf_pins axi_interconnect_mem/S01_AXI] [get_bd_intf_pins darius_inst/m_axi_cmd]
+  connect_bd_intf_net -intf_net darius_inst_m_axi_ifm [get_bd_intf_pins axi_interconnect_mem/S02_AXI] [get_bd_intf_pins darius_inst/m_axi_ifm]
+  connect_bd_intf_net -intf_net darius_inst_m_axi_ofm [get_bd_intf_pins axi_interconnect_mem/S03_AXI] [get_bd_intf_pins darius_inst/m_axi_ofm]
+  connect_bd_intf_net -intf_net darius_inst_m_axi_weight [get_bd_intf_pins axi_interconnect_mem/S04_AXI] [get_bd_intf_pins darius_inst/m_axi_weight]
   connect_bd_intf_net -intf_net stream_in_V_0_1 [get_bd_intf_ports stream_in] [get_bd_intf_pins dariusController_inst/stream_in_V]
 
   # Create port connections
-  connect_bd_net -net ARESETN_1 [get_bd_ports ARESETN] [get_bd_pins axi_interconnect_control/ARESETN] [get_bd_pins axi_interconnect_control/M00_ARESETN] [get_bd_pins axi_interconnect_control/S00_ARESETN] [get_bd_pins axi_interconnect_mem/ARESETN] [get_bd_pins axi_interconnect_mem/M00_ARESETN] [get_bd_pins axi_interconnect_mem/S00_ARESETN] [get_bd_pins axi_interconnect_mem/S01_ARESETN] [get_bd_pins axi_interconnect_mem/S02_ARESETN] [get_bd_pins axi_interconnect_mem/S03_ARESETN] [get_bd_pins axi_interconnect_mem/S04_ARESETN] [get_bd_pins dariusController_inst/aresetn] [get_bd_pins darius_v2_0_0/ap_rst_n]
-  connect_bd_net -net CLK_1 [get_bd_ports CLK] [get_bd_pins axi_interconnect_control/ACLK] [get_bd_pins axi_interconnect_control/M00_ACLK] [get_bd_pins axi_interconnect_control/S00_ACLK] [get_bd_pins axi_interconnect_mem/ACLK] [get_bd_pins axi_interconnect_mem/M00_ACLK] [get_bd_pins axi_interconnect_mem/S00_ACLK] [get_bd_pins axi_interconnect_mem/S01_ACLK] [get_bd_pins axi_interconnect_mem/S02_ACLK] [get_bd_pins axi_interconnect_mem/S03_ACLK] [get_bd_pins axi_interconnect_mem/S04_ACLK] [get_bd_pins dariusController_inst/aclk] [get_bd_pins darius_v2_0_0/ap_clk]
+  connect_bd_net -net ARESETN_1 [get_bd_ports ARESETN] [get_bd_pins axi_interconnect_control/ARESETN] [get_bd_pins axi_interconnect_control/M00_ARESETN] [get_bd_pins axi_interconnect_control/S00_ARESETN] [get_bd_pins axi_interconnect_mem/ARESETN] [get_bd_pins axi_interconnect_mem/M00_ARESETN] [get_bd_pins axi_interconnect_mem/S00_ARESETN] [get_bd_pins axi_interconnect_mem/S01_ARESETN] [get_bd_pins axi_interconnect_mem/S02_ARESETN] [get_bd_pins axi_interconnect_mem/S03_ARESETN] [get_bd_pins axi_interconnect_mem/S04_ARESETN] [get_bd_pins dariusController_inst/aresetn] [get_bd_pins darius_inst/i_rst_n] [get_bd_pins darius_inst/m_axi_cmd_aresetn] [get_bd_pins darius_inst/m_axi_ifm_aresetn] [get_bd_pins darius_inst/m_axi_ofm_aresetn] [get_bd_pins darius_inst/m_axi_weight_aresetn] [get_bd_pins darius_inst/s_axi_control_aresetn]
+  connect_bd_net -net CLK_1 [get_bd_ports CLK] [get_bd_pins axi_interconnect_control/ACLK] [get_bd_pins axi_interconnect_control/M00_ACLK] [get_bd_pins axi_interconnect_control/S00_ACLK] [get_bd_pins axi_interconnect_mem/ACLK] [get_bd_pins axi_interconnect_mem/M00_ACLK] [get_bd_pins axi_interconnect_mem/S00_ACLK] [get_bd_pins axi_interconnect_mem/S01_ACLK] [get_bd_pins axi_interconnect_mem/S02_ACLK] [get_bd_pins axi_interconnect_mem/S03_ACLK] [get_bd_pins axi_interconnect_mem/S04_ACLK] [get_bd_pins dariusController_inst/aclk] [get_bd_pins darius_inst/i_clk] [get_bd_pins darius_inst/m_axi_cmd_aclk] [get_bd_pins darius_inst/m_axi_ifm_aclk] [get_bd_pins darius_inst/m_axi_ofm_aclk] [get_bd_pins darius_inst/m_axi_weight_aclk] [get_bd_pins darius_inst/s_axi_control_aclk]
   connect_bd_net -net id_in_V_0_1 [get_bd_ports id_in_V_0] [get_bd_pins dariusController_inst/id_in_V]
 
   # Create address segments
   create_bd_addr_seg -range 0x000100000000 -offset 0x00000000 [get_bd_addr_spaces dariusController_inst/Data_M_AXI_MEM] [get_bd_addr_segs M_AXI_MEM/Reg] SEG_M_AXI_MEM_Reg
-  create_bd_addr_seg -range 0x00010000 -offset 0x00000000 [get_bd_addr_spaces dariusController_inst/Data_M_AXI_DARIUS_DRIVER] [get_bd_addr_segs darius_v2_0_0/s_axi_control/reg0] SEG_darius_v2_0_0_reg0
-  create_bd_addr_seg -range 0x000100000000 -offset 0x00000000 [get_bd_addr_spaces darius_v2_0_0/m_axi_cmd] [get_bd_addr_segs M_AXI_MEM/Reg] SEG_M_AXI_MEM_Reg
-  create_bd_addr_seg -range 0x000200000000 -offset 0x00000000 [get_bd_addr_spaces darius_v2_0_0/m_axi_ifm] [get_bd_addr_segs M_AXI_MEM/Reg] SEG_M_AXI_MEM_Reg
-  create_bd_addr_seg -range 0x000200000000 -offset 0x00000000 [get_bd_addr_spaces darius_v2_0_0/m_axi_ofm] [get_bd_addr_segs M_AXI_MEM/Reg] SEG_M_AXI_MEM_Reg
-  create_bd_addr_seg -range 0x000200000000 -offset 0x00000000 [get_bd_addr_spaces darius_v2_0_0/m_axi_weight] [get_bd_addr_segs M_AXI_MEM/Reg] SEG_M_AXI_MEM_Reg
+  create_bd_addr_seg -range 0x000100000000 -offset 0x00000000 [get_bd_addr_spaces dariusController_inst/Data_M_AXI_DARIUS_DRIVER] [get_bd_addr_segs darius_inst/s_axi_control/reg0] SEG_cnn_dataflow_v2_0_inst_reg0
+  create_bd_addr_seg -range 0x000100000000 -offset 0x00000000 [get_bd_addr_spaces darius_inst/m_axi_cmd] [get_bd_addr_segs M_AXI_MEM/Reg] SEG_M_AXI_MEM_Reg
+  create_bd_addr_seg -range 0x000100000000 -offset 0x00000000 [get_bd_addr_spaces darius_inst/m_axi_ifm] [get_bd_addr_segs M_AXI_MEM/Reg] SEG_M_AXI_MEM_Reg
+  create_bd_addr_seg -range 0x000100000000 -offset 0x00000000 [get_bd_addr_spaces darius_inst/m_axi_ofm] [get_bd_addr_segs M_AXI_MEM/Reg] SEG_M_AXI_MEM_Reg
+  create_bd_addr_seg -range 0x000100000000 -offset 0x00000000 [get_bd_addr_spaces darius_inst/m_axi_weight] [get_bd_addr_segs M_AXI_MEM/Reg] SEG_M_AXI_MEM_Reg
 
 
   # Restore current instance

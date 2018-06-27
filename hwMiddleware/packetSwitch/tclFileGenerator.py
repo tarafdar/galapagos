@@ -51,7 +51,7 @@ def userApplicationRegion_mem_inst(tcl_user_app, num_mem_interfaces, num_ctrl_in
 
         if shared:
             additional_mem_interfaces = 2
-        else
+        else:
             additional_mem_interfaces = 1
 
         #add first memory interface in shell to axi_interconnect control
@@ -106,7 +106,8 @@ def userApplicationRegion_create_switches(tcl_user_app, fpga):
     
     if fpga.comm == 'tcp':
         tcl_user_app.write('create_bd_cell -type ip -vlnv xilinx.com:hls:ip_dest_filter:1.0 applicationRegion/custom_switch_inst\n')
-        tcl_user_app.write('set_property -dict [list CONFIG.Memory_Type {Dual_Port_ROM} CONFIG.Use_Byte_Write_Enable {false} CONFIG.Load_Init_File {true} CONFIG.Coe_File {../../../../../../../ip.coe} CONFIG.Port_A_Write_Rate {0} CONFIG.Port_B_Write_Rate {0}] [get_bd_cells applicationRegion/blk_mem_bridge_rom]\n')
+
+        tcl_user_app.write('set_property -dict [list CONFIG.Memory_Type {Single_Port_ROM} CONFIG.Enable_32bit_Address {false} CONFIG.Use_Byte_Write_Enable {false} CONFIG.Byte_Size {9} CONFIG.Write_Depth_A {256} CONFIG.Register_PortA_Output_of_Memory_Primitives {true} CONFIG.Load_Init_File {true} CONFIG.Coe_File {../../../../../../../ip.coe} CONFIG.Use_RSTA_Pin {false} CONFIG.Port_A_Write_Rate {0} CONFIG.use_bram_block {Stand_Alone} CONFIG.EN_SAFETY_CKT {false}] [get_bd_cells applicationRegion/blk_mem_switch_rom]\n')
         tcl_user_app.write('connect_bd_net [get_bd_pins network/ip_constant_block_inst/ip] [get_bd_pins applicationRegion/custom_switch_inst/ip_addr]\n')
         tcl_user_app.write('connect_bd_intf_net [get_bd_intf_pins applicationRegion/custom_switch_inst/ip_table_V_PORTA] [get_bd_intf_pins applicationRegion/blk_mem_switch_rom/BRAM_PORTA]\n')
     elif fpga.comm == 'eth':
@@ -252,16 +253,16 @@ def bridge_connections(outDir, fpga):
 
     #no bridge directly connect
     if fpga.app_bridge == None:
-        tcl_bridge_connections.write('connect_bd_intf_net [get_bd_intf_pins applicationRegion/custom_switch_inst/stream_out_network_V] [get_bd_intf_pins network/network_bridge_inst/from_app_V]\n')
-        tcl_bridge_connections.write('connect_bd_intf_net [get_bd_intf_pins network/network_bridge_inst/to_app_V] [get_bd_intf_pins applicationRegion/input_switch/S00_AXIS]\n')
+        tcl_bridge_connections.write('connect_bd_intf_net [get_bd_intf_pins applicationRegion/custom_switch_inst/stream_out_network_V] [get_bd_intf_pins network/network_bridge_inst/${netBridge_from_app}]\n')
+        tcl_bridge_connections.write('connect_bd_intf_net [get_bd_intf_pins network/network_bridge_inst/${netBridge_to_app}] [get_bd_intf_pins applicationRegion/input_switch/S00_AXIS]\n')
     else:
         tcl_bridge_connections.write('create_bd_cell -type ip -vlnv ' + fpga.app_bridge.kernel.ip_vendor + ':' + fpga.app_bridge.kernel.ip_type + ':' + fpga.app_bridge.kernel.name + ':' + fpga.app_bridge.kernel.ip_version + ' application_bridge_inst\n')
         tcl_bridge_connections.write('connect_bd_net [get_bd_ports CLK] [get_bd_pins application_bridge_inst/' + fpga.app_bridge.kernel.clk + ']\n')
         tcl_bridge_connections.write('connect_bd_net [get_bd_ports ARESETN] [get_bd_pins application_bridge_inst/' + fpga.app_bridge.kernel.aresetn  + ']\n')
         tcl_bridge_connections.write('connect_bd_intf_net [get_bd_intf_pins application_bridge_inst/' + fpga.app_bridge.to_app + '] [get_bd_intf_pins applicationRegion/input_switch/S00_AXIS]\n')
         tcl_bridge_connections.write('connect_bd_intf_net [get_bd_intf_pins applicationRegion/custom_switch_inst/stream_out_network_V] [get_bd_intf_pins application_bridge_inst/' + fpga.app_bridge.from_app + ']\n')
-        tcl_bridge_connections.write('connect_bd_intf_net [get_bd_intf_pins application_bridge_inst/' + fpga.app_bridge.to_net + '] [get_bd_intf_pins network/network_bridge_inst/from_app_V]\n')
-        tcl_bridge_connections.write('connect_bd_intf_net [get_bd_intf_pins application_bridge_inst/' + fpga.app_bridge.from_net + '] [get_bd_intf_pins network/network_bridge_inst/to_app_V]\n')
+        tcl_bridge_connections.write('connect_bd_intf_net [get_bd_intf_pins application_bridge_inst/' + fpga.app_bridge.to_net + '] [get_bd_intf_pins network/network_bridge_inst/${netBridge_from_app}]\n')
+        tcl_bridge_connections.write('connect_bd_intf_net [get_bd_intf_pins application_bridge_inst/' + fpga.app_bridge.from_net + '] [get_bd_intf_pins network/network_bridge_inst/${netBridge_to_app}]\n')
 
 
 def makeTCLFiles(fpga, projectName, networkBridges):
