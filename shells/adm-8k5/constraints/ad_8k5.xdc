@@ -1,12 +1,16 @@
+#===============================
+# AUTHOR     : Naif Tarafdar
+# CREATE DATE     : Mar 19, 2018
+#===============================
 
-#reference 200mhz clk
-set_property PACKAGE_PIN AM19 [get_ports {refclk200}]
-set_property IOSTANDARD LVCMOS33 [get_ports {refclk200}]
-#
-set_max_delay -from [get_ports {refclk200}]  100.0
-set_min_delay -from [get_ports {refclk200}] -100.0
-#
-create_clock -period 5.000 -name refclk200 [get_ports {refclk200}]
+##reference 200mhz clk
+#set_property PACKAGE_PIN AM19 [get_ports {refclk200}]
+#set_property IOSTANDARD LVCMOS33 [get_ports {refclk200}]
+##
+#set_max_delay -from [get_ports {refclk200}]  100.0
+#set_min_delay -from [get_ports {refclk200}] -100.0
+##
+#create_clock -period 5.000 -name refclk200 [get_ports {refclk200}]
 
 #PCI express reset
 set_property PACKAGE_PIN AE15 [get_ports perst_n]
@@ -14,25 +18,25 @@ set_property IOSTANDARD LVCMOS18 [get_ports perst_n]
 set_property PULLUP true [get_ports perst_n]
 
 set_false_path -from [get_ports perst_n]
-#leds
-set_property PACKAGE_PIN AT19    [get_ports "led_l[0]"] ; # USER_LED_G0
-set_property IOSTANDARD LVCMOS33 [get_ports "led_l[0]"]
-
-set_property PACKAGE_PIN AU19    [get_ports "led_l[1]"] ; # USER_LED_G1
-set_property IOSTANDARD LVCMOS33 [get_ports "led_l[1]"]
-
-set_property PACKAGE_PIN AU20    [get_ports "led_l[2]"] ; # USER_LED_R
-set_property IOSTANDARD LVCMOS33 [get_ports "led_l[2]"]
-
-set_max_delay -to [get_ports "led_l[*]"]  100
-set_min_delay -to [get_ports "led_l[*]"] -100
-
-#switch
-set_property PACKAGE_PIN AV18    [get_ports "user_sw_l"]
-set_property IOSTANDARD LVCMOS33 [get_ports "user_sw_l"]
-
-set_max_delay -from [get_ports "user_sw_l"]  100
-set_min_delay -from [get_ports "user_sw_l"] -100
+##leds
+#set_property PACKAGE_PIN AT19    [get_ports "led_l[0]"] ; # USER_LED_G0
+#set_property IOSTANDARD LVCMOS33 [get_ports "led_l[0]"]
+#
+#set_property PACKAGE_PIN AU19    [get_ports "led_l[1]"] ; # USER_LED_G1
+#set_property IOSTANDARD LVCMOS33 [get_ports "led_l[1]"]
+#
+#set_property PACKAGE_PIN AU20    [get_ports "led_l[2]"] ; # USER_LED_R
+#set_property IOSTANDARD LVCMOS33 [get_ports "led_l[2]"]
+#
+#set_max_delay -to [get_ports "led_l[*]"]  100
+#set_min_delay -to [get_ports "led_l[*]"] -100
+#
+##switch
+#set_property PACKAGE_PIN AV18    [get_ports "user_sw_l"]
+#set_property IOSTANDARD LVCMOS33 [get_ports "user_sw_l"]
+#
+#set_max_delay -from [get_ports "user_sw_l"]  100
+#set_min_delay -from [get_ports "user_sw_l"] -100
 
 #GTH Tranceivers
 

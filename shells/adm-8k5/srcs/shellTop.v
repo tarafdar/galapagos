@@ -1,3 +1,7 @@
+//===============================
+// AUTHOR     : Naif Tarafdar
+// CREATE DATE     : Mar 19, 2018
+//===============================
 //--------------------------------------------------------------------------------
 //Galapagos Top Level Module for AlphaData 8k5
 //Author: Naif Tarafdar

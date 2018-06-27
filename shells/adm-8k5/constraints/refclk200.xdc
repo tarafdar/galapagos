@@ -1,3 +1,7 @@
+//===============================
+// AUTHOR     : Naif Tarafdar
+// CREATE DATE     : Mar 19, 2018
+//===============================
 set_property PACKAGE_PIN AM19 [get_ports {refclk200}]
 set_property IOSTANDARD LVCMOS33 [get_ports {refclk200}]
 

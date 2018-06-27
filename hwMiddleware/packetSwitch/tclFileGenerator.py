@@ -95,6 +95,11 @@ def userApplicationRegion_inst_kernels_count_interfaces(tcl_user_app, fpga):
             tcl_user_app.write('set_property -dict [list CONFIG.CONST_VAL {' + str(kernel.id_num) + '}] [get_bd_cells applicationRegion/id_' + str(kernel.id_num) + ']\n')
             tcl_user_app.write('connect_bd_net [get_bd_pins applicationRegion/id_' + str(kernel.id_num) + '/dout] [get_bd_pins applicationRegion/' + instName + '/' + kernel.id_port + ']\n')
    
+        for constant in kernel.constants:
+            tcl_user_app.write('create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 applicationRegion/' + instName + '_' + constant.name + '\n')
+            tcl_user_app.write('set_property -dict [list CONFIG.CONST_WIDTH {' + constant.width + '}] [get_bd_cells applicationRegion/' + instName + '_' + constant.name + ']\n')
+            tcl_user_app.write('set_property -dict [list CONFIG.CONST_VAL {' + constant.val + '}] [get_bd_cells applicationRegion/' + instName + '_' + constant.name + ']\n')
+            tcl_user_app.write('connect_bd_net [get_bd_pins applicationRegion/' + instName + '_' + constant.name + '/dout] [get_bd_pins applicationRegion/' + instName + '/' + constant.name + ']\n')
 
 
     return num_ctrl_interfaces, num_mem_interfaces
@@ -166,13 +171,11 @@ def userApplicationRegion_kernel_connect_switches(tcl_user_app, fpga):
 
 
 
-def userApplicationRegion_assign_addresses(tcl_user_app, fpga):
+def userApplicationRegion_assign_addresses(tcl_user_app, fpga, shared):
 
     #connect mem interconnect and assign addresses, all kernels need to be 32 bit addressable
     #connect ctrl interconnect and assign addresses
    
-    shared = fpga.comm == 'eth'
-    #shared = 0 
     
     tcl_user_app.write('connect_bd_intf_net [get_bd_intf_ports S_AXI_MEM_0] -boundary_type upper [get_bd_intf_pins applicationRegion/axi_interconnect_mem/M00_AXI]\n')
     tcl_user_app.write('assign_bd_address [get_bd_addr_segs {S_AXI_MEM_0/Reg }]\n')
@@ -197,7 +200,7 @@ def userApplicationRegion_assign_addresses(tcl_user_app, fpga):
 
 
 
-def userApplicationRegion(outDir, fpga):
+def userApplicationRegion(outDir, fpga, address_space):
 
     tcl_user_app = open( outDir + '/' + str(fpga.num) + '_app.tcl', 'w')
     tcl_user_app.write('create_bd_cell -type hier applicationRegion\n')
@@ -207,12 +210,12 @@ def userApplicationRegion(outDir, fpga):
     num_ctrl_interfaces, num_mem_interfaces = userApplicationRegion_inst_kernels_count_interfaces(tcl_user_app, fpga)
     userApplicationRegion_control_inst(tcl_user_app, num_ctrl_interfaces)
     #if communication medium is ethernet then combine offchip memory into one shared address space
-    userApplicationRegion_mem_inst(tcl_user_app, num_mem_interfaces, num_ctrl_interfaces, fpga.comm == 'eth')
+    userApplicationRegion_mem_inst(tcl_user_app, num_mem_interfaces, num_ctrl_interfaces, fpga.comm == 'eth' and address_space == 64)
     #userApplicationRegion_mem_inst(tcl_user_app, num_mem_interfaces, 0)
     userApplicationRegion_create_switches(tcl_user_app, fpga)
     userApplicationRegion_kernel_connect_switches(tcl_user_app, fpga)
     if num_mem_interfaces > 0:
-        userApplicationRegion_assign_addresses(tcl_user_app, fpga)
+        userApplicationRegion_assign_addresses(tcl_user_app, fpga, fpga.comm == 'eth' and address_space == 64)
     
 
 
@@ -267,10 +270,12 @@ def bridge_connections(outDir, fpga):
 
 def makeTCLFiles(fpga, projectName, networkBridges):
     
-    
+
+    address_space = 32 
+
     outDir = 'projects/' + projectName + '/' + str(fpga.num)
     net_bridge(outDir, fpga)
-    userApplicationRegion(outDir, fpga)
+    userApplicationRegion(outDir, fpga, address_space)
     bridge_connections(outDir, fpga)
 
     tclMain = open( outDir + '/' + str(fpga.num) + '.tcl', 'w')

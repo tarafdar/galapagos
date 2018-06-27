@@ -1,6 +1,8 @@
+//===============================
+// AUTHOR     : Naif Tarafdar
+// CREATE DATE     : June 20, 2018
+//===============================
 
-
-//#include "ap_cint.h"
 #include "ap_int.h"
 #include "hls_stream.h"
 #include "ap_utils.h"

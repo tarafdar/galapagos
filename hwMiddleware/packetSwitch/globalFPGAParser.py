@@ -26,6 +26,10 @@ class controlInterfaceObj:
     offset = 0x0
     name = ''
 
+class constantObj:
+    name = ''
+    width = ''
+    val = ''
 
 class kernelObj:
     name = ''
@@ -42,6 +46,7 @@ class kernelObj:
     stream_out = ''
     ip_addr = ''
     mac_addr = ''
+    constants = []
 
 class nodeObj:
     num = ''
@@ -112,7 +117,17 @@ def readKernelsFile(logicalKernelsFile):
             rep = int(rep_element.text.replace(" ", ""))
         else:
             rep = 1
-        
+       
+
+        constants = []
+        constantElementArray = kernelElement.findall('const')
+        for constantElement in constantElementArray:
+            const = constantObj()
+            const.name = constantElement.find('name').text.replace(" ", "")
+            const.width = constantElement.find('width').text.replace(" ", "")
+            const.val = constantElement.find('val').text.replace(" ", "")
+            constants.append(const)
+
         interfaceElementArray = kernelElement.findall('interface')
         stream_out = ''
         stream_in = ''
@@ -156,6 +171,7 @@ def readKernelsFile(logicalKernelsFile):
             kernel.ip_type = ip_type 
             kernel.ip_version = ip_version
             kernel.ip_vendor = ip_vendor
+            kernel.constants = constants
             allKernels.append(kernel)
             id_num = id_num + 1
 

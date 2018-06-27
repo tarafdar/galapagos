@@ -1,3 +1,7 @@
+//===============================
+// AUTHOR     : Naif Tarafdar and Nariman Eskandari
+// CREATE DATE     : June 15, 2018
+//===============================
 
 
 //#include "ap_cint.h"

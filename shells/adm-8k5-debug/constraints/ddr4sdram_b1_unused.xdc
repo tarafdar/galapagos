@@ -1,3 +1,7 @@
+#===============================
+# AUTHOR     : Naif Tarafdar
+# CREATE DATE     : Mar 19, 2018
+#===============================
 #
 # This file contains constraints for signals of SDRAM bank 1 that are not used
 # by MIG as of Vivado 2015.4.

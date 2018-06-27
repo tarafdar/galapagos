@@ -1,3 +1,7 @@
+#===============================
+# AUTHOR     : Naif Tarafdar
+# CREATE DATE     : Mar 19, 2018
+#===============================
 # Configuration from G18 Flash as per XAPP1220
 set_property BITSTREAM.GENERAL.COMPRESS {TRUE} [current_design]
 set_property BITSTREAM.CONFIG.EXTMASTERCCLK_EN {DIV-1} [current_design]

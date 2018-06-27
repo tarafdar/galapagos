@@ -1,3 +1,7 @@
+#===============================
+# AUTHOR     : Naif Tarafdar
+# CREATE DATE     : Mar 19, 2018
+#===============================
 
 ##reference 200mhz clk
 #set_property PACKAGE_PIN AM19 [get_ports {refclk200}]
