@@ -77,6 +77,7 @@ To Build K-Means MPI Example:
 Look at the README in ML_Layer that specifies different configurations. Modify Makefile to point to different configurations.
 
 1. Follow instructions in MPI Programming layer and to get HMPI
+2. `mkdir -p userIP`
 2. Download PYNQ-DL Darius IP and place in userIP
 3. `make ml_userIP`. This builds and packages the ML core into a MPI core.
 4. Change the `CONF_DIR` variable to point to ./telepathy/sw. This contains the configuration files for the ML layer. 
