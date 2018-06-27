@@ -77,3 +77,21 @@ Look at the README in ML_Layer that specifies different configurations. Modify M
 2. Download PYNQ-DL Darius IP and place in userIP
 3. `make ml_userIP`. This builds and packages the ML core into a MPI core.
 4. make createCluster 
+
+
+## How To Cite
+
+The following paper may be used to cite this work:
+Tarafdar, Naif, Thomas Lin, Eric Fukuda, Hadi Bannazadeh, Alberto Leon-Garcia, and Paul Chow. "Enabling flexible network FPGA clusters in a heterogeneous cloud data center." In Proceedings of the 2017 ACM/SIGDA International Symposium on Field-Programmable Gate Arrays, pp. 237-246. ACM, 2017.
+
+Bibtex
+```
+@inproceedings{tarafdar2017enabling,
+  title={Enabling flexible network FPGA clusters in a heterogeneous cloud data center},
+  author={Tarafdar, Naif and Lin, Thomas and Fukuda, Eric and Bannazadeh, Hadi and Leon-Garcia, Alberto and Chow, Paul},
+  booktitle={Proceedings of the 2017 ACM/SIGDA International Symposium on Field-Programmable Gate Arrays},
+  pages={237--246},
+  year={2017},
+  organization={ACM}
+}
+```
