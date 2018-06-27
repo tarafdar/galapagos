@@ -40,7 +40,9 @@ def userApplicationRegion_mem_inst(tcl_user_app, num_mem_interfaces, num_ctrl_in
         tcl_user_app.write('connect_bd_net [get_bd_ports CLK] [get_bd_pins applicationRegion/axi_interconnect_mem/M00_ACLK]\n')
         tcl_user_app.write('connect_bd_net [get_bd_ports ARESETN] [get_bd_pins applicationRegion/axi_interconnect_mem/ARESETN]\n')
         tcl_user_app.write('connect_bd_net [get_bd_ports ARESETN] [get_bd_pins applicationRegion/axi_interconnect_mem/M00_ARESETN]\n')
+        tcl_user_app.write('connect_bd_intf_net [get_bd_intf_ports S_AXI_MEM_0] -boundary_type upper [get_bd_intf_pins applicationRegion/axi_interconnect_mem/M00_AXI]\n')
         if shared:
+            tcl_user_app.write('connect_bd_intf_net [get_bd_intf_ports S_AXI_MEM_1] -boundary_type upper [get_bd_intf_pins applicationRegion/axi_interconnect_mem/M01_AXI]\n')
             tcl_user_app.write('connect_bd_net [get_bd_ports CLK] [get_bd_pins applicationRegion/axi_interconnect_mem/M01_ACLK]\n')
             tcl_user_app.write('connect_bd_net [get_bd_ports ARESETN] [get_bd_pins applicationRegion/axi_interconnect_mem/M01_ARESETN]\n')
     else:
@@ -69,7 +71,6 @@ def userApplicationRegion_mem_inst(tcl_user_app, num_mem_interfaces, num_ctrl_in
             tcl_user_app.write('connect_bd_intf_net [get_bd_intf_ports S_AXI_MEM_1] -boundary_type upper [get_bd_intf_pins applicationRegion/axi_interconnect_control/M'+ control_inc_str + '_AXI]\n')
             tcl_user_app.write('connect_bd_net [get_bd_ports CLK] [get_bd_pins applicationRegion/axi_interconnect_control/M' + control_inc_str + '_ACLK]\n')
             tcl_user_app.write('connect_bd_net [get_bd_ports ARESETN] [get_bd_pins applicationRegion/axi_interconnect_control/M' + control_inc_str + '_ARESETN]\n')
-            tcl_user_app.write('assign_bd_address [get_bd_addr_segs {S_AXI_MEM_1/Reg }]\n')
 
 
 
@@ -177,21 +178,20 @@ def userApplicationRegion_assign_addresses(tcl_user_app, fpga, shared):
     #connect ctrl interconnect and assign addresses
    
     
-    tcl_user_app.write('connect_bd_intf_net [get_bd_intf_ports S_AXI_MEM_0] -boundary_type upper [get_bd_intf_pins applicationRegion/axi_interconnect_mem/M00_AXI]\n')
-    tcl_user_app.write('assign_bd_address [get_bd_addr_segs {S_AXI_MEM_0/Reg }]\n')
     
-    if shared:
-        tcl_user_app.write('connect_bd_intf_net [get_bd_intf_ports S_AXI_MEM_1] -boundary_type upper [get_bd_intf_pins applicationRegion/axi_interconnect_mem/M01_AXI]\n')
-        tcl_user_app.write('assign_bd_address [get_bd_addr_segs {S_AXI_MEM_1/Reg }]\n')
 
     for kernel in fpga.kernels:
         instName = kernel.name + "_inst_" + str(kernel.id_num)
         for mem_interface in kernel.mem_interfaces:
+            tcl_user_app.write('assign_bd_address [get_bd_addr_segs {S_AXI_MEM_0/Reg }]\n')
             tcl_user_app.write('set_property offset 0x00000000 [get_bd_addr_segs {applicationRegion/' + instName + '/' + mem_interface  +'/SEG_S_AXI_MEM_0_Reg}]\n')
             tcl_user_app.write('set_property range 4G [get_bd_addr_segs {applicationRegion/' + instName + '/' + mem_interface +  '/SEG_S_AXI_MEM_0_Reg}]\n')
             if shared:
+                tcl_user_app.write('assign_bd_address [get_bd_addr_segs {S_AXI_MEM_1/Reg }]\n')
                 tcl_user_app.write('set_property offset 0x100000000 [get_bd_addr_segs {applicationRegion/' + instName + '/' + mem_interface + '/SEG_S_AXI_MEM_1_Reg}]\n')
                 tcl_user_app.write('set_property range 4G [get_bd_addr_segs {applicationRegion/' + instName + '/' +  mem_interface + '/SEG_S_AXI_MEM_1_Reg}]\n')
+            #else:
+            #    tcl_user_app.write('exclude_bd_addr_seg [get_bd_addr_segs applicationRegion/dariusMPI_debug_8x8_inst_1/M_AXI_MEM/SEG_S_AXI_MEM_1_Reg]\n')
 
         if kernel.ctrl_interface != None:
             tcl_user_app.write('assign_bd_address [get_bd_addr_segs {applicationRegion/' + instName + '/' + kernel.ctrl_interface.name + '/Reg0 }]\n')
@@ -210,7 +210,7 @@ def userApplicationRegion(outDir, fpga, address_space):
     num_ctrl_interfaces, num_mem_interfaces = userApplicationRegion_inst_kernels_count_interfaces(tcl_user_app, fpga)
     userApplicationRegion_control_inst(tcl_user_app, num_ctrl_interfaces)
     #if communication medium is ethernet then combine offchip memory into one shared address space
-    userApplicationRegion_mem_inst(tcl_user_app, num_mem_interfaces, num_ctrl_interfaces, fpga.comm == 'eth' and address_space == 64)
+    userApplicationRegion_mem_inst(tcl_user_app, num_mem_interfaces, num_ctrl_interfaces, fpga.comm == 'eth')
     #userApplicationRegion_mem_inst(tcl_user_app, num_mem_interfaces, 0)
     userApplicationRegion_create_switches(tcl_user_app, fpga)
     userApplicationRegion_kernel_connect_switches(tcl_user_app, fpga)
