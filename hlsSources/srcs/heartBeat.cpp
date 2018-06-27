@@ -23,10 +23,7 @@ struct ap_axis_dest{
 
 void  heartBeat(
 
-		//hls::stream <ap_axis_dest> packetIn,
 		ap_int <48>  eth_address,
-//		volatile ap_int <32> * packetHeader0_out,
-//		volatile ap_int <32> * packetHeader1_out,
 		hls::stream <ap_axis >  stream_out
 
 
@@ -34,6 +31,8 @@ void  heartBeat(
 
 
 ){
+#pragma HLS resource core=AXI4Stream variable=stream_out
+#pragma HLS DATA_PACK variable=stream_out
 
 	ap_int <48>   eth_dst;
 	eth_dst = 0xFFFFFFFFFFFF;
