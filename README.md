@@ -44,8 +44,11 @@ There is current work in remaking this part with containers in OpenStack and wil
 
 ## Middleware Layer
 
-This takes three files (refer to LOGICALFILE, MACFILE, MAPFILE defined in the Makefile) and partitions a large cluster logically described by the user into multiple separate FPGAs.
-This is described with XML, for now the MACFILE is a separate file but with the Cloud Provisioning Layer integrated this would be an input from the Cloud Provisioning Layer
+This takes three files (refer to LOGICALFILE, MAPFILE defined in the Makefile) and partitions a large cluster logically described by the user into multiple separate FPGAs.
+
+The cluster is described in a LOGICALFILE with no notion of the mappings. This can repeat a kernel with the <rep> tag. The <num> tag refers to a unique ID for each repeated kernel in the cluster. The <num> tags of all the kernels are then used in the MAPFILE to specify which kernels are placed in which FPGA or CPU, with each node representing a separate FPGA or CPU. Here you can specify which communication protocol to use for that specific node (tcp or eth), the network addresses of the node (mac address and ip_address), any bridge IP your kernels need to communicate to the network (for example if they are MPI packets you need the IP block to translate TCP packets into MPI packets). If you do not specify a bridge then the network module (tcp or eth) is directly connected to the switch and it is up to the user kernels to format their packet to be tcp or ethernet compliant, else they can use a bridge to do so. 
+  
+For an example refer to ./telepathy/sw/conf0/configuration_files/*
 
 
 ## MPI Programming Layer 
@@ -74,9 +77,11 @@ To Build K-Means MPI Example:
 Look at the README in ML_Layer that specifies different configurations. Modify Makefile to point to different configurations.
 
 1. Follow instructions in MPI Programming layer and to get HMPI
+2. `mkdir -p userIP`
 2. Download PYNQ-DL Darius IP and place in userIP
 3. `make ml_userIP`. This builds and packages the ML core into a MPI core.
-4. make createCluster 
+4. Change the `CONF_DIR` variable to point to ./telepathy/sw. This contains the configuration files for the ML layer. 
+5. `make createCluster` 
 
 
 ## How To Cite
