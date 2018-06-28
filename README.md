@@ -50,7 +50,75 @@ This has not been integrated in this flow just yet.
 
 This takes two files (refer to LOGICALFILE, MAPFILE defined in the Makefile) and partitions a large cluster logically described by the user into multiple separate FPGAs.
 
-The cluster is described in a LOGICALFILE with no notion of the mappings. This can repeat a kernel with the <rep> tag. The <num> tag refers to a unique ID for each repeated kernel in the cluster. The <num> tags of all the kernels are then used in the MAPFILE to specify which kernels are placed in which FPGA or CPU, with each node representing a separate FPGA or CPU. Here you can specify which communication protocol to use for that specific node (tcp or eth), the network addresses of the node (mac address and ip_address), any bridge IP your kernels need to communicate to the network (for example if they are MPI packets you need the IP block to translate TCP packets into MPI packets). If you do not specify a bridge then the network module (tcp or eth) is directly connected to the switch and it is up to the user kernels to format their packet to be tcp or ethernet compliant, else they can use a bridge to do so. 
+### LOGICALFILE
+
+The cluster is described in a LOGICALFILE with no notion of the mappings. 
+The following is an example kernel from the logical file:
+```
+ <kernel> kernelName
+		    <num> 1 </num>
+        <rep> 1 </rep>
+        <clk> nameOfClockPort </clk>
+        <id_port> nameOfIDport </id_port>
+        <aresetn> nameOfResetPort </aresetn>
+        <interface>
+            <direction> in </direction>
+            <name> nameOfInputStreamInterface </name>
+        </interface>
+        <interface>
+            <direction> out </direction>
+            <name> nameOfOutputStreamInterface </name>
+            <debug/>
+        </interface>
+        <ctrl_interface>
+            <name> nameofControlInterface </name>
+        </ctrl_interface>
+        <mem_interface>
+            <name> nameOfMemoryInterface </name>
+        </mem_interface>
+</kernel>
+```
+
+The `<num>` tag refers to the unique ID of a kernel. 
+The `<rep>` refers to the number of times to repeat a kernel. The IDs are of repeated kernels are increased sequentially.
+The `<clk>` refers to the name of the clock interface, this will be tied to the clock in the Hypervisor.
+The `<aresetn>` refers to the name of the reset interface, this will be tied to the clock in the Hypervisor (negative edge triggered).
+The `<id_port>` refers to the port name in the kernel that will be tied to a constant with the value of the unique kernel ID. (optional)
+There is room for upto one output stream interface and one input stream interface denoted by the tag `<interface>`
+The `<ctrl_interface>` refers to a port to be tied to the control port from PCIe in the Hypervisor. This is an AXI slave.
+The `<mem_interface>` refers to a port to be tied to off-chip memory in the Hypervisor. This is an AXI Master.
+
+
+### MAPFILE
+
+The cluster is described in a MAPFILE with no notion of the mappings. 
+The following is an example kernel from the map file:
+
+```
+<node>
+        <appBridge> 
+            <name> application_bridge </name> 
+            <to_app> to_app_V </to_app>
+            <from_app> from_app_V </from_app>
+            <to_net> to_net_V </to_net>
+            <from_net> from_net_V </from_net>
+        </appBridge>
+        <board> adm-8k5-debug </board>
+        <comm> eth </comm>
+        <type> hw </type>
+        <kernel> 1 </kernel>
+        <kernel> 2 </kernel>
+        <kernel> 3 </kernel>
+        <mac_addr>  fa:16:3e:55:ca:02 </mac_addr>
+        <ip_addr> 10.1.2.102 </ip_addr>
+</node>
+
+```
+
+The fields in `appBridge` refer to a description of the name of the bridge between the network port (TCP or eth) to the application. If there is no bridge application will be directly connected to the network.
+The `<board>` tag refers to the FPGA board you wish to use for this particular node.
+The `<kernel>` refers to the unique kernel ID that you wish to put on this node. 
+
   
 For an example refer to ./telepathy/sw/conf0/configuration_files/*
 
@@ -61,7 +129,7 @@ This builds an application that uses MPI to communcate on a heterogeneus cluster
 
 We provide an example in ./HMPI/mpi_app_benchmarks/HMPI_kmeans/hls/kmeans5.cpp and ./HMPI/mpi_app_benchmarks/HMPI_kmeans/hls/kmeans5_0.cpp
 
-This does kmeans on 5 ranks. Lastly the result is sent to a sw rank (the last rank, rank 5). 
+This implements kmeans on 5 ranks. Lastly the result is sent to a sw rank. 
 
 The code for this can be seen in ./HMPI/sw_kmeans
 
