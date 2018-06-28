@@ -10,9 +10,8 @@ DCP = static_routed_v3.dcp
 
 
 USERHLSIP_DIR = ./HMPI
-PROJECTNAME=mlKernelsTest_0
-#PROJECTNAME=kmeansTest_5_tcp
-#PROJECTNAME=kmeansTest_4_eth
+#PROJECTNAME=mlKernelsTest_0
+PROJECTNAME=kmeansTest_4_eth
 
 #ML DIRECTORIES
 ML_USERHLSIP_DIR=telepathy/hlsSources
@@ -31,8 +30,8 @@ PART = xcku115-flva1517-2-e
 FPGANUM= 1
 
 ##input files for middleware
-CONF_DIR = ./telepathy/sw
-#CONF_DIR = ./HMPI/sw_kmeans
+#CONF_DIR = ./telepathy/sw
+CONF_DIR = ./HMPI/sw_kmeans
 CONF = conf0
 
 #input files for middleware

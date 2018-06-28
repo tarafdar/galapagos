@@ -140,7 +140,9 @@ def userApplicationRegion_kernel_connect_switches(tcl_user_app, fpga):
     ctrl_interface_index = 0
     mem_interface_index = 0
     kernel_index = 0
+    num_debug_interfaces = 0
     for kernel in fpga.kernels:
+        num_debug_interfaces += len(kernel.debug_interfaces)
         instName = kernel.name + "_inst_" + str(kernel.id_num)
         kernel_index_str = "%02d"%kernel_index
         if (len(fpga.kernels) > 1):
@@ -166,6 +168,26 @@ def userApplicationRegion_kernel_connect_switches(tcl_user_app, fpga):
         kernel_index = kernel_index + 1
 
 
+
+    #adding ILA ports
+    if num_debug_interfaces > 0:
+        tcl_user_app.write('create_bd_cell -type ip -vlnv xilinx.com:ip:system_ila:1.1 applicationRegion/system_ila_streams\n')
+
+        tcl_user_app.write('set_property -dict [list CONFIG.C_BRAM_CNT {6} CONFIG.C_NUM_MONITOR_SLOTS {'+ str(num_debug_interfaces) + '} CONFIG.ALL_PROBE_SAME_MU {true} ')
+    for debug_interface_index in range(0, num_debug_interfaces):
+        tcl_user_app.write('CONFIG.C_SLOT_' + str(debug_interface_index) + '_INTF_TYPE {xilinx.com:interface:axis_rtl:1.0} ')
+    if num_debug_interfaces > 0:
+        tcl_user_app.write('] [get_bd_cells applicationRegion/system_ila_streams]\n')
+        tcl_user_app.write('connect_bd_net [get_bd_pins CLK] [get_bd_pins applicationRegion/system_ila_streams/clk]\n')
+        tcl_user_app.write('connect_bd_net [get_bd_pins ARESETN] [get_bd_pins applicationRegion/system_ila_streams/resetn]\n')
+    debug_interface_index = 0
+    for kernel in fpga.kernels:
+        instName = kernel.name + "_inst_" + str(kernel.id_num)
+        for debug_interface in kernel.debug_interfaces:
+            tcl_user_app.write('connect_bd_intf_net [get_bd_intf_pins applicationRegion/' +instName + '/' + debug_interface + '] [get_bd_intf_pins applicationRegion/system_ila_streams/SLOT_' + str(debug_interface_index) + '_AXIS]\n')
+            debug_interface_index = debug_interface_index + 1
+
+    
     tcl_user_app.write('connect_bd_intf_net [get_bd_intf_pins applicationRegion/custom_switch_inst/stream_out_switch_V] [get_bd_intf_pins applicationRegion/input_switch/S01_AXIS]\n')
     if(len(fpga.kernels) > 1):
         tcl_user_app.write('connect_bd_intf_net [get_bd_intf_pins applicationRegion/output_switch/M00_AXIS] [get_bd_intf_pins applicationRegion/custom_switch_inst/stream_in_V]\n')

@@ -7,3 +7,4 @@ place_design -directive Explore
 phys_opt_design -directive Explore
 route_design -directive Explore
 write_bitstream projects/$projName/$fpgaNum/$fpgaNum.bit 
+write_debug_probes projects/$projName/$fpgaNum/$fpgaNum.ltx -force

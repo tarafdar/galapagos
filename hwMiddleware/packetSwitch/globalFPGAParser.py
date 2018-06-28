@@ -47,7 +47,7 @@ class kernelObj:
     ip_addr = ''
     mac_addr = ''
     constants = []
-
+    debug_interfaces = []
 class nodeObj:
     num = ''
     board = ''
@@ -131,13 +131,18 @@ def readKernelsFile(logicalKernelsFile):
         interfaceElementArray = kernelElement.findall('interface')
         stream_out = ''
         stream_in = ''
+        debug_interfaces = []
         for interface_element in interfaceElementArray:
             direction = interface_element.find('direction').text.replace(" ", "")
+            interface_name = interface_element.find('name').text.replace(" ", "")
             if direction == 'out':
-                stream_out = interface_element.find('name').text.replace(" ", "")
+                stream_out = interface_name
             else:
-                stream_in = interface_element.find('name').text.replace(" ", "")
-
+                stream_in = interface_name
+            
+            debugElement = interface_element.find('debug')
+            if debugElement != None:
+                debug_interfaces.append(interface_name)
         type_element = kernelElement.find('type')
         ip_type = 'hls'
         if type_element != None:
@@ -172,6 +177,7 @@ def readKernelsFile(logicalKernelsFile):
             kernel.ip_version = ip_version
             kernel.ip_vendor = ip_vendor
             kernel.constants = constants
+            kernel.debug_interfaces = debug_interfaces
             allKernels.append(kernel)
             id_num = id_num + 1
 
