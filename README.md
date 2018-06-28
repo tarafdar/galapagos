@@ -2,9 +2,8 @@
 
 Welcome to the Galapagos Hardware Stack. 
 
-The layers of the stack that we introduce are as follows. 
+The layers of the stack that we introduce are as follows:
 
-The layers are as follows 
 - Programming Layer
 - Middleware Layer
 - Cloud Provisioning Layer (not integrated in Galapagos at the moment)
