@@ -14,8 +14,13 @@ For more details on our automation process please refer to the Makefile.
 
 ## Physical Hardware/Network Setup Layer
 
-Our setup has all FPGAs connected directly to a network switch. Currently three FPGA boards (Alphadata 7v3, Alphadata 8v3 and Alphadata 8k5) do not have a hardened ARM CPU.
-We also have the Fidus Sidewinder board that has a hardened ARM CPU. Boards without the hardened ARM are connected with an X86 CPU via PCIe. Boards with the hardened ARM core are directly connected without another x86 CPU.
+Our setup has all FPGAs connected directly to a network switch.  We have the following FPGA boards:
+- Alphadata 7v3
+- Alphadata 8k5
+- Alphadata 8v3
+- Fidus Sidewinder (also has a hardened ARM CPU)
+
+Boards without the hardened ARM are connected with an X86 CPU via PCIe. Boards with the hardened ARM core are not connected to an X86 CPU.
 
 ## Hypervisor Layer
 
@@ -36,10 +41,10 @@ This makes the hypervisor and puts it in the shells/<board name>/ directory.
 
 
 ## Cloud Provisioning Layer
-
-This has not been integrated in this flow just yet. It was previously made in OpenStack as a PCIe pass-through device for a virtual machine.
+It was previously made in OpenStack as a PCIe pass-through device for a virtual machine.
 This made a lightweight VM with a pcie connected FPGA. In order to passthrough the FPGA, the FPGA needs to be pre-programmed with a bitstream that has a PCIe interface (such as a Hypervisor).
 There is current work in remaking this part with containers in OpenStack and will be automated in the process soon.
+This has not been integrated in this flow just yet. 
 
 ## Middleware Layer
 
@@ -50,7 +55,7 @@ The cluster is described in a LOGICALFILE with no notion of the mappings. This c
 For an example refer to ./telepathy/sw/conf0/configuration_files/*
 
 
-## MPI Programming Layer 
+## MPI Programming Layer (HMPI)
 
 This builds an application that uses MPI to communcate on a heterogeneus cluster made by the layers below. HMPI is currently in the git repo https://github.com/eskandarinariman/HMPI:
 
@@ -71,9 +76,9 @@ To Build K-Means MPI Example:
 2. Change the Logical and Mapfile in Makefile to point to ./HMPI/sw_kmeans/configuration_files/mpiLogical.xml and ./HMPI/sw_kmeans/configuration_files/mpiMap.xml 
 3. `make createCluster`
 
-## ML Application Layer on top of MPI
+## ML Application Layer on top of MPI 
 
-Look at the README in ML_Layer that specifies different configurations. Modify Makefile to point to different configurations.
+Look at the README in ./telepathy that specifies different configurations. Modify Makefile to point to different configurations.
 
 1. Follow instructions in MPI Programming layer and to get HMPI
 2. `mkdir -p userIP`
