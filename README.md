@@ -48,7 +48,7 @@ This has not been integrated in this flow just yet.
 
 ## Middleware Layer
 
-This takes three files (refer to LOGICALFILE, MAPFILE defined in the Makefile) and partitions a large cluster logically described by the user into multiple separate FPGAs.
+This takes two files (refer to LOGICALFILE, MAPFILE defined in the Makefile) and partitions a large cluster logically described by the user into multiple separate FPGAs.
 
 The cluster is described in a LOGICALFILE with no notion of the mappings. This can repeat a kernel with the <rep> tag. The <num> tag refers to a unique ID for each repeated kernel in the cluster. The <num> tags of all the kernels are then used in the MAPFILE to specify which kernels are placed in which FPGA or CPU, with each node representing a separate FPGA or CPU. Here you can specify which communication protocol to use for that specific node (tcp or eth), the network addresses of the node (mac address and ip_address), any bridge IP your kernels need to communicate to the network (for example if they are MPI packets you need the IP block to translate TCP packets into MPI packets). If you do not specify a bridge then the network module (tcp or eth) is directly connected to the switch and it is up to the user kernels to format their packet to be tcp or ethernet compliant, else they can use a bridge to do so. 
   
