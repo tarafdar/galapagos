@@ -20,7 +20,7 @@ Our setup has all FPGAs connected directly to a network switch.  We have the fol
 - Alphadata 8v3
 - Fidus Sidewinder (also has a hardened ARM CPU)
 
-Boards without the hardened ARM are connected with an X86 CPU via PCIe. Boards with the hardened ARM core are not connected to an X86 CPU.
+Boards without the hardened ARM are connected with an X86 CPU via PCIe. 
 
 ## Hypervisor Layer
 
@@ -140,7 +140,7 @@ You need to specify a bridge to transform AXI stream packets into MPI packets. T
 
 To Build K-Means MPI Example:
 1. `git clone https://github.com/eskandarinariman/HMPI` . This will clone HMPI.
-1. `make kmeans_userIP' This makes the HLS kernels with MPI
+1. `make kmeans_userIP` This makes the HLS kernels with MPI
 2. Change the Logical and Mapfile in Makefile to point to ./HMPI/sw_kmeans/configuration_files/mpiLogical.xml and ./HMPI/sw_kmeans/configuration_files/mpiMap.xml 
 3. `make createCluster`
 
