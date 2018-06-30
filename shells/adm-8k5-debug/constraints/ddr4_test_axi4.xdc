@@ -1,7 +1,3 @@
-#===============================
-# AUTHOR     : Naif Tarafdar
-# CREATE DATE     : Mar 19, 2018
-#===============================
 connect_debug_port dbg_hub/clk [get_nets -of_objects [get_pins {bufg_vio_clk/O}]]
 
 set_false_path -through [get_pins {debounce_user_sw/i_debounced_reg/Q}]

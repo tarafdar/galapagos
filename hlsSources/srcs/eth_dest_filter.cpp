@@ -17,7 +17,7 @@ struct ap_axis{
 
 void eth_dest_filter(
 	
-        ap_uint<32> mac_table[256],
+        const ap_uint<48> mac_table[256],
         const int mac_addr,
         hls::stream <ap_axis> * stream_in,
 		hls::stream <ap_axis>  * stream_out_switch,

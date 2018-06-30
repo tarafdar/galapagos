@@ -1,7 +1,3 @@
-#===============================
-# AUTHOR     : Naif Tarafdar
-# CREATE DATE     : Mar 19, 2018
-#===============================
 #
 # This file contains non-PACKAGE_PIN constraints for twin-die / stacked-die related signals of
 # SDRAM bank 1 that are not driven by MIG when it is in a single-die configuration. Without

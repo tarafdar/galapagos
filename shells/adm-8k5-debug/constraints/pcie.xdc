@@ -1,7 +1,3 @@
-#===============================
-# AUTHOR     : Naif Tarafdar
-# CREATE DATE     : Mar 19, 2018
-#===============================
 # PCIe reset
 set_property PACKAGE_PIN AE15 [get_ports reset_rtl]
 set_property IOSTANDARD LVCMOS18 [get_ports reset_rtl]

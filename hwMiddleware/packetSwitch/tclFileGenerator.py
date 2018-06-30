@@ -78,8 +78,10 @@ def userApplicationRegion_inst_kernels_count_interfaces(tcl_user_app, fpga):
    
     num_mem_interfaces = 0
     num_ctrl_interfaces = 0
+    num_debug_interfaces = 0
     #iterate through all kernels on FPGA counting mem and control interfaces and instantitating them
     for kernel in fpga.kernels:
+        num_debug_interfaces += len(kernel.debug_interfaces)
         instName = kernel.name + "_inst_" + str(kernel.id_num)
         if kernel.ctrl_interface != None:
             num_ctrl_interfaces = num_ctrl_interfaces + 1
@@ -103,7 +105,7 @@ def userApplicationRegion_inst_kernels_count_interfaces(tcl_user_app, fpga):
             tcl_user_app.write('connect_bd_net [get_bd_pins applicationRegion/' + instName + '_' + constant.name + '/dout] [get_bd_pins applicationRegion/' + instName + '/' + constant.name + ']\n')
 
 
-    return num_ctrl_interfaces, num_mem_interfaces
+    return num_ctrl_interfaces, num_mem_interfaces, num_debug_interfaces
 
 
 
@@ -113,12 +115,12 @@ def userApplicationRegion_create_switches(tcl_user_app, fpga):
     if fpga.comm == 'tcp':
         tcl_user_app.write('create_bd_cell -type ip -vlnv xilinx.com:hls:ip_dest_filter:1.0 applicationRegion/custom_switch_inst\n')
 
-        tcl_user_app.write('set_property -dict [list CONFIG.Memory_Type {Single_Port_ROM} CONFIG.Enable_32bit_Address {false} CONFIG.Use_Byte_Write_Enable {false} CONFIG.Byte_Size {9} CONFIG.Write_Depth_A {256} CONFIG.Register_PortA_Output_of_Memory_Primitives {true} CONFIG.Load_Init_File {true} CONFIG.Coe_File {../../../../../../../ip.coe} CONFIG.Use_RSTA_Pin {false} CONFIG.Port_A_Write_Rate {0} CONFIG.use_bram_block {Stand_Alone} CONFIG.EN_SAFETY_CKT {false}] [get_bd_cells applicationRegion/blk_mem_switch_rom]\n')
+        tcl_user_app.write('set_property -dict [list CONFIG.Memory_Type {Single_Port_ROM} CONFIG.Enable_32bit_Address {true} CONFIG.Use_Byte_Write_Enable {false} CONFIG.Byte_Size {8} CONFIG.Write_Width_A {64} CONFIG.Write_Depth_A {256} CONFIG.Read_Width_A {64} CONFIG.Write_Width_B {64} CONFIG.Read_Width_B {64} CONFIG.Register_PortA_Output_of_Memory_Primitives {false} CONFIG.Use_RSTA_Pin {true} CONFIG.Port_A_Write_Rate {0} CONFIG.use_bram_block {BRAM_Controller} CONFIG.EN_SAFETY_CKT {true} CONFIG.Load_Init_File {true} CONFIG.Coe_File {../../../../../../../ip.coe}] [get_bd_cells applicationRegion/blk_mem_switch_rom]\n')
         tcl_user_app.write('connect_bd_net [get_bd_pins network/ip_constant_block_inst/ip] [get_bd_pins applicationRegion/custom_switch_inst/ip_addr]\n')
         tcl_user_app.write('connect_bd_intf_net [get_bd_intf_pins applicationRegion/custom_switch_inst/ip_table_V_PORTA] [get_bd_intf_pins applicationRegion/blk_mem_switch_rom/BRAM_PORTA]\n')
     elif fpga.comm == 'eth':
         tcl_user_app.write('create_bd_cell -type ip -vlnv xilinx.com:hls:eth_dest_filter:1.0 applicationRegion/custom_switch_inst\n')
-        tcl_user_app.write('set_property -dict [list CONFIG.Memory_Type {Single_Port_ROM} CONFIG.Enable_32bit_Address {false} CONFIG.Use_Byte_Write_Enable {false} CONFIG.Byte_Size {9} CONFIG.Write_Width_A {48} CONFIG.Write_Depth_A {256} CONFIG.Read_Width_A {48} CONFIG.Write_Width_B {48} CONFIG.Read_Width_B {48} CONFIG.Register_PortA_Output_of_Memory_Primitives {true} CONFIG.Use_RSTA_Pin {false} CONFIG.Port_A_Write_Rate {0} CONFIG.use_bram_block {Stand_Alone} CONFIG.EN_SAFETY_CKT {false} CONFIG.Load_init_file {true} CONFIG.Coe_File {../../../../../../../mac.coe}] [get_bd_cells applicationRegion/blk_mem_switch_rom]\n')
+        tcl_user_app.write('set_property -dict [list CONFIG.Memory_Type {Single_Port_ROM} CONFIG.Enable_32bit_Address {true} CONFIG.Use_Byte_Write_Enable {false} CONFIG.Byte_Size {8} CONFIG.Write_Width_A {64} CONFIG.Write_Depth_A {256} CONFIG.Read_Width_A {64} CONFIG.Write_Width_B {64} CONFIG.Read_Width_B {64} CONFIG.Register_PortA_Output_of_Memory_Primitives {false} CONFIG.Use_RSTA_Pin {true} CONFIG.Port_A_Write_Rate {0} CONFIG.use_bram_block {BRAM_Controller} CONFIG.EN_SAFETY_CKT {true} CONFIG.Load_init_file {true} CONFIG.Coe_File {../../../../../../../mac.coe}] [get_bd_cells applicationRegion/blk_mem_switch_rom]\n')
         tcl_user_app.write('connect_bd_net [get_bd_pins network/ip_constant_block_inst/mac] [get_bd_pins applicationRegion/custom_switch_inst/mac_addr]\n')
         tcl_user_app.write('connect_bd_intf_net [get_bd_intf_pins applicationRegion/custom_switch_inst/mac_table_V_PORTA] [get_bd_intf_pins applicationRegion/blk_mem_switch_rom/BRAM_PORTA]\n')
     
@@ -140,9 +142,7 @@ def userApplicationRegion_kernel_connect_switches(tcl_user_app, fpga):
     ctrl_interface_index = 0
     mem_interface_index = 0
     kernel_index = 0
-    num_debug_interfaces = 0
     for kernel in fpga.kernels:
-        num_debug_interfaces += len(kernel.debug_interfaces)
         instName = kernel.name + "_inst_" + str(kernel.id_num)
         kernel_index_str = "%02d"%kernel_index
         if (len(fpga.kernels) > 1):
@@ -167,30 +167,58 @@ def userApplicationRegion_kernel_connect_switches(tcl_user_app, fpga):
             mem_interface_index = mem_interface_index + 1
         kernel_index = kernel_index + 1
 
-
-
-    #adding ILA ports
-    if num_debug_interfaces > 0:
-        tcl_user_app.write('create_bd_cell -type ip -vlnv xilinx.com:ip:system_ila:1.1 applicationRegion/system_ila_streams\n')
-
-        tcl_user_app.write('set_property -dict [list CONFIG.C_BRAM_CNT {6} CONFIG.C_NUM_MONITOR_SLOTS {'+ str(num_debug_interfaces) + '} CONFIG.ALL_PROBE_SAME_MU {true} ')
-    for debug_interface_index in range(0, num_debug_interfaces):
-        tcl_user_app.write('CONFIG.C_SLOT_' + str(debug_interface_index) + '_INTF_TYPE {xilinx.com:interface:axis_rtl:1.0} ')
-    if num_debug_interfaces > 0:
-        tcl_user_app.write('] [get_bd_cells applicationRegion/system_ila_streams]\n')
-        tcl_user_app.write('connect_bd_net [get_bd_pins CLK] [get_bd_pins applicationRegion/system_ila_streams/clk]\n')
-        tcl_user_app.write('connect_bd_net [get_bd_pins ARESETN] [get_bd_pins applicationRegion/system_ila_streams/resetn]\n')
-    debug_interface_index = 0
-    for kernel in fpga.kernels:
-        instName = kernel.name + "_inst_" + str(kernel.id_num)
-        for debug_interface in kernel.debug_interfaces:
-            tcl_user_app.write('connect_bd_intf_net [get_bd_intf_pins applicationRegion/' +instName + '/' + debug_interface + '] [get_bd_intf_pins applicationRegion/system_ila_streams/SLOT_' + str(debug_interface_index) + '_AXIS]\n')
-            debug_interface_index = debug_interface_index + 1
-
     
     tcl_user_app.write('connect_bd_intf_net [get_bd_intf_pins applicationRegion/custom_switch_inst/stream_out_switch_V] [get_bd_intf_pins applicationRegion/input_switch/S01_AXIS]\n')
     if(len(fpga.kernels) > 1):
         tcl_user_app.write('connect_bd_intf_net [get_bd_intf_pins applicationRegion/output_switch/M00_AXIS] [get_bd_intf_pins applicationRegion/custom_switch_inst/stream_in_V]\n')
+
+def add_debug_interfaces(outDir, num_debug_interfaces, fpga):
+    tcl_debug_app = open( outDir + '/' + str(fpga.num) + '_debug.tcl', 'w')
+
+    #adding ILA ports
+    if num_debug_interfaces > 0:
+        tcl_debug_app.write('create_bd_cell -type ip -vlnv xilinx.com:ip:system_ila:1.1 system_ila_streams\n')
+
+        tcl_debug_app.write('set_property -dict [list CONFIG.C_BRAM_CNT {6} CONFIG.C_NUM_MONITOR_SLOTS {'+ str(num_debug_interfaces + 8) + '} CONFIG.ALL_PROBE_SAME_MU {true} ')
+        for debug_interface_index in range(0, num_debug_interfaces + 7):
+            tcl_debug_app.write('CONFIG.C_SLOT_' + str(debug_interface_index) + '_INTF_TYPE {xilinx.com:interface:axis_rtl:1.0} ')
+
+        
+        tcl_debug_app.write('CONFIG.C_SLOT_' + str(num_debug_interfaces + 7) + '_INTF_TYPE {xilinx.com:interface:bram_rtl:1.0} ')
+
+        tcl_debug_app.write('] [get_bd_cells system_ila_streams]\n')
+        tcl_debug_app.write('connect_bd_net [get_bd_pins CLK] [get_bd_pins system_ila_streams/clk]\n')
+        tcl_debug_app.write('connect_bd_net [get_bd_pins ARESETN] [get_bd_pins system_ila_streams/resetn]\n')
+        debug_interface_index = 0
+        for kernel in fpga.kernels:
+            instName = kernel.name + "_inst_" + str(kernel.id_num)
+            for debug_interface in kernel.debug_interfaces:
+                tcl_debug_app.write('connect_bd_intf_net [get_bd_intf_pins applicationRegion/' +instName + '/' + debug_interface + '] [get_bd_intf_pins system_ila_streams/SLOT_' + str(debug_interface_index) + '_AXIS]\n')
+                debug_interface_index = debug_interface_index + 1
+        debug_interface_index = num_debug_interfaces
+        tcl_debug_app.write('connect_bd_intf_net [get_bd_intf_pins system_ila_streams/SLOT_'+ str(debug_interface_index) + '_AXIS] [get_bd_intf_pins application_bridge_inst/from_net_V]\n')
+        debug_interface_index = debug_interface_index + 1 
+        tcl_debug_app.write('connect_bd_intf_net [get_bd_intf_pins system_ila_streams/SLOT_'+ str(debug_interface_index) + '_AXIS] [get_bd_intf_pins application_bridge_inst/to_app_V]\n')
+        debug_interface_index = debug_interface_index + 1 
+        tcl_debug_app.write('connect_bd_intf_net [get_bd_intf_pins system_ila_streams/SLOT_'+ str(debug_interface_index) + '_AXIS] [get_bd_intf_pins application_bridge_inst/from_app_V]\n')
+        debug_interface_index = debug_interface_index + 1 
+        tcl_debug_app.write('connect_bd_intf_net [get_bd_intf_pins system_ila_streams/SLOT_'+ str(debug_interface_index) + '_AXIS] [get_bd_intf_pins application_bridge_inst/to_net_V]\n')
+        debug_interface_index = debug_interface_index + 1 
+        tcl_debug_app.write('connect_bd_intf_net [get_bd_intf_pins system_ila_streams/SLOT_'+ str(debug_interface_index) + '_AXIS] [get_bd_intf_pins applicationRegion/output_switch/M00_AXIS]\n')
+        debug_interface_index = debug_interface_index + 1 
+        tcl_debug_app.write('connect_bd_intf_net [get_bd_intf_pins system_ila_streams/SLOT_'+ str(debug_interface_index) + '_AXIS] [get_bd_intf_pins applicationRegion/custom_switch_inst/stream_out_switch_V]\n')
+        debug_interface_index = debug_interface_index + 1 
+        tcl_debug_app.write('connect_bd_intf_net [get_bd_intf_pins system_ila_streams/SLOT_'+ str(debug_interface_index) + '_AXIS] [get_bd_intf_ports S_AXIS]\n')
+        
+        
+        debug_interface_index = debug_interface_index + 1 
+        if fpga.comm == 'eth':
+            tcl_debug_app.write('connect_bd_intf_net [get_bd_intf_pins system_ila_streams/SLOT_'+ str(debug_interface_index) + '_BRAM] [get_bd_intf_pins applicationRegion/custom_switch_inst/mac_table_V_PORTA]\n')
+        else:
+            tcl_debug_app.write('connect_bd_intf_net [get_bd_intf_pins system_ila_streams/SLOT_'+ str(debug_interface_index) + '_BRAM] [get_bd_intf_pins applicationRegion/custom_switch_inst/ip_table_V_PORTA]\n')
+
+
+    
 
 
 
@@ -229,7 +257,7 @@ def userApplicationRegion(outDir, fpga, address_space):
     tcl_user_app.write('set num_local_ranks ' + str(len(fpga.kernels)) + '\n')
     
 
-    num_ctrl_interfaces, num_mem_interfaces = userApplicationRegion_inst_kernels_count_interfaces(tcl_user_app, fpga)
+    num_ctrl_interfaces, num_mem_interfaces, num_debug_interfaces = userApplicationRegion_inst_kernels_count_interfaces(tcl_user_app, fpga)
     userApplicationRegion_control_inst(tcl_user_app, num_ctrl_interfaces)
     #if communication medium is ethernet then combine offchip memory into one shared address space
     userApplicationRegion_mem_inst(tcl_user_app, num_mem_interfaces, num_ctrl_interfaces, fpga.comm == 'eth')
@@ -239,7 +267,7 @@ def userApplicationRegion(outDir, fpga, address_space):
     if num_mem_interfaces > 0:
         userApplicationRegion_assign_addresses(tcl_user_app, fpga, fpga.comm == 'eth' and address_space == 64)
     
-
+    return num_debug_interfaces
 
 def net_bridge_constants(tcl_net, fpga):
 
@@ -297,15 +325,21 @@ def makeTCLFiles(fpga, projectName, networkBridges):
 
     outDir = 'projects/' + projectName + '/' + str(fpga.num)
     net_bridge(outDir, fpga)
-    userApplicationRegion(outDir, fpga, address_space)
+    num_debug_interfaces = userApplicationRegion(outDir, fpga, address_space)
     bridge_connections(outDir, fpga)
+    if(num_debug_interfaces > 0):
+        add_debug_interfaces(outDir, num_debug_interfaces, fpga)
 
     tclMain = open( outDir + '/' + str(fpga.num) + '.tcl', 'w')
     tclMain.write('source ./tclScripts/pr_standard_interfaces.tcl\n')
     tclMain.write('source ' + outDir + '/' + str(fpga.num) + '_net.tcl\n')
     tclMain.write('source ' + outDir + '/' + str(fpga.num) + '_app.tcl\n')
     tclMain.write('source ' + outDir + '/' + str(fpga.num) + '_bridge_connections.tcl\n')
+
+    if(num_debug_interfaces > 0):
+        tclMain.write('source ' + outDir + '/' + str(fpga.num) + '_debug.tcl\n')
    
+    tclMain.write('validate_bd_design\n')
 
 
 

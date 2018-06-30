@@ -11,7 +11,7 @@ DCP = static_routed_v3.dcp
 
 USERHLSIP_DIR = ./HMPI
 #PROJECTNAME=mlKernelsTest_0
-PROJECTNAME=kmeansTest_4_eth
+PROJECTNAME=kmeansTest_4_eth_debug
 
 #ML DIRECTORIES
 ML_USERHLSIP_DIR=telepathy/hlsSources
