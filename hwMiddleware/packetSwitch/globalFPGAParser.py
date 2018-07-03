@@ -357,6 +357,7 @@ def makeProjectClusterScript(projectName, allNodes):
     os.makedirs('projects/' + projectName)
 
     globalConfigFile = open('createCluster.sh', 'w')
+    globalSimFile = open('simCluster.sh', 'w')
 
     nodeIndex = 0
     for node in allNodes:
@@ -366,7 +367,7 @@ def makeProjectClusterScript(projectName, allNodes):
             os.makedirs(dirName)
             #currently only making flattened bitstreams
             globalConfigFile.write("vivado -mode batch -source tclScripts/createFlatten.tcl -tclargs " + node.board + " " + projectName + " " + str(nodeIndex) + "\n")
-
+            globalSimFile.write("vivado -mode gui -source tclScripts/createSim.tcl -tclargs " + node.board + " " + projectName + " " + str(nodeIndex) + "\n")
         nodeIndex = nodeIndex + 1
 
 

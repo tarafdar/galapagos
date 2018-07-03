@@ -222,7 +222,8 @@ void ethernet_bridge(
         hls::stream <eth_axis> & from_eth,
 	    hls::stream <app_axis> & from_app,
         hls::stream <eth_axis> & to_eth,
-        const ap_uint<48> mac_addr)
+        const ap_uint<48> mac_addr
+        )
 
 {
 #pragma HLS DATAFLOW
@@ -238,7 +239,8 @@ void ethernet_bridge(
 #pragma HLS DATA_PACK variable=to_eth
 
 
-
+#pragma HLS_INTERFACE ap_ctrl_none state_out
+#pragma HLS_INTERFACE ap_ctrl_none observedAddress_out 
 
 
 // #pragma HLS INTERFACE axis port=to_app

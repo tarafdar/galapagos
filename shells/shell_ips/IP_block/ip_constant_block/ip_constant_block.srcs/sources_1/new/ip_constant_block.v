@@ -50,13 +50,15 @@ module ip_constant_block
         output [31:0] ip,
         output [31:0] gateway,
         output [31:0] subnet,
-        output [47:0] mac
+        output [47:0] mac,
+        output [47:0] mac_big
     );
     
     assign ip = swapBytesIP( {C_IP_B3,C_IP_B2,C_IP_B1,C_IP_B0} );
     assign gateway = swapBytesIP( {C_GATEWAY_B3,C_GATEWAY_B2,C_GATEWAY_B1,C_GATEWAY_B0} );
     assign subnet = swapBytesIP( {C_SUBNET_B3,C_SUBNET_B2,C_SUBNET_B1,C_SUBNET_B0} );
     assign mac    = swapBytesMAC( C_MAC );
+    assign mac_big = C_MAC;
     function [31:0] swapBytesIP (input [31:0] word);
         swapBytesIP = {word[7:0], word[15:8], word[23:16], word[31:24]};
     endfunction

@@ -1,6 +1,4 @@
-import axi4stream_vip_pkg::*;
-import vip_axi4stream_vip_0_0_pkg::*;
-import vip_axi4stream_vip_1_0_pkg::*;
+`timescale 1 ns/ 1ps
 
 
 
@@ -9,47 +7,103 @@ module testbench();
 
 
     
-    bit clk;
-    bit resetn;
+    reg clk;
+    reg resetn;
+    
+    reg [7:0] keep;
+    reg last;
+    reg [63:0] data;
+    reg valid;
+    
+    wire ready;
+ 
+    
+    reg ready_reg;
+    reg ready_out;
+    
+    wire [2:0] state;
+    wire state_valid;
+    
     
     always #5 clk = ~clk;
     
-    initial begin
-        resetn=0;
-        #5 resetn = 1;
-
+    
+    always@(posedge clk)
+    begin
+        ready_reg <= ready;
     end
+    
+    
+    initial begin
+        ready_out = 1;
+        clk = 0;
+        #5 resetn = 1;
+    end
+    
+    
 
-   vip_tb vip_tb_i
-	(.aclk (clk),
-	.resetn(resetn),
-	.S_AXIS_tdata(S_AXIS_tdata),
-        .S_AXIS_tkeep(S_AXIS_tkeep),
-        .S_AXIS_tlast(S_AXIS_tlast),
-        .S_AXIS_tready(S_AXIS_tready),
-        .S_AXIS_tvalid(S_AXIS_tvalid),
-        .M_AXIS_tdata(M_AXIS_tdata),
-        .M_AXIS_tkeep(M_AXIS_tkeep),
-        .M_AXIS_tlast(M_AXIS_tlast),
-        .M_AXIS_tready(M_AXIS_tready),
-        .M_AXIS_tvalid(M_AXIS_tvalid)
+    initial begin
+           
+        #50
+        gen_transaction(64'd0, 64'hc4c0c02ca553e16fa, 8'hff, 1'b0);
+        gen_transaction(64'd1, 64'h0000007447c0887a, 8'hff, 1'b0);
+        gen_transaction(64'd2, 64'h0100000100030000, 8'hff, 1'b0);
+        gen_transaction(64'd3, 64'h5073930200000000, 8'h0f, 1'b1);
+      
+    end
+    
+
+
+
+
+wire [63:0] data_out;
+wire [7:0] keep_out;
+wire last_out;
+wire valid_out;
+
+wire [47:0] observedAddress_out;
+wire observedAddress_out_valid;
+
+
+/*
+design_1 design_1_i
+   (.M_AXIS_tdata(data_out),
+    .M_AXIS_tdest(),
+    .M_AXIS_tkeep(keep_out),
+    .M_AXIS_tlast(last_out),
+    .M_AXIS_tready(ready_out),
+    .M_AXIS_tvalid(valid_out),
+    .S_AXIS_tdata(data),
+    .S_AXIS_tkeep(keep),
+    .S_AXIS_tlast(last),
+    .S_AXIS_tready(ready),
+    .S_AXIS_tvalid(valid),
+    .aclk_0(clk),
+    .aresetn_0(resetn),
+    .mac_addr_V_0(48'hfa163e55ca02),
+    .observedAddress_out_V_0(observedAddress_out),
+    .observedAddress_out_V_ap_vld_0(observedAddress_out_valid),
+    .state_out_V_0(state),
+    .state_out_V_ap_vld_0(state_valid)
+    
     );
+   
+*/
 
 
-
-    pr dut_pr 
-       (.ARESETN(ARESETN),
-        .CLK(CLK_DATA),
-        .M_AXIS_tdata(S_AXIS_tdata),
-        .M_AXIS_tkeep(S_AXIS_tkeep),
-        .M_AXIS_tlast(S_AXIS_tlast),
-        .M_AXIS_tready(S_AXIS_tready),
-        .M_AXIS_tvalid(S_AXIS_tvalid),
-        .S_AXIS_tdata(M_AXIS_tdata),
-        .S_AXIS_tkeep(M_AXIS_tkeep),
-        .S_AXIS_tlast(M_AXIS_tlast),
-        .S_AXIS_tready(M_AXIS_tready),
-        .S_AXIS_tvalid(M_AXIS_tvalid),
+   pr pr_i
+       (.ARESETN(resetn),
+        .CLK(clk),
+        .M_AXIS_tdata(data_out),
+        .M_AXIS_tkeep(keep_out),
+        .M_AXIS_tlast(last_out),
+        .M_AXIS_tready(ready_out),
+        .M_AXIS_tvalid(valid_out),
+        .S_AXIS_tdata(data),
+        .S_AXIS_tkeep(keep),
+        .S_AXIS_tlast(last),
+        .S_AXIS_tready(ready),
+        .S_AXIS_tvalid(valid),
         .S_AXI_CONTROL_araddr(M_AXI_CONTROL_araddr),
         //.S_AXI_CONTROL_arprot(M_AXI_CONTROL_arprot),
         //.S_AXI_CONTROL_arqos(M_AXI_CONTROL_arqos),
@@ -146,6 +200,23 @@ module testbench();
         .S_AXI_MEM_1_wstrb(S_AXI_MEM_1_wstrb),
         .S_AXI_MEM_1_wvalid(S_AXI_MEM_1_wvalid)
     );
+
+
+
+
+task gen_transaction(input [63:0] num, input [63:0] data_task, input [7:0] keep_task, input last_task);
+
+  data = data_task;
+  keep = keep_task;
+  last = last_task;
+  wait(ready);
+  valid = 1;
+  #10
+  $display("Transaction %d, Data: %h, keep %h, last %b", num, data_task, keep_task, last_task);
+  
+endtask
+
+
 
 
 endmodule

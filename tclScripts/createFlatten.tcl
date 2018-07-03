@@ -74,6 +74,8 @@ if { ![get_property "is_locked" $file_obj] } {
   set_property "synth_checkpoint_mode" "Hierarchical" $file_obj
 }
 
+set files [glob shells/$boardName/sim/*]
+import_files -norecurse -fileset sim_1 $files
 
 # Set 'sources_1' fileset file properties for local files
 # None

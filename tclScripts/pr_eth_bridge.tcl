@@ -4,7 +4,7 @@ set netBridge_to_app to_app_V
 create_bd_cell -type ip -vlnv xilinx.com:hls:ethernet_bridge:1.0 network/network_bridge_inst
 connect_bd_net [get_bd_ports CLK] [get_bd_pins network/network_bridge_inst/aclk]
 connect_bd_net [get_bd_ports ARESETN] [get_bd_pins network/network_bridge_inst/aresetn]
-connect_bd_net [get_bd_pins network/network_bridge_inst/mac_addr_V] [get_bd_pins network/ip_constant_block_inst/mac]
+connect_bd_net [get_bd_pins network/network_bridge_inst/mac_addr_V] [get_bd_pins network/ip_constant_block_inst/mac_big]
 connect_bd_intf_net [get_bd_intf_ports S_AXIS] [get_bd_intf_pins network/network_bridge_inst/from_eth_V]
 connect_bd_intf_net [get_bd_intf_ports M_AXIS] [get_bd_intf_pins network/network_bridge_inst/to_eth_V]
 create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen:8.4 network/blk_mem_bridge_rom
