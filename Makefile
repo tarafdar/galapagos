@@ -10,8 +10,7 @@ DCP = static_routed_v3.dcp
 
 
 USERHLSIP_DIR = ./HMPI
-#PROJECTNAME=mlKernelsTest_0
-PROJECTNAME=kmeansTest_64_debug
+USERHLSIP_SRCS = ./HMPI/HLS_lib/communication_bridge_eth_mpi.cpp ./HMPI/HLS_lib/communication_bridge_tcp_mpi.cpp
 
 #ML DIRECTORIES
 ML_USERHLSIP_DIR=telepathy/hlsSources
@@ -22,39 +21,37 @@ ML_USERIPTCLDEBUG=./telepathy/ipPackage/package_top_debug.tcl
 #KMEANS
 KMEANS_USERHLSIP_DIR=./HMPI/mpi_app_benchmarks/HMPI_kmeans
 KMEANS_USERHLSIPTCL=${KMEANS_USERHLSIP_DIR}/generate_hls_ip.tcl
-
-
-#board parameters (should take as input from middleware input files later)
-BOARD = adm-8k5
-PART = xcku115-flva1517-2-e
-FPGANUM= 1
+KMEANS_USERHLSIP_SRCS=${KMEANS_USERHLSIP_DIR}/hls/kmeans.cpp ${KMEANS_USERHLSIP_DIR}/hls/kmeans_0.cpp ./HMPI/HLS_lib/MPI.h
 
 ##input files for middleware
 #CONF_DIR = ./telepathy/sw
 CONF_DIR = ./HMPI/sw_kmeans
-CONF = conf5
 
 #input files for middleware
 LOGICALFILE=${CONF_DIR}/${CONF}/configuration_files/mpiLogical.xml
 MAPFILE=${CONF_DIR}/${CONF}/configuration_files/mpiMap.xml
 
+BOARD = adm-8k5
+PART = xcku115-flva1517-2-e
+FPGANUM= 1
+
+all: userIP hlsMiddleware kmeans_userIP createCluster   
 
 
-all: ml_userIP kmeans_userIP createCluster   
 
 
-userIP:  
+userIP: ${USERHLSIP_DIR}/generate_hls_ip.tcl ${USERHLSIP_SRCS}
 	mkdir -p userIP
 	vivado_hls ${USERHLSIP_DIR}/generate_hls_ip.tcl
 
 #CUSTOM USERIP ADDED FOR ML and KMEANS, ADD ACCORDINGLY
 
-ml_userIP: userIP ${ML_USERHLSIP_DIR}/* ${ML_USERHLSIPTCL}
+ml_userIP: userIP $(wildcard ${ML_USERHLSIP_DIR}/*) ${ML_USERHLSIPTCL}
 	mkdir -p userIP
 	vivado_hls ${ML_USERHLSIPTCL}
 	vivado -mode batch -source ${ML_USERIPTCLDEBUG} 
 
-kmeans_userIP: userIP ${ML_USERHLSIP_DIR}/* ${KMEANS_USERHLSIPTCL}
+kmeans_userIP:  ${KMEANS_USERHLSIPTCL} ${KMEANS_USERHLSIP_SRCS}
 	mkdir -p userIP
 	vivado_hls ${KMEANS_USERHLSIPTCL}
 
@@ -64,7 +61,7 @@ hlsShell: ./tclScripts/generate_hls_ip_shell.tcl
 	mkdir -p hlsIP_${BOARD}
 	vivado_hls tclScripts/generate_hls_ip_shell.tcl -tclargs ${BOARD} ${PART}
 
-hlsMiddleware:
+hlsMiddleware: $(wildcard hlsSources/srcs/*)
 	mkdir -p hlsIP_${BOARD}
 	vivado_hls tclScripts/generate_hls_ip_middleware.tcl -tclargs ${BOARD} ${PART}
 
