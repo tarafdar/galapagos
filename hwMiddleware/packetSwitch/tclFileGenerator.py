@@ -127,6 +127,24 @@ def userApplicationRegion_create_switches(tcl_user_app, fpga):
     tcl_user_app.write('connect_bd_net [get_bd_pins CLK] [get_bd_pins applicationRegion/custom_switch_inst/aclk]\n')
     tcl_user_app.write('connect_bd_net [get_bd_pins ARESETN] [get_bd_pins applicationRegion/custom_switch_inst/aresetn]\n')
     tcl_user_app.write('source ./tclScripts/pr_inst_input_switch.tcl\n')
+
+
+    switch_port_index = 0
+    tcl_user_app.write('set_property -dict [list ')
+    for kernel in fpga.kernels:
+        kernel_index_str = "0x{:08x}".format(int(kernel.id_num))
+        switch_port_index_str = "%02d"%switch_port_index
+        tcl_user_app.write('CONFIG.M' + switch_port_index_str + '_AXIS_BASETDEST {' + kernel_index_str + '} CONFIG.M' + switch_port_index_str + '_AXIS_HIGHTDEST {' + kernel_index_str + '} ')
+        switch_port_index = switch_port_index + 1            
+                
+    tcl_user_app.write('] [get_bd_cells applicationRegion/input_switch]\n')
+
+
+
+
+
+
+
     if len(fpga.kernels) > 1:
         tcl_user_app.write('source ./tclScripts/pr_inst_output_switch.tcl\n')
 
