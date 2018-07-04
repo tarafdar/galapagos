@@ -115,8 +115,8 @@ def userApplicationRegion_create_switches(tcl_user_app, fpga):
     if fpga.comm == 'tcp':
         tcl_user_app.write('create_bd_cell -type ip -vlnv xilinx.com:hls:ip_dest_filter:1.0 applicationRegion/custom_switch_inst\n')
 
-        tcl_user_app.write('set_property -dict [list CONFIG.Memory_Type {Single_Port_ROM} CONFIG.Enable_32bit_Address {true} CONFIG.Use_Byte_Write_Enable {false} CONFIG.Byte_Size {8} CONFIG.Write_Width_A {64} CONFIG.Write_Depth_A {256} CONFIG.Read_Width_A {64} CONFIG.Write_Width_B {64} CONFIG.Read_Width_B {64} CONFIG.Register_PortA_Output_of_Memory_Primitives {false} CONFIG.Use_RSTA_Pin {true} CONFIG.Port_A_Write_Rate {0} CONFIG.use_bram_block {BRAM_Controller} CONFIG.EN_SAFETY_CKT {true} CONFIG.Load_Init_File {true} CONFIG.Coe_File {../../../../../../../ip.coe}] [get_bd_cells applicationRegion/blk_mem_switch_rom]\n')
-        tcl_user_app.write('connect_bd_net [get_bd_pins network/ip_constant_block_inst/ip] [get_bd_pins applicationRegion/custom_switch_inst/ip_addr]\n')
+        tcl_user_app.write('set_property -dict [list CONFIG.Memory_Type {Single_Port_ROM} CONFIG.Enable_32bit_Address {true} CONFIG.Use_Byte_Write_Enable {false} CONFIG.Byte_Size {8} CONFIG.Write_Depth_A {256} CONFIG.Register_PortA_Output_of_Memory_Primitives {false} CONFIG.Use_RSTA_Pin {true} CONFIG.Port_A_Write_Rate {0} CONFIG.use_bram_block {BRAM_Controller} CONFIG.EN_SAFETY_CKT {true} CONFIG.Load_Init_File {true} CONFIG.Coe_File {../../../../../../../ip.coe}] [get_bd_cells applicationRegion/blk_mem_switch_rom]\n')
+        tcl_user_app.write('connect_bd_net [get_bd_pins network/ip_constant_block_inst/ip] [get_bd_pins applicationRegion/custom_switch_inst/ip_addr_V]\n')
         tcl_user_app.write('connect_bd_intf_net [get_bd_intf_pins applicationRegion/custom_switch_inst/ip_table_V_PORTA] [get_bd_intf_pins applicationRegion/blk_mem_switch_rom/BRAM_PORTA]\n')
     elif fpga.comm == 'eth':
         tcl_user_app.write('create_bd_cell -type ip -vlnv xilinx.com:hls:eth_dest_filter:1.0 applicationRegion/custom_switch_inst\n')

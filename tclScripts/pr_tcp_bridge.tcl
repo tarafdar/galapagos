@@ -16,6 +16,7 @@ connect_bd_net [get_bd_ports ARESETN] [get_bd_pins network/tcp_ip_inst/s_axictl_
 connect_bd_net [get_bd_pins network/tcp_ip_inst/ipAddressIn] [get_bd_pins network/ip_constant_block_inst/ip]
 connect_bd_net [get_bd_pins network/tcp_ip_inst/gatewayIn] [get_bd_pins network/ip_constant_block_inst/gateway]
 connect_bd_net [get_bd_pins network/tcp_ip_inst/subnetIn] [get_bd_pins network/ip_constant_block_inst/subnet]
+connect_bd_net [get_bd_pins network/tcp_ip_inst/macAddressIn] [get_bd_pins network/ip_constant_block_inst/mac]
 create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 network/xlconstant_enable
 connect_bd_net [get_bd_pins network/tcp_ip_inst/configInEn] [get_bd_pins network/xlconstant_enable/dout]
 

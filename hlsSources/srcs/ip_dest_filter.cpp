@@ -10,12 +10,14 @@
 #include "ap_utils.h"
 
 struct ap_axis{
-
-	ap_int <64> data;
+	ap_uint<64> data;
+	ap_uint <8> dest;
 	ap_uint<1> last;
-	ap_uint<8> tdest;
-	ap_uint<8> tkeep;
+	ap_uint<8> id;
+	ap_uint <8> keep;
+	ap_uint<40> user;
 };
+
 
 
 
@@ -24,7 +26,7 @@ struct ap_axis{
 void ip_dest_filter(
 	
         ap_uint<32> ip_table[256],
-        const int ip_addr,
+        const ap_uint<32> ip_addr,
         hls::stream <ap_axis> * stream_in,
 		hls::stream <ap_axis>  * stream_out_switch,
 		hls::stream <ap_axis>  * stream_out_network
@@ -46,11 +48,11 @@ void ip_dest_filter(
 	ap_axis packetOut;
 
 	bool inFPGA = false;
-    int ip_addr_in;
+    ap_uint<32> ip_addr_in;
 
 	if(!stream_in->empty()){
 		packetIn = stream_in->read();
-        ip_addr_in = ip_table[packetIn.tdest];
+        ip_addr_in = ip_table[packetIn.dest];
         inFPGA = (ip_addr == ip_addr_in);
 
         if(inFPGA){

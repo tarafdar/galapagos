@@ -7,12 +7,14 @@
 #include "hls_stream.h"
 #include "ap_utils.h"
 
-struct ap_axis{
 
-	ap_int <64> data;
+struct ap_axis{
+	ap_uint<64> data;
+	ap_uint <8> dest;
 	ap_uint<1> last;
-	ap_uint<8> tdest;
-	ap_uint<8> tkeep;
+	ap_uint<8> id;
+	ap_uint <8> keep;
+	ap_uint<40> user;
 };
 
 void eth_dest_filter(
@@ -44,7 +46,7 @@ void eth_dest_filter(
 
 	if(!stream_in->empty()){
 		packetIn = stream_in->read();
-        mac_addr_in = mac_table[packetIn.tdest];
+        mac_addr_in = mac_table[packetIn.dest];
         inFPGA = (mac_addr == mac_addr_in);
 
         if(inFPGA){

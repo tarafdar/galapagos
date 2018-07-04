@@ -322,6 +322,7 @@ def makeIPBRAMFile(projectName, allKernels):
     kernelIndex = 0
     #iterate through kernels in order of tdest, populating the ipaddress at that location
     for kernel in allKernels:
+        print "kernel ip address " + kernel.ip_addr 
         if kernelIndex != (len(allKernels) - 1):
             print kernel.ip_addr
             ipBRAMFile.write(str(struct.unpack("!L", socket.inet_aton(kernel.ip_addr))[0]) + ',')
@@ -366,7 +367,7 @@ def makeProjectClusterScript(projectName, allNodes):
             dirName = 'projects/' + projectName + '/' + str(nodeIndex)
             os.makedirs(dirName)
             #currently only making flattened bitstreams
-            globalConfigFile.write("vivado -mode batch -source tclScripts/createFlatten.tcl -tclargs " + node.board + " " + projectName + " " + str(nodeIndex) + "\n")
+            globalConfigFile.write("vivado -mode batch -source tclScripts/createFlatten.tcl -tclargs " + node.board + " " + projectName + " " + str(nodeIndex) + "& \n")
             globalSimFile.write("vivado -mode gui -source tclScripts/createSim.tcl -tclargs " + node.board + " " + projectName + " " + str(nodeIndex) + "\n")
         nodeIndex = nodeIndex + 1
 

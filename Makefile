@@ -11,7 +11,7 @@ DCP = static_routed_v3.dcp
 
 USERHLSIP_DIR = ./HMPI
 #PROJECTNAME=mlKernelsTest_0
-PROJECTNAME=kmeansTest_4_debug
+PROJECTNAME=kmeansTest_64_debug
 
 #ML DIRECTORIES
 ML_USERHLSIP_DIR=telepathy/hlsSources
@@ -32,7 +32,7 @@ FPGANUM= 1
 ##input files for middleware
 #CONF_DIR = ./telepathy/sw
 CONF_DIR = ./HMPI/sw_kmeans
-CONF = conf0
+CONF = conf5
 
 #input files for middleware
 LOGICALFILE=${CONF_DIR}/${CONF}/configuration_files/mpiLogical.xml
@@ -69,6 +69,7 @@ hlsMiddleware:
 	vivado_hls tclScripts/generate_hls_ip_middleware.tcl -tclargs ${BOARD} ${PART}
 
 createCluster: ${LOGICALFILE} ${MAPFILE} 
+	LOGICALFILE=${CONF_DIR}/${CONF}/configuration_files/mpiLogical.xml
 	mkdir -p projects
 	mkdir -p projects/${PROJECTNAME}
 	python hwMiddleware/packetSwitch/globalFPGAParser.py --logicalFile=${LOGICALFILE} --macFile=${MACFILE} --mapFile=${MAPFILE} --ipFile=${IPFILE} --projectName=${PROJECTNAME}
