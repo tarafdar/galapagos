@@ -1,4 +1,0 @@
-vhdl xil_defaultlib  \
-"../../../../tcp_ip.srcs/sources_1/ip/axi_datamover_0_1/sim/axi_datamover_0.vhd" \
-
-nosort
