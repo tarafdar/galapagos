@@ -20,12 +20,17 @@ struct ap_axis{
 
 
 
-
+ap_uint <32> reverseEndian64_data(ap_uint <32> X) {
+  ap_uint <32> x = X;
+  x = (x & 0x0000FFFF) << 16 | (x & 0xFFFF0000) >> 16;
+  x = (x & 0x00FF00FF) << 8  | (x & 0xFF00FF00) >> 8;
+  return x;
+}
 
 
 void ip_dest_filter(
 	
-        ap_uint<32> ip_table[256],
+        const ap_uint<32> ip_table[256],
         const ap_uint<32> ip_addr,
         hls::stream <ap_axis> * stream_in,
 		hls::stream <ap_axis>  * stream_out_switch,
@@ -53,7 +58,7 @@ void ip_dest_filter(
 	if(!stream_in->empty()){
 		packetIn = stream_in->read();
         ip_addr_in = ip_table[packetIn.dest];
-        inFPGA = (ip_addr == ip_addr_in);
+        inFPGA = (reverseEndian64_data(ip_addr) == ip_addr_in);
 
         if(inFPGA){
         	stream_out_switch->write(packetIn);
