@@ -222,6 +222,7 @@ def readNodeMap(mapFile, macFile, ipAddrFile, allKernels):
             node.mac_addr = macElement.text.replace(" ", "")
         else:
             node.mac_addr = 'ff:ff:ff:ff:ff:ff'
+        print "node mac addr" + node.mac_addr
 
         ipElement = nodeElement.find('ip_addr')
         if ipElement != None:
@@ -319,16 +320,30 @@ def makeIPBRAMFile(projectName, allKernels):
     ipBRAMFile = open('projects/'+ projectName + '/ip.coe', 'w')
     ipBRAMFile.write('memory_initialization_radix=10;\n')
     ipBRAMFile.write('memory_initialization_vector=\n')
-    kernelIndex = 0
     #iterate through kernels in order of tdest, populating the ipaddress at that location
+   
+    maxKernelIndex = 0
     for kernel in allKernels:
-        print "kernel ip address " + kernel.ip_addr 
-        if kernelIndex != (len(allKernels) - 1):
-            print kernel.ip_addr
-            ipBRAMFile.write(str(struct.unpack("!L", socket.inet_aton(kernel.ip_addr))[0]) + ',')
-        else:
-            ipBRAMFile.write(str(struct.unpack("!L", socket.inet_aton(kernel.ip_addr))[0]) + ';')
-        kernelIndex = kernelIndex + 1
+        if kernel.id_num > maxKernelIndex:
+            maxKernelIndex = kernel.id_num
+
+
+    for currIndex in range(0, maxKernelIndex):
+        found = 0
+        for kernel in allKernels:
+            if currIndex == kernel.id_num:
+                found = 1
+                if currIndex != (len(allKernels) - 1):
+                    ipBRAMFile.write(str(struct.unpack("!L", socket.inet_aton(kernel.ip_addr))[0]) + ',')
+                else:
+                    ipBRAMFile.write(str(struct.unpack("!L", socket.inet_aton(kernel.ip_addr))[0]) + ';')
+                break
+        if found == 0:
+           if currIndex != (len(allKernels) - 1):
+               ipBRAMFile.write(str(struct.unpack("!L", socket.inet_aton('1.1.1.1'))[0]) + ',')
+           else:
+               ipBRAMFile.write(str(struct.unpack("!L", socket.inet_aton('1.1.1.1'))[0]) + ';')
+
 
 #make COE to intialize BRAM of all IP addresses
 def makeMACBRAMFile(projectName, allKernels):
@@ -338,13 +353,28 @@ def makeMACBRAMFile(projectName, allKernels):
     macBRAMFile.write('memory_initialization_vector=\n')
     kernelIndex = 0
     #iterate through kernels in order of tdest, populating the ipaddress at that location
+    maxKernelIndex = 0
     for kernel in allKernels:
-        if kernelIndex != (len(allKernels) - 1):
-            macBRAMFile.write(kernel.mac_addr.replace(":","") + ',')
-        else:
-            macBRAMFile.write(kernel.mac_addr.replace(":","") + ';')
-        kernelIndex = kernelIndex + 1
+        if kernel.id_num > maxKernelIndex:
+            maxKernelIndex = kernel.id_num
 
+    for currIndex in range(0, maxKernelIndex):
+        found = 0
+    
+        for kernel in allKernels:
+            if currIndex == kernel.id_num:
+                found = 1
+                if currIndex != (len(allKernels) - 1):
+                    macBRAMFile.write(kernel.mac_addr.replace(":","") + ',')
+                else:
+                    macBRAMFile.write(kernel.mac_addr.replace(":","") + ';')
+                break
+        if found==0:
+            if currIndex != (len(allKernels) - 1):
+                macBRAMFile.write("ffffffffffff" + ',')
+            else:
+                macBRAMFile.write("ffffffffffff" + ';')
+            break
 try:
     opts, args = getopt.getopt(sys.argv[1:],"", ["logicalFile=", "mapFile=", "macFile=", "ipFile=", "projectName="])
 except:
