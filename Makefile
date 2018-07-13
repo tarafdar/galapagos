@@ -27,11 +27,11 @@ ML_USERIPTCLDEBUG=./telepathy/ipPackage/package_top_debug.tcl
 #KMEANS
 KMEANS_USERHLSIP_DIR=./HMPI/mpi_app_benchmarks/HMPI_kmeans
 KMEANS_USERHLSIPTCL=${KMEANS_USERHLSIP_DIR}/generate_hls_ip.tcl
-KMEANS_USERHLSIP_SRCS=${KMEANS_USERHLSIP_DIR}/hls/kmeans.cpp ${KMEANS_USERHLSIP_DIR}/hls/kmeans_0.cpp ./HMPI/HLS_lib/MPI.h
+KMEANS_USERHLSIP_SRCS=${KMEANS_USERHLSIP_DIR}/hls/kmeans.cpp ${KMEANS_USERHLSIP_DIR}/hls/kmeans_1.cpp ./HMPI/HLS_lib/MPI.h
 
 ##input files for middleware
-CONF_DIR = ./telepathy/sw
-#CONF_DIR = ./HMPI/sw_kmeans
+#CONF_DIR = ./telepathy/sw
+CONF_DIR = ./HMPI/sw_kmeans
 #CONF_DIR = ./HMPI/sw_simple
 
 #input files for middleware
