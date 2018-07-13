@@ -4,6 +4,3 @@ open_bd_design ./ML_layer/projects/${proj_name}/${proj_name}_9.srcs/sources_1/bd
 #source ./telepathy/ipPackage/recreate_bd_v1.tcl
 source ./telepathy/ipPackage/recreate_bd_v2_${row_col}.tcl
 
-source ./telepathy/ipPackage/debug.tcl
-
-source ./telepathy/ipPackage/package_ip.tcl
