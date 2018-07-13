@@ -20,7 +20,7 @@ SIMPLE_USERHLSIP_SRCS=${SIMPLE_USERHLSIP_DIR}/hls/simple.cpp ./HMPI/HLS_lib/MPI.
 
 #ML DIRECTORIES
 ML_USERHLSIP_DIR=telepathy/hlsSources
-ML_USERHLSIPTCL=${USERHLSIP_DIR}/generate_hls_ip.tcl
+ML_USERHLSIPTCL=${ML_USERHLSIP_DIR}/generate_hls_ip.tcl
 ML_USERIPTCL=./telepathy/ipPackage/package_top.tcl
 ML_USERIPTCLDEBUG=./telepathy/ipPackage/package_top_debug.tcl
 
@@ -30,9 +30,9 @@ KMEANS_USERHLSIPTCL=${KMEANS_USERHLSIP_DIR}/generate_hls_ip.tcl
 KMEANS_USERHLSIP_SRCS=${KMEANS_USERHLSIP_DIR}/hls/kmeans.cpp ${KMEANS_USERHLSIP_DIR}/hls/kmeans_0.cpp ./HMPI/HLS_lib/MPI.h
 
 ##input files for middleware
-#CONF_DIR = ./telepathy/sw
+CONF_DIR = ./telepathy/sw
 #CONF_DIR = ./HMPI/sw_kmeans
-CONF_DIR = ./HMPI/sw_simple
+#CONF_DIR = ./HMPI/sw_simple
 
 #input files for middleware
 LOGICALFILE=${CONF_DIR}/${CONF}/configuration_files/mpiLogical.xml

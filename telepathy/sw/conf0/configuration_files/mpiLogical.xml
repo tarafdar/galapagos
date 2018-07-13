@@ -16,7 +16,6 @@
         <interface>
             <direction> out </direction>
             <name> stream_out </name>
-            <debug/>
         </interface>
         <mem_interface>
             <name> M_AXI_MEM </name>

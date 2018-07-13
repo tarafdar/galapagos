@@ -8,7 +8,7 @@
     </node>
     <node>
         <appBridge> 
-            <name> application_bridge </name> 
+            <name> communication_bridge_eth_mpi </name> 
             <to_app> to_app_V </to_app>
             <from_app> from_app_V </from_app>
             <to_net> to_net_V </to_net>

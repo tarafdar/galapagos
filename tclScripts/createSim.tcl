@@ -57,36 +57,21 @@ update_ip_catalog -rebuild
 
 # Set 'sources_1' fileset object
 set obj [get_filesets sources_1]
-#set files [list \
-# "[file normalize "shells/$boardName/srcs/shell.bd"]"\
-# "[file normalize "shells/$boardName/srcs/shellTop.v"]"\
-# "[file normalize "shells/$boardName/constraints/custom_parts_2133.csv"]"\
-#]
-#set files [glob shells/$boardName/srcs/*]
-#import_files -norecurse -fileset $obj $files
-#add_files -norecurse -fileset $obj $files
 
-## Set 'sources_1' fileset file properties for remote files
-#set file "projects/$projName/$fpgaNum/$fpgaNum.srcs/sources_1/bd/srcs/shell.bd"
-#set file [file normalize $file]
-#set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
-#if { ![get_property "is_locked" $file_obj] } {
-#  set_property "synth_checkpoint_mode" "Hierarchical" $file_obj
-#}
-
-
-# Set 'sources_1' fileset file properties for local files
-# None
-
-# Set 'sources_1' fileset properties
-#set obj [get_filesets sources_1]
-#set_property "top" "shellTop" $obj
-
+set files [glob shells/$boardName/srcs/top_sim.sv]
+import_files -norecurse -fileset $obj $files
 
 # Set 'sources_1' fileset object
 create_bd_design "pr"
 open_bd_design {projects/$projName/$fpgaNum/$fpgaNum.srcs/sources_1/bd/pr/pr.bd}
 source projects/$projName/$fpgaNum/$fpgaNum.tcl
+validate_bd_design
+
+# Set 'sources_1' fileset object
+create_bd_design "mem"
+open_bd_design {projects/$projName/$fpgaNum/$fpgaNum.srcs/sources_1/bd/mem/mem.bd}
+source ./tclScripts/sim_mem.tcl
+validate_bd_design
 
 # Set 'sources_1' fileset file properties for remote files
 set file "projects/$projName/$fpgaNum/$fpgaNum.srcs/sources_1/bd/pr/pr.bd"
@@ -105,28 +90,6 @@ if {[string equal [get_filesets -quiet constrs_1] ""]} {
   create_fileset -constrset constrs_1
 }
 
-## Set 'constrs_1' fileset object
-#set obj [get_filesets constrs_1]
-#
-## Add/Import constrs file and set constrs file properties
-#
-#set constFiles [glob shells/$boardName/constraints/*.xdc]
-#foreach constFilePath $constFiles { 
-#    set constFile [file tail $constFilePath]
-#    set file "[file normalize "shells/$boardName/constraints/$constFile"]"
-#    set file_imported [import_files -fileset constrs_1 $file]
-#    set file "projects/$projName/$fpgaNum/$fpgaNum.srcs/constrs_1/imports/constraints/$constFile"
-#    set file_obj [get_files -of_objects [get_filesets constrs_1] [list "*$file"]]
-#    set_property "file_type" "XDC" $file_obj
-#    set_property "is_enabled" "1" $file_obj
-#    set_property "is_global_include" "0" $file_obj
-#    set_property "library" "xil_defaultlib" $file_obj
-#    set_property "path_mode" "RelativeFirst" $file_obj
-#    set_property "processing_order" "NORMAL" $file_obj
-#    set_property "scoped_to_cells" "" $file_obj
-#    set_property "scoped_to_ref" "" $file_obj
-#    set_property "used_in" "synthesis implementation" $file_obj
-#}
 
 # Set 'constrs_1' fileset properties
 #set obj [get_filesets constrs_1]
@@ -185,30 +148,15 @@ export_ip_user_files -of_objects [get_files projects/$projName/$fpgaNum/$fpgaNum
 launch_runs -jobs 8 [create_ip_run [get_files -of_objects [get_fileset sources_1] projects/$projName/$fpgaNum/$fpgaNum.srcs/sources_1/bd/pr/pr.bd]]
 set ooc_runs [get_runs -filter {IS_SYNTHESIS && name != "synth_1"} ]
 foreach run $ooc_runs { wait_on_run $run}
-set_property top pr [current_fileset]
+
+generate_target all [get_files  projects/$projName/$fpgaNum/$fpgaNum.srcs/sources_1/bd/mem/mem.bd]
+export_ip_user_files -of_objects [get_files projects/$projName/$fpgaNum/$fpgaNum.srcs/sources_1/bd/mem/mem.bd] -no_script -sync -force -quiet
+launch_runs -jobs 8 [create_ip_run [get_files -of_objects [get_fileset sources_1] projects/$projName/$fpgaNum/$fpgaNum.srcs/sources_1/bd/mem/mem.bd]]
+set ooc_runs [get_runs -filter {IS_SYNTHESIS && name != "synth_1"} ]
+foreach run $ooc_runs { wait_on_run $run}
+
+set_property top top_sim [current_fileset]
 launch_runs synth_1 -jobs 8
 wait_on_run synth_1
 launch_simulation -mode post-synthesis -type functional
-#update_compile_order -fileset sources_1
-#generate_target all [get_files  projects/$projName/$fpgaNum/$fpgaNum.srcs/sources_1/bd/srcs/shell.bd]
-#export_ip_user_files -of_objects [get_files projects/$projName/$fpgaNum/$fpgaNum.srcs/sources_1/bd/srcs/shell.bd] -no_script -sync -force -quiet
-#launch_runs -jobs 8 [create_ip_run [get_files -of_objects [get_fileset sources_1] projects/$projName/$fpgaNum/$fpgaNum.srcs/sources_1/bd/srcs/shell.bd]]
-#set ooc_runs [get_runs -filter {IS_SYNTHESIS && name != "synth_1"} ]
-#foreach run $ooc_runs { wait_on_run $run}
-
-#generate_target all [get_files  projects/$projName/$fpgaNum/$fpgaNum.srcs/sources_1/bd/pr/pr.bd]
-#export_ip_user_files -of_objects [get_files projects/$projName/$fpgaNum/$fpgaNum.srcs/sources_1/bd/pr/pr.bd] -no_script -sync -force -quiet
-#launch_runs -jobs 8 [create_ip_run [get_files -of_objects [get_fileset sources_1] projects/$projName/$fpgaNum/$fpgaNum.srcs/sources_1/bd/pr/pr.bd]]
-#set ooc_runs [get_runs -filter {IS_SYNTHESIS && name != "synth_1"} ]
-#foreach run $ooc_runs { wait_on_run $run}
-
-# set the current impl run
-#current_run -implementation [get_runs impl_1]
-#
-#launch_runs synth_1 -jobs 8
-#wait_on_run synth_1
-#launch_runs impl_1 -to_step write_bitstream -jobs 8
-#wait_on_run impl_1
-##source ./tclScripts/synth_impl.tcl
-#close_project
 
