@@ -2,13 +2,23 @@
 
 
 
-module eth_stimulate(
+module eth_stimulate
+                    (
                      output reg [63:0] data,
                      output reg [7:0] keep, 
                      output reg last,
                      output reg valid,
-                     input ready
+                     input ready,
+                     input [63:0] data_in,
+                     input [7:0] keep_in, 
+                     input last_in,
+                     input valid_in,
+                     output reg ready_in
                     );
+
+
+    parameter [47:0] MAC_ADDR_FPGA = 48'hfa163e55ca02; 
+    parameter [47:0] MAC_ADDR_STIM = 48'h0cc47a88c047; 
     
 
     initial begin
@@ -21,21 +31,35 @@ module eth_stimulate(
          
     end
     
-task ethernet_header(input [63:0] num, input [47:0] src_mac, input [47:0] dst_mac, input [7:0] dest);
+task waitForEthernetHeader();
+    
+    wait_sequence = reverseEndian64_data({MAC_ADDR_STIM, MAC_ADDR_FPGA[47:32]});
+    //wait for the right ethernet header
+    wait(data_in == wait_sequence); 
+    //wait for the right ethernet header
+    wait_sequence = reverseEndian64_data({MAC_ADDR_FPGA[31:0],16'h7400,src_rank,8'hxx}); 
+    wait(data_in == wait_sequence); 
+
+
+endtask
+
+
+task ethernet_header(input [63:0] num, input [7:0] dest);
     //send first flit of ethernet header
-    reverseEndian64_data({dst_mac, src_mac[47:32]});
+    data = reverseEndian64_data({MAC_ADDR_FPGA, MAC_ADDR_STIM[47:32]});
     keep = 8'hff;
     last = 0;
     wait(ready);
     valid = 1;
     #10
-    reverseEndian64_data({src_mac[31:0],dest, 8'd0});
+    data = reverseEndian64_data({MAC_ADDR_STIM[31:0], 16'h7400, dest, 8'd0});
     keep = 8'hff;
     last = 0;
     wait(ready);
     valid = 1;
     #10
-  $display("Transaction %d, Destination MAC: %h, Source MAC %h, dest %h", num, dst_mac, src_mac, dest);
+    valid = 0;
+  $display("Transaction %d, dest %h", num, dest);
 endtask
 
 
@@ -49,22 +73,24 @@ task gen_transaction(input [63:0] num, input [63:0] data_task, input [7:0] keep_
   wait(ready);
   valid = 1;
   #10
+  valid = 0;
   $display("Transaction %d, Data: %h, keep %h, last %b", num, data_task, keep_task, last_task);
   
 endtask
 
 
-task reverseEndian64_data(input [64:0] data_in);
-    data = (data_in & 64'h00000000FFFFFFFF) << 32 | (data_in & 64'hFFFFFFFF00000000) >> 32;
-    data = (data & 64'h0000FFFF0000FFFF) << 16 | (data & 64'hFFFF0000FFFF0000) >> 16;
-    data = (data & 64'h00FF00FF00FF00FF) << 8  | (data & 64'hFF00FF00FF00FF00) >> 8;
+function bit [63:0] reverseEndian64_data (input [63:0] data_task);
+    bit [63:0] temp;
+    temp = (data_task & 64'h00000000FFFFFFFF) << 32 | (data_task & 64'hFFFFFFFF00000000) >> 32;
+    temp = (temp & 64'h0000FFFF0000FFFF) << 16 | (temp & 64'hFFFF0000FFFF0000) >> 16;
+    reverseEndian64_data = (temp & 64'h00FF00FF00FF00FF) << 8  | (temp & 64'hFF00FF00FF00FF00) >> 8;
+endfunction
 
-endtask
-
-task reverseEndian64_keep(input [7:0] keep_in);
-    keep = (keep_in & 8'hF0) >> 4 | (keep_in & 8'h0F) << 4;
-    keep = (keep & 8'hCC) >> 2 | (keep & 8'h33) << 2;
-    keep = (keep & 8'hAA) >> 1 | (keep & 8'h55) << 1;
-endtask
+function bit[7:0] reverseEndian64_keep(input [7:0] keep_task);
+    bit [7:0] temp ;
+    temp = (keep_task & 8'hF0) >> 4 | (keep_task & 8'h0F) << 4;
+    temp = (temp & 8'hCC) >> 2 | (temp & 8'h33) << 2;
+    reverseEndian64_keep = (temp & 8'hAA) >> 1 | (temp & 8'h55) << 1;
+endfunction
 
 endmodule
