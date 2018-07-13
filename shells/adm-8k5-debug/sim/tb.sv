@@ -10,18 +10,18 @@ module testbench();
    
 
     //from stimulus
-    wire [7:0] keep;
-    wire last;
-    wire [63:0] data;
-    wire valid;
-    wire ready;
+    wire [7:0] stream_in_KEEP;
+    wire stream_in_LAST;
+    wire [63:0] stream_in_DATA;
+    wire stream_in_VALID;
+    wire stream_in_READY;
  
    //from dut 
-    wire [7:0] keep_out;
-    wire last_out;
-    wire [63:0] data_out;
-    wire valid_out;
-    wire ready_out;
+    wire [7:0] stream_out_KEEP;
+    wire stream_out_LAST;
+    wire [63:0] stream_out_DATA;
+    wire stream_out_VALID;
+    wire stream_out_READY;
 
     
     always #5 clk = ~clk;
@@ -37,31 +37,31 @@ module testbench();
 
     //choose stimulation
     mpi_eth_stimulate stimulus(
-                            .data(data), 
-                            .keep(keep), 
-                            .last(last), 
-                            .valid(valid), 
-                            .ready(ready),
-                            .data_in(data_out), 
-                            .keep_in(keep_out), 
-                            .last_in(last_out), 
-                            .valid_in(valid_out), 
-                            .ready_in(ready_out)
+                            .stream_out_DATA(stream_in_DATA), 
+                            .stream_out_KEEP(stream_in_KEEP), 
+                            .stream_out_LAST(stream_in_LAST), 
+                            .stream_out_VALID(stream_in_VALID), 
+                            .stream_out_READY(stream_in_READY),
+                            .stream_in_DATA(stream_out_DATA), 
+                            .stream_in_KEEP(stream_out_KEEP), 
+                            .stream_in_LAST(stream_out_LAST), 
+                            .stream_in_VALID(stream_out_VALID), 
+                            .stream_in_READY(stream_out_READY)
                        );
 
    top_sim dut(
     .clk(clk),
     .resetn(resetn),
-    .keep(keep),
-    .last(last),
-    .data(data),
-    .valid(valid),
-    .ready(ready),
-    .keep_out(keep_out),
-    .last_out(last_out),
-    .data_out(data_out),
-    .valid_out(valid_out),
-    .ready_out(ready_out)
+    .keep(stream_in_KEEP),
+    .last(stream_in_LAST),
+    .data(stream_in_DATA),
+    .valid(stream_in_VALID),
+    .ready(stream_in_READY),
+    .keep_out(stream_out_KEEP),
+    .last_out(stream_out_LAST),
+    .data_out(stream_out_DATA),
+    .valid_out(stream_out_VALID),
+    .ready_out(stream_out_READY)
   );
 
 
