@@ -328,7 +328,7 @@ def makeIPBRAMFile(projectName, allKernels):
             maxKernelIndex = kernel.id_num
 
 
-    for currIndex in range(0, maxKernelIndex):
+    for currIndex in range(0, maxKernelIndex + 1):
         found = 0
         for kernel in allKernels:
             if currIndex == kernel.id_num:
@@ -358,7 +358,8 @@ def makeMACBRAMFile(projectName, allKernels):
         if kernel.id_num > maxKernelIndex:
             maxKernelIndex = kernel.id_num
 
-    for currIndex in range(0, maxKernelIndex):
+    print "max kernel index is " + str(maxKernelIndex)
+    for currIndex in range(0, maxKernelIndex + 1):
         found = 0
     
         for kernel in allKernels:
