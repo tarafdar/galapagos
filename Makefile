@@ -12,6 +12,12 @@ DCP = static_routed_v3.dcp
 USERHLSIP_DIR = ./HMPI
 USERHLSIP_SRCS = ./HMPI/HLS_lib/communication_bridge_eth_mpi.cpp ./HMPI/HLS_lib/communication_bridge_tcp_mpi.cpp
 
+
+#SIMPLE HMPI TEST
+SIMPLE_USERHLSIP_DIR=./HMPI/mpi_app_benchmarks/simple
+SIMPLE_USERHLSIPTCL=${SIMPLE_USERHLSIP_DIR}/generate_hls_ip.tcl
+SIMPLE_USERHLSIP_SRCS=${SIMPLE_USERHLSIP_DIR}/hls/simple.cpp ./HMPI/HLS_lib/MPI.h
+
 #ML DIRECTORIES
 ML_USERHLSIP_DIR=telepathy/hlsSources
 ML_USERHLSIPTCL=${USERHLSIP_DIR}/generate_hls_ip.tcl
@@ -25,7 +31,8 @@ KMEANS_USERHLSIP_SRCS=${KMEANS_USERHLSIP_DIR}/hls/kmeans.cpp ${KMEANS_USERHLSIP_
 
 ##input files for middleware
 #CONF_DIR = ./telepathy/sw
-CONF_DIR = ./HMPI/sw_kmeans
+#CONF_DIR = ./HMPI/sw_kmeans
+CONF_DIR = ./HMPI/sw_simple
 
 #input files for middleware
 LOGICALFILE=${CONF_DIR}/${CONF}/configuration_files/mpiLogical.xml
@@ -54,6 +61,10 @@ ml_userIP: userIP $(wildcard ${ML_USERHLSIP_DIR}/*) ${ML_USERHLSIPTCL}
 kmeans_userIP:  ${KMEANS_USERHLSIPTCL} ${KMEANS_USERHLSIP_SRCS}
 	mkdir -p userIP
 	vivado_hls ${KMEANS_USERHLSIPTCL}
+
+simple_userIP:  ${SIMPLE_USERHLSIPTCL} ${SIMPLE_USERHLSIP_SRCS}
+	mkdir -p userIP
+	vivado_hls ${SIMPLE_USERHLSIPTCL}
 
 shell: hlsShell shells/projects/${BOARD}/${DCP}
 
