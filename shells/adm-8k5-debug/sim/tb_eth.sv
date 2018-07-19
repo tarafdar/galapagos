@@ -2,6 +2,18 @@
 
 //import ethernet::*;
 
+typedef struct packed {
+    int data;
+    int keep;
+    int last;
+} flit;
+
+// Struct for packet data (max 23 flits)
+typedef struct packed {
+    flit [22:0] flit_list;
+    int num_flits;
+} packet;
+
 
 module eth_stimulate
                     (
