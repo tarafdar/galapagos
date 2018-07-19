@@ -14,6 +14,27 @@ typedef struct packed {
     int num_flits;
 } packet;
 
+import "DPI-C" function void parseJSON(input string jsonFilePath, inout packet extPacketList[], inout int ver, inout int logToFile);
+
+
+
+initial begin
+    input string jsonFilePath = "../jsonTests/jsonPacketTest_extensive.json";
+    inout packet [63:0] extPacketList;
+    inout int ver = 1'd0;
+    inout int logToFile = 1'd0;
+    parseJSON(jsonFilePath, extPacketList, ver, logToFile);
+end
+
+// Generate transaction for each flit
+initial begin
+    #50
+    for(int i = 0; i < $size(extPacketList); ++i) {
+        for(int j = 0; j < $size(extPacketList[i]); ++j) {
+            gen_transaction(i, extPacketList[i][j].data, extPacketList[i][j].keep, extPacketList[i][j].last);
+        }
+    }
+end
 
 module eth_stimulate
                     (
