@@ -1,0 +1,86 @@
+ {
+   "packets": [
+     {
+       "flits": [
+         {
+           "data": 2000,
+           "keep": 1,
+           "last": 0
+         },
+         {
+           "data": 2111,
+           "keep": 1,
+           "last": 1
+         }
+       ]
+     },
+     {
+       "flits": [
+         {
+           "data": 4000,
+           "keep": 0,
+           "last": 0
+         },
+         {
+           "data": 4111,
+           "keep": 1,
+           "last": 0
+         },
+         {
+           "data": 4222,
+           "keep": 1,
+           "last": 0
+         },
+         {
+           "data": 4333,
+           "keep": 1,
+           "last": 1
+         }
+       ]
+     },
+     {
+       "flits": [
+         {
+           "data": 8000,
+           "keep": 0,
+           "last": 0
+         },
+         {
+           "data": 8111,
+           "keep": 0,
+           "last": 0
+         },
+         {
+           "data": 8222,
+           "keep": 1,
+           "last": 0
+         },
+         {
+           "data": 8333,
+           "keep": 1,
+           "last": 0
+         },
+         {
+           "data": 8444,
+           "keep": 1,
+           "last": 0
+         },
+         {
+           "data": 8555,
+           "keep": 1,
+           "last": 0
+         },
+         {
+           "data": 8666,
+           "keep": 1,
+           "last": 0
+         },
+         {
+           "data": 8777,
+           "keep": 1,
+           "last": 1
+         }
+       ]
+     }
+   ]
+ }

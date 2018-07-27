@@ -4,7 +4,7 @@ task gen_transaction(input [63:0] data, input [7:0] keep, input last);
   stream_out_DATA = data;
   stream_out_KEEP = keep;
   stream_out_LAST = last;
-  wait(stream_out_READY);
+//  wait(stream_out_READY);
   stream_out_VALID = 1;
   #10
   stream_out_VALID = 0;

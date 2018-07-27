@@ -1,0 +1,62 @@
+Packet[0]
+|
+|----Flit[0]
+     |----Data: 2000
+     |----Keep: 1
+     |----Last: 0
+|----Flit[1]
+     |----Data: 2111
+     |----Keep: 1
+     |----Last: 1
+Packet[1]
+|
+|----Flit[0]
+     |----Data: 4000
+     |----Keep: 0
+     |----Last: 0
+|----Flit[1]
+     |----Data: 4111
+     |----Keep: 1
+     |----Last: 0
+|----Flit[2]
+     |----Data: 4222
+     |----Keep: 1
+     |----Last: 0
+|----Flit[3]
+     |----Data: 4333
+     |----Keep: 1
+     |----Last: 1
+Packet[2]
+|
+|----Flit[0]
+     |----Data: 8000
+     |----Keep: 0
+     |----Last: 0
+|----Flit[1]
+     |----Data: 8111
+     |----Keep: 0
+     |----Last: 0
+|----Flit[2]
+     |----Data: 8222
+     |----Keep: 1
+     |----Last: 0
+|----Flit[3]
+     |----Data: 8333
+     |----Keep: 1
+     |----Last: 0
+|----Flit[4]
+     |----Data: 8444
+     |----Keep: 1
+     |----Last: 0
+|----Flit[5]
+     |----Data: 8555
+     |----Keep: 1
+     |----Last: 0
+|----Flit[6]
+     |----Data: 8666
+     |----Keep: 1
+     |----Last: 0
+|----Flit[7]
+     |----Data: 8777
+     |----Keep: 1
+     |----Last: 1
