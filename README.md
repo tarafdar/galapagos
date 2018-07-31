@@ -56,7 +56,7 @@ The cluster is described in a LOGICALFILE with no notion of the mappings.
 The following is an example kernel from the logical file:
 ```
  <kernel> kernelName
-		    <num> 1 </num>
+	<num> 1 </num>
         <rep> 1 </rep>
         <clk> nameOfClockPort </clk>
         <id_port> nameOfIDport </id_port>
@@ -97,11 +97,11 @@ The following is an example kernel from the map file:
 ```
 <node>
         <appBridge> 
-            <name> application_bridge </name> 
-            <to_app> to_app_V </to_app>
-            <from_app> from_app_V </from_app>
-            <to_net> to_net_V </to_net>
-            <from_net> from_net_V </from_net>
+            <name> applicationBridge_name </name> 
+            <to_app> portName_to_app </to_app>
+            <from_app> portName_from_app </from_app>
+            <to_net> portName_to_net </to_net>
+            <from_net> portName_from_net </from_net>
         </appBridge>
         <board> adm-8k5-debug </board>
         <comm> eth </comm>
