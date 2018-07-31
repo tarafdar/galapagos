@@ -258,8 +258,12 @@ def userApplicationRegion_assign_addresses(tcl_user_app, fpga, shared):
         instName = kernel.name + "_inst_" + str(kernel.id_num)
         for mem_interface in kernel.mem_interfaces:
             tcl_user_app.write('assign_bd_address [get_bd_addr_segs {S_AXI_MEM_0/Reg }]\n')
-            tcl_user_app.write('set_property offset 0x00000000 [get_bd_addr_segs {applicationRegion/' + instName + '/' + mem_interface  +'/SEG_S_AXI_MEM_0_Reg}]\n')
-            tcl_user_app.write('set_property range 4G [get_bd_addr_segs {applicationRegion/' + instName + '/' + mem_interface +  '/SEG_S_AXI_MEM_0_Reg}]\n')
+            if(kernel.ip_type == 'hls'):
+                tcl_user_app.write('set_property offset 0x00000000 [get_bd_addr_segs {applicationRegion/' + instName + '/Data_' + mem_interface  +'/SEG_S_AXI_MEM_0_Reg}]\n')
+                tcl_user_app.write('set_property range 4G [get_bd_addr_segs {applicationRegion/' + instName + '/Data_' + mem_interface +  '/SEG_S_AXI_MEM_0_Reg}]\n')
+            else:
+                tcl_user_app.write('set_property offset 0x00000000 [get_bd_addr_segs {applicationRegion/' + instName + '/' + mem_interface  +'/SEG_S_AXI_MEM_0_Reg}]\n')
+                tcl_user_app.write('set_property range 4G [get_bd_addr_segs {applicationRegion/' + instName + '/' + mem_interface +  '/SEG_S_AXI_MEM_0_Reg}]\n')
             if shared:
                 tcl_user_app.write('assign_bd_address [get_bd_addr_segs {S_AXI_MEM_1/Reg }]\n')
                 tcl_user_app.write('set_property offset 0x100000000 [get_bd_addr_segs {applicationRegion/' + instName + '/' + mem_interface + '/SEG_S_AXI_MEM_1_Reg}]\n')
