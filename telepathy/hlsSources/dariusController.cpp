@@ -46,7 +46,6 @@ void dariusController(
     static int data_mem_info[MEM_INFO_SIZE]; //{offset in offchip memory to dma_in, size to dma_in, offset in offchip memory to dma_out, size to dma_out} 
     static int darius_info[DARIUS_INFO_SIZE]; //{num_commands, command, batch_size, num_ranks} 
     static int cumulative_cycle_count[1];
-    static 
     static float parameter_mem_info_float[PARAMETER_MEM_INFO_SIZE]; //{offset in offchip memory to dma_in, size to dma_in} 
     static float data_mem_info_float[MEM_INFO_SIZE]; //{offset in offchip memory to dma_in, size to dma_in, offset in offchip memory to dma_out, size to dma_out} 
     static float darius_info_float[DARIUS_INFO_SIZE]; //{num_commands, command, batch_size, num_ranks} 
@@ -89,12 +88,12 @@ void dariusController(
             if(rank<=batch_size)
                 prev_rank = 0;
             else
-                prev_rank = rank -1;
+                prev_rank = rank - batch_size;
 
             if(rank>(num_ranks - batch_size))
                 next_rank = 0;
             else
-                next_rank = rank + 1;
+                next_rank = rank + batch_size;
             state = DMA_IN;
             break;
 
