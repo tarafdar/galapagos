@@ -17,12 +17,14 @@ connect_bd_net [get_bd_pins network/tcp_ip_inst/ipAddressIn] [get_bd_pins networ
 connect_bd_net [get_bd_pins network/tcp_ip_inst/gatewayIn] [get_bd_pins network/ip_constant_block_inst/gateway]
 connect_bd_net [get_bd_pins network/tcp_ip_inst/subnetIn] [get_bd_pins network/ip_constant_block_inst/subnet]
 connect_bd_net [get_bd_pins network/tcp_ip_inst/macAddressIn] [get_bd_pins network/ip_constant_block_inst/mac]
-create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 network/xlconstant_enable
+#create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 network/xlconstant_enable
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant network/xlconstant_enable
 connect_bd_net [get_bd_pins network/tcp_ip_inst/configInEn] [get_bd_pins network/xlconstant_enable/dout]
 
 set_property -dict [list CONFIG.UDP_ENABLE {false}] [get_bd_cells network/tcp_ip_inst]
 #coe location
-create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen:8.4 network/blk_mem_bridge_rom
+#create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen:8.4 network/blk_mem_bridge_rom
+create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen network/blk_mem_bridge_rom
 set_property -dict [list CONFIG.Memory_Type {Dual_Port_ROM} CONFIG.Enable_32bit_Address {true} CONFIG.Use_Byte_Write_Enable {false} CONFIG.Byte_Size {8} CONFIG.Write_Depth_A {256} CONFIG.Enable_B {Use_ENB_Pin} CONFIG.Register_PortA_Output_of_Memory_Primitives {false} CONFIG.Register_PortB_Output_of_Memory_Primitives {false} CONFIG.Use_RSTA_Pin {true} CONFIG.Use_RSTB_Pin {true} CONFIG.Port_A_Write_Rate {0} CONFIG.Port_B_Clock {100} CONFIG.Port_B_Enable_Rate {100} CONFIG.use_bram_block {BRAM_Controller} CONFIG.EN_SAFETY_CKT {true} CONFIG.Load_Init_File {true} CONFIG.Coe_File {../../../../../../../ip.coe}] [get_bd_cells network/blk_mem_bridge_rom]
 #set_property -dict [list CONFIG.Memory_Type {Dual_Port_ROM} CONFIG.Use_Byte_Write_Enable {false} CONFIG.Port_A_Write_Rate {0} CONFIG.Port_B_Write_Rate {0}] [get_bd_cells network/blk_mem_bridge_rom]
 
@@ -48,7 +50,8 @@ connect_bd_intf_net [get_bd_intf_ports M_AXIS] [get_bd_intf_pins network/tcp_ip_
 connect_bd_intf_net [get_bd_intf_ports S_AXIS] [get_bd_intf_pins network/tcp_ip_inst/AXI_S_Stream]
 
 
-create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 network/axi_interconnect_tcp_mem
+#create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 network/axi_interconnect_tcp_mem
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect network/axi_interconnect_tcp_mem
 set_property -dict [list CONFIG.NUM_MI {1}] [get_bd_cells network/axi_interconnect_tcp_mem]
 connect_bd_net [get_bd_ports CLK] [get_bd_pins network/axi_interconnect_tcp_mem/ACLK]
 connect_bd_net [get_bd_ports CLK] [get_bd_pins network/axi_interconnect_tcp_mem/S00_ACLK]

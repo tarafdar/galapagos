@@ -58,7 +58,7 @@ update_ip_catalog -rebuild
 # Set 'sources_1' fileset object
 set obj [get_filesets sources_1]
 
-set files [glob shells/$boardName/srcs/top_sim.sv]
+set files [glob shells/$boardName/srcs/top_sim.v]
 import_files -norecurse -fileset $obj $files
 
 # Set 'sources_1' fileset object
@@ -78,9 +78,15 @@ set file "projects/$projName/$fpgaNum/$fpgaNum.srcs/sources_1/bd/pr/pr.bd"
 set file [file normalize $file]
 set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
 if { ![get_property "is_locked" $file_obj] } {
-  set_property "synth_checkpoint_mode" "Hierarchical" $file_obj
+  set_property "synth_checkpoint_mode" "None" $file_obj
 }
 
+set file "projects/$projName/$fpgaNum/$fpgaNum.srcs/sources_1/bd/mem/mem.bd"
+set file [file normalize $file]
+set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
+if { ![get_property "is_locked" $file_obj] } {
+  set_property "synth_checkpoint_mode" "None" $file_obj
+}
 
 # Set 'sources_1' fileset file properties for local files
 # None
@@ -143,19 +149,20 @@ set_property "steps.write_bitstream.args.verbose" "0" $obj
 
 puts "INFO: Project created:$projName"
 
-generate_target all [get_files  projects/$projName/$fpgaNum/$fpgaNum.srcs/sources_1/bd/pr/pr.bd]
-export_ip_user_files -of_objects [get_files projects/$projName/$fpgaNum/$fpgaNum.srcs/sources_1/bd/pr/pr.bd] -no_script -sync -force -quiet
-launch_runs -jobs 8 [create_ip_run [get_files -of_objects [get_fileset sources_1] projects/$projName/$fpgaNum/$fpgaNum.srcs/sources_1/bd/pr/pr.bd]]
-set ooc_runs [get_runs -filter {IS_SYNTHESIS && name != "synth_1"} ]
-foreach run $ooc_runs { wait_on_run $run}
-
-generate_target all [get_files  projects/$projName/$fpgaNum/$fpgaNum.srcs/sources_1/bd/mem/mem.bd]
-export_ip_user_files -of_objects [get_files projects/$projName/$fpgaNum/$fpgaNum.srcs/sources_1/bd/mem/mem.bd] -no_script -sync -force -quiet
-launch_runs -jobs 8 [create_ip_run [get_files -of_objects [get_fileset sources_1] projects/$projName/$fpgaNum/$fpgaNum.srcs/sources_1/bd/mem/mem.bd]]
-set ooc_runs [get_runs -filter {IS_SYNTHESIS && name != "synth_1"} ]
-foreach run $ooc_runs { wait_on_run $run}
+#generate_target all [get_files  projects/$projName/$fpgaNum/$fpgaNum.srcs/sources_1/bd/pr/pr.bd]
+#export_ip_user_files -of_objects [get_files projects/$projName/$fpgaNum/$fpgaNum.srcs/sources_1/bd/pr/pr.bd] -no_script -sync -force -quiet
+#launch_runs -jobs 8 [create_ip_run [get_files -of_objects [get_fileset sources_1] projects/$projName/$fpgaNum/$fpgaNum.srcs/sources_1/bd/pr/pr.bd]]
+#set ooc_runs [get_runs -filter {IS_SYNTHESIS && name != "synth_1"} ]
+#foreach run $ooc_runs { wait_on_run $run}
+#
+#generate_target all [get_files  projects/$projName/$fpgaNum/$fpgaNum.srcs/sources_1/bd/mem/mem.bd]
+#export_ip_user_files -of_objects [get_files projects/$projName/$fpgaNum/$fpgaNum.srcs/sources_1/bd/mem/mem.bd] -no_script -sync -force -quiet
+#launch_runs -jobs 8 [create_ip_run [get_files -of_objects [get_fileset sources_1] projects/$projName/$fpgaNum/$fpgaNum.srcs/sources_1/bd/mem/mem.bd]]
+#set ooc_runs [get_runs -filter {IS_SYNTHESIS && name != "synth_1"} ]
+#foreach run $ooc_runs { wait_on_run $run}
 
 set_property top top_sim [current_fileset]
+set_property STEPS.SYNTH_DESIGN.ARGS.FLATTEN_HIERARCHY none [get_runs synth_1]
 launch_runs synth_1 -jobs 8
 wait_on_run synth_1
 launch_simulation -mode post-synthesis -type functional

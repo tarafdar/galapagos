@@ -66,8 +66,13 @@ set files [glob shells/$boardName/srcs/*]
 import_files -norecurse -fileset $obj $files
 #add_files -norecurse -fileset $obj $files
 
+create_bd_design "shell"
+open_bd_design {projects/$projName/$fpgaNum/$fpgaNum.srcs/sources_1/bd/shell/shell.bd}
+source ./tclScripts/shell_bd.tcl
+
 # Set 'sources_1' fileset file properties for remote files
-set file "projects/$projName/$fpgaNum/$fpgaNum.srcs/sources_1/bd/srcs/shell.bd"
+#set file "projects/$projName/$fpgaNum/$fpgaNum.srcs/sources_1/bd/srcs/shell.bd"
+set file "projects/$projName/$fpgaNum/$fpgaNum.srcs/sources_1/bd/shell/shell.bd"
 set file [file normalize $file]
 set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
 if { ![get_property "is_locked" $file_obj] } {
@@ -180,9 +185,12 @@ set_property "steps.write_bitstream.args.verbose" "0" $obj
 puts "INFO: Project created:$projName"
 
 update_compile_order -fileset sources_1
-generate_target all [get_files  projects/$projName/$fpgaNum/$fpgaNum.srcs/sources_1/bd/srcs/shell.bd]
-export_ip_user_files -of_objects [get_files projects/$projName/$fpgaNum/$fpgaNum.srcs/sources_1/bd/srcs/shell.bd] -no_script -sync -force -quiet
-launch_runs -jobs 8 [create_ip_run [get_files -of_objects [get_fileset sources_1] projects/$projName/$fpgaNum/$fpgaNum.srcs/sources_1/bd/srcs/shell.bd]]
+#generate_target all [get_files  projects/$projName/$fpgaNum/$fpgaNum.srcs/sources_1/bd/srcs/shell.bd]
+#export_ip_user_files -of_objects [get_files projects/$projName/$fpgaNum/$fpgaNum.srcs/sources_1/bd/srcs/shell.bd] -no_script -sync -force -quiet
+generate_target all [get_files  projects/$projName/$fpgaNum/$fpgaNum.srcs/sources_1/bd/shell/shell.bd]
+export_ip_user_files -of_objects [get_files projects/$projName/$fpgaNum/$fpgaNum.srcs/sources_1/bd/shell/shell.bd] -no_script -sync -force -quiet
+#launch_runs -jobs 8 [create_ip_run [get_files -of_objects [get_fileset sources_1] projects/$projName/$fpgaNum/$fpgaNum.srcs/sources_1/bd/srcs/shell.bd]]
+launch_runs -jobs 8 [create_ip_run [get_files -of_objects [get_fileset sources_1] projects/$projName/$fpgaNum/$fpgaNum.srcs/sources_1/bd/shell/shell.bd]]
 set ooc_runs [get_runs -filter {IS_SYNTHESIS && name != "synth_1"} ]
 foreach run $ooc_runs { wait_on_run $run}
 

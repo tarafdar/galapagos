@@ -11,7 +11,8 @@ import os
 
 def userApplicationRegion_control_inst(tcl_user_app, num_ctrl_interfaces):
     #initialize axi_control_interface interconnect slave side (1 slave)
-    tcl_user_app.write('create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 applicationRegion/axi_interconnect_control\n')
+    #tcl_user_app.write('create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 applicationRegion/axi_interconnect_control\n')
+    tcl_user_app.write('create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect applicationRegion/axi_interconnect_control\n')
     tcl_user_app.write('connect_bd_intf_net [get_bd_intf_ports S_AXI_CONTROL] -boundary_type upper [get_bd_intf_pins applicationRegion/axi_interconnect_control/S00_AXI]\n')
     tcl_user_app.write('connect_bd_net [get_bd_ports CLK] [get_bd_pins applicationRegion/axi_interconnect_control/ACLK]\n')
     tcl_user_app.write('connect_bd_net [get_bd_ports ARESETN] [get_bd_pins applicationRegion/axi_interconnect_control/ARESETN]\n')
@@ -34,7 +35,8 @@ def userApplicationRegion_mem_inst(tcl_user_app, num_mem_interfaces, num_ctrl_in
             tcl_user_app.write('set mem_master_ports 2\n')
         else:
             tcl_user_app.write('set mem_master_ports 1\n')
-        tcl_user_app.write('create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 applicationRegion/axi_interconnect_mem\n')
+        #tcl_user_app.write('create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 applicationRegion/axi_interconnect_mem\n')
+        tcl_user_app.write('create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect applicationRegion/axi_interconnect_mem\n')
         tcl_user_app.write('set_property -dict [list CONFIG.NUM_SI ${mem_ports} CONFIG.NUM_MI ${mem_master_ports}] [get_bd_cells applicationRegion/axi_interconnect_mem]\n')
         tcl_user_app.write('connect_bd_net [get_bd_ports CLK] [get_bd_pins applicationRegion/axi_interconnect_mem/ACLK]\n')
         tcl_user_app.write('connect_bd_net [get_bd_ports CLK] [get_bd_pins applicationRegion/axi_interconnect_mem/M00_ACLK]\n')
@@ -93,13 +95,15 @@ def userApplicationRegion_inst_kernels_count_interfaces(tcl_user_app, fpga):
         tcl_user_app.write('connect_bd_net [get_bd_ports ARESETN] [get_bd_pins applicationRegion/' + instName  + '/' + kernel.aresetn + ']\n')
         #instantiate and connect constant for id
         if (kernel.id_port != ''):
-            tcl_user_app.write('create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 applicationRegion/id_' + str(kernel.id_num) + '\n')
+            #tcl_user_app.write('create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 applicationRegion/id_' + str(kernel.id_num) + '\n')
+            tcl_user_app.write('create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant applicationRegion/id_' + str(kernel.id_num) + '\n')
             tcl_user_app.write('set_property -dict [list CONFIG.CONST_WIDTH {32}] [get_bd_cells applicationRegion/id_' + str(kernel.id_num) + ']\n')
             tcl_user_app.write('set_property -dict [list CONFIG.CONST_VAL {' + str(kernel.id_num) + '}] [get_bd_cells applicationRegion/id_' + str(kernel.id_num) + ']\n')
             tcl_user_app.write('connect_bd_net [get_bd_pins applicationRegion/id_' + str(kernel.id_num) + '/dout] [get_bd_pins applicationRegion/' + instName + '/' + kernel.id_port + ']\n')
    
         for constant in kernel.constants:
-            tcl_user_app.write('create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 applicationRegion/' + instName + '_' + constant.name + '\n')
+            #tcl_user_app.write('create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 applicationRegion/' + instName + '_' + constant.name + '\n')
+            tcl_user_app.write('create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant applicationRegion/' + instName + '_' + constant.name + '\n')
             tcl_user_app.write('set_property -dict [list CONFIG.CONST_WIDTH {' + constant.width + '}] [get_bd_cells applicationRegion/' + instName + '_' + constant.name + ']\n')
             tcl_user_app.write('set_property -dict [list CONFIG.CONST_VAL {' + constant.val + '}] [get_bd_cells applicationRegion/' + instName + '_' + constant.name + ']\n')
             tcl_user_app.write('connect_bd_net [get_bd_pins applicationRegion/' + instName + '_' + constant.name + '/dout] [get_bd_pins applicationRegion/' + instName + '/' + constant.name + ']\n')
@@ -110,7 +114,8 @@ def userApplicationRegion_inst_kernels_count_interfaces(tcl_user_app, fpga):
 
 
 def userApplicationRegion_create_switches(tcl_user_app, fpga):
-    tcl_user_app.write('create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen:8.4 applicationRegion/blk_mem_switch_rom\n')
+    #tcl_user_app.write('create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen:8.4 applicationRegion/blk_mem_switch_rom\n')
+    tcl_user_app.write('create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen applicationRegion/blk_mem_switch_rom\n')
     
     if fpga.comm == 'tcp':
         tcl_user_app.write('create_bd_cell -type ip -vlnv xilinx.com:hls:ip_dest_filter:1.0 applicationRegion/custom_switch_inst\n')
@@ -195,7 +200,8 @@ def add_debug_interfaces(outDir, num_debug_interfaces, fpga):
 
     #adding ILA ports
     if num_debug_interfaces > 0:
-        tcl_debug_app.write('create_bd_cell -type ip -vlnv xilinx.com:ip:system_ila:1.1 system_ila_streams\n')
+        #tcl_debug_app.write('create_bd_cell -type ip -vlnv xilinx.com:ip:system_ila:1.1 system_ila_streams\n')
+        tcl_debug_app.write('create_bd_cell -type ip -vlnv xilinx.com:ip:system_ila system_ila_streams\n')
 
         tcl_debug_app.write('set_property -dict [list CONFIG.C_BRAM_CNT {6} CONFIG.C_NUM_MONITOR_SLOTS {'+ str(num_debug_interfaces + 8) + '} CONFIG.ALL_PROBE_SAME_MU {true} ')
         for debug_interface_index in range(0, num_debug_interfaces + 7):
@@ -303,7 +309,8 @@ def net_bridge_constants(tcl_net, fpga):
     tcl_net.write('set subnet_b1 ' + '255\n') 
     tcl_net.write('set subnet_b0 ' + '0\n') 
     tcl_net.write('set mac ' + '0x' + fpga.mac_addr.replace(":","") + '\n')
-    tcl_net.write('create_bd_cell -type ip -vlnv user.org:user:ip_constant_block:1.0 network/ip_constant_block_inst\n')
+    #tcl_net.write('create_bd_cell -type ip -vlnv user.org:user:ip_constant_block:1.0 network/ip_constant_block_inst\n')
+    tcl_net.write('create_bd_cell -type ip -vlnv user.org:user:ip_constant_block network/ip_constant_block_inst\n')
     tcl_net.write('set_property -dict [list CONFIG.C_IP_B0 ${ip_b0} CONFIG.C_IP_B1 ${ip_b1} CONFIG.C_IP_B2 ${ip_b2} CONFIG.C_IP_B3 ${ip_b3} CONFIG.C_GATEWAY_B0 ${ip_gateway_b0} CONFIG.C_GATEWAY_B1 ${ip_gateway_b1} CONFIG.C_GATEWAY_B2 ${ip_gateway_b2} CONFIG.C_GATEWAY_B3 ${ip_gateway_b3} CONFIG.C_SUBNET_B0 ${subnet_b0} CONFIG.C_SUBNET_B1 ${subnet_b1} CONFIG.C_SUBNET_B2 ${subnet_b2} CONFIG.C_SUBNET_B3 ${subnet_b3} CONFIG.C_MAC ${mac}] [get_bd_cells network/ip_constant_block_inst]\n')
 
     if fpga.comm == 'tcp':

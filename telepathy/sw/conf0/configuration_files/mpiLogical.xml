@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cluster>
-    <kernel> dariusMPI_debug_8x8
+    <kernel> dariusMPI_8x8
         <vendor> galapagos.org </vendor>
         <version> 1.0 </version>
         <type> galapagos </type>

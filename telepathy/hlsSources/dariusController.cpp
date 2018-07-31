@@ -68,6 +68,8 @@ void dariusController(
             while(!MPI_Recv(parameter_mem_info_float, PARAMETER_MEM_INFO_SIZE, MPI_FLOAT, 0,0/*not used*/,MPI_COMM_WORLD/*not used*/));
             for(int i=0; i< PARAMETER_MEM_INFO_SIZE; i++)
                 parameter_mem_info[i] = (int) parameter_mem_info_float[i];
+            darius_driver[0] = 0; // num_commands
+            mem[0] = 0; // num_commands
 
             //dma in parameters
             while(!MPI_Recv(mem + parameter_mem_info[0]/sizeof(int), parameter_mem_info[1]/sizeof(int), MPI_FLOAT, 0,0/*not used*/,MPI_COMM_WORLD/*not used*/));
