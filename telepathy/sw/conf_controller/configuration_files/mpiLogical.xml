@@ -2,7 +2,7 @@
 <cluster>
     <kernel> dariusController
 		<num> 1 </num>
-        <rep> 2 </rep>
+        <rep> 1 </rep>
         <clk> aclk </clk>
         <id_port> id_in_V </id_port>
         <aresetn> aresetn </aresetn>

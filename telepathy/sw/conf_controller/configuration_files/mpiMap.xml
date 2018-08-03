@@ -3,7 +3,7 @@
     <node>
         <type> sw </type>
         <kernel> 0 </kernel>
-        <mac_addr>  fa:16:3e:55:ca:01 </mac_addr>
+        <mac_addr>  0c:c4:7a:88:c0:47 </mac_addr>
         <ip_addr> 10.1.2.101 </ip_addr>
     </node>
     <node>
@@ -18,7 +18,6 @@
         <comm> eth </comm>
         <type> hw </type>
         <kernel> 1 </kernel>
-        <kernel> 2 </kernel>
         <mac_addr>  fa:16:3e:55:ca:02 </mac_addr>
         <ip_addr> 10.1.2.102 </ip_addr>
     </node>
