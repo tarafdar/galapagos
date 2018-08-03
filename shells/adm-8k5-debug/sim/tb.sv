@@ -29,14 +29,16 @@ module testbench();
     
     
     initial begin
+        resetn = 0;
         clk = 0;
-        #5 resetn = 1;
+        #30 resetn = 1;
     end
     
 
 
     //choose stimulation
     mpi_eth_stimulate stimulus(
+                            .clk(clk),
                             .stream_out_DATA(stream_in_DATA), 
                             .stream_out_KEEP(stream_in_KEEP), 
                             .stream_out_LAST(stream_in_LAST), 

@@ -1,17 +1,3 @@
-task gen_transaction(input [63:0] data, input [7:0] keep, input last);
-
-  
-  stream_out_DATA = data;
-  stream_out_KEEP = keep;
-  stream_out_LAST = last;
-  wait(stream_out_READY);
-  stream_out_VALID = 1;
-  #10
-  stream_out_VALID = 0;
-  $display("Data: %h, keep %h, last %b",  data, keep, last);
-  
-endtask
-
 
 function bit [63:0] reverseEndian64_data (input [63:0] data);
     bit [63:0] temp;
