@@ -106,7 +106,8 @@ createFPGA: ${LOGICALFILE} ${MAPFILE}
 	chmod +x simCluster.sh
 	vivado -mode batch -source tclScripts/createFlatten.tcl -tclargs adm-8k5-debug ${PROJECTNAME} ${ARGS}
 
-
+example_shell:  
+	vivado -mode gui -source ./tclScripts/makeExampleShell.tcl -tclargs adm-8k5-debug ${PROJECTNAME}
 
 
 clean:
