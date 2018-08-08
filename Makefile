@@ -42,6 +42,8 @@ BOARD = adm-8k5
 PART = xcku115-flva1517-2-e
 FPGANUM= 1
 
+
+
 all: userIP hlsMiddleware kmeans_userIP createCluster   
 
 

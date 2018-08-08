@@ -68,8 +68,8 @@ module mpi_eth_stimulate
         stream_in_READY = 1;
         #50
         trans_num = 64'd10;
-        dst_rank = 16'd0;
-        src_rank = 8'd1;
+        dst_rank = 16'd1;
+        src_rank = 8'd0;
         size = 16'd2;
     
         stream.mpi_send_header(
