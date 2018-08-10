@@ -8,6 +8,20 @@ DCP = static_routed_v3.dcp
 
 #make userIP
 
+ifndef $(BOARD)
+BOARD = adm-8k5
+endif
+ifndef $(PART)
+PART = xcku115-flva1517-2-e
+endif
+ifndef $(FPGANUM)
+FPGANUM= 1
+endif
+
+BOARDNAME = $(BOARD)
+ifdef $(DEBUG)
+BOARDNAME += -debug
+endif
 
 USERHLSIP_DIR = ./HMPI
 USERHLSIP_SRCS = ./HMPI/HLS_lib/communication_bridge_eth_mpi.cpp ./HMPI/HLS_lib/communication_bridge_tcp_mpi.cpp
@@ -38,9 +52,8 @@ CONF_DIR = ./HMPI/sw_kmeans
 LOGICALFILE=${CONF_DIR}/${CONF}/configuration_files/mpiLogical.xml
 MAPFILE=${CONF_DIR}/${CONF}/configuration_files/mpiMap.xml
 
-BOARD = adm-8k5
-PART = xcku115-flva1517-2-e
-FPGANUM= 1
+
+
 
 all: userIP hlsMiddleware kmeans_userIP createCluster   
 
@@ -96,7 +109,7 @@ simFPGA: ${LOGICALFILE} ${MAPFILE}
 	mkdir -p projects/${PROJECTNAME}
 	python hwMiddleware/packetSwitch/globalFPGAParser.py --logicalFile=${LOGICALFILE} --macFile=${MACFILE} --mapFile=${MAPFILE} --ipFile=${IPFILE} --projectName=${PROJECTNAME}
 	chmod +x simCluster.sh
-	vivado -mode gui -source tclScripts/createSim.tcl -tclargs adm-8k5-debug ${PROJECTNAME} ${ARGS}
+	vivado -mode gui -source tclScripts/createSim.tcl -tclargs $(BOARDNAME) ${PROJECTNAME} ${ARGS}
 
 
 createFPGA: ${LOGICALFILE} ${MAPFILE} 
@@ -104,10 +117,10 @@ createFPGA: ${LOGICALFILE} ${MAPFILE}
 	mkdir -p projects/${PROJECTNAME}
 	python hwMiddleware/packetSwitch/globalFPGAParser.py --logicalFile=${LOGICALFILE} --macFile=${MACFILE} --mapFile=${MAPFILE} --ipFile=${IPFILE} --projectName=${PROJECTNAME}
 	chmod +x simCluster.sh
-	vivado -mode batch -source tclScripts/createFlatten.tcl -tclargs adm-8k5-debug ${PROJECTNAME} ${ARGS}
+	vivado -mode batch -source tclScripts/createFlatten.tcl -tclargs $(BOARDNAME) ${PROJECTNAME} ${ARGS}
 
 example_shell:  
-	vivado -mode gui -source ./tclScripts/makeExampleShell.tcl -tclargs adm-8k5-debug ${PROJECTNAME} 
+	vivado -mode gui -source ./tclScripts/makeExampleShell.tcl -tclargs $(BOARDNAME) ${PROJECTNAME} 
 
 
 clean:

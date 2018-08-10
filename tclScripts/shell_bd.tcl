@@ -1,3 +1,8 @@
+source ./tclScripts/utils.tcl
+
+set boardName [lindex $argv 0]
+set partName [lindex $argv 1]
+puts "shell_bd.tcl boardName: $boardName partName: $partName"
 
 ################################################################
 # This is a generated script based on design: shell
@@ -122,29 +127,9 @@ set bCheckIPsPassed 1
 ##################################################################
 set bCheckIPs 1
 if { $bCheckIPs == 1 } {
-   set list_check_ips "\ 
-xilinx.com:ip:axi_bram_ctrl:4.0\
-xilinx.com:ip:axi_gpio:2.0\
-xilinx.com:ip:blk_mem_gen:8.4\
-xilinx.com:ip:clk_wiz:6.0\
-xilinx.com:ip:xlconstant:1.1\
-xilinx.com:ip:system_ila:1.1\
-xilinx.com:ip:util_vector_logic:2.0\
-xilinx.com:ip:vio:3.0\
-xilinx.com:ip:util_ds_buf:2.1\
-xilinx.com:ip:xdma:4.1\
-xilinx.com:ip:mdm:3.2\
-xilinx.com:ip:microblaze:10.0\
-xilinx.com:ip:proc_sys_reset:5.0\
-xilinx.com:ip:ddr4:2.2\
-xilinx.com:ip:axi_10g_ethernet:3.1\
-dlyma.org:dlyma:network_packet_fifo_rx:1.1\
-dlyma.org:dlyma:network_packet_fifo_tx:1.1\
-xilinx.com:ip:axis_register_slice:1.1\
-xilinx.com:ip:lmb_bram_if_cntlr:4.0\
-xilinx.com:ip:lmb_v10:3.0\
-"
-
+  ######### MOVE THIS TO A BOARD SPECIFIC LIST THAT IS IMPORTED BASED ON PART NAME ####################
+  set list_check_ips [get_ips_from_board_name $boardName]
+  common::send_msg_id "BD_TCL-999" "INFO" "list_check_ips: $list_check_ips"
    set list_ips_missing ""
    common::send_msg_id "BD_TCL-006" "INFO" "Checking if the following IPs exist in the project's IP catalog: $list_check_ips ."
 
@@ -311,7 +296,9 @@ proc create_hier_cell_network { parentCell nameHier } {
   create_bd_pin -dir O txp
 
   # Create instance: axi_10g_ethernet_0, and set properties
-  set axi_10g_ethernet_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_10g_ethernet axi_10g_ethernet_0 ]
+  set ETHERNET_IP_NAME [get_ip_from_component_and_board_name "ethernet" $boardName]
+  puts "ETHERNET_IP_NAME $ETHERNET_IP_NAME"
+  set axi_10g_ethernet_0 [ create_bd_cell -type ip -vlnv [get_ip_from_component_and_board_name "ethernet" $boardName] axi_10g_ethernet_0 ]
   set_property -dict [ list \
    CONFIG.Locations {X1Y12} \
    CONFIG.Management_Interface {false} \

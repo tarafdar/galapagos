@@ -1,3 +1,5 @@
+source ./tclScripts/utils.tcl
+
 set boardName [lindex $argv 0]
 set projName [lindex $argv 1]
 set fpgaNum [lindex $argv 2]
@@ -6,12 +8,7 @@ puts $boardName
 puts $projName
 puts $fpgaNum
 
-
-if {$boardName eq "adm-8k5"} {
-    set partName xcku115-flva1517-2-e
-} elseif {$boardName eq "adm-8k5-debug"} {
-    set partName xcku115-flva1517-2-e
-}
+set partName [get_part_name_from_board_name $boardName]
 
 # Set the directory path for the original project from where this script was exported
 set orig_proj_dir "[file normalize "projects/$projName"]"
@@ -68,7 +65,8 @@ import_files -norecurse -fileset $obj $files
 
 create_bd_design "shell"
 open_bd_design {projects/$projName/$fpgaNum/$fpgaNum.srcs/sources_1/bd/shell/shell.bd}
-source ./tclScripts/shell_bd.tcl
+puts "Done open_bd_design *shell.bd"
+source ./tclScripts/shell_bd.tcl $boardName $partName
 
 # Set 'sources_1' fileset file properties for remote files
 #set file "projects/$projName/$fpgaNum/$fpgaNum.srcs/sources_1/bd/srcs/shell.bd"

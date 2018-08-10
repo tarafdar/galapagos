@@ -1,15 +1,15 @@
+source ./tclScripts/utils.tcl
+
+
 set boardName [lindex $argv 0]
 set projName [lindex $argv 1]
 
 puts $boardName
 puts $projName
 
+set partName [get_part_name_from_board_name $boardName]
+puts $partName
 
-if {$boardName eq "adm-8k5"} {
-    set partName xcku115-flva1517-2-e
-} elseif {$boardName eq "adm-8k5-debug"} {
-    set partName xcku115-flva1517-2-e
-}
 
 # Set the directory path for the original project from where this script was exported
 set orig_proj_dir "[file normalize "projects/$projName"]"
@@ -48,7 +48,7 @@ if {[string equal [get_filesets -quiet sources_1] ""]} {
 # Set IP repository paths
 set obj [get_filesets sources_1]
 #set_property ip_repo_paths {hlsIP_8k5 networkingIPRepo}
-set_property ip_repo_paths {hlsIP_adm-8k5 shells/shell_ips userIP} [current_project]
+set_property ip_repo_paths {shells/shell_ips userIP} [current_project]
 
 # Rebuild user ip_repo's index before adding any source files
 update_ip_catalog -rebuild
