@@ -63,6 +63,8 @@ set ethernet_core_port_connections {
     sidewinder100 {
         # TODO: -make constant_56b_0 IP
         #       -make constant_3b_5 IP
+        #       -make constant_16b_0
+        #       -make constant_1b_0
         #       -include zups (Zynq Ultra PS) 
         # TODO (signals/connections):
         #       - gtwiz_reset_rx_datapath_0 <-> zups/Res
@@ -130,14 +132,38 @@ set ethernet_core_port_connections {
 
         #GUESS tx_ifg_delay = txoutclksel_in_0
         ifg_delay_dout {axi_10g_ethernet_0/txoutclksel_in_0 ifg_delay/dout}
-        mac_config_vector_dout {axi_10g_ethernet_0/mac_rx_configuration_vector axi_10g_ethernet_0/mac_tx_configuration_vector mac_config_vector/dout}
         pcs_config_vector_dout {axi_10g_ethernet_0/pcs_pma_configuration_vector pcs_config_vector/dout}
 
-        
-
-        
         vcc_dout {axi_10g_ethernet_0/signal_detect vcc/dout}
-    }
+        mac_config_vector_dout[367:352] {mac_config_vector/dout[367:352] constant_16b_0/dout}
+        mac_config_vector_dout[351:336] {mac_config_vector/dout[351:336] axi_10g_ethernet_0/ctl_tx_pause_refresh_timer7[15:0]}
+        mac_config_vector_dout[335:320] {mac_config_vector/dout[335:320] axi_10g_ethernet_0/ctl_tx_pause_quanta7[15:0]}
+        mac_config_vector_dout[319:304] {mac_config_vector/dout[319:304] axi_10g_ethernet_0/ctl_tx_pause_refresh_timer6[15:0]}
+        mac_config_vector_dout[303:288] {mac_config_vector/dout[303:288] axi_10g_ethernet_0/ctl_tx_pause_quanta6[15:0]}
+        mac_config_vector_dout[287:272] {mac_config_vector/dout[287:272] axi_10g_ethernet_0/ctl_tx_pause_refresh_timer5[15:0]}
+        mac_config_vector_dout[271:256] {mac_config_vector/dout[271:256] axi_10g_ethernet_0/ctl_tx_pause_quanta5[15:0]}
+        mac_config_vector_dout[255:240] {mac_config_vector/dout[255:240] axi_10g_ethernet_0/ctl_tx_pause_refresh_timer4[15:0]}
+        mac_config_vector_dout[239:224] {mac_config_vector/dout[239:224] axi_10g_ethernet_0/ctl_tx_pause_quanta4[15:0]}
+        mac_config_vector_dout[223:208] {mac_config_vector/dout[223:208] axi_10g_ethernet_0/ctl_tx_pause_refresh_timer3[15:0]}
+        mac_config_vector_dout[207:192] {mac_config_vector/dout[207:192] axi_10g_ethernet_0/ctl_tx_pause_quanta3[15:0]}
+        mac_config_vector_dout[191:176] {mac_config_vector/dout[191:176] axi_10g_ethernet_0/ctl_tx_pause_refresh_timer2[15:0]}
+        mac_config_vector_dout[175:160] {mac_config_vector/dout[175:160] axi_10g_ethernet_0/ctl_tx_pause_quanta2[15:0]}
+        mac_config_vector_dout[159:144] {mac_config_vector/dout[159:144] axi_10g_ethernet_0/ctl_tx_pause_refresh_timer1[15:0]}
+        mac_config_vector_dout[143:128] {mac_config_vector/dout[143:128] axi_10g_ethernet_0/ctl_tx_pause_quanta1[15:0]}
+        mac_config_vector_dout[127:112] {mac_config_vector/dout[127:112] axi_10g_ethernet_0/ctl_tx_pause_refresh_timer0[15:0]}
+        mac_config_vector_dout[111:96] {mac_config_vector/dout[111:96] axi_10g_ethernet_0/ctl_tx_pause_quanta0[15:0]}
+        mac_config_vector_dout[95] {mac_config_vector/dout[95] axi_10g_ethernet_0/ctl_tx_pause_enable[7]}
+        mac_config_vector_dout[94] {mac_config_vector/dout[94] axi_10g_ethernet_0/ctl_tx_pause_enable[6]}
+        mac_config_vector_dout[93] {mac_config_vector/dout[93] axi_10g_ethernet_0/ctl_tx_pause_enable[5]}
+        mac_config_vector_dout[92] {mac_config_vector/dout[92] axi_10g_ethernet_0/ctl_tx_pause_enable[4]}
+        mac_config_vector_dout[91] {mac_config_vector/dout[91] axi_10g_ethernet_0/ctl_tx_pause_enable[3]}
+        mac_config_vector_dout[90] {mac_config_vector/dout[90] axi_10g_ethernet_0/ctl_tx_pause_enable[2]}
+        mac_config_vector_dout[89] {mac_config_vector/dout[89] axi_10g_ethernet_0/ctl_tx_pause_enable[1]}
+        mac_config_vector_dout[88] {mac_config_vector/dout[88] axi_10g_ethernet_0/ctl_tx_pause_enable[0]}
+        mac_config_vector_dout[81] {mac_config_vector/dout[81] constant_1b_0/dout}
+        mac_config_vector_dout[80] {mac_config_vector/dout[80] constant_1b_0/dout}
+        mac_config_vector_dout[79:32] {mac_config_vector/dout[79:32] axi_10g_ethernet_0/ctl_tx_pause_da[47:0] }
+}
 
     adm-8k5-debug {
         axi_10g_ethernet_0_resetdone_out {network_reset_done axi_10g_ethernet_0/resetdone_out}
