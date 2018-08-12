@@ -135,6 +135,8 @@ set ethernet_core_port_connections {
         pcs_config_vector_dout {axi_10g_ethernet_0/pcs_pma_configuration_vector pcs_config_vector/dout}
 
         vcc_dout {axi_10g_ethernet_0/signal_detect vcc/dout}
+
+        # FROM: https://www.xilinx.com/support/documentation/ip_documentation/xxv_ethernet/v2_3/pg210-25g-ethernet.pdf pg 275-277
         mac_config_vector_dout[367:352] {mac_config_vector/dout[367:352] constant_16b_0/dout}
         mac_config_vector_dout[351:336] {mac_config_vector/dout[351:336] axi_10g_ethernet_0/ctl_tx_pause_refresh_timer7[15:0]}
         mac_config_vector_dout[335:320] {mac_config_vector/dout[335:320] axi_10g_ethernet_0/ctl_tx_pause_quanta7[15:0]}
@@ -163,6 +165,25 @@ set ethernet_core_port_connections {
         mac_config_vector_dout[81] {mac_config_vector/dout[81] constant_1b_0/dout}
         mac_config_vector_dout[80] {mac_config_vector/dout[80] constant_1b_0/dout}
         mac_config_vector_dout[79:32] {mac_config_vector/dout[79:32] axi_10g_ethernet_0/ctl_tx_pause_da[47:0] }
+        mac_config_vector_dout[31] {mac_tx_configuration_vector[31] constant_1b_0}
+        mac_config_vector_dout[30:16] {mac_tx_configuration_vector[30:16] constant_15b_0/dout}
+        mac_config_vector_dout[15] {mac_tx_configuration_vector[15] constant_1b_0/dout}
+        mac_config_vector_dout[14] {mac_tx_configuration_vector[14] constant_1b_0/dout}
+        mac_config_vector_dout[13] {mac_tx_configuration_vector[13] constant_1b_0/dout}
+        mac_config_vector_dout[12] {mac_tx_configuration_vector[12] constant_1b_0/dout}
+        mac_config_vector_dout[11] {mac_tx_configuration_vector[11] constant_1b_0/dout}
+        mac_config_vector_dout[10] {mac_tx_configuration_vector[10] constant_1b_0/dout}
+        mac_config_vector_dout[9] {mac_tx_configuration_vector[9] constant_1b_0/dout}
+        mac_config_vector_dout[9] {mac_tx_configuration_vector[8] constant_1b_0/dout}
+        mac_config_vector_dout[7] {mac_tx_configuration_vector[7] axi_10g_ethernet_0/ctl_tx_custom_preamble_enable}
+        mac_config_vector_dout[6] {mac_tx_configuration_vector[6] constant_1b_0/dout}
+        mac_config_vector_dout[5] {mac_tx_configuration_vector[5] axi_10g_ethernet_0/ctl_tx_pause_enable[1:0]}
+        mac_config_vector_dout[4] {mac_tx_configuration_vector[4] constant_1b_0/dout}
+        mac_config_vector_dout[3] {mac_tx_configuration_vector[3] axi_10g_ethernet_0/ctl_tx_fcs_ins_enable_0}
+        mac_config_vector_dout[2] {mac_tx_configuration_vector[2] constant_1b_0/dout}
+        mac_config_vector_dout[1] {mac_tx_configuration_vector[1] axi_10g_ethernet_0/ctl_tx_enable_0}
+        mac_config_vector_dout[0] {mac_tx_configuration_vector[0] axi_10g_ethernet_0/tx_reset_0}
+
 }
 
     adm-8k5-debug {
