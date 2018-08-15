@@ -23,14 +23,19 @@ module testbench();
     wire stream_out_VALID;
     wire stream_out_READY;
 
+    reg mem_sys_clk_p;
+    reg mem_sys_clk_n;
     
-    always #5 clk = ~clk;
-    
-    
+    always #10 clk = ~clk;
+    always #5 mem_sys_clk_p =~mem_sys_clk_p;
+    always #5 mem_sys_clk_n =~mem_sys_clk_n;
+
     
     initial begin
         resetn = 0;
         clk = 0;
+        mem_sys_clk_p = 0;
+        mem_sys_clk_n = 1;
         #30 resetn = 1;
     end
     
@@ -53,6 +58,8 @@ module testbench();
 
    top_sim dut(
     .clk(clk),
+    .mem_sys_clk_p(mem_sys_clk_p),
+    .mem_sys_clk_n(mem_sys_clk_n),
     .resetn(resetn),
     .keep(stream_in_KEEP),
     .last(stream_in_LAST),
