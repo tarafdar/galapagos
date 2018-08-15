@@ -1,10 +1,13 @@
 set boardName [lindex $argv 0]
-set projName [lindex $argv 1]
-set fpgaNum [lindex $argv 2]
+set projDir [lindex $argv 1]
+set projName [lindex $argv 2]
+set simDir [lindex $argv 3]
+
+set pr_tcl_file ./telepathy/make_test_bd.tcl
 
 puts $boardName
+puts $projDir
 puts $projName
-puts $fpgaNum
 
 
 if {$boardName eq "adm-8k5"} {
@@ -14,11 +17,11 @@ if {$boardName eq "adm-8k5"} {
 }
 
 # Set the directory path for the original project from where this script was exported
-set orig_proj_dir "[file normalize "projects/$projName"]"
+set orig_proj_dir "[file normalize "projects/$projDir"]"
 
 # Create project
-#create_project $fpgaNum projects/$projName/$fpgaNum -part xcku115-flva1517-2-e
-create_project $fpgaNum projects/$projName/$fpgaNum -part $partName
+#create_project $projName projects/$projDir/$projName -part xcku115-flva1517-2-e
+create_project $projName projects/$projDir/$projName -part $partName
 
 # Set the directory path for the new project
 set proj_dir [get_property directory [current_project]]
@@ -29,11 +32,11 @@ set_msg_config  -ruleid {8}  -id {[BD 41-1271]}  -suppress  -source 2
 
 
 # Set project properties
-set obj [get_projects $fpgaNum]
+set obj [get_projects $projName]
 set_property "corecontainer.enable" "1" $obj
 set_property "default_lib" "xil_defaultlib" $obj
 set_property "ip_cache_permissions" "read write" $obj
-set_property "ip_output_repo" "shells/projects/$projName/$projName.cache/ip" $obj
+set_property "ip_output_repo" "shells/projects/$projDir/$projDir.cache/ip" $obj
 #set_property "part" "xcku115-flva1517-2-e" $obj
 set_property "part" $partName $obj
 set_property "sim.ip.auto_export_scripts" "1" $obj
@@ -63,25 +66,26 @@ import_files -norecurse -fileset $obj $files
 
 # Set 'sources_1' fileset object
 create_bd_design "pr"
-open_bd_design {projects/$projName/$fpgaNum/$fpgaNum.srcs/sources_1/bd/pr/pr.bd}
-source projects/$projName/$fpgaNum/$fpgaNum.tcl
+open_bd_design {projects/$projDir/$projName/$projName.srcs/sources_1/bd/pr/pr.bd}
+source $pr_tcl_file
+
 validate_bd_design
 
 # Set 'sources_1' fileset object
 create_bd_design "mem"
-open_bd_design {projects/$projName/$fpgaNum/$fpgaNum.srcs/sources_1/bd/mem/mem.bd}
-source ./tclScripts/sim_mem.tcl
+open_bd_design {projects/$projDir/$projName/$projName.srcs/sources_1/bd/mem/mem.bd}
+source ./tclScripts/sim_mig.tcl
 validate_bd_design
 
 # Set 'sources_1' fileset file properties for remote files
-set file "projects/$projName/$fpgaNum/$fpgaNum.srcs/sources_1/bd/pr/pr.bd"
+set file "projects/$projDir/$projName/$projName.srcs/sources_1/bd/pr/pr.bd"
 set file [file normalize $file]
 set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
 if { ![get_property "is_locked" $file_obj] } {
   set_property "synth_checkpoint_mode" "Hierarchical" $file_obj
 }
 
-set file "projects/$projName/$fpgaNum/$fpgaNum.srcs/sources_1/bd/mem/mem.bd"
+set file "projects/$projDir/$projName/$projName.srcs/sources_1/bd/mem/mem.bd"
 set file [file normalize $file]
 set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
 if { ![get_property "is_locked" $file_obj] } {
@@ -110,6 +114,9 @@ set obj [get_filesets sim_1]
 # Empty (no sources present)
 
 set files [glob shells/$boardName/sim/*]
+import_files -norecurse -fileset sim_1 $files
+
+set files [glob $simDir/*]
 import_files -norecurse -fileset sim_1 $files
 
 # Set 'sim_1' fileset properties
@@ -147,19 +154,8 @@ set_property "steps.write_bitstream.args.readback_file" "0" $obj
 set_property "steps.write_bitstream.args.verbose" "0" $obj
 
 
-puts "INFO: Project created:$projName"
+puts "INFO: Project created:$projDir"
 
-#generate_target all [get_files  projects/$projName/$fpgaNum/$fpgaNum.srcs/sources_1/bd/pr/pr.bd]
-#export_ip_user_files -of_objects [get_files projects/$projName/$fpgaNum/$fpgaNum.srcs/sources_1/bd/pr/pr.bd] -no_script -sync -force -quiet
-#launch_runs -jobs 8 [create_ip_run [get_files -of_objects [get_fileset sources_1] projects/$projName/$fpgaNum/$fpgaNum.srcs/sources_1/bd/pr/pr.bd]]
-#set ooc_runs [get_runs -filter {IS_SYNTHESIS && name != "synth_1"} ]
-#foreach run $ooc_runs { wait_on_run $run}
-#
-#generate_target all [get_files  projects/$projName/$fpgaNum/$fpgaNum.srcs/sources_1/bd/mem/mem.bd]
-#export_ip_user_files -of_objects [get_files projects/$projName/$fpgaNum/$fpgaNum.srcs/sources_1/bd/mem/mem.bd] -no_script -sync -force -quiet
-#launch_runs -jobs 8 [create_ip_run [get_files -of_objects [get_fileset sources_1] projects/$projName/$fpgaNum/$fpgaNum.srcs/sources_1/bd/mem/mem.bd]]
-#set ooc_runs [get_runs -filter {IS_SYNTHESIS && name != "synth_1"} ]
-#foreach run $ooc_runs { wait_on_run $run}
 
 set_property top top_sim [current_fileset]
 set_property STEPS.SYNTH_DESIGN.ARGS.FLATTEN_HIERARCHY none [get_runs synth_1]

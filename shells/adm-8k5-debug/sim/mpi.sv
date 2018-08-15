@@ -56,11 +56,11 @@ interface mpi_interface
              );
 
         stream.wait_for_header(
-                           .mac_addr_dst(mac_addr_src),
-                           .mac_addr_src(mac_addr_dst),
+                           .mac_addr_dst(mac_addr_dst),
+                           .mac_addr_src(mac_addr_src),
                            .ip_addr_dst(ip_addr_src),
                            .ip_addr_src(ip_addr_dst),
-                           .dst(src_rank)
+                           .dst(dst_rank)
                            );
                                                     
       
@@ -70,6 +70,9 @@ interface mpi_interface
             stream_in_data[15:0] == dst_rank && 
             stream_in_valid  && 
             stream_in_ready); 
+            
+        repeat (10) @(posedge clk);
+
         //send clear to send
         write_header(
                .dst_rank(src_rank), 
@@ -77,25 +80,21 @@ interface mpi_interface
                .packet_type(C_CLR2SND_PACKET), 
                .size(size), 
                .tag(8'd0),
-               .mac_addr_dst(mac_addr_dst),
-               .mac_addr_src(mac_addr_src),
-               .ip_addr_dst(ip_addr_dst),
-               .ip_addr_src(ip_addr_src)
+               .mac_addr_dst(mac_addr_src),
+               .mac_addr_src(mac_addr_dst),
+               .ip_addr_dst(ip_addr_src),
+               .ip_addr_src(ip_addr_dst),
+               .last(1'b1)
            );
            
-        write(
-                     .data(64'd0),
-                     .keep(8'hff),
-                     .last(1'b1)
-                     );
            
 
         stream.wait_for_header(
-                           .mac_addr_dst(mac_addr_src),
-                           .mac_addr_src(mac_addr_dst),
-                           .ip_addr_dst(ip_addr_src),
-                           .ip_addr_src(ip_addr_dst),
-                           .dst(src_rank)
+                           .mac_addr_dst(mac_addr_dst),
+                           .mac_addr_src(mac_addr_src),
+                           .ip_addr_dst(ip_addr_dst),
+                           .ip_addr_src(ip_addr_src),
+                           .dst(dst_rank)
                            );
         wait(clk &&
             stream_in_data[31:24] == C_DATA_PACKET && 
@@ -113,13 +112,9 @@ interface mpi_interface
                     .mac_addr_dst(mac_addr_dst),
                     .mac_addr_src(mac_addr_src),
                     .ip_addr_dst(ip_addr_dst),
-                    .ip_addr_src(ip_addr_src)
+                    .ip_addr_src(ip_addr_src),
+                    .last(1'b1)
            );
-        write(
-                        .data(64'd0),
-                        .keep(8'hff),
-                        .last(1'b1)
-                        );
 
     endtask
 
@@ -171,7 +166,8 @@ interface mpi_interface
                    .mac_addr_dst(mac_addr_dst),
                    .mac_addr_src(mac_addr_src),
                    .ip_addr_dst(ip_addr_dst),
-                   .ip_addr_src(ip_addr_src)
+                   .ip_addr_src(ip_addr_src),
+                   .last(1'b0)
                                 
         );
     endtask
@@ -195,13 +191,14 @@ interface mpi_interface
                    .mac_addr_dst(mac_addr_dst),
                    .mac_addr_src(mac_addr_src),
                    .ip_addr_dst(ip_addr_dst),
-                   .ip_addr_src(ip_addr_src)
+                   .ip_addr_src(ip_addr_src),
+                   .last(1'b0)
                    );
-        write(
-                        .data(64'd0),
-                        .keep(8'hff),
-                        .last(1'b1)
-                       );
+
+          write(.data(64'd0),
+                .keep(8'hff),
+                .last(1'b1)
+               );   
 
         stream.wait_for_header(
                            .mac_addr_dst(mac_addr_src),
@@ -263,7 +260,8 @@ interface mpi_interface
                     input [47:0] mac_addr_dst,
                     input [47:0] mac_addr_src,
                     input [31:0] ip_addr_dst,
-                    input [31:0] ip_addr_src
+                    input [31:0] ip_addr_src,
+                    input last
                     );
     
 
@@ -283,7 +281,7 @@ interface mpi_interface
         write(
               .data({8'd1, tag , size ,packet_type, src_rank, dst_rank}),
               .keep(8'hff),
-              .last(1'b0)
+              .last(last)
               );
     
 

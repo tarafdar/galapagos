@@ -55,6 +55,8 @@ MAPFILE=${CONF_DIR}/${CONF}/configuration_files/mpiMap.xml
 
 
 
+
+
 all: userIP hlsMiddleware kmeans_userIP createCluster   
 
 
@@ -109,7 +111,7 @@ simFPGA: ${LOGICALFILE} ${MAPFILE}
 	mkdir -p projects/${PROJECTNAME}
 	python hwMiddleware/packetSwitch/globalFPGAParser.py --logicalFile=${LOGICALFILE} --macFile=${MACFILE} --mapFile=${MAPFILE} --ipFile=${IPFILE} --projectName=${PROJECTNAME}
 	chmod +x simCluster.sh
-	vivado -mode gui -source tclScripts/createSim.tcl -tclargs $(BOARDNAME) ${PROJECTNAME} ${ARGS}
+	vivado -mode gui -source tclScripts/createSim.tcl -tclargs $(BOARDNAME) ${PROJECTNAME} ${ARGS} ${SIM_DIR}
 
 
 createFPGA: ${LOGICALFILE} ${MAPFILE} 

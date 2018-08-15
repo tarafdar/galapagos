@@ -1,9 +1,12 @@
 #include "MPI.h"
 #include "ap_axi_sdata.h"
 
+
+#define CONTROLLER_ONLY
+
 #define MEM_INFO_SIZE 4 
 #define PARAMETER_MEM_INFO_SIZE 2  
-#define DARIUS_INFO_SIZE 7 // {ind_0 = num_commands, ind_1-4 = command, ind_5 = batch_size, ind_6 = num_ranks}
+#define DARIUS_INFO_SIZE 35 // {ind_0 = num_commands, ind_1-32 = command, ind_33 = batch_size, ind_34 = num_ranks}
 
 #define NUM_COMMANDS_OFFSET 0x60
 #define COMMAND_OFFSET 0x70
@@ -24,7 +27,7 @@
 
 void dariusController(
                 float  mem [DEPTH],            // global memory pointer
-                int  darius_driver [DARIUS_DEPTH] //,
+                int  darius_driver [DARIUS_DEPTH] 
                 //const int rank       // offset of inputs
                 )            // kernel size
 {
@@ -40,24 +43,36 @@ void dariusController(
 #pragma HLS INTERFACE ap_bus port=darius_driver 
 #pragma HLS resource core=AXI4M variable=darius_driver
 #pragma HLS INTERFACE ap_ctrl_none port=return 
-    
-    static int rank = id_in;
+
+
+
+
+
+    int rank = id_in;
+
+
+    //Variables that need to maintain value across states
     static int parameter_mem_info[PARAMETER_MEM_INFO_SIZE]; //{offset in offchip memory to dma_in, size to dma_in} 
     static int data_mem_info[MEM_INFO_SIZE]; //{offset in offchip memory to dma_in, size to dma_in, offset in offchip memory to dma_out, size to dma_out} 
     static int darius_info[DARIUS_INFO_SIZE]; //{num_commands, command, batch_size, num_ranks} 
     static int cumulative_cycle_count[1];
-    static float parameter_mem_info_float[PARAMETER_MEM_INFO_SIZE]; //{offset in offchip memory to dma_in, size to dma_in} 
-    static float data_mem_info_float[MEM_INFO_SIZE]; //{offset in offchip memory to dma_in, size to dma_in, offset in offchip memory to dma_out, size to dma_out} 
-    static float darius_info_float[DARIUS_INFO_SIZE]; //{num_commands, command, batch_size, num_ranks} 
-    static float cumulative_cycle_count_float[1];
-    
-
-    static ap_uint <3> state = INIT;
-
     static unsigned int batch_size = darius_info[DARIUS_INFO_SIZE - 2];
     static unsigned int num_ranks = darius_info[DARIUS_INFO_SIZE - 1];
     static int prev_rank;
     static int next_rank;
+
+ 
+    //variables that are read in 
+    float parameter_mem_info_float[PARAMETER_MEM_INFO_SIZE]; //{offset in offchip memory to dma_in, size to dma_in} 
+    float data_mem_info_float[MEM_INFO_SIZE]; //{offset in offchip memory to dma_in, size to dma_in, offset in offchip memory to dma_out, size to dma_out} 
+    float darius_info_float[DARIUS_INFO_SIZE]; //{num_commands, command, batch_size, num_ranks} 
+    float cumulative_cycle_count_float[1];
+    float local_mem[10];
+
+    
+    float size_float[1];
+    static ap_uint <3> state = INIT;
+
 
     switch (state) {
         case INIT:
@@ -65,14 +80,31 @@ void dariusController(
     //
     //information on parameters (offset to dma in and size)
             while(!MPI_Recv(parameter_mem_info_float, PARAMETER_MEM_INFO_SIZE, MPI_FLOAT, 0,0/*not used*/,MPI_COMM_WORLD/*not used*/));
-            for(int i=0; i< PARAMETER_MEM_INFO_SIZE; i++)
+	    for(int i=0; i< PARAMETER_MEM_INFO_SIZE; i++)
                 parameter_mem_info[i] = (int) parameter_mem_info_float[i];
-            darius_driver[0] = 0; // num_commands
-            mem[0] = 0; // num_commands
-
-            //dma in parameters
-            while(!MPI_Recv(mem + parameter_mem_info[0]/sizeof(int), parameter_mem_info[1]/sizeof(int), MPI_FLOAT, 0,0/*not used*/,MPI_COMM_WORLD/*not used*/));
             
+	    size_float[0] = parameter_mem_info_float[1];
+
+	
+	    //size_float[0] = 2.0f;
+	    //float send_float[1];
+	    //if(size_float[0] == 8.0f)
+	    //        send_float[0] = 42.0f;
+	    //else
+	    //        send_float[0] = size_float[0];
+	    //
+	    //while(!MPI_Send(send_float, 1, MPI_FLOAT, 0, 0 ,MPI_COMM_WORLD));
+	    
+
+
+#ifndef CONTROLLER_ONLY
+	    darius_driver[0] = 0; // num_commands
+#endif
+            //dma in parameters
+            while(!MPI_Recv(mem+parameter_mem_info[0]/sizeof(int), parameter_mem_info[1]/sizeof(int), MPI_FLOAT, 0,0/*not used*/,MPI_COMM_WORLD/*not used*/));
+            
+		
+
             while(!MPI_Recv(data_mem_info_float, MEM_INFO_SIZE, MPI_FLOAT, 0,0/*not used*/,MPI_COMM_WORLD/*not used*/));
             for(int i=0; i< MEM_INFO_SIZE; i++)
                 data_mem_info[i] = (int) data_mem_info_float[i];
