@@ -328,83 +328,60 @@ proc create_hier_cell_network { parentCell nameHier } {
    CONFIG.FREQ_HZ {312500000} \
  ] [get_bd_pins /network/axi_10g_ethernet_0/txusrclk_out]
 
-  # Create instance: gnd, and set properties
-  set gnd [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant gnd ]
-  set_property -dict [ list \
-   CONFIG.CONST_VAL {0} \
- ] $gnd
 
-  # Create instance: ifg_delay, and set properties
-  set ifg_delay [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant ifg_delay ]
-  set_property -dict [ list \
-   CONFIG.CONST_VAL {0} \
-   CONFIG.CONST_WIDTH {8} \
- ] $ifg_delay
+#  # Create instance: gnd, and set properties
+#  set gnd [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant gnd ]
+#  set_property -dict [ list \
+#    CONFIG.CONST_VAL {0} \
+#  ] $gnd
+#  
+#  # Create instance: ifg_delay, and set properties
+#  set ifg_delay [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant ifg_delay ]
+#  set_property -dict [ list \
+#    CONFIG.CONST_VAL {0} \
+#    CONFIG.CONST_WIDTH {8} \
+#  ] $ifg_delay
+#  
+#  # Create instance: mac_config_vector, and set properties
+#  set mac_config_vector [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant mac_config_vector ]
+#  set_property -dict [ list \
+#    CONFIG.CONST_VAL {22} \
+#    CONFIG.CONST_WIDTH {80} \
+#  ] $mac_config_vector
 
-  # Create instance: mac_config_vector, and set properties
-  set mac_config_vector [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant mac_config_vector ]
-  set_property -dict [ list \
-   CONFIG.CONST_VAL {22} \
-   CONFIG.CONST_WIDTH {80} \
- ] $mac_config_vector
+#  # Create instance: network_packet_fifo_0, and set properties
+#  set network_packet_fifo_0 [ create_bd_cell -type ip -vlnv dlyma.org:dlyma:network_packet_fifo_rx network_packet_fifo_0 ]
 
-  # Create instance: network_packet_fifo_0, and set properties
-  set network_packet_fifo_0 [ create_bd_cell -type ip -vlnv dlyma.org:dlyma:network_packet_fifo_rx network_packet_fifo_0 ]
+#  # Create instance: network_packet_fifo_1, and set properties
+#  set network_packet_fifo_1 [ create_bd_cell -type ip -vlnv dlyma.org:dlyma:network_packet_fifo_tx network_packet_fifo_1 ]
 
-  # Create instance: network_packet_fifo_1, and set properties
-  set network_packet_fifo_1 [ create_bd_cell -type ip -vlnv dlyma.org:dlyma:network_packet_fifo_tx network_packet_fifo_1 ]
+#  # Create instance: pcs_config_vector, and set properties
+#  set pcs_config_vector [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant pcs_config_vector ]
+#  set_property -dict [ list \
+#   CONFIG.CONST_VAL {0} \
+#   CONFIG.CONST_WIDTH {536} \
+#  ] $pcs_config_vector
 
-  # Create instance: pcs_config_vector, and set properties
-  set pcs_config_vector [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant pcs_config_vector ]
-  set_property -dict [ list \
-   CONFIG.CONST_VAL {0} \
-   CONFIG.CONST_WIDTH {536} \
- ] $pcs_config_vector
+#  # Create instance: rx_register_slice_1, and set properties
+#  set rx_register_slice_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axis_register_slice rx_register_slice_1 ]
+#  set_property -dict [ list \
+#   CONFIG.TUSER_WIDTH {0} \
+# ] $rx_register_slice_1
+#
+#  # Create instance: tx_register_slice_0, and set properties
+#  set tx_register_slice_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axis_register_slice tx_register_slice_0 ]
+#  set_property -dict [ list \
+#   CONFIG.TUSER_WIDTH {0} \
+# ] $tx_register_slice_0
+#
+#  # Create instance: vcc, and set properties
+#  set vcc [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant vcc ]
 
-  # Create instance: rx_register_slice_1, and set properties
-  set rx_register_slice_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axis_register_slice rx_register_slice_1 ]
-  set_property -dict [ list \
-   CONFIG.TUSER_WIDTH {0} \
- ] $rx_register_slice_1
-
-  # Create instance: tx_register_slice_0, and set properties
-  set tx_register_slice_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axis_register_slice tx_register_slice_0 ]
-  set_property -dict [ list \
-   CONFIG.TUSER_WIDTH {0} \
- ] $tx_register_slice_0
-
-  # Create instance: vcc, and set properties
-  set vcc [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant vcc ]
-
-  # Create interface connections
-  connect_bd_intf_net -intf_net S_AXIS_1 [get_bd_intf_pins S_AXIS] [get_bd_intf_pins tx_register_slice_0/S_AXIS]
-  connect_bd_intf_net -intf_net axi_10g_ethernet_0_m_axis_rx [get_bd_intf_pins axi_10g_ethernet_0/m_axis_rx] [get_bd_intf_pins network_packet_fifo_0/s_axis]
-  connect_bd_intf_net -intf_net network_packet_fifo_0_m_axis [get_bd_intf_pins network_packet_fifo_0/m_axis] [get_bd_intf_pins rx_register_slice_1/S_AXIS]
-  connect_bd_intf_net -intf_net network_packet_fifo_1_m_axis [get_bd_intf_pins axi_10g_ethernet_0/s_axis_tx] [get_bd_intf_pins network_packet_fifo_1/m_axis]
-  connect_bd_intf_net -intf_net rx_register_slice_1_M_AXIS [get_bd_intf_pins M_AXIS] [get_bd_intf_pins rx_register_slice_1/M_AXIS]
-  connect_bd_intf_net -intf_net tx_register_slice_0_M_AXIS [get_bd_intf_pins network_packet_fifo_1/s_axis] [get_bd_intf_pins tx_register_slice_0/M_AXIS]
-
-  # Create port connections
-  connect_bd_net -net axi_10g_ethernet_0_resetdone_out [get_bd_pins network_reset_done] [get_bd_pins axi_10g_ethernet_0/resetdone_out]
-  connect_bd_net -net axi_10g_ethernet_0_rx_statistics_valid [get_bd_pins rx_statistics_valid] [get_bd_pins axi_10g_ethernet_0/rx_statistics_valid] [get_bd_pins network_packet_fifo_0/rx_statistics_valid]
-  connect_bd_net -net axi_10g_ethernet_0_rx_statistics_vector [get_bd_pins rx_statistics_vector] [get_bd_pins axi_10g_ethernet_0/rx_statistics_vector] [get_bd_pins network_packet_fifo_0/rx_statistics_vector]
-  connect_bd_net -net axi_10g_ethernet_0_tx_statistics_valid [get_bd_pins tx_statistics_valid] [get_bd_pins axi_10g_ethernet_0/tx_statistics_valid]
-  connect_bd_net -net axi_10g_ethernet_0_tx_statistics_vector [get_bd_pins tx_statistics_vector] [get_bd_pins axi_10g_ethernet_0/tx_statistics_vector]
-  connect_bd_net -net axi_10g_ethernet_0_txn [get_bd_pins txn] [get_bd_pins axi_10g_ethernet_0/txn]
-  connect_bd_net -net axi_10g_ethernet_0_txp [get_bd_pins txp] [get_bd_pins axi_10g_ethernet_0/txp]
-  connect_bd_net -net axi_10g_ethernet_0_txusrclk2_out [get_bd_pins clk_156] [get_bd_pins axi_10g_ethernet_0/txusrclk2_out] [get_bd_pins network_packet_fifo_0/aclk] [get_bd_pins network_packet_fifo_1/aclk] [get_bd_pins rx_register_slice_1/aclk] [get_bd_pins tx_register_slice_0/aclk]
-  connect_bd_net -net dclk_1 [get_bd_pins clk_100] [get_bd_pins axi_10g_ethernet_0/dclk]
-  connect_bd_net -net gnd_dout [get_bd_pins axi_10g_ethernet_0/sim_speedup_control] [get_bd_pins axi_10g_ethernet_0/tx_fault] [get_bd_pins gnd/dout]
-  connect_bd_net -net ifg_delay_dout [get_bd_pins axi_10g_ethernet_0/tx_ifg_delay] [get_bd_pins ifg_delay/dout]
-  connect_bd_net -net mac_config_vector_dout [get_bd_pins axi_10g_ethernet_0/mac_rx_configuration_vector] [get_bd_pins axi_10g_ethernet_0/mac_tx_configuration_vector] [get_bd_pins mac_config_vector/dout]
-  connect_bd_net -net pcs_config_vector_dout [get_bd_pins axi_10g_ethernet_0/pcs_pma_configuration_vector] [get_bd_pins pcs_config_vector/dout]
-  connect_bd_net -net refclk_n_1 [get_bd_pins refclk_n] [get_bd_pins axi_10g_ethernet_0/refclk_n]
-  connect_bd_net -net refclk_p_1 [get_bd_pins refclk_p] [get_bd_pins axi_10g_ethernet_0/refclk_p]
-  connect_bd_net -net reset_1 [get_bd_pins reset] [get_bd_pins axi_10g_ethernet_0/reset]
-  connect_bd_net -net rxn_1 [get_bd_pins rxn] [get_bd_pins axi_10g_ethernet_0/rxn]
-  connect_bd_net -net rxp_1 [get_bd_pins rxp] [get_bd_pins axi_10g_ethernet_0/rxp]
-  connect_bd_net -net tx_axis_aresetn_1 [get_bd_pins aresetn] [get_bd_pins axi_10g_ethernet_0/rx_axis_aresetn] [get_bd_pins axi_10g_ethernet_0/tx_axis_aresetn] [get_bd_pins network_packet_fifo_0/aresetn] [get_bd_pins network_packet_fifo_1/aresetn] [get_bd_pins rx_register_slice_1/aresetn] [get_bd_pins tx_register_slice_0/aresetn]
-  connect_bd_net -net vcc_dout [get_bd_pins axi_10g_ethernet_0/signal_detect] [get_bd_pins vcc/dout]
+  common::send_msg_id "BD_TCL-102" "ERROR" "Ethernet subsystem instantiation for $boardName"
+  # Perform Ethernet Subsystem net connections to ports and interfaces
+  instantiate_module_dependencies $ethernet_core_module_dependencies $boardName
+  make_interface_connections $ethernet_core_interface_connections $boardName
+  make_port_connections $ethernet_core_port_connections $boardName
 
   # Restore current instance
   current_bd_instance $oldCurInst
@@ -582,60 +559,10 @@ proc create_hier_cell_mem_interface { parentCell nameHier } {
    CONFIG.C_SIZE {1} \
  ] $util_vector_logic_5
 
-  # Create interface connections
-  connect_bd_intf_net -intf_net Conn1 [get_bd_intf_pins PCIE_AXI] [get_bd_intf_pins mem_interconnect/S00_AXI]
-  connect_bd_intf_net -intf_net Conn2 [get_bd_intf_pins MEM_AXI_0] [get_bd_intf_pins mem_interconnect/S01_AXI]
-  connect_bd_intf_net -intf_net MEM_AXI_1_1 [get_bd_intf_pins MEM_AXI_1] [get_bd_intf_pins mem_interconnect_1/S00_AXI]
-  connect_bd_intf_net -intf_net mem_interconnect_1_M00_AXI [get_bd_intf_pins ddr4_1/C0_DDR4_S_AXI] [get_bd_intf_pins mem_interconnect_1/M00_AXI]
-  connect_bd_intf_net -intf_net pcie_interconnect_M00_AXI [get_bd_intf_pins ddr4_0/C0_DDR4_S_AXI] [get_bd_intf_pins mem_interconnect/M00_AXI]
-
+  # Create interface connections for memory
+  make_interface_connections $ddr_core_interface_connections $boardName
   # Create port connections
-  connect_bd_net -net M00_ARESETN_1 [get_bd_pins ddr4_0/c0_ddr4_aresetn] [get_bd_pins ddr4_1/c0_ddr4_aresetn] [get_bd_pins mem_interconnect/M00_ARESETN] [get_bd_pins mem_interconnect_1/M00_ARESETN] [get_bd_pins proc_sys_reset_1/peripheral_aresetn]
-  connect_bd_net -net Net [get_bd_pins c1_ddr4_dqs_t] [get_bd_pins ddr4_1/c0_ddr4_dqs_t]
-  connect_bd_net -net Net1 [get_bd_pins c1_ddr4_dqs_c] [get_bd_pins ddr4_1/c0_ddr4_dqs_c]
-  connect_bd_net -net Net2 [get_bd_pins c1_ddr4_dm_dbi_n] [get_bd_pins ddr4_1/c0_ddr4_dm_dbi_n]
-  connect_bd_net -net Net3 [get_bd_pins c1_ddr4_dq] [get_bd_pins ddr4_1/c0_ddr4_dq]
-  connect_bd_net -net Net4 [get_bd_pins c0_ddr4_dm_dbi_n] [get_bd_pins ddr4_0/c0_ddr4_dm_dbi_n]
-  connect_bd_net -net Net5 [get_bd_pins c0_ddr4_dqs_c] [get_bd_pins ddr4_0/c0_ddr4_dqs_c]
-  connect_bd_net -net Net6 [get_bd_pins c0_ddr4_dqs_t] [get_bd_pins ddr4_0/c0_ddr4_dqs_t]
-  connect_bd_net -net Net7 [get_bd_pins c0_ddr4_dg] [get_bd_pins ddr4_0/c0_ddr4_dq]
-  connect_bd_net -net S00_ACLK_1 [get_bd_pins PCIE_ACLK] [get_bd_pins mem_interconnect/S00_ACLK]
-  connect_bd_net -net S01_ARESETN_1 [get_bd_pins S_ARESETN] [get_bd_pins mem_interconnect/S00_ARESETN] [get_bd_pins mem_interconnect/S01_ARESETN] [get_bd_pins mem_interconnect_1/S00_ARESETN]
-  connect_bd_net -net c1_sys_clk_n_1 [get_bd_pins c0_sys_clk_n] [get_bd_pins ddr4_0/c0_sys_clk_n]
-  connect_bd_net -net c1_sys_clk_n_2 [get_bd_pins c1_sys_clk_n] [get_bd_pins ddr4_1/c0_sys_clk_n]
-  connect_bd_net -net c1_sys_clk_p_1 [get_bd_pins c0_sys_clk_p] [get_bd_pins ddr4_0/c0_sys_clk_p]
-  connect_bd_net -net c1_sys_clk_p_2 [get_bd_pins c1_sys_clk_p] [get_bd_pins ddr4_1/c0_sys_clk_p]
-  connect_bd_net -net ddr4_0_c0_ddr4_ui_clk_sync_rst [get_bd_pins ddr4_0/c0_ddr4_ui_clk_sync_rst] [get_bd_pins util_vector_logic_4/Op1]
-  connect_bd_net -net ddr4_0_c0_init_calib_complete [get_bd_pins ARESETN] [get_bd_pins proc_sys_reset_1/ext_reset_in] [get_bd_pins util_vector_logic_5/Res]
-  connect_bd_net -net ddr4_0_c0_init_calib_complete1 [get_bd_pins ddr4_0/c0_init_calib_complete] [get_bd_pins util_vector_logic_5/Op1]
-  connect_bd_net -net ddr4_1_c0_ddr4_act_n [get_bd_pins c0_ddr4_act_n] [get_bd_pins ddr4_0/c0_ddr4_act_n]
-  connect_bd_net -net ddr4_1_c0_ddr4_act_n1 [get_bd_pins c1_ddr4_act_n] [get_bd_pins ddr4_1/c0_ddr4_act_n]
-  connect_bd_net -net ddr4_1_c0_ddr4_adr [get_bd_pins c0_ddr4_adr] [get_bd_pins ddr4_0/c0_ddr4_adr]
-  connect_bd_net -net ddr4_1_c0_ddr4_adr1 [get_bd_pins c1_ddr4_adr] [get_bd_pins ddr4_1/c0_ddr4_adr]
-  connect_bd_net -net ddr4_1_c0_ddr4_ba [get_bd_pins c0_ddr4_ba] [get_bd_pins ddr4_0/c0_ddr4_ba]
-  connect_bd_net -net ddr4_1_c0_ddr4_ba1 [get_bd_pins c1_ddr4_ba] [get_bd_pins ddr4_1/c0_ddr4_ba]
-  connect_bd_net -net ddr4_1_c0_ddr4_bg [get_bd_pins c0_ddr4_bg] [get_bd_pins ddr4_0/c0_ddr4_bg]
-  connect_bd_net -net ddr4_1_c0_ddr4_bg1 [get_bd_pins c1_ddr4_bg] [get_bd_pins ddr4_1/c0_ddr4_bg]
-  connect_bd_net -net ddr4_1_c0_ddr4_ck_c [get_bd_pins c0_ddr4_ck_c] [get_bd_pins ddr4_0/c0_ddr4_ck_c]
-  connect_bd_net -net ddr4_1_c0_ddr4_ck_c1 [get_bd_pins c1_ddr4_ck_c] [get_bd_pins ddr4_1/c0_ddr4_ck_c]
-  connect_bd_net -net ddr4_1_c0_ddr4_ck_t [get_bd_pins c0_ddr4_ck_t] [get_bd_pins ddr4_0/c0_ddr4_ck_t]
-  connect_bd_net -net ddr4_1_c0_ddr4_ck_t1 [get_bd_pins c1_ddr4_ck_t] [get_bd_pins ddr4_1/c0_ddr4_ck_t]
-  connect_bd_net -net ddr4_1_c0_ddr4_cke [get_bd_pins c0_ddr4_cke] [get_bd_pins ddr4_0/c0_ddr4_cke]
-  connect_bd_net -net ddr4_1_c0_ddr4_cke1 [get_bd_pins c1_ddr4_cke] [get_bd_pins ddr4_1/c0_ddr4_cke]
-  connect_bd_net -net ddr4_1_c0_ddr4_cs_n [get_bd_pins c0_ddr4_cs_n] [get_bd_pins ddr4_0/c0_ddr4_cs_n]
-  connect_bd_net -net ddr4_1_c0_ddr4_cs_n1 [get_bd_pins c1_ddr4_cs_n] [get_bd_pins ddr4_1/c0_ddr4_cs_n]
-  connect_bd_net -net ddr4_1_c0_ddr4_odt [get_bd_pins c0_ddr4_odt] [get_bd_pins ddr4_0/c0_ddr4_odt]
-  connect_bd_net -net ddr4_1_c0_ddr4_odt1 [get_bd_pins c1_ddr4_odt] [get_bd_pins ddr4_1/c0_ddr4_odt]
-  connect_bd_net -net ddr4_1_c0_ddr4_reset_n [get_bd_pins c0_ddr4_reset_n] [get_bd_pins ddr4_0/c0_ddr4_reset_n]
-  connect_bd_net -net ddr4_1_c0_ddr4_reset_n1 [get_bd_pins c1_ddr4_reset_n] [get_bd_pins ddr4_1/c0_ddr4_reset_n]
-  connect_bd_net -net ddr4_1_c0_ddr4_ui_clk [get_bd_pins ddr4_0/c0_ddr4_ui_clk] [get_bd_pins mem_interconnect/ACLK] [get_bd_pins mem_interconnect/M00_ACLK] [get_bd_pins proc_sys_reset_1/slowest_sync_clk]
-  connect_bd_net -net ddr4_1_c0_ddr4_ui_clk1 [get_bd_pins ddr4_1/c0_ddr4_ui_clk] [get_bd_pins mem_interconnect_1/ACLK] [get_bd_pins mem_interconnect_1/M00_ACLK]
-  connect_bd_net -net ddr4_1_c0_ddr4_ui_clk_sync_rst [get_bd_pins ddr4_1/c0_ddr4_ui_clk_sync_rst] [get_bd_pins util_vector_logic_4/Op2]
-  connect_bd_net -net ddr4_1_c0_init_calib_complete [get_bd_pins ddr4_1/c0_init_calib_complete] [get_bd_pins util_vector_logic_5/Op2]
-  connect_bd_net -net m_axi_mm2s_aclk_1 [get_bd_pins clk156_25] [get_bd_pins mem_interconnect/S01_ACLK] [get_bd_pins mem_interconnect_1/S00_ACLK]
-  connect_bd_net -net proc_sys_reset_1_interconnect_aresetn [get_bd_pins mem_interconnect/ARESETN] [get_bd_pins mem_interconnect_1/ARESETN] [get_bd_pins proc_sys_reset_1/interconnect_aresetn]
-  connect_bd_net -net sys_rst_1 [get_bd_pins sys_rst] [get_bd_pins ddr4_0/sys_rst] [get_bd_pins ddr4_1/sys_rst]
-  connect_bd_net -net util_vector_logic_4_Res [get_bd_pins proc_sys_reset_1/aux_reset_in] [get_bd_pins util_vector_logic_4/Res]
+  make_port_connections $ddr_core_port_connections $boardName
 
   # Restore current instance
   current_bd_instance $oldCurInst

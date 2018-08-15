@@ -10,7 +10,7 @@ open_solution "solution1"
 #set_part {xcku115-flva1517-2-e}
 set_part ${partName}
 create_clock -period 5 -name default
-source "../hlsSources/directives/reverseEndian64.tcl"
+#source "../hlsSources/directives/reverseEndian64.tcl"
 #csim_design
 csynth_design
 #cosim_design
