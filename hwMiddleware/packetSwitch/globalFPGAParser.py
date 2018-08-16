@@ -426,8 +426,8 @@ for o, a in opts:
 
 print "Logical File: " + logicalFile
 print "Map File: " + mapFile
-print "MAC File: " +  macFile 
-print "IP Addr File: " + ipFile 
+#print "MAC File: " +  macFile 
+#print "IP Addr File: " + ipFile 
 print "Project Name: " + projectName
 
 allKernels, networkBridges = readKernelsFile(logicalFile)

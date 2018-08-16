@@ -79,17 +79,16 @@ hlsMiddleware: $(wildcard hlsSources/srcs/*)
 	vivado_hls tclScripts/generate_hls_ip_middleware.tcl -tclargs ${BOARD} ${PART}
 
 createCluster: ${LOGICALFILE} ${MAPFILE} 
-	LOGICALFILE=${CONF_DIR}/${CONF}/configuration_files/mpiLogical.xml
 	mkdir -p projects
 	mkdir -p projects/${PROJECTNAME}
-	python hwMiddleware/packetSwitch/globalFPGAParser.py --logicalFile=${LOGICALFILE} --macFile=${MACFILE} --mapFile=${MAPFILE} --ipFile=${IPFILE} --projectName=${PROJECTNAME}
+	python hwMiddleware/packetSwitch/globalFPGAParser.py --logicalFile=${LOGICALFILE} --mapFile=${MAPFILE} --projectName=${PROJECTNAME}
 	chmod +x createCluster.sh
 	./createCluster.sh
 
 simCluster: ${LOGICALFILE} ${MAPFILE} 
 	mkdir -p projects
 	mkdir -p projects/${PROJECTNAME}
-	python hwMiddleware/packetSwitch/globalFPGAParser.py --logicalFile=${LOGICALFILE} --macFile=${MACFILE} --mapFile=${MAPFILE} --ipFile=${IPFILE} --projectName=${PROJECTNAME}
+	python hwMiddleware/packetSwitch/globalFPGAParser.py --logicalFile=${LOGICALFILE} --mapFile=${MAPFILE}  --projectName=${PROJECTNAME}
 	chmod +x simCluster.sh
 	./simCluster.sh
 

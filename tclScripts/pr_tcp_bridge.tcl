@@ -9,17 +9,15 @@ connect_bd_net [get_bd_ports ARESETN] [get_bd_pins network/network_bridge_inst/a
 
 create_bd_cell -type ip -vlnv dlyma.org:dlyma:${TCP_ip_name}:1.4 network/tcp_ip_inst
 connect_bd_net [get_bd_ports CLK] [get_bd_pins network/tcp_ip_inst/aclk]
-connect_bd_net [get_bd_ports CLK] [get_bd_pins network/tcp_ip_inst/s_axictl_aclk]
 connect_bd_net [get_bd_ports ARESETN] [get_bd_pins network/tcp_ip_inst/aresetn]
-connect_bd_net [get_bd_ports ARESETN] [get_bd_pins network/tcp_ip_inst/s_axictl_aresetn]
 
-connect_bd_net [get_bd_pins network/tcp_ip_inst/ipAddressIn] [get_bd_pins network/ip_constant_block_inst/ip]
-connect_bd_net [get_bd_pins network/tcp_ip_inst/gatewayIn] [get_bd_pins network/ip_constant_block_inst/gateway]
-connect_bd_net [get_bd_pins network/tcp_ip_inst/subnetIn] [get_bd_pins network/ip_constant_block_inst/subnet]
-connect_bd_net [get_bd_pins network/tcp_ip_inst/macAddressIn] [get_bd_pins network/ip_constant_block_inst/mac]
+connect_bd_net [get_bd_pins network/tcp_ip_inst/myIpAddress] [get_bd_pins network/ip_constant_block_inst/ip]
+connect_bd_net [get_bd_pins network/tcp_ip_inst/myGateway] [get_bd_pins network/ip_constant_block_inst/gateway]
+connect_bd_net [get_bd_pins network/tcp_ip_inst/mySubnet] [get_bd_pins network/ip_constant_block_inst/subnet]
+connect_bd_net [get_bd_pins network/tcp_ip_inst/myMacAddress] [get_bd_pins network/ip_constant_block_inst/mac]
 #create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 network/xlconstant_enable
-create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant network/xlconstant_enable
-connect_bd_net [get_bd_pins network/tcp_ip_inst/configInEn] [get_bd_pins network/xlconstant_enable/dout]
+#create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant network/xlconstant_enable
+#connect_bd_net [get_bd_pins network/tcp_ip_inst/configInEn] [get_bd_pins network/xlconstant_enable/dout]
 
 set_property -dict [list CONFIG.UDP_ENABLE {false}] [get_bd_cells network/tcp_ip_inst]
 #coe location
