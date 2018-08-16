@@ -549,13 +549,19 @@ def add_debug_interfaces(outDir, num_debug_interfaces, fpga):
                 'resetns':['resetn']
                 }
                 )
-        properties = ['CONFIG.C_BRAM_CNT {6}', 'CONFIG.C_NUM_MONITOR_SLOTS {'+ str(num_debug_interfaces + 8) + '}',  'CONFIG.ALL_PROBE_SAME_MU {true}']
+        
+        if (len(fpga.kernels)) > 1:
+            additional_debug_interfaces = 8
+        else:
+            additional_debug_interfaces = 7
+
+        properties = ['CONFIG.C_BRAM_CNT {6}', 'CONFIG.C_NUM_MONITOR_SLOTS {'+ str(num_debug_interfaces + additional_debug_interfaces) + '}',  'CONFIG.ALL_PROBE_SAME_MU {true}']
 
 
-        for debug_interface_index in range(0, num_debug_interfaces + 7):
+        for debug_interface_index in range(0, num_debug_interfaces + additional_debug_interfaces - 1):
             properties.append('CONFIG.C_SLOT_' + str(debug_interface_index) + '_INTF_TYPE {xilinx.com:interface:axis_rtl:1.0}')
 
-        properties.append('CONFIG.C_SLOT_' + str(num_debug_interfaces + 7) + '_INTF_TYPE {xilinx.com:interface:bram_rtl:1.0} ')
+        properties.append('CONFIG.C_SLOT_' + str(num_debug_interfaces + additional_debug_interfaces - 1) + '_INTF_TYPE {xilinx.com:interface:bram_rtl:1.0} ')
         tcl_debug_app.setProperties('system_ila_streams', properties) 
 
         debug_interface_index = 0
@@ -581,10 +587,15 @@ def add_debug_interfaces(outDir, num_debug_interfaces, fpga):
                     )
                 debug_interface_index = debug_interface_index + 1
         debug_interface_index = num_debug_interfaces
-       
-        additional_debug_ips = ['application_bridge_inst', 'application_bridge_inst', 'application_bridge_inst', 'application_bridge_inst', 'applicationRegion/output_switch', 'applicationRegion/custom_switch', None]
-        additional_debug_ports = ['from_net_V', 'to_app_V', 'from_app_V', 'to_net_V', 'M00_AXIS', 'stream_out_switch_V', 'S_AXIS']
-        additional_debug_type = ['intf', 'intf', 'intf', 'intf', 'intf', 'intf', 'port']
+      
+        if (len(fpga.kernels) > 1):
+            additional_debug_ips = ['application_bridge_inst', 'application_bridge_inst', 'application_bridge_inst', 'application_bridge_inst', 'applicationRegion/output_switch', 'applicationRegion/custom_switch_inst', None]
+            additional_debug_ports = ['from_net_V', 'to_app_V', 'from_app_V', 'to_net_V', 'M00_AXIS', 'stream_out_switch_V', 'S_AXIS']
+            additional_debug_type = ['intf', 'intf', 'intf', 'intf', 'intf', 'intf', 'intf_port']
+        else: #no output switch
+            additional_debug_ips = ['application_bridge_inst', 'application_bridge_inst', 'application_bridge_inst', 'application_bridge_inst',  'applicationRegion/custom_switch_inst', None]
+            additional_debug_ports = ['from_net_V', 'to_app_V', 'from_app_V', 'to_net_V', 'stream_out_switch_V', 'S_AXIS']
+            additional_debug_type = ['intf', 'intf', 'intf', 'intf', 'intf', 'intf_port']
 
         additional_debug_index = 0
         for debug_interface_index in range(num_debug_interfaces, num_debug_interfaces+len(additional_debug_ips)):
@@ -608,13 +619,13 @@ def add_debug_interfaces(outDir, num_debug_interfaces, fpga):
             tcl_debug_app.makeConnection(
                     'intf',
                     {
-                    'name':'system_ila_streams' + instName,
+                    'name':'system_ila_streams',
                     'type':'intf',
-                    'port_name':'SLOT_' + (debug_interface_index) + '_BRAM'
+                    'port_name':'SLOT_' + str(debug_interface_index) + '_BRAM'
                     },
                     {
                     'name':'applicationRegion/custom_switch_inst',
-                    'type':'pins',
+                    'type':'intf',
                     'port_name':'mac_table_V_PORTA'
                     }
                     )
@@ -622,13 +633,13 @@ def add_debug_interfaces(outDir, num_debug_interfaces, fpga):
             tcl_debug_app.makeConnection(
                     'intf',
                     {
-                    'name':'system_ila_streams' + instName,
+                    'name':'system_ila_streams',
                     'type':'intf',
-                    'port_name':'SLOT_' + (debug_interface_index) + '_BRAM'
+                    'port_name':'SLOT_' + str(debug_interface_index) + '_BRAM'
                     },
                     {
                     'name':'applicationRegion/custom_switch_inst',
-                    'type':'pins',
+                    'type':'intf',
                     'port_name':'ip_table_V_PORTA'
                     }
                     )
@@ -860,7 +871,7 @@ def makeTCLFiles(fpga, projectName, networkBridges):
     tclMain.addSource(outDir + '/' + str(fpga.num) + '_bridge_connections.tcl')
 
     if(num_debug_interfaces > 0):
-        addSource(outDir + '/' + str(fpga.num) + '_debug.tcl')
+        tclMain.addSource(outDir + '/' + str(fpga.num) + '_debug.tcl')
    
     tclMain.tprint('validate_bd_design')
 

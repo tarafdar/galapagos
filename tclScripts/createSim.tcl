@@ -64,6 +64,9 @@ set obj [get_filesets sources_1]
 set files [glob shells/$boardName/srcs/top_sim.v]
 import_files -norecurse -fileset $obj $files
 
+set files [glob shells/$boardName/srcs/*.csv]
+import_files -norecurse -fileset $obj $files
+
 # Set 'sources_1' fileset object
 create_bd_design "pr"
 open_bd_design {projects/$projDir/$projName/$projName.srcs/sources_1/bd/pr/pr.bd}

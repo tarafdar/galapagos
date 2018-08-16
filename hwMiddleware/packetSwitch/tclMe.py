@@ -6,11 +6,9 @@ class tclMeFile():
     def __init__(self, fileName):
         self.fileHandle = open(fileName + '.tcl', 'w')
     
-    def tprint(self, cmd, end):
+    def tprint(self, cmd, end='\n'):
         self.fileHandle.write(cmd + end)
     
-    def tprint(self, cmd):
-        self.fileHandle.write(cmd + '\n')
 
 
     def createHierarchy(self, hierarchy):
@@ -21,9 +19,9 @@ class tclMeFile():
 
     def setProperties(self, inst_name, properties):
         if properties != None:
-            self.tprint('set_property -dict [list ')
+            self.tprint('set_property -dict [list ', '')
         for prop in properties:
-            self.tprint(prop + ' ')
+            self.tprint(prop + ' ', end ='')
         if properties != None:
             self.tprint('] [get_bd_cells ' + inst_name + ']')
 
@@ -54,36 +52,36 @@ class tclMeFile():
 
     def makeConnection(self, conn_type, source, sink):
         if conn_type == 'net':
-            self.tprint('connect_bd_net [')
+            self.tprint('connect_bd_net [', end = '')
         elif conn_type == 'intf':
-            self.tprint('connect_bd_intf_net [')
+            self.tprint('connect_bd_intf_net [', end = '')
     
         if source['type'] == 'port':
-            self.tprint('get_bd_ports ')
-            self.tprint(source['port_name'] + '] [')
+            self.tprint('get_bd_ports ', end = '')
+            self.tprint(source['port_name'] + '] [', end = '')
         elif source['type'] == 'intf_port':
-            self.tprint('get_bd_intf_ports ')
-            self.tprint(source['port_name'] + '] [')
+            self.tprint('get_bd_intf_ports ', end = '')
+            self.tprint(source['port_name'] + '] [', end = '')
         elif source['type'] == 'intf':
-            self.tprint('get_bd_intf_pins ')
-            self.tprint(source['name'] + '/' + source['port_name'] + '] [')
+            self.tprint('get_bd_intf_pins ', end = '')
+            self.tprint(source['name'] + '/' + source['port_name'] + '] [', end = '')
         elif source['type'] == 'pin':
-            self.tprint('get_bd_pins ')
-            self.tprint(source['name'] + '/' + source['port_name'] + '] [')
+            self.tprint('get_bd_pins ', end = '')
+            self.tprint(source['name'] + '/' + source['port_name'] + '] [', end = '')
             
     
         
         if sink['type'] == 'port':
-            self.tprint('get_bd_ports ')
-            self.tprint(sink['port_name'] + ']\n')
+            self.tprint('get_bd_ports ', end='')
+            self.tprint(sink['port_name'] + ']')
         elif sink['type'] == 'intf_port':
-            self.tprint('get_bd_intf_ports ')
-            self.tprint(sink['port_name'] + ']\n')
+            self.tprint('get_bd_intf_ports ', end='')
+            self.tprint(sink['port_name'] + ']')
         elif sink['type'] == 'intf':
-            self.tprint('get_bd_intf_pins ')
-            self.tprint(sink['name'] + '/' + sink['port_name'] + ']\n')
+            self.tprint('get_bd_intf_pins ', end='')
+            self.tprint(sink['name'] + '/' + sink['port_name'] + ']')
         elif sink['type'] == 'pin':
-            self.tprint('get_bd_pins ')
-            self.tprint(sink['name'] + '/' + sink['port_name'] + ']\n')
+            self.tprint('get_bd_pins ', end = '')
+            self.tprint(sink['name'] + '/' + sink['port_name'] + ']')
     
     

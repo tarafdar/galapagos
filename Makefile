@@ -35,8 +35,8 @@ CONF_DIR = ./HMPI/sw_kmeans
 #CONF_DIR = ./HMPI/sw_simple
 
 #input files for middleware
-LOGICALFILE=${CONF_DIR}/${CONF}/configuration_files/mpiLogical.xml
-MAPFILE=${CONF_DIR}/${CONF}/configuration_files/mpiMap.xml
+LOGICALFILE=${CONF_DIR}/${CONF}/mpiLogical.xml
+MAPFILE=${CONF_DIR}/${CONF}/mpiMap.xml
 
 BOARD = adm-8k5
 PART = xcku115-flva1517-2-e
@@ -82,8 +82,8 @@ createCluster: ${LOGICALFILE} ${MAPFILE}
 	mkdir -p projects
 	mkdir -p projects/${PROJECTNAME}
 	python hwMiddleware/packetSwitch/globalFPGAParser.py --logicalFile=${LOGICALFILE} --mapFile=${MAPFILE} --projectName=${PROJECTNAME}
-	chmod +x createCluster.sh
-	./createCluster.sh
+	#chmod +x createCluster.sh
+	#./createCluster.sh
 
 simCluster: ${LOGICALFILE} ${MAPFILE} 
 	mkdir -p projects
