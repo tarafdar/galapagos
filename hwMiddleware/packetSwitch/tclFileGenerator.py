@@ -3,90 +3,10 @@
 import sys
 import subprocess
 import os
-
+from tclMe import tclMeFile
 
 #interfaces constant
 #creates the standard interfaces, same for all fpgas
-
-
-
-def addTclCommand(tcl_file, cmd):
-    tcl_file.write(cmd + '\n')
-
-def createHierarchy(tcl_file, hierarchy):
-    tcl_file.write('create_bd_cell -type hier ' + hierarchy + '\n')
-
-
-def addSource(tcl_file, tcl_source):
-    tcl_file.write('source ' + tcl_source + '\n')
-
-def setProperties(tcl_file, inst_name, properties):
-    if properties != None:
-        tcl_file.write('set_property -dict [list ')
-    for prop in properties:
-        tcl_file.write(prop + ' ')
-    if properties != None:
-        tcl_file.write('] [get_bd_cells ' + inst_name + ']\n')
-
-def assign_address(tcl_file, master, slaves):
-    tcl_file.write('assign_bd_address [get_bd_addr_segs {' + master + '}]\n')
-    for slave in slaves:
-        tcl_file.write('set_property offset ' + slave['offset'] + ' [get_bd_addr_segs {' + slave['port'] + '}]\n')
-        tcl_file.write('set_property range '+  slave['range'] + ' [get_bd_addr_segs {'+ slave['port'] +  '}]\n')
-
-
-def instBlock(tcl_file, ip):
-
-    if 'vendor' in ip:
-        tcl_file.write('create_bd_cell -type ip -vlnv ' + ip['vendor'] + ':' + ip['type']+ ':' + ip['name'] + ' ' +  ip['inst'] + '\n')
-    else:
-        tcl_file.write('create_bd_cell -type ip -vlnv xilinx.com:ip:' + ip['name'] + ' ' +  ip['inst'] + '\n')
-
-    if 'clks' in ip:
-        for clk_name in ip['clks']:
-            tcl_file.write('connect_bd_net [get_bd_ports CLK] [get_bd_pins ' + ip['inst'] + '/' + clk_name + ']\n')
-
-    if 'resetns' in ip:
-        for reset_name in ip['resetns']:
-            tcl_file.write('connect_bd_net [get_bd_ports ARESETN] [get_bd_pins ' + ip['inst'] + '/' + reset_name + ']\n')
-   
-    if 'properties' in ip:
-        setProperties(tcl_file, ip['inst'], ip['properties'])
-
-def makeConnection(tcl_file, conn_type, source, sink):
-    if conn_type == 'net':
-        tcl_file.write('connect_bd_net [')
-    elif conn_type == 'intf':
-        tcl_file.write('connect_bd_intf_net [')
-
-    if source['type'] == 'port':
-        tcl_file.write('get_bd_ports ')
-        tcl_file.write(source['port_name'] + '] [')
-    elif source['type'] == 'intf_port':
-        tcl_file.write('get_bd_intf_ports ')
-        tcl_file.write(source['port_name'] + '] [')
-    elif source['type'] == 'intf':
-        tcl_file.write('get_bd_intf_pins ')
-        tcl_file.write(source['name'] + '/' + source['port_name'] + '] [')
-    elif source['type'] == 'pin':
-        tcl_file.write('get_bd_pins ')
-        tcl_file.write(source['name'] + '/' + source['port_name'] + '] [')
-        
-
-    
-    if sink['type'] == 'port':
-        tcl_file.write('get_bd_ports ')
-        tcl_file.write(sink['port_name'] + ']\n')
-    elif sink['type'] == 'intf_port':
-        tcl_file.write('get_bd_intf_ports ')
-        tcl_file.write(sink['port_name'] + ']\n')
-    elif sink['type'] == 'intf':
-        tcl_file.write('get_bd_intf_pins ')
-        tcl_file.write(sink['name'] + '/' + sink['port_name'] + ']\n')
-    elif sink['type'] == 'pin':
-        tcl_file.write('get_bd_pins ')
-        tcl_file.write(sink['name'] + '/' + sink['port_name'] + ']\n')
-
 
 
 
@@ -95,7 +15,7 @@ def userApplicationRegion_control_inst(tcl_user_app, num_ctrl_interfaces):
 
     #make dummy bram for control interface if no control interfaces
     if(num_ctrl_interfaces == 0):
-        instBlock(tcl_user_app,
+        tcl_user_app.instBlock(
                 {'name':'axi_vip',
                 'inst':'applicationRegion/axi_vip_ctrl',
                 'clks':['aclk'],
@@ -103,7 +23,7 @@ def userApplicationRegion_control_inst(tcl_user_app, num_ctrl_interfaces):
                 'properties':['CONFIG.PROTOCOL {AXI4LITE}', 'CONFIG.INTERFACE_MODE {SLAVE}']
                 }
                 )
-        makeConnection(tcl_user_app, 
+        tcl_user_app.makeConnection( 
                     'intf', 
                     {
                     'name':None,
@@ -116,7 +36,7 @@ def userApplicationRegion_control_inst(tcl_user_app, num_ctrl_interfaces):
                     }
                     )
     else:
-        instBlock(tcl_user_app, 
+        tcl_user_app.instBlock(tcl_user_app, 
                 {'name':'smartconnect', 
                 'inst':'applicationRegion/axi_interconnect_ctrl', 
                 'clks':['aclk'],
@@ -125,7 +45,7 @@ def userApplicationRegion_control_inst(tcl_user_app, num_ctrl_interfaces):
                     'CONFIG.NUM_MI {' + str(num_ctrl_interfaces) + '}']
                 }
                 )
-        makeConnection(tcl_user_app, 
+        tcl_user_app.makeConnection(tcl_user_app, 
                     'intf', 
                     {
                     'name':None,
@@ -146,7 +66,7 @@ def userApplicationRegion_mem_inst(tcl_user_app, num_mem_interfaces, shared):
             properties = ['CONFIG.NUM_MI {2}']
         else:
             properties = ['CONFIG.NUM_MI {1}']
-        instBlock(tcl_user_app, 
+        tcl_user_app.instBlock( 
                 {
                 'name':'smartconnect', 
                 'inst':'applicationRegion/axi_interconnect_mem',
@@ -155,7 +75,7 @@ def userApplicationRegion_mem_inst(tcl_user_app, num_mem_interfaces, shared):
                 'properties':properties
                 }
                 )
-        makeConnection(tcl_user_app, 
+        tcl_user_app.makeConnection( 
                     'intf', 
                     {
                     'name':'applicationRegion/axi_interconnect_mem',
@@ -168,7 +88,7 @@ def userApplicationRegion_mem_inst(tcl_user_app, num_mem_interfaces, shared):
                     }
                     )
         if shared:
-            makeConnection(tcl_user_app, 
+            tcl_user_app.makeConnection(
                         'intf', 
                         {
                         'name':'applicationRegion/axi_interconnect_mem',
@@ -184,7 +104,7 @@ def userApplicationRegion_mem_inst(tcl_user_app, num_mem_interfaces, shared):
 
     else:
         #no mem interface use VIP instead 
-        instBlock(tcl_user_app, 
+        tcl_user_app.instBlock( 
                 {
                 'name':'axi_vip', 
                 'inst':'applicationRegion/axi_vip_mem_0', 
@@ -193,7 +113,7 @@ def userApplicationRegion_mem_inst(tcl_user_app, num_mem_interfaces, shared):
                 'properties':['CONFIG.INTERFACE_MODE {MASTER}', 'CONFIG.DATA_WIDTH {512}']
                 }
                 )
-        makeConnection(tcl_user_app, 
+        tcl_user_app.makeConnection( 
                     'intf', 
                     {
                     'name':'applicationRegion/axi_vip_mem_0',
@@ -206,7 +126,7 @@ def userApplicationRegion_mem_inst(tcl_user_app, num_mem_interfaces, shared):
                     }
                     )
         if shared:
-            instBlock(tcl_user_app, 
+            tcl_user_app.instBlock( 
                      {
                       'name':'axi_vip', 
                       'inst':'applicationRegion/axi_vip_mem_1', 
@@ -215,7 +135,7 @@ def userApplicationRegion_mem_inst(tcl_user_app, num_mem_interfaces, shared):
                       'properties':['CONFIG.INTERFACE_MODE {MASTER}', 'CONFIG.DATA_WIDTH {512}']
                       }
                       )
-            makeConnection(tcl_user_app,
+            tcl_user_app.makeConnection(
                           'intf', 
                           {
                           'name':'applicationRegion/axi_vip_mem_1',
@@ -249,7 +169,7 @@ def userApplicationRegion_inst_kernels_count_interfaces(tcl_user_app, fpga):
     for kernel in fpga.kernels:
         instName = kernel.name + "_inst_" + str(kernel.id_num)
         #instantiate kernel
-        instBlock(tcl_user_app,
+        tcl_user_app.instBlock(
                 {
                 'vendor':kernel.ip_vendor,
                 'type':kernel.ip_type,
@@ -261,7 +181,7 @@ def userApplicationRegion_inst_kernels_count_interfaces(tcl_user_app, fpga):
                 )
         #instantiate and connect constant for id
         if (kernel.id_port != ''):
-            instBlock(tcl_user_app,
+            tcl_user_app.instBlock(
                     {
                     'name':'xlconstant',
                     'inst': 'applicationRegion/id_' + str(kernel.id_num),
@@ -269,7 +189,7 @@ def userApplicationRegion_inst_kernels_count_interfaces(tcl_user_app, fpga):
                         'CONFIG.CONST_VAL {'+ str(kernel.id_num)+'}']
                     }
                     )
-            makeConnection(tcl_user_app,
+            tcl_user_app.makeConnection(
                     'net', 
                         {
                         'name':'applicationRegion/id_' + str(kernel.id_num),
@@ -284,7 +204,7 @@ def userApplicationRegion_inst_kernels_count_interfaces(tcl_user_app, fpga):
                         )
    
         for constant in kernel.constants:
-            instBlock(tcl_user_app, 
+            tcl_user_app.instBlock( 
                     {
                     'name':'xlconstant',
                     'inst': 'applicationRegion/' + instName + '_' + constant.name,
@@ -292,7 +212,7 @@ def userApplicationRegion_inst_kernels_count_interfaces(tcl_user_app, fpga):
                         ' CONFIG.CONST_VAL {'+ constant.val + '}']
                     }
                     )
-            makeConnection(tcl_user_app,
+            tcl_user_app.makeConnection(
                     'net',
                     {
                     'name':'applicationRegion/' + instName + '_' + constant.name ,
@@ -313,7 +233,7 @@ def userApplicationRegion_inst_kernels_count_interfaces(tcl_user_app, fpga):
 
 def userApplicationRegion_create_switches(tcl_user_app, fpga):
     
-    instBlock(tcl_user_app,
+    tcl_user_app.instBlock(
             {
             'name':'blk_mem_gen',
             'inst':'applicationRegion/blk_mem_switch_rom',
@@ -321,7 +241,7 @@ def userApplicationRegion_create_switches(tcl_user_app, fpga):
             )
     
     if fpga.comm == 'tcp':
-        instBlock(tcl_user_app,
+        tcl_user_app.instBlock(
             {'vendor':'xilinx.com',
             'type':'hls',
             'name':'ip_dest_filter',
@@ -344,9 +264,9 @@ def userApplicationRegion_create_switches(tcl_user_app, fpga):
                     'CONFIG.Load_Init_File {true}',
                     'CONFIG.Coe_File {../../../../../../../ip.coe}']
         
-        setProperties(tcl_user_app, 'applicationRegion/blk_mem_switch_rom', properties)
+        tcl_user_app.setProperties('applicationRegion/blk_mem_switch_rom', properties)
         
-        makeConnection(tcl_user_app,
+        tcl_user_app.makeConnection(
             'net',
             {
             'name':'network/ip_constant_block_inst',
@@ -360,7 +280,7 @@ def userApplicationRegion_create_switches(tcl_user_app, fpga):
             }
             )
         
-        makeConnection(tcl_user_app,
+        tcl_user_app.makeConnection(
                     'intf',
                     {
                     'name':'applicationRegion/custom_switch_inst',
@@ -375,8 +295,7 @@ def userApplicationRegion_create_switches(tcl_user_app, fpga):
                     )
 
     elif fpga.comm == 'eth':
-        instBlock(
-                tcl_user_app, 
+        tcl_user_app.instBlock( 
                 {'vendor':'xilinx.com',
                 'type':'hls',
                 'name':'eth_dest_filter',
@@ -403,9 +322,9 @@ def userApplicationRegion_create_switches(tcl_user_app, fpga):
                     'CONFIG.Load_init_file {true}',
                     'CONFIG.Coe_File {../../../../../../../mac.coe}']
 
-        setProperties(tcl_user_app,'applicationRegion/blk_mem_switch_rom', properties)
+        tcl_user_app.setProperties('applicationRegion/blk_mem_switch_rom', properties)
         
-        makeConnection(tcl_user_app,
+        tcl_user_app.makeConnection(
                     'net', 
                     {
                      'name':'network/ip_constant_block_inst',
@@ -419,7 +338,7 @@ def userApplicationRegion_create_switches(tcl_user_app, fpga):
                     }
                     )
         
-        makeConnection(tcl_user_app,
+        tcl_user_app.makeConnection(
                 'intf',
                 {
                 'name':'applicationRegion/custom_switch_inst',
@@ -434,7 +353,7 @@ def userApplicationRegion_create_switches(tcl_user_app, fpga):
                 )
    
 
-    instBlock(tcl_user_app,
+    tcl_user_app.instBlock(
             {
             'name':'axis_switch',
             'inst':'applicationRegion/input_switch',
@@ -457,12 +376,12 @@ def userApplicationRegion_create_switches(tcl_user_app, fpga):
         properties.append('CONFIG.M' + switch_port_index_str + '_AXIS_HIGHTDEST {' + kernel_index_str + '}')
         switch_port_index = switch_port_index + 1            
                 
-    setProperties(tcl_user_app, 'applicationRegion/input_switch', properties)
+    tcl_user_app.setProperties('applicationRegion/input_switch', properties)
 
 
 
     if len(fpga.kernels) > 1:
-        instBlock(tcl_user_app, 
+        tcl_user_app.instBlock( 
                 {
                 'name':'axis_switch',
                 'inst':'applicationRegion/output_switch',
@@ -494,7 +413,7 @@ def userApplicationRegion_kernel_connect_switches(tcl_user_app, fpga):
         
         if (len(fpga.kernels) > 1):
             
-            makeConnection(tcl_user_app,
+            tcl_user_app.makeConnection(
                     'intf', 
                     {
                     'name':'applicationRegion/input_switch',
@@ -508,7 +427,7 @@ def userApplicationRegion_kernel_connect_switches(tcl_user_app, fpga):
                     }
                     )
             
-            makeConnection(tcl_user_app,
+            tcl_user_app.makeConnection(
                     'intf',
                     {
                     'name':'applicationRegion/' + instName ,
@@ -523,7 +442,7 @@ def userApplicationRegion_kernel_connect_switches(tcl_user_app, fpga):
                     )
         else:
             
-            makeConnection(tcl_user_app,
+            tcl_user_app.makeConnection(
                     'intf',
                     {
                     'name':'applicationRegion/input_switch',
@@ -537,7 +456,7 @@ def userApplicationRegion_kernel_connect_switches(tcl_user_app, fpga):
                     }
                     )
             
-            makeConnection(tcl_user_app,
+            tcl_user_app.makeConnection(
                     'intf',
                     {
                     'name':'applicationRegion/'+ instName,
@@ -553,7 +472,7 @@ def userApplicationRegion_kernel_connect_switches(tcl_user_app, fpga):
             
         if kernel.ctrl_interface != None:
             ctrl_interface_index_str = "%02d"%ctrl_interface_index
-            makeConnection(tcl_user_app,
+            tcl_user_app.makeConnection(
                     'intf',
                     {'name':'applicationRegion/axi_interconnect_ctrl',
                     'type':'intf',
@@ -570,7 +489,7 @@ def userApplicationRegion_kernel_connect_switches(tcl_user_app, fpga):
         for mem_interface in kernel.mem_interfaces:
             mem_interface_index_str = "%02d"%mem_interface_index
             
-            makeConnection(tcl_user_app,
+            tcl_user_app.makeConnection(
                     'intf',
                     {
                     'name':'applicationRegion/' + instName,
@@ -588,7 +507,7 @@ def userApplicationRegion_kernel_connect_switches(tcl_user_app, fpga):
         kernel_index = kernel_index + 1
 
     
-    makeConnection(tcl_user_app,
+    tcl_user_app.makeConnection(
             'intf',
             {
             'name':'applicationRegion/custom_switch_inst',
@@ -602,7 +521,7 @@ def userApplicationRegion_kernel_connect_switches(tcl_user_app, fpga):
             )
     
     if(len(fpga.kernels) > 1):
-        makeConnection(tcl_user_app,
+        tcl_user_app.makeConnection(
                 'intf',
                 {
                 'name':'applicationRegion/output_switch',
@@ -617,12 +536,12 @@ def userApplicationRegion_kernel_connect_switches(tcl_user_app, fpga):
                 )
 
 def add_debug_interfaces(outDir, num_debug_interfaces, fpga):
-    tcl_debug_app = open( outDir + '/' + str(fpga.num) + '_debug.tcl', 'w')
+    tcl_debug_app = tclMeFile( outDir + '/' + str(fpga.num) + '_debug')
 
     #adding ILA ports
     if num_debug_interfaces > 0:
         
-        instBlock(tcl_user_app,
+        tcl_debug_app.instBlock(
                 {
                 'name':'system_ila',
                 'inst':'system_ila_streams',
@@ -637,7 +556,7 @@ def add_debug_interfaces(outDir, num_debug_interfaces, fpga):
             properties.append('CONFIG.C_SLOT_' + str(debug_interface_index) + '_INTF_TYPE {xilinx.com:interface:axis_rtl:1.0}')
 
         properties.append('CONFIG.C_SLOT_' + str(num_debug_interfaces + 7) + '_INTF_TYPE {xilinx.com:interface:bram_rtl:1.0} ')
-        setProperties(tcl_debug_app, 'system_ila_streams', properties) 
+        tcl_debug_app.setProperties('system_ila_streams', properties) 
 
         debug_interface_index = 0
         
@@ -647,7 +566,7 @@ def add_debug_interfaces(outDir, num_debug_interfaces, fpga):
             
             for debug_interface in kernel.debug_interfaces:
                 
-                makeConnection(tcl_debug_app,
+                tcl_debug_app.makeConnection(
                         'intf',
                     {
                     'name':'applicationRegion/' + instName,
@@ -669,7 +588,7 @@ def add_debug_interfaces(outDir, num_debug_interfaces, fpga):
 
         additional_debug_index = 0
         for debug_interface_index in range(num_debug_interfaces, num_debug_interfaces+len(additional_debug_ips)):
-            makeConnection(tcl_debug_app,
+            tcl_debug_app.makeConnection(
                     'intf', 
                         {
                         'name':additional_debug_ips[additional_debug_index],
@@ -686,7 +605,7 @@ def add_debug_interfaces(outDir, num_debug_interfaces, fpga):
         
         debug_interface_index = len(additional_debug_ips) + 1 
         if fpga.comm == 'eth':
-            makeConnection(tcl_debug_app,
+            tcl_debug_app.makeConnection(
                     'intf',
                     {
                     'name':'system_ila_streams' + instName,
@@ -700,7 +619,7 @@ def add_debug_interfaces(outDir, num_debug_interfaces, fpga):
                     }
                     )
         else:
-            makeConnection(tcl_debug_app,
+            tcl_debug_app.makeConnection(
                     'intf',
                     {
                     'name':'system_ila_streams' + instName,
@@ -744,12 +663,12 @@ def userApplicationRegion_assign_addresses(tcl_user_app, fpga, shared):
                         'range':'4G'
                         }
                         ] 
-            assign_address(tcl_user_app, 'S_AXI_MEM_0/Reg', addresses)
+            tcl_user_app.assign_address('S_AXI_MEM_0/Reg', addresses)
             if shared:
-                assign_address(tcl_user_app, 'S_AXI_MEM_1/Reg', addresses)
+                tcl_user_app.assign_address('S_AXI_MEM_1/Reg', addresses)
 
         if kernel.ctrl_interface != None:
-            assign_address(tcl_user_app, 'applicationRegion/' + instName + '/' + kernel.ctrl_interface.name + '/Reg0', [])
+            tcl_user_app.assign_address('applicationRegion/' + instName + '/' + kernel.ctrl_interface.name + '/Reg0', [])
   
 
 
@@ -757,8 +676,9 @@ def userApplicationRegion_assign_addresses(tcl_user_app, fpga, shared):
 
 def userApplicationRegion(outDir, fpga, address_space):
 
-    tcl_user_app = open( outDir + '/' + str(fpga.num) + '_app.tcl', 'w')
-    createHierarchy(tcl_user_app, 'applicationRegion')
+    tcl_user_app = tclMeFile( outDir + '/' + str(fpga.num) + '_app')
+    #tcl_user_app = open( outDir + '/' + str(fpga.num) + '_app.tcl', 'w')
+    tcl_user_app.createHierarchy('applicationRegion')
     
     num_ctrl_interfaces, num_mem_interfaces, num_debug_interfaces = userApplicationRegion_inst_kernels_count_interfaces(tcl_user_app, fpga)
     userApplicationRegion_control_inst(tcl_user_app, num_ctrl_interfaces)
@@ -775,7 +695,7 @@ def net_bridge_constants(tcl_net, fpga):
 
     ip_addr = fpga.ip_addr.split(".")
     #tcl_net.write('create_bd_cell -type ip -vlnv user.org:user:ip_constant_block:1.0 network/ip_constant_block_inst\n')
-    instBlock(tcl_net,
+    tcl_net.instBlock(
             {
             'vendor':'user.org',
             'type':'user',
@@ -801,28 +721,29 @@ def net_bridge_constants(tcl_net, fpga):
     
     properties = properties + ['CONFIG.C_MAC {0x' + fpga.mac_addr.replace(":","") + '}']
     
-    setProperties(tcl_net, 'network/ip_constant_block_inst', properties)
+    tcl_net.setProperties('network/ip_constant_block_inst', properties)
 
     if fpga.comm == 'tcp':
-        addSource(tcl_net, './tclScripts/pr_tcp_bridge.tcl')
+        tcl_net.addSource('./tclScripts/pr_tcp_bridge.tcl')
     elif fpga.comm == 'eth': 
-        addSource(tcl_net, './tclScripts/pr_eth_bridge.tcl')
+        tcl_net.addSource('./tclScripts/pr_eth_bridge.tcl')
     
 
 
 def net_bridge(outDir, fpga):
-    tcl_net = open( outDir + '/' + str(fpga.num) + '_net.tcl', 'w')
-    createHierarchy(tcl_net, 'network')
+    tcl_net = tclMeFile( outDir + '/' + str(fpga.num) + '_net')
+    
+    tcl_net.createHierarchy('network')
     net_bridge_constants(tcl_net, fpga)
 
 
 def bridge_connections(outDir, fpga):
-    tcl_bridge_connections = open( outDir + '/' + str(fpga.num) + '_bridge_connections.tcl', 'w')
+    tcl_bridge_connections = tclMeFile( outDir + '/' + str(fpga.num) + '_bridge_connections')
 
     #no bridge directly connect
     if fpga.app_bridge == None:
         
-        makeConnection(tcl_bridge_connections,
+        tcl_bridge_connections.makeConnection(
                 'intf', 
                 {
                 'name':'applicationRegion/custom_switch_inst',
@@ -836,7 +757,7 @@ def bridge_connections(outDir, fpga):
                 }
                 )
         
-        makeConnection(tcl_bridge_connections,
+        tcl_bridge_connections.makeConnection(
                 'intf',
                 {
                 'name':'network/network_bridge_inst',
@@ -851,7 +772,7 @@ def bridge_connections(outDir, fpga):
                 )
     else:
         
-        instBlock(tcl_bridge_connections,
+        tcl_bridge_connections.instBlock(
                 {
                 'vendor':fpga.app_bridge.kernel.ip_vendor,
                 'type':fpga.app_bridge.kernel.ip_type,
@@ -862,7 +783,7 @@ def bridge_connections(outDir, fpga):
                 }
                 )
         
-        makeConnection(tcl_bridge_connections,
+        tcl_bridge_connections.makeConnection(
                 'intf',
                 {
                 'name':'application_bridge_inst',
@@ -876,7 +797,7 @@ def bridge_connections(outDir, fpga):
                 }
                 )
         
-        makeConnection(tcl_bridge_connections,
+        tcl_bridge_connections.makeConnection(
                 'intf',
                 {
                 'name':'applicationRegion/custom_switch_inst',
@@ -890,7 +811,7 @@ def bridge_connections(outDir, fpga):
                 }
                 )
         
-        makeConnection(tcl_bridge_connections, 
+        tcl_bridge_connections.makeConnection(
                 'intf',
                 {
                 'name':'application_bridge_inst',
@@ -904,7 +825,7 @@ def bridge_connections(outDir, fpga):
                 }
                 )
 
-        makeConnection(tcl_bridge_connections,
+        tcl_bridge_connections.makeConnection(
                 'intf',
                 {
                 'name':'network/network_bridge_inst',
@@ -932,14 +853,14 @@ def makeTCLFiles(fpga, projectName, networkBridges):
     if(num_debug_interfaces > 0):
         add_debug_interfaces(outDir, num_debug_interfaces, fpga)
 
-    tclMain = open( outDir + '/' + str(fpga.num) + '.tcl', 'w')
-    addSource(tclMain, './tclScripts/pr_standard_interfaces.tcl')
-    addSource(tclMain, outDir + '/' + str(fpga.num) + '_net.tcl')
-    addSource(tclMain,  outDir + '/' + str(fpga.num) + '_app.tcl')
-    addSource(tclMain, outDir + '/' + str(fpga.num) + '_bridge_connections.tcl')
+    tclMain = tclMeFile( outDir + '/' + str(fpga.num))
+    tclMain.addSource('./tclScripts/pr_standard_interfaces.tcl')
+    tclMain.addSource(outDir + '/' + str(fpga.num) + '_net.tcl')
+    tclMain.addSource(outDir + '/' + str(fpga.num) + '_app.tcl')
+    tclMain.addSource(outDir + '/' + str(fpga.num) + '_bridge_connections.tcl')
 
     if(num_debug_interfaces > 0):
         addSource(outDir + '/' + str(fpga.num) + '_debug.tcl')
    
-    addTclCommand(tclMain, 'validate_bd_design')
+    tclMain.tprint('validate_bd_design')
 

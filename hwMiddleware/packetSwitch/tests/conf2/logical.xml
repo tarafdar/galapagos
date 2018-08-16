@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cluster>
+    <kernel> axi_fifo_mm_s 
+        <vendor> xilinx.com </vendor>
+        <version> 4.1 </version>
+        <type> ip </type>
+        <num> 0 </num>
+        <rep> 1 </rep>
+        <clk> s_axi_aclk </clk>
+        <aresetn> s_axi_aresetn </aresetn>
+        <interface>
+            <direction> in </direction>
+            <name> AXI_STR_RXD </name>
+        </interface>
+        <interface>
+            <direction> out </direction>
+            <name> AXI_STR_TXD </name>
+        </interface>
+        <ctrl_interface>
+            <name> S_AXI </name>
+            <offset> 0 </offset>
+        </ctrl_interface>
+    </kernel>
+	<kernel> cpu
+        <num> 1 </num>
+        <rep> 1 </rep>
+        <interface>
+            <direction> in </direction>
+            <name> stream_in </name>
+        </interface>
+        <interface>
+            <direction> out </direction>
+            <name> stream_out </name>
+        </interface>
+	</kernel>
+</cluster>
