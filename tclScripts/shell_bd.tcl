@@ -1,7 +1,11 @@
-source ./tclScripts/utils.tcl
-
 set boardName [lindex $argv 0]
 set partName [lindex $argv 1]
+
+if {$argc == 0} {
+  exit
+}
+source ./tclScripts/utils.tcl
+
 puts "shell_bd.tcl boardName: $boardName partName: $partName"
 
 ################################################################
@@ -389,6 +393,7 @@ proc create_hier_cell_network { parentCell nameHier } {
 
 # Hierarchical cell: mem_interface
 proc create_hier_cell_mem_interface { parentCell nameHier } {
+  source tclScripts/utils.tcl
 
   variable script_folder
 

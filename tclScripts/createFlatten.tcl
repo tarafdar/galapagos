@@ -71,7 +71,9 @@ import_files -norecurse -fileset $obj $files
 
 create_bd_design "shell"
 open_bd_design {projects/$projDir/$projName/$projName.srcs/sources_1/bd/shell/shell.bd}
-source ./tclScripts/shell_bd.tcl $boardName $partName
+set argv [list $boardName $partName]
+set argc 2
+source ./tclScripts/shell_bd.tcl
 
 # Set 'sources_1' fileset file properties for remote files
 #set file "projects/$projDir/$projName/$projName.srcs/sources_1/bd/srcs/shell.bd"

@@ -13,7 +13,7 @@ proc get_part_name_from_board_name {board_name} {
 	    return xcku115-flva1517-2-e
 	} else {
 		puts "Unsupported board name: "
-		puts $boardName
+		puts $board_name
 		exit
 	}
 }
