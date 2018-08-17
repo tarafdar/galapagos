@@ -1,0 +1,8 @@
+*.str
+*.jou
+*.log
+*.wdb
+*.pb
+xsim.dir
+.Xil
+.vscode

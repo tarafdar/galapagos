@@ -1,0 +1,32 @@
+{
+   "packets":[
+     {
+        "flits":[
+           {
+              "data": 123,
+              "keep": 255,
+              "last": 0
+           },
+           {
+              "data": 2048,
+              "keep": 255,
+              "last": 0
+           },
+           {
+              "data": 65,
+              "keep": 255,
+              "last": 1
+           }
+        ]
+     },
+     {
+        "flits":[
+           {
+              "data": 14,
+              "keep": 255,
+              "last": 1
+           }
+        ]
+     }
+   ]
+}

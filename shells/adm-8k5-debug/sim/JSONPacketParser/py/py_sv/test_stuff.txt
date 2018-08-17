@@ -1,0 +1,3 @@
+exec xvlog -sv ./<file name>.sv
+exec xelab <module name> -debug typical
+exec xsim work.<module name> -gui

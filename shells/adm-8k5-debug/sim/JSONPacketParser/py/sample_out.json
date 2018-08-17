@@ -1,0 +1,325 @@
+{
+  "packets": [
+    {
+      "interface": "Token", 
+      "width": 0, 
+      "type": "csim", 
+      "payload": [
+        {
+          "last": 0, 
+          "custom": 0, 
+          "data": 43690, 
+          "keep": 0
+        }
+      ]
+    }, 
+    {
+      "interface": "axis_net", 
+      "width": 32, 
+      "type": "flit", 
+      "payload": [
+        {
+          "last": 0, 
+          "custom": 1, 
+          "data": 18140330, 
+          "keep": 15
+        }, 
+        {
+          "last": 0, 
+          "custom": 1, 
+          "data": 16711686, 
+          "keep": 15
+        }, 
+        {
+          "last": 0, 
+          "custom": 1, 
+          "data": 68640, 
+          "keep": 15
+        }, 
+        {
+          "last": 0, 
+          "custom": 0, 
+          "data": 12, 
+          "keep": 15
+        }, 
+        {
+          "last": 0, 
+          "custom": 0, 
+          "data": 0, 
+          "keep": 15
+        }, 
+        {
+          "last": 0, 
+          "custom": 0, 
+          "data": 0, 
+          "keep": 15
+        }, 
+        {
+          "last": 0, 
+          "custom": 0, 
+          "data": 256, 
+          "keep": 15
+        }, 
+        {
+          "last": 0, 
+          "custom": 0, 
+          "data": 65280, 
+          "keep": 15
+        }, 
+        {
+          "last": 0, 
+          "custom": 1, 
+          "data": 0, 
+          "keep": 15
+        }, 
+        {
+          "last": 0, 
+          "custom": 0, 
+          "data": 123, 
+          "keep": 15
+        }, 
+        {
+          "last": 0, 
+          "custom": 0, 
+          "data": 321, 
+          "keep": 15
+        }, 
+        {
+          "last": 0, 
+          "custom": 0, 
+          "data": 321, 
+          "keep": 15
+        }, 
+        {
+          "last": 0, 
+          "custom": 0, 
+          "data": 123, 
+          "keep": 15
+        }, 
+        {
+          "last": 0, 
+          "custom": 0, 
+          "data": 321, 
+          "keep": 15
+        }, 
+        {
+          "last": 0, 
+          "custom": 0, 
+          "data": 321, 
+          "keep": 15
+        }, 
+        {
+          "last": 0, 
+          "custom": 0, 
+          "data": 123, 
+          "keep": 15
+        }, 
+        {
+          "last": 0, 
+          "custom": 0, 
+          "data": 321, 
+          "keep": 15
+        }, 
+        {
+          "last": 1, 
+          "custom": 0, 
+          "data": 321, 
+          "keep": 15
+        }
+      ], 
+      "header": {
+        "info": {
+          "mac_src": 291,
+          "mac_dst": 251,
+          "dst": 25
+
+        }, 
+        "type": "ethernet"
+      }
+    }, 
+    {
+      "interface": "axis_net", 
+      "width": 32, 
+      "type": "flit", 
+      "payload": [
+        {
+          "last": 1, 
+          "custom": 0, 
+          "data": 3203391149, 
+          "keep": 15
+        }
+      ],
+      "header":{
+        "info": {
+          "dst_rank":126,
+          "src_rank":434,
+          "packet_type":2,
+          "size":575,
+          "tag":31256,
+          "mac_addr_dst":2135,
+          "mac_addr_src":324,
+          "ip_addr_dst":231,
+          "ip_addr_src":234,
+          "last":0
+        },
+        "type": "mpi"
+      }
+    }, 
+    {
+      "interface": "axis_net", 
+      "width": 32, 
+      "type": "flit", 
+      "payload": [
+        {
+          "last": 1, 
+          "custom": 0, 
+          "data": 3203391149, 
+          "keep": 15
+        }
+      ]
+    }, 
+    {
+      "interface": "axis_net", 
+      "width": 32, 
+      "type": "flit", 
+      "payload": [
+        {
+          "last": 1, 
+          "custom": 0, 
+          "data": 3735928559, 
+          "keep": 15
+        }
+      ]
+    }, 
+    {
+      "interface": "axis_net", 
+      "width": 32, 
+      "type": "flit", 
+      "payload": [
+        {
+          "last": 1, 
+          "custom": 0, 
+          "data": 3203391149, 
+          "keep": 15
+        }
+      ]
+    }, 
+    {
+      "interface": "axis_net", 
+      "width": 32, 
+      "type": "flit", 
+      "payload": [
+        {
+          "last": 1, 
+          "custom": 0, 
+          "data": 3203391149, 
+          "keep": 15
+        }
+      ]
+    }, 
+    {
+      "interface": "axis_net", 
+      "width": 32, 
+      "type": "flit", 
+      "payload": [
+        {
+          "last": 1, 
+          "custom": 0, 
+          "data": 3735928559, 
+          "keep": 15
+        }
+      ]
+    }, 
+    {
+      "interface": "axis_net", 
+      "width": 32, 
+      "type": "flit", 
+      "payload": [
+        {
+          "last": 1, 
+          "custom": 0, 
+          "data": 3203391149, 
+          "keep": 15
+        }
+      ]
+    }, 
+    {
+      "interface": "axis_net", 
+      "width": 32, 
+      "type": "flit", 
+      "payload": [
+        {
+          "last": 1, 
+          "custom": 0, 
+          "data": 3203391149, 
+          "keep": 15
+        }
+      ]
+    }, 
+    {
+      "interface": "axis_net", 
+      "width": 32, 
+      "type": "flit", 
+      "payload": [
+        {
+          "last": 1, 
+          "custom": 0, 
+          "data": 3735928559, 
+          "keep": 15
+        }
+      ]
+    }, 
+    {
+      "interface": "axis_net", 
+      "width": 32, 
+      "type": "flit", 
+      "payload": [
+        {
+          "last": 1, 
+          "custom": 0, 
+          "data": 4289396650, 
+          "keep": 15
+        }
+      ]
+    }, 
+    {
+      "interface": "axis_net", 
+      "width": 32, 
+      "type": "flit", 
+      "payload": [
+        {
+          "last": 1, 
+          "custom": 1, 
+          "data": 3722304989, 
+          "keep": 15
+        }
+      ]
+    }, 
+    {
+      "interface": "axis_s2mmStatus", 
+      "width": 8, 
+      "type": "flit", 
+      "payload": [
+        {
+          "last": 1, 
+          "custom": 0, 
+          "data": 128, 
+          "keep": 0
+        }
+      ]
+    }, 
+    {
+      "interface": "END", 
+      "width": 0, 
+      "type": "csim", 
+      "payload": [
+        {
+          "last": 0, 
+          "custom": 0, 
+          "data": 6, 
+          "keep": 0
+        }
+      ]
+    }
+  ]
+}

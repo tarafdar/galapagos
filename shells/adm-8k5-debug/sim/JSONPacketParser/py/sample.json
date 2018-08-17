@@ -1,0 +1,97 @@
+/*
+This is a sample comment
+*/
+
+{ "packets": [
+  {
+    "type": "csim", //this is another comment
+    "interface": "Token",
+    "width": 0,
+    "payload": [
+      {"data": "0xAAAA","keep": 0,"last": 0,"custom": 0}
+    ]
+  },{
+    "type": "flit",
+    "interface": "axis_net",
+    "width": 32,
+    "header":{"type":"ethernet", "info":{"a":"0x123"}},
+    "payload": [
+      {"data": "0x0114CCAA","keep": 15,"last": 0,"custom": 1},
+      {"data": "0x00FF0006","keep": "ALL","last": 0,"custom": 1},
+      {"data": "0x00010C20","keep": "ALL","last": 0,"custom": 1},
+      {"data": "0x0000000C","keep": "ALL","last": 0,"custom": 0},
+      {"data": "0x00000000","keep": "ALL","last": 0,"custom": 0},
+      {"data": "0x00000000","keep": "ALL","last": 0,"custom": 0},
+      {"data": "0x00000100","keep": "ALL","last": 0,"custom": 0},
+      {"data": "0x0000FF00","keep": "ALL","last": 0,"custom": 0},
+      {"data": "0x00000000","keep": "ALL","last": 0,"custom": 1},
+      {"loop": {
+        "start": 0, "end": 3, "index": "i",
+        "body": [
+          {"data": 123,"keep": "ALL","last": 0,"custom": 0},
+          {"loop": {
+            "start": 0, "end": 2, "index": "j",
+            "body": [
+              {"data": 321,"keep": "ALL","last": 0,"custom": 0}
+            ]
+          }}
+        ]
+      }}
+    ]
+  },{
+    "type": "loop",
+    "start": 0, "end": 3, "index": "i",
+    "body": [{
+        "type": "loop",
+        "start" : 0, "end": 2, "index": "j",
+        "body": [{
+          "type": "flit",
+          "interface": "axis_net",
+          "width": 32,
+          "payload": [
+            {"data": "0xBEEFDEAD","keep": "ALL","last": 0,"custom": 0}
+          ]
+        }]
+      },{
+        "type": "flit",
+        "interface": "axis_net",
+        "width": 32,
+        "payload": [
+          {"data": "0xDEADBEEF","keep": "ALL","last": 0,"custom": 0}
+        ]
+      }
+    ]
+  },{
+    "type": "loop",
+    "start": 0, "end": 1, "index": "i",
+    "body": [{
+      "type": "flit",
+      "interface": "axis_net",
+      "width": 32,
+      "payload": [
+        {"data": "0xFFAAFFAA","keep": "ALL","last": 0,"custom": 0}
+      ]
+    }]
+  },{
+    "type": "flit",
+    "interface": "axis_net",
+    "width": 32,
+    "payload": [
+      {"data": "0xDDDDDDDD","keep": "ALL","last": 1,"custom": 1}
+    ]
+  },{
+    "type": "flit",
+    "interface": "axis_s2mmStatus",
+    "width": 8,
+    "payload": [
+      {"data": "0x80","keep": "ALL","last": 0,"custom": 0}
+    ]
+  },{
+    "type": "csim",
+    "interface": "END",
+    "width": 0,
+    "payload": [
+      {"data": "0x00000006","keep": 0,"last": 0,"custom": 0}
+    ]
+  }
+]}
