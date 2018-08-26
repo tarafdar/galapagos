@@ -3,7 +3,13 @@ set projDir [lindex $argv 1]
 set projName [lindex $argv 2]
 set simDir [lindex $argv 3]
 
-set pr_tcl_file ./telepathy/make_test_bd.tcl
+
+if { $::argc > 4 } {
+    set pr_tcl_file [lindex $argv 4]
+} else {
+    set pr_tcl_file projects/$projDir/$projName/$projName.tcl
+}
+
 
 puts $boardName
 puts $projDir
@@ -58,42 +64,17 @@ set_property ip_repo_paths {hlsIP_adm-8k5 shells/shell_ips userIP} [current_proj
 # Rebuild user ip_repo's index before adding any source files
 update_ip_catalog -rebuild
 
-# Set 'sources_1' fileset object
+## Set 'sources_1' fileset object
 set obj [get_filesets sources_1]
-
-set files [glob shells/$boardName/srcs/top_sim.v]
-import_files -norecurse -fileset $obj $files
+#set files [glob shells/$boardName/srcs/top_sim.v]
+#import_files -norecurse -fileset $obj $files
 
 set files [glob shells/$boardName/srcs/*.csv]
 import_files -norecurse -fileset $obj $files
 
-# Set 'sources_1' fileset object
-create_bd_design "pr"
-open_bd_design {projects/$projDir/$projName/$projName.srcs/sources_1/bd/pr/pr.bd}
-source $pr_tcl_file
+# Set 'sources_1' fileset properties
+#set obj [get_filesets sources_1]
 
-validate_bd_design
-
-# Set 'sources_1' fileset object
-create_bd_design "mem"
-open_bd_design {projects/$projDir/$projName/$projName.srcs/sources_1/bd/mem/mem.bd}
-source ./tclScripts/sim_mig.tcl
-validate_bd_design
-
-# Set 'sources_1' fileset file properties for remote files
-set file "projects/$projDir/$projName/$projName.srcs/sources_1/bd/pr/pr.bd"
-set file [file normalize $file]
-set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
-if { ![get_property "is_locked" $file_obj] } {
-  set_property "synth_checkpoint_mode" "Hierarchical" $file_obj
-}
-
-set file "projects/$projDir/$projName/$projName.srcs/sources_1/bd/mem/mem.bd"
-set file [file normalize $file]
-set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
-if { ![get_property "is_locked" $file_obj] } {
-  set_property "synth_checkpoint_mode" "Hierarchical" $file_obj
-}
 
 # Set 'sources_1' fileset file properties for local files
 # None
@@ -102,7 +83,6 @@ if { ![get_property "is_locked" $file_obj] } {
 if {[string equal [get_filesets -quiet constrs_1] ""]} {
   create_fileset -constrset constrs_1
 }
-
 
 # Set 'constrs_1' fileset properties
 #set obj [get_filesets constrs_1]
@@ -160,9 +140,12 @@ set_property "steps.write_bitstream.args.verbose" "0" $obj
 puts "INFO: Project created:$projDir"
 
 
-set_property top top_sim [current_fileset]
-set_property STEPS.SYNTH_DESIGN.ARGS.FLATTEN_HIERARCHY none [get_runs synth_1]
-launch_runs synth_1 -jobs 8
-wait_on_run synth_1
-launch_simulation -mode post-synthesis -type functional
+set obj [get_filesets sources_1]
+set files [glob shells/$boardName/srcs/top_sim.v]
+import_files -norecurse -fileset $obj $files
+source ./tclScripts/createSim_pr_bd.tcl
+
+
+
+#launch_simulation 
 

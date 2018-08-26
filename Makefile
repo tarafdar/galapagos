@@ -82,7 +82,7 @@ createCluster: ${LOGICALFILE} ${MAPFILE}
 	mkdir -p projects
 	mkdir -p projects/${PROJECTNAME}
 	python hwMiddleware/packetSwitch/globalFPGAParser.py --logicalFile=${LOGICALFILE} --mapFile=${MAPFILE} --projectName=${PROJECTNAME}
-	#chmod +x createCluster.sh
+	chmod +x createCluster.sh
 	#./createCluster.sh
 
 simCluster: ${LOGICALFILE} ${MAPFILE} 
