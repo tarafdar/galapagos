@@ -1,6 +1,8 @@
-`timescale 1 ns/ 1ps
+`timescale 1 ps/ 1ps
 
-
+//parameter SIM_BYPASS_INIT_CAL = "FAST";
+//parameter SIM_INIT_OPTION = "SKIP_PU_DLY";
+//parameter SIM_CAL_OPTION = "FAST_CAL";
 
 module testbench();
 
@@ -23,25 +25,42 @@ module testbench();
     wire stream_out_VALID;
     wire stream_out_READY;
 
-    reg mem_sys_clk_p;
-    reg mem_sys_clk_n;
+    reg mem_sys_clk;
+    wire mem_sys_clk_p;
+    wire mem_sys_clk_n;
     
-    always #10 clk = ~clk;
-    always #5 mem_sys_clk_p =~mem_sys_clk_p;
-    always #5 mem_sys_clk_n =~mem_sys_clk_n;
 
+
+    //CLK LOGIC
+    localparam real CLKIN_PERIOD_MEM_PS = 3338; //Frequency 299.580587 MHz
+    localparam real CLKIN_PERIOD_USR_PS = 6400; //Frequency 156.25 MHz
+    
+    initial begin
+        mem_sys_clk = 1'b0;
+        clk = 1'b0;
+    end 
+       
+    always begin
+        mem_sys_clk = #(CLKIN_PERIOD_MEM_PS/2.0) ~mem_sys_clk;
+        clk = #(CLKIN_PERIOD_USR_PS/2.0) ~clk;
+    end
+    
+    assign mem_sys_clk_p = mem_sys_clk;
+    assign mem_sys_clk_n =~mem_sys_clk;
+    
+    //RESET
+    
+    localparam int RESET_WAIT_NUM_CYCLES = 30;
     
     initial begin
         resetn = 0;
-        clk = 0;
-        mem_sys_clk_p = 0;
-        mem_sys_clk_n = 1;
-        #30 resetn = 1;
-    end
+        repeat (RESET_WAIT_NUM_CYCLES) @(posedge mem_sys_clk);
+        resetn = 1;
     
+    end
 
 
-    //choose stimulation
+    //Synthesize Stimulation
     mpi_eth_stimulate stimulus(
                             .clk(clk),
                             .stream_out_DATA(stream_in_DATA), 
@@ -56,11 +75,13 @@ module testbench();
                             .stream_in_READY(stream_out_READY)
                        );
 
+
+   //Synthesize user region
    top_sim dut(
     .clk(clk),
     .mem_sys_clk_p(mem_sys_clk_p),
     .mem_sys_clk_n(mem_sys_clk_n),
-    .resetn(resetn),
+    .sys_resetn(resetn),
     .keep(stream_in_KEEP),
     .last(stream_in_LAST),
     .data(stream_in_DATA),

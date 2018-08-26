@@ -4,7 +4,7 @@
 
 module top_sim(
     input clk,
-    input resetn,
+    input sys_resetn,
     //from stimulus
     input [7:0] keep,
     input last,
@@ -15,11 +15,15 @@ module top_sim(
     output last_out,
     output [63:0] data_out,
     output valid_out,
-    input ready_out
+    input ready_out,
+    input mem_sys_clk_n,
+    input mem_sys_clk_p
 
 );
 
-    
+//parameter SIM_BYPASS_INIT_CAL = "FAST";
+//parameter SIM_INIT_OPTION = "SKIP_PU_DLY";
+//parameter SIM_CAL_OPTION = "FAST_CAL";  
    
 
  
@@ -98,12 +102,12 @@ module top_sim(
     
     
     
+    wire pr_resetn;
+    
 
 
    mem mem_i                   
    (
-        .RESETN(resetn),
-        .CLK(clk),
         .S_AXI_MEM_0_araddr(S_AXI_MEM_0_araddr),
         .S_AXI_MEM_0_arburst(S_AXI_MEM_0_arburst),
         .S_AXI_MEM_0_arcache(S_AXI_MEM_0_arcache),
@@ -177,15 +181,20 @@ module top_sim(
         .S_AXI_MEM_1_wlast(S_AXI_MEM_1_wlast),
         .S_AXI_MEM_1_wready(S_AXI_MEM_1_wready),
         .S_AXI_MEM_1_wstrb(S_AXI_MEM_1_wstrb),
-        .S_AXI_MEM_1_wvalid(S_AXI_MEM_1_wvalid)
+        .S_AXI_MEM_1_wvalid(S_AXI_MEM_1_wvalid),
+        .c0_sys_clk_n(mem_sys_clk_n),
+        .c0_sys_clk_p(mem_sys_clk_p),
+        .c1_sys_clk_n(mem_sys_clk_n),
+        .c1_sys_clk_p(mem_sys_clk_p),
+        .sys_reset_n(sys_resetn),
+        .user_clk(clk),
+        .user_resetn(pr_resetn)
     );
 
 
-
-
-    pr pr_i
+    pr_wrapper pr_i
     (
-        .ARESETN(resetn),
+        .ARESETN(pr_resetn),
         .CLK(clk),
         .M_AXIS_tdata(data_out),
         .M_AXIS_tkeep(keep_out),
