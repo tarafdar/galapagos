@@ -36,7 +36,7 @@ def userApplicationRegion_control_inst(tcl_user_app, num_ctrl_interfaces):
                     }
                     )
     else:
-        tcl_user_app.instBlock(tcl_user_app, 
+        tcl_user_app.instBlock( 
                 {'name':'smartconnect', 
                 'inst':'applicationRegion/axi_interconnect_ctrl', 
                 'clks':['aclk'],
@@ -45,7 +45,7 @@ def userApplicationRegion_control_inst(tcl_user_app, num_ctrl_interfaces):
                     'CONFIG.NUM_MI {' + str(num_ctrl_interfaces) + '}']
                 }
                 )
-        tcl_user_app.makeConnection(tcl_user_app, 
+        tcl_user_app.makeConnection( 
                     'intf', 
                     {
                     'name':None,

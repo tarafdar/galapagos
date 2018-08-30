@@ -8,18 +8,18 @@
         <rep> 6 </rep>
         <clk> s_axi_aclk </clk>
         <aresetn> s_axi_aresetn </aresetn>
-        <interface>
-            <direction> in </direction>
+        <s_axis>
+            <scope> global </scope>
             <name> AXI_STR_RXD </name>
-        </interface>
-        <interface>
-            <direction> out </direction>
+        </s_axis>
+        <m_axis>
+            <scope> global </scope>
             <name> AXI_STR_TXD </name>
-        </interface>
-        <ctrl_interface>
+        </m_axis>
+        <s_axi>
             <name> S_AXI </name>
             <offset> 0 </offset>
-        </ctrl_interface>
+        </s_axi>
     </kernel>
 	<kernel> cpu
         <num> 6 </num>
