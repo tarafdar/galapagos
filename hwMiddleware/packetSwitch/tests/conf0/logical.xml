@@ -3,7 +3,7 @@
     <kernel> axi_fifo_mm_s 
         <vendor> xilinx.com </vendor>
         <version> 4.1 </version>
-        <type> ip </type>
+        <lib> ip </lib>
         <num> 0 </num>
         <rep> 6 </rep>
         <clk> s_axi_aclk </clk>
@@ -17,6 +17,7 @@
             <name> AXI_STR_TXD </name>
         </m_axis>
         <s_axi>
+            <scope> global </scope>
             <name> S_AXI </name>
             <offset> 0 </offset>
         </s_axi>
@@ -24,13 +25,13 @@
 	<kernel> cpu
         <num> 6 </num>
         <rep> 1 </rep>
-        <interface>
-            <direction> in </direction>
+        <s_axis>
+            <scope> global </scope>
             <name> stream_in </name>
-        </interface>
-        <interface>
-            <direction> out </direction>
+        </s_axis>
+        <m_axis>
+            <scope> global </scope>
             <name> stream_out </name>
-        </interface>
+        </m_axis>
 	</kernel>
 </cluster>

@@ -85,7 +85,7 @@ def findAllAndSet(element, label, default):
             array.append(getText(xmlElement))
     else:
         array = default
-    
+
     return array
 
 def findAndSetDict(element, label, keys, default):
@@ -95,7 +95,7 @@ def findAndSetDict(element, label, keys, default):
         for key in keys:
             dict_def = {dict_def, {key : findAndSet(xmlElement, key, None)}}
     else:
-        dict_def = default    
+        dict_def = default
     return dict_def
 
 
@@ -110,7 +110,7 @@ def findAllAndSetDict(element, label, keys, default):
 
     return dict_array
 
-def findInterface(element, label, int_type, keys, default):    
+def findInterface(element, label, int_type, keys, default):
     xmlElement_array = element.findall(label)
     dict_array = []
     if xmlElement_array != None:
@@ -129,7 +129,7 @@ def findInterface(element, label, int_type, keys, default):
 
 
 def readKernelsFile(logicalKernelsFile):
-    
+
     allKernels = []
     networkBridges = None
 
@@ -151,34 +151,34 @@ def readKernelsFile(logicalKernelsFile):
 
         #read name of id_port
         id_port = findAndSet(kernelElement, 'id_port', None)
-    
+
         #memory interfaces
         mem_interfaces = findInterface(kernelElement, 'mem_interface', 'aximm',  {'name', 'type'}, [])
-           
+
         #control interfaces
         ctrl_interfaces = findInterface(kernelElement, 'ctrl_interface', 'axi4lite',  {'name', 'type', 'offset'}, [])
-        
-        #number of repetitions    
+
+        #number of repetitions
         rep_element = kernelElement.findAndSet(kernelElement, 'rep', 1)
-       
-        #constants 
-        constants = findAllAndSetDict(kernelElement, 'const', {'name', 'width', 'val'}, []) 
+
+        #constants
+        constants = findAllAndSetDict(kernelElement, 'const', {'name', 'width', 'val'}, [])
 
         #interfaces to add to switch and debug
         stream_interfaces = findInterface(kernelElement, 'stream_interface', 'axi4s', {'name', 'type', 'direction'}, [])
-        
+
         #set ip_type
-        ip_type = findAndSet(kernelElement, 'type', 'hls')
-        
+        ip_lib = findAndSet(kernelElement, 'lib', 'hls')
+
         #set ip_version
         ip_version = findAndSet(kernelElement, 'version', '1.0')
-        
+
         #set ip_vendor
         ip_vendor = findAndSet(kernelElement, 'vendor', 'xilinx.com')
 
         #set properties
         properties = findAllAndSet(kernelElement, 'property', [])
-     
+
         id_num = int(kernel_id)
         for i in range(0, rep):
             #making kernel object
@@ -207,7 +207,7 @@ def readKernelsFile(logicalKernelsFile):
     return allKernels, networkBridges
 
 def readNodeMap(mapFile, allKernels):
-    
+
     tree = ET.parse(mapFile)
     mapCluster = tree.getroot()
 
@@ -225,7 +225,7 @@ def readNodeMap(mapFile, allKernels):
                          'app_bridge' : findAndSetDict(nodeElement, 'appBridge', {'name', 'clk', 'aresetn', 'to_app', 'from_app', 'to_net', 'from_net'}, None),
                          'kernels' : []
                          }
-        
+
 
 
         kernelElementArray = nodeElement.findall('kernel')
@@ -238,9 +238,9 @@ def readNodeMap(mapFile, allKernels):
                     allKernels[kernelIndex]['ip_addr'] = node['ip_addr']
                     allKernels[kernelIndex]['mac_addr'] = node['mac_addr']
                 kernelIndex = kernelIndex + 1
-      
 
-        allNodes.append(node)    
+
+        allNodes.append(node)
 
 
     return allNodes, allKernels
@@ -254,7 +254,7 @@ def createLocalFPGA(allNodes, projectName, networkBridges):
             continue
 
         #sys.path.append('hwMiddleware/packetSwitch/prComm/tcp')
-        tclFileGenerator.makeTCLFiles(node, projectName, networkBridges) 
+        tclFileGenerator.makeTCLFiles(node, projectName, networkBridges)
 
 
 
@@ -265,7 +265,7 @@ def makeIPBRAMFile(projectName, allKernels):
     ipBRAMFile.write('memory_initialization_radix=10;\n')
     ipBRAMFile.write('memory_initialization_vector=\n')
     #iterate through kernels in order of tdest, populating the ipaddress at that location
-   
+
     maxKernelIndex = 0
     for kernel in allKernels:
         if kernel.id_num > maxKernelIndex:
@@ -305,7 +305,7 @@ def makeMACBRAMFile(projectName, allKernels):
     print "max kernel index is " + str(maxKernelIndex)
     for currIndex in range(0, maxKernelIndex + 1):
         found = 0
-    
+
         for kernel in allKernels:
             if currIndex == kernel.id_num:
                 found = 1
@@ -327,7 +327,7 @@ except:
     sys.exit(2)
 
 def makeProjectClusterScript(projectName, allNodes):
-    
+
     if os.path.exists('projects/' + projectName):
         shutil.rmtree('projects/' + projectName)
     os.makedirs('projects/' + projectName)
@@ -337,7 +337,7 @@ def makeProjectClusterScript(projectName, allNodes):
 
     nodeIndex = 0
     for node in allNodes:
-        #only need vivado project for hw nodes    
+        #only need vivado project for hw nodes
         if node.type == 'hw':
             dirName = 'projects/' + projectName + '/' + str(nodeIndex)
             os.makedirs(dirName)
@@ -347,7 +347,7 @@ def makeProjectClusterScript(projectName, allNodes):
         nodeIndex = nodeIndex + 1
 
 
-logicalFile = None 
+logicalFile = None
 mapFile = None
 macFile = None
 ipFile = None
