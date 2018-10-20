@@ -189,11 +189,11 @@ void firewall(	stream<ap_uint<16> >& rxMetaData,
 			packet.data = currWord.data;
 			packet.last = currWord.last;
 			packet.keep = currWord.keep;
-			packet.dest = currWord.data(15,0);
+			packet.dest = currWord.data(7,0);
 
 			stream_out.write(packet);
 			
-			src = currWord.data(23,16);
+			src = currWord.data(15,8);
 
 			firewal_read_dest.write(src);
 			ksvs_fsmState = 4;
@@ -227,7 +227,7 @@ void firewall(	stream<ap_uint<16> >& rxMetaData,
 				packet.data = currWord.data;
 				packet.last = currWord.last;
 				packet.keep = currWord.keep;
-				packet.dest = currWord.data(15,0);
+				packet.dest = currWord.data(7,0);
 				stream_out.write(packet);
 				ksvs_fsmState = 3;
 			}
@@ -332,13 +332,13 @@ void client(	stream<ap_axis>& stream_in,
 			break;
 		case 5:{
 				ap_uint<16> size;
-				if(packet.data(31,24) != C_DATA_PACKET){
+				if(packet.data(23,16) != C_DATA_PACKET){
 					size = ENVLP_SIZE;
 					// dest_size[packet.dest] = packet.data(47,32);
 					txMetaData.write(appTxMeta(sessionID,size));
 				}
 				else{
-					size = packet.data(47,32);
+					size = packet.data(47,24);
 					size += ENVLP_SIZE;
 					txMetaData.write(appTxMeta(sessionID,size));
 				}
