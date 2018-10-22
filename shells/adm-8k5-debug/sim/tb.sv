@@ -28,7 +28,7 @@ module testbench();
     reg mem_sys_clk;
     wire mem_sys_clk_p;
     wire mem_sys_clk_n;
-    
+    wire mem_ready;
 
 
     //CLK LOGIC
@@ -72,7 +72,8 @@ module testbench();
                             .stream_in_KEEP(stream_out_KEEP), 
                             .stream_in_LAST(stream_out_LAST), 
                             .stream_in_VALID(stream_out_VALID), 
-                            .stream_in_READY(stream_out_READY)
+                            .stream_in_READY(stream_out_READY),
+                            .aux_resetn(mem_ready)
                        );
 
 
@@ -91,7 +92,8 @@ module testbench();
     .last_out(stream_out_LAST),
     .data_out(stream_out_DATA),
     .valid_out(stream_out_VALID),
-    .ready_out(stream_out_READY)
+    .ready_out(stream_out_READY),
+    .mem_ready(mem_ready)
   );
 
 
