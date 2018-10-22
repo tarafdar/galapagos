@@ -29,7 +29,7 @@ EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.// Copyright (c) 2015 Xilinx, 
 
 
 
-#include "echo_server_application.hpp"
+//#include "echo_server_application.hpp"
 
 using namespace hls;
 
