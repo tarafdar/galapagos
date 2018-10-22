@@ -126,7 +126,6 @@ void eth_to_app(hls::stream <eth_axis> & from_eth,
             }
             break;
     }
-
 }
 
 
