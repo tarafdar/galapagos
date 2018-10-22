@@ -3,9 +3,9 @@
 class tclMeFile():
     fileHandle = None
 
-    def __init__(self, fileName):
+    def __init__(self, fileName, fpga):
         self.fileHandle = open(fileName + '.tcl', 'w')
-
+        self.fpga = fpga
     def tprint(self, cmd, end='\n'):
         self.fileHandle.write(cmd + end)
 
@@ -25,30 +25,39 @@ class tclMeFile():
         if properties != None:
             self.tprint('] [get_bd_cells ' + inst_name + ']')
 
-    def assign_address(self, master, slaves):
-        self.tprint('assign_bd_address [get_bd_addr_segs {' + master + '}]')
-        for slave in slaves:
-            self.tprint('set_property offset ' + slave['offset'] + ' [get_bd_addr_segs {' + slave['port'] + '}]')
-            self.tprint('set_property range '+  slave['range'] + ' [get_bd_addr_segs {'+ slave['port'] +  '}]')
+    def assign_address(self, slave_inst, slave_port, slave_base):
+        
+        if slave_inst != None:
+            self.tprint('assign_bd_address [get_bd_addr_segs {' + slave_inst + '/' + slave_port + '/' + slave_base + '}]')
+        else:
+            self.tprint('assign_bd_address [get_bd_addr_segs {' + slave_port + '/' + slave_base + '}]')
 
+    def set_address_properties(self, slave_inst, slave_port, slave_base, master, **properties):
+
+        for key,value in properties.items():
+            if slave_inst != None:
+                self.tprint('set_property  ' + key + ' ' + value +  ' [get_bd_addr_segs {' + master + '/SEG_' + slave_inst + '_' + slave_base + '}]')
+            else:
+                self.tprint('set_property  ' + key + ' ' + value +  ' [get_bd_addr_segs {' + master + '/SEG_' + slave_port + '_' + slave_base + '}]')
 
     def instBlock(self, ip):
 
-        if 'vendor' in ip:
+        if 'vendor' in ip and ip['vendor'] != None:
             self.tprint('create_bd_cell -type ip -vlnv ' + ip['vendor'] + ':' + ip['lib']+ ':' + ip['name'] + ' ' +  ip['inst'] )
         else:
             self.tprint('create_bd_cell -type ip -vlnv xilinx.com:ip:' + ip['name'] + ' ' +  ip['inst'])
+        
+        if 'properties' in ip and ip['properties'] != None:
+            self.setProperties(ip['inst'], ip['properties'])
 
-        if 'clks' in ip:
+        if 'clks' in ip and ip['clks'] != None:
             for clk_name in ip['clks']:
                 self.tprint('connect_bd_net [get_bd_ports CLK] [get_bd_pins ' + ip['inst'] + '/' + clk_name + ']')
 
-        if 'resetns' in ip:
+        if 'resetns' in ip and ip['resetns'] != None:
             for reset_name in ip['resetns']:
                 self.tprint('connect_bd_net [get_bd_ports ARESETN] [get_bd_pins ' + ip['inst'] + '/' + reset_name + ']')
 
-        if 'properties' in ip:
-            self.setProperties(ip['inst'], ip['properties'])
 
     def makeConnection(self, conn_type, source, sink):
         if conn_type == 'net':

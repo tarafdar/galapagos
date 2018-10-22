@@ -32,6 +32,6 @@ class abstractDict():
         if key in self.data:
             return self.data[key]
         else:
-            raise ValueError('Key not found')
+            raise ValueError('Key \"' + key + '\"  not found')
 
 

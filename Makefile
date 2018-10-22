@@ -81,7 +81,7 @@ hlsMiddleware: $(wildcard hlsSources/srcs/*)
 createCluster: ${LOGICALFILE} ${MAPFILE} 
 	mkdir -p projects
 	mkdir -p projects/${PROJECTNAME}
-	python hwMiddleware/packetSwitch/globalFPGAParser.py --logicalFile=${LOGICALFILE} --mapFile=${MAPFILE} --projectName=${PROJECTNAME}
+	python3.5 hwMiddleware/packetSwitch/globalFPGAParser.py --logicalFile=${LOGICALFILE} --mapFile=${MAPFILE} --projectName=${PROJECTNAME}
 	chmod +x createCluster.sh
 	#./createCluster.sh
 
@@ -95,7 +95,7 @@ simCluster: ${LOGICALFILE} ${MAPFILE}
 simFPGA: ${LOGICALFILE} ${MAPFILE} 
 	mkdir -p projects
 	mkdir -p projects/${PROJECTNAME}
-	python hwMiddleware/packetSwitch/globalFPGAParser.py --logicalFile=${LOGICALFILE} --macFile=${MACFILE} --mapFile=${MAPFILE} --ipFile=${IPFILE} --projectName=${PROJECTNAME}
+	python3.5 hwMiddleware/packetSwitch/globalFPGAParser.py --logicalFile=${LOGICALFILE} --mapFile=${MAPFILE} --projectName=${PROJECTNAME}
 	chmod +x simCluster.sh
 	vivado -mode gui -source tclScripts/createSim.tcl -tclargs adm-8k5-debug ${PROJECTNAME} ${ARGS} ${SIM_DIR}
 
@@ -103,9 +103,9 @@ simFPGA: ${LOGICALFILE} ${MAPFILE}
 createFPGA: ${LOGICALFILE} ${MAPFILE} 
 	mkdir -p projects
 	mkdir -p projects/${PROJECTNAME}
-	python hwMiddleware/packetSwitch/globalFPGAParser.py --logicalFile=${LOGICALFILE} --macFile=${MACFILE} --mapFile=${MAPFILE} --ipFile=${IPFILE} --projectName=${PROJECTNAME}
+	python3.5 hwMiddleware/packetSwitch/globalFPGAParser.py --logicalFile=${LOGICALFILE}  --mapFile=${MAPFILE} --projectName=${PROJECTNAME}
 	chmod +x simCluster.sh
-	vivado -mode batch -source tclScripts/createFlatten.tcl -tclargs adm-8k5-debug ${PROJECTNAME} ${ARGS}
+	vivado -mode gui -source tclScripts/createFlatten.tcl -tclargs adm-8k5-debug ${PROJECTNAME} ${ARGS}
 
 example_shell:  
 	vivado -mode gui -source ./tclScripts/makeExampleShell.tcl -tclargs adm-8k5-debug ${PROJECTNAME} 

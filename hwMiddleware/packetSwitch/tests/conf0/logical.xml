@@ -19,7 +19,6 @@
         <s_axi>
             <scope> global </scope>
             <name> S_AXI </name>
-            <offset> 0 </offset>
         </s_axi>
     </kernel>
 	<kernel> cpu

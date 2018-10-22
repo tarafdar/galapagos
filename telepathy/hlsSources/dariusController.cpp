@@ -1,3 +1,5 @@
+
+//#include "HUM.h"
 #include "MPI.h"
 #include "ap_axi_sdata.h"
 
@@ -26,12 +28,21 @@
 #define DMA_OUT 4  
 
 void dariusController(
+                //hls::stream<stream_packet> *stream_in,                
+                //hls::stream<stream_packet> *stream_out,
                 float  mem [DEPTH],            // global memory pointer
-                int  darius_driver [DARIUS_DEPTH] 
+                int   darius_driver[DARIUS_DEPTH],
+                volatile int * state_out
                 //const int rank       // offset of inputs
                 )            // kernel size
 {
 //Needed for MPI support
+
+//#pragma HLS INTERFACE axis port=stream_in
+//#pragma HLS INTERFACE axis port=stream_out
+//#pragma HLS INTERFACE m_axi port=mem depth=2147483648
+//#pragma HLS INTERFACE m_axi port=darius_driver depth=1024
+
 #pragma HLS resource core=AXI4Stream variable=stream_out
 #pragma HLS resource core=AXI4Stream variable=stream_in
 #pragma HLS DATA_PACK variable  = stream_out
@@ -42,10 +53,13 @@ void dariusController(
 #pragma HLS RESOURCE core=AXI4M variable=mem 
 #pragma HLS INTERFACE ap_bus port=darius_driver 
 #pragma HLS resource core=AXI4M variable=darius_driver
+
+
 #pragma HLS INTERFACE ap_ctrl_none port=return 
 
 
 
+//    HUM comm_layer(stream_in, stream_out);
 
 
     int rank = id_in;
@@ -79,12 +93,12 @@ void dariusController(
     //control and parameters from rank 0
     //
     //information on parameters (offset to dma in and size)
+            //while(!MPI_Recv(parameter_mem_info_float, PARAMETER_MEM_INFO_SIZE, MPI_FLOAT, 0,0/*not used*/,MPI_COMM_WORLD/*not used*/, state_out));
             while(!MPI_Recv(parameter_mem_info_float, PARAMETER_MEM_INFO_SIZE, MPI_FLOAT, 0,0/*not used*/,MPI_COMM_WORLD/*not used*/));
 	    for(int i=0; i< PARAMETER_MEM_INFO_SIZE; i++)
                 parameter_mem_info[i] = (int) parameter_mem_info_float[i];
             
 	    size_float[0] = parameter_mem_info_float[1];
-
 	
 	    //size_float[0] = 2.0f;
 	    //float send_float[1];
@@ -101,15 +115,18 @@ void dariusController(
 	    darius_driver[0] = 0; // num_commands
 #endif
             //dma in parameters
+            //while(!MPI_Recv(mem+parameter_mem_info[0]/sizeof(int), parameter_mem_info[1]/sizeof(int), MPI_FLOAT, 0,0/*not used*/,MPI_COMM_WORLD/*not used*/, state_out));
             while(!MPI_Recv(mem+parameter_mem_info[0]/sizeof(int), parameter_mem_info[1]/sizeof(int), MPI_FLOAT, 0,0/*not used*/,MPI_COMM_WORLD/*not used*/));
             
-		
+	    
 
+            //while(!MPI_Recv(data_mem_info_float, MEM_INFO_SIZE, MPI_FLOAT, 0,0/*not used*/,MPI_COMM_WORLD/*not used*/, state_out));
             while(!MPI_Recv(data_mem_info_float, MEM_INFO_SIZE, MPI_FLOAT, 0,0/*not used*/,MPI_COMM_WORLD/*not used*/));
             for(int i=0; i< MEM_INFO_SIZE; i++)
                 data_mem_info[i] = (int) data_mem_info_float[i];
 
 
+            //while(!MPI_Recv(darius_info_float, DARIUS_INFO_SIZE, MPI_FLOAT, 0,0/*not used*/,MPI_COMM_WORLD/*not used*/, state_out));
             while(!MPI_Recv(darius_info_float, DARIUS_INFO_SIZE, MPI_FLOAT, 0,0/*not used*/,MPI_COMM_WORLD/*not used*/));
             for(int i=0; i< DARIUS_INFO_SIZE; i++)
                 darius_info[i] = (int) darius_info_float[i];
@@ -131,8 +148,10 @@ void dariusController(
 
         case DMA_IN:
             //previous cycle count and data from previous rank
-            while(!MPI_Recv(cumulative_cycle_count, 1, MPI_FLOAT, prev_rank,0/*not used*/,MPI_COMM_WORLD/*not used*/));
+            //while(!MPI_Recv(cumulative_cycle_count_float, 1, MPI_FLOAT, prev_rank,0/*not used*/,MPI_COMM_WORLD/*not used*/, state_out));
+            while(!MPI_Recv(cumulative_cycle_count_float, 1, MPI_FLOAT, prev_rank,0/*not used*/,MPI_COMM_WORLD/*not used*/));
             cumulative_cycle_count[0] = (int) cumulative_cycle_count_float[0];
+            //while(!MPI_Recv(mem + data_mem_info[0]/sizeof(float), data_mem_info[1]/sizeof(float), MPI_FLOAT, prev_rank,0/*not used*/,MPI_COMM_WORLD/*not used*/, state_out));
             while(!MPI_Recv(mem + data_mem_info[0]/sizeof(float), data_mem_info[1]/sizeof(float), MPI_FLOAT, prev_rank,0/*not used*/,MPI_COMM_WORLD/*not used*/));
             state = RUN_DARIUS;
             break;

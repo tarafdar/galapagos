@@ -23,19 +23,20 @@ if { {array size [get_runs -filter {IS_SYNTHESIS && name == "synth_1"}]} == 1 } 
 create_bd_design "pr"
 open_bd_design {projects/$projDir/$projName/$projName.srcs/sources_1/bd/pr/pr.bd}
 source $pr_tcl_file
-make_wrapper -files [get_files projects/$projDir/$projName/$projName.srcs/sources_1/bd/pr/pr.bd] -top
-add_files -norecurse projects/$projDir/$projName/$projName.srcs/sources_1/bd/pr/hdl/pr_wrapper.v
-validate_bd_design
+#make_wrapper -files [get_files projects/$projDir/$projName/$projName.srcs/sources_1/bd/pr/pr.bd] -top
+#add_files -norecurse projects/$projDir/$projName/$projName.srcs/sources_1/bd/pr/hdl/pr_wrapper.v
 
 # Set 'sources_1' fileset file properties for remote files
 set file "projects/$projDir/$projName/$projName.srcs/sources_1/bd/pr/pr.bd"
 set file [file normalize $file]
 set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
 if { ![get_property "is_locked" $file_obj] } {
-  set_property "synth_checkpoint_mode" "Hierarchical" $file_obj
+  set_property "synth_checkpoint_mode" "None" $file_obj
 }
-#
-#generate_target all [get_files  projects/$projDir/$projName/$projName.srcs/sources_1/bd/pr/pr.bd]
+
+validate_bd_design
+
+generate_target all [get_files  projects/$projDir/$projName/$projName.srcs/sources_1/bd/pr/pr.bd]
 #export_ip_user_files -of_objects [get_files projects/$projDir/$projName/$projName.srcs/sources_1/bd/pr/pr.bd] -no_script -sync -force -quiet
 #launch_runs -jobs 8 [create_ip_run [get_files -of_objects [get_fileset sources_1] projects/$projDir/$projName/$projName.srcs/sources_1/bd/pr/pr.bd]]
 #set_property top pr_wrapper [current_fileset]
@@ -65,7 +66,9 @@ set file "projects/$projDir/$projName/$projName.srcs/sources_1/bd/mem/mem.bd"
 set file [file normalize $file]
 set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
 if { ![get_property "is_locked" $file_obj] } {
-  set_property "synth_checkpoint_mode" "Hierarchical" $file_obj
+  set_property "synth_checkpoint_mode" "None" $file_obj
 }
+
+generate_target all [get_files  projects/$projDir/$projName/$projName.srcs/sources_1/bd/mem/mem.bd]
 
 set_property top top_sim [current_fileset]

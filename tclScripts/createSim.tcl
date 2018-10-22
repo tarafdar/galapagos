@@ -72,6 +72,9 @@ set obj [get_filesets sources_1]
 set files [glob shells/$boardName/srcs/*.csv]
 import_files -norecurse -fileset $obj $files
 
+#set files [glob shells/$boardName/sim/top_sim.v]
+#import_files -norecurse -fileset $obj $files
+
 # Set 'sources_1' fileset properties
 #set obj [get_filesets sources_1]
 
@@ -141,10 +144,10 @@ puts "INFO: Project created:$projDir"
 
 
 set obj [get_filesets sources_1]
-set files [glob shells/$boardName/srcs/top_sim.v]
+set files [glob shells/$boardName/sim/top_sim.v]
 import_files -norecurse -fileset $obj $files
 source ./tclScripts/createSim_pr_bd.tcl
-
+set_property sim.use_ip_compiled_libs 0 [current_project]
 
 
 #launch_simulation 
