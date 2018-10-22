@@ -71,7 +71,7 @@ void sessionID_table_steaming(stream<ap_uint<16> >& firewal_read_dest,
 #pragma HLS PIPELINE II=1	
 	//static bool init = 0;
 	static ap_uint<32> sessionID_table[256] = {
-#include "mem.init"
+//#include "mem.init"
 	};
 
 	// if(!init){
