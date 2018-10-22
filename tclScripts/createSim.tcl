@@ -148,7 +148,7 @@ set files [glob shells/$boardName/sim/top_sim.v]
 import_files -norecurse -fileset $obj $files
 source ./tclScripts/createSim_pr_bd.tcl
 set_property sim.use_ip_compiled_libs 0 [current_project]
-
+set_param synth.vivado.filterDuplicatedIPFiles 0
 
 #launch_simulation 
 

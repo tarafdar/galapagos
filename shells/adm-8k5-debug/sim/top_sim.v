@@ -17,7 +17,8 @@ module top_sim(
     output valid_out,
     input ready_out,
     input mem_sys_clk_n,
-    input mem_sys_clk_p
+    input mem_sys_clk_p,
+    output mem_ready
 
 );
 
@@ -104,6 +105,7 @@ module top_sim(
     
     wire pr_resetn;
     
+    assign mem_ready = pr_resetn;
 
 
    mem mem_i                   

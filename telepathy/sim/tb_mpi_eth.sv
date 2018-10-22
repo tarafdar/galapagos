@@ -16,14 +16,15 @@ module mpi_eth_stimulate
                      input [7:0] stream_in_KEEP, 
                      input stream_in_LAST,
                      input stream_in_VALID,
-                     output reg stream_in_READY
+                     output reg stream_in_READY,
+                     input aux_resetn
                     );
 
     `include "utility.sv"
     `include "mpi.sv"
 
     parameter [47:0] MAC_ADDR_FPGA = 48'hfa163e55ca02; 
-    parameter [47:0] MAC_ADDR_STIM = 48'h0cc47a88c047; 
+    parameter [47:0] MAC_ADDR_STIM = 48'hfa163e55ca01; 
 
 
     reg [15:0] dst_rank;
@@ -65,6 +66,9 @@ module mpi_eth_stimulate
      
     initial begin
         //stream = new();
+        
+        $display("wait for memory to come out of reset");
+        wait(aux_resetn);
         stream_in_READY = 1;
         #50
         trans_num = 64'd10;
@@ -91,9 +95,13 @@ module mpi_eth_stimulate
         stream.write(
                     .data({32'h41000000, 32'd0}),
                     .keep(8'hff),
-                    .last(1'b1)
+                    .last(1'b0)
                     );
-       
+        stream.write(
+                    .data({32'h41000000, 32'd0}),
+                    .keep(8'hff),
+                    .last(1'b1)
+                     );
         $display("before wait for done");
         
         
