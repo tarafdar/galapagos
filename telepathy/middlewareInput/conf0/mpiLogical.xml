@@ -4,11 +4,7 @@
         <vendor> xilinx.com </vendor>
         <version> 1.0 </version>
         <lib> user </lib>
-<<<<<<< HEAD
-	<num> 2 </num>
-=======
 		<num> 2 </num>
->>>>>>> b00edd9e47454072e3e7617591afe22225456bf3
         <rep> 1 </rep>
         <clk> i_clk </clk>
         <clk> s_axi_control_aclk </clk>
@@ -60,11 +56,7 @@
         <version> 1.0 </version>
         <lib> hls </lib>
         <rep> 1 </rep>
-<<<<<<< HEAD
-	<num> 1 </num>
-=======
-		<num> 1 </num>
->>>>>>> b00edd9e47454072e3e7617591afe22225456bf3
+	    <num> 1 </num>
         <clk> aclk </clk>
         <id_port> id_in_V </id_port>
         <aresetn> aresetn </aresetn>
