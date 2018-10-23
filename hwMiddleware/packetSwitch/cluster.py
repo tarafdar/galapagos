@@ -94,12 +94,12 @@ class cluster(abstractDict):
             node_inst['num'] = node_idx
             self.nodes.append(node_inst)
 
-    def writeClusterTCL(self):
+    def writeClusterTCL(self, sim):
         
         for node_idx, node in enumerate(self.nodes):
             if node['type'] == 'hw':
                 dirName = 'projects/' + self.name + '/' + str(node_idx)
-                tclFileGenerator.makeTCLFiles(node, self.name)
+                tclFileGenerator.makeTCLFiles(node, self.name, sim)
 
 
 

@@ -95,7 +95,7 @@ simCluster: ${LOGICALFILE} ${MAPFILE}
 simFPGA: ${LOGICALFILE} ${MAPFILE} 
 	mkdir -p projects
 	mkdir -p projects/${PROJECTNAME}
-	python3.5 hwMiddleware/packetSwitch/globalFPGAParser.py --logicalFile=${LOGICALFILE} --mapFile=${MAPFILE} --projectName=${PROJECTNAME}
+	python3.5 hwMiddleware/packetSwitch/globalFPGAParser.py --logicalFile=${LOGICALFILE} --mapFile=${MAPFILE} --projectName=${PROJECTNAME} --sim=1
 	chmod +x simCluster.sh
 	vivado -mode gui -source tclScripts/createSim.tcl -tclargs adm-8k5-debug ${PROJECTNAME} ${ARGS} ${SIM_DIR}
 
