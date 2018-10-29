@@ -11,9 +11,11 @@
 
 struct axis{
 	ap_int <64> data;
+	ap_uint<8> dest;
 	ap_uint<1> last;
-	ap_uint<8> tdest;
-	ap_uint<8> tkeep;
+	ap_uint<8> keep;
+	ap_uint<8> id;
+	ap_uint<40> user;
 };
 
 //priorities
