@@ -64,8 +64,12 @@ set files [glob shells/$boardName/srcs/*]
 import_files -norecurse -fileset $obj $files
 #add_files -norecurse -fileset $obj $files
 
+create_bd_design "shell"
+open_bd_design {projects/$projName/example/example.srcs/sources_1/bd/shell/shell.bd}
+source ./tclScripts/shell_bd.tcl
+
 # Set 'sources_1' fileset file properties for remote files
-set file "projects/$projName/example/example.srcs/sources_1/bd/srcs/shell.bd"
+set file "projects/$projName/example/example.srcs/sources_1/bd/shell/shell.bd"
 set file [file normalize $file]
 set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
 if { ![get_property "is_locked" $file_obj] } {
