@@ -14,7 +14,7 @@
            "ports": {"output" : "axisIn", "input" : "axisOut"},
            "mac_table": {"0x112233445566":"0x01", "0xaabbccddeeff":"0x00"}
     },
-    "neural_net": [{
+    "neural_net": [[{
             
             "dst_rank": "0x01",
             "weight_file": "weights",
@@ -40,7 +40,10 @@
             "pool_stride": 2,
             "relu": 0,
             "bias": 0
-    }]
+    }
+    ]
+    
+    ]
 
 
 }
