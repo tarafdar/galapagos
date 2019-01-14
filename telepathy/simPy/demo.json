@@ -1,4 +1,3 @@
-
 {
     "config_hardware": {
             "C_MAX_ADDR_WIDTH": 12,
@@ -6,10 +5,16 @@
             "C_MAX_IMG_DIMENSION_WIDTH": 10,
             "C_MAX_INPUT_WIDTH": 16,
             "C_NUM_OF_ROWS":8,
-            "C_NUM_OF_COLS":8
+            "C_NUM_OF_COLS": 8,
+            "BATCH_SIZE": 1
             },
     "comm":{"src_rank": "0x00",
-           "fpga_ranks": ["0x01"],
+           "dst_ranks": ["0x01"],
+            "ifm_dma_baseaddr": ["0x80000100"],
+            "ifm_dma_size": [1024],
+            "ofm_dma_baseaddr": ["0x8000c000"],
+            "ofm_dma_size": [1024],
+            "biases_weights_dma_baseaddr": ["0x80002000"], 
            "protocol": "ethernet",
            "ports": {"output" : "axisIn", "input" : "axisOut"},
            "mac_table": {"0x112233445566":"0x01", "0xaabbccddeeff":"0x00"}
@@ -19,8 +24,6 @@
             "dst_rank": "0x01",
             "weight_file": "weights",
             "bias_file": null,
-            "batch_size": 1,
-            "num_ranks":  1,
             "ifm_height": 6,
             "ifm_width": 6,
             "ifm_depth": 8,
