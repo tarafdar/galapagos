@@ -38,9 +38,16 @@ CONF_DIR = ./HMPI/sw_kmeans
 LOGICALFILE=${CONF_DIR}/${CONF}/mpiLogical.xml
 MAPFILE=${CONF_DIR}/${CONF}/mpiMap.xml
 
-BOARD = adm-8k5
-PART = xcku115-flva1517-2-e
+BOARD = pnyq-z2 # values: adm-8k5
+PART = xc7z020clg400-1 # values: xcku115-flva1517-2-e
 FPGANUM= 1
+
+# checks that environment variables are set prior to running targets
+guard-%:
+	@ if [ "${${*}}" = "" ]; then \
+		echo "Variable $* not set"; \
+		exit 1; \
+	fi
 
 
 
@@ -107,7 +114,7 @@ createFPGA: ${LOGICALFILE} ${MAPFILE}
 	chmod +x simCluster.sh
 	vivado -mode gui -source tclScripts/createFlatten.tcl -tclargs adm-8k5-debug ${PROJECTNAME} ${ARGS}
 
-example_shell:  
+example_shell: guard-PROJECTNAME
 	vivado -mode gui -source ./tclScripts/makeExampleShell.tcl -tclargs adm-8k5-debug ${PROJECTNAME} 
 
 

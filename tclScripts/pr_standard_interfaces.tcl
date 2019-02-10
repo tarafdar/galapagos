@@ -14,3 +14,4 @@ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:axis_rtl:1.0 M_AXIS
 set_property -dict [list CONFIG.TDATA_NUM_BYTES {8} CONFIG.HAS_TLAST {1} CONFIG.HAS_TKEEP {1}] [get_bd_intf_ports M_AXIS]
 set_property CONFIG.ASSOCIATED_BUSIF {S_AXIS:M_AXIS} [get_bd_ports /CLK]
 
+return 0

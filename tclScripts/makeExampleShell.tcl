@@ -16,7 +16,7 @@ set orig_proj_dir "[file normalize "projects/$projName"]"
 
 # Create project
 #create_project $fpgaNum projects/$projName/$fpgaNum -part xcku115-flva1517-2-e
-create_project example projects/$projName/example -part $partName
+create_project example projects/$projName/example -part $partName -force
 
 # Set the directory path for the new project
 set proj_dir [get_property directory [current_project]]
@@ -66,7 +66,11 @@ import_files -norecurse -fileset $obj $files
 
 create_bd_design "shell"
 open_bd_design {projects/$projName/example/example.srcs/sources_1/bd/shell/shell.bd}
-source ./tclScripts/shell_bd.tcl
+set ret_val [source ./tclScripts/shell_bd.tcl]
+if { $ret_val != 0 } {
+  puts "Error in shell_bd script"
+  return $ret_val
+} 
 
 # Set 'sources_1' fileset file properties for remote files
 set file "projects/$projName/example/example.srcs/sources_1/bd/shell/shell.bd"
@@ -90,7 +94,11 @@ set_property "top" "shellTop" $obj
 # Set 'sources_1' fileset object
 create_bd_design "pr"
 open_bd_design {projects/$projName/example/example.srcs/sources_1/bd/pr/pr.bd}
-source ./tclScripts/pr_standard_interfaces.tcl 
+set ret_val [source ./tclScripts/pr_standard_interfaces.tcl]
+if { $ret_val != 0 } {
+  puts "Error in pr_standard_interfaces script"
+  return $ret_val
+} 
 
 # Set 'sources_1' fileset file properties for remote files
 set file "projects/$projName/example/example.srcs/sources_1/bd/pr/pr.bd"
@@ -203,4 +211,3 @@ puts "INFO: Project created:$projName"
 #wait_on_run impl_1
 ##source ./tclScripts/synth_impl.tcl
 #close_project
-
