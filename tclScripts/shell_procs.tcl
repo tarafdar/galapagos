@@ -1,4 +1,11 @@
 ################################################################################
+# This file defines a number of procedures to make shells. This file can be 
+# sourced in Vivado and an individual procedure can be run to see what the 
+# interfaces look like. There are different procedures for different variants
+# (e.g. single vs. dual channel DDR) so shells for different boards can be 
+# easily customized.
+
+################################################################################
 # Creates MicroBlaze hierarchy containing:
 #   Processor Reset System (provides resets for other IPs)
 #   MicroBlaze Debug Module (connected to Interconnect [slave] and MB [master])
@@ -382,6 +389,8 @@ proc create_hier_eth10G { parentCell nameHier transceiverLoc} {
 # There are 2 arguments:
 #   parentCell - a block design instance or hierarchy e.g. [current_bd_instance .]
 #   nameHier - name of the hierarchy created
+#   enableDual - true | false : creates dual channel DDR
+#   enable PCIe - true | false : adds an interconnect for PCIe to channel 0
 ################################################################################
 proc create_hier_ddr4 { parentCell nameHier enableDual enablePCIe} {
 

@@ -5,3 +5,4 @@ projects/*
 vivado*.jou
 vivado*.log
 *.swp
+mpsoc_network_ddr/*

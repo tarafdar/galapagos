@@ -114,8 +114,9 @@ createFPGA: ${LOGICALFILE} ${MAPFILE}
 	chmod +x simCluster.sh
 	vivado -mode gui -source tclScripts/createFlatten.tcl -tclargs adm-8k5-debug ${PROJECTNAME} ${ARGS}
 
-example_shell: guard-PROJECTNAME
-	vivado -mode gui -source ./tclScripts/makeExampleShell.tcl -tclargs adm-8k5-debug ${PROJECTNAME} 
+example_shell:
+	# vivado -mode gui -source ./tclScripts/makeExampleShell.tcl -tclargs adm-8k5-debug ${PROJECTNAME} 
+	vivado -mode gui -source ./tclScripts/make_shell.tcl -tclargs --project_name example
 
 
 clean:
