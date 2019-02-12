@@ -84,6 +84,8 @@ if [[ $hlsVersion == "2017.2" ]]; then
   hlsPath_append=$hlsPath/$hlsVersion
 elif [[ $hlsVersion == "2018.1" ]]; then
   hlsPath_append=$hlsPath/$hlsVersion  
+elif [[ $hlsVersion == "2018.2" ]]; then
+  hlsPath_append=$hlsPath/$hlsVersion
 else
   echo "Error: unsupported Vivado HLS Version $hlsVersion"
   return 1
@@ -149,8 +151,8 @@ galapagos-update-board() {
       \$GALAPAGOS_PATH \\
       $vivadoPath \\
       $hlsPath \\
-      \$SHOAL_VIVADO_VERSION \\
-      \$SHOAL_HLS_VERSION \\
+      \$GALAPAGOS_VIVADO_VERSION \\
+      \$GALAPAGOS_HLS_VERSION \\
       \$partName \\
       \$boardName \\
       \$board
@@ -159,8 +161,8 @@ galapagos-update-board() {
       \$GALAPAGOS_PATH \\
       $vivadoPath \\
       $hlsPath \\
-      \$SHOAL_VIVADO_VERSION \\
-      \$SHOAL_HLS_VERSION \\
+      \$GALAPAGOS_VIVADO_VERSION \\
+      \$GALAPAGOS_HLS_VERSION \\
       \$partName \\
       \$boardName
   fi

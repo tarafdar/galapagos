@@ -58,6 +58,32 @@ namespace eval 2018.1 {
   "
 }
 
+namespace eval 2018.2 {
+  set ip_list "\ 
+    xilinx.com:ip:axi_bram_ctrl:4.0\
+    xilinx.com:ip:axi_gpio:2.0\
+    xilinx.com:ip:blk_mem_gen:8.4\
+    xilinx.com:ip:clk_wiz:6.0\
+    xilinx.com:ip:xlconstant:1.1\
+    xilinx.com:ip:system_ila:1.1\
+    xilinx.com:ip:util_vector_logic:2.0\
+    xilinx.com:ip:vio:3.0\
+    xilinx.com:ip:util_ds_buf:2.1\
+    xilinx.com:ip:xdma:4.1\
+    xilinx.com:ip:mdm:3.2\
+    xilinx.com:ip:microblaze:10.0\
+    xilinx.com:ip:proc_sys_reset:5.0\
+    xilinx.com:ip:ddr4:2.2\
+    xilinx.com:ip:axi_10g_ethernet:3.1\
+    dlyma.org:dlyma:network_packet_fifo_rx:1.1\
+    dlyma.org:dlyma:network_packet_fifo_tx:1.1\
+    xilinx.com:ip:axis_register_slice:1.1\
+    xilinx.com:ip:lmb_bram_if_cntlr:4.0\
+    xilinx.com:ip:lmb_v10:3.0\
+  "
+}
+
+
 # defines get_design_name
 source ./tclScripts/utilities.tcl
 
@@ -70,6 +96,8 @@ if { [string first 2017.2 $current_vivado_version] != -1 } {
   set version 2017.2
 } elseif { [string first 2018.1 $current_vivado_version] != -1 } {
   set version 2018.1
+} elseif { [string first 2018.2 $current_vivado_version] != -1 } {
+  set version 2018.2
 } else {
   puts ""
   catch {common::send_msg_id "BD_TCL-109" "ERROR" "Unsupported Vivado version:\
