@@ -82,6 +82,8 @@ fi
 
 if [[ $hlsVersion == "2017.2" ]]; then
   hlsPath_append=$hlsPath/$hlsVersion
+elif [[ $hlsVersion == "2017.4" ]]; then
+  hlsPath_append=$hlsPath/$hlsVersion
 elif [[ $hlsVersion == "2018.1" ]]; then
   hlsPath_append=$hlsPath/$hlsVersion  
 elif [[ $hlsVersion == "2018.2" ]]; then
@@ -142,6 +144,7 @@ galapagos-update-board() {
     board="NULL"
   else
     echo "Unknown board \$1 specified. No changes made to Galapagos"
+    return 1
   fi
   
   boardName=\$1
