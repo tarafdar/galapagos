@@ -6,15 +6,17 @@
 `timescale 1 ps / 1 ps
 
 module shellTop
-   (gt_ref_clk_clk_n,
-    gt_ref_clk_clk_p,
-    perst_n,
+   (gt_refclk_n_1,
+    gt_refclk_p_1,
+    // perst_n,
     qsfp0_4x_grx_n,
     qsfp0_4x_grx_p,
     qsfp0_4x_gtx_n,
     qsfp0_4x_gtx_p,
     qsfp0_lp_mode_1v8,
-    qsfp0_sel_1v8_l
+    qsfp0_sel_1v8_l,
+    c0_sys_clk_n,
+    c0_sys_clk_p,
     c0_ddr4_act_n,
     c0_ddr4_adr,
     c0_ddr4_ba,
@@ -23,7 +25,7 @@ module shellTop
     c0_ddr4_ck_t,
     c0_ddr4_cke,
     c0_ddr4_cs_n,
-    c0_ddr4_dm_dbi_n,
+    c0_ddr4_dm_n,
     c0_ddr4_dq,
     c0_ddr4_dqs_c,
     c0_ddr4_dqs_t,
@@ -31,9 +33,9 @@ module shellTop
     c0_ddr4_reset_n
   );
 
-    input gt_ref_clk_clk_n;
-    input gt_ref_clk_clk_p;
-    input perst_n;
+    input gt_refclk_n_1;
+    input gt_refclk_p_1;
+    // input perst_n;
     input qsfp0_4x_grx_n;
     input qsfp0_4x_grx_p;
     output qsfp0_4x_gtx_n;
@@ -45,16 +47,18 @@ module shellTop
     output [16:0]c0_ddr4_adr;
     output [1:0]c0_ddr4_ba;
     output [1:0]c0_ddr4_bg;
-    output [0:0]c0_ddr4_ck_c;
-    output [0:0]c0_ddr4_ck_t;
-    output [0:0]c0_ddr4_cke;
-    output [0:0]c0_ddr4_cs_n;
-    inout [7:0]c0_ddr4_dm_dbi_n;
+    output [1:0]c0_ddr4_ck_c;
+    output [1:0]c0_ddr4_ck_t;
+    output [1:0]c0_ddr4_cke;
+    output [1:0]c0_ddr4_cs_n;
+    inout [7:0]c0_ddr4_dm_n;
     inout [63:0]c0_ddr4_dq;
     inout [7:0]c0_ddr4_dqs_c;
     inout [7:0]c0_ddr4_dqs_t;
-    output [0:0]c0_ddr4_odt;
+    output [1:0]c0_ddr4_odt;
     output c0_ddr4_reset_n;
+    input c0_sys_clk_n;
+    input c0_sys_clk_p;
 
     (* keep = "true" *) wire [0:0]ARESETN;
     (* keep = "true" *) wire CLK_DATA;
@@ -306,14 +310,16 @@ module shellTop
         .c0_ddr4_cke(c0_ddr4_cke),
         .c0_ddr4_cs_n(c0_ddr4_cs_n),
         .c0_ddr4_dq(c0_ddr4_dq),
-        .c0_ddr4_dm_dbi_n(c0_ddr4_dm_dbi_n),
+        .c0_ddr4_dm_n(c0_ddr4_dm_n),
         .c0_ddr4_dqs_c(c0_ddr4_dqs_c),
         .c0_ddr4_dqs_t(c0_ddr4_dqs_t),
         .c0_ddr4_odt(c0_ddr4_odt),
         .c0_ddr4_reset_n(c0_ddr4_reset_n),
-        .gt_ref_clk_clk_n(diff_clock_rtl_clk_n),
-        .gt_ref_clk_clk_p(diff_clock_rtl_clk_p),
-        .perst_n(perst_n),
+        .C0_SYS_CLK_clk_n(c0_sys_clk_n),
+        .C0_SYS_CLK_clk_p(c0_sys_clk_p),
+        .gt_ref_clk_clk_n(gt_refclk_n_1),
+        .gt_ref_clk_clk_p(gt_refclk_p_1),
+        // .perst_n(perst_n),
         .qsfp0_4x_grx_n(qsfp0_4x_grx_n),
         .qsfp0_4x_grx_p(qsfp0_4x_grx_p),
         .qsfp0_4x_gtx_n(qsfp0_4x_gtx_n),

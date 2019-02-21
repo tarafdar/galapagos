@@ -277,7 +277,7 @@ proc create_root_design { parentCell } {
   set_property -dict [ list \
     CONFIG.ASSOCIATED_BUSIF {M_AXIS:S_AXIS:S_AXI_MEM_0:M_AXI_CONTROL:S_AXI_MEM_1} \
   ] $CLK_DATA
-  set perst_n [ create_bd_port -dir I perst_n ]
+  # set perst_n [ create_bd_port -dir I perst_n ]
 #   set gt_refclk_n_1 [ create_bd_port -dir I -type clk gt_refclk_n_1 ]
 #   set_property -dict [ list \
 #    CONFIG.FREQ_HZ {322265625} \
@@ -324,12 +324,12 @@ proc create_root_design { parentCell } {
   # Create instance: network
   create_hier_eth10G_zu [current_bd_instance .] ethernet
 
-  create_bd_cell -type ip -vlnv xilinx.com:ip:util_vector_logic:2.0 util_vector_logic_0
-  set_property -dict [list \
-    CONFIG.C_SIZE {1} \
-    CONFIG.C_OPERATION {and} \
-    CONFIG.LOGO_FILE {data/sym_andgate.png \
-  }] [get_bd_cells util_vector_logic_0]
+  # create_bd_cell -type ip -vlnv xilinx.com:ip:util_vector_logic:2.0 util_vector_logic_0
+  # set_property -dict [list \
+  #   CONFIG.C_SIZE {1} \
+  #   CONFIG.C_OPERATION {and} \
+  #   CONFIG.LOGO_FILE {data/sym_andgate.png \
+  # }] [get_bd_cells util_vector_logic_0]
 
   create_bd_cell -type ip -vlnv xilinx.com:ip:util_vector_logic:2.0 util_vector_logic_1
   set_property -dict [list \
@@ -955,11 +955,11 @@ proc create_root_design { parentCell } {
   connect_bd_net [get_bd_pins zynq_ultra_ps_e_0/pl_clk0] [get_bd_pins ethernet/dclk]
   connect_bd_net [get_bd_ports qsfp0_lp_mode_1v8] [get_bd_pins ethernet/qsfp0_lp_mode_1v8]
 connect_bd_net [get_bd_ports qsfp0_sel_1v8_l] [get_bd_pins ethernet/qsfp0_lp_mode_1v8]
-connect_bd_net [get_bd_ports perst_n] [get_bd_pins util_vector_logic_0/Op1]
-connect_bd_net [get_bd_pins ethernet/ext_reset_n] [get_bd_pins util_vector_logic_0/Op2]
-connect_bd_net [get_bd_pins util_vector_logic_0/Res] [get_bd_pins util_vector_logic_1/Op1]
+# connect_bd_net [get_bd_ports perst_n] [get_bd_pins util_vector_logic_0/Op1]
+# connect_bd_net [get_bd_pins ethernet/ext_reset_n] [get_bd_pins util_vector_logic_0/Op2]
+connect_bd_net [get_bd_pins [get_bd_pins ethernet/ext_reset_n] [get_bd_pins util_vector_logic_1/Op1]
 connect_bd_net [get_bd_pins util_vector_logic_1/Res] [get_bd_pins mem_interface/sys_rst]
-connect_bd_net [get_bd_pins util_vector_logic_0/Res] [get_bd_pins mem_interface/S_ARESETN]
+# connect_bd_net [get_bd_pins util_vector_logic_0/Res] [get_bd_pins mem_interface/S_ARESETN]
 connect_bd_net [get_bd_pins ethernet/tx_clk_out_0] [get_bd_pins proc_sys_reset_0/slowest_sync_clk]
 connect_bd_net [get_bd_pins ethernet/ext_reset_n] [get_bd_pins proc_sys_reset_0/ext_reset_in]
 connect_bd_net [get_bd_pins ethernet/tx_clk_out_0] [get_bd_pins mem_interface/clk156_25] -boundary_type upper
