@@ -8,7 +8,8 @@
 
 #define MEM_INFO_SIZE 4 
 #define PARAMETER_MEM_INFO_SIZE 2  
-#define DARIUS_INFO_SIZE 35 // {ind_0 = num_commands, ind_1-32 = command, ind_33 = batch_size, ind_34 = num_ranks}
+#define DARIUS_INFO_SIZE 32 // {ind_0 = num_commands, ind_1-32 = command, ind_33 = batch_size, ind_34 = num_ranks}
+#define MAX_COMMANDS 32 // 
 
 #define NUM_COMMANDS_OFFSET 0x60
 #define COMMAND_OFFSET 0x70
@@ -66,9 +67,9 @@ void dariusController(
 
 
     //Variables that need to maintain value across states
-    static int parameter_mem_info[PARAMETER_MEM_INFO_SIZE]; //{offset in offchip memory to dma_in, size to dma_in} 
+    static int parameter_mem_info[MAX_COMMANDS * PARAMETER_MEM_INFO_SIZE]; //{offset in offchip memory to dma_in, size to dma_in} 
     static int data_mem_info[MEM_INFO_SIZE]; //{offset in offchip memory to dma_in, size to dma_in, offset in offchip memory to dma_out, size to dma_out} 
-    static int darius_info[DARIUS_INFO_SIZE]; //{num_commands, command, batch_size, num_ranks} 
+    static int darius_info[MAX_COMMANDS * DARIUS_INFO_SIZE]; //{num_commands, command, batch_size, num_ranks} 
     static int cumulative_cycle_count[1];
     static unsigned int batch_size = darius_info[DARIUS_INFO_SIZE - 2];
     static unsigned int num_ranks = darius_info[DARIUS_INFO_SIZE - 1];
@@ -77,9 +78,9 @@ void dariusController(
 
  
     //variables that are read in 
-    float parameter_mem_info_float[PARAMETER_MEM_INFO_SIZE]; //{offset in offchip memory to dma_in, size to dma_in} 
+    float parameter_mem_info_float[MAX_COMMANDS * PARAMETER_MEM_INFO_SIZE]; //{offset in offchip memory to dma_in, size to dma_in} 
     float data_mem_info_float[MEM_INFO_SIZE]; //{offset in offchip memory to dma_in, size to dma_in, offset in offchip memory to dma_out, size to dma_out} 
-    float darius_info_float[DARIUS_INFO_SIZE]; //{num_commands, command, batch_size, num_ranks} 
+    float darius_info_float[MAX_COMMANDS * DARIUS_INFO_SIZE + 2]; //{num_commands, command, batch_size, num_ranks} 
     float cumulative_cycle_count_float[1];
     float local_mem[10];
 
@@ -87,28 +88,38 @@ void dariusController(
     float size_float[1];
     static ap_uint <3> state = INIT;
 
+    float num_commands_float[1];
 
+    int num_commands;
+
+    float num_dma_parameters_float[1];
+
+    int num_dma_parameters;
     switch (state) {
         case INIT:
+    //read in number of commands
+            while(!MPI_Recv(num_commands_float, 1, MPI_FLOAT, 0,0/*not used*/,MPI_COMM_WORLD/*not used*/));
+            num_commands = (int) num_commands_float[0];
+            while(!MPI_Recv(darius_info_float, num_commands * DARIUS_INFO_SIZE + 2, MPI_FLOAT, 0,0/*not used*/,MPI_COMM_WORLD/*not used*/));
+            for(int i=0; i< num_commands * DARIUS_INFO_SIZE; i++)
+                darius_info[i] = (int) darius_info_float[i];
+            batch_size = (int)darius_info_float[num_commands * DARIUS_INFO_SIZE];  
+            num_ranks = (int)darius_info_float[num_commands * DARIUS_INFO_SIZE + 1];  
+
+            
+            
+            while(!MPI_Recv(num_dma_parameters_float, 1, MPI_FLOAT, 0,0/*not used*/,MPI_COMM_WORLD/*not used*/));
+            num_dma_parameters = (int)num_dma_parameters_float[0];
+
+
     //control and parameters from rank 0
     //
     //information on parameters (offset to dma in and size)
             //while(!MPI_Recv(parameter_mem_info_float, PARAMETER_MEM_INFO_SIZE, MPI_FLOAT, 0,0/*not used*/,MPI_COMM_WORLD/*not used*/, state_out));
-            while(!MPI_Recv(parameter_mem_info_float, PARAMETER_MEM_INFO_SIZE, MPI_FLOAT, 0,0/*not used*/,MPI_COMM_WORLD/*not used*/));
-	    for(int i=0; i< PARAMETER_MEM_INFO_SIZE; i++)
+            while(!MPI_Recv(parameter_mem_info_float, num_dma_parameters * PARAMETER_MEM_INFO_SIZE, MPI_FLOAT, 0,0/*not used*/,MPI_COMM_WORLD/*not used*/));
+	        for(int i=0; i< num_commands * PARAMETER_MEM_INFO_SIZE; i++)
                 parameter_mem_info[i] = (int) parameter_mem_info_float[i];
-            
-	    size_float[0] = parameter_mem_info_float[1];
 	
-	    //size_float[0] = 2.0f;
-	    //float send_float[1];
-	    //if(size_float[0] == 8.0f)
-	    //        send_float[0] = 42.0f;
-	    //else
-	    //        send_float[0] = size_float[0];
-	    //
-	    //while(!MPI_Send(send_float, 1, MPI_FLOAT, 0, 0 ,MPI_COMM_WORLD));
-	    
 
 
 #ifndef CONTROLLER_ONLY
@@ -116,7 +127,9 @@ void dariusController(
 #endif
             //dma in parameters
             //while(!MPI_Recv(mem+parameter_mem_info[0]/sizeof(int), parameter_mem_info[1]/sizeof(int), MPI_FLOAT, 0,0/*not used*/,MPI_COMM_WORLD/*not used*/, state_out));
-            while(!MPI_Recv(mem+parameter_mem_info[0]/sizeof(int), parameter_mem_info[1]/sizeof(int), MPI_FLOAT, 0,0/*not used*/,MPI_COMM_WORLD/*not used*/));
+             
+            for(int i=0; i< num_dma_parameters*2; i+=2)
+                while(!MPI_Recv(mem+parameter_mem_info[i]/sizeof(int), parameter_mem_info[i+1]/sizeof(int), MPI_FLOAT, 0,0/*not used*/,MPI_COMM_WORLD/*not used*/));
             
 	    
 
@@ -131,8 +144,8 @@ void dariusController(
             for(int i=0; i< DARIUS_INFO_SIZE; i++)
                 darius_info[i] = (int) darius_info_float[i];
      
-            batch_size = darius_info[DARIUS_INFO_SIZE - 2];
-            num_ranks = darius_info[DARIUS_INFO_SIZE - 1];
+            batch_size = darius_info[0];
+            num_ranks = darius_info[1];
 
             if(rank<=batch_size)
                 prev_rank = 0;
@@ -158,9 +171,9 @@ void dariusController(
 
         case RUN_DARIUS:
             //run darius
-            darius_driver[NUM_COMMANDS_OFFSET/sizeof(int)] = darius_info[0]; // num_commands
+            darius_driver[NUM_COMMANDS_OFFSET/sizeof(int)] = num_commands; // num_commands
             for (int i=0; i<(DARIUS_INFO_SIZE-1); i++)
-                darius_driver[COMMAND_OFFSET/sizeof(int) + i] = darius_info[i+1]; // command
+                darius_driver[COMMAND_OFFSET/sizeof(int) + i] = darius_info[i+2]; // command
             darius_driver[0] = START;
 
             state = WAIT_FOR_DARIUS;

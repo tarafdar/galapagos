@@ -4,9 +4,9 @@ cd userIP
 
 set MPI_HEADERS_DIR "../HMPI/HLS_lib/"
 
-open_project dariusController  
-set_top dariusController
-add_files ../telepathy/hlsSources/dariusController.cpp -cflags "-I ${MPI_HEADERS_DIR} "
+open_project mpiController  
+set_top mpiController
+add_files ../telepathy/hlsSources/mpiController.cpp -cflags "-I ${MPI_HEADERS_DIR} "
 #add_files ../HMPI/HLS_lib/HUM.cpp -cflags "-I ${MPI_HEADERS_DIR} "
 open_solution "solution1"
 set_part {xcku115-flva1517-2-e}

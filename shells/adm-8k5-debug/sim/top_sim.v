@@ -6,17 +6,17 @@ module top_sim(
     input clk,
     input sys_resetn,
     //from stimulus
-    input [7:0] keep,
-    input last,
-    input [63:0] data,
-    input valid,
-    output ready,
-    output [7:0] keep_out,
-    output last_out,
-    output [63:0] data_out,
-    output valid_out,
-    input ready_out,
-    input mem_sys_clk_n,
+    input [7:0] stream_in_keep,
+    input stream_in_last,
+    input [63:0] stream_in_data,
+    input stream_in_valid,
+    output stream_in_ready,
+    output [7:0] stream_out_keep,
+    output stream_out_last,
+    output [63:0] stream_out_data,
+    output stream_out_valid,
+    input stream_out_ready,    
+    //input mem_sys_clk_n,
     input mem_sys_clk_p,
     output mem_ready
 
@@ -27,6 +27,7 @@ module top_sim(
 //parameter SIM_CAL_OPTION = "FAST_CAL";  
    
 
+    assign mem_sys_clk_n = ~mem_sys_clk_p;
  
 
     //mem
