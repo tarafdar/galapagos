@@ -113,10 +113,17 @@ namespace eval 2018.2 {
 
 
 # defines get_design_name
-source ./tclScripts/utilities.tcl
+if { [info exists ::env(GALAPAGOS_PATH)] } {
+    source ${::env(GALAPAGOS_PATH)}/shells/tclScripts/utilities.tcl
+    # defines procs for creating IPs/hierarchies
+    source ${::env(GALAPAGOS_PATH)}/shells/tclScripts/shell_procs.tcl
+} else {
+    source ${::env(SHELLS_PATH)}/tclScripts/utilities.tcl
+    # defines procs for creating IPs/hierarchies
+    source ${::env(SHELLS_PATH)}/tclScripts/shell_procs.tcl
+}
 
-# defines procs for creating IPs/hierarchies
-source ./tclScripts/shell_procs.tcl
+
 
 # determine Vivado version
 set current_vivado_version [version -short]
@@ -411,6 +418,7 @@ proc create_root_design { parentCell } {
 
   # Create instance: mem_interface
   create_hier_ddr4 [current_bd_instance .] mem_interface true true
+  #
   set_property -dict [ list \
     CONFIG.C0.ADDR_WIDTH {17} \
     CONFIG.C0.BANK_GROUP_WIDTH {2} \
@@ -418,7 +426,7 @@ proc create_root_design { parentCell } {
     CONFIG.C0.DDR4_AxiDataWidth {512} \
     CONFIG.C0.DDR4_CasLatency {18} \
     CONFIG.C0.DDR4_CasWriteLatency {11} \
-    CONFIG.C0.DDR4_CustomParts $project_path/$project_name.srcs/sources_1/imports/srcs/custom_parts_2133.csv \
+    CONFIG.C0.DDR4_CustomParts {../../../../imports/srcs/custom_parts_2133.csv} \
     CONFIG.C0.DDR4_DataWidth {64} \
     CONFIG.C0.DDR4_InputClockPeriod {3338} \
     CONFIG.C0.DDR4_MemoryPart {CUSTOM_DBI_MT40A1G8PM-083E} \
