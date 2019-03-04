@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cluster>
+    <packet>
+        <data> 64 </data>
+        <keep> 1 </keep>
+        <last> 1 </last>
+    </packet>
     <kernel> axi_fifo_mm_s 
         <vendor> xilinx.com </vendor>
         <version> 4.1 </version>

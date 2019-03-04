@@ -61,7 +61,7 @@ def userApplicationRegionControlInst(tcl_user_app):
                 {'name':'axi_interconnect',
                 'inst':'applicationRegion/axi_interconnect_ctrl',
                 'clks':inc_clks,
-                'resetns':inc_resetsn,
+                'resetns':inc_resetns,
                 'properties':['CONFIG.NUM_SI {1}',
                     'CONFIG.NUM_MI {' + str(num_ctrl_interfaces) + '}']
                 }

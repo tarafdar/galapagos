@@ -21,11 +21,50 @@ class cluster(abstractDict):
         self.name = name
         self.kernel_file = kernel_file
 
+        #placeholder defaults so functions still work
+        self.packet_data = 64
+        self.packet_dest = 8 
+        self.packet_keep = 0 
+        self.packet_last = 0 
+        self.packet_id = 0 
+        self.packet_user = 0 
+
+
+
 
         if input_file_type == 'xml':
+            top_dict = self.getDictFromXML(kernel_file)['cluster']
+            if 'packet' in top_dict:
+                packet = top_dict['packet']
+                if 'data' in packet:
+                    self.packet_data = top_dict['packet']['data']
+                if 'keep' in packet:
+                    self.packet_keep = top_dict['packet']['keep']
+                if 'last' in packet:
+                    self.packet_last = top_dict['packet']['last']
+                if 'id' in packet:
+                    self.packet_id = top_dict['packet']['id']
+                if 'user' in packet:
+                    self.packet_user = top_dict['packet']['user']
+                
+
+                f = open('include/packet_size.h', 'w')
+                f.write("# define PACKET_DATA_LENGTH " + str(self.packet_data) + '\n')
+                if self.packet_keep:
+                    self.packet_keep = int(self.packet_data)/8
+                    f.write("# define PACKET_KEEP_LENGTH " + str(self.packet_keep) + '\n')
+                if self.packet_last:
+                    f.write("# define PACKET_LAST ")
+                if self.packet_id > 0:
+                    f.write("# define PACKET_ID_LENGTH " + str(self.packet_id) + '\n')
+                if self.packet_user:
+                    f.write("# define PACKET_USER_LENGTH " + str(self.packet_user) + '\n')
+                if self.packet_dest:
+                    f.write("# define PACKET_DEST_LENGTH " + str(self.packet_dest) + '\n')
+
+
             logical_dict = self.getDictFromXML(kernel_file)['cluster']['kernel']
             map_dict = self.getDictFromXML(map_file)['cluster']['node']
-
 
 
         self.kernels = []
