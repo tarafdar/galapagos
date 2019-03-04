@@ -1,0 +1,3 @@
+[submodule "shells"]
+	path = shells
+	url = https://github.com/UofT-HPRC/shells.git
