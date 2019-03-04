@@ -24,12 +24,12 @@ struct galapagos_packet {
     ap_uint <PACKET_USER_LENGTH> user;
 #endif   
 #ifdef PACKET_KEEP_LENGTH  
-    ap_uint <PACKET_KEEP_LENGTH> user;
+    ap_uint <PACKET_KEEP_LENGTH> keep;
 #endif   
 
 
 
-}
+};
 
 
 #endif
