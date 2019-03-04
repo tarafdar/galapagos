@@ -1,3 +1,6 @@
 [submodule "shells"]
 	path = shells
 	url = https://github.com/UofT-HPRC/shells.git
+[submodule "middleware"]
+	path = middleware
+	url = https://github.com/UofT-HPRC/middleware.git
