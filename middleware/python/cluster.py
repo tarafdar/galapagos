@@ -47,20 +47,23 @@ class cluster(abstractDict):
                 if 'user' in packet:
                     self.packet_user = top_dict['packet']['user']
                 
+                galapagos_path = str(os.environ.get('GALAPAGOS_PATH'))
 
-                f = open('include/packet_size.h', 'w')
+                f = open(galapagos_path + '/middleware/include/packet_size.h', 'w')
+                f.write("#ifndef PACKET_SIZE_H\n#define PACKET_SIZE_H\n")
                 f.write("# define PACKET_DATA_LENGTH " + str(self.packet_data) + '\n')
                 if self.packet_keep:
                     self.packet_keep = int(self.packet_data)/8
                     f.write("# define PACKET_KEEP_LENGTH " + str(self.packet_keep) + '\n')
                 if self.packet_last:
-                    f.write("# define PACKET_LAST ")
+                    f.write("# define PACKET_LAST\n")
                 if self.packet_id > 0:
                     f.write("# define PACKET_ID_LENGTH " + str(self.packet_id) + '\n')
                 if self.packet_user:
                     f.write("# define PACKET_USER_LENGTH " + str(self.packet_user) + '\n')
                 if self.packet_dest:
                     f.write("# define PACKET_DEST_LENGTH " + str(self.packet_dest) + '\n')
+                f.write("#endif\n")
 
 
             logical_dict = self.getDictFromXML(kernel_file)['cluster']['kernel']
@@ -137,7 +140,6 @@ class cluster(abstractDict):
         
         for node_idx, node in enumerate(self.nodes):
             if node['type'] == 'hw':
-                dirName = 'projects/' + self.name + '/' + str(node_idx)
                 tclFileGenerator.makeTCLFiles(node, self.name, sim)
 
 
@@ -146,12 +148,13 @@ class cluster(abstractDict):
     #make COE to intialize BRAM of all IP addresses
     def writeBRAMFile(self, addr_type):
 
+        galapagos_path = str(os.environ.get('GALAPAGOS_PATH'))
 
         if addr_type == 'mac':
-            bramFile = open('projects/'+ self.name + '/mac.coe', 'w')
+            bramFile = open(galapagos_path + '/projects/'+ self.name + '/mac.coe', 'w')
             bramFile.write('memory_initialization_radix=16;\n')
         else: #ip
-            bramFile = open('projects/'+ self.name + '/ip.coe', 'w')
+            bramFile = open(galapagos_path + '/projects/'+ self.name + '/ip.coe', 'w')
             bramFile.write('memory_initialization_radix=10;\n')
         bramFile.write('memory_initialization_vector=\n')
         
@@ -191,18 +194,23 @@ class cluster(abstractDict):
                 break
 
     def makeProjectClusterScript(self):
-    
-        if os.path.exists('projects/' + self.name):
-            shutil.rmtree('projects/' + self.name)
-        os.makedirs('projects/' + self.name)
-    
-        globalConfigFile = open('createCluster.sh', 'w')
-        globalSimFile = open('simCluster.sh', 'w')
+
+        galapagos_path = str(os.environ.get('GALAPAGOS_PATH'))
+
+
+        if os.path.exists(galapagos_path + '/projects/' + self.name):
+            shutil.rmtree(galapagos_path + '/projects/' + self.name)
+        os.makedirs(galapagos_path + '/projects/' + self.name)
+   
+
+
+        globalConfigFile = open(galapagos_path + '/createCluster.sh', 'w')
+        globalSimFile = open(galapagos_path + '/simCluster.sh', 'w')
     
         for node_idx, node_obj in enumerate(self.nodes):
             #only need vivado project for hw nodes
             if node_obj['type'] == 'hw':
-                dirName = 'projects/' + self.name + '/' + str(node_idx)
+                dirName = galapagos_path + '/projects/' + self.name + '/' + str(node_idx)
                 os.makedirs(dirName)
                 #currently only making flattened bitstreams
                 globalConfigFile.write("vivado -mode batch -source tclScripts/createFlatten.tcl -tclargs " + node_obj['board'] + " " + self.name + " " + str(node_idx) + "& \n")

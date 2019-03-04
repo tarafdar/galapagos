@@ -12,14 +12,14 @@ void hlsTest(
 #pragma HLS INTERFACE axis port=stream_out
 #pragma HLS INTERFACE m_axi port=mem depth=8
 
-
+    galapagos_packet stream_packet;
 
     stream_out->write(stream_in->read());
 
     stream_packet = stream_in->read();
 
     int mem_addr;
-    if(stream_packet.data == STREAM);
+    if(stream_packet.data == STREAM)
         stream_out->write(stream_in->read());
     else{
         stream_packet = stream_in->read();

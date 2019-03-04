@@ -1214,10 +1214,11 @@ def netBridgeConstants(tcl_net):
 
     tcl_net.setProperties('network/ip_constant_block_inst', properties)
 
+    galapagos_path = str(os.environ.get('GALAPAGOS_PATH'))
     if tcl_net.fpga['comm'] == 'tcp':
-        tcl_net.addSource('./tclScripts/pr_tcp_bridge.tcl')
+        tcl_net.addSource(galapagos_path + '/middleware/tclScripts/pr_tcp_bridge.tcl')
     elif tcl_net.fpga['comm'] == 'eth':
-        tcl_net.addSource('./tclScripts/pr_eth_bridge.tcl')
+        tcl_net.addSource(galapagos_path + '/middleware/tclScripts/pr_eth_bridge.tcl')
 
 
 
@@ -1363,7 +1364,8 @@ def makeTCLFiles(fpga, projectName, sim):
 
 
 
-    outDir = 'projects/' + projectName + '/' + str(fpga['num'])
+    galapagos_path = str(os.environ.get('GALAPAGOS_PATH'))
+    outDir = galapagos_path + '/projects/' + projectName + '/' + str(fpga['num'])
 
     #make bridge to network
     netBridge(outDir, fpga)
@@ -1373,8 +1375,9 @@ def makeTCLFiles(fpga, projectName, sim):
     #if(num_debug_interfaces > 0):
     #    add_debug_interfaces(outDir, num_debug_interfaces, fpga)
 
+    galapagos_path = str(os.environ.get('GALAPAGOS_PATH'))
     tclMain = tclMeFile( outDir + '/' + str(fpga['num']), fpga)
-    tclMain.addSource('./tclScripts/pr_standard_interfaces.tcl')
+    tclMain.addSource(galapagos_path + '/shells/tclScripts/pr_standard_interfaces.tcl')
     tclMain.addSource(outDir + '/' + str(fpga['num']) + '_net.tcl')
     tclMain.addSource(outDir + '/' + str(fpga['num']) + '_app.tcl')
     tclMain.addSource(outDir + '/' + str(fpga['num']) + '_bridge_connections.tcl')

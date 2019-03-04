@@ -10,7 +10,7 @@ guard-%:
 		exit 1; \
 	fi
 
-HLSMIDDLEWARE_DIR = $(GALAPAGOS_PATH)/hwMiddleware/hls 
+HLSMIDDLEWARE_DIR = $(GALAPAGOS_PATH)/middleware/hls 
 
 .PHONY: middleware
 
@@ -24,7 +24,7 @@ example_shell:
 middleware: ${LOGICALFILE} ${MAPFILE} guard-LOGICALFILE guard-MAPFILE guard-PROJECTNAME guard-GALAPAGOS_PATH 
 	mkdir -p ${GALAPAGOS_PATH}/projects
 	mkdir -p ${GALAPAGOS_PATH}/projects/${PROJECTNAME}
-	python3.5 ${GALAPAGOS_PATH}/hwMiddleware/python/globalFPGAParser.py --logicalFile=${LOGICALFILE} --mapFile=${MAPFILE} --projectName=${PROJECTNAME}
+	python3.5 ${GALAPAGOS_PATH}/middleware/python/globalFPGAParser.py --logicalFile=${LOGICALFILE} --mapFile=${MAPFILE} --projectName=${PROJECTNAME}
 	chmod +x ${GALAPAGOS_PATH}/createCluster.sh
 	
 
