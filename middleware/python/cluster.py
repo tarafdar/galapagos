@@ -54,7 +54,7 @@ class cluster(abstractDict):
                 f.write("# define PACKET_DATA_LENGTH " + str(self.packet_data) + '\n')
                 if self.packet_keep:
                     self.packet_keep = int(self.packet_data)/8
-                    f.write("# define PACKET_KEEP_LENGTH " + str(self.packet_keep) + '\n')
+                    f.write("# define PACKET_KEEP_LENGTH " + str(int(self.packet_keep)) + '\n')
                 if self.packet_last:
                     f.write("# define PACKET_LAST\n")
                 if self.packet_id > 0:
