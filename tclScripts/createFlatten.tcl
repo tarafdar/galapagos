@@ -1,30 +1,30 @@
-set boardName [lindex $argv 0]
-set projDir [lindex $argv 1]
-set projName [lindex $argv 2]
+set projDir [lindex $argv 0]
+set projName [lindex $argv 1]
 
-if { $::argc > 3 } {
-    set pr_tcl_file [lindex $argv 3]
+set galapagos_path $::env(GALAPAGOS_PATH)
+set board_name $::env(GALAPAGOS_BOARD_NAME)
+set part_name $::env(GALAPAGOS_PART)
+
+if { $::argc > 2 } {
+    set pr_tcl_file [lindex $argv 2]
 } else {
     set pr_tcl_file projects/$projDir/$projName/$projName.tcl
 }
-puts $boardName
+
+
+puts $board_name
 puts $projDir
 puts $projName
 puts $pr_tcl_file
 
 
-if {$boardName eq "adm-8k5"} {
-    set partName xcku115-flva1517-2-e
-} elseif {$boardName eq "adm-8k5-debug"} {
-    set partName xcku115-flva1517-2-e
-}
 
 # Set the directory path for the original project from where this script was exported
 set orig_proj_dir "[file normalize "projects/$projDir"]"
 
 # Create project
 #create_project $projName projects/$projDir/$projName -part xcku115-flva1517-2-e
-create_project $projName projects/$projDir/$projName -part $partName
+create_project $projName projects/$projDir/$projName -part $part_name
 
 # Set the directory path for the new project
 set proj_dir [get_property directory [current_project]]
@@ -41,7 +41,7 @@ set_property "default_lib" "xil_defaultlib" $obj
 set_property "ip_cache_permissions" "read write" $obj
 set_property "ip_output_repo" "shells/projects/$projDir/$projDir.cache/ip" $obj
 #set_property "part" "xcku115-flva1517-2-e" $obj
-set_property "part" $partName $obj
+set_property "part" $part_name $obj
 set_property "sim.ip.auto_export_scripts" "1" $obj
 set_property "simulator_language" "Mixed" $obj
 set_property "xpm_libraries" "XPM_CDC XPM_MEMORY" $obj
@@ -64,11 +64,11 @@ update_ip_catalog -rebuild
 # Set 'sources_1' fileset object
 set obj [get_filesets sources_1]
 #set files [list \
-# "[file normalize "shells/$boardName/srcs/shell.bd"]"\
-# "[file normalize "shells/$boardName/srcs/shellTop.v"]"\
-# "[file normalize "shells/$boardName/constraints/custom_parts_2133.csv"]"\
+# "[file normalize "shells/$board_name/srcs/shell.bd"]"\
+# "[file normalize "shells/$board_name/srcs/shellTop.v"]"\
+# "[file normalize "shells/$board_name/constraints/custom_parts_2133.csv"]"\
 #]
-set files [glob shells/$boardName/srcs/*]
+set files [glob shells/$board_name/srcs/*]
 import_files -norecurse -fileset $obj $files
 #add_files -norecurse -fileset $obj $files
 
@@ -85,7 +85,7 @@ if { ![get_property "is_locked" $file_obj] } {
   set_property "synth_checkpoint_mode" "Hierarchical" $file_obj
 }
 
-#set files [glob shells/$boardName/sim/*]
+#set files [glob shells/$board_name/sim/*]
 #import_files -norecurse -fileset sim_1 $files
 
 # Set 'sources_1' fileset file properties for local files
@@ -124,10 +124,10 @@ set obj [get_filesets constrs_1]
 
 # Add/Import constrs file and set constrs file properties
 
-set constFiles [glob shells/$boardName/constraints/*.xdc]
+set constFiles [glob shells/$board_name/constraints/*.xdc]
 foreach constFilePath $constFiles { 
     set constFile [file tail $constFilePath]
-    set file "[file normalize "shells/$boardName/constraints/$constFile"]"
+    set file "[file normalize "shells/$board_name/constraints/$constFile"]"
     set file_imported [import_files -fileset constrs_1 $file]
     set file "projects/$projDir/$projName/$projName.srcs/constrs_1/imports/constraints/$constFile"
     set file_obj [get_files -of_objects [get_filesets constrs_1] [list "*$file"]]
@@ -165,26 +165,26 @@ set_property "xelab.unifast" "" $obj
 # Create 'synth_1' run (if not found)
 if {[string equal [get_runs -quiet synth_1] ""]} {
   #create_run -name synth_1 -part xcku115-flva1517-2-e -flow {Vivado Synthesis 2016} -strategy "Vivado Synthesis Defaults" -constrset constrs_1
-  create_run -name synth_1 -part $partName -flow {Vivado Synthesis 2016} -strategy "Vivado Synthesis Defaults" -constrset constrs_1
+  create_run -name synth_1 -part $part_name -flow {Vivado Synthesis 2016} -strategy "Vivado Synthesis Defaults" -constrset constrs_1
 } else {
   set_property strategy "Vivado Synthesis Defaults" [get_runs synth_1]
   set_property flow "Vivado Synthesis 2016" [get_runs synth_1]
 }
 set obj [get_runs synth_1]
 #set_property "part" "xcku115-flva1517-2-e" $obj
-set_property "part" $partName $obj
+set_property "part" $part_name $obj
 
 
 # Create 'impl_1' run (if not found)
 if {[string equal [get_runs -quiet impl_1] ""]} {
   #create_run -name impl_1 -part xcku115-flva1517-2-e -flow {Vivado Implementation 2016} -strategy "Vivado Implementation Defaults" -constrset constrs_1 -parent_run synth_1
-  create_run -name impl_1 -part $partName -flow {Vivado Implementation 2016} -strategy "Vivado Implementation Defaults" -constrset constrs_1 -parent_run synth_1
+  create_run -name impl_1 -part $part_name -flow {Vivado Implementation 2016} -strategy "Vivado Implementation Defaults" -constrset constrs_1 -parent_run synth_1
 } else {
   set_property strategy "Vivado Implementation Defaults" [get_runs impl_1]
   set_property flow "Vivado Implementation 2016" [get_runs impl_1]
 }
 set obj [get_runs impl_1]
-set_property "part" $partName $obj
+set_property "part" $part_name $obj
 set_property "steps.write_bitstream.args.readback_file" "0" $obj
 set_property "steps.write_bitstream.args.verbose" "0" $obj
 

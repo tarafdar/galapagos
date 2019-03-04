@@ -1,14 +1,21 @@
-set boardName [lindex $argv 0]
+set projDir [lindex $argv 0]
 set projName [lindex $argv 1]
 
-puts $boardName
-puts $projName
+set galapagos_path $::env(GALAPAGOS_PATH)
+set board_name $::env(GALAPAGOS_BOARD_NAME)
+set part_name $::env(GALAPAGOS_PART)
 
 
 if {$boardName eq "adm-8k5"} {
     set partName xcku115-flva1517-2-e
 } elseif {$boardName eq "adm-8k5-debug"} {
     set partName xcku115-flva1517-2-e
+}
+
+if { $::argc > 2 } {
+    set pr_tcl_file [lindex $argv 2]
+} else {
+    set pr_tcl_file projects/$projDir/$projName/$projName.tcl
 }
 
 # Set the directory path for the original project from where this script was exported
@@ -47,8 +54,21 @@ if {[string equal [get_filesets -quiet sources_1] ""]} {
 
 # Set IP repository paths
 set obj [get_filesets sources_1]
-#set_property ip_repo_paths {hlsIP_8k5 networkingIPRepo}
-set_property ip_repo_paths {hlsIP_adm-8k5 shells/shell_ips userIP} [current_project]
+
+
+if {[file isdirectory userIP]} {
+    if {[file isdirectory hlsBuild]} {
+        set_property ip_repo_paths {hlsBuild shells/shell_ips userIP} [current_project]
+    } else {
+        set_property ip_repo_paths {shells/shell_ips userIP} [current_project]
+    }
+} else {
+    if {[file isdirectory hlsBuild]} {
+        set_property ip_repo_paths {hlsBuild shells/shell_ips} [current_project]
+    } else {
+        set_property ip_repo_paths {shells/shell_ips} [current_project]
+    }
+}
 
 # Rebuild user ip_repo's index before adding any source files
 update_ip_catalog -rebuild
@@ -60,7 +80,7 @@ set obj [get_filesets sources_1]
 # "[file normalize "shells/$boardName/srcs/shellTop.v"]"\
 # "[file normalize "shells/$boardName/constraints/custom_parts_2133.csv"]"\
 #]
-set files [glob shells/$boardName/srcs/*]
+set files [glob shells/$board_name/srcs/*]
 import_files -norecurse -fileset $obj $files
 #add_files -norecurse -fileset $obj $files
 
@@ -80,7 +100,7 @@ if { ![get_property "is_locked" $file_obj] } {
   set_property "synth_checkpoint_mode" "Hierarchical" $file_obj
 }
 
-set files [glob shells/$boardName/sim/*]
+set files [glob shells/$board_name/sim/*]
 import_files -norecurse -fileset sim_1 $files
 
 # Set 'sources_1' fileset file properties for local files
@@ -122,10 +142,10 @@ set obj [get_filesets constrs_1]
 
 # Add/Import constrs file and set constrs file properties
 
-set constFiles [glob shells/$boardName/constraints/*.xdc]
+set constFiles [glob shells/$board_name/constraints/*.xdc]
 foreach constFilePath $constFiles { 
     set constFile [file tail $constFilePath]
-    set file "[file normalize "shells/$boardName/constraints/$constFile"]"
+    set file "[file normalize "shells/$board_name/constraints/$constFile"]"
     set file_imported [import_files -fileset constrs_1 $file]
     set file "projects/$projName/example/example.srcs/constrs_1/imports/constraints/$constFile"
     set file_obj [get_files -of_objects [get_filesets constrs_1] [list "*$file"]]
