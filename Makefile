@@ -20,13 +20,16 @@ HLSMIDDLEWARE_DIR = $(GALAPAGOS_PATH)/middleware/hls
 all: hlsmiddleware middleware
 
 example_shell:
+	mkdir -p $(GALAPAGOS_PATH)/projects
 	$(MAKE) -C $(SHELLS_DIR) example 
 
 middleware: ${LOGICALFILE} ${MAPFILE} guard-LOGICALFILE guard-MAPFILE guard-PROJECTNAME guard-GALAPAGOS_PATH 
+	mkdir -p $(GALAPAGOS_PATH)/projects
 	$(MAKE) -C $(MIDDLEWARE_DIR) middleware 
 	
 hlsmiddleware:
-	 $(MAKE) -C $(MIDDLEWARE_DIR) hlsmiddleware
+	mkdir -p $(GALAPAGOS_PATH)/hlsBuild
+	$(MAKE) -C $(MIDDLEWARE_DIR) hlsmiddleware
 
 clean:
 	 $(MAKE) -C $(MIDDLEWARE_DIR) clean
