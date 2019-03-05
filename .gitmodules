@@ -4,3 +4,6 @@
 [submodule "middleware"]
 	path = middleware
 	url = https://github.com/UofT-HPRC/middleware.git
+[submodule "HUMboldt"]
+	path = HUMboldt
+	url = https://github.com/UofT-HPRC/HUMboldt.git
