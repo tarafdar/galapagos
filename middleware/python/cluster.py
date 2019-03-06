@@ -213,8 +213,8 @@ class cluster(abstractDict):
                 dirName = galapagos_path + '/projects/' + self.name + '/' + str(node_idx)
                 os.makedirs(dirName)
                 #currently only making flattened bitstreams
-                globalConfigFile.write("vivado -mode batch -source tclScripts/createFlatten.tcl -tclargs " + node_obj['board'] + " " + self.name + " " + str(node_idx) + "& \n")
-                globalSimFile.write("vivado -mode gui -source tclScripts/createSim.tcl -tclargs " + node_obj['board'] + " " + self.name + " " + str(node_idx) + "\n")
+                globalConfigFile.write("vivado -mode batch -source shells/tclScripts/make_shell.tcl -tclargs --project_name " + self.name + "/" + str(node_idx) + "  --pr_tcl " + dirName + "/" + str(node_idx) + ".tcl" +  "& \n")
+#                globalSimFile.write("vivado -mode gui -source tclScripts/createSim.tcl -tclargs " + node_obj['board'] + " " + self.name + " " + str(node_idx) + "\n")
 
 
 
