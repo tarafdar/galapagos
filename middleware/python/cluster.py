@@ -57,15 +57,13 @@ class cluster(abstractDict):
                     f.write("# define PACKET_KEEP_LENGTH " + str(int(self.packet_keep)) + '\n')
                 if self.packet_last:
                     f.write("# define PACKET_LAST\n")
-                if self.packet_id > 0:
+                if self.packet_id:
                     f.write("# define PACKET_ID_LENGTH " + str(self.packet_id) + '\n')
                 if self.packet_user:
                     f.write("# define PACKET_USER_LENGTH " + str(self.packet_user) + '\n')
                 if self.packet_dest:
                     f.write("# define PACKET_DEST_LENGTH " + str(self.packet_dest) + '\n')
                 f.write("#endif\n")
-
-
             logical_dict = self.getDictFromXML(kernel_file)['cluster']['kernel']
             map_dict = self.getDictFromXML(map_file)['cluster']['node']
 

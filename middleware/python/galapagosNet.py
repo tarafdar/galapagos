@@ -93,6 +93,8 @@ class GalapagosNet:
         self.tb = Testbench.default('top_sim')
 
         self.dut = Module.default("DUT")
+        
+        self.tb.add_module(self.dut)
         self.dut.add_clock_port("clk", "6.25ns")
         self.dut.add_clock_port("mem_sys_clk_p", "3ns")
         self.dut.add_reset_port("sys_resetn")
