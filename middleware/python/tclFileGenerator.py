@@ -415,7 +415,7 @@ def userApplicationRegionSwitchesInst(tcl_user_app, sim):
         tcl_user_app.instBlock(
             {'vendor':'xilinx.com',
             'lib':'hls',
-            'name':'ip_dest_filter',
+            'name':'width32router',
             'inst':'applicationRegion/custom_switch_inst',
             'clks':['aclk'],
             'resetns':['aresetn']
@@ -433,7 +433,7 @@ def userApplicationRegionSwitchesInst(tcl_user_app, sim):
                     'CONFIG.use_bram_block {BRAM_Controller}',
                     'CONFIG.EN_SAFETY_CKT {true}',
                     'CONFIG.Load_Init_File {true}',
-                    'CONFIG.Coe_File {../../../../../../../ip.coe}'
+                    'CONFIG.Coe_File $top_path/projects/$default_dir/ip.coe'
                     ]
 
         tcl_user_app.setProperties('applicationRegion/blk_mem_switch_rom', properties)
@@ -448,7 +448,7 @@ def userApplicationRegionSwitchesInst(tcl_user_app, sim):
             {
             'name':'applicationRegion/custom_switch_inst',
             'type':'pin',
-            'port_name':'ip_addr_V'
+            'port_name':'network_addr_V'
             }
             )
 
@@ -457,7 +457,7 @@ def userApplicationRegionSwitchesInst(tcl_user_app, sim):
                     {
                     'name':'applicationRegion/custom_switch_inst',
                     'type':'intf',
-                    'port_name':'ip_table_V_PORTA'
+                    'port_name':'network_table_V_PORTA'
                     },
                     {
                     'name':'applicationRegion/blk_mem_switch_rom',
@@ -470,7 +470,7 @@ def userApplicationRegionSwitchesInst(tcl_user_app, sim):
         tcl_user_app.instBlock(
                 {'vendor':'xilinx.com',
                 'lib':'hls',
-                'name':'eth_dest_filter',
+                'name':'width48router',
                 'inst':'applicationRegion/custom_switch_inst',
                 'clks':['aclk'],
                 'resetns':['aresetn']
@@ -492,7 +492,7 @@ def userApplicationRegionSwitchesInst(tcl_user_app, sim):
                     'CONFIG.use_bram_block {BRAM_Controller}',
                     'CONFIG.EN_SAFETY_CKT {true}',
                     'CONFIG.Load_init_file {true}',
-                    'CONFIG.Coe_File {../../../../../../../mac.coe}'
+                    'CONFIG.Coe_File $top_path/projects/$default_dir/mac.coe'
                     ]
 
         tcl_user_app.setProperties('applicationRegion/blk_mem_switch_rom', properties)
@@ -507,7 +507,7 @@ def userApplicationRegionSwitchesInst(tcl_user_app, sim):
                     {
                     'name':'applicationRegion/custom_switch_inst',
                     'type':'pin',
-                    'port_name':'mac_addr_V'
+                    'port_name':'network_addr_V'
                     }
                     )
 
@@ -516,7 +516,7 @@ def userApplicationRegionSwitchesInst(tcl_user_app, sim):
                 {
                 'name':'applicationRegion/custom_switch_inst',
                 'type':'intf',
-                'port_name':'mac_table_V_PORTA'
+                'port_name':'network_table_V_PORTA'
                 },
                 {
                 'name':'applicationRegion/blk_mem_switch_rom',
