@@ -48,7 +48,6 @@ int galapagos_kernel::send(void *buff, unsigned int count, short dest){
 }
 
 
-
 // reads buffer populated by other drivers
 galapagos_packet * galapagos_kernel::recv(){
     
