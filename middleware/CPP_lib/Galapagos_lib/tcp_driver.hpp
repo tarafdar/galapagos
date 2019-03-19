@@ -11,6 +11,7 @@ typedef struct{
 }map_element;
 
 asio::io_context io_context;
+//asio::io_service io_service;
 std::map <std::string, std::vector<short> >  address_map;
 std::mutex map_mutex;
 

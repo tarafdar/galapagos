@@ -49,6 +49,7 @@ void net_driver::recv_server(tcp::socket sock){
     std::map<string, int>::iterator it;
     
     while(1){
+        io_context.run();
         for ( it = address_map.begin(); it != address_map.end(); it++ ){
             if (it->second.sock != NULL){
                 avail = sock.available();
