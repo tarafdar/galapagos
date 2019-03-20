@@ -1,17 +1,24 @@
 #ifndef __GALAPAGOS_GLOBALS_HPP__   // if x.h hasn't been included yet...
 #define __GALAPAGOS_GLOBALS_HPP__
 
+
+#include <mutex>
+
+#include "galapagos_packet.hpp"
+
+
+
 enum kern_type {SW, HW};
-struct kern_info
+typedef struct 
 {
-	short kern_type;
-    std::vector <string> address_vect;
-};
+    short kern_type;
+    std::vector <std::string> address_vect;
+} kern_info;
 
 
-mutex gp_mutex;
+std::mutex gp_mutex;
 std::vector <galapagos_packet *> gp_ptr;
-std::vector <kernel_info> * kernel_info_table;
+std::vector <kern_info>  kernel_info_table;
 
 
 #endif

@@ -7,6 +7,6 @@ class galapagos_packet{
         short dest;
         galapagos_packet(int buff_len);
         ~galapagos_packet();
-}
+};
 
 #endif

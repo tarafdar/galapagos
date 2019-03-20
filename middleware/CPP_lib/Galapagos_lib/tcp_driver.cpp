@@ -1,7 +1,3 @@
-#include <cstdlib>
-#include <cstring>
-#include <iostream>
-#include "asio.hpp"
 
 #include "tcp_driver.hpp"
 
@@ -11,29 +7,23 @@ net_driver::net_driver(short id){
     //mapping off address to vector of kerns (inverse of kern map)
     //
     for(int i; i<kernel_info_table.size(); i++){
-        std::vector <short> vect;
-        address_map[kernel_info_table.address_vect[0]]= vect;    
-    }
-    for(int i; i<kernel_info_table.size(); i++){
         if(i == id){
             my_address = kernel_info_table[i].address_vect[0];
         }
-        map_element me;
-        me.kern = i;
-        me.sock = NULL;
-        address_map[kernel_info_table[i].address_vect[0]].push_back(me);    
+        address_map[kernel_info_table[i].address_vect[0]] = new map_element();    
+
     
     }   
-    std::thread(net_driver::socket_listener).detach();
-    std::thread(net_driver::recv_server).detach();
+    std::thread(socket_listener).detach();
+    std::thread(recv_server).detach();
 }
 
 
-void net_driver::recv_packet(char * buffer){
+void recv_packet(char * buffer, int buff_len){
     
-    galapagos_packet * gp = new galapagos_packet;
-    gp->buffer = buff + sizeof(short);
-    dest_ptr = (short *)buffer;
+    galapagos_packet * gp = new galapagos_packet(buff_len);
+    gp->buffer = buffer + sizeof(short);
+    short * dest_ptr = (short *)buffer;
     gp->dest = dest_ptr[0];
     {
         std::lock_guard<std::mutex> guard(gp_mutex);
@@ -44,18 +34,19 @@ void net_driver::recv_packet(char * buffer){
 
 
 //loops through all sockets to see if there's anything
-void net_driver::recv_server(tcp::socket sock){
+void recv_server(){
 
-    std::map<string, int>::iterator it;
+    std::map<std::string, map_element *>::iterator it;
     
     while(1){
-        io_context.run();
+        io_service.run();
         for ( it = address_map.begin(); it != address_map.end(); it++ ){
-            if (it->second.sock != NULL){
-                avail = sock.available();
+            if (it->second->sock != NULL){
+                int avail = it->second->sock->available();
+		boost::system::error_code error;
                 if(avail > 0){
-                    buffer = new char[avail];
-                    length = sock.read_some(asio::buffer(buffer), error);
+                    char * buffer = new char[avail];
+                    int length = it->second->sock->read_some(boost::asio::buffer(buffer, avail), error);
                 }
             }
         }
@@ -68,21 +59,20 @@ void net_driver::recv_server(tcp::socket sock){
 //listens for new sockets and adds it to list
 void socket_listener(){
 
-    tcp::acceptor a(io_context, tcp::endpoint(tcp::v4(), GALAPAGOS_PORT));
+    boost::asio::ip::tcp::acceptor a(io_service, boost::asio::ip::tcp::endpoint(boost::asio::ip::tcp::v4(), GALAPAGOS_PORT));
     
    
-    tcp::socket sock;
+    boost::asio::ip::tcp::socket sock(io_service);
     while(1){
         
         a.accept(sock);
-        std::thread(net_driver::tcp_recv_function, a.accept()).detach(); 
         {
             std::lock_guard<std::mutex> guard(map_mutex);
-            address_map[sock.remote_endpoint().address().to_string()].sock = &sock;
-            std::map<string, int>::iterator it;
+            address_map[sock.remote_endpoint().address().to_string()]->sock = &sock;
+            std::map<std::string, map_element *>::iterator it;
             bool all_sockets_connected = true;
             for ( it = address_map.begin(); it != address_map.end(); it++ ){
-                if (it->second.sock == NULL){
+                if (it->second->sock == NULL){
                     all_sockets_connected = false;
                 }
             }
@@ -107,21 +97,22 @@ void net_driver::send(void * buff, int count, short dest){
 
     {
         std::lock_guard<std::mutex> guard(map_mutex);
-        sock_ptr = address_map[dest_addr].sock;
+        sock_ptr = address_map[dest_addr]->sock;
     }
 
 
     //create new connection
     if(sock_ptr == NULL){
-        address_map[dest_addr].sock = new tcp::socket (io_context);
-        ostringstream convert;
+        address_map[dest_addr]->sock = new tcp::socket (io_service);
+        std::ostringstream convert;
         convert << GALAPAGOS_PORT;
         std::string port_str = convert.str();
-        tcp::resolver resolver(io_context);
-        asio::connect(*(address_map[dest_addr].sock), resolver.resolve(dest_addr, port_str));
+        tcp::resolver resolver(io_service);
+        address_map[dest_addr]->sock->connect(boost::asio::ip::tcp::endpoint(boost::asio::ip::address::from_string(dest_addr), GALAPAGOS_PORT));
+//	boost::asio::connect(*(address_map[dest_addr]->sock), resolver.resolve(dest_addr, port_str));
     }
     
-    asio::write(*(address_map[dest_addr].sock), asio::buffer(buff, count));
+    boost::asio::write(*(address_map[dest_addr]->sock), boost::asio::buffer(buff, count));
 
 }
 
