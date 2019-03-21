@@ -5,7 +5,8 @@ class galapagos_packet{
     public:
         char * buffer;
         short dest;
-        galapagos_packet(int buff_len);
+	int size;
+        galapagos_packet(char * buff);
         ~galapagos_packet();
 };
 

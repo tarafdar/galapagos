@@ -4,11 +4,17 @@ LDFLAGS = -lpthread
 
 BOOST_LDFLAGS=-lboost_thread -lboost_system $(LDFLAGS) 
 
-all: tcp.o
+net_driver = tcp
 
-tcp.o: tcp_driver.cpp  
+all: $(net_driver).o galapagos_kernel.o galapagos_packet.o
+
+$^:
 	$(CXX) $(CXXFLAGS) -c $^ -o $@ $(BOOST_LDFLAGS)
 
 
+test.exe:  $(net_driver).o galapagos_kernel.o galapagos_packet.o test.cpp
+	$(CXX) $(CXXFLAGS) $^ -o $@ $(BOOST_LDFLAGS) 
+
 clean:
 	rm -rf *.o
+	rm -rf *.exe 

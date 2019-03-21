@@ -3,10 +3,10 @@
 
 
 #include <mutex>
+#include <vector>
+
 
 #include "galapagos_packet.hpp"
-
-
 
 enum kern_type {SW, HW};
 typedef struct 
@@ -16,9 +16,11 @@ typedef struct
 } kern_info;
 
 
-std::mutex gp_mutex;
-std::vector <galapagos_packet *> gp_ptr;
-std::vector <kern_info>  kernel_info_table;
+
+
+extern std::mutex gp_mutex;
+extern std::vector <galapagos_packet *> gp_ptr;
+extern std::vector <kern_info>  kernel_info_table;
 
 
 #endif

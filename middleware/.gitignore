@@ -5,3 +5,4 @@ include/packet_size.h
 python/build*
 python/*bin
 python/__pycache__/
+*.o

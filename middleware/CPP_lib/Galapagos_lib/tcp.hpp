@@ -28,7 +28,6 @@ class map_element{
 
 
 boost::asio::io_service io_service;
-//asio::io_service io_service;
 std::map <std::string, map_element *>  address_map;
 std::mutex map_mutex;
 
@@ -36,4 +35,5 @@ std::mutex map_mutex;
 void socket_listener();
 void recv_server();
 void recv_packet(char * buffer, int buff_len);
+
 #endif

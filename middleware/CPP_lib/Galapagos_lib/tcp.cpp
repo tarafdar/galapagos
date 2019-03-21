@@ -1,5 +1,5 @@
 
-#include "tcp_driver.hpp"
+#include "tcp.hpp"
 
 net_driver::net_driver(short id){
 
@@ -21,10 +21,11 @@ net_driver::net_driver(short id){
 
 void recv_packet(char * buffer, int buff_len){
     
-    galapagos_packet * gp = new galapagos_packet(buff_len);
+    galapagos_packet * gp = new galapagos_packet(buffer);
     gp->buffer = buffer + sizeof(short);
     short * dest_ptr = (short *)buffer;
     gp->dest = dest_ptr[0];
+    gp->size = buff_len;
     {
         std::lock_guard<std::mutex> guard(gp_mutex);
         gp_ptr.push_back(gp);
@@ -47,6 +48,7 @@ void recv_server(){
                 if(avail > 0){
                     char * buffer = new char[avail];
                     int length = it->second->sock->read_some(boost::asio::buffer(buffer, avail), error);
+		    recv_packet(buffer, length);
                 }
             }
         }
