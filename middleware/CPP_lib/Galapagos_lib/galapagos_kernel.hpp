@@ -5,13 +5,13 @@
 #include <algorithm>
 
 #include "galapagos_globals.hpp"
-#include "net_driver.hpp"
+//#include "net_driver.hpp"
 
 
 
 class galapagos_kernel{
     short id;
-    net_driver * nd;
+    //net_driver * nd;
 
     public:
         galapagos_kernel(short id_in, std::vector<kern_info> kernel_info_table);

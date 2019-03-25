@@ -4,6 +4,7 @@
 
 #include <mutex>
 #include <vector>
+#include <list>
 
 
 #include "galapagos_packet.hpp"
@@ -15,11 +16,8 @@ typedef struct
     std::vector <std::string> address_vect;
 } kern_info;
 
-
-
-
 extern std::mutex gp_mutex;
-extern std::vector <galapagos_packet *> gp_ptr;
+extern std::list <galapagos_packet *> gp_ptr;
 extern std::vector <kern_info>  kernel_info_table;
 
 

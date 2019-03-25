@@ -20,12 +20,10 @@ net_driver::net_driver(short id){
 
 
 void recv_packet(char * buffer, int buff_len){
-    
-    galapagos_packet * gp = new galapagos_packet(buffer);
-    gp->buffer = buffer + sizeof(short);
-    short * dest_ptr = (short *)buffer;
-    gp->dest = dest_ptr[0];
-    gp->size = buff_len;
+    short * dest_ptr = (short *)buffer; 
+    buffer += sizeof(short);   
+ 
+    galapagos_packet * gp = new galapagos_packet(buffer, buff_len, dest_ptr[0]);
     {
         std::lock_guard<std::mutex> guard(gp_mutex);
         gp_ptr.push_back(gp);

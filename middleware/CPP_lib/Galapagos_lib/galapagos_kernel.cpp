@@ -1,7 +1,9 @@
 #include "galapagos_kernel.hpp"
 
+#include <iostream>
+
 std::mutex gp_mutex;
-std::vector <galapagos_packet *> gp_ptr;
+std::list <galapagos_packet *> gp_ptr;
 std::vector <kern_info>  kernel_info_table;
 
 std::mutex local_kerns_mutex;
@@ -21,12 +23,13 @@ galapagos_kernel::galapagos_kernel(
     {
         std::lock_guard<std::mutex> guard(local_kerns_mutex);
         local_kerns.push_back(id);
+        local_kerns.push_back(1);
     }
  
 
     //Call constructors for other kernel communication
     //net driver for different nodes
-    nd = new net_driver(id);
+    //nd = new net_driver(id);
     
     //Extend to other communication mediums
 
@@ -34,7 +37,9 @@ galapagos_kernel::galapagos_kernel(
 
 galapagos_kernel::~galapagos_kernel(){
 
-    delete nd;
+    //delete nd;
+    //for(int i=0; i< gp_ptr.size(); i++)
+    //	delete gp_ptr[i]; 
 
 }
 
@@ -52,15 +57,15 @@ void galapagos_kernel::send(void *buff, unsigned int count, short dest){
 
 
     //Case 1: different nodes
-    if(!found)
+    if(!found){
     //if(kernel_info_table[dest].address_vect[0] != kernel_info_table[id].address_vect[0])
-        nd->send(buff, count, dest);
+        //nd->send(buff, count, dest);
+	exit(0);
+    }
     //Case 2: same node add to buffer
     else{ 
-        galapagos_packet * gp = new galapagos_packet((char *) buff);
-        gp->dest = dest;
         std::lock_guard<std::mutex> guard(gp_mutex);
-        gp_ptr.push_back(gp);
+        gp_ptr.push_back(new galapagos_packet((char *) buff, count, dest));
 
     }
     //Other cases 
@@ -77,13 +82,21 @@ galapagos_packet * galapagos_kernel::recv(){
     
     while(1){
         std::lock_guard<std::mutex> guard(gp_mutex);
-        for(std::vector<galapagos_packet *>::iterator it = gp_ptr.begin(); it != gp_ptr.end(); it++){
-	    	ptr = (*it);
-            if(ptr->dest == id){
-                it = gp_ptr.erase(it); 
-                return ptr; 
-            }
-        }
+	int index = 0;
+	std::list<galapagos_packet *>::iterator itr = gp_ptr.begin();
+	while(gp_ptr.size() > 0){
+	    std::advance(itr, index);
+	    if((*itr)->dest == id){
+	    	ptr = *itr;
+		std::cout << "Remaining " << gp_ptr.size() << " galapagos packets" << std::endl;
+		//gp_ptr.erase(itr);
+		std::cout << "Remaining " << gp_ptr.size() << " galapagos packets" << std::endl;
+		//delete *itr;     
+	        return ptr;	
+	    }
+	    index++;
+	}
+
     }
 }
 
