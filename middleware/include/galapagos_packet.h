@@ -7,7 +7,7 @@
 #include "packet_size.h"
 
 
-struct galapagos_packet {
+struct galapagos_stream_packet {
 
 
     ap_uint <PACKET_DATA_LENGTH> data;
