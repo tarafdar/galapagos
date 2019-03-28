@@ -5,13 +5,14 @@
 
 #include <thread>
 #include <iostream>
+#include "galapagos_stream.hpp"
 #include "galapagos_packet.h"
 
 void printTest(int * array, int size, int kern);
 void helloWorld();
-void kern0(hls::stream<galapagos_stream_packet> *in, hls::stream<galapagos_stream_packet> *out);
-void kern1(hls::stream<galapagos_stream_packet> *in, hls::stream<galapagos_stream_packet> *out);
-void kern2(hls::stream<galapagos_stream_packet> *in, hls::stream<galapagos_stream_packet> *out, int num);
+void kern0(galapagos::stream *in, galapagos::stream *out);
+void kern1(galapagos::stream *in, galapagos::stream *out);
+void kern2(galapagos::stream *in, galapagos::stream *out, int num);
 
 #define NUM 10
 

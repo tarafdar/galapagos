@@ -3,11 +3,10 @@
 #include <iostream>
 
 
-
-galapagos_kernel::galapagos_kernel(
+galapagos::kernel::kernel(
         short _id,
-        hls::stream <galapagos_stream_packet>  * _in,
-        hls::stream <galapagos_stream_packet>  * _out
+        galapagos::stream  * _in,
+        galapagos::stream  * _out
         )
 {
     
@@ -16,7 +15,7 @@ galapagos_kernel::galapagos_kernel(
     out = _out;
 }
 
-galapagos_kernel::galapagos_kernel(
+galapagos::kernel::kernel(
         short _id
         )
 {
@@ -27,21 +26,45 @@ galapagos_kernel::galapagos_kernel(
 }
 
 
+void galapagos::kernel::set_func(void (* _func)(stream *, stream *)){
 
-void galapagos_kernel::start(void (*func)(hls::stream <galapagos_stream_packet> *, hls::stream<galapagos_stream_packet> *)){
+    func_str = _func; 
+    func = nullptr;
+}
+void galapagos::kernel::set_func(void (* _func)()){
+
+    func = _func;
+    func_str = nullptr;
+
+}
+void galapagos::kernel::start(){
+
+    //std::cout << "STARTING 0" << std::endl;
+    if(func_str == nullptr && func != nullptr){
+        assert(func != nullptr);
+        //std::cout << "STARTING  1" << std::endl;
+        t=std::make_unique< std::thread>(func);
+    }
+    else if(func_str != nullptr){ 
+        assert(func_str != nullptr);
+        //std::cout << "STARTING  2" << std::endl;
+        t=std::make_unique< std::thread>(func_str, in, out);
+    }
+}    
+void galapagos::kernel::start(void (*func)(stream *, stream *)){
 
     t=std::make_unique< std::thread>(func, in, out);
 
 }
 
 
-void galapagos_kernel::barrier(){
+void galapagos::kernel::barrier(){
     
     t.get()->join();
 
 }
 
-void galapagos_kernel::start
+void galapagos::kernel::start
     (void (*func)()){
 
     t=std::make_unique< std::thread>(func);
@@ -49,53 +72,7 @@ void galapagos_kernel::start
 }
 
 
-bool galapagos_kernel::done(){
+bool galapagos::kernel::done(){
     return !(t.get()->joinable());
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-//// sends to other kernels
-//// Checks to see where kernel is
-//void galapagos_kernel::send(char * buff, unsigned int count, short dest, hls::stream <galapagos_stream_packet> * out){
-//
-//    std::lock_guard<std::mutex> guard(out_mutex);
-//    galapagos_packet gp(buff, count, dest);
-//    for(int i=0; i<gp.stream.size(); i++)
-//        out->write(gp.stream.read());
-//    
-//
-//}
-//
-//// sends to other kernels
-//// Checks to see where kernel is
-//void galapagos_kernel::send(hls::stream <galapagos_stream_packet> * in, hls::stream <galapagos_stream_packet> * out){
-//
-//    std::lock_guard<std::mutex> guard(out_mutex);
-//    for(int i=0; i<in->size(); i++)
-//        out->write(in->read());
-//    
-//
-//}
-//
-//
-//
-//// reads buffer populated by other drivers
-//galapagos_stream_packet <galapagos_packet> galapagos_kernel::recv(){
-//
-//    std::lock_guard<std::mutex> guard(in_mutex);
-//    std::shared_ptr <galapagos_packet> retPtr = in.front();
-//    in.pop();
-//    return retPtr;
-//}
-//

@@ -17,7 +17,7 @@ $^:
 
 
 
-unit_test.exe: galapagos_kernel.o kernel.o galapagos_router.o test.cpp
+unit_test.exe: galapagos_kernel.o kernel.o galapagos_stream.o galapagos_router.o galapagos_node.o test.cpp
 	$(CXX) $(CXXFLAGS) $(UNIT_TEST) $^ -o $@ $(BOOST_LDFLAGS)  
 
 test.exe: galapagos_kernel.o kernel.o galapagos_stream.o galapagos.o main.cpp

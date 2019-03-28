@@ -13,26 +13,33 @@
 #include <queue>
 #include <mutex>
 
+#include "galapagos_stream.hpp"
 #include "galapagos_packet.h"
 
-
-class galapagos_kernel{
-   
-    private:
-        std::unique_ptr <std::thread> t;
-        hls::stream <galapagos_stream_packet>  * in;
-        hls::stream <galapagos_stream_packet>  * out;
-    public:
-        short id;
-        galapagos_kernel(short _id);
-        galapagos_kernel(short _id, hls::stream <galapagos_stream_packet> * _in, hls::stream <galapagos_stream_packet> *_out);
-        
-        void start(void (*func)(hls::stream <galapagos_stream_packet> *, hls::stream <galapagos_stream_packet> *));
-        void start(void  (*func)());
-        void barrier();
-        bool done();
-        
-};
-
+namespace galapagos {
+    class kernel{
+        friend class router;
+    
+        private:
+            std::unique_ptr <std::thread> t;
+            stream  * in;
+            stream  * out;
+            void (*func_str)(stream *, stream *);
+            void (*func)();
+        public:
+            short id;
+            kernel(short _id);
+            kernel(short _id, stream * _in, stream *_out);
+            void set_func(void (*_func)(stream *, stream *));
+            void set_func(void (*_func)());
+            
+            void start(void (*func)(stream *, stream *));
+            void start(void  (*func)());
+            void start();
+            void barrier();
+            bool done();
+            
+    };
+}
 
 #endif

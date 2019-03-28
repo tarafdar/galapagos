@@ -14,22 +14,34 @@
 
 
 
-
-class galapagos_stream{
-        
-    private:
-        hls::stream<galapagos_stream_packet>  * stream;
-        std::unique_ptr<hls::stream<galapagos_stream_packet> > stream_ptr;
-    public:
-#ifdef CPU
-        std::mutex  mutex;
-#endif
-        galapagos_stream(hls::stream <galapagos_stream_packet> * _stream);
-        galapagos_stream();
-        void write(galapagos_stream_packet gps);
-        galapagos_stream_packet read();
-        bool empty();
-        size_t size();
-};
-
+namespace galapagos{
+    class stream{
+         
+        private:
+            
+    #ifdef CPU
+            std::mutex  mutex;
+    //        std::queue <galapagos::stream_packet>  * stream;
+            std::unique_ptr < std::queue <galapagos::stream_packet> > _stream;
+    #else
+            hls::stream <galapagos::stream_packet>  * _stream;
+    #endif
+        public:
+    #ifdef CPU
+            stream();
+            std::mutex * get_mutex();
+            size_t size_ns();
+            galapagos::stream_packet front();
+            galapagos::stream_packet peek_ns();
+            void write_ns(galapagos::stream_packet gps);
+            void pop_ns();
+    #else
+            stream(hls::stream <galapagos::stream_packet> * __stream);
+    #endif
+            void write(galapagos::stream_packet gps);
+            galapagos::stream_packet read();
+            bool empty();
+            size_t size();
+    };
+}
 #endif

@@ -2,8 +2,9 @@
 
 
 
-galapagos_router::galapagos_router(std::vector <std::string>  _kern_info_table, std::string _my_address){
+galapagos::router::router(std::vector <std::string>  _kern_info_table, std::string _my_address){
   
+    _done = false;
 
     my_address = _my_address;
    
@@ -19,50 +20,37 @@ galapagos_router::galapagos_router(std::vector <std::string>  _kern_info_table, 
         else{
             address_map[_kern_info_table[i]].push_back(i);
         }
-        //s_axis_stream.push_back(std::make_unique <galapagos_stream> ());
-        //m_axis_stream.push_back(std::make_unique <galapagos_stream> ());
-        std::queue <galapagos_stream_packet> q;
-        s_axis_mutex.push_back(std::make_unique <std::mutex> ());
-        m_axis_mutex.push_back(std::make_unique <std::mutex> ());
-        s_axis.push_back(q);
-        m_axis.push_back(q);
+        s_axis.push_back(std::make_unique <stream> ());
+        m_axis.push_back(std::make_unique <stream> ());
     }
-  
     
 }
 
 
-galapagos_router::~galapagos_router(){
+galapagos::router::~router(){
     
-    t.get()->join();
+  ;
+   // t.get()->join();
 
 }
 
-void galapagos_router::add_kernel(galapagos_kernel * _gk){
+void galapagos::router::add_kernel(kernel * _gk){
 
-    ;
-    //s_axis[_gk->id] = std::queue <galapagos_stream_packet >;
-    //m_axis[_gk->id] = std::make_unique<std::queue <galapagos_stream_packet > >;
-    //_gk->in= s_axis[_gk->id].get(); 
-    //_gk->out= m_axis[_gk->id].get(); 
-    
-
+    _gk->in= s_axis[_gk->id].get(); 
+    _gk->out= m_axis[_gk->id].get(); 
 
 }
 
-
-
-void galapagos_router::start(){
-    
-    t=std::make_unique<std::thread>(&galapagos_router::route, this); 
-
+void galapagos::router::start(){
+   
+    t=std::make_unique<std::thread>(&galapagos::router::route, this); 
+    t->detach();
 }
 
 
-void galapagos_router::route(){
+void galapagos::router::route(){
 
-    
-    galapagos_stream_packet gps;
+    galapagos::stream_packet gps;
     while(1){
         
         //done set outside
@@ -72,91 +60,57 @@ void galapagos_router::route(){
                 break;
         }
         for(int i=0; i<m_axis.size(); i++){
+            std::lock_guard<std::mutex> guard(*(m_axis[i]->get_mutex()));
             
-            std::lock_guard<std::mutex> guard(*(m_axis_mutex[i].get()));
-            if(m_axis[i].size() > 0){
-                gps = m_axis[i].front();
+            if(m_axis[i]->size_ns() > 0){
+                gps = m_axis[i]->peek_ns();
                 assert(gps.dest <= kern_info_table.size());
-                
+               
                 //local 
                 if (kern_info_table[gps.dest] == my_address)
                 {
-                    
                     if(gps.dest != i){
-                        std::lock_guard<std::mutex> guard(*(s_axis_mutex[gps.dest].get()));
-                        s_axis[gps.dest].push(gps);
+                        s_axis[gps.dest]->write(gps);
                     }
                     else{
-                        s_axis[gps.dest].push(gps);
+                        s_axis[gps.dest]->write_ns(gps);
                     }
                 }
-                m_axis[i].pop();
+                m_axis[i]->pop_ns();
             }
         
         }
     }
 }
 
-galapagos_stream_packet galapagos_router::read(short id){
+galapagos::stream_packet galapagos::router::read(short id){
 
-    galapagos_stream_packet gps;
+    assert(id <= s_axis.size());
+    return s_axis[id]->read();
+
+}
+
+size_t galapagos::router::m_size(short id){
+    
+    assert(id <= m_axis.size());
+    return m_axis[id]->size();
+}
+
+size_t galapagos::router::s_size(short id){
     
     assert(id <= s_axis.size());
-   
-    while(1)
-    {
-        std::lock_guard<std::mutex> guard(*(s_axis_mutex[id].get()));
-        if(s_axis[id].size() > 0){
-            gps = s_axis[id].front();
-            s_axis[id].pop();
-            break;
-        }
-    }
-    return gps;
-
+    return s_axis[id]->size();
 }
 
-size_t galapagos_router::m_size(short id){
-    
-    size_t ret;
+void galapagos::router::write(galapagos::stream_packet gps){
 
     
-    {
-        std::lock_guard<std::mutex> guard(*(m_axis_mutex[id].get()));
-        assert(id <= m_axis.size());
-        ret = m_axis[id].size();
-    }
-
-    return ret;
+    
+    assert(gps.dest <= m_axis.size());
+    m_axis[gps.dest]->write(gps);
 }
 
-size_t galapagos_router::s_size(short id){
-    
-    size_t ret;
-
-    
-    {
-        std::lock_guard<std::mutex> guard(*(s_axis_mutex[id].get()));
-        assert(id <= s_axis.size());
-        ret = s_axis[id].size();
-    }
-
-    return ret;
-}
-
-void galapagos_router::write(galapagos_stream_packet gps){
-
-    
-    
-    {
-        std::lock_guard<std::mutex> guard(*(m_axis_mutex[gps.dest].get()));
-        assert(gps.dest <= m_axis.size());
-        m_axis[gps.dest].push(gps);
-    }
-
-}
-
-void galapagos_router::end(){
+void galapagos::router::end(){
    
     std::lock_guard<std::mutex> guard(mutex);
     _done = true;
