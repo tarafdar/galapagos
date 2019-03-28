@@ -5,20 +5,38 @@
 
 
 galapagos_kernel::galapagos_kernel(
+        short _id,
+        hls::stream <galapagos_stream_packet>  * _in,
+        hls::stream <galapagos_stream_packet>  * _out
+        )
+{
+    
+    id = _id;
+    in = _in;
+    out = _out;
+}
+
+galapagos_kernel::galapagos_kernel(
         short _id
         )
 {
     
     id = _id;
+    in = nullptr;
+    out = nullptr;
 }
 
-//    (void* (func)(hls::stream<galapagos_stream_packet *>, hls::stream<galapagos_stream_packet *>), 
-//     hls::stream<galapagos_stream_packet> * in, 
-//     hls::stream<galapagos_stream_packet> * out){
-void galapagos_kernel::start(void (*func)(galapagos_stream*, galapagos_stream*), galapagos_stream* in, galapagos_stream* out){
 
+
+void galapagos_kernel::start(void (*func)(hls::stream <galapagos_stream_packet> *, hls::stream<galapagos_stream_packet> *)){
 
     t=std::make_unique< std::thread>(func, in, out);
+
+}
+
+
+void galapagos_kernel::barrier(){
+    
     t.get()->join();
 
 }
@@ -27,9 +45,20 @@ void galapagos_kernel::start
     (void (*func)()){
 
     t=std::make_unique< std::thread>(func);
-    t.get()->join();
 
 }
+
+
+bool galapagos_kernel::done(){
+    return !(t.get()->joinable());
+}
+
+
+
+
+
+
+
 
 
 

@@ -1,4 +1,4 @@
-CXXFLAGS = -DCPU -g -std=c++14 -pthread -I$(XILINX_VIVADO)/include -I$(GALAPAGOS_PATH)/middleware/include
+CXXFLAGS = -DCPU -g -std=c++17 -pthread -I$(XILINX_VIVADO)/include -I$(GALAPAGOS_PATH)/middleware/include
 
 LDFLAGS = -lpthread
 
@@ -17,7 +17,7 @@ $^:
 
 
 
-unit_test.exe: galapagos_kernel.o kernel.o galapagos_stream.o galapagos.o test.cpp
+unit_test.exe: galapagos_kernel.o kernel.o galapagos_router.o test.cpp
 	$(CXX) $(CXXFLAGS) $(UNIT_TEST) $^ -o $@ $(BOOST_LDFLAGS)  
 
 test.exe: galapagos_kernel.o kernel.o galapagos_stream.o galapagos.o main.cpp

@@ -19,15 +19,44 @@ void helloWorld(){
 
 }
 
-void kern0(galapagos_stream *in, galapagos_stream *out)
+void kern0(hls::stream<galapagos_stream_packet> *in, hls::stream<galapagos_stream_packet> *out)
 {
+
+    kern2(in, out, 10);
 	
+}
+
+
+
+
+void kern1(hls::stream<galapagos_stream_packet> *in, hls::stream<galapagos_stream_packet> *out)
+{
     int count = 10;
+    
+
+    int i=0;
+    while(i<count){
+        if(!in->empty()){
+            galapagos_stream_packet gps = in->read();
+            std::cout << "DATA IS " << gps.data << std::endl;
+            i++;
+        }
+    }
+
+
+
+}
+
+
+
+void kern2(hls::stream<galapagos_stream_packet> *in, hls::stream<galapagos_stream_packet> *out, int num){
+
+    int count = num;
     int dest = 1;
 
     for(int i=0; i<count; i++){
         galapagos_stream_packet gps;
-        gps.data = count;
+        gps.data = i;
         gps.dest = 1;
         if(i < count - 1)
             gps.last = 0;
@@ -35,45 +64,13 @@ void kern0(galapagos_stream *in, galapagos_stream *out)
             gps.last = 1;
 
 
+        std::cout << "WRITING " << gps.data << std::endl;
         out->write(gps);
     }
 
+    std::cout << "FINISHED WRITING" << std::endl;
 
 	//kern->send((std::shared_ptr <char>)test, NUM*sizeof(int), 1);
-	
+
+
 }
-
-
-
-
-void kern1(galapagos_stream *in, galapagos_stream *out)
-{
-    int count = 10;
-    
-
-    int recv = 0;
-    
-
-
-    while(recv < (count - 1)){
-        for(int i=0; i<in->size(); i++){
-            galapagos_stream_packet gps = in->read();
-            std::cout << "DATA IS " << gps.data << std::endl;
-            recv++;
-        }
-    }
-
-
-
-
-
-    //galapagos_packet * gp = kern->recv();
-
-	//int * ptr = (int *)gp->buffer;
-	////printTest(ptr, (gp->size)/sizeof(int), 1);
-	//std::cout << "Kern 1 received "  << std::endl;
-	////delete gp;
-}
-
-
-

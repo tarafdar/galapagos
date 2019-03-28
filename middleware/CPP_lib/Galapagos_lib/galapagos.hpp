@@ -19,9 +19,10 @@ class galapagos{
     public:
 	    galapagos(std::vector <std::string > _kern_info_table, std::string _my_address);
 	    galapagos(std::vector <std::string > _kern_info_table, std::string _my_address, int _num);
+        void enqueueKernel(galapagos_kernel * _gk);
         void enqueueKernel(galapagos_kernel * _gk,void (*func)());
-        void enqueueKernel(galapagos_kernel * _gk, void (*func)(galapagos_stream*, galapagos_stream*), galapagos_stream* in, galapagos_stream* out);
-
+        void enqueueKernel(galapagos_kernel * _gk, void (*func)(hls::stream<galapagos_stream_packet> *, hls::stream<galapagos_stream_packet> *));
+        ~galapagos();
 };
 
 

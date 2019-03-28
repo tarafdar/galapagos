@@ -19,13 +19,16 @@ class galapagos_stream{
         
     private:
         hls::stream<galapagos_stream_packet>  * stream;
+        std::unique_ptr<hls::stream<galapagos_stream_packet> > stream_ptr;
     public:
 #ifdef CPU
         std::mutex  mutex;
 #endif
         galapagos_stream(hls::stream <galapagos_stream_packet> * _stream);
+        galapagos_stream();
         void write(galapagos_stream_packet gps);
         galapagos_stream_packet read();
+        bool empty();
         size_t size();
 };
 
