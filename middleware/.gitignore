@@ -6,3 +6,4 @@ python/build*
 python/*bin
 python/__pycache__/
 *.o
+*.exe
