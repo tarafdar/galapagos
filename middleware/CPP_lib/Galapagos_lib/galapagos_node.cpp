@@ -44,7 +44,7 @@ void galapagos::node::start(){
 
 
 void galapagos::node::end(){
-    
+
     for(int i=0; i<kernels.size(); i++){
         kernels[i]->barrier();
     }

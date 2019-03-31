@@ -14,30 +14,28 @@
 #include <mutex>
 
 #include "galapagos_stream.hpp"
+#include "galapagos_streaming_core.hpp"
 #include "galapagos_packet.h"
 
 namespace galapagos {
-    class kernel{
+    class kernel: public streaming_core{
         friend class router;
-    
+   
+
         private:
-            std::unique_ptr <std::thread> t;
-            stream  * in;
-            stream  * out;
             void (*func_str)(stream *, stream *);
             void (*func)();
         public:
-            short id;
             kernel(short _id);
-            kernel(short _id, stream * _in, stream *_out);
+            kernel(short _id, stream * _in, stream * _out);
             void set_func(void (*_func)(stream *, stream *));
             void set_func(void (*_func)());
             
             void start(void (*func)(stream *, stream *));
             void start(void  (*func)());
             void start();
-            void barrier();
-            bool done();
+            //void barrier();
+            //bool done();
             
     };
 }

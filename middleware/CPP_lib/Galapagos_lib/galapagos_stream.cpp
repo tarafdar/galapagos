@@ -31,8 +31,6 @@ galapagos::stream_packet galapagos::stream::peek_ns(){
     return gps;
 }
 
-    
-
 galapagos::stream_packet galapagos::stream::read(){
     
     galapagos::stream_packet gps;
@@ -87,6 +85,42 @@ bool galapagos::stream::empty(){
     return ret;
 }
 
+std::vector<ap_uint<64> > galapagos::stream::read(size_t *size, short * dest){
+
+    std::vector<ap_uint<PACKET_DATA_LENGTH> > data_vect;
+    
+    galapagos::stream_packet gps;
+    *size=0;
+    do{
+        gps = read();
+        if(*size == 0)
+            *dest = gps.dest;
+
+        assert(*dest == gps.dest);
+
+        data_vect.push_back(gps.data);
+        *size += PACKET_DATA_LENGTH;
+    }while(!gps.last);
+
+    return data_vect;
+}
+
+void galapagos::stream::write(char * buffer, int size, short dest){
+
+    
+    for(int i=0; i<size; i+=PACKET_DATA_LENGTH){
+        galapagos::stream_packet gps;
+        gps.data = *buffer;
+        gps.dest = dest;
+        if(i!=size-1)
+            gps.last = 0;
+        else
+            gps.last = 1;
+
+        buffer+=PACKET_DATA_LENGTH;
+        write(gps);
+    }
+}
 #else
 
 galapagos::stream::stream(hls::stream <galapagos::stream_packet> * __stream){
@@ -117,3 +151,4 @@ size_t galapagos::stream::empty(){
 
 
 #endif
+

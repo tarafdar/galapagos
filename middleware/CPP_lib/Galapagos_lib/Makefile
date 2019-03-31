@@ -6,7 +6,7 @@ BOOST_LDFLAGS=-lboost_thread -lboost_system $(LDFLAGS)
 
 net_driver = tcp
 
-UNIT_TEST=-I$(GALAPAGOS_PATH)/Catch2/single_include/catch2
+UNIT_TEST=-I$(GALAPAGOS_PATH)/Catch2/single_include/catch2 
 
 #all: $(net_driver).o galapagos_kernel.o galapagos_packet.o
 #all:  galapagos_kernel.o galapagos_packet.o
@@ -16,8 +16,8 @@ $^:
 	$(CXX) $(CXXFLAGS) -c $^ -o $@ $(BOOST_LDFLAGS)
 
 
-
-unit_test.exe: galapagos_kernel.o kernel.o galapagos_stream.o galapagos_router.o galapagos_node.o test.cpp
+#unit_test.exe: galapagos_kernel.o kernel.o galapagos_stream.o galapagos_net.o galapagos_router.o galapagos_node.o test.cpp 
+unit_test.exe: galapagos_node.o galapagos_router.o galapagos_kernel.o kernel.o galapagos_net.o galapagos_streaming_core.o galapagos_stream.o test.cpp 
 	$(CXX) $(CXXFLAGS) $(UNIT_TEST) $^ -o $@ $(BOOST_LDFLAGS)  
 
 test.exe: galapagos_kernel.o kernel.o galapagos_stream.o galapagos.o main.cpp

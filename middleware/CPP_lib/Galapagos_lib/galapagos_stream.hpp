@@ -35,6 +35,8 @@ namespace galapagos{
             galapagos::stream_packet peek_ns();
             void write_ns(galapagos::stream_packet gps);
             void pop_ns();
+            std::vector<ap_uint<64> > read(size_t *size, short * dest);
+            void write(char * buffer, int size, short  dest);
     #else
             stream(hls::stream <galapagos::stream_packet> * __stream);
     #endif

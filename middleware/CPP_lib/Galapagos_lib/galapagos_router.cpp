@@ -9,6 +9,8 @@ galapagos::router::router(std::vector <std::string>  _kern_info_table, std::stri
     my_address = _my_address;
    
     std::map<std::string,std::vector<short> >::iterator itr;
+    
+
 
     for(int i=0; i<_kern_info_table.size(); i++){
         kern_info_table.push_back(_kern_info_table[i]);
@@ -20,9 +22,17 @@ galapagos::router::router(std::vector <std::string>  _kern_info_table, std::stri
         else{
             address_map[_kern_info_table[i]].push_back(i);
         }
-        s_axis.push_back(std::make_unique <stream> ());
-        m_axis.push_back(std::make_unique <stream> ());
+        
+        //add all local ports
+        if(_kern_info_table[i] == _my_address){
+            s_axis.push_back(std::make_unique <stream> ());
+            m_axis.push_back(std::make_unique <stream> ());
+        }
     }
+
+    //add network ports
+    s_axis.push_back(std::make_unique <stream> ());
+    m_axis.push_back(std::make_unique <stream> ());
     
 }
 
@@ -42,9 +52,29 @@ void galapagos::router::add_kernel(kernel * _gk){
 }
 
 void galapagos::router::start(){
-   
+
+
+    //before router starts initialize networl
+    
+    ext_kernels.push_back((std::unique_ptr<galapagos::net>)std::make_unique<galapagos::net >(s_axis[s_axis.size() -1].get(),
+                                                m_axis[m_axis.size() -1].get(),
+                                                address_map,
+                                                kern_info_table,
+                                                &mutex,
+                                                &_done
+                                                ));
+
+    std::cout << "ADDED NET" << std::endl;
+    ext_kernels[ext_kernels.size() - 1]->start();
+    //ext_kernels[0]->start();
+
+    
+    
+    
     t=std::make_unique<std::thread>(&galapagos::router::route, this); 
     t->detach();
+    
+    std::cout << "END START" << std::endl;
 }
 
 
@@ -60,6 +90,7 @@ void galapagos::router::route(){
                 break;
         }
         for(int i=0; i<m_axis.size(); i++){
+        
             std::lock_guard<std::mutex> guard(*(m_axis[i]->get_mutex()));
             
             if(m_axis[i]->size_ns() > 0){
@@ -74,6 +105,17 @@ void galapagos::router::route(){
                     }
                     else{
                         s_axis[gps.dest]->write_ns(gps);
+                    }
+                }
+                //network
+                //current it is the last ports
+                else{
+                    std::cout << "GOING OFFCHIP " << std::endl;
+                    if((s_axis.size()-1) != i){
+                        s_axis[s_axis.size() - 1]->write(gps);
+                    }
+                    else{
+                        s_axis[s_axis.size() - 1]->write_ns(gps);
                     }
                 }
                 m_axis[i]->pop_ns();
@@ -111,8 +153,12 @@ void galapagos::router::write(galapagos::stream_packet gps){
 }
 
 void galapagos::router::end(){
-   
-    std::lock_guard<std::mutex> guard(mutex);
-    _done = true;
 
+    {
+        std::lock_guard<std::mutex> guard(mutex);
+        _done = true;
+    }
+    for(int i=0; i<ext_kernels.size(); i++){
+        ext_kernels[i]->barrier();
+    }
 }
