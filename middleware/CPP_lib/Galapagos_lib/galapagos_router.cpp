@@ -51,7 +51,7 @@ void galapagos::router::add_kernel(kernel * _gk){
 
 }
 
-void galapagos::router::start(){
+void galapagos::router::start(bool enable){
 
 
     //before router starts initialize networl
@@ -61,7 +61,8 @@ void galapagos::router::start(){
                                                 address_map,
                                                 kern_info_table,
                                                 &mutex,
-                                                &_done
+                                                &_done,
+                                                enable 
                                                 ));
 
     std::cout << "ADDED NET" << std::endl;
@@ -90,37 +91,17 @@ void galapagos::router::route(){
                 break;
         }
         for(int i=0; i<m_axis.size(); i++){
-        
-            std::lock_guard<std::mutex> guard(*(m_axis[i]->get_mutex()));
-            
-            if(m_axis[i]->size_ns() > 0){
-                gps = m_axis[i]->peek_ns();
-                assert(gps.dest <= kern_info_table.size());
-               
-                //local 
+            galapagos::stream * stream_ptr = m_axis[i].get();
+            if(stream_ptr->try_read(gps)){
                 if (kern_info_table[gps.dest] == my_address)
                 {
-                    if(gps.dest != i){
-                        s_axis[gps.dest]->write(gps);
-                    }
-                    else{
-                        s_axis[gps.dest]->write_ns(gps);
-                    }
+                    std::cout << "local route" << std::endl;
+                    s_axis[gps.dest]->write(gps);
                 }
-                //network
-                //current it is the last ports
                 else{
-                    std::cout << "GOING OFFCHIP " << std::endl;
-                    if((s_axis.size()-1) != i){
-                        s_axis[s_axis.size() - 1]->write(gps);
-                    }
-                    else{
-                        s_axis[s_axis.size() - 1]->write_ns(gps);
-                    }
+                    s_axis[s_axis.size() - 1]->write(gps);
                 }
-                m_axis[i]->pop_ns();
             }
-        
         }
     }
 }
@@ -153,12 +134,36 @@ void galapagos::router::write(galapagos::stream_packet gps){
 }
 
 void galapagos::router::end(){
+   
 
+    // poll through all streams ensuring they are empty
+    //while(1){
+    //    bool done = true;
+    //    for(int i=0; i<m_axis.size(); i++){
+    //        if(m_axis[i]->size() > 0)
+    //            done = false; 
+    //    }
+    //    if(done)
+    //        break;
+    //}
     {
         std::lock_guard<std::mutex> guard(mutex);
         _done = true;
     }
+
+
     for(int i=0; i<ext_kernels.size(); i++){
         ext_kernels[i]->barrier();
     }
+    
+    //while(1){
+    //    bool done = true;
+    //    for(int i=0; i<s_axis.size(); i++){
+    //        if(s_axis[i]->size() > 0)
+    //            done = false; 
+    //    }
+    //    if(done)
+    //        break;
+    //}
+
 }

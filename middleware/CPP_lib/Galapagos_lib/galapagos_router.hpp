@@ -29,7 +29,7 @@ namespace galapagos{
         public:
             router(std::vector <std::string>  _kern_info_table, std::string _my_address);
             void add_kernel(kernel * _gk);
-            void start();
+            void start(bool enable);
             galapagos::stream_packet read(short id);
             size_t m_size(short id);
             size_t s_size(short id);

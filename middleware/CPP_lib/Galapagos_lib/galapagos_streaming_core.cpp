@@ -43,6 +43,7 @@ void galapagos::streaming_core::barrier(){
         t_vect[i].get()->join();
     }
 
+    while(out->size()>0);
 }
 
 bool galapagos::streaming_core::done(){

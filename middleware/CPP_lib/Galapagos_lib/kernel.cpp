@@ -21,6 +21,7 @@ void helloWorld(){
 
 void kern0(galapagos::stream *in, galapagos::stream *out)
 {
+    std::cout << "in kernel write " << std::endl;
 
     kern2(in, out, 10);
 	
@@ -36,6 +37,7 @@ void kern1(galapagos::stream *in, galapagos::stream *out)
 
     int i=0;
 
+    std::cout << "in kernel read " << std::endl;
 
     for(int i=0; i<count; i++){
         galapagos::stream_packet gps = in->read();

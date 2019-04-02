@@ -32,13 +32,14 @@ void galapagos::node::add_kernel(short id, void (*func)()){
 }
 
 
-void galapagos::node::start(){
-   
-    my_router->start();
+void galapagos::node::start(bool enable){
     for(int i=0; i<kernels.size(); i++){
-        kernels[i]->start();
+        if(kernels[i] != nullptr){
+            kernels[i]->start();
+            std::cout << "STARTING KERNEL " << i << std::endl;
+        }
     }
-
+    my_router->start(enable);
 }
 
 

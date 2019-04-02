@@ -20,9 +20,11 @@ $^:
 unit_test.exe: galapagos_node.o galapagos_router.o galapagos_kernel.o kernel.o galapagos_net.o galapagos_streaming_core.o galapagos_stream.o test.cpp 
 	$(CXX) $(CXXFLAGS) $(UNIT_TEST) $^ -o $@ $(BOOST_LDFLAGS)  
 
-test.exe: galapagos_kernel.o kernel.o galapagos_stream.o galapagos.o main.cpp
+node_send.exe: galapagos_node.o galapagos_router.o galapagos_kernel.o kernel.o galapagos_net.o galapagos_streaming_core.o galapagos_stream.o node_send.cpp 
 	$(CXX) $(CXXFLAGS) $^ -o $@ $(BOOST_LDFLAGS)  
 
+node_recv.exe: galapagos_node.o galapagos_router.o galapagos_kernel.o kernel.o galapagos_net.o galapagos_streaming_core.o galapagos_stream.o node_recv.cpp 
+	$(CXX) $(CXXFLAGS) $^ -o $@ $(BOOST_LDFLAGS)  
 
 clean:
 	rm -rf *.o

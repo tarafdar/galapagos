@@ -187,5 +187,26 @@ TEST_CASE( "NODE:1" ) {
     node.start();
     node.end();
 
+}
+
+TEST_CASE( "NET:1" ) {
+    
+    int source = 0;
+    int dest = 1;
+    std::string node_0_address = "localhost";
+    std::string node_1_address = "192.168.1.106";
+    std::vector <std::string> kern_info;
+    kern_info.push_back(node_0_address);
+    kern_info.push_back(node_1_address);
+
+    galapagos::node node_0(kern_info, node_0_address);
+//    galapagos::node node_1(kern_info, node_1_address);
+    node_0.add_kernel(source, kern0);
+//    node_1.add_kernel(dest, kern1);
+    node_0.start();
+    while(1);
+ //   node_1.start();
+ //    node_0.end();
+ //   node_1.end();
 
 }

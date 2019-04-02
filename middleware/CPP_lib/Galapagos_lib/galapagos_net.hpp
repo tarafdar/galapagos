@@ -19,19 +19,22 @@
 #include <map>
 
 #include <boost/asio.hpp>
+#include <boost/bind.hpp>
 #include "galapagos_stream.hpp"
 #include "galapagos_streaming_core.hpp"
 #include "galapagos_packet.h"
 
 
-#define GALAPAGOS_PORT 7
+#define GALAPAGOS_PORT 8889
 
 namespace galapagos {
     class net: public streaming_core{
         friend class router;
 
         private:
-            std::map <std::string, std::unique_ptr <boost::asio::ip::tcp::socket>  >  sock_map;
+            std::map <std::string, int  >  sock_map;
+            std::vector < std::unique_ptr <boost::asio::ip::tcp::socket>  >  sock_vect;
+            std::map <std::string, bool  >  sock_valid;
             std::map <std::string, std::unique_ptr <std::mutex> >  sock_mutex;
             //std::unique_ptr <std::mutex> done_mutex;
             //std::unique_ptr <bool> done;
@@ -46,8 +49,12 @@ namespace galapagos {
             void recv_server();
             void socket_listener();
             void send_server();
+            std::string my_address;
+//            void accept_handler(const boost::system::error_code &e, std::unique_ptr<boost::asio::ip::tcp::socket > sock_ptr);
+            void accept_handler(std::shared_ptr<boost::asio::ip::tcp::socket> sock_ptr, const boost::system::error_code &e);
+            bool server_enabled;
         public:
-            net(galapagos::stream * in, galapagos::stream *out, std::map <std::string, std::vector<short> >  address_map, std::vector<std::string> _kern_info_table, std::mutex * _done_mutex, bool * _done);
+            net(galapagos::stream * in, galapagos::stream *out, std::map <std::string, std::vector<short> >  address_map, std::vector<std::string> _kern_info_table, std::mutex * _done_mutex, bool * _done, bool _server_enabled);
             void start();
     };
 

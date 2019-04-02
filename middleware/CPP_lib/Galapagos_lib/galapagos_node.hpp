@@ -18,7 +18,7 @@ namespace galapagos{
             node(std::vector <std::string>  _kern_info_table, std::string _my_address);
             void add_kernel(short id, void (*func)(stream *, stream *));
             void add_kernel(short id, void (*func)());
-            void start();
+            void start(bool enable);
             void end();
     };
 }
