@@ -41,7 +41,8 @@ void kern1(galapagos::stream *in, galapagos::stream *out)
 
     for(int i=0; i<count; i++){
         galapagos::stream_packet gps = in->read();
-        std::cout << "DATA IS " << gps.data << std::endl;
+        std::cout << "SIZE IS " << in->size() << std::endl << std::flush;
+        std::cout << "DATA IS " << gps.data << std::endl << std::flush;
         //std::cout << "DATA IS " << i << std::endl;
 
 
@@ -68,7 +69,7 @@ void kern2(galapagos::stream *in, galapagos::stream *out, int num){
             gps.last = 1;
 
 
-//        std::cout << "WRITING " << gps.data << std::endl;
+        std::cout << "WRITING " << gps.data << std::endl;
         out->write(gps);
     }
 

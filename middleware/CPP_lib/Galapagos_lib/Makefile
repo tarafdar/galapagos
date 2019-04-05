@@ -26,6 +26,15 @@ node_send.exe: galapagos_node.o galapagos_router.o galapagos_kernel.o kernel.o g
 node_recv.exe: galapagos_node.o galapagos_router.o galapagos_kernel.o kernel.o galapagos_net.o galapagos_streaming_core.o galapagos_stream.o node_recv.cpp 
 	$(CXX) $(CXXFLAGS) $^ -o $@ $(BOOST_LDFLAGS)  
 
+server_ex.exe: server.cpp 
+	$(CXX) $(CXXFLAGS) $^ -o $@ $(BOOST_LDFLAGS)  
+
+async_server_ex.exe: async_tcp_echo_server.cpp galapagos_stream.o 
+	$(CXX) $(CXXFLAGS) $^ -o $@ $(BOOST_LDFLAGS)  
+
+client.exe: blocking_tcp_echo_client.cpp 
+	$(CXX) $(CXXFLAGS) $^ -o $@ $(BOOST_LDFLAGS)  
+
 clean:
 	rm -rf *.o
 	rm -rf *.exe 

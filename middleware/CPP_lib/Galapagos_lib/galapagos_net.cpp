@@ -2,22 +2,6 @@
 
 #include <iostream>
 
-//void galapagos::net::accept_handler(const boost::system::error_code &e, std::unique_ptr<boost::asio::ip::tcp::socket> sock_ptr){
-//void galapagos::net::accept_handler(const boost::system::error_code &e, std::unique_ptr<boost::asio::ip::tcp::socket> sock_ptr){
-//void galapagos::net::accept_handler(std::unique_ptr<boost::asio::ip::tcp::socket> sock_ptr, const boost::system::error_code &e){
-//void galapagos::net::accept_handler(std::shared_ptr<boost::asio::ip::tcp::socket> sock_ptr, const boost::system::error_code &e){
-//
-//    if(!e){
-//        boost::asio::ip::tcp::endpoint remote_ep = sock_ptr->remote_endpoint();
-//        boost::asio::ip::address remote_ad = remote_ep.address();
-//        std::string s = remote_ad.to_string();
-//        std::lock_guard <std::mutex> guard(*(sock_mutex[s]));
-//        sock_map[s] = std::move(sock_ptr);
-//        std::cout << "ACCEPT HANDLER" << std::endl;
-//    }
-//    
-//}
-
 
 galapagos::net::net(galapagos::stream * _in, galapagos::stream * _out, std::map <std::string, std::vector<short> >  address_map, std::vector<std::string> _kern_info_table, std::mutex * _done_mutex, bool * _done, bool _server_enabled):galapagos::streaming_core::streaming_core(-1){
     
@@ -30,7 +14,6 @@ galapagos::net::net(galapagos::stream * _in, galapagos::stream * _out, std::map 
 
     std::map<std::string, std::vector<short> >::iterator it;
     for (it = address_map.begin(); it!=address_map.end(); it++){
-//        sock_map[it->first] = nullptr;
         sock_mutex[it->first] = std::make_unique <std::mutex>();
         sock_valid[it->first] = false;
     }
@@ -38,6 +21,7 @@ galapagos::net::net(galapagos::stream * _in, galapagos::stream * _out, std::map 
     for(int i=0; i<_kern_info_table.size(); i++){
         kern_info_table.push_back(_kern_info_table[i]);
     }
+    acceptor_ = std::make_unique<boost::asio::ip::tcp::acceptor>(io_context, boost::asio::ip::tcp::endpoint(boost::asio::ip::tcp::v4(), GALAPAGOS_PORT));
 
 
 }
@@ -45,10 +29,11 @@ galapagos::net::net(galapagos::stream * _in, galapagos::stream * _out, std::map 
 
 void galapagos::net::start(){
 
-
+    
     t_vect.push_back(std::make_unique< std::thread>(&galapagos::net::recv_server, this));
     t_vect.push_back(std::make_unique< std::thread>(&galapagos::net::send_server, this));
     t_vect.push_back(std::make_unique< std::thread>(&galapagos::net::socket_listener, this));
+    io_context.run();
 
 }    
 
@@ -56,7 +41,9 @@ void galapagos::net::start(){
 
 void galapagos::net::recv_server(){
 
-    
+   
+    int length;
+
     while(1){
         {
             std::lock_guard<std::mutex> guard(*done_mutex);
@@ -66,28 +53,32 @@ void galapagos::net::recv_server(){
 
         std::map<std::string, bool >::iterator it;
 
-        io_service.run();
-        for (it = sock_valid.begin(); it!=sock_valid.end(); it++){
-            std::lock_guard <std::mutex> guard(*(sock_mutex[it->first].get()));
-            if(it->second){
-                std::cout << "ip address in recv server " << it->first << std::endl;
-                int avail = sock_vect[sock_map[it->first]]->available();
-                if(avail > 0){
-                    std::cout << "bytes available " << avail << std::endl;
-                    std::unique_ptr <char[]> buffer = std::make_unique<char[]>(avail);
+        {
+            std::lock_guard <std::mutex> guard(mutex);
+            for (it = sock_valid.begin(); it!=sock_valid.end(); it++){
+                avail = 0;
+                if(it->second){
+                    assert(sock_vect.size() > sock_map[it->first]);
+                    avail = sock_vect[sock_map[it->first]].available();
+                    buffer = std::make_unique<char[]>(avail);
                     boost::system::error_code error;
-                    int length = sock_vect[sock_map[it->first]]->read_some(boost::asio::buffer(buffer.get(), avail), error);
-                    std::cout << "BYTES READ " << length << std::endl;
-                    short * dest_ptr = (short *)buffer.get();
-                    std::cout << "dest recv " << dest_ptr[0] << std::endl;
-                    out->write(buffer.get(), avail, dest_ptr[0]);
-
+                    if(avail>0){
+                        length = sock_vect[sock_map[it->first]].read_some(boost::asio::buffer(buffer.get(), avail), error);
+                        sock_vect[sock_map[it->first]].async_read_some(boost::asio::buffer(buffer.get(), avail),
+                        [this](boost::system::error_code ec, std::size_t length)
+                        {
+                          if (!ec)
+                          {
+                            short * dest_ptr = (short *)buffer.get();
+                            out->write(buffer.get() + sizeof(short), avail, dest_ptr[0]);
+                          }
+                        });
+                
+                    }
                 }
-
             }
-
-
         }
+            
     }
 
 }
@@ -95,40 +86,65 @@ void galapagos::net::recv_server(){
 
 void galapagos::net::socket_listener(){
 
-    
-   
-//    boost::asio::ip::tcp::socket sock(io_service);
+    acceptor_->async_accept(
+        [this](boost::system::error_code ec, boost::asio::ip::tcp::socket socket)
+        {
+          if (!ec)
+          {
+            std::lock_guard <std::mutex> guard(mutex);
+            sock_vect.push_back(std::move(socket));
+            boost::asio::ip::tcp::endpoint remote_ep = sock_vect[sock_vect.size() -1].remote_endpoint();
+            boost::asio::ip::address remote_ad = remote_ep.address();
+            std::string s = remote_ad.to_string();
+            sock_map[s] = sock_vect.size()-1;
+            sock_valid[s] = true;
+            std::cout << "ACCEPT HANDLER" << std::endl;
+          }
 
-    if(server_enabled){
-        while(1){
-            {
+          {
                 std::lock_guard<std::mutex> guard(*done_mutex);
                 if(*done)
-                    break;
-            }
-
+                    return;
+          }
+          socket_listener();
         
-            {   
-                boost::asio::ip::tcp::acceptor a(io_service, boost::asio::ip::tcp::endpoint(boost::asio::ip::tcp::v4(), GALAPAGOS_PORT));
-                sock_vect.push_back(std::make_unique< boost::asio::ip::tcp::socket > (io_service));
-                int size = sock_vect.size();
-                a.accept(*sock_vect[sock_vect.size() -1]);
-    
+        });
 
-                std::cout << "ACCEPTED" << std::endl;
-                boost::asio::ip::tcp::endpoint remote_ep = sock_vect[sock_vect.size() - 1]->remote_endpoint();
-                boost::asio::ip::address remote_ad = remote_ep.address();
-                std::string s = remote_ad.to_string();
-                std::lock_guard <std::mutex> guard(*(sock_mutex[s]));
-                sock_valid[s] = true;
-                sock_map[s] = size -1;
-            }
 
-        }
-    }
-        
 }
 
+
+void galapagos::net::write_socket(char * data, int size, int dest){
+
+    std::lock_guard <std::mutex> guard(mutex);
+    std::string dest_addr = kern_info_table[dest];
+   
+    int index;
+
+    if(!sock_valid[dest_addr]){
+        sock_vect.push_back(boost::asio::ip::tcp::socket(io_context)); 
+        sock_map[dest_addr] = sock_vect.size() -1;
+        sock_valid[dest_addr] = true;
+        std::ostringstream convert;
+        convert << GALAPAGOS_PORT;
+        std::string port_str = convert.str();
+        index = sock_vect.size() - 1;
+    }
+    else{
+        index = sock_map[dest_addr];
+
+    }
+
+    boost::asio::async_write(sock_vect[index], boost::asio::buffer(data, size),
+    [this](boost::system::error_code ec)
+    {
+      write = ec;
+    });
+
+    if(!write)
+        write_socket(data, size, dest);
+
+}
 
 
 void galapagos::net::send_server(){
@@ -158,12 +174,12 @@ void galapagos::net::send_server(){
 
 
         if(in->try_read(gps)){
-            std::cout << "SENDING ON NET" << std::endl;
+            std::cout << "SENDING ON NET" << gps.dest << std::endl;
 
             size+= (PACKET_DATA_LENGTH)/8;
             data_vect.push_back(gps.data); 
             if(set_dest){
-                std::cout << "DEST BEING SET TO " << gps.dest << std::endl;
+              //  std::cout << "DEST BEING SET TO " << gps.dest << std::endl;
                 dest = gps.dest;
                 set_dest = false;
             }
@@ -176,37 +192,11 @@ void galapagos::net::send_server(){
 
             char * payload = data.get() + sizeof(short);
             memcpy(payload, data_vect.data(), size);
-            std::cout << "DEST IN LAST " << (short *)(data.get())[0] << std::endl;
+            write_socket(data.get(), size, dest);
+            //std::cout << "DEST IN LAST " << (short *)(data.get())[0] << std::endl;
 
 
-            boost::asio::ip::tcp::socket * sock_ptr;
-            std::string dest_addr = kern_info_table[dest];
-            
-            //{
-                std::lock_guard <std::mutex> guard(*(sock_mutex[dest_addr]));
-                //if (sock_valid[dest_addr])
-                //    sock_ptr = sock_vect[sock_map[dest_addr]].get();
-                //else
-                //    sock_ptr = nullptr;
-            //}
 
-            std::cout << "GET SOCK PTR" << std::endl;
-            if(!sock_valid[dest_addr]){
-                std::cout << "IN IF" << std::endl;
-                sock_vect.push_back(std::make_unique<boost::asio::ip::tcp::socket>(io_service)); 
-                sock_map[dest_addr] = sock_vect.size() -1;
-                sock_valid[dest_addr] = true;
-                std::ostringstream convert;
-                convert << GALAPAGOS_PORT;
-                std::string port_str = convert.str();
-                boost::asio::ip::tcp::resolver resolver(io_service);
-                std::cout << "ABOUT TO CONNECT" << std::endl;
-                sock_vect[sock_vect.size()-1]->connect(boost::asio::ip::tcp::endpoint(boost::asio::ip::address::from_string(dest_addr), GALAPAGOS_PORT));
-                std::cout << "CONNECTED" << std::endl;
-            }
-
-            std::cout << "SENDING ON NET SOCKET" << std::endl;
-            boost::asio::write(*(sock_vect[sock_map[dest_addr]]), boost::asio::buffer(data.get(), size + sizeof(short)));
             size = 0;
             set_dest = true;
         }

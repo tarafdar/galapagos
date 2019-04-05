@@ -14,8 +14,8 @@ int main(){
 
     int source = 0;
     int dest = 1;
-    std::string node_0_address = "localhost";
-    std::string node_1_address = "192.168.1.106";
+    std::string node_0_address = "10.0.0.1";
+    std::string node_1_address = "10.0.0.2";
     std::vector <std::string> kern_info;
     kern_info.push_back(node_0_address);
     kern_info.push_back(node_1_address);

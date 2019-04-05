@@ -18,9 +18,11 @@ galapagos::stream_packet galapagos::stream::read(){
 
 
 void galapagos::stream::write(galapagos::stream_packet gps){
-    
-    std::unique_lock<std::mutex> lck(mutex);
-    _stream->push(gps);
+   
+    {
+        std::lock_guard<std::mutex> guard(mutex);
+        _stream->push(gps);
+    }
     cv.notify_one();
 
 }
@@ -98,22 +100,43 @@ bool galapagos::stream::empty(){
 
 
 
+std::vector<ap_uint<PACKET_DATA_LENGTH> > galapagos::stream::vector_read(){
 
+
+    std::vector< ap_uint<PACKET_DATA_LENGTH> > vect;
+    ap_uint <1> last = 0;
+    galapagos::stream_packet gps;
+    while(!last){
+        gps = read();
+        last = gps.last;
+        vect.push_back(gps.data);
+    }
+
+    return vect;
+}
 
 
 void galapagos::stream::write(char * buffer, int size, short dest){
 
     
-    for(int i=0; i<size; i+=(PACKET_DATA_LENGTH/8)){
+    ap_uint <PACKET_DATA_LENGTH> * data = (ap_uint <PACKET_DATA_LENGTH> *)buffer;
+//    for(int i=0; i<size; i+=(PACKET_DATA_LENGTH/8)){
+
+    std::cout << "NUM GALAPAGOS PACKETS IN RECV " << size/8 << std::endl;
+    
+    for(int i=0; i<(size/8); i++){
         galapagos::stream_packet gps;
-        gps.data = *buffer;
+//        std::cout << " IN STREAM WRITE GETTING DATA " << data[i] << std::endl;
+        //gps.data = *buffer;
+        gps.data = data[i];
         gps.dest = dest;
         if(i!=size-1)
             gps.last = 0;
         else
             gps.last = 1;
+        
 
-        buffer+=PACKET_DATA_LENGTH;
+        //buffer+=(PACKET_DATA_LENGTH/8);
         write(gps);
     }
 }

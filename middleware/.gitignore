@@ -1,7 +1,6 @@
 .Xil
 vivado_*
 usage_statistics*
-include/packet_size.h
 python/build*
 python/*bin
 python/__pycache__/

@@ -33,7 +33,8 @@ namespace galapagos {
 
         private:
             std::map <std::string, int  >  sock_map;
-            std::vector < std::unique_ptr <boost::asio::ip::tcp::socket>  >  sock_vect;
+            std::vector < boost::asio::ip::tcp::socket >  sock_vect;
+            std::mutex  mutex;
             std::map <std::string, bool  >  sock_valid;
             std::map <std::string, std::unique_ptr <std::mutex> >  sock_mutex;
             //std::unique_ptr <std::mutex> done_mutex;
@@ -43,16 +44,21 @@ namespace galapagos {
             std::unique_ptr <std::thread> t_recv_server;
             std::unique_ptr <std::thread> t_send_server;
             std::unique_ptr <std::thread> t_socket_listener;
-            boost::asio::io_service io_service;
+            //boost::asio::io_service io_service;
+            boost::asio::io_context io_context;
             std::mutex map_mutex;
             std::vector <std::string> kern_info_table;
             void recv_server();
             void socket_listener();
             void send_server();
             std::string my_address;
-//            void accept_handler(const boost::system::error_code &e, std::unique_ptr<boost::asio::ip::tcp::socket > sock_ptr);
-            void accept_handler(std::shared_ptr<boost::asio::ip::tcp::socket> sock_ptr, const boost::system::error_code &e);
+            void accept_handler(const boost::system::error_code &e);
             bool server_enabled;
+            void write_socket(char * data, int size, int dest);
+            std::unique_ptr <char[]> buffer;
+            int avail;
+            std::unique_ptr <boost::asio::ip::tcp::acceptor> acceptor_;
+            bool write;
         public:
             net(galapagos::stream * in, galapagos::stream *out, std::map <std::string, std::vector<short> >  address_map, std::vector<std::string> _kern_info_table, std::mutex * _done_mutex, bool * _done, bool _server_enabled);
             void start();

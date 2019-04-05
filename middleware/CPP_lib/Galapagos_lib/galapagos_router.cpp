@@ -65,7 +65,7 @@ void galapagos::router::start(bool enable){
                                                 enable 
                                                 ));
 
-    std::cout << "ADDED NET" << std::endl;
+    //std::cout << "ADDED NET" << std::endl;
     ext_kernels[ext_kernels.size() - 1]->start();
     //ext_kernels[0]->start();
 
@@ -75,7 +75,7 @@ void galapagos::router::start(bool enable){
     t=std::make_unique<std::thread>(&galapagos::router::route, this); 
     t->detach();
     
-    std::cout << "END START" << std::endl;
+    //std::cout << "END START" << std::endl;
 }
 
 
@@ -93,12 +93,14 @@ void galapagos::router::route(){
         for(int i=0; i<m_axis.size(); i++){
             galapagos::stream * stream_ptr = m_axis[i].get();
             if(stream_ptr->try_read(gps)){
+
                 if (kern_info_table[gps.dest] == my_address)
                 {
-                    std::cout << "local route" << std::endl;
+                    //std::cout << "local route" << std::endl;
                     s_axis[gps.dest]->write(gps);
                 }
                 else{
+                    std::cout << " SHOULD NOT BE HERE " << gps.dest << std::endl;
                     s_axis[s_axis.size() - 1]->write(gps);
                 }
             }

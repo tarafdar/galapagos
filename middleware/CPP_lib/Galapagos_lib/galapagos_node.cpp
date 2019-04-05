@@ -8,8 +8,8 @@ galapagos::node::node(std::vector <std::string>  _kern_info_table, std::string _
     my_router = std::make_unique<router>(_kern_info_table, _my_address); 
 
     for(int i=0; i<_kern_info_table.size(); i++){
-        if(_kern_info_table[i] == _my_address)
-            kernels.push_back(nullptr);
+        //if(_kern_info_table[i] == _my_address)
+        kernels.push_back(nullptr);
     }
 
 }
@@ -17,7 +17,9 @@ galapagos::node::node(std::vector <std::string>  _kern_info_table, std::string _
 
 
 void galapagos::node::add_kernel(short id, void (*func)(stream *, stream *)){
-    
+
+//    std::cout << "NUM OF KERNELS IS " << kernels.size() << std::endl;
+//    std::cout << "ADDING KERNEL " << id << std::endl;
     kernels[id] = std::make_unique<kernel>(id);
     kernels[id]->set_func(func);
     my_router->add_kernel(kernels[id].get());
