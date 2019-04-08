@@ -20,17 +20,11 @@
 
 namespace galapagos {
     class streaming_core{
-        friend class router;
-   
-
-        protected:
-            stream  * in;
-            stream  * out;
-            std::mutex m;
-            std::condition_variable cv;
 
         public:
             std::vector < std::unique_ptr <std::thread> > t_vect;
+            stream  * in;
+            stream  * out;
             short id;
             streaming_core(short _id);
             streaming_core(short _id, stream * _in, stream *_out);

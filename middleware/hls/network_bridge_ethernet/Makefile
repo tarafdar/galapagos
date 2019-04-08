@@ -5,6 +5,7 @@
 
 HLSMIDDLEWAREIP = network_bridge_ethernet
 
+UNIT_TEST=-I$(GALAPAGOS_PATH)/Catch2/single_include/catch2 
 
 # checks that environment variables are set prior to running targets
 guard-%:
@@ -25,7 +26,8 @@ HLS_PATH = $(GALAPAGOS_PATH)/middleware/hls/$(HLSMIDDLEWAREIP)
 
 sim:
 	mkdir -p $(BOARD_PATH)/csim/$(HLSMIDDLEWAREIP)
-	g++ $(HLS_PATH)/tb/*.cpp $(HLS_PATH)/src/*.cpp $(SIM_FLAGS) $(INCLUDE) -o $(BOARD_PATH)/csim/$(HLSMIDDLEWAREIP)/sim.exe
+#	g++ -I$(UNIT_TEST) $(HLS_PATH)/tb/*.cpp $(HLS_PATH)/src/*.cpp $(SIM_FLAGS) $(INCLUDE) -o $(BOARD_PATH)/csim/$(HLSMIDDLEWAREIP)/sim.exe
+	g++ -std=c++11 $(UNIT_TEST) $(HLS_PATH)/tb/*.cpp $(HLS_PATH)/src/*.cpp $(SIM_FLAGS) $(INCLUDE) -o sim.exe
 
 
 hls:

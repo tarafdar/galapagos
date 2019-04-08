@@ -100,7 +100,7 @@ bool galapagos::stream::empty(){
 
 
 
-std::vector<ap_uint<PACKET_DATA_LENGTH> > galapagos::stream::vector_read(){
+std::vector<ap_uint<PACKET_DATA_LENGTH> > galapagos::stream::read(int * dest){
 
 
     std::vector< ap_uint<PACKET_DATA_LENGTH> > vect;
@@ -112,6 +112,7 @@ std::vector<ap_uint<PACKET_DATA_LENGTH> > galapagos::stream::vector_read(){
         vect.push_back(gps.data);
     }
 
+    *dest = gps.dest;
     return vect;
 }
 
@@ -119,10 +120,11 @@ std::vector<ap_uint<PACKET_DATA_LENGTH> > galapagos::stream::vector_read(){
 void galapagos::stream::write(char * buffer, int size, short dest){
 
     
+//    std::cout << "at begin of write" << std::endl;
     ap_uint <PACKET_DATA_LENGTH> * data = (ap_uint <PACKET_DATA_LENGTH> *)buffer;
 //    for(int i=0; i<size; i+=(PACKET_DATA_LENGTH/8)){
 
-    std::cout << "NUM GALAPAGOS PACKETS IN RECV " << size/8 << std::endl;
+//    std::cout << "NUM GALAPAGOS PACKETS IN RECV " << size/8 << std::endl;
     
     for(int i=0; i<(size/8); i++){
         galapagos::stream_packet gps;
@@ -130,15 +132,17 @@ void galapagos::stream::write(char * buffer, int size, short dest){
         //gps.data = *buffer;
         gps.data = data[i];
         gps.dest = dest;
-        if(i!=size-1)
+        if(i!=((size/8)-1))
             gps.last = 0;
-        else
+        else{
             gps.last = 1;
-        
+            std::cout<< " writing last" << std::endl;
+        }
 
         //buffer+=(PACKET_DATA_LENGTH/8);
         write(gps);
     }
+  //  std::cout << "at end of write" << std::endl;
 }
 #else
 

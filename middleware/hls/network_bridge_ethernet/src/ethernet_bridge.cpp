@@ -11,21 +11,6 @@
 
 #include "ethernet_bridge.hpp"
 
-//eth_to_app states
-#define INIT_ETH_TO_APP 0
-#define DROP_ETH_TO_APP 1
-#define READ_DEST_ETH_TO_APP 2
-#define STREAM_ETH_TO_APP 3
-
-//app states
-#define INIT_APP_TO_ETH 0
-#define HEADER_0_APP_TO_ETH 1 
-#define HEADER_1_APP_TO_ETH 2 
-#define STREAM_FIRST_FLIT_APP_TO_ETH 3
-#define STREAM_APP_TO_ETH 4
-
-#define ETH_PROTOCOL 0x7400
-
 ap_uint <64> reverseEndian64_data(ap_uint <64> X) {
   ap_uint <64> x = X;
   x = (x & 0x00000000FFFFFFFF) << 32 | (x & 0xFFFFFFFF00000000) >> 32;
@@ -43,7 +28,7 @@ ap_uint <8> reverseEndian64_keep(ap_uint <8> X) {
 }
 
 
-ap_uint<48> mac_table[256];
+//extern ap_uint<48> mac_table[256];
 
 void eth_to_app(hls::stream <eth_axis> & from_eth,
                 hls::stream <galapagos_packet> & to_app,
@@ -56,6 +41,7 @@ void eth_to_app(hls::stream <eth_axis> & from_eth,
     static ap_uint <16> dest;
     static eth_axis eth_packet_in;
     static galapagos_packet app_packet_out;
+
 
 	ap_int <48> observedAddress;
     switch (state)
@@ -137,6 +123,7 @@ void app_to_eth(
 	ap_int <48> temp3 = temp.concat(temp2);
     ap_uint <16> temp_dest;
 
+
     switch (state)
     {
         //read dest and look up mac address
@@ -145,6 +132,7 @@ void app_to_eth(
                 app_packet_in = from_app.read();
                 dest_mac_address = mac_table[app_packet_in.dest];
                 state = HEADER_0_APP_TO_ETH;
+
             }
             break;
         case HEADER_0_APP_TO_ETH:
@@ -154,6 +142,7 @@ void app_to_eth(
             //eth_packet_out.tkeep = reverseEndian64_keep(eth_packet_out.tkeep);
             eth_packet_out.last = 0;
             eth_packet_out.data = reverseEndian64_data(eth_packet_out.data);
+
             to_eth.write(eth_packet_out);
             state = HEADER_1_APP_TO_ETH;
             break;

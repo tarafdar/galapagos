@@ -8,34 +8,28 @@
 #include "galapagos_kernel.hpp"
 
 
-#include "galapagos_net.hpp"
 
 namespace galapagos{
     class router{
-        private:
-            std::unique_ptr <std::thread> t;
+        protected:
             std::vector <std::unique_ptr <stream>  >  s_axis;
             std::vector <std::unique_ptr <stream>  >  m_axis;
-            void route();
-            std::map <std::string,  std::vector<short> >  address_map;
-    	    std::vector < std::string > kern_info_table;
-            std::string my_address;
             bool _done;
             std::mutex  mutex;
-
-            //external kernels;
-            std::vector <std::unique_ptr <streaming_core> > ext_kernels;
-
         public:
-            router(std::vector <std::string>  _kern_info_table, std::string _my_address);
-            void add_kernel(kernel * _gk);
-            void start(bool enable);
+            router(){;}
+            router(int num_ports);
+            ~router(){;}
+            
+            void init_ports(int num_ports);
+            void add_stream(streaming_core * _gsc);
             galapagos::stream_packet read(short id);
             size_t m_size(short id);
             size_t s_size(short id);
             void write(galapagos::stream_packet _gps);
-            void end();
-            ~router();
+            
+            virtual void route() = 0;
+            virtual void start() = 0;
     };
 }
 

@@ -9,6 +9,7 @@
 #include "kernel.hpp"
 #include "galapagos_kernel.hpp"
 #include "galapagos_router.hpp"
+#include "galapagos_router_node.hpp"
 #include "galapagos_node.hpp"
 
 
@@ -51,7 +52,7 @@ TEST_CASE( "ROUTER:1" ) {
     kern_info.push_back(my_address);
     kern_info.push_back(my_address);
     
-    galapagos::router router(kern_info, my_address);
+    galapagos::router_node router(kern_info, my_address);
     galapagos::kernel gk(source);
     router.add_kernel(&gk);
     router.start();
@@ -80,7 +81,7 @@ TEST_CASE( "ROUTER:2" ) {
     kern_info.push_back(my_address);
     kern_info.push_back(my_address);
     
-    galapagos::router router(kern_info, my_address);
+    galapagos::router_node router(kern_info, my_address);
     galapagos::kernel gk(source);
     router.add_kernel(&gk);
     router.start();
@@ -129,7 +130,7 @@ TEST_CASE( "ROUTER:3" ) {
     kern_info.push_back(my_address);
     kern_info.push_back(my_address);
 
-    galapagos::router router(kern_info, my_address);
+    galapagos::router_node router(kern_info, my_address);
     galapagos::kernel gk_source(source);
     galapagos::kernel gk_dest(dest);
 
@@ -154,7 +155,7 @@ TEST_CASE( "ROUTER:4" ) {
     kern_info.push_back(my_address);
     kern_info.push_back(my_address);
 
-    galapagos::router router(kern_info, my_address);
+    galapagos::router_node router(kern_info, my_address);
     galapagos::kernel gk_source(source);
     galapagos::kernel gk_dest(dest);
     gk_source.set_func(kern0);
@@ -189,24 +190,45 @@ TEST_CASE( "NODE:1" ) {
 
 }
 
-TEST_CASE( "NET:1" ) {
-    
-    int source = 0;
-    int dest = 1;
-    std::string node_0_address = "localhost";
-    std::string node_1_address = "192.168.1.106";
-    std::vector <std::string> kern_info;
-    kern_info.push_back(node_0_address);
-    kern_info.push_back(node_1_address);
+TEST_CASE("SESSION:1"){
 
-    galapagos::node node_0(kern_info, node_0_address);
-//    galapagos::node node_1(kern_info, node_1_address);
-    node_0.add_kernel(source, kern0);
-//    node_1.add_kernel(dest, kern1);
-    node_0.start();
-    while(1);
- //   node_1.start();
- //    node_0.end();
- //   node_1.end();
+
+    galapagos::stream in;
+    galapagos::stream out;
+
+
+    std::vector <std::string> kern_info;
+
+    std::string my_address = "10.0.0.1"
+    std::string remote_address = "10.0.0.2"
+
+    kern_info.push_back(my_address);
+    kern_info.push_back(remote_address);
+
+    galapagos::net::tcp::session_container sc(&in, &out, kern_info, my_address);
 
 }
+
+
+
+//TEST_CASE( "NET:1" ) {
+//    
+//    int source = 0;
+//    int dest = 1;
+//    std::string node_0_address = "localhost";
+//    std::string node_1_address = "192.168.1.106";
+//    std::vector <std::string> kern_info;
+//    kern_info.push_back(node_0_address);
+//    kern_info.push_back(node_1_address);
+//
+//    galapagos::node node_0(kern_info, node_0_address);
+////    galapagos::node node_1(kern_info, node_1_address);
+//    node_0.add_kernel(source, kern0);
+////    node_1.add_kernel(dest, kern1);
+//    node_0.start();
+//    while(1);
+// //   node_1.start();
+// //    node_0.end();
+// //   node_1.end();
+//
+//}

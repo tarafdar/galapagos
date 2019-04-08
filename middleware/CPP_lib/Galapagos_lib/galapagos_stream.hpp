@@ -32,7 +32,7 @@ namespace galapagos{
             void write(char * buffer, int size, short  dest);
             bool try_read(galapagos::stream_packet &gp);
             void write(galapagos::stream_packet gps);
-            std::vector<ap_uint<PACKET_DATA_LENGTH> > vector_read();
+            std::vector<ap_uint<PACKET_DATA_LENGTH> > read(int * dest);
             galapagos::stream_packet read();
             bool empty();
             size_t size();

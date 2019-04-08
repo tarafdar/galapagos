@@ -5,7 +5,7 @@
 galapagos::node::node(std::vector <std::string>  _kern_info_table, std::string _my_address){
   
 
-    my_router = std::make_unique<router>(_kern_info_table, _my_address); 
+    my_router = std::make_unique<router_node>(_kern_info_table, _my_address); 
 
     for(int i=0; i<_kern_info_table.size(); i++){
         //if(_kern_info_table[i] == _my_address)
@@ -34,14 +34,14 @@ void galapagos::node::add_kernel(short id, void (*func)()){
 }
 
 
-void galapagos::node::start(bool enable){
+void galapagos::node::start(){
     for(int i=0; i<kernels.size(); i++){
         if(kernels[i] != nullptr){
             kernels[i]->start();
             std::cout << "STARTING KERNEL " << i << std::endl;
         }
     }
-    my_router->start(enable);
+    my_router->start();
 }
 
 

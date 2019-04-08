@@ -3,4 +3,5 @@
 # define PACKET_DATA_LENGTH 64
 # define PACKET_KEEP_LENGTH 8
 # define PACKET_LAST
+# define PACKET_DEST_LENGTH 8
 #endif
