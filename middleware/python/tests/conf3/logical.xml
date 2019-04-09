@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cluster>
+    <kernel> dariusController 
+        <num> 0 </num>
+        <rep> 1 </rep>
+        <clk> aclk </clk>
+        <aresetn> aresetn </aresetn>
+        <id_port> id_in_V </id_port>
+        <interface>
+            <direction> in </direction>
+            <name> stream_in_V </name>
+        </interface>
+        <interface>
+            <direction> out </direction>
+            <name> stream_out_V </name>
+        </interface>
+        <mem_interface>
+            <name> M_AXI_MEM </name>
+        </mem_interface>
+        <mem_interface>
+            <name> M_AXI_DARIUS_DRIVER </name>
+        </mem_interface>
+    </kernel>
+	<kernel> cpu
+        <num> 1 </num>
+        <rep> 1 </rep>
+        <interface>
+            <direction> in </direction>
+            <name> stream_in </name>
+        </interface>
+        <interface>
+            <direction> out </direction>
+            <name> stream_out </name>
+        </interface>
+	</kernel>
+</cluster>
