@@ -1,4 +1,6 @@
 .Xil
-vivado_*
+vivado*.jou
+vivado*.log
 usage_statistics*
 projects/*
+.vscode
