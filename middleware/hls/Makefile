@@ -1,15 +1,17 @@
-#Makefile for Galapagos
+################################################################################
+# Makefile for Galapagos middleware hls
+#	- all
+#	- clean
+#
+# Author: Naif Tarafdar, Varun Sharma
+#
+# Changelog:
+#	1.0 - Mar. 4 2019 - Created (NT)
+#	1.1 - Apr. 9 2019 - Added include.mk (VS)
+################################################################################
 
-#Author: Naif Tarafdar
-
-
-# checks that environment variables are set prior to running targets
-guard-%:
-	@ if [ "${${*}}" = "" ]; then \
-		echo "Variable $* not set"; \
-		exit 1; \
-	fi
-
+# defines guard-%
+include $(GALAPAGOS_PATH)/include.mk
 
 SUBDIRS := $(wildcard */.)
 
@@ -19,5 +21,3 @@ all clean: guard-GALAPAGOS_PATH guard-GALAPAGOS_HLS_PATH guard-GALAPAGOS_BOARD_N
 	for dir in $(SUBDIRS); do \
 		$(MAKE) -C $$dir -f Makefile $@; \
 	done
-
-

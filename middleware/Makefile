@@ -1,14 +1,19 @@
-#Makefile for Galapagos
+################################################################################
+# Makefile for Galapagos middleware
+#	- all
+#	- middleware
+#	- hlsmiddleware
+#	- clean
+#
+# Author: Naif Tarafdar
+#
+# Changelog:
+#	1.0 - Mar. 4 2019 - Created (NT)
+#	1.1 - Apr. 9 2019 - Added include.mk
+################################################################################
 
-#Author: Naif Tarafdar
-
-
-# checks that environment variables are set prior to running targets
-guard-%:
-	@ if [ "${${*}}" = "" ]; then \
-		echo "Variable $* not set"; \
-		exit 1; \
-	fi
+# defines guard-%
+include $(GALAPAGOS_PATH)/include.mk
 
 HLSMIDDLEWARE_DIR = $(GALAPAGOS_PATH)/middleware/hls 
 
@@ -27,10 +32,8 @@ middleware: ${LOGICALFILE} ${MAPFILE} guard-LOGICALFILE guard-MAPFILE guard-PROJ
 hlsmiddleware:
 	 $(MAKE) -C $(HLSMIDDLEWARE_DIR)
 
-clean:
+clean: guard-PROJECTNAME
 	 $(MAKE) -C $(HLSMIDDLEWARE_DIR) clean
 	 rm -rf ${GALAPAGOS_PATH}/projects/${PROJECTNAME}
 	 rm -rf ${GALAPAGOS_PATH}/createCluster.sh
 	 rm -rf ${GALAPAGOS_PATH}/createSim.sh
-
-

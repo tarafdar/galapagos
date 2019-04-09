@@ -1,18 +1,18 @@
-#Makefile for Galapagos
+################################################################################
+# Makefile for Galapagos middleware network_bridge_tcp
+#
+# Author: Naif Tarafdar, Varun Sharma
+#
+# Changelog:
+#	1.0 - Mar. 4 2019 - Created (NT)
+#	1.1 - Apr. 9 2019 - Added include.mk  (VS)
+################################################################################
 
-#Author: Naif Tarafdar
+# defines guard-%
+include $(GALAPAGOS_PATH)/include.mk
 
 
 HLSMIDDLEWAREIP = network_bridge_tcp
-
-
-# checks that environment variables are set prior to running targets
-guard-%:
-	@ if [ "${${*}}" = "" ]; then \
-		echo "Variable $* not set"; \
-		exit 1; \
-	fi
-
 
 all: guard-GALAPAGOS_PATH guard-GALAPAGOS_HLS_PATH guard-GALAPAGOS_BOARD_NAME
 
@@ -30,7 +30,3 @@ hls:
 
 clean:
 	rm -rf $(BOARD_PATH)/ip/$(HLSMIDDLEWAREIP)
-
-
-
-
