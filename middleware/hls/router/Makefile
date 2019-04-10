@@ -11,6 +11,7 @@
 # defines guard-%
 include $(GALAPAGOS_PATH)/include.mk
 
+HLSMIDDLEWAREIP = router
 
 all: sim.exe hls guard-GALAPAGOS_PATH guard-GALAPAGOS_HLS_PATH guard-GALAPAGOS_BOARD_NAME
 

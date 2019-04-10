@@ -1249,7 +1249,7 @@ def bridgeConnections(outDir, fpga, sim):
                 )
 
 
-        if (sim == 1):
+        if (sim == 0):
             tcl_bridge_connections.makeConnection(
                     'intf',
                     {
@@ -1263,7 +1263,7 @@ def bridgeConnections(outDir, fpga, sim):
                     'port_name':'S00_AXIS'
                     }
                     )
-        else: #sim == 0
+        else: #sim == 1
             tcl_bridge_connections.makeConnection(
                     'intf',
                     {
@@ -1360,12 +1360,9 @@ def bridgeConnections(outDir, fpga, sim):
 
 
 
-def makeTCLFiles(fpga, projectName, sim):
+def makeTCLFiles(fpga, projectName, output_path, sim):
 
-
-
-    galapagos_path = str(os.environ.get('GALAPAGOS_PATH'))
-    outDir = galapagos_path + '/projects/' + projectName + '/' + str(fpga['num'])
+    outDir = output_path + '/' + projectName + '/' + str(fpga['num'])
 
     #make bridge to network
     netBridge(outDir, fpga)
@@ -1386,4 +1383,3 @@ def makeTCLFiles(fpga, projectName, sim):
     #    tclMain.addSource(outDir + '/' + str(fpga['num']) + '_debug.tcl')
 
     tclMain.tprint('validate_bd_design')
-

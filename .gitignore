@@ -1,6 +1,9 @@
 .Xil
 vivado*.jou
 vivado*.log
+vivado*.str
 usage_statistics*
-projects/*
+projects/
 .vscode
+hlsBuild/
+userIP/
