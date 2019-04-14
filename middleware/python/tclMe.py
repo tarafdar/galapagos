@@ -1,4 +1,9 @@
-#!/usr/bin/python
+ENABLE_DEBUG = True
+if ENABLE_DEBUG:
+    from inspect import getframeinfo, stack
+    import os
+    targetFile = "/middleware/python/tclFileGenerator.py"
+    fullPath = os.environ.get("GALAPAGOS_PATH") + targetFile
 
 class tclMeFile():
     fileHandle = None
@@ -6,10 +11,21 @@ class tclMeFile():
     def __init__(self, fileName, fpga):
         self.fileHandle = open(fileName + '.tcl', 'w')
         self.fpga = fpga
-    def tprint(self, cmd, end='\n'):
+
+    def tprint_raw(self, cmd, end='\n'):
         self.fileHandle.write(cmd + end)
 
-
+    def tprint(self, cmd, end='\n'):
+        if ENABLE_DEBUG:
+            stackIndex = 0
+            for index, stackFrame in enumerate(stack()):
+                caller = getframeinfo(stackFrame[0])
+                if caller.filename == fullPath:
+                    stackIndex = index
+                    break                    
+            caller = getframeinfo(stack()[stackIndex][0])
+            self.fileHandle.write("# " + targetFile + ":" + str(caller.lineno) + '\n')
+        self.tprint_raw(cmd, end)
 
     def createHierarchy(self, hierarchy):
         self.tprint('create_bd_cell -type hier ' + hierarchy)
@@ -21,9 +37,9 @@ class tclMeFile():
         if properties != None:
             self.tprint('set_property -dict [list ', '')
         for prop in properties:
-            self.tprint(prop + ' ', end ='')
+            self.tprint_raw(prop + ' ', end ='')
         if properties != None:
-            self.tprint('] [get_bd_cells ' + inst_name + ']')
+            self.tprint_raw('] [get_bd_cells ' + inst_name + ']')
 
     def assign_address(self, slave_inst, slave_port, slave_base):
         
@@ -66,31 +82,29 @@ class tclMeFile():
             self.tprint('connect_bd_intf_net [', end = '')
 
         if source['type'] == 'port':
-            self.tprint('get_bd_ports ', end = '')
-            self.tprint(source['port_name'] + '] [', end = '')
+            self.tprint_raw('get_bd_ports ', end = '')
+            self.tprint_raw(source['port_name'] + '] [', end = '')
         elif source['type'] == 'intf_port':
-            self.tprint('get_bd_intf_ports ', end = '')
-            self.tprint(source['port_name'] + '] [', end = '')
+            self.tprint_raw('get_bd_intf_ports ', end = '')
+            self.tprint_raw(source['port_name'] + '] [', end = '')
         elif source['type'] == 'intf':
-            self.tprint('get_bd_intf_pins ', end = '')
-            self.tprint(source['name'] + '/' + source['port_name'] + '] [', end = '')
+            self.tprint_raw('get_bd_intf_pins ', end = '')
+            self.tprint_raw(source['name'] + '/' + source['port_name'] + '] [', end = '')
         elif source['type'] == 'pin':
-            self.tprint('get_bd_pins ', end = '')
-            self.tprint(source['name'] + '/' + source['port_name'] + '] [', end = '')
+            self.tprint_raw('get_bd_pins ', end = '')
+            self.tprint_raw(source['name'] + '/' + source['port_name'] + '] [', end = '')
 
 
 
         if sink['type'] == 'port':
-            self.tprint('get_bd_ports ', end='')
-            self.tprint(sink['port_name'] + ']')
+            self.tprint_raw('get_bd_ports ', end='')
+            self.tprint_raw(sink['port_name'] + ']')
         elif sink['type'] == 'intf_port':
-            self.tprint('get_bd_intf_ports ', end='')
-            self.tprint(sink['port_name'] + ']')
+            self.tprint_raw('get_bd_intf_ports ', end='')
+            self.tprint_raw(sink['port_name'] + ']')
         elif sink['type'] == 'intf':
-            self.tprint('get_bd_intf_pins ', end='')
-            self.tprint(sink['name'] + '/' + sink['port_name'] + ']')
+            self.tprint_raw('get_bd_intf_pins ', end='')
+            self.tprint_raw(sink['name'] + '/' + sink['port_name'] + ']')
         elif sink['type'] == 'pin':
-            self.tprint('get_bd_pins ', end = '')
-            self.tprint(sink['name'] + '/' + sink['port_name'] + ']')
-
-
+            self.tprint_raw('get_bd_pins ', end = '')
+            self.tprint_raw(sink['name'] + '/' + sink['port_name'] + ']')

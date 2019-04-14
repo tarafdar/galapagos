@@ -10,7 +10,7 @@
 #
 # Changelog:
 #	1.0 - Mar. 4 2019 - Created (NT)
-#	1.1 - Apr. 9 2019 - Added include.mk
+#	1.1 - Apr. 9 2019 - Added include.mk (VS)
 ################################################################################
 
 # defines guard-%

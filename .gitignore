@@ -7,3 +7,4 @@ projects/
 .vscode
 hlsBuild/
 userIP/
+hs_err*.log
