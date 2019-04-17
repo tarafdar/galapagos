@@ -9,9 +9,14 @@ galapagos::streaming_core::streaming_core(
         galapagos::stream  * _out
         )
 {
-    
+
+#ifdef DEBUG
+    std::cout << "in constructor of streaming core" << std::endl;
+#endif
     id = _id;
     in = _in;
+    if(in != nullptr)
+        in->id = id;
     out = _out;
 }
 
@@ -38,12 +43,21 @@ void galapagos::streaming_core::start(){
 }
 
 void galapagos::streaming_core::barrier(){
-   
-    for(int i=0; i<t_vect.size(); i++){
-        t_vect[i].get()->join();
-    }
 
-    while(out->size()>0);
+#ifdef DEBUG
+    std::cout << "IN BARRIER OF STREAMING CORE" << std::endl;
+#endif
+    ;
+    //for(int i=0; i<t_vect.size(); i++){
+    //    t_vect[i].get()->join();
+    //}
+    //
+    if(in!=nullptr)
+        while(in->size()>0);
+    if(out!=nullptr)
+        while(out->size()>0);
+
+    //std::cout << "AT END OF BARRIER STREAMING CORE" << std::endl;
 }
 
 bool galapagos::streaming_core::done(){

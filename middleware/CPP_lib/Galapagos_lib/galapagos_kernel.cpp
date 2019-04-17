@@ -50,13 +50,15 @@ void galapagos::kernel::start(void (*func)(stream *, stream *)){
 }
 
 
-//void galapagos::kernel::barrier(){
-//   
-//    for(int i=0; i<t_vect.size(); i++){
-//        t_vect[i].get()->join();
-//    }
-//
-//}
+void galapagos::kernel::barrier(){
+   
+
+    for(int i=0; i<t_vect.size(); i++){
+        t_vect[i].get()->join();
+    }
+    galapagos::streaming_core::barrier();
+
+}
 
 void galapagos::kernel::start
     (void (*func)()){

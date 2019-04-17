@@ -28,13 +28,14 @@ namespace galapagos {
         public:
             kernel(short _id);
             kernel(short _id, stream * _in, stream * _out);
+            ~kernel(){std::cout << "IN KERNEL DESTRUCTOR " << std::endl;}
             void set_func(void (*_func)(stream *, stream *));
             void set_func(void (*_func)());
             
             void start(void (*func)(stream *, stream *));
             void start(void  (*func)());
             void start();
-            //void barrier();
+            void barrier();
             //bool done();
             
     };

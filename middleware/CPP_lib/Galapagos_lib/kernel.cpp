@@ -70,6 +70,7 @@ void kern2(galapagos::stream *in, galapagos::stream *out, int num){
 
 
         std::cout << "WRITING " << gps.data << std::endl;
+        std::cout << "LAST " << gps.last << std::endl;
         out->write(gps);
     }
 

@@ -22,7 +22,7 @@ int main(){
 
     galapagos::node node(kern_info, node_0_address);
     node.add_kernel(source, kern0);
-    node.start(false);
+    node.start();
     while(1);
  //   node_1.start();
  //    node_0.end();
