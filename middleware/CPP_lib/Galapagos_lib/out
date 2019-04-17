@@ -1,0 +1,124 @@
+MAKING NETWORK 
+in constructor of streaming core
+in constructor of streaming core
+SERVER SEND LOOP 
+NUM OF KERNELS IS 1
+ADDING KERNEL 0
+ADDING KERNEL INDEX 0
+context is running 
+STARTING KERNEL 0
+in kernel write 
+WRITING 0
+LAST 0
+writing packet 0
+size of queue 1
+WRITING 1
+LAST 0
+writing packet 1
+size of queue 2
+WRITING 2
+LAST 0
+writing packet 2
+size of queue 3
+WRITING context is running 3
+
+stream size: 2
+net route to 1
+writing packet 0
+size of queue 1
+LAST stream size: 1
+net route to 1
+SENDING TO IP ADDR 10.0.0.1
+making new socket 
+writing packet 1
+size of queue 2
+0
+writing packet stream size: 3
+ GPS.DEST: size of queue 1
+0WRITING 
+net route to 1
+writing packet 2
+size of queue 2
+trying to connect to ip addr stream size: 0
+net route to 1
+4writing packet 3
+10.0.0.1size of queue 3
+
+
+LAST 0
+writing packet 4
+size of queue 1
+1
+WRITING writing packet 5
+LAST 0
+0
+size of queue 1
+ GPS.DEST: stream size: 1
+writing packet 5
+size of queue 1
+writing packet 1
+0
+net route to 1
+writing packet 4
+size of queue 3
+stream size: WRITING 0
+net route to 1
+writing packet 5
+size of queue 6
+size of queue LAST 4
+0
+writing packet 6
+size of queue 1
+2
+stream size: 0
+ GPS.DEST: 1
+net route to WRITING 1writing packet 
+writing packet 26
+7
+LAST 0
+size of queue 4writing packet 
+7
+size of queue 1
+
+size of queue stream size: 3
+ GPS.DEST: WRITING 1
+8
+LAST 0
+0writing packet 8
+size of queue 1
+writing packet 3
+size of queue 4
+ GPS.DEST: 1
+writing packet 4
+size of queue 5
+ GPS.DEST: 1
+writing packet 5
+size of queue 6
+ GPS.DEST: 1
+writing packet 6
+size of queue 7
+
+net route to 1WRITING 
+writing packet 9
+LAST 1
+7writing packet 9
+size of queue 2
+
+size of queue 1
+stream size: 1
+net route to 1
+writing packet  GPS.DEST: 8
+size of queue 1
+1
+after connect 
+writing packet reading1 8
+reading2 8
+7
+size of queue 8
+stream size: 0
+net route to 1
+writing packet 9
+size of queue 1
+ GPS.DEST: 1
+writing packet 9
+size of queue 9

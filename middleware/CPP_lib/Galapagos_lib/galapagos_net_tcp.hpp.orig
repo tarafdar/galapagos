@@ -1,0 +1,122 @@
+#ifndef __GALAPAGOS_NET_TCP_HPP__   // if x.h hasn't been included yet...
+#define __GALAPAGOS_NET_TCP_HPP
+
+#include <cstdlib>
+#include <iostream>
+#include <thread>
+#include <memory>
+#include <utility>
+#include <boost/asio.hpp>
+#include "galapagos_stream.hpp"
+#include "galapagos_router.hpp"
+
+namespace galapagos{
+    namespace net{
+        namespace tcp{
+            class session: public std::enable_shared_from_this<session>: public galapagos::streaming_core{
+            public:
+                session(boost::asio::ip::tcp::socket * socket);
+                void start();
+                //galapagos::stream * s_axis();
+                //galapagos::stream * m_axis();
+            private:
+                std::unique_ptr<galapagos::stream> s_axis_ptr;
+                std::unique_ptr<galapagos::stream> m_axis_ptr;
+                void do_read();
+                void do_write();
+                boost::asio::ip::tcp::socket * socket_;
+                enum { max_length = 1024 };
+                char data_[max_length];
+                std::vector <ap_uint <PACKET_DATA_LENGTH> > vect;
+                bool read;
+                bool write;
+        
+            };
+            class session_container {
+                public:
+                    session(std::vector<std::string> kern_info_table,
+                            std::string my_address);
+                    add_session(boost::asio::ip::tcp::socket * socket);
+                private:
+                    std::mutex  mutex;
+                    std::vector <std::shared_ptr<session> > my_sessions;
+                    std::vector<std::string>ip_addrs;
+                    std::map<std::string>ip_session_map;
+                    std::vector <boost::asio::ip::tcp::socket>  sockets; 
+                    std::vector <galapagos::stream *> s_axis;
+                    std::vector <galapagos::stream *> m_axis;
+                    galapagos::router_net_in router_in;
+                    galapagos::router_net_out router_in;
+
+
+
+            }
+            
+
+            class accept_server{
+                public:
+                    accept_server(boost::asio::io_context& io_context, 
+                                  short port, std::vector<boost::asio::ip::tcp::socket> * sockets, 
+                                  std::mutex * _ip_addrs_mutex, 
+                                  std::vector <boost::asio::ip::address > * _ip_addrs, 
+                                  std::vector<galapagos::stream *> * s_axis, 
+                                  std::vector<galapagos::stream *> * m_axis_);
+                private:
+                    void accept();
+                    void do_accept();
+                    std::vector <std::shared_ptr<session> > my_sessions;
+                    std::vector <galapagos::stream *> * s_axis;
+                    std::vector <galapagos::stream *> * m_axis;
+                    std::vector <boost::asio::ip::tcp::socket> * sockets; 
+                    std::mutex * ip_addrs_mutex;
+                    std::vector <boost::asio::ip::address > * ip_addrs;
+                    boost::asio::ip::tcp::acceptor acceptor_;
+                    interface interf;
+        
+            };
+            class server{
+                public:
+                    server(short port, bool enabled=true);
+                    void send(char * data, int size, boost::asio::ip::address ip_addr, short dest);
+                private:
+                    boost::asio::io_context io_context;
+                    std::unique_ptr <accept_server> as_ptr;
+        
+            };
+       
+            class interface: public galapagos::streaming_core{
+                public:
+                    interface();
+                private:
+                    void start(){;}
+
+
+
+            }
+        
+        }//tcp namespace
+
+        class tcp: public galapagos::streaming_core{
+            public:
+                tcp(galapagos::stream * in, 
+                    galapagos::stream * out, 
+                    std::map <std::string, 
+                    std::vector<short> >  address_map, 
+                    std::vector<std::string> _kern_info_table, 
+                    std::mutex * _done_mutex, 
+                    bool * _done, 
+                    bool _server_enabled=true);
+                void start();
+            private:
+                server tcp_server;
+    
+
+        };
+    }//net namespace
+}//galapagos namespace
+
+
+
+
+
+#endif

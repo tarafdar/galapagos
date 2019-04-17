@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cluster>
+    <node>
+        <type> sw </type>
+        <kernel> 1 </kernel>
+        <mac_addr>  0c:c4:7a:88:c0:47 </mac_addr>
+        <ip_addr> 10.1.2.101 </ip_addr>
+    </node>
+    <node>
+        <appBridge> 
+            <name> communication_bridge_eth_mpi </name> 
+            <to_app> to_app_V </to_app>
+            <from_app> from_app_V </from_app>
+            <to_net> to_net_V </to_net>
+            <from_net> from_net_V </from_net>
+        </appBridge>
+        <board> adm-8k5-debug </board>
+        <comm> tcp </comm>
+        <type> hw </type>
+        <kernel> 0 </kernel>
+        <mac_addr>  fa:16:3e:55:ca:02 </mac_addr>
+        <ip_addr> 10.1.2.102 </ip_addr>
+    </node>
+</cluster>
