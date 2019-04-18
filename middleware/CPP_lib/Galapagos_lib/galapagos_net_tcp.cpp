@@ -27,24 +27,27 @@ galapagos::net::tcp::tcp::tcp(short _id,
 {
 
 
+
+
     mutex = _done_mutex;
     done = _done;
+    from_sessions = _from_sessions;
+    router_out = std::make_unique<galapagos::router_net_out>(kernel_info_table, from_sessions, done, mutex, my_address);
 
 //    to_sessions = std::make_unique<galapagos::stream>();
 
 //    to_sessions = _to_sessions;
-    from_sessions = _from_sessions;
     //sc_ptr = std::make_unique<galapagos::net::tcp::session_container>(to_sessions.get(), from_sessions, kernel_info_table, my_address, _done, _done_mutex);
-    sc_ptr = std::make_unique<galapagos::net::tcp::session_container>(kernel_info_table, my_address, _done, _done_mutex);
+    sc_ptr = std::make_unique<galapagos::net::tcp::session_container>(kernel_info_table, my_address, _done, _done_mutex, router_out.get());
 //
 //
 
  //   router_in = std::make_unique<galapagos::router_net_in>(kernel_info_table, to_sessions.get(), done, mutex, my_address);
- //   router_out = std::make_unique<galapagos::router_net_out>(kernel_info_table, from_sessions, done, mutex, my_address);
     ss_ptr = std::make_unique<galapagos::net::tcp::server_send>(port, &io_context, sc_ptr.get(), _done, _done_mutex, _from_node); 
-    //if(enabled){
-    //    as_ptr = std::make_unique<galapagos::net::tcp::accept_server>(&io_context, port, sc_ptr.get());
-    //}
+    if(enabled){
+        as_ptr = std::make_unique<galapagos::net::tcp::accept_server>(&io_context, port, sc_ptr.get());
+    }
+    io_context.run();
 
 }
 

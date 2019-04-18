@@ -73,42 +73,51 @@ void galapagos::router_node::route(){
         if(is_done())
             break;
         //for(int i=0; i<m_axis.size(); i++){
-        for(int i=0; i<num_local; i++){
-            galapagos::stream * stream_ptr = m_axis[i].get();
-            if(stream_ptr->try_peak(gps)){
-                //std::cout << "reading stream: " << stream_ptr->name  << std::endl;
-#ifdef DEBUG
-                std::cout << "stream size: " << stream_ptr->size()  << std::endl;
+        //for(int i=0; i<num_local; i++){
+        for(int i=0; i<m_axis.size(); i++){
+            if(m_axis[i]!=nullptr){
+                galapagos::stream * stream_ptr = m_axis[i].get();
+                if(stream_ptr->try_peak(gps)){
+                    //std::cout << "reading stream: " << stream_ptr->name  << std::endl;
+#ifdef DEBUG    
+                    std::cout << "stream size: " << stream_ptr->size()  << std::endl;
 #endif
 
+                        std::cout << "gps dest " << gps.dest << std::endl;
+                        std::cout << "target ip addr " << kern_info_table[gps.dest] << std::endl;
+                        std::cout << "my ip addr " << my_address << std::endl;
 
-#ifdef TEST
-                assert(kern_info_table[gps.dest] != my_address);
-#endif
-
-                if (kern_info_table[gps.dest] == my_address)
-                {
-//#ifdef DEBUG
-//                    std::cout << "local route to stream: " << std::endl;
+//#ifdef TEST
+//                    assert(kern_info_table[gps.dest] != my_address);
 //#endif
-                    stream_ptr->try_read(gps);
-                    s_axis[dest_to_kern_ind[gps.dest]]->write(gps);
-                }
-                else{
+
+                    if (kern_info_table[gps.dest] == my_address)
+                    {
 //#ifdef DEBUG
-//                    std::cout << "net route to " << ext_streams_indices[0] << std::endl;
+                        std::cout << "local route to stream: " << std::endl;
+//#endif
+                        stream_ptr->try_read(gps);
+                        s_axis[dest_to_kern_ind[gps.dest]]->write(gps);
+                    }
+                    else{
+//#ifdef DEBUG
+                        std::cout << "net route to " << ext_streams_indices[0] << std::endl;
+                        std::cout << "gps dest " << gps.dest << std::endl;
+                        std::cout << "target ip addr " << kern_info_table[gps.dest] << std::endl;
+                        std::cout << "my ip addr " << my_address << std::endl;
 //#endif
 #ifdef TEST
-                assert(ext_streams_indices[0] == 1);
+                    assert(ext_streams_indices[0] == 1);
 #endif
-                   
-                    int dest;
-                    std::vector <ap_uint <PACKET_DATA_LENGTH> > vect = stream_ptr->read(&dest);
+                       
+                        int dest;
+                        std::vector <ap_uint <PACKET_DATA_LENGTH> > vect = stream_ptr->read(&dest);
 #ifdef TEST
-                    assert(vect.size() == 10);
+                        assert(vect.size() == 10);
 #endif
-                    s_axis[ext_streams_indices[0]]->write((char *)vect.data(), vect.size()*8, dest);
-                    //s_axis[ext_streams_indices[0]]->write(gps);
+                        s_axis[ext_streams_indices[0]]->write((char *)vect.data(), vect.size()*8, dest);
+                        //s_axis[ext_streams_indices[0]]->write(gps);
+                    }
                 }
             }
         }

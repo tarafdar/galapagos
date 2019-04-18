@@ -20,8 +20,10 @@ void galapagos::router::init_ports(int num_ports){
         //std::string name = "router index: " + ss.str();
         //s_axis.push_back(std::make_unique <stream> (name));
         //m_axis.push_back(std::make_unique <stream> (name));
-        s_axis.push_back(std::make_unique <stream> ());
-        m_axis.push_back(std::make_unique <stream> ());
+        //s_axis.push_back(std::make_unique <stream> ());
+        //m_axis.push_back(std::make_unique <stream> ());
+        s_axis.push_back(nullptr);
+        m_axis.push_back(nullptr);
     }
 
 }
@@ -37,13 +39,27 @@ galapagos::router::router(bool * _done, std::mutex * _mutex, int num_ports){
         //std::string name = "router index: " + ss.str();
         //s_axis.push_back(std::make_unique <stream> (name));
         //m_axis.push_back(std::make_unique <stream> (name));
-        s_axis.push_back(std::make_unique <stream> ());
-        m_axis.push_back(std::make_unique <stream> ());
+        //s_axis.push_back(std::make_unique <stream> ());
+        //m_axis.push_back(std::make_unique <stream> ());
+        s_axis.push_back(nullptr);
+        m_axis.push_back(nullptr);
     }
 
 }
 
+void galapagos::router::add_port(int index){
+    
+    s_axis[index] = std::make_unique <stream> ();
+    m_axis[index] = std::make_unique <stream> ();
+
+
+
+}
+
+
 void galapagos::router::add_stream(galapagos::streaming_core * _gsc, int index){
+    s_axis[index] = std::make_unique <stream> ();
+    m_axis[index] = std::make_unique <stream> ();
 
     _gsc->in= s_axis[index].get(); 
     _gsc->out= m_axis[index].get(); 

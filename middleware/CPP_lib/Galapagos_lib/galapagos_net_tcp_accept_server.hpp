@@ -20,13 +20,16 @@ namespace galapagos{
                 public:
                     accept_server(boost::asio::io_context * io_context, 
                                   short port,  
-                                  session_container * _sessions);
+                                  session_container * _sessions
+                                  );
                 private:
                     void accept();
                     void do_accept();
                     boost::asio::ip::tcp::acceptor acceptor_;
                     session_container * sessions;
                     boost::asio::io_context * _io_context;
+                    router_net_out * router_out;
+                    int num_id;
             };
 
         }//tcp namespace

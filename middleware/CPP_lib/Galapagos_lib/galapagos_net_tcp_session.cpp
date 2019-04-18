@@ -10,11 +10,12 @@ session::session(boost::asio::ip::tcp::socket  _socket, boost::asio::io_context 
     :galapagos::streaming_core(-1), socket(std::move(_socket))
 {
 
+
       s_axis = std::make_unique<galapagos::stream>(); 
       m_axis = std::make_unique<galapagos::stream>(); 
 
       in = s_axis.get();
-      out = s_axis.get();
+      out = m_axis.get();
       io_context = _io_context;
       //s_axis_ptr = std::make_unique<galapagos::stream>();
       //m_axis_ptr = std::make_unique<galapagos::stream>();
@@ -25,10 +26,6 @@ session::session(boost::asio::ip::tcp::socket  _socket, boost::asio::io_context 
       read = true;   
       write = true;
 
-      std::thread t_read(&session::do_read, this);
-      std::thread t_write(&session::do_write, this);
-      t_read.detach();
-      t_write.detach();
 
 }
 
@@ -58,6 +55,10 @@ void session::set_id(short _id){
 
 void session::start()
 {
+      std::thread t_read(&session::do_read, this);
+      std::thread t_write(&session::do_write, this);
+      t_read.detach();
+      t_write.detach();
 //    read = true;   
 //    write = true;
 //
@@ -81,8 +82,8 @@ void session::do_read()
         if(avail>0){
             boost::system::error_code error;
             std::unique_ptr<char[]> data = std::make_unique<char[]>(avail);
-//            length = socket.read_some(boost::asio::buffer(data.get(), avail), error);
-            length = socket.receive(boost::asio::buffer(data.get(), avail));
+            length = socket.read_some(boost::asio::buffer(data.get(), avail), error);
+            //length = socket.receive(boost::asio::buffer(data.get(), avail));
 
 #ifdef DEBUG            
             std::cout << "RECEIVED " << length << " AVAILABLE " << avail << std::endl;
@@ -125,7 +126,7 @@ void session::do_write()
         std::unique_ptr<char[]> data = std::make_unique<char[]>(vect_in.size()*8 + sizeof(short));
         memcpy(data.get(), (char *)&dest, sizeof(short));
         char * payload = data.get() + sizeof(short);
-        memcpy(payload, vect_in.data(), vect.size()*8);
+        memcpy(payload, vect_in.data(), vect_in.size()*8);
         //std::cout << "before socket  write " << std::endl;
         //
 #ifdef TEST
@@ -133,7 +134,22 @@ void session::do_write()
 #endif
 #ifndef NET_DEBUG
 
-        std::cout << "WRITING TO SOCKET" << std::endl;
+        //std::cout << "WRITING TO SOCKET" << std::endl;
+        //
+        //
+#ifdef TEST
+
+        short * dest_ptr_test = (short *)data.get();
+        ap_uint <PACKET_DATA_LENGTH> * int_ptr_test = (ap_uint <PACKET_DATA_LENGTH> *)payload;
+        std::cout << "DEST TEST " << dest_ptr_test[0] << std::endl;
+
+        for(int i=0; i<10; i++){
+            std::cout << "INT TEST " << i << ": " << int_ptr_test[i] << std::endl;
+
+        }
+
+#endif
+
         boost::asio::write(socket, boost::asio::buffer(data.get(), vect_in.size()*8 + sizeof(short)));
 #else
         std::cout << "FAKE WRITE " << vect_in.size() * 8 << std::endl;
@@ -150,10 +166,12 @@ session_container::session_container(
                                           std::vector <std::string> & _kernel_info_table,
                                           std::string & my_address,
                                           bool * _done,
-                                          std::mutex * _mutex
+                                          std::mutex * _mutex,
+                                          galapagos::router_net_out * _router_out
         ){
 
 
+      router_out = _router_out;
     //interf = std::make_unique<galapagos::streaming_core>(0, in, out);
     //interf = std::make_unique<galapagos::streaming_core>(0, from_sessions, to_sessions);
     std::vector<std::string>::iterator it;
@@ -172,6 +190,7 @@ session_container::session_container(
         }
     }
 
+    router_out->start();
 //    std::cout << "NUM IP Addrs " << ip_addrs_index.size() << std::endl;
     //add native interface to routers
     //
@@ -199,19 +218,23 @@ void session_container::start(){
 }
 
 
-void session_container::add_session(boost::asio::ip::tcp::socket  _socket, boost::asio::io_context * io_context){
+galapagos::net::tcp::session * session_container::add_session(boost::asio::ip::tcp::socket  _socket, boost::asio::io_context * io_context){
 
 
     //get mutex
     std::lock_guard <std::mutex> lock(mutex);
     
     std::string ip_addr = _socket.remote_endpoint().address().to_string();
+    std::cout << "session container add session ip_addr: " << ip_addr << std::endl;
     //my_sessions.push_back(std::make_shared<session>(std::move(_socket)));
     //
     my_sessions.push_back(std::make_unique<session>(std::move(_socket), io_context));
     my_session_map[ip_addr] = my_sessions.size()-1;
 
     my_sessions[my_sessions.size()-1]->set_id(ip_addrs_index[ip_addr]);
+    router_out->add_socket(my_sessions[my_sessions.size()-1].get());
+    my_sessions[my_sessions.size()-1]->start();
+    return my_sessions[my_sessions.size()-1].get();
     //router_in->add_socket(my_sessions[my_sessions.size()-1].get());
     
     //router_out->add_socket(my_sessions[my_sessions.size()-1].get());
@@ -249,6 +272,7 @@ bool session_container::send(std::string ip_addr, char * data, int size, short d
     if(!find(ip_addr))
         return false;
 
+    std::cout << "session container send ip_addr: " << ip_addr << std::endl;
 #ifdef TEST
     assert(size == 80);
     assert(my_session_map[ip_addr] == 0);

@@ -28,9 +28,11 @@ galapagos::router_net::router_net(std::vector <std::string> &  _kern_info_table,
             //m_axis.push_back(std::make_unique <stream> (_kern_info_table[i]));
             it = std::find(ip_addrs.begin(), ip_addrs.end(), _kern_info_table[i]);
             if(it == ip_addrs.end()){
-                s_axis.push_back(std::make_unique <stream> ());
-                m_axis.push_back(std::make_unique <stream> ());
-                s_axis_valid.push_back(false);
+                s_axis_ptr.push_back(nullptr);
+                m_axis_ptr.push_back(nullptr);
+                //s_axis.push_back(std::make_unique <stream> ());
+                //m_axis.push_back(std::make_unique <stream> ());
+                //s_axis_valid.push_back(false);
                 ip_addrs.push_back(_kern_info_table[i]); 
                 //address_map[_kern_info_table[i]] = ip_addrs.size() - 1;
                 address_map[_kern_info_table[i]] = ip_addrs.size() - 1;
@@ -52,13 +54,19 @@ void galapagos::router_net::add_socket(galapagos::streaming_core * _gsc){
 //#ifdef DEBUG
 //    std::cout << "ADDING _GSC ID " << _gsc->id <<std::endl;
 //#endif
-    s_axis[_gsc->id]->lock();
-    s_axis_valid[_gsc->id] = true;
-    _gsc->in= s_axis[_gsc->id].get(); 
-    s_axis[_gsc->id]->unlock();
-    m_axis[_gsc->id]->lock();
-    _gsc->out= m_axis[_gsc->id].get(); 
-    m_axis[_gsc->id]->unlock();
+   
+
+
+    s_axis_ptr[_gsc->id] = _gsc->in;
+    m_axis_ptr[_gsc->id] = _gsc->out;
+    
+    //s_axis[_gsc->id]->lock();
+    //s_axis_valid[_gsc->id] = true;
+    //_gsc->in= s_axis[_gsc->id].get(); 
+    //s_axis[_gsc->id]->unlock();
+    //m_axis[_gsc->id]->lock();
+    //_gsc->out= m_axis[_gsc->id].get(); 
+    //m_axis[_gsc->id]->unlock();
 
 //    std::cout << "adding socket " << _gsc->id << std::endl;
 }
@@ -149,22 +157,23 @@ void galapagos::router_net_out::route(){
 
         if(is_done())
             break;
-        for(int i=0; i<m_axis.size(); i++){
-            
-            galapagos::stream * stream_ptr = m_axis[i].get();
-            if(stream_ptr->try_peak(gps)){
-                int dest;
+        for(int i=0; i<m_axis_ptr.size(); i++){
+        
+            if(m_axis_ptr[i] != nullptr && ext_port!= nullptr){
+                galapagos::stream * stream_ptr = m_axis_ptr[i];
+                if(stream_ptr->try_peak(gps)){
+                    int dest;
 
-                std::vector <ap_uint <PACKET_DATA_LENGTH> > vect =  stream_ptr->read(&dest);
-                ext_port->write((char *)vect.data(), vect.size()*8, dest);
-                //s_axis[0]->write(gps);
-                //s_axis[0]->write(gps);
-                //std::cout << "s_axis name: " << s_axis[0]->name << std::endl;
-                //std::cout << "s_axis size: " << s_axis[0]->size() << std::endl;
-                //std::cout << "ext name: " << ext_port->name << std::endl;
-                std::cout << "ext size: " << ext_port->size() << std::endl;
+                    std::vector <ap_uint <PACKET_DATA_LENGTH> > vect =  stream_ptr->read(&dest);
+                    ext_port->write((char *)vect.data(), vect.size()*8, dest);
+                    //s_axis[0]->write(gps);
+                    //s_axis[0]->write(gps);
+                    //std::cout << "s_axis name: " << s_axis[0]->name << std::endl;
+                    //std::cout << "s_axis size: " << s_axis[0]->size() << std::endl;
+                    //std::cout << "ext name: " << ext_port->name << std::endl;
+                    std::cout << "ext size: " << ext_port->size() << std::endl;
+                }
             }
-
         }
 
     }

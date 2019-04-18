@@ -46,9 +46,10 @@ namespace galapagos{
                                       std::vector <std::string> & _kernel_info_table,
                                       std::string  & my_address,
                                       bool * _done,
-                                      std::mutex * _mutex
+                                      std::mutex * _mutex,
+                                      router_net_out * _router_out
                                       );
-                    void add_session(boost::asio::ip::tcp::socket _socket, boost::asio::io_context * io_context);
+                    session * add_session(boost::asio::ip::tcp::socket _socket, boost::asio::io_context * io_context);
                     std::string get_ip_addr(short dest);
                     bool send(std::string ip_addr, char * data, int size, short dest);
                     bool find(std::string _ip_addr);
@@ -64,8 +65,7 @@ namespace galapagos{
                     std::vector <galapagos::stream *> s_axis;
                     std::vector <galapagos::stream *> m_axis;
                     //std::unique_ptr<router_net_in> router_in;
-                    router_net_in * router_in;
-                    std::unique_ptr<router_net_out> router_out;
+                    router_net_out * router_out;
                     std::vector <std::string> kernel_info_table;
                     std::unique_ptr<streaming_core> interf;
 

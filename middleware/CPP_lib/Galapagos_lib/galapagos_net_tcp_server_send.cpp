@@ -61,38 +61,37 @@ void server_send::send_loop(){
 
         int data;
         //packet found
-        if(in->try_peak(gps)){
+        if(in != nullptr){
+            if(in->try_peak(gps)){
 
-            data = (int)gps.data;
-            dest = (int)gps.data;
-            std::string ip_addr = sessions->get_ip_addr(dest);
-#ifdef DEBUG
-            std::cout << "SENDING TO IP ADDR " << ip_addr << std::endl; 
+                data = (int)gps.data;
+                dest = (int)gps.dest;
+                std::string ip_addr = sessions->get_ip_addr(dest);
+                bool session_found = sessions->find(ip_addr);
+                if (!session_found){
+//#ifdef     NET_DEBUG
+                    //std::cout << "num in buffer " << in->size() << std::endl;
+                    //std::cout << "gps.data "  << std::hex <<  data << std::endl;
+                    //std::cout << "gps.dest "  << std::hex << dest << std::endl;
+//#endif    
+                    send_new(ip_addr, dest);
+
+                }
+                else{
+                  std::vector<ap_uint<PACKET_DATA_LENGTH> > data_vect = in->read(&dest);
+#ifdef T    EST
+            assert(data_vect.size() == 10);
 #endif
-            bool session_found = sessions->find(ip_addr);
-            if (!session_found){
-//#ifdef NET_DEBUG
-                //std::cout << "num in buffer " << in->size() << std::endl;
-                //std::cout << "gps.data "  << std::hex <<  data << std::endl;
-                //std::cout << "gps.dest "  << std::hex << dest << std::endl;
-//#endif
-                send_new(ip_addr, dest);
+#ifdef D    EBUG
+                  std::cout << "size of send " << data_vect.size() << std::endl;
+#endif
+                  sessions->send(ip_addr, (char *)data_vect.data(), data_vect.size()*8, dest);
+                  //out->write((char *)data_vect.data(), data_vect.size()*8, dest);
+
+                }
+
 
             }
-            else{
-              std::vector<ap_uint<PACKET_DATA_LENGTH> > data_vect = in->read(&dest);
-#ifdef TEST
-        assert(data_vect.size() == 10);
-#endif
-#ifdef DEBUG
-              std::cout << "size of send " << data_vect.size() << std::endl;
-#endif
-              sessions->send(ip_addr, (char *)data_vect.data(), data_vect.size()*8, dest);
-              //out->write((char *)data_vect.data(), data_vect.size()*8, dest);
-
-            }
-
-
         }
         //std::string ip_addr = sessions->get_ip_addr(dest);
         //bool found = sessions->send(ip_addr, data, size, dest);
@@ -135,9 +134,9 @@ void server_send::send_new(std::string ip_addr, int dest){
           std::ostringstream convert;
           convert << port;
           std::string port_str = convert.str();
-#ifdef DEBUG
+//#ifdef DEBUG
           std::cout << "trying to connect to ip addr " << ip_addr << std::endl;
-#endif
+//#endif
           bool send_successful = false;
 
           while(!send_successful){
@@ -145,7 +144,7 @@ void server_send::send_new(std::string ip_addr, int dest){
 #ifndef NET_DEBUG           
               boost::asio::connect(s, resolver.resolve((char *)ip_addr.c_str(), (char *)port_str.c_str()));
 #endif
-
+              send_successful = true;
 //#ifdef NET_DEBUG
 //              std::cout << "after connect "  << std::endl;
 //#endif

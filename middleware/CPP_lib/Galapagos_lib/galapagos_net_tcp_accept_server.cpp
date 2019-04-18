@@ -17,7 +17,8 @@ using namespace galapagos::net::tcp;
 
 accept_server::accept_server(boost::asio::io_context *io_context, 
                                                   short port,  
-                                                  session_container * _sessions)
+                                                  session_container * _sessions
+                                                  )
     : acceptor_(*io_context, boost::asio::ip::tcp::endpoint(boost::asio::ip::tcp::v4(), port))
 {
   
@@ -32,22 +33,31 @@ accept_server::accept_server(boost::asio::io_context *io_context,
 
 void accept_server::accept(){
 
+    //_io_context->run();
     do_accept();
 
 }
 
 void accept_server::do_accept()
 {
-      acceptor_.async_accept(
-        [this](boost::system::error_code ec, boost::asio::ip::tcp::socket socket)
-        {
-          if (!ec)
-          {
-            std::cout << "ACCEPTING SESSION" << std::endl;
-            sessions->add_session(std::move(socket), _io_context);
-          }
 
-          do_accept();
-        });
+    for(;;)
+    {
+            galapagos::net::tcp::session * sess = sessions->add_session(acceptor_.accept(), _io_context);
+            std::cout << "ACCEPTING SESSION" << std::endl;
+
+    }
+    
+//      acceptor_.async_accept(
+//        [this](boost::system::error_code ec, boost::asio::ip::tcp::socket socket)
+//        {
+//          if (!ec)
+//          {
+//            std::cout << "ACCEPTING SESSION" << std::endl;
+//            galapagos::net::tcp::session * sess = sessions->add_session(std::move(socket), _io_context);
+//          }
+//
+//          do_accept();
+//        });
 }
  

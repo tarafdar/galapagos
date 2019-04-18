@@ -22,7 +22,7 @@ namespace galapagos{
             router(bool * _done, std::mutex * _mutex);
             router(bool * _done, std::mutex * _mutex, int num_ports);
             ~router(){;}
-            
+            void add_port(int index);            
             void init_ports(int num_ports);
             void add_stream(streaming_core * _gsc, int index);
             galapagos::stream_packet read(short id);

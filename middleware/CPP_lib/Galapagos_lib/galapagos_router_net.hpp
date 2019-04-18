@@ -20,6 +20,8 @@ namespace galapagos{
             stream * ext_port;
             std::map <int, int> dest_to_kern_ind;
             std::vector <bool> s_axis_valid;
+            std::vector <stream * > s_axis_ptr;
+            std::vector <stream * > m_axis_ptr;
         public:
             router_net(std::vector <std::string>  &_kern_info_table, 
                       stream * ext, 

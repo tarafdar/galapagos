@@ -37,6 +37,7 @@ galapagos::node::node(std::vector <std::string>   & _kern_info_table, std::strin
     assert(num_local == 1);
 
 #endif
+    my_router->add_port(num_local);
 
     net_ptr = std::make_unique<galapagos::net::tcp::tcp>(num_local, 8889, _kern_info_table, _my_address, 
                                                     my_router->get_s_axis(num_local), my_router->get_m_axis(num_local), 
