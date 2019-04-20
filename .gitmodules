@@ -10,3 +10,6 @@
 [submodule "util/argparse"]
 	path = util/argparse
 	url = https://github.com/hbristow/argparse.git
+[submodule "hls4ml"]
+	path = hls4ml
+	url = https://github.com/UofT-HPRC/hls4ml.git
