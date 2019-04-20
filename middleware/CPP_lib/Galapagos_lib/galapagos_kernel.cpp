@@ -1,78 +1,85 @@
+//===============================
+// AUTHOR     : Naif Tarafdar
+// CREATE DATE     : April 20, 2019
+//===============================
+
 #include "galapagos_kernel.hpp"
 
 #include <iostream>
 
 
-galapagos::kernel::kernel(
+template <typename T> 
+galapagos::kernel<T>::kernel(
         short _id,
-        galapagos::stream  * _in,
-        galapagos::stream  * _out
-        ):galapagos::streaming_core::streaming_core(_id, _in, _out)
+        galapagos::stream <T> * _in,
+        galapagos::stream <T> * _out
+        ):galapagos::streaming_core<T>::streaming_core(_id, _in, _out)
 {;}
     
 
-galapagos::kernel::kernel(
+template <typename T> 
+galapagos::kernel<T>::kernel(
         short _id
-        ):galapagos::streaming_core::streaming_core(_id)
+        ):galapagos::streaming_core<T>::streaming_core(_id)
 {;}
 
 
-void galapagos::kernel::set_func(void (* _func)(stream *, stream *)){
+template <typename T> 
+void galapagos::kernel<T>::set_func(void (* _func)(stream <T>*, stream <T>*)){
 
     func_str = _func; 
     func = nullptr;
 }
-void galapagos::kernel::set_func(void (* _func)()){
+
+template <typename T> 
+void galapagos::kernel<T>::set_func(void (* _func)()){
 
     func = _func;
     func_str = nullptr;
 
 }
-void galapagos::kernel::start(){
 
-    //std::cout << "STARTING 0" << std::endl;
+template <typename T> 
+void galapagos::kernel<T>::start(){
+
     if(func_str == nullptr && func != nullptr){
         assert(func != nullptr);
-        //std::cout << "STARTING  1" << std::endl;
-        t_vect.push_back(std::make_unique< std::thread>(func));
+        this->t_vect.push_back(std::make_unique< std::thread>(func));
     }
     else if(func_str != nullptr){ 
         assert(func_str != nullptr);
-        //std::cout << "STARTING  2" << std::endl;
-        t_vect.push_back(std::make_unique< std::thread>(func_str, in, out));
+        this->t_vect.push_back(std::make_unique< std::thread>(func_str, this->in, this->out));
     }
 }    
-void galapagos::kernel::start(void (*func)(stream *, stream *)){
 
-    t_vect.push_back(std::make_unique< std::thread>(func, in, out));
+template <typename T> 
+void galapagos::kernel<T>::start(void (*func)(stream <T> *, stream <T> *)){
+
+    this->t_vect.push_back(std::make_unique< std::thread>(func, this->in, this->out));
 
 
 }
 
 
-void galapagos::kernel::barrier(){
+template <typename T> 
+void galapagos::kernel<T>::barrier(){
    
 
-    for(int i=0; i<t_vect.size(); i++){
-        t_vect[i].get()->join();
+    for(int i=0; i<this->t_vect.size(); i++){
+        this->t_vect[i].get()->join();
     }
-    galapagos::streaming_core::barrier();
+    galapagos::streaming_core<T>::barrier();
 
 }
 
-void galapagos::kernel::start
+template <typename T> 
+void galapagos::kernel<T>::start
     (void (*func)()){
 
-    t_vect.push_back(std::make_unique< std::thread>(func));
+    this->t_vect.push_back(std::make_unique< std::thread>(func));
 
 }
 
+template class galapagos::kernel<ap_uint <PACKET_DATA_LENGTH > >;
+template class galapagos::kernel<float >;
 
-//bool galapagos::kernel::done(){
-//    bool _done = true;
-//    for(int i=0; i<t_vect.size(); i++)
-//        _done = _done | !t_vect[i].get()->joinable();
-//
-//    return _done;
-//}
-//

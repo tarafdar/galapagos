@@ -13,7 +13,7 @@ int main(){
     kern_info.push_back(my_address);
     kern_info.push_back(my_address);
 
-    galapagos::node node(kern_info, my_address);
+    galapagos::node <ap_uint <PACKET_DATA_LENGTH> > node(kern_info, my_address);
     node.add_kernel(source, kern0);
     node.add_kernel(dest, kern1);
     node.start();

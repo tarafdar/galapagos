@@ -1,3 +1,8 @@
+//===============================
+// AUTHOR     : Naif Tarafdar
+// CREATE DATE     : April 20, 2019
+//===============================
+
 #include "kernel.hpp"
 
 
@@ -19,7 +24,7 @@ void helloWorld(){
 
 }
 
-void kern0(galapagos::stream *in, galapagos::stream *out)
+void kern0(galapagos::stream <ap_uint <PACKET_DATA_LENGTH> > *in, galapagos::stream <ap_uint <PACKET_DATA_LENGTH> > *out)
 {
     std::cout << "in kernel write " << std::endl;
 
@@ -30,7 +35,7 @@ void kern0(galapagos::stream *in, galapagos::stream *out)
 
 
 
-void kern1(galapagos::stream *in, galapagos::stream *out)
+void kern1(galapagos::stream <ap_uint <PACKET_DATA_LENGTH> > *in, galapagos::stream <ap_uint <PACKET_DATA_LENGTH> > *out)
 {
     int count = 10;
     
@@ -40,12 +45,8 @@ void kern1(galapagos::stream *in, galapagos::stream *out)
     std::cout << "in kernel read " << std::endl;
 
     for(int i=0; i<count; i++){
-        galapagos::stream_packet gps = in->read();
-//        std::cout << "SIZE IS " << in->size() << std::endl << std::flush;
+        galapagos::stream_packet <ap_uint <PACKET_DATA_LENGTH> > gps = in->read();
         std::cout << "DATA IS " << gps.data << std::endl << std::flush;
-        
-        //std::cout << "DATA IS " << i << std::endl;
-
 
     }
 
@@ -55,13 +56,13 @@ void kern1(galapagos::stream *in, galapagos::stream *out)
 
 
 
-void kern2(galapagos::stream *in, galapagos::stream *out, int num){
+void kern2(galapagos::stream <ap_uint <PACKET_DATA_LENGTH> > *in, galapagos::stream <ap_uint <PACKET_DATA_LENGTH> > *out, int num){
 
     int count = num;
     int dest = 1;
 
     for(int i=0; i<count; i++){
-        galapagos::stream_packet gps;
+        galapagos::stream_packet <ap_uint <PACKET_DATA_LENGTH> > gps;
         gps.data = i;
         gps.dest = 1;
         if(i < count - 1)
@@ -74,10 +75,5 @@ void kern2(galapagos::stream *in, galapagos::stream *out, int num){
         std::cout << "LAST " << gps.last << std::endl;
         out->write(gps);
     }
-
-    //std::cout << "FINISHED WRITING" << std::endl;
-
-	//kern->send((std::shared_ptr <char>)test, NUM*sizeof(int), 1);
-
 
 }

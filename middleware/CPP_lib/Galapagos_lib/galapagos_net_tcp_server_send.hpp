@@ -1,3 +1,8 @@
+//===============================
+// AUTHOR     : Naif Tarafdar
+// CREATE DATE     : April 20, 2019
+//===============================
+
 #ifndef __GALAPAGOS_NET_TCP_SERVER_SEND_HPP__   // if x.h hasn't been included yet...
 #define __GALAPAGOS_NET_TCP_SERVER_SEND_HPP__
 
@@ -16,15 +21,15 @@ namespace galapagos{
     namespace net{
         namespace tcp{
             
-            class server_send: public streaming_core{
+            template <typename T>
+            class server_send: public streaming_core<T>{
                 public:
                     server_send(short _port, boost::asio::io_context * _io_context,
-                            session_container * _sessions,
+                            session_container <T> * _sessions,
                             bool * _done,
                             std::mutex * _done_mutex,
-                            galapagos::stream * from_node
+                            galapagos::stream <T> * from_node
                             );
-                    //void send(char * data, int size, short dest);
                     void send_new(std::string ip_addr, int dest);
                 private:
                     void send_loop();
@@ -33,7 +38,7 @@ namespace galapagos{
                     short port;
                     boost::asio::io_context * io_context;
                     boost::asio::io_context io_context_local;
-                    session_container * sessions;
+                    session_container <T> * sessions;
 
                     std::unique_ptr <std::thread> t_send;
 

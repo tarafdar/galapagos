@@ -10,41 +10,36 @@
 
 
 namespace galapagos{
-    class router_net: public router{
+template <typename T> 
+    class router_net: public router<T>{
         protected:
             std::map <std::string,  int >  address_map;
     	    std::vector < std::string > kern_info_table;
             bool _done;
             std::mutex  mutex;
             std::unique_ptr <std::thread> t;
-            stream * ext_port;
+            stream <T> * ext_port;
             std::map <int, int> dest_to_kern_ind;
             std::vector <bool> s_axis_valid;
-            std::vector <stream * > s_axis_ptr;
-            std::vector <stream * > m_axis_ptr;
+            std::vector <stream <T> * > s_axis_ptr;
+            std::vector <stream <T> * > m_axis_ptr;
         public:
             router_net(std::vector <std::string>  &_kern_info_table, 
-                      stream * ext, 
+                      stream <T> * ext, 
                       bool * _done, 
                       std::mutex * _mutex,
                       std::string my_address);
-            void add_socket(galapagos::streaming_core * _gsc);
+            void add_socket(galapagos::streaming_core <T> * _gsc);
             virtual void route() = 0;
             virtual void start() = 0;
             std::vector <std::string> ip_addrs;
             ~router_net(){;}
             //void end();
     };
-    class router_net_in: public router_net{
+template <typename T> 
+    class router_net_out: public router_net<T>{
         public:
-            router_net_in(std::vector <std::string>  &_kern_info_table, stream * to_sessions, bool * _done, std::mutex * _mutex, std::string my_address);
-            ~router_net_in(){;}
-            void start();
-            void route();
-    };
-    class router_net_out: public router_net{
-        public:
-            router_net_out(std::vector <std::string>  &_kern_info_table, stream * from_sessions, bool * _done, std::mutex * _mutex, std::string my_address);
+            router_net_out(std::vector <std::string>  &_kern_info_table, stream <T> * from_sessions, bool * _done, std::mutex * _mutex, std::string my_address);
             ~router_net_out(){;}
             void start();
             void route();

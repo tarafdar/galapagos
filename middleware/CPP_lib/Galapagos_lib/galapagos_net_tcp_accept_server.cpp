@@ -1,12 +1,7 @@
-//
-// async_tcp_echo_server.cpp
-// ~~~~~~~~~~~~~~~~~~~~~~~~~
-//
-// Copyright (c) 2003-2019 Christopher M. Kohlhoff (chris at kohlhoff dot com)
-//
-// Distributed under the Boost Software License, Version 1.0. (See accompanying
-// file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
-//
+//===============================
+// AUTHOR     : Naif Tarafdar
+// CREATE DATE     : April 20, 2019
+//===============================
 
 
 #include "galapagos_net_tcp_accept_server.hpp"
@@ -14,50 +9,54 @@
 
 using namespace galapagos::net::tcp;
 
-
-accept_server::accept_server(boost::asio::io_context *io_context, 
+template<typename T>
+accept_server<T>::accept_server(boost::asio::io_context *io_context, 
                                                   short port,  
-                                                  session_container * _sessions
+                                                  session_container<T> * _sessions
                                                   )
     : acceptor_(*io_context, boost::asio::ip::tcp::endpoint(boost::asio::ip::tcp::v4(), port))
 {
   
     _io_context = io_context;
     sessions = _sessions;
-//    do_accept(); 
       
       
-    std::thread t_accept(&accept_server::accept,this);
+    std::thread t_accept(&accept_server<T>::accept,this);
     t_accept.detach();
 }
 
-void accept_server::accept(){
+template<typename T>
+void accept_server<T>::accept(){
 
-    //_io_context->run();
     do_accept();
 
 }
 
-void accept_server::do_accept()
+template<typename T>
+void accept_server<T>::do_accept()
 {
 
     for(;;)
     {
-            galapagos::net::tcp::session * sess = sessions->add_session(acceptor_.accept(), _io_context);
-            std::cout << "ACCEPTING SESSION" << std::endl;
+            sessions->add_session(acceptor_.accept(), _io_context);
 
     }
-    
-//      acceptor_.async_accept(
-//        [this](boost::system::error_code ec, boost::asio::ip::tcp::socket socket)
-//        {
-//          if (!ec)
-//          {
-//            std::cout << "ACCEPTING SESSION" << std::endl;
-//            galapagos::net::tcp::session * sess = sessions->add_session(std::move(socket), _io_context);
-//          }
-//
-//          do_accept();
-//        });
+
+//TODO: add async mode
+
+#ifdef ASYNC 
+      acceptor_.async_accept(
+        [this](boost::system::error_code ec, boost::asio::ip::tcp::socket socket)
+        {
+          if (!ec)
+          {
+            galapagos::net::tcp::session * sess = sessions->add_session(std::move(socket), _io_context);
+          }
+
+          do_accept();
+        });
+#endif
 }
  
+template class galapagos::net::tcp::accept_server<ap_uint <PACKET_DATA_LENGTH > >;
+template class galapagos::net::tcp::accept_server<float >;

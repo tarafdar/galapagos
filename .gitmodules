@@ -5,5 +5,8 @@
 	path = HUMboldt
 	url = https://github.com/UofT-HPRC/HUMboldt.git
 [submodule "Catch2"]
-	path = Catch2
+	path = util/Catch2
 	url = https://github.com/catchorg/Catch2.git
+[submodule "util/argparse"]
+	path = util/argparse
+	url = https://github.com/hbristow/argparse.git

@@ -1,3 +1,7 @@
+//===============================
+// AUTHOR     : Naif Tarafdar
+// CREATE DATE     : April 20, 2019
+//===============================
 
 #include <string>
 #include <math.h>
@@ -5,8 +9,6 @@
 #include <chrono>
 
 #include "kernel.hpp"
-#include "galapagos_kernel.hpp"
-#include "galapagos_router.hpp"
 #include "galapagos_node.hpp"
 
 
@@ -21,7 +23,7 @@ int main(){
     kern_info.push_back(ten_two);
     kern_info.push_back(ten_one);
 
-    galapagos::node node(kern_info, ten_two);
+    galapagos::node <ap_uint <PACKET_DATA_LENGTH> > node(kern_info, ten_two);
     node.add_kernel(source, kern0);
     node.start();
     while(1);

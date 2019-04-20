@@ -10,10 +10,12 @@
 #ifdef CPU
 
 namespace galapagos{
+    template <typename T> 
     struct stream_packet {
 
 
-        ap_uint <PACKET_DATA_LENGTH> data;
+        //ap_uint <PACKET_DATA_LENGTH> data;
+        T data;
 #ifdef PACKET_DEST_LENGTH  
         ap_uint <PACKET_DEST_LENGTH> dest;
 #endif   
@@ -35,14 +37,20 @@ namespace galapagos{
     };
 }
 
-typedef galapagos::stream_packet galapagos_packet;
+template <typename T> 
+using galapagos_packet = galapagos::stream_packet <T>;
 
 
 #else
-typedef struct {
 
 
-    ap_uint <PACKET_DATA_LENGTH> data;
+
+template <typename T> 
+struct galapagos_packet{
+
+
+    //ap_uint <PACKET_DATA_LENGTH> data;
+    T data;
 #ifdef PACKET_DEST_LENGTH  
     ap_uint <PACKET_DEST_LENGTH> dest;
 #endif   
@@ -60,7 +68,7 @@ typedef struct {
 #endif   
 
 
-}galapagos_packet;
+};
 
 
 #endif

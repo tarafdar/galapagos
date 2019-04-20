@@ -1,3 +1,9 @@
+//===============================
+// AUTHOR     : Naif Tarafdar
+// CREATE DATE     : April 20, 2019
+//===============================
+
+
 #ifndef __GALAPAGOS_NET_TCP_HPP__   // if x.h hasn't been included yet...
 #define __GALAPAGOS_NET_TCP_HPP__
 
@@ -41,14 +47,15 @@ struct Handler {
 namespace galapagos{
     namespace net{
         namespace tcp{
-            class tcp: public streaming_core{
+            template<typename T>
+            class tcp: public streaming_core<T>{
                 public:
                     tcp(short id,
                         short port, 
                         std::vector <std::string> &kernel_info_table, 
                         std::string  & my_address, 
-                        galapagos::stream * in, 
-                        galapagos::stream * out, 
+                        galapagos::stream <T>* in, 
+                        galapagos::stream <T>* out, 
                         std::mutex * _done_mutex, 
                         bool * _done,
                         bool enabled);
@@ -58,19 +65,18 @@ namespace galapagos{
                 private:
                     //boost::asio::io_context io_context;
                     ioc io_context;
-                    std::unique_ptr<session_container> sc_ptr;
-                    std::unique_ptr<server_send> ss_ptr;
-                    std::unique_ptr<accept_server> as_ptr;
-                    galapagos::stream * from_node; 
-                    galapagos::stream * from_sessions;
-                    std::unique_ptr<galapagos::stream> to_sessions;
+                    std::unique_ptr<session_container <T> > sc_ptr;
+                    std::unique_ptr<server_send <T> > ss_ptr;
+                    std::unique_ptr<accept_server <T> > as_ptr;
+                    galapagos::stream<T> * from_node; 
+                    galapagos::stream<T> * from_sessions;
+                    std::unique_ptr<galapagos::stream <T> > to_sessions;
                     std::unique_ptr <std::thread> t_context;
                     void test_func();
                     void run_context();
                     std::mutex * mutex;
                     bool * done;
-                    std::unique_ptr<router_net_in> router_in;
-                    std::unique_ptr<router_net_out> router_out;
+                    std::unique_ptr<router_net_out <T> > router_out;
     
             };
         }//tcp namespace

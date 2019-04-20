@@ -1,3 +1,8 @@
+//===============================
+// AUTHOR     : Naif Tarafdar
+// CREATE DATE     : April 20, 2019
+//===============================
+
 #ifndef __GALAPAGOS_ROUTER_HPP__   // if x.h hasn't been included yet...
 #define __GALAPAGOS_ROUTER_HPP__
 
@@ -10,10 +15,11 @@
 
 
 namespace galapagos{
+template <typename T> 
     class router{
         protected:
-            std::vector <std::unique_ptr <stream>  >  s_axis;
-            std::vector <std::unique_ptr <stream>  >  m_axis;
+            std::vector <std::unique_ptr <stream <T> >  >  s_axis;
+            std::vector <std::unique_ptr <stream <T> >  >  m_axis;
             bool * done;
             std::mutex  * mutex;
             bool is_done();
@@ -24,18 +30,16 @@ namespace galapagos{
             ~router(){;}
             void add_port(int index);            
             void init_ports(int num_ports);
-            void add_stream(streaming_core * _gsc, int index);
-            galapagos::stream_packet read(short id);
+            void add_stream(streaming_core <T> * _gsc, int index);
+            galapagos::stream_packet<T> read(short id);
             size_t m_size(short id);
             size_t s_size(short id);
-            void write(galapagos::stream_packet _gps);
-            stream * get_s_axis(short id);
-            stream * get_m_axis(short id);
+            void write(galapagos::stream_packet<T> _gps);
+            stream<T> * get_s_axis(short id);
+            stream<T> * get_m_axis(short id);
 
             virtual void route() = 0;
             virtual void start() = 0;
-            //void unlock_mutex();
-            //void lock_mutex();
     };
 }
 

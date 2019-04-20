@@ -1,3 +1,9 @@
+//===============================
+// AUTHOR     : Naif Tarafdar
+// CREATE DATE     : April 20, 2019
+//===============================
+
+
 #ifndef __GALAPAGOS_STREAMING_CORE_HPP__   // if x.h hasn't been included yet...
 #define __GALAPAGOS_STREAMING_CORE_HPP__
 
@@ -19,15 +25,16 @@
 #include "galapagos_packet.h"
 
 namespace galapagos {
+template <typename T> 
     class streaming_core{
 
         public:
             std::vector < std::unique_ptr <std::thread> > t_vect;
-            stream  * in;
-            stream  * out;
+            stream <T>  * in;
+            stream <T> * out;
             short id;
             streaming_core(short _id);
-            streaming_core(short _id, stream * _in, stream *_out);
+            streaming_core(short _id, stream <T> * _in, stream <T> *_out);
             ~streaming_core();        
             virtual void start();
             void barrier();

@@ -1,18 +1,21 @@
+//===============================
+// AUTHOR     : Naif Tarafdar
+// CREATE DATE     : April 20, 2019
+//===============================
+
 #include "galapagos_streaming_core.hpp"
 
 #include <iostream>
 
 
-galapagos::streaming_core::streaming_core(
+template <typename T> 
+galapagos::streaming_core<T>::streaming_core(
         short _id,
-        galapagos::stream  * _in,
-        galapagos::stream  * _out
+        galapagos::stream<T>  * _in,
+        galapagos::stream<T>  * _out
         )
 {
 
-#ifdef DEBUG
-    std::cout << "in constructor of streaming core" << std::endl;
-#endif
     id = _id;
     in = _in;
     if(in != nullptr)
@@ -20,7 +23,8 @@ galapagos::streaming_core::streaming_core(
     out = _out;
 }
 
-galapagos::streaming_core::streaming_core(
+template <typename T> 
+galapagos::streaming_core<T>::streaming_core(
         short _id
         )
 {
@@ -30,37 +34,32 @@ galapagos::streaming_core::streaming_core(
     out = nullptr;
 }
 
-galapagos::streaming_core::~streaming_core(){
+template <typename T> 
+galapagos::streaming_core<T>::~streaming_core(){
 
     ;
 
 }
 
-void galapagos::streaming_core::start(){
+template <typename T> 
+void galapagos::streaming_core<T>::start(){
 
     ;
 
 }
 
-void galapagos::streaming_core::barrier(){
+template <typename T> 
+void galapagos::streaming_core<T>::barrier(){
 
-#ifdef DEBUG
-    std::cout << "IN BARRIER OF STREAMING CORE" << std::endl;
-#endif
-    ;
-    //for(int i=0; i<t_vect.size(); i++){
-    //    t_vect[i].get()->join();
-    //}
-    //
     if(in!=nullptr)
         while(in->size()>0);
     if(out!=nullptr)
         while(out->size()>0);
 
-    //std::cout << "AT END OF BARRIER STREAMING CORE" << std::endl;
 }
 
-bool galapagos::streaming_core::done(){
+template <typename T> 
+bool galapagos::streaming_core<T>::done(){
     bool _done = true;
     for(int i=0; i<t_vect.size(); i++)
         _done = _done | !t_vect[i].get()->joinable();
@@ -68,3 +67,5 @@ bool galapagos::streaming_core::done(){
     return _done;
 }
 
+template class galapagos::streaming_core<ap_uint <PACKET_DATA_LENGTH > >;
+template class galapagos::streaming_core<float >;

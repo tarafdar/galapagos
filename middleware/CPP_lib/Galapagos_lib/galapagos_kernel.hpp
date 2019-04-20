@@ -1,3 +1,9 @@
+//===============================
+// AUTHOR     : Naif Tarafdar
+// CREATE DATE     : April 20, 2019
+//===============================
+
+
 #ifndef __GALAPAGOS_KERNEL_HPP__   // if x.h hasn't been included yet...
 #define __GALAPAGOS_KERNEL_HPP__
 
@@ -18,25 +24,24 @@
 #include "galapagos_packet.h"
 
 namespace galapagos {
-    class kernel: public streaming_core{
-        friend class router;
+    template <typename T> 
+    class kernel: public streaming_core<T>{
    
 
         private:
-            void (*func_str)(stream *, stream *);
+            void (*func_str)(stream <T> *, stream <T> *);
             void (*func)();
         public:
             kernel(short _id);
-            kernel(short _id, stream * _in, stream * _out);
+            kernel(short _id, stream <T> * _in, stream <T> * _out);
             ~kernel(){std::cout << "IN KERNEL DESTRUCTOR " << std::endl;}
-            void set_func(void (*_func)(stream *, stream *));
+            void set_func(void (*_func)(stream <T> *, stream <T> *));
             void set_func(void (*_func)());
             
-            void start(void (*func)(stream *, stream *));
+            void start(void (*func)(stream<T> *, stream <T> *));
             void start(void  (*func)());
             void start();
             void barrier();
-            //bool done();
             
     };
 }

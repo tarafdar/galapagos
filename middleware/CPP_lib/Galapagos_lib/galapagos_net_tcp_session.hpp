@@ -1,3 +1,8 @@
+//===============================
+// AUTHOR     : Naif Tarafdar
+// CREATE DATE     : April 20, 2019
+//===============================
+
 #ifndef __GALAPAGOS_NET_TCP_SESSION_HPP__   // if x.h hasn't been included yet...
 #define __GALAPAGOS_NET_TCP_SESSION_HPP__
 
@@ -15,8 +20,8 @@ namespace galapagos{
     namespace net{
         namespace tcp{
             
-            //class session: public std::enable_shared_from_this<session>,  public streaming_core
-            class session: public streaming_core
+            template<typename T>
+            class session: public streaming_core<T>
             {
             public:
                 session(boost::asio::ip::tcp::socket _socket, boost::asio::io_context * _io_context);
@@ -25,21 +30,19 @@ namespace galapagos{
                 void send(char * data, int size, short dest);
                 void set_id(short _id);
             private:
-//                std::unique_ptr<stream> s_axis_ptr;
-//                std::unique_ptr<stream> m_axis_ptr;
                 void do_read();
                 void do_write();
                 enum { max_length = 1024 };
                 char data_[max_length];
-                std::vector <ap_uint <PACKET_DATA_LENGTH> > vect;
                 bool read;
                 bool write;
                 boost::asio::ip::tcp::socket socket;
                 boost::asio::io_context * io_context;
-                std::unique_ptr <galapagos::stream> s_axis;
-                std::unique_ptr <galapagos::stream> m_axis;
+                std::unique_ptr <galapagos::stream<T> > s_axis;
+                std::unique_ptr <galapagos::stream<T> > m_axis;
             };
 
+            template<typename T>
             class session_container {
                 public:
                     session_container(
@@ -47,32 +50,26 @@ namespace galapagos{
                                       std::string  & my_address,
                                       bool * _done,
                                       std::mutex * _mutex,
-                                      router_net_out * _router_out
+                                      router_net_out <T> * _router_out
                                       );
-                    session * add_session(boost::asio::ip::tcp::socket _socket, boost::asio::io_context * io_context);
+                    session <T> * add_session(boost::asio::ip::tcp::socket _socket, boost::asio::io_context * io_context);
                     std::string get_ip_addr(short dest);
                     bool send(std::string ip_addr, char * data, int size, short dest);
                     bool find(std::string _ip_addr);
                     void start();
                 private:
                     std::mutex  mutex;
-                    //std::vector <std::shared_ptr<session> > my_sessions;
-                    std::vector <std::unique_ptr<session> > my_sessions;
+                    std::vector <std::unique_ptr<session<T> > > my_sessions;
                     std::vector<std::string>ip_addrs;
                     std::map<std::string, int>ip_addrs_index;
                     std::map<std::string, int>my_session_map;
                     std::vector <boost::asio::ip::tcp::socket>  sockets; 
-                    std::vector <galapagos::stream *> s_axis;
-                    std::vector <galapagos::stream *> m_axis;
-                    //std::unique_ptr<router_net_in> router_in;
-                    router_net_out * router_out;
+                    std::vector <galapagos::stream<T> *> s_axis;
+                    std::vector <galapagos::stream<T> *> m_axis;
+                    router_net_out <T> * router_out;
                     std::vector <std::string> kernel_info_table;
-                    std::unique_ptr<streaming_core> interf;
-
-
 
             };
-            
         
         }//tcp namespace
     }//net namespace

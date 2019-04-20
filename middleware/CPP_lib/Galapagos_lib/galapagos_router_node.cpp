@@ -1,16 +1,21 @@
+//===============================
+// AUTHOR     : Naif Tarafdar
+// CREATE DATE     : April 20, 2019
+//===============================
+
+
 #include "galapagos_router_node.hpp"
 
-#define TEST
 
-galapagos::router_node::router_node(std::vector <std::string>  _kern_info_table, 
+template <typename T> 
+galapagos::router_node<T>::router_node(std::vector <std::string>  _kern_info_table, 
                                     std::string _my_address,
                                     bool * _done,
                                     std::mutex * _mutex,
                                     int num_ext)
-                                    :galapagos::router::router(_done, _mutex)
+                                    :galapagos::router<T>::router(_done, _mutex)
 {
   
-//    _done = false;
 
     my_address = _my_address;
 
@@ -25,22 +30,19 @@ galapagos::router_node::router_node(std::vector <std::string>  _kern_info_table,
         }
     }
    
-//    int num_ext = 1; //one external port for net
-    galapagos::router::init_ports(num_local+num_ext);
+    galapagos::router<T>::init_ports(num_local+num_ext);
     ext_index = num_local;
     
 }
 
 
-void galapagos::router_node::add_ext_stream(galapagos::streaming_core * gsc){
+template <typename T> 
+void galapagos::router_node<T>::add_ext_stream(galapagos::streaming_core <T> * gsc){
     
-    //s_axis.push_back(std::make_unique <stream> ());
-    //m_axis.push_back(std::make_unique <stream> ());
    
     ext_streams.push_back(gsc);
     ext_streams[ext_streams.size() - 1]->start();
 
-    //ext_streams_indices.push_back(s_axis.size() - 1);
     ext_streams_indices.push_back(ext_index);
     ext_index++;
 
@@ -48,121 +50,89 @@ void galapagos::router_node::add_ext_stream(galapagos::streaming_core * gsc){
 
 
 
-void galapagos::router_node::add_kernel(galapagos::kernel * _gk, int index){
+template <typename T> 
+void galapagos::router_node<T>::add_kernel(galapagos::kernel<T> * _gk, int index){
 
-    galapagos::router::add_stream( _gk, index);
+    galapagos::router<T>::add_stream( _gk, index);
 
 }
 
-void galapagos::router_node::start(){
+template <typename T> 
+void galapagos::router_node<T>::start(){
 
-    t=std::make_unique<std::thread>(&galapagos::router::route, this); 
+    t=std::make_unique<std::thread>(&galapagos::router<T>::route, this); 
     t->detach();
     
 }
 
 
 
-void galapagos::router_node::route(){
+template <typename T> 
+void galapagos::router_node<T>::route(){
 
-    galapagos::stream_packet gps;
+    galapagos::stream_packet<T> gps;
 
     while(1){
         
 
-        if(is_done())
+        if(this->is_done())
             break;
-        //for(int i=0; i<m_axis.size(); i++){
-        //for(int i=0; i<num_local; i++){
-        for(int i=0; i<m_axis.size(); i++){
-            if(m_axis[i]!=nullptr){
-                galapagos::stream * stream_ptr = m_axis[i].get();
+        for(int i=0; i<this->m_axis.size(); i++){
+            if(this->m_axis[i]!=nullptr){
+                galapagos::stream <T> * stream_ptr = this->m_axis[i].get();
                 if(stream_ptr->try_peak(gps)){
-                    //std::cout << "reading stream: " << stream_ptr->name  << std::endl;
-#ifdef DEBUG    
-                    std::cout << "stream size: " << stream_ptr->size()  << std::endl;
-#endif
-
-                        std::cout << "gps dest " << gps.dest << std::endl;
-                        std::cout << "target ip addr " << kern_info_table[gps.dest] << std::endl;
-                        std::cout << "my ip addr " << my_address << std::endl;
-
-//#ifdef TEST
-//                    assert(kern_info_table[gps.dest] != my_address);
-//#endif
 
                     if (kern_info_table[gps.dest] == my_address)
                     {
-//#ifdef DEBUG
-                        std::cout << "local route to stream: " << std::endl;
-//#endif
                         stream_ptr->try_read(gps);
-                        s_axis[dest_to_kern_ind[gps.dest]]->write(gps);
+                        this->s_axis[dest_to_kern_ind[gps.dest]]->write(gps);
                     }
                     else{
-//#ifdef DEBUG
-                        std::cout << "net route to " << ext_streams_indices[0] << std::endl;
-                        std::cout << "gps dest " << gps.dest << std::endl;
-                        std::cout << "target ip addr " << kern_info_table[gps.dest] << std::endl;
-                        std::cout << "my ip addr " << my_address << std::endl;
-//#endif
-#ifdef TEST
-                    assert(ext_streams_indices[0] == 1);
-#endif
                        
                         int dest;
-                        std::vector <ap_uint <PACKET_DATA_LENGTH> > vect = stream_ptr->read(&dest);
-#ifdef TEST
-                        assert(vect.size() == 10);
-#endif
-                        s_axis[ext_streams_indices[0]]->write((char *)vect.data(), vect.size()*8, dest);
-                        //s_axis[ext_streams_indices[0]]->write(gps);
+                        std::vector <T> vect = stream_ptr->read(&dest);
+                        this->s_axis[ext_streams_indices[0]]->write((char *)vect.data(), vect.size()*8, dest);
                     }
                 }
             }
         }
     }
 
-#ifdef DEBUG
-    std::cout << " after done in route " << std::endl;
-#endif
 }
 
 
-void galapagos::router_node::end(){
+template <typename T> 
+void galapagos::router_node<T>::end(){
 
 
-    while(!is_done());
-
-    //for(int i=0; i<ext_streams.size(); i++){
-    //    ext_streams[i]->barrier();
-    //}
-    
+    while(!this->is_done());
 
 }
 
 
-void galapagos::router_node::drain(){
+template <typename T> 
+void galapagos::router_node<T>::drain(){
 
 
     bool cont = true;
     while(cont){
         cont = false;
-        for(int i=0; i<s_axis.size(); i++){
-            if(s_axis[i]->size()>0)
+        for(int i=0; i<this->s_axis.size(); i++){
+            if(this->s_axis[i]->size()>0)
                 cont = true;
         }
-        for(int i=0; i<m_axis.size(); i++){
-            if(m_axis[i]->size()>0)
+        for(int i=0; i<this->m_axis.size(); i++){
+            if(this->m_axis[i]->size()>0)
                 cont = true;
         }
     }
 
-#ifdef DEBUG
-    std::cout << " AFTER DRAIN " << std::endl; 
-#endif
 
 }
 
 
-galapagos::router_node::~router_node(){;}
+template <typename T> 
+galapagos::router_node<T>::~router_node(){;}
+
+template class galapagos::router_node<ap_uint <PACKET_DATA_LENGTH > >;
+template class galapagos::router_node<float >;

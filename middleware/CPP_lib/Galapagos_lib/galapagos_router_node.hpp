@@ -1,3 +1,9 @@
+//===============================
+// AUTHOR     : Naif Tarafdar
+// CREATE DATE     : April 20, 2019
+//===============================
+
+
 #ifndef __GALAPAGOS_ROUTER_NODE_HPP__   // if x.h hasn't been included yet...
 #define __GALAPAGOS_ROUTER_NODE_HPP__
 
@@ -8,16 +14,13 @@ enum ext_port{network};
 
 
 namespace galapagos{
-    class router_node: public router{
+template<typename T>
+    class router_node: public router<T>{
         private:
             std::map <std::string,  std::vector<short> >  address_map;
     	    std::vector < std::string > kern_info_table;
             std::string my_address;
-            //bool _done;
-            //std::mutex  mutex;
-
-            //external kernels;
-            std::vector <galapagos::streaming_core * > ext_streams;
+            std::vector <galapagos::streaming_core <T> * > ext_streams;
             std::vector <int > ext_streams_indices;
             std::unique_ptr <std::thread> t;
             int ext_index;
@@ -26,8 +29,8 @@ namespace galapagos{
         public:
             router_node(std::vector <std::string>  _kern_info_table, std::string _my_address, bool * _done, std::mutex *_mutex, int num_ext);
             void route();
-            void add_kernel(kernel * _gk, int index);
-            void add_ext_stream(galapagos::streaming_core * gsc);
+            void add_kernel(kernel <T> * _gk, int index);
+            void add_ext_stream(galapagos::streaming_core <T> * gsc);
             void start();
             void end();
             void drain();
