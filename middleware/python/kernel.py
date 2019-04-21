@@ -19,28 +19,26 @@ class kernel(abstractDict):
         mandatory_array = ('name',
                                 'num',
                                 '#text')
-        optional_array = ('rep',
-                          'clk',
-                          'aresetn',
-                               'vendor',
-                               'lib',
-                               'version',
-                               'id_port',
-                               'm_axi',
-                               's_axi',
-                               's_axis',
-                               'm_axis',
-                               'wire_master',
-                               'wire_slave',
-                               'ip',
-                               'mac',
-                               'const',
-                               'properties')
+        optional_array = (
+            'rep',
+            'clk',
+            'aresetn',
+            'vendor',
+            'lib',
+            'version',
+            'id_port',
+            'm_axi',
+            's_axi',
+            's_axis',
+            'm_axis',
+            'wire_master',
+            'wire_slave',
+            'ip',
+            'mac',
+            'const',
+            'properties',
+            'board'
+        )
 
 
         return cycle_count, mandatory_array, optional_array
-
-
-
-
-

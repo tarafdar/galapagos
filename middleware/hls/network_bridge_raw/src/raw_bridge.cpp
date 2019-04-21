@@ -26,11 +26,11 @@
 #define STREAM_APP_TO_RAW 4
 
 ap_uint <64> reverseEndian64_data(ap_uint <64> X) {
-  ap_uint <64> x = X;
-  x = (x & 0x00000000FFFFFFFF) << 32 | (x & 0xFFFFFFFF00000000) >> 32;
-  x = (x & 0x0000FFFF0000FFFF) << 16 | (x & 0xFFFF0000FFFF0000) >> 16;
-  x = (x & 0x00FF00FF00FF00FF) << 8  | (x & 0xFF00FF00FF00FF00) >> 8;
-  return x;
+    ap_uint <64> x = X;
+    x = (x & 0x00000000FFFFFFFF) << 32 | (x & 0xFFFFFFFF00000000) >> 32;
+    x = (x & 0x0000FFFF0000FFFF) << 16 | (x & 0xFFFF0000FFFF0000) >> 16;
+    x = (x & 0x00FF00FF00FF00FF) << 8  | (x & 0xFF00FF00FF00FF00) >> 8;
+    return x;
 }
 
 ap_uint <8> reverseEndian64_keep(ap_uint <8> X) {
@@ -56,17 +56,17 @@ void raw_to_app(hls::stream <raw_axis> & from_raw,
     {
         //read header 
         case READ_DEST_RAW_TO_APP:
-		    if (!from_raw.empty()){
+            if (!from_raw.empty()){
                 raw_packet_in = from_raw.read();
                 raw_packet_in.data = reverseEndian64_data(raw_packet_in.data);
-		        dest = raw_packet_in.data.range(15,8);
+                dest = raw_packet_in.data.range(15,8);
                 state = STREAM_RAW_TO_APP;
                 
             }
             break;
         case STREAM_RAW_TO_APP:
             app_packet_out.dest = dest;
-		    if (!from_raw.empty()){
+            if (!from_raw.empty()){
                 raw_packet_in = from_raw.read();
                 //raw_packet_in.data = reverseEndian64_data(raw_packet_in.data);
                 //raw_packet_in.tkeep = reverseEndian64_keep(raw_packet_in.tkeep);
@@ -84,13 +84,12 @@ void raw_to_app(hls::stream <raw_axis> & from_raw,
 
 
 void app_to_raw(
-	    hls::stream <galapagos_packet> & from_app,
-	    hls::stream <raw_axis> & to_raw
+        hls::stream <galapagos_packet> & from_app,
+        hls::stream <raw_axis> & to_raw
         )
 {
 #pragma HLS PIPELINE II=1
 
-   
     static galapagos_packet app_packet_in;
     static raw_axis raw_packet_out;
     static ap_uint <48> dest_mac_address;
@@ -128,7 +127,7 @@ void app_to_raw(
                 state = STREAM_APP_TO_RAW;
             break;
         case STREAM_APP_TO_RAW:
-		    if (!from_app.empty()){
+            if (!from_app.empty()){
                 app_packet_in = from_app.read();
                 //raw_packet_out.tkeep = reverseEndian64_keep(app_packet_in.tkeep);
 	            //raw_packet_out.data = reverseEndian64_data(app_packet_in.data);
