@@ -1,0 +1,10 @@
+create_bd_cell -type ip -vlnv xilinx.com:ip:system_ila:1.1 system_ila_0
+set_property -dict [list CONFIG.C_SLOT {2} CONFIG.C_BRAM_CNT {30} CONFIG.C_NUM_MONITOR_SLOTS {6} CONFIG.C_SLOT_0_INTF_TYPE {xilinx.com:interface:axis_rtl:1.0} CONFIG.C_SLOT_1_INTF_TYPE {xilinx.com:interface:axis_rtl:1.0}] [get_bd_cells system_ila_0]
+connect_bd_intf_net [get_bd_intf_pins dariusController_inst/stream_in_V] [get_bd_intf_pins system_ila_0/SLOT_0_AXIS]
+connect_bd_intf_net [get_bd_intf_pins system_ila_0/SLOT_1_AXIS] [get_bd_intf_pins dariusController_inst/stream_out_V]
+connect_bd_intf_net [get_bd_intf_pins system_ila_0/SLOT_2_AXI] -boundary_type upper [get_bd_intf_pins axi_interconnect_mem/S01_AXI]
+connect_bd_intf_net [get_bd_intf_pins system_ila_0/SLOT_3_AXI] -boundary_type upper [get_bd_intf_pins axi_interconnect_mem/S02_AXI]
+connect_bd_intf_net [get_bd_intf_pins system_ila_0/SLOT_4_AXI] -boundary_type upper [get_bd_intf_pins axi_interconnect_mem/S03_AXI]
+connect_bd_intf_net [get_bd_intf_pins system_ila_0/SLOT_5_AXI] -boundary_type upper [get_bd_intf_pins axi_interconnect_mem/S04_AXI]
+connect_bd_net [get_bd_ports CLK] [get_bd_pins system_ila_0/clk]
+connect_bd_net [get_bd_ports ARESETN] [get_bd_pins system_ila_0/resetn]

@@ -1,0 +1,216 @@
+{
+  "wait_conditions": [
+    {
+      "key": "0", 
+      "condition": "@(negedge clk);"
+    }, 
+    {
+      "key": "1", 
+      "condition": "wait(mem_ready == $value);"
+    }
+  ], 
+  "modules": [
+    {
+      "name": "DUT", 
+      "ports": [
+        {
+          "period": "6.25ns", 
+          "direction": "input", 
+          "type": "clock", 
+          "name": "clk", 
+          "size": 1
+        }, 
+        {
+          "period": "3ns", 
+          "direction": "input", 
+          "type": "clock", 
+          "name": "mem_sys_clk_p", 
+          "size": 1
+        }, 
+        {
+          "direction": "input", 
+          "type": "reset", 
+          "name": "sys_resetn", 
+          "size": 1
+        }, 
+        {
+          "channels": [
+            {
+              "type": "tdata", 
+              "name": "TDATA", 
+              "size": 64
+            }, 
+            {
+              "type": "tvalid", 
+              "name": "TVALID", 
+              "size": 1
+            }, 
+            {
+              "type": "tready", 
+              "name": "TREADY", 
+              "size": 1
+            }, 
+            {
+              "type": "tlast", 
+              "name": "TLAST", 
+              "size": 1
+            }, 
+            {
+              "type": "tkeep", 
+              "name": "TKEEP", 
+              "size": 8
+            }
+          ], 
+          "direction": "slave", 
+          "type": "axis", 
+          "name": "stream_in", 
+          "clock": "clk"
+        }, 
+        {
+          "channels": [
+            {
+              "type": "tdata", 
+              "name": "TDATA", 
+              "size": 64
+            }, 
+            {
+              "type": "tvalid", 
+              "name": "TVALID", 
+              "size": 1
+            }, 
+            {
+              "type": "tready", 
+              "name": "TREADY", 
+              "size": 1
+            }, 
+            {
+              "type": "tlast", 
+              "name": "TLAST", 
+              "size": 1
+            }, 
+            {
+              "type": "tkeep", 
+              "name": "TKEEP", 
+              "size": 8
+            }
+          ], 
+          "direction": "master", 
+          "type": "axis", 
+          "name": "stream_out", 
+          "clock": "clk"
+        }, 
+        {
+          "direction": "output", 
+          "name": "mem_ready", 
+          "size": 1
+        }
+      ]
+    }
+  ], 
+  "vectors": [
+    [
+      [
+        {
+          "wait": {
+            "key": "0"
+          }
+        }, 
+        {
+          "macro": "INIT_SIGNALS"
+        }, 
+        {
+          "delay": "25ns"
+        }, 
+        {
+          "signal": [
+            {
+              "name": "sys_resetn", 
+              "value": 1
+            }
+          ]
+        }, 
+        {
+          "signal": [
+            {
+              "name": "stream_out_tready", 
+              "value": 1
+            }
+          ]
+        }, 
+        {
+          "wait": {
+            "value": 1, 
+            "key": "1"
+          }
+        }, 
+        {
+          "interface": {
+            "type": "axis", 
+            "name": "stream_in", 
+            "payload": [
+              {
+                "tdata": "0xc40c02ca553e16fa", 
+                "tkeep": "KEEP_ALL", 
+                "tlast": 0
+              }, 
+              {
+                "tdata": "0x1007447c0887a", 
+                "tkeep": "KEEP_ALL", 
+                "tlast": 0
+              }, 
+              {
+                "tdata": "0x800000000000000", 
+                "tkeep": "KEEP_ALL", 
+                "tlast": 0
+              }, 
+              {
+                "tdata": "0x00000000", 
+                "tkeep": "0b1111111", 
+                "tlast": 1
+              }
+            ]
+          }
+        }, 
+        {
+          "interface": {
+            "type": "axis", 
+            "name": "stream_in", 
+            "payload": [
+              {
+                "tdata": "0xc40c02ca553e16fa", 
+                "tkeep": "KEEP_ALL", 
+                "tlast": 0
+              }, 
+              {
+                "tdata": "0x1001007447c0887a", 
+                "tkeep": "KEEP_ALL", 
+                "tlast": 0
+              }, 
+              {
+                "tdata": "0x00000000", 
+                "tkeep": "0b1111111", 
+                "tlast": 1
+              }
+            ]
+          }
+        }
+      ]
+    ]
+  ], 
+  "metadata": {
+    "Flag_Count": 1, 
+    "Project_Name": null, 
+    "Time_Format": {
+      "precision": 3, 
+      "unit": "1us"
+    }, 
+    "Tool_Versions": null, 
+    "Description": null, 
+    "Timescale": "1ns / 1ps", 
+    "Target_Devices": null, 
+    "Company": null, 
+    "Dependencies": null, 
+    "Module_Name": "top_sim", 
+    "Engineer": null
+  }
+}

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cluster>
+    <kernel> darius_wrapper_bd
+        <vendor> user.org </vendor>
+        <version> 1.0 </version>
+        <lib> user </lib>
+		<num> 8 </num>
+        <rep> 1 </rep>
+        <clk> CLK </clk>
+        <aresetn> RESETN </aresetn>
+        <s_axis>
+            <name> stream_in_V </name>
+            <scope> global </scope>
+        </s_axis>
+        <m_axis>
+            <name> stream_out_V </name>
+            <scope> global </scope>
+        </m_axis>
+        <s_axi>
+            <name> s_axi </name>
+            <scope> global </scope>
+        </s_axi>
+    </kernel>
+	<kernel> cpu
+        <num> 0 </num>
+        <rep> 1 </rep>
+	</kernel>
+</cluster>
