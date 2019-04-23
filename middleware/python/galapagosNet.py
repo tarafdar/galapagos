@@ -124,7 +124,6 @@ class GalapagosNet:
         self.tv = TestVector()
         self.tv.add_thread(self.reset_thread)
 
-
     def _make_tv(self):
        thread = self.tv.add_thread()
        thread.add_delay('100ns')
@@ -133,7 +132,7 @@ class GalapagosNet:
     def _close_sim(self):
         self.tb.add_test_vector(self.tv)        
         cwd = os.getcwd()
-        self.tb.generateTB(cwd + '/build', 'sv')
+        self.tb.generateTB(cwd + "/build/", "sv")
 
     def start(self):
 

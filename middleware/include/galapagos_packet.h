@@ -6,6 +6,28 @@
 #include "ap_int.h"
 #include "packet_size.h"
 
+struct galapagos_stream_packet {
+
+        ap_uint <PACKET_DATA_LENGTH> data;
+#ifdef PACKET_DEST_LENGTH  
+        ap_uint <PACKET_DEST_LENGTH> dest;
+#endif   
+#ifdef PACKET_LAST  
+        ap_uint <1> last;
+#endif   
+#ifdef PACKET_ID_LENGTH  
+        ap_uint <PACKET_ID_LENGTH> id;
+#endif   
+#ifdef PACKET_USER_LENGTH  
+        ap_uint <PACKET_USER_LENGTH> user;
+#endif   
+#ifdef PACKET_KEEP_LENGTH  
+        ap_uint <PACKET_KEEP_LENGTH> keep;
+#endif   
+
+};
+
+
 
 #ifdef CPU
 
@@ -43,6 +65,28 @@ using galapagos_packet = galapagos::stream_packet <T>;
 
 #else
 
+//typedef struct{
+//    
+//    //ap_uint <PACKET_DATA_LENGTH> data;
+//    double data;
+//#ifdef PACKET_DEST_LENGTH  
+//    ap_uint <PACKET_DEST_LENGTH> dest;
+//#endif   
+//#ifdef PACKET_LAST  
+//    ap_uint <1> last;
+//#endif   
+//#ifdef PACKET_ID_LENGTH  
+//    ap_uint <PACKET_ID_LENGTH> id;
+//#endif   
+//#ifdef PACKET_USER_LENGTH  
+//    ap_uint <PACKET_USER_LENGTH> user;
+//#endif   
+//#ifdef PACKET_KEEP_LENGTH  
+//     ap_uint <PACKET_KEEP_LENGTH> keep;
+//#endif   
+//
+//
+//}galapagos_packet_float;
 
 
 template <typename T> 
@@ -71,6 +115,9 @@ struct galapagos_packet{
 };
 
 
-#endif
 
-#endif
+#endif // if not CPU 
+
+
+
+#endif //GUARD

@@ -198,3 +198,4 @@ size_t galapagos::stream<T>::empty(){
 
 template class galapagos::stream<ap_uint <PACKET_DATA_LENGTH > >;
 template class galapagos::stream<float >;
+template class galapagos::stream<double >;

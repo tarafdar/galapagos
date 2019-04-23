@@ -99,3 +99,4 @@ void galapagos::net::tcp::tcp<T>::stop(){
 
 template class galapagos::net::tcp::tcp<ap_uint <PACKET_DATA_LENGTH > >;
 template class galapagos::net::tcp::tcp<float >;
+template class galapagos::net::tcp::tcp<double >;

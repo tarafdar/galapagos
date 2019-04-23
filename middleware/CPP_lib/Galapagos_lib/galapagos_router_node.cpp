@@ -136,3 +136,4 @@ galapagos::router_node<T>::~router_node(){;}
 
 template class galapagos::router_node<ap_uint <PACKET_DATA_LENGTH > >;
 template class galapagos::router_node<float >;
+template class galapagos::router_node<double >;

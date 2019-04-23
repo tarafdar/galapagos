@@ -60,3 +60,4 @@ void accept_server<T>::do_accept()
  
 template class galapagos::net::tcp::accept_server<ap_uint <PACKET_DATA_LENGTH > >;
 template class galapagos::net::tcp::accept_server<float >;
+template class galapagos::net::tcp::accept_server<double >;

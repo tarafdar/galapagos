@@ -195,5 +195,7 @@ bool session_container<T>::send(std::string ip_addr, char * data, int size, shor
 
 template class galapagos::net::tcp::session<ap_uint <PACKET_DATA_LENGTH > >;
 template class galapagos::net::tcp::session<float >;
+template class galapagos::net::tcp::session<double >;
 template class galapagos::net::tcp::session_container<ap_uint <PACKET_DATA_LENGTH > >;
 template class galapagos::net::tcp::session_container<float >;
+template class galapagos::net::tcp::session_container<double >;

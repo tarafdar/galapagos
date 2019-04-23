@@ -69,3 +69,4 @@ bool galapagos::streaming_core<T>::done(){
 
 template class galapagos::streaming_core<ap_uint <PACKET_DATA_LENGTH > >;
 template class galapagos::streaming_core<float >;
+template class galapagos::streaming_core<double >;

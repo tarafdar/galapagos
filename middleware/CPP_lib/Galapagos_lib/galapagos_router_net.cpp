@@ -86,5 +86,7 @@ void galapagos::router_net_out<T>::route(){
 
 template class galapagos::router_net<ap_uint <PACKET_DATA_LENGTH > >;
 template class galapagos::router_net<float >;
+template class galapagos::router_net<double >;
 template class galapagos::router_net_out<ap_uint <PACKET_DATA_LENGTH > >;
 template class galapagos::router_net_out<float >;
+template class galapagos::router_net_out<double >;

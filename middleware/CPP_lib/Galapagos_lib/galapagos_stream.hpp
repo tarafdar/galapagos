@@ -52,24 +52,32 @@ namespace galapagos{
     };
 }
 
-template <typename T> 
-using galapagos_stream = galapagos::stream <T>;
+//template <typename T> 
+//using galapagos_stream = galapagos::stream <T>;
+//
+typedef galapagos::stream <ap_uint <PACKET_DATA_LENGTH> > galapagos_stream;
+typedef galapagos::stream <float> galapagos_stream_float;
+typedef galapagos::stream <double> galapagos_stream_double;
 #else            
 
-template <typename T>
-struct galapagos_stream{
-    hls::stream<galapagos_packet <T> > _stream;
-    galapagos_packet <T> read(){
-        return _stream.read();
-    }
-    void write(galapagos_packet <T> gp){
-        _stream.write(gp);
-    }
-    size_t size(){
-        return _stream.size();
-    }
 
-};
+typedef hls::stream <galapagos_stream_packet> galapagos_stream;
+typedef hls::stream<galapagos_packet <float> > galapagos_stream_float;
+typedef hls::stream<galapagos_packet <double> > galapagos_stream_double;
+//template <typename T>
+//struct galapagos_stream_float{
+//    hls::stream<galapagos_packet <T> > _stream;
+//    galapagos_packet <T> read(){
+//        return _stream.read();
+//    }
+//    void write(galapagos_packet <T> gp){
+//        _stream.write(gp);
+//    }
+//    size_t size(){
+//        return _stream.size();
+//    }
+//
+//};
 
 //struct galapagos_stream:: public hls::stream<galapagos_packet <T> >  {
 //};

@@ -82,4 +82,5 @@ void galapagos::kernel<T>::start
 
 template class galapagos::kernel<ap_uint <PACKET_DATA_LENGTH > >;
 template class galapagos::kernel<float >;
+template class galapagos::kernel<double >;
 

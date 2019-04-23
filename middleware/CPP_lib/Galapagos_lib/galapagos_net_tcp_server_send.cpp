@@ -104,3 +104,4 @@ void server_send<T>::send_new(std::string ip_addr, int dest){
 
 template class galapagos::net::tcp::server_send<ap_uint <PACKET_DATA_LENGTH > >;
 template class galapagos::net::tcp::server_send<float >;
+template class galapagos::net::tcp::server_send<double >;

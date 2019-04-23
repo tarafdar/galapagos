@@ -107,3 +107,4 @@ void galapagos::node<T>::end(){
 }
 template class galapagos::node<ap_uint <PACKET_DATA_LENGTH > >;
 template class galapagos::node<float >;
+template class galapagos::node<double >;

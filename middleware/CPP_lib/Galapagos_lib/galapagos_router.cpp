@@ -116,3 +116,4 @@ bool galapagos::router<T>::is_done(){
 
 template class galapagos::router<ap_uint <PACKET_DATA_LENGTH > >;
 template class galapagos::router<float >;
+template class galapagos::router<double >;
