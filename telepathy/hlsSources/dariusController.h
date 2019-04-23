@@ -4,7 +4,8 @@
 
 #define MEM_INFO_SIZE 4 
 #define PARAMETER_MEM_INFO_SIZE 2  
-#define DARIUS_INFO_SIZE 35 // {ind_0 = num_commands, ind_1-32 = command, ind_33 = batch_size, ind_34 = num_ranks}
+//#define DARIUS_INFO_SIZE 35 // {ind_0 = num_commands, ind_1-32 = command, ind_33 = batch_size, ind_34 = num_ranks}
+#define DARIUS_INFO_SIZE 16 // {ind_0 = num_commands, ind_1-32 = command, ind_33 = batch_size, ind_34 = num_ranks}
 
 #define NUM_COMMANDS_OFFSET 0x60
 #define COMMAND_OFFSET 0x70

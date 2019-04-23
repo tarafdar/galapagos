@@ -119,14 +119,26 @@ void dariusController_raw(
             output_dma_address = data_mem_info[2];
             output_dma_size = data_mem_info[3];
 
-            for(int i=0; i<DARIUS_INFO_SIZE; i++){
+
+	    //num_commands
+	    galapagos_stream_packet gp;
+	    gp = stream_in.read();
+	    int num_commands = gp.data;
+		
+	    //all commands
+            for(int i=0; i<num_commands * DARIUS_INFO_SIZE; i++){
                 galapagos_stream_packet gp;
                 gp = stream_in.read();
                 darius_info[i] = gp.data;
             } 
-            
-            batch_size = darius_info[DARIUS_INFO_SIZE - 2];
-            num_ranks = darius_info[DARIUS_INFO_SIZE - 1];
+	    
+	    //batch_size
+	    gp = stream_in.read();
+	    batch_size  = gp.data;
+	    
+ 	    //number of ranks
+	    gp = stream_in.read();
+	    num_ranks  = gp.data;
 
             if(rank<=batch_size)
                 prev_rank = 0;
@@ -213,6 +225,7 @@ void dariusController_raw(
             for(int i=0; i<(output_dma_size/8); i++){
                 galapagos_stream_packet gp;
                 gp.keep = 0xff;
+		gp.dest = next_rank;
                 axis_word_dma wdma = axis_mm2s.read();
                 gp.data = wdma.data;
                 gp.last = wdma.last;
