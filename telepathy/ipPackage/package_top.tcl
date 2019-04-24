@@ -2,9 +2,13 @@ set galapagos_path $::env(GALAPAGOS_PATH)
 set board_name $::env(GALAPAGOS_BOARD_NAME)
 set part_name $::env(GALAPAGOS_PART)
 
-create_project darius_wrapper_ip telepathy/projects -part $part_name 
+create_project darius_wrapper_ip $galapagos_path/telepathy/projects -part $part_name 
 
-set_property  ip_repo_paths  {./hlsBuild ./userIP} [current_project]
+
+
+set_property ip_repo_paths [list \
+  $galapagos_path/hlsBuild \
+  $galapagos_path/userIP] [current_project]
 update_ip_catalog
 
 create_bd_design darius_wrapper_bd
