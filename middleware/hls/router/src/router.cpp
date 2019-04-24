@@ -17,9 +17,9 @@ void router(
 	
         const ap_uint<NETWORK_HEADER_LENGTH> network_table[256],
         const ap_uint <NETWORK_HEADER_LENGTH> network_addr,
-        hls::stream <galapagos_packet> * stream_in,
-		hls::stream <galapagos_packet>  * stream_out_switch,
-		hls::stream <galapagos_packet>  * stream_out_network
+        hls::stream <galapagos_stream_packet> * stream_in,
+		hls::stream <galapagos_stream_packet>  * stream_out_switch,
+		hls::stream <galapagos_stream_packet>  * stream_out_network
 
 ){
 #pragma HLS resource core=AXI4Stream variable=stream_in
@@ -36,8 +36,8 @@ void router(
 #pragma HLS INTERFACE ap_ctrl_none port=return
 #endif
 
-	galapagos_packet packetIn;
-	galapagos_packet packetOut;
+	galapagos_stream_packet packetIn;
+	galapagos_stream_packet packetOut;
 
 	bool inFPGA = false;
     ap_uint <NETWORK_HEADER_LENGTH> network_addr_in;

@@ -34,11 +34,11 @@ int main (int argc, char **argv)
 
     int retval = 0;
 
-    hls::stream <galapagos_packet> stream_in;
-    hls::stream <galapagos_packet> stream_out_switch;
-    hls::stream <galapagos_packet> stream_out_network;
+    hls::stream <galapagos_stream_packet> stream_in;
+    hls::stream <galapagos_stream_packet> stream_out_switch;
+    hls::stream <galapagos_stream_packet> stream_out_network;
    
-    galapagos_packet gp;
+    galapagos_stream_packet gp;
     for(int i=0; i<256; i++){
         gp.data = i;
         gp.dest = i;

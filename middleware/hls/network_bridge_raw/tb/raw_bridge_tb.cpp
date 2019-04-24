@@ -16,10 +16,10 @@
 
 #define NUM_TESTS 10
 
-hls::stream <galapagos_packet> from_app;
+hls::stream <galapagos_stream_packet> from_app;
 hls::stream <raw_axis> from_net;
 hls::stream <raw_axis> to_net;
-hls::stream <galapagos_packet> to_app;
+hls::stream <galapagos_stream_packet> to_app;
 
 ap_uint <16> temp_dest;
 ap_uint <32> temp;
@@ -37,7 +37,7 @@ TEST_CASE("app_to_net"){
     init();
     
     raw_axis np;
-    galapagos_packet gp;
+    galapagos_stream_packet gp;
     
     for(int i=0; i<NUM_TESTS; i++){
         gp.data = 0xdeadbeefdeadbeef;
@@ -78,7 +78,7 @@ TEST_CASE("net_to_app"){
 
 
     raw_axis np;
-    galapagos_packet gp;
+    galapagos_stream_packet gp;
     
     for(int i=0; i<NUM_TESTS; i++){
         np.data = reverseEndian64_data(expected_flit_2);
@@ -116,9 +116,9 @@ TEST_CASE("net_to_app"){
 //
 //    int retval = 0;
 //
-//    hls::stream <galapagos_packet> from_app;
+//    hls::stream <galapagos_stream_packet> from_app;
 //   
-//    galapagos_packet gp;
+//    galapagos_stream_packet gp;
 //    for(int i=0; i<NUM_TESTS; i++){
 //        gp.data = 0xdeadbeefdeadbeef;
 //        gp.dest = i;
@@ -161,7 +161,7 @@ TEST_CASE("net_to_app"){
 //
 //
 //    hls::stream <raw_axis> to_net;
-//    hls::stream <galapagos_packet> to_app;
+//    hls::stream <galapagos_stream_packet> to_app;
 //    raw_bridge(to_app, from_net, from_app, to_net, mac_addr_dest);
 //
 //   

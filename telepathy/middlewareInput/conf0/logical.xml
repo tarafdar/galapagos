@@ -4,16 +4,16 @@
         <vendor> user.org </vendor>
         <version> 1.0 </version>
         <lib> user </lib>
-		<num> 8 </num>
-        <rep> 1 </rep>
+		<num> 1 </num>
+        <rep> 4 </rep>
         <clk> CLK </clk>
         <aresetn> RESETN </aresetn>
         <s_axis>
-            <name> stream_in_V </name>
+            <name> stream_in </name>
             <scope> global </scope>
         </s_axis>
         <m_axis>
-            <name> stream_out_V </name>
+            <name> stream_out </name>
             <scope> global </scope>
         </m_axis>
         <s_axi>

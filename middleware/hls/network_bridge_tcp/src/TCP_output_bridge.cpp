@@ -137,7 +137,7 @@ void open_port(	stream<ap_uint<16> >& listenPort,
 
 void firewall(	stream<ap_uint<16> >& rxMetaData,
 				stream<axiWord>& rxData,
-				stream<galapagos_packet>& stream_out,
+				stream<galapagos_stream_packet>& stream_out,
 				stream<ap_uint<16> >& firewal_read_dest,
 				stream<ap_uint<16> >& firewal_read_sid,
 				stream<ap_uint<16> >& firewal_write_dest,
@@ -158,7 +158,7 @@ void firewall(	stream<ap_uint<16> >& rxMetaData,
 
 	static axiWord currWord;
 	ap_uint<16> dest;
-	static galapagos_packet packet;
+	static galapagos_stream_packet packet;
 	static ap_uint<8> src;
 
 
@@ -237,7 +237,7 @@ void firewall(	stream<ap_uint<16> >& rxMetaData,
 }
 
 
-void client(	stream<galapagos_packet>& stream_in,
+void client(	stream<galapagos_stream_packet>& stream_in,
 				stream<ap_int<17> >& txStatus,
 				stream<appTxMeta>& txMetaData,
 				stream<axiWord>& txData,
@@ -265,7 +265,7 @@ void client(	stream<galapagos_packet>& stream_in,
 //#pragma HLS DEPENDENCE variable=sessionID inter false
 	ap_uint<16> length;
 	axiWord currWord;
-	static galapagos_packet packet;
+	static galapagos_stream_packet packet;
 //	#pragma HLS DEPENDENCE variable=packet inter false
 
 	//static ap_uint<16> dest_size[256];
@@ -415,7 +415,7 @@ void open_connections(stream<ap_uint<32> >& ip_fifo,stream<ipTuple>& openConnect
 	}
 }
 
-void TCP_output_bridge(stream<galapagos_packet>& stream_in,
+void TCP_output_bridge(stream<galapagos_stream_packet>& stream_in,
 						stream<appTxMeta>& txMetaData,
 						stream<ipTuple>& openConnection,
 						stream<openStatus>& openConStatus,
@@ -428,7 +428,7 @@ void TCP_output_bridge(stream<galapagos_packet>& stream_in,
 						stream<appReadRequest>& readRequest,
 						stream<ap_uint<16> >& rxMetaData,
 						stream<axiWord>& rxData,
-						stream<galapagos_packet>& stream_out
+						stream<galapagos_stream_packet>& stream_out
 						)
 {
 
