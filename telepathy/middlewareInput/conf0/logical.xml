@@ -20,6 +20,14 @@
             <name> s_axi </name>
             <scope> global </scope>
         </s_axi>
+        <s_axi>
+            <name> s_axi </name>
+            <scope> global </scope>
+        </s_axi>
+        <m_axi>
+            <name> M_AXI </name>
+            <scope> global </scope>
+        </m_axi>
     </kernel>
 	<kernel> cpu
         <num> 0 </num>
