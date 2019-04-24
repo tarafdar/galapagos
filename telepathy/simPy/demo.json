@@ -19,6 +19,7 @@
            "ports": {"output" : "axisIn", "input" : "axisOut"},
            "mac_table": {"0xfa163e55ca02":"0x01", "0x0cc47a88c047":"0x00"}
     },
+    "mode": "impl",
     "neural_net": [{
             
             "dst_rank": "0x01",
@@ -44,7 +45,6 @@
             "relu": 0,
             "bias": 0
     }
-    
     ]
 
 

@@ -24,10 +24,10 @@ ap_uint<48> mac_table[256];
 ap_int <48> mac_addr_src;
 ap_int <48> mac_addr_dest;
 ap_uint <96> eth_dst_src;
-hls::stream <galapagos_packet> from_app;
+hls::stream <galapagos_stream_packet> from_app;
 hls::stream <eth_axis> from_net;
 hls::stream <eth_axis> to_net;
-hls::stream <galapagos_packet> to_app;
+hls::stream <galapagos_stream_packet> to_app;
 
 
 ap_uint <16> temp_dest;
@@ -62,7 +62,7 @@ TEST_CASE("app_to_net"){
     init();
     
     eth_axis np;
-    galapagos_packet gp;
+    galapagos_stream_packet gp;
     
     for(int i=0; i<NUM_TESTS; i++){
         gp.data = 0xdeadbeefdeadbeef;
@@ -106,7 +106,7 @@ TEST_CASE("net_to_app"){
 
 
     eth_axis np;
-    galapagos_packet gp;
+    galapagos_stream_packet gp;
     
     for(int i=0; i<NUM_TESTS; i++){
         np.data  = reverseEndian64_data(eth_dst_src.range(95,32));
@@ -143,9 +143,9 @@ TEST_CASE("net_to_app"){
 //
 //    int retval = 0;
 //
-//    hls::stream <galapagos_packet> from_app;
+//    hls::stream <galapagos_stream_packet> from_app;
 //   
-//    galapagos_packet gp;
+//    galapagos_stream_packet gp;
 //    for(int i=0; i<NUM_TESTS; i++){
 //        gp.data = 0xdeadbeefdeadbeef;
 //        gp.dest = i;
@@ -188,7 +188,7 @@ TEST_CASE("net_to_app"){
 //
 //
 //    hls::stream <eth_axis> to_net;
-//    hls::stream <galapagos_packet> to_app;
+//    hls::stream <galapagos_stream_packet> to_app;
 //    ethernet_bridge(to_app, from_net, from_app, to_net, mac_addr_dest);
 //
 //   

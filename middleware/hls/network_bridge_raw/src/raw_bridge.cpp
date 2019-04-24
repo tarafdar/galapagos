@@ -42,7 +42,7 @@ ap_uint <8> reverseEndian64_keep(ap_uint <8> X) {
 }
 
 void raw_to_app(hls::stream <raw_axis> & from_raw,
-                hls::stream <galapagos_packet> & to_app
+                hls::stream <galapagos_stream_packet> & to_app
 ){
 #pragma HLS PIPELINE II=1
 
@@ -50,7 +50,7 @@ void raw_to_app(hls::stream <raw_axis> & from_raw,
     static ap_uint <3> state = READ_DEST_RAW_TO_APP;
     static ap_uint <16> dest;
     static raw_axis raw_packet_in;
-    static galapagos_packet app_packet_out;
+    static galapagos_stream_packet app_packet_out;
 
     switch (state)
     {
@@ -84,14 +84,14 @@ void raw_to_app(hls::stream <raw_axis> & from_raw,
 
 
 void app_to_raw(
-	    hls::stream <galapagos_packet> & from_app,
+	    hls::stream <galapagos_stream_packet> & from_app,
 	    hls::stream <raw_axis> & to_raw
         )
 {
 #pragma HLS PIPELINE II=1
 
    
-    static galapagos_packet app_packet_in;
+    static galapagos_stream_packet app_packet_in;
     static raw_axis raw_packet_out;
     static ap_uint <48> dest_mac_address;
 	static ap_uint <96> raw_dst_src;
@@ -152,9 +152,9 @@ void app_to_raw(
 
 
 void raw_bridge(
-    hls::stream <galapagos_packet> & to_app,
+    hls::stream <galapagos_stream_packet> & to_app,
     hls::stream <raw_axis> & from_raw,
-    hls::stream <galapagos_packet> & from_app,
+    hls::stream <galapagos_stream_packet> & from_app,
     hls::stream <raw_axis> & to_raw
 ){
 #pragma HLS DATAFLOW

@@ -176,7 +176,7 @@ class GalapagosNet:
 
 
 
-    def binToStream(self, binData, dest):
+    def binToStream(self, binData, dest, filename=''):
 
         if self.mode == 'sim':
             #thread = self.tv.add_thread()
@@ -187,7 +187,11 @@ class GalapagosNet:
                 #ethernet = Ethernet(macAddrDst, self.macAddr, "0x7400")
                 ethernet = Ethernet(self.macAddr, macAddrDst, "0x7400", prefix=dest)
                 ethernet.bin_to_stream(self.thread, self.axis_in, binData)
-            #else sim tcp/ip 
+            #else sim tcp/ip
+        elif self.mode == 'impl':
+            #raw for pynq
+            f = open(filename, 'a+')
+            f.write(binData)
 
 
 
