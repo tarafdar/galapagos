@@ -121,36 +121,44 @@ void dariusController_raw(
 
 
 	    //num_commands
-	    galapagos_stream_packet gp;
-	    gp = stream_in.read();
-	    int num_commands = gp.data;
+	    int num_commands;
+        {
+	        galapagos_stream_packet gp;
+	        gp = stream_in.read();
+	        num_commands = gp.data;
+        }
 		
 	    //all commands
-            for(int i=0; i<num_commands * DARIUS_INFO_SIZE; i++){
-                galapagos_stream_packet gp;
-                gp = stream_in.read();
-                darius_info[i] = gp.data;
-            } 
+        for(int i=0; i<num_commands * DARIUS_INFO_SIZE; i++){
+            galapagos_stream_packet gp;
+            gp = stream_in.read();
+            darius_info[i] = gp.data;
+        } 
 	    
 	    //batch_size
-	    gp = stream_in.read();
-	    batch_size  = gp.data;
-	    
+        {
+	        galapagos_stream_packet gp;
+	        gp = stream_in.read();
+	        batch_size  = gp.data;
+        }
  	    //number of ranks
-	    gp = stream_in.read();
-	    num_ranks  = gp.data;
+        {
+	        galapagos_stream_packet gp;
+	        gp = stream_in.read();
+	        num_ranks  = gp.data;
+        }
+        if(rank<=batch_size)
+            prev_rank = 0;
+        else
+            prev_rank = rank - batch_size;
 
-            if(rank<=batch_size)
-                prev_rank = 0;
-            else
-                prev_rank = rank - batch_size;
-
-            if(rank>(num_ranks - batch_size))
-                next_rank = 0;
-            else
-                next_rank = rank + batch_size;
-            state = DMA_IN;
-            break;
+        if(rank>(num_ranks - batch_size))
+            next_rank = 0;
+        else
+            next_rank = rank + batch_size;
+            
+        state = DMA_IN;
+        break;
 
         case DMA_IN:
 
