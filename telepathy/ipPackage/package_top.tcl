@@ -10,7 +10,7 @@ update_ip_catalog
 create_bd_design darius_wrapper_bd
 open_bd_design $galapagos_path/telepathy/projects/darius_wrapper_ip/darius_wrapper_ip.srcs/sources_1/bd/darius_wrapper_bd/darius_wrapper_bd.bd
 #source ./telepathy/ipPackage/recreate_bd_v1.tcl
-source $galapagos_path/telepathy/ipPackage/recreate_bd_demo.tcl
+source $galapagos_path/telepathy/ipPackage/recreate_bd_demo_2.tcl
 
 
 ipx::package_project -root_dir ./userIP/dariusWrapper -vendor user.org -library user -taxonomy /UserIP -module darius_wrapper_bd -import_files
