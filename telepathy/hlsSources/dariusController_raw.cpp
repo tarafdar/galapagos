@@ -44,12 +44,12 @@ void dariusController_raw(
     //Variables that need to maintain value across states
     static int parameter_mem_info[PARAMETER_MEM_INFO_SIZE]; //{offset in offchip memory to dma_in, size to dma_in} 
     static int mem_info[MEM_INFO_SIZE]; //{offset in offchip memory to dma_in, size to dma_in} 
-    int parameter_dma_address; 
-    int parameter_dma_size; 
-    int input_dma_address; 
-    int input_dma_size; 
-    int output_dma_address; 
-    int output_dma_size; 
+    static int parameter_dma_address; 
+    static int parameter_dma_size; 
+    static int input_dma_address; 
+    static int input_dma_size; 
+    static int output_dma_address; 
+    static int output_dma_size; 
     
     
     static int data_mem_info[MEM_INFO_SIZE]; //{offset in offchip memory to dma_in, size to dma_in, offset in offchip memory to dma_out, size to dma_out} 
@@ -111,7 +111,7 @@ void dariusController_raw(
             for(int i=0; i<MEM_INFO_SIZE; i++){
                 galapagos_stream_packet gp;
                 gp = stream_in.read();
-                mem_info[i] = gp.data;
+                data_mem_info[i] = gp.data;
             }
        
             input_dma_address = data_mem_info[0];
@@ -233,7 +233,7 @@ void dariusController_raw(
             for(int i=0; i<(output_dma_size/8); i++){
                 galapagos_stream_packet gp;
                 gp.keep = 0xff;
-		gp.dest = next_rank;
+		        gp.dest = next_rank;
                 axis_word_dma wdma = axis_mm2s.read();
                 gp.data = wdma.data;
                 gp.last = wdma.last;
