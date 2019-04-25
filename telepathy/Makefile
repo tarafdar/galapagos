@@ -20,7 +20,7 @@ hls:
 	vivado_hls ${GALAPAGOS_PATH}/telepathy/hlsSources/generate_hls_ip.tcl
 
 ipPackage:
-	vivado -mode tcl -source  ${GALAPAGOS_PATH}/telepathy/ipPackage/package_top.tcl
+	vivado -mode batch -source  ${GALAPAGOS_PATH}/telepathy/ipPackage/package_top.tcl
 
 middleware: ${LOGICALFILE} ${MAPFILE} guard-LOGICALFILE guard-MAPFILE guard-PROJECTNAME guard-GALAPAGOS_PATH 
 	mkdir -p ${GALAPAGOS_PATH}/projects
