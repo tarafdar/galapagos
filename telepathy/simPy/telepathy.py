@@ -2,12 +2,12 @@ import sys
 import os
 import math
 import inspect
-sys.path.append(os.environ['HMPI_PATH'] + '/simPy')
 from galapagos_sonar import GalapagosNet
 import numpy as np
 import math    
 import struct
 import json
+import binascii
 
 
 
@@ -56,27 +56,70 @@ class Telepathy(GalapagosNet):
             self.parameters['neural_net'][rank_id]['rank_info']['biases_weights_baseaddr'] = int(self.parameters['neural_net'][rank_id]['rank_info']['biases_weights_baseaddr'], 16)
            
 
-            for cmd_id, cmd in enumerate(self.parameters['neural_net'][rank_id]['command']): 
+            for cmd_id, cmd in enumerate(self.parameters['neural_net'][rank_id]['command']):
+		weights = bytearray(0) 
                 with open(rank['command'][cmd_id]['weight_file'], 'r') as fobj:
-                   weights = [[int(num) for num in line.split()] for line in fobj]
-                self.parameters['neural_net'][rank_id]['command'][cmd_id].update({"weights": np.array(weights, dtype="int16")})
+	            for line in fobj:
+		        for num in line.split():
+		            weights = bytearray(struct.pack('>I',int(num))) + weights
+
+                   #weights = [[struct.pack('>I',int(num)) for num in line.split()] for line in fobj]
+		#print binascii.hexlify(weights)
+                #self.parameters['neural_net'][rank_id]['command'][cmd_id].update({"weights": np.array(weights, dtype="int16")})
+                self.parameters['neural_net'][rank_id]['command'][cmd_id]["weights"] = weights
+                
+                if self.parameters['neural_net'][rank_id]['command'][cmd_id]['bias'] == 1:
+		    biases = bytearray(0) 
+                    with open(self.parameters['neural_net'][rank_id]['command'][cmd_id]['bias_file'], 'r') as fobj:
+	                for line in fobj:
+		            for num in line.split():
+		                biases = bytearray(struct.pack('>I',int(num))) + biases
+
+                   #weights = [[struct.pack('>I',int(num)) for num in line.split()] for line in fobj]
+		#print binascii.hexlify(weights)
+                #self.parameters['neural_net'][rank_id]['command'][cmd_id].update({"weights": np.array(weights, dtype="int16")})
+                self.parameters['neural_net'][rank_id]['command'][cmd_id]["weights"] = weights
                 
                 if self.parameters['neural_net'][rank_id]['command'][cmd_id]['bias'] == 1:
                     with open(self.parameters['neural_net'][rank_id]['command'][cmd_id]['bias_file'], 'r') as fobj:
-                       biases = [[int(num) for num in line.split()] for line in fobj]
-                    self.parameters['neural_net'][rank_id]['command'][cmd_id].update({"biases": np.array(biases, dtype="int16")})
-                    self.parameters['neural_net'][rank_id]['command'][cmd_id].update({"configParameters" :self.parameters['neural_net'][rank_id]['command'][cmd_id]['biases'].tobytes() + self.parameters['neural_net'][rank_id]['weights'].tobytes()})
+                       biases = [[struct.pack('>I', int(num)) for num in line.split()] for line in fobj]
+                    #self.parameters['neural_net'][rank_id]['command'][cmd_id].update({"biases": np.array(biases, dtype="int16").byteswap()})
+                    self.parameters['neural_net'][rank_id]['command'][cmd_id].update({"biases": biases})
+                    #self.parameters['neural_net'][rank_id]['command'][cmd_id].update({"configParameters" :self.parameters['neural_net'][rank_id]['command'][cmd_id]['biases'].tobytes() + self.parameters['neural_net'][rank_id]['weights'].tobytes()})
+                    self.parameters['neural_net'][rank_id]['command'][cmd_id].update({"configParameters" :self.parameters['neural_net'][rank_id]['command'][cmd_id]['biases'] + self.parameters['neural_net'][rank_id]['weights']})
                     
 
                 else:
-                    self.parameters['neural_net'][rank_id]['command'][cmd_id].update({"configParameters" : self.parameters['neural_net'][rank_id]['command'][cmd_id]['weights'].tobytes()})
+                    self.parameters['neural_net'][rank_id]['command'][cmd_id].update({"configParameters" : self.parameters['neural_net'][rank_id]['command'][cmd_id]['weights']})
 #A                    self.parameters['neural_net'][rank_id]['command'][cmd_id].update({"weights_baseaddr": self.parameters['neural_net'][rank_id]['command'][cmd_id]["biases_weights_baseaddr"]})
 
                 if(cmd_id == (0)):
-                    self.parameters['neural_net'][rank_id]['command'][cmd_id]['weights_baseaddr'] =  self.parameters['neural_net'][rank_id]['rank_info']['biases_weights_baseaddr']
+                    #self.parameters['neural_net'][rank_id]['command'][cmd_id].update({"biases": np.array(biases, dtype="int16").byteswap()})
+                    self.parameters['neural_net'][rank_id]['command'][cmd_id].update({"biases": biases})
+                    #self.parameters['neural_net'][rank_id]['command'][cmd_id].update({"configParameters" :self.parameters['neural_net'][rank_id]['command'][cmd_id]['biases'].tobytes() + self.parameters['neural_net'][rank_id]['weights'].tobytes()})
+                    self.parameters['neural_net'][rank_id]['command'][cmd_id].update({"configParameters" :self.parameters['neural_net'][rank_id]['command'][cmd_id]['biases'] + self.parameters['neural_net'][rank_id]['weights']})
+                    
+
+                else:
+                    self.parameters['neural_net'][rank_id]['command'][cmd_id].update({"configParameters" : self.parameters['neural_net'][rank_id]['command'][cmd_id]['weights']})
+#A                    self.parameters['neural_net'][rank_id]['command'][cmd_id].update({"weights_baseaddr": self.parameters['neural_net'][rank_id]['command'][cmd_id]["biases_weights_baseaddr"]})
+
+                if(cmd_id == (0)):
+                    if self.parameters['neural_net'][rank_id]['command'][cmd_id]['bias'] == 1:
+		        self.parameters['neural_net'][rank_id]['command'][cmd_id]['biases_weights_baseaddr'] =  self.parameters['neural_net'][rank_id]['rank_info']['biases_weights_baseaddr']
+		        self.parameters['neural_net'][rank_id]['command'][cmd_id]['weights_baseaddr'] =  self.parameters['neural_net'][rank_id]['rank_info']['biases_weights_baseaddr'] + len(self.parameters['neural_net'][rank_id]['command'][cmd_id]['biases'])
+		    else:
+		        self.parameters['neural_net'][rank_id]['command'][cmd_id]['biases_weights_baseaddr'] =  self.parameters['neural_net'][rank_id]['rank_info']['biases_weights_baseaddr']
+		        self.parameters['neural_net'][rank_id]['command'][cmd_id]['weights_baseaddr'] =  self.parameters['neural_net'][rank_id]['rank_info']['biases_weights_baseaddr']
+
                 if(cmd_id != (len(self.parameters['neural_net'][rank_id]['command']) - 1)):
-                    self.parameters['neural_net'][rank_id]['command'][cmd_id+1]['weights_baseaddr'] =  self.parameters['neural_net'][rank_id]['command'][cmd_id]['biases_weights_baseaddr'] + len(self.parameters['neural_net'][rank_id]['command'][cmd_id]['configParameters'])
-                
+                    if self.parameters['neural_net'][rank_id]['command'][cmd_id]['bias'] == 1:
+                    	self.parameters['neural_net'][rank_id]['command'][cmd_id+1]['biases_weights_baseaddr'] =  self.parameters['neural_net'][rank_id]['command'][cmd_id]['biases_weights_baseaddr'] + len(self.parameters['neural_net'][rank_id]['command'][cmd_id]['configParameters'])
+                    	self.parameters['neural_net'][rank_id]['command'][cmd_id+1]['weights_baseaddr'] =  self.parameters['neural_net'][rank_id]['command'][cmd_id + 1]['biases_weights_baseaddr'] + len(self.parameters['neural_net'][rank_id]['command'][cmd_id+1]['biases'])
+		    else:                
+                    	self.parameters['neural_net'][rank_id]['command'][cmd_id+1]['biases_weights_baseaddr'] =  self.parameters['neural_net'][rank_id]['command'][cmd_id]['biases_weights_baseaddr'] + len(self.parameters['neural_net'][rank_id]['command'][cmd_id]['configParameters'])
+                    	self.parameters['neural_net'][rank_id]['command'][cmd_id+1]['weights_baseaddr'] =  self.parameters['neural_net'][rank_id]['command'][cmd_id + 1]['biases_weights_baseaddr'] 
+
                 #print self.parameters['neural_net'][rank_id]['command'][cmd_id]["biases_weights_baseaddr"]
                 self.parameters['neural_net'][rank_id]['command'][cmd_id].update({"ofm_height" : math.ceil((self.parameters['neural_net'][rank_id]['command'][cmd_id]['ifm_height'] + 2 * self.parameters['neural_net'][rank_id]['command'][cmd_id]['pad'] - self.parameters['neural_net'][rank_id]['command'][cmd_id]['kernel_height']) / self.parameters['neural_net'][rank_id]['command'][cmd_id]['stride'] + 1)})
                 self.parameters['neural_net'][rank_id]['command'][cmd_id].update({"ofm_width": math.ceil((self.parameters['neural_net'][rank_id]['command'][cmd_id]['ifm_width'] + 2 * self.parameters['neural_net'][rank_id]['command'][cmd_id]['pad'] - self.parameters['neural_net'][rank_id]['command'][cmd_id]['kernel_width']) / self.parameters['neural_net'][rank_id]['command'][cmd_id]['stride'] + 1)})
@@ -182,7 +225,8 @@ class Telepathy(GalapagosNet):
         GalapagosNet.binToStream(self, binToSend, self.parameters['neural_net'][rank_id]['rank_info']['dst_rank'], 'init')
         #send all weights for all commands on fpga
         for cmd_id, cmd in enumerate(self.parameters['neural_net'][rank_id]['command']): 
-            GalapagosNet.binToStream(self, self.parameters['neural_net'][rank_id]['command'][cmd_id]['configParameters'], self.parameters['neural_net'][rank_id]['rank_info']['dst_rank'], 'init') 
+            #print binascii.hexlify(self.parameters['neural_net'][rank_id]['command'][cmd_id]['configParameters'])
+	    GalapagosNet.binToStream(self, self.parameters['neural_net'][rank_id]['command'][cmd_id]['configParameters'], self.parameters['neural_net'][rank_id]['rank_info']['dst_rank'], 'init') 
     
     def configDMAFPGA(self, rank_id):
       
@@ -244,7 +288,7 @@ class Telepathy(GalapagosNet):
                                     ],
                                     dtype='uint8')
             cmd_bias_addr = np.array([
-                                    self.parameters['neural_net'][rank_id]['command'][cmd_id]['weights_baseaddr']
+                                    self.parameters['neural_net'][rank_id]['command'][cmd_id]['biases_weights_baseaddr']
                                     ],
                                     dtype='uint32'
                                     ).byteswap()
