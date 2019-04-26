@@ -84,23 +84,13 @@ void raw_to_app(hls::stream <raw_axis> & from_raw,
 
 
 void app_to_raw(
-<<<<<<< e05995699fbec58d02573f0c885e4c11774ff30c
-	    hls::stream <galapagos_stream_packet> & from_app,
-	    hls::stream <raw_axis> & to_raw
-=======
         hls::stream <galapagos_packet> & from_app,
         hls::stream <raw_axis> & to_raw
->>>>>>> Add command to update board when making a cluster
         )
 {
 #pragma HLS PIPELINE II=1
 
-<<<<<<< e05995699fbec58d02573f0c885e4c11774ff30c
-   
-    static galapagos_stream_packet app_packet_in;
-=======
     static galapagos_packet app_packet_in;
->>>>>>> Add command to update board when making a cluster
     static raw_axis raw_packet_out;
     static ap_uint <48> dest_mac_address;
 	static ap_uint <96> raw_dst_src;
