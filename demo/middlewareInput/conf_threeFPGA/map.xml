@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cluster>
+    <node>
+        <type> sw </type>
+        <kernel> 0 </kernel>
+        <kernel> 4 </kernel>
+        <mac>  0c:c4:7a:88:c0:47 </mac>
+        <ip> 192.168.1.2 </ip>
+    </node>
+    <node>
+        <board> pynq-z2 </board>
+        <comm> raw </comm>
+        <type> hw </type>
+        <kernel> 1 </kernel>
+        <mac>  fa:16:3e:55:ca:02 </mac>
+        <ip> 192.168.1.3 </ip>
+    </node>
+    <node>
+        <board> pynq-z2 </board>
+        <comm> raw </comm>
+        <type> hw </type>
+        <kernel> 2 </kernel>
+        <mac>  fa:16:3e:55:ca:03 </mac>
+        <ip> 192.168.1.4 </ip>
+    </node>
+    <node>
+        <board> zedboard </board>
+        <comm> raw </comm>
+        <type> hw </type>
+        <kernel> 3 </kernel>
+        <mac>  fa:16:3e:55:ca:04 </mac>
+        <ip> 192.168.1.5 </ip>
+    </node>
+</cluster>

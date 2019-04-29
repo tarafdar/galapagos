@@ -27,7 +27,7 @@
         <vendor> xilinx.com </vendor>
         <version> 1.0 </version>
         <lib> hls </lib>
-        <num> 2 </num>
+        <num> 3 </num>
         <rep> 1 </rep>
         <clk> ap_clk </clk>
         <aresetn> ap_rst_n </aresetn>
@@ -45,7 +45,7 @@
         <version> 1.0 </version>
         <lib> hls </lib>
         <num> 1 </num>
-        <rep> 1 </rep>
+        <rep> 2 </rep>
         <clk> ap_clk </clk>
         <aresetn> ap_rst_n </aresetn>
         <s_axis>
