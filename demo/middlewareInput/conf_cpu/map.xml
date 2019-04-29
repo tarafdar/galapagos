@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cluster>
+    <node>
+        <type> sw </type>
+        <kernel> 0 </kernel>
+        <kernel> 1 </kernel>
+        <kernel> 2 </kernel>
+        <kernel> 3 </kernel>
+        <mac>  0c:c4:7a:88:c0:47 </mac>
+        <ip> 10.1.2.101 </ip>
+    </node>
+</cluster>

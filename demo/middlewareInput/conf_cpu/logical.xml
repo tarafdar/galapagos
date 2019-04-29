@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cluster>
+    <packet>
+        <data> 64 </data>
+        <keep> 1 </keep>
+        <last> 1 </last>
+        <dest> 16 </dest>
+    </packet>
+    <kernel> kern_send 
+        <vendor> xilinx.com </vendor>
+        <version> 1.0 </version>
+        <lib> hls </lib>
+        <num> 0 </num>
+        <rep> 1 </rep>
+        <clk> ap_clk </clk>
+        <aresetn> ap_rst_n </aresetn>
+        <s_axis>
+            <scope> global </scope>
+            <name> in_r </name>
+        </s_axis>
+        <m_axis>
+            <scope> global </scope>
+            <name> out_r </name>
+        </m_axis>
+    </kernel>
+    <kernel> kern_recv 
+        <vendor> xilinx.com </vendor>
+        <version> 1.0 </version>
+        <lib> hls </lib>
+        <num> 0 </num>
+        <rep> 1 </rep>
+        <clk> ap_clk </clk>
+        <aresetn> ap_rst_n </aresetn>
+        <s_axis>
+            <scope> global </scope>
+            <name> in_r </name>
+        </s_axis>
+        <m_axis>
+            <scope> global </scope>
+            <name> out_r </name>
+        </m_axis>
+    </kernel>
+    <kernel> kern_middle 
+        <vendor> xilinx.com </vendor>
+        <version> 1.0 </version>
+        <lib> hls </lib>
+        <num> 0 </num>
+        <rep> 1 </rep>
+        <clk> ap_clk </clk>
+        <aresetn> ap_rst_n </aresetn>
+        <s_axis>
+            <scope> global </scope>
+            <name> in_r </name>
+        </s_axis>
+        <m_axis>
+            <scope> global </scope>
+            <name> out_r </name>
+        </m_axis>
+    </kernel>
+</cluster>
