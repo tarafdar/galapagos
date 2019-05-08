@@ -1651,6 +1651,15 @@ def makeTCLFiles(fpga, projectName, output_path, sim):
 
     galapagos_path = str(os.environ.get('GALAPAGOS_PATH'))
     tclMain = tclMeFile( outDir + '/' + str(fpga['num']), fpga)
+    tclMain.tprint(
+"if { ! [info exists top_dir] } {\n\
+    set top_path ${::env(GALAPAGOS_PATH)}\n\
+}\n\
+if { ! [info exists default_dir] } {\n\
+    set default_dir " + projectName + "\n\
+}\n\
+"
+    )
     tclMain.addSource(galapagos_path + '/shells/tclScripts/pr_standard_interfaces.tcl')
     tclMain.addSource(outDir + '/' + str(fpga['num']) + '_net.tcl')
     tclMain.addSource(outDir + '/' + str(fpga['num']) + '_app.tcl')

@@ -28,7 +28,7 @@ class cluster(abstractDict):
             print("Unhandled exetension for " + file_name)
             return None
 
-    def __init__(self, name, kernel_file, map_file, input_file_type='xml'):
+    def __init__(self, name, kernel_file, map_file):
         self.name = name
         self.kernel_file = kernel_file
 
@@ -40,43 +40,39 @@ class cluster(abstractDict):
         self.packet_id = 0 
         self.packet_user = 0 
 
+        top_dict = self.getDict(kernel_file)['cluster']
+        if 'packet' in top_dict:
+            packet = top_dict['packet']
+            if 'data' in packet:
+                self.packet_data = top_dict['packet']['data']
+            if 'keep' in packet:
+                self.packet_keep = top_dict['packet']['keep']
+            if 'last' in packet:
+                self.packet_last = top_dict['packet']['last']
+            if 'id' in packet:
+                self.packet_id = top_dict['packet']['id']
+            if 'user' in packet:
+                self.packet_user = top_dict['packet']['user']
+            
+            galapagos_path = str(os.environ.get('GALAPAGOS_PATH'))
 
-
-
-        if input_file_type == 'xml':
-            top_dict = self.getDict(kernel_file)['cluster']
-            if 'packet' in top_dict:
-                packet = top_dict['packet']
-                if 'data' in packet:
-                    self.packet_data = top_dict['packet']['data']
-                if 'keep' in packet:
-                    self.packet_keep = top_dict['packet']['keep']
-                if 'last' in packet:
-                    self.packet_last = top_dict['packet']['last']
-                if 'id' in packet:
-                    self.packet_id = top_dict['packet']['id']
-                if 'user' in packet:
-                    self.packet_user = top_dict['packet']['user']
-                
-                galapagos_path = str(os.environ.get('GALAPAGOS_PATH'))
-
-                f = open(galapagos_path + '/middleware/include/packet_size.h', 'w')
-                f.write("#ifndef PACKET_SIZE_H\n#define PACKET_SIZE_H\n")
-                f.write("# define PACKET_DATA_LENGTH " + str(self.packet_data) + '\n')
-                if self.packet_keep:
-                    self.packet_keep = int(self.packet_data)/8
-                    f.write("# define PACKET_KEEP_LENGTH " + str(int(self.packet_keep)) + '\n')
-                if self.packet_last:
-                    f.write("# define PACKET_LAST\n")
-                if self.packet_id:
-                    f.write("# define PACKET_ID_LENGTH " + str(self.packet_id) + '\n')
-                if self.packet_user:
-                    f.write("# define PACKET_USER_LENGTH " + str(self.packet_user) + '\n')
-                if self.packet_dest:
-                    f.write("# define PACKET_DEST_LENGTH " + str(self.packet_dest) + '\n')
-                f.write("#endif\n")
-            logical_dict = self.getDict(kernel_file)['cluster']['kernel']
-            map_dict = self.getDict(map_file)['cluster']['node']
+            f = open(galapagos_path + '/middleware/include/packet_size.h', 'w')
+            f.write("#ifndef PACKET_SIZE_H\n#define PACKET_SIZE_H\n")
+            f.write("# define PACKET_DATA_LENGTH " + str(self.packet_data) + '\n')
+            if self.packet_keep:
+                self.packet_keep = int(self.packet_data)/8
+                f.write("# define PACKET_KEEP_LENGTH " + str(int(self.packet_keep)) + '\n')
+            if self.packet_last:
+                f.write("# define PACKET_LAST\n")
+            if self.packet_id:
+                f.write("# define PACKET_ID_LENGTH " + str(self.packet_id) + '\n')
+            if self.packet_user:
+                f.write("# define PACKET_USER_LENGTH " + str(self.packet_user) + '\n')
+            if self.packet_dest:
+                f.write("# define PACKET_DEST_LENGTH " + str(self.packet_dest) + '\n')
+            f.write("#endif\n")
+        logical_dict = self.getDict(kernel_file)['cluster']['kernel']
+        map_dict = self.getDict(map_file)['cluster']['node']
 
 
         self.kernels = []
@@ -206,14 +202,15 @@ class cluster(abstractDict):
 
         globalConfigFile = open(output_path + "/" + self.name + '/createCluster.sh', 'w')
         globalSimFile = open(output_path + "/" + self.name + '/simCluster.sh', 'w')
-   
+
+        globalConfigFile.write("cd " + str(os.environ.get('GALAPAGOS_PATH')) + "\n")
         for node_idx, node_obj in enumerate(self.nodes):
             #only need vivado project for hw nodes
             if node_obj['type'] == 'hw':
                 dirName = output_path + '/' + self.name + '/' + str(node_idx)
                 os.makedirs(dirName)
                 #currently only making flattened bitstreams
-                globalConfigFile.write("cd " + str(os.environ.get('GALAPAGOS_PATH')) + "\n")
+                globalConfigFile.write("galapagos-update-board " + node_obj['board'] + "\n")
                 globalConfigFile.write("vivado -mode batch -source shells/tclScripts/make_shell.tcl -tclargs --project_name " +  str(node_idx) + "  --pr_tcl " + dirName + "/" + str(node_idx) + ".tcl" + " --dir " + self.name +  " --start_synth 1" + "\n")
 #                globalConfigFile.write("vivado -mode batch -source shells/tclScripts/make_shell.tcl -tclargs --project_name " +  str(node_idx) + "  --pr_tcl " + dirName + "/" + str(node_idx) + ".tcl" + " --dir " + output_path + '/' + self.name " & \n")
 #                globalSimFile.write("vivado -mode gui -source tclScripts/createSim.tcl -tclargs " + node_obj['board'] + " " + self.name + " " + str(node_idx) + "\n")
